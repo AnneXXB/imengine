@@ -1,0 +1,93 @@
+/*
+ *  Copyright (c) 2016, https://github.com/wubenqi
+ *  All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+// From:    https://github.com/mogujie/TeamTalk/blob/master/pb/IM.BaseDefine.proto
+// License: https://github.com/mogujie/TeamTalk/blob/master/LICENSE
+//
+
+syntax = "proto3";
+
+package biz_model;
+
+option java_package = "com.zchat.engine.bizmodel";
+option java_outer_classname = "BizModels";
+option optimize_for = CODE_SIZE;
+
+// Supported types.
+enum DataType {
+  STRING    = 0;
+  
+  INT32     = 1;
+  INT64     = 2;
+  UINT32    = 8;
+  UINT64    = 3;
+  FLOAT     = 9;
+  DOUBLE    = 5;
+  BOOL      = 6;
+  DATE      = 10; // Fixed-precision, daily granularity.
+  DATETIME  = 4;  // Fixed-precision, microsecond granularity.
+  
+  // STRING    = 0;
+  BINARY    = 7;
+  
+  ENUM      = 13;
+  
+  DATA_TYPE = 11; // For representing the DataType enum itself.
+  NULL_TYPE = 12; // Untyped NULL literal.
+  
+  // Note: next available: 13
+}
+
+/////////////////////////////////////////////////////////////////////////////
+// DB表映射
+message HistoryMessageEntity {
+  uint32 id = 1;
+  uint32 sender_user_id = 2; // 发送方
+  uint32 peer_id = 3;
+  uint32 peer_type = 4;
+  uint64 client_message_id = 5;
+  uint32 message_peer_seq = 6;
+  uint32 message_content_type = 7;
+  bytes message_content_data = 8;
+  bytes passthrough_data = 9;
+  uint32 status = 10;
+  uint64 created_at = 11;
+  uint64 updated_at = 12;
+}
+
+message UserMessageEntity {
+  uint32 id = 1;
+  uint32 user_id = 2;
+  uint32 message_seq = 3;
+  uint32 sender_user_id = 4; // 发送方
+  uint32 peer_id = 5;
+  uint32 peer_type = 6;
+  uint32 message_peer_seq = 7;
+  uint32 status = 8;
+  uint64 created_at = 9;
+  uint64 updated_at = 10;
+}
+
+message UserDialogEntity {
+  uint32 id = 1;
+  uint32 user_id = 2;
+  uint32 peer_id = 5;
+  uint32 peer_type = 6;
+  uint32 status = 9;
+  uint64 created_at = 10;
+  uint64 updated_at = 11;
+}

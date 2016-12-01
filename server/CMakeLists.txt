@@ -1,0 +1,6 @@
+add_subdirectory(gate)
+add_subdirectory(auth)
+add_subdirectory(online)
+#add_subdirectory(biz)
+add_subdirectory(push)
+add_subdirectory(messenger)
