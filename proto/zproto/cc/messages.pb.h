@@ -731,15 +731,21 @@ class LoadDialogsReq : public ::google::protobuf::Message /* @@protoc_insertion_
 
   // accessors -------------------------------------------------------
 
-  // optional uint64 min_date = 1;
-  void clear_min_date();
-  static const int kMinDateFieldNumber = 1;
-  ::google::protobuf::uint64 min_date() const;
-  void set_min_date(::google::protobuf::uint64 value);
+  // optional uint64 date = 1;
+  void clear_date();
+  static const int kDateFieldNumber = 1;
+  ::google::protobuf::uint64 date() const;
+  void set_date(::google::protobuf::uint64 value);
 
-  // optional uint32 limit = 2;
+  // optional .zproto.EnumHelper.ListLoadMode load_mode = 2;
+  void clear_load_mode();
+  static const int kLoadModeFieldNumber = 2;
+  ::zproto::EnumHelper_ListLoadMode load_mode() const;
+  void set_load_mode(::zproto::EnumHelper_ListLoadMode value);
+
+  // optional uint32 limit = 3;
   void clear_limit();
-  static const int kLimitFieldNumber = 2;
+  static const int kLimitFieldNumber = 3;
   ::google::protobuf::uint32 limit() const;
   void set_limit(::google::protobuf::uint32 value);
 
@@ -748,7 +754,8 @@ class LoadDialogsReq : public ::google::protobuf::Message /* @@protoc_insertion_
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
-  ::google::protobuf::uint64 min_date_;
+  ::google::protobuf::uint64 date_;
+  int load_mode_;
   ::google::protobuf::uint32 limit_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_messages_2eproto();
@@ -1183,21 +1190,35 @@ LoadHistoryMessageRsp::history() const {
 
 // LoadDialogsReq
 
-// optional uint64 min_date = 1;
-inline void LoadDialogsReq::clear_min_date() {
-  min_date_ = GOOGLE_ULONGLONG(0);
+// optional uint64 date = 1;
+inline void LoadDialogsReq::clear_date() {
+  date_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 LoadDialogsReq::min_date() const {
-  // @@protoc_insertion_point(field_get:zproto.LoadDialogsReq.min_date)
-  return min_date_;
+inline ::google::protobuf::uint64 LoadDialogsReq::date() const {
+  // @@protoc_insertion_point(field_get:zproto.LoadDialogsReq.date)
+  return date_;
 }
-inline void LoadDialogsReq::set_min_date(::google::protobuf::uint64 value) {
+inline void LoadDialogsReq::set_date(::google::protobuf::uint64 value) {
   
-  min_date_ = value;
-  // @@protoc_insertion_point(field_set:zproto.LoadDialogsReq.min_date)
+  date_ = value;
+  // @@protoc_insertion_point(field_set:zproto.LoadDialogsReq.date)
 }
 
-// optional uint32 limit = 2;
+// optional .zproto.EnumHelper.ListLoadMode load_mode = 2;
+inline void LoadDialogsReq::clear_load_mode() {
+  load_mode_ = 0;
+}
+inline ::zproto::EnumHelper_ListLoadMode LoadDialogsReq::load_mode() const {
+  // @@protoc_insertion_point(field_get:zproto.LoadDialogsReq.load_mode)
+  return static_cast< ::zproto::EnumHelper_ListLoadMode >(load_mode_);
+}
+inline void LoadDialogsReq::set_load_mode(::zproto::EnumHelper_ListLoadMode value) {
+  
+  load_mode_ = value;
+  // @@protoc_insertion_point(field_set:zproto.LoadDialogsReq.load_mode)
+}
+
+// optional uint32 limit = 3;
 inline void LoadDialogsReq::clear_limit() {
   limit_ = 0u;
 }

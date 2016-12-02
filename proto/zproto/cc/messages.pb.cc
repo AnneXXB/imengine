@@ -205,8 +205,9 @@ void protobuf_AssignDesc_messages_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryMessageRsp, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryMessageRsp, _is_default_instance_));
   LoadDialogsReq_descriptor_ = file->message_type(9);
-  static const int LoadDialogsReq_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadDialogsReq, min_date_),
+  static const int LoadDialogsReq_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadDialogsReq, date_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadDialogsReq, load_mode_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadDialogsReq, limit_),
   };
   LoadDialogsReq_reflection_ =
@@ -323,11 +324,12 @@ void protobuf_AddDesc_messages_2eproto() {
     "2\n\tload_mode\030\003 \001(\0162\037.zproto.EnumHelper.L"
     "istLoadMode\022\r\n\005limit\030\004 \001(\r\"B\n\025LoadHistor"
     "yMessageRsp\022)\n\007history\030\001 \003(\0132\030.zproto.Me"
-    "ssageContainer\"1\n\016LoadDialogsReq\022\020\n\010min_"
-    "date\030\001 \001(\004\022\r\n\005limit\030\002 \001(\r\"1\n\016LoadDialogs"
-    "Rsp\022\037\n\007dialogs\030\001 \003(\0132\016.zproto.DialogB#\n\027"
-    "com.zchat.engine.zprotoB\006ZProtoH\002b\006proto"
-    "3", 761);
+    "ssageContainer\"a\n\016LoadDialogsReq\022\014\n\004date"
+    "\030\001 \001(\004\0222\n\tload_mode\030\002 \001(\0162\037.zproto.EnumH"
+    "elper.ListLoadMode\022\r\n\005limit\030\003 \001(\r\"1\n\016Loa"
+    "dDialogsRsp\022\037\n\007dialogs\030\001 \003(\0132\016.zproto.Di"
+    "alogB#\n\027com.zchat.engine.zprotoB\006ZProtoH"
+    "\002b\006proto3", 809);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "messages.proto", &protobuf_RegisterTypes);
   SendMessageReq::default_instance_ = new SendMessageReq();
@@ -1454,7 +1456,8 @@ LoadHistoryMessageRsp::history() const {
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int LoadDialogsReq::kMinDateFieldNumber;
+const int LoadDialogsReq::kDateFieldNumber;
+const int LoadDialogsReq::kLoadModeFieldNumber;
 const int LoadDialogsReq::kLimitFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
@@ -1479,7 +1482,8 @@ LoadDialogsReq::LoadDialogsReq(const LoadDialogsReq& from)
 void LoadDialogsReq::SharedCtor() {
     _is_default_instance_ = false;
   _cached_size_ = 0;
-  min_date_ = GOOGLE_ULONGLONG(0);
+  date_ = GOOGLE_ULONGLONG(0);
+  load_mode_ = 0;
   limit_ = 0u;
 }
 
@@ -1536,21 +1540,35 @@ void LoadDialogsReq::InternalSwap(LoadDialogsReq* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // LoadDialogsReq
 
-// optional uint64 min_date = 1;
-void LoadDialogsReq::clear_min_date() {
-  min_date_ = GOOGLE_ULONGLONG(0);
+// optional uint64 date = 1;
+void LoadDialogsReq::clear_date() {
+  date_ = GOOGLE_ULONGLONG(0);
 }
- ::google::protobuf::uint64 LoadDialogsReq::min_date() const {
-  // @@protoc_insertion_point(field_get:zproto.LoadDialogsReq.min_date)
-  return min_date_;
+ ::google::protobuf::uint64 LoadDialogsReq::date() const {
+  // @@protoc_insertion_point(field_get:zproto.LoadDialogsReq.date)
+  return date_;
 }
- void LoadDialogsReq::set_min_date(::google::protobuf::uint64 value) {
+ void LoadDialogsReq::set_date(::google::protobuf::uint64 value) {
   
-  min_date_ = value;
-  // @@protoc_insertion_point(field_set:zproto.LoadDialogsReq.min_date)
+  date_ = value;
+  // @@protoc_insertion_point(field_set:zproto.LoadDialogsReq.date)
 }
 
-// optional uint32 limit = 2;
+// optional .zproto.EnumHelper.ListLoadMode load_mode = 2;
+void LoadDialogsReq::clear_load_mode() {
+  load_mode_ = 0;
+}
+ ::zproto::EnumHelper_ListLoadMode LoadDialogsReq::load_mode() const {
+  // @@protoc_insertion_point(field_get:zproto.LoadDialogsReq.load_mode)
+  return static_cast< ::zproto::EnumHelper_ListLoadMode >(load_mode_);
+}
+ void LoadDialogsReq::set_load_mode(::zproto::EnumHelper_ListLoadMode value) {
+  
+  load_mode_ = value;
+  // @@protoc_insertion_point(field_set:zproto.LoadDialogsReq.load_mode)
+}
+
+// optional uint32 limit = 3;
 void LoadDialogsReq::clear_limit() {
   limit_ = 0u;
 }

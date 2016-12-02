@@ -83,14 +83,27 @@ message LoadHistoryMessageRsp {
   repeated MessageContainer history = 1; //   Messages
 }
 
-// Loading conversation history
+/////////////////////////////////////////////////////////////////////////////////
+// 会话列表协议设计说明（会话驱动）:
+//  正常使用不需要用到这几条协议，因为nebula-im的一个设计原则是消息驱动，
+//  但为了支持任何终端任何时候的历史漫游，也还需要支持会话驱动。
+//
+//
+// 已有账号换了个手机，第一次进入时要拉取所有会话信息,分成如下几个步骤:
+// 1. 拉首屏, 按时间降序, date为uint64最大值
+// 2. 如果有必要, 拉取全部会话, 此时远到近拉, 第一次date为0,
+//    以后按从小到大的, 一旦ConversationID碰撞,则认为全部接收完毕
+//
+// 拉取会话列表
 // LoadDialogsReq --> LoadDialogsRsp
 message LoadDialogsReq {
-  uint64 min_date = 1;    // start date of conversation loading. Use 0 to load latest messages
-  uint32 limit = 2;       // limit maximum amount of messages (max is 100)
+  uint64  date = 1;                       //
+  EnumHelper.ListLoadMode load_mode = 2;  // Loading mode: Forward loading, backward or both ways
+  uint32 limit = 3;                       // 最大会话数(不超过100)
 }
 
 // Loaded dialogs
 message LoadDialogsRsp {
   repeated Dialog dialogs = 1; //   Loaded dialogs
 }
+

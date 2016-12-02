@@ -42,7 +42,7 @@ int DoConnect(const std::vector<folly::StringPiece>& command_lines) {
   //(*req)->set_online_status(teamtalk::USER_STATUS_ONLINE);
   //(*req)->set_client_type(teamtalk::CLIENT_TYPE_MAC);
   
-  ZRpcUtil::DoClientCall("frontend_client", req)
+  ZRpcUtil::DoClientCall("gate_client", req)
   .within(std::chrono::milliseconds(5000))
 //  .onTimeout(std::chrono::milliseconds(5000), []() {
 //    LOG(INFO) << "DoConnect - time_out!!";
@@ -75,7 +75,7 @@ int DoSendMessage(const std::vector<folly::StringPiece>& command_lines) {
   message_data->set_message_type(zproto::EnumHelper::TEXT);
   message_data->set_message_content(command_lines[2].toString());
   
-  ZRpcUtil::DoClientCall("frontend_client", req)
+  ZRpcUtil::DoClientCall("gate_client", req)
   .within(std::chrono::milliseconds(5000))
   .then([](ProtoRpcResponsePtr rsp) {
     LOG(INFO) << "DoSendMessage - rsp";
@@ -95,7 +95,7 @@ int DoMessageSync(const std::vector<folly::StringPiece>& command_lines) {
   
   LOG(INFO) << "DoMessageSync - req: " << req->ToString();
   
-  ZRpcUtil::DoClientCall("frontend_client", req)
+  ZRpcUtil::DoClientCall("gate_client", req)
   .within(std::chrono::milliseconds(5000))
   .then([](ProtoRpcResponsePtr rsp) {
     LOG(INFO) << "DoMessageSync - rsp";

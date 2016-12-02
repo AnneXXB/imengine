@@ -34,21 +34,6 @@
 ProtoRpcResponsePtr DoSendMessage(RpcRequestPtr request) {
   auto send_message_req = ToApiRpcRequest<zproto::SendMessageReq>(request);
   // 检查send_message_req
-  
-  // 聊天消息内容
-//  message MessageContainer {
-//    uint64 message_id = 1;                    // 消息ID
-//    string sender_user_id = 2;                // 发送者
-//    Peer peer = 3;                            // 接收者
-//    uint64 client_message_id = 4;             // 客户端消息ID（服务端去重字段）
-//    uint32 message_seq = 5;                   // 消息序号，也就是消息ID
-//    EnumHelper.MessageState state = 6;        // 状态
-//    EnumHelper.MessageType message_type = 7;  // 消息类型
-//    bytes message_content  = 8;               // 消息内容
-//    bytes passthrough_data = 9;               // 透传数据
-//    uint64  updated_at = 10;                  // 创建时间
-//  }
-
   // TODO(@benqi): 回滚
   const auto& message_data = (*send_message_req)->message_data();
   CheckMessageDuplication check_duplication((*send_message_req)->message_data().sender_user_id(),
@@ -112,28 +97,59 @@ ProtoRpcResponsePtr DoSendMessage(RpcRequestPtr request) {
     }
     
     // 创建会话
-    // 正向
-    UserDialogEntity user_dialog;
-    user_dialog.user_id = message_data.sender_user_id();
-    user_dialog.peer_id = message_data.peer().id();
-    user_dialog.peer_type = message_data.peer().type();
-    user_dialog.created_at = created_at;
-    user_dialog.updated_at = created_at;
     
-    CreateUserDialog create_user_dialog(user_dialog);
-    iid = SqlExecuteInsertID("nebula_engine", create_user_dialog);
-    if (iid<0) {
-      // TODO(@benqi):
+    // 正向
+    // 检查会话是否存在
+    CheckUserDialogDuplication check_dialog_duplication(message_data.sender_user_id(),
+                                                        message_data.peer().id(),
+                                                        message_data.peer().type());
+
+    if (0 != SqlQuery("nebula_engine", check_dialog_duplication)) {
+      // TODO(@benqi): 出错
+    }
+
+    if (check_dialog_duplication.is_duplication != 1) {
+      UserDialogEntity user_dialog;
+      user_dialog.user_id = message_data.sender_user_id();
+      user_dialog.peer_id = message_data.peer().id();
+      user_dialog.peer_type = message_data.peer().type();
+      user_dialog.created_at = created_at;
+      user_dialog.updated_at = created_at;
+      
+      CreateUserDialog create_user_dialog(user_dialog);
+      iid = SqlExecuteInsertID("nebula_engine", create_user_dialog);
+      if (iid<0) {
+        // TODO(@benqi):
+      }
     }
     
     // 反向
-    user_dialog.user_id = user_dialog.peer_id;
-    iid = SqlExecuteInsertID("nebula_engine", create_user_dialog);
-    if (iid<0) {
-      // TODO(@benqi):
+    // 检查会话是否存在
+    check_dialog_duplication.is_duplication = -1;
+    check_dialog_duplication.conversation_id.peer_id = message_data.sender_user_id();
+    check_dialog_duplication.conversation_id.sender_user_id = message_data.peer().id();
+    
+    if (0 != SqlQuery("nebula_engine", check_dialog_duplication)) {
+      // TODO(@benqi): 出错
     }
-    // 未读计数
 
+    if (check_dialog_duplication.is_duplication != 1) {
+      UserDialogEntity user_dialog;
+      user_dialog.user_id = message_data.peer().id();
+      user_dialog.peer_id = message_data.sender_user_id();
+      user_dialog.peer_type = message_data.peer().type();
+      user_dialog.created_at = created_at;
+      user_dialog.updated_at = created_at;
+
+      CreateUserDialog create_user_dialog(user_dialog);
+      iid = SqlExecuteInsertID("nebula_engine", create_user_dialog);
+      if (iid<0) {
+        // TODO(@benqi):
+      }
+    }
+    
+    // TODO(@benqi): 未读计数
+    
   } else {
     // 群聊
     // TODO(@benqi): 麻烦
@@ -240,12 +256,27 @@ ProtoRpcResponsePtr DoLoadHistoryMessage(RpcRequestPtr request) {
 ProtoRpcResponsePtr DoLoadDialogs(RpcRequestPtr request) {
   auto load_dialogs_req = ToApiRpcRequest<zproto::LoadDialogsReq>(request);
   LOG(INFO) << "DoLoadDialogs - load_dialogs_req: " << load_dialogs_req->ToString();
-  
-  std::string user_id = "benqi@zhazha";
-  // uint64_t received_max_seq = (*message_sync_req)->received_max_seq();
 
-  // LoadDialogsReq
+  std::string user_id = "benqi@zhazha";
+
+  UserDialogEntityList dialog_list;
+  LoadUserDialogList load_dialog_list(user_id,
+                                      (*load_dialogs_req)->date(),
+                                      (*load_dialogs_req)->load_mode(),
+                                      (*load_dialogs_req)->limit(),
+                                      dialog_list);
   
-  ProtoRpcResponsePtr response;
+  if (0 != SqlQuery("nebula_engine", load_dialog_list)) {
+    // LOG(ERROR) << "";
+    // TODO(@benqi): 出错
+  }
+
+  auto response = std::make_shared<ApiRpcOk<zproto::LoadDialogsRsp>>();
+
+  for (auto & d : dialog_list) {
+    auto peer = (*response)->add_dialogs()->mutable_peer();
+    peer->set_id(d->peer_id);
+    peer->set_type(d->peer_type);
+  }
   return response;
 }

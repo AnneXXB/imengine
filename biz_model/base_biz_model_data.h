@@ -185,6 +185,9 @@ struct UserDialogEntity {
   uint64_t updated_at;
 };
 
+typedef std::shared_ptr<UserDialogEntity> UserDialogEntityPtr;
+typedef std::list<UserDialogEntityPtr> UserDialogEntityList;
+
 /*
   struct UserID {
     uint32_t app_id;

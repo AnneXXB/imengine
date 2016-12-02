@@ -32,7 +32,7 @@ bool Client::Initialize() {
 //                                   client_handler::OnConnectionClosed);
 
   // 注册服务
-  RegisterService("frontend_client", "rpc_client", "zrpc");
+  RegisterService("gate_client", "rpc_client", "zrpc");
   
   return BaseServer::Initialize();
 }
@@ -69,6 +69,10 @@ void Client::DoCommandLineLoop() {
   try {
     while (true) {
       auto line = ReadlineGets("nebula-im> ");
+      if (line.empty()) {
+        continue;
+      }
+      
       std::vector<folly::StringPiece> cmds;
       folly::split(" ", line, cmds);
       

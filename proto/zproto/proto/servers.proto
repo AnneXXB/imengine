@@ -68,7 +68,7 @@ message UserNamePasswordAuthRsp {
 
 ///////////////////////////////////////////////////////////////////////
 // online
-// CLIENT_ONLINE_REQ
+// ClientOnlineReq -> VoidRsp
 message ClientOnlineReq {
   uint32 server_id = 1;
   uint64 conn_id = 2;
@@ -82,7 +82,7 @@ message ClientOnlineRsp {
   uint64 index_id = 1;
 }
 
-// CLIENT_OFFLINE_REQ
+// ClientOfflineReq
 message ClientOfflineReq {
   uint32 server_id = 1;
   uint64 conn_id = 2;
