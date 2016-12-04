@@ -35,7 +35,7 @@ bool GateServer::Initialize() {
   RegisterService("gate_server", "tcp_server", "zproto");
   
   // 推消息等
-  RegisterService("push_client", "tcp_client", "zproto");
+  RegisterService("push_channel_client", "tcp_client", "zproto");
   // 在线状态
   RegisterService("online_status_client", "rpc_client", "zrpc");
   // 登录认证

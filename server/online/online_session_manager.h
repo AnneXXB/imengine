@@ -159,6 +159,8 @@ public:
   // return: 结果数
   size_t LookupEntrysByUserID(uint32_t app_id, const std::string& user_id, SessionEntryList* sessions) const;
 
+  size_t LookupEntrysByUserIDList(const std::list<std::string>& app_user_id_list, SessionEntryList* sessions) const;
+
   // 通过主键<server_id, conn_id>查找
   // 未找到返回false，找到返回true，session为返回参数
   bool LookupEntryBySessionID(uint16_t server_id, uint64_t conn_id, SessionEntry* session);

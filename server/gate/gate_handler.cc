@@ -44,8 +44,16 @@ int gate::OnNewConnection(nebula::TcpServiceBase* service, nebula::ZProtoPipelin
     
     // TODO(@benqi):
     // 启动定时器等15秒
+  } else if (service->GetServiceName() == "push_channel_client") {
+    // 注册到push_server
+    auto server_auth_req = std::make_shared<ApiRpcRequest<zproto::ServerAuthReq>>();
+    (*server_auth_req)->set_server_id(1);
+    (*server_auth_req)->set_server_name("gate_server");
+    
+    std::unique_ptr<folly::IOBuf> data;
+    server_auth_req->SerializeToIOBuf(data);
+    pipeline->write(std::move(data));
   }
-  
   return 0;
 }
 
@@ -115,11 +123,11 @@ int gate::OnDataReceived(nebula::ZProtoPipeline* pipeline, std::shared_ptr<Packa
             (*req)->set_user_id((*login_rsp)->user_id());
             //folly::to<uint32_t>((*login_rsp)->user_id()));
             (*req)->set_state(1);
-            ZRpcUtil::DoClientCall("online_client", req)
+            ZRpcUtil::DoClientCall("online_status_client", req)
             .within(std::chrono::milliseconds(5000))
             .then([](ProtoRpcResponsePtr rsp2) {
               CHECK(rsp2);
-              LOG(INFO) << "online_client rsp: " << rsp2->ToString();
+              LOG(INFO) << "online_status_client rsp: " << rsp2->ToString();
               // auto online_rep = ToApiRpcOk<zproto::ClientOnlineRsp>(rsp2);
               // LOG(INFO) << (*online_rep)->Utf8DebugString();
             });
@@ -164,6 +172,9 @@ int gate::OnConnectionClosed(nebula::TcpServiceBase* service, nebula::ZProtoPipe
   // TODO(@benqi):
   auto h = pipeline->getHandler<ZProtoHandler>();
   DCHECK(h);
+  
+//  if (service->GetServiceName() == "push_channel_client") {
+//  }
   
 /*
   if (service->GetServiceName() == "frontend") {

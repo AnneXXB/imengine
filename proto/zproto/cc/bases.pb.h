@@ -40,7 +40,10 @@ void protobuf_ShutdownFile_bases_2eproto();
 class Dialog;
 class EnumHelper;
 class MessageContainer;
+class OnlineSessionStatusEntry;
+class OnlineUser;
 class Peer;
+class UserID;
 class UserInfo;
 class UserToeken;
 
@@ -310,6 +313,160 @@ class EnumHelper : public ::google::protobuf::Message /* @@protoc_insertion_poin
 
   void InitAsDefaultInstance();
   static EnumHelper* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class UserID : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.UserID) */ {
+ public:
+  UserID();
+  virtual ~UserID();
+
+  UserID(const UserID& from);
+
+  inline UserID& operator=(const UserID& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const UserID& default_instance();
+
+  void Swap(UserID* other);
+
+  // implements Message ----------------------------------------------
+
+  inline UserID* New() const { return New(NULL); }
+
+  UserID* New(::google::protobuf::Arena* arena) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(UserID* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 app_id = 1;
+  void clear_app_id();
+  static const int kAppIdFieldNumber = 1;
+  ::google::protobuf::uint32 app_id() const;
+  void set_app_id(::google::protobuf::uint32 value);
+
+  // optional string user_id = 2;
+  void clear_user_id();
+  static const int kUserIdFieldNumber = 2;
+  const ::std::string& user_id() const;
+  void set_user_id(const ::std::string& value);
+  void set_user_id(const char* value);
+  void set_user_id(const char* value, size_t size);
+  ::std::string* mutable_user_id();
+  ::std::string* release_user_id();
+  void set_allocated_user_id(::std::string* user_id);
+
+  // @@protoc_insertion_point(class_scope:zproto.UserID)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::internal::ArenaStringPtr user_id_;
+  ::google::protobuf::uint32 app_id_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_bases_2eproto();
+  friend void protobuf_AssignDesc_bases_2eproto();
+  friend void protobuf_ShutdownFile_bases_2eproto();
+
+  void InitAsDefaultInstance();
+  static UserID* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class OnlineSessionStatusEntry : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.OnlineSessionStatusEntry) */ {
+ public:
+  OnlineSessionStatusEntry();
+  virtual ~OnlineSessionStatusEntry();
+
+  OnlineSessionStatusEntry(const OnlineSessionStatusEntry& from);
+
+  inline OnlineSessionStatusEntry& operator=(const OnlineSessionStatusEntry& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const OnlineSessionStatusEntry& default_instance();
+
+  void Swap(OnlineSessionStatusEntry* other);
+
+  // implements Message ----------------------------------------------
+
+  inline OnlineSessionStatusEntry* New() const { return New(NULL); }
+
+  OnlineSessionStatusEntry* New(::google::protobuf::Arena* arena) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(OnlineSessionStatusEntry* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 app_id = 1;
+  void clear_app_id();
+  static const int kAppIdFieldNumber = 1;
+  ::google::protobuf::uint32 app_id() const;
+  void set_app_id(::google::protobuf::uint32 value);
+
+  // optional string user_id = 2;
+  void clear_user_id();
+  static const int kUserIdFieldNumber = 2;
+  const ::std::string& user_id() const;
+  void set_user_id(const ::std::string& value);
+  void set_user_id(const char* value);
+  void set_user_id(const char* value, size_t size);
+  ::std::string* mutable_user_id();
+  ::std::string* release_user_id();
+  void set_allocated_user_id(::std::string* user_id);
+
+  // @@protoc_insertion_point(class_scope:zproto.OnlineSessionStatusEntry)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::internal::ArenaStringPtr user_id_;
+  ::google::protobuf::uint32 app_id_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_bases_2eproto();
+  friend void protobuf_AssignDesc_bases_2eproto();
+  friend void protobuf_ShutdownFile_bases_2eproto();
+
+  void InitAsDefaultInstance();
+  static OnlineSessionStatusEntry* default_instance_;
 };
 // -------------------------------------------------------------------
 
@@ -585,6 +742,97 @@ class Peer : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
 };
 // -------------------------------------------------------------------
 
+class OnlineUser : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.OnlineUser) */ {
+ public:
+  OnlineUser();
+  virtual ~OnlineUser();
+
+  OnlineUser(const OnlineUser& from);
+
+  inline OnlineUser& operator=(const OnlineUser& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const OnlineUser& default_instance();
+
+  void Swap(OnlineUser* other);
+
+  // implements Message ----------------------------------------------
+
+  inline OnlineUser* New() const { return New(NULL); }
+
+  OnlineUser* New(::google::protobuf::Arena* arena) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(OnlineUser* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 app_id = 1;
+  void clear_app_id();
+  static const int kAppIdFieldNumber = 1;
+  ::google::protobuf::uint32 app_id() const;
+  void set_app_id(::google::protobuf::uint32 value);
+
+  // optional string user_id = 2;
+  void clear_user_id();
+  static const int kUserIdFieldNumber = 2;
+  const ::std::string& user_id() const;
+  void set_user_id(const ::std::string& value);
+  void set_user_id(const char* value);
+  void set_user_id(const char* value, size_t size);
+  ::std::string* mutable_user_id();
+  ::std::string* release_user_id();
+  void set_allocated_user_id(::std::string* user_id);
+
+  // optional uint32 server_id = 3;
+  void clear_server_id();
+  static const int kServerIdFieldNumber = 3;
+  ::google::protobuf::uint32 server_id() const;
+  void set_server_id(::google::protobuf::uint32 value);
+
+  // optional uint64 conn_id = 4;
+  void clear_conn_id();
+  static const int kConnIdFieldNumber = 4;
+  ::google::protobuf::uint64 conn_id() const;
+  void set_conn_id(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:zproto.OnlineUser)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::internal::ArenaStringPtr user_id_;
+  ::google::protobuf::uint32 app_id_;
+  ::google::protobuf::uint32 server_id_;
+  ::google::protobuf::uint64 conn_id_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_bases_2eproto();
+  friend void protobuf_AssignDesc_bases_2eproto();
+  friend void protobuf_ShutdownFile_bases_2eproto();
+
+  void InitAsDefaultInstance();
+  static OnlineUser* default_instance_;
+};
+// -------------------------------------------------------------------
+
 class MessageContainer : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.MessageContainer) */ {
  public:
   MessageContainer();
@@ -804,6 +1052,130 @@ class Dialog : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
 
 #if !PROTOBUF_INLINE_NOT_IN_HEADERS
 // EnumHelper
+
+// -------------------------------------------------------------------
+
+// UserID
+
+// optional uint32 app_id = 1;
+inline void UserID::clear_app_id() {
+  app_id_ = 0u;
+}
+inline ::google::protobuf::uint32 UserID::app_id() const {
+  // @@protoc_insertion_point(field_get:zproto.UserID.app_id)
+  return app_id_;
+}
+inline void UserID::set_app_id(::google::protobuf::uint32 value) {
+  
+  app_id_ = value;
+  // @@protoc_insertion_point(field_set:zproto.UserID.app_id)
+}
+
+// optional string user_id = 2;
+inline void UserID::clear_user_id() {
+  user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& UserID::user_id() const {
+  // @@protoc_insertion_point(field_get:zproto.UserID.user_id)
+  return user_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void UserID::set_user_id(const ::std::string& value) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.UserID.user_id)
+}
+inline void UserID::set_user_id(const char* value) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.UserID.user_id)
+}
+inline void UserID::set_user_id(const char* value, size_t size) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.UserID.user_id)
+}
+inline ::std::string* UserID::mutable_user_id() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.UserID.user_id)
+  return user_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* UserID::release_user_id() {
+  // @@protoc_insertion_point(field_release:zproto.UserID.user_id)
+  
+  return user_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void UserID::set_allocated_user_id(::std::string* user_id) {
+  if (user_id != NULL) {
+    
+  } else {
+    
+  }
+  user_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), user_id);
+  // @@protoc_insertion_point(field_set_allocated:zproto.UserID.user_id)
+}
+
+// -------------------------------------------------------------------
+
+// OnlineSessionStatusEntry
+
+// optional uint32 app_id = 1;
+inline void OnlineSessionStatusEntry::clear_app_id() {
+  app_id_ = 0u;
+}
+inline ::google::protobuf::uint32 OnlineSessionStatusEntry::app_id() const {
+  // @@protoc_insertion_point(field_get:zproto.OnlineSessionStatusEntry.app_id)
+  return app_id_;
+}
+inline void OnlineSessionStatusEntry::set_app_id(::google::protobuf::uint32 value) {
+  
+  app_id_ = value;
+  // @@protoc_insertion_point(field_set:zproto.OnlineSessionStatusEntry.app_id)
+}
+
+// optional string user_id = 2;
+inline void OnlineSessionStatusEntry::clear_user_id() {
+  user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& OnlineSessionStatusEntry::user_id() const {
+  // @@protoc_insertion_point(field_get:zproto.OnlineSessionStatusEntry.user_id)
+  return user_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void OnlineSessionStatusEntry::set_user_id(const ::std::string& value) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.OnlineSessionStatusEntry.user_id)
+}
+inline void OnlineSessionStatusEntry::set_user_id(const char* value) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.OnlineSessionStatusEntry.user_id)
+}
+inline void OnlineSessionStatusEntry::set_user_id(const char* value, size_t size) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.OnlineSessionStatusEntry.user_id)
+}
+inline ::std::string* OnlineSessionStatusEntry::mutable_user_id() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.OnlineSessionStatusEntry.user_id)
+  return user_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* OnlineSessionStatusEntry::release_user_id() {
+  // @@protoc_insertion_point(field_release:zproto.OnlineSessionStatusEntry.user_id)
+  
+  return user_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void OnlineSessionStatusEntry::set_allocated_user_id(::std::string* user_id) {
+  if (user_id != NULL) {
+    
+  } else {
+    
+  }
+  user_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), user_id);
+  // @@protoc_insertion_point(field_set_allocated:zproto.OnlineSessionStatusEntry.user_id)
+}
 
 // -------------------------------------------------------------------
 
@@ -1155,6 +1527,96 @@ inline void Peer::set_allocated_id(::std::string* id) {
 
 // -------------------------------------------------------------------
 
+// OnlineUser
+
+// optional uint32 app_id = 1;
+inline void OnlineUser::clear_app_id() {
+  app_id_ = 0u;
+}
+inline ::google::protobuf::uint32 OnlineUser::app_id() const {
+  // @@protoc_insertion_point(field_get:zproto.OnlineUser.app_id)
+  return app_id_;
+}
+inline void OnlineUser::set_app_id(::google::protobuf::uint32 value) {
+  
+  app_id_ = value;
+  // @@protoc_insertion_point(field_set:zproto.OnlineUser.app_id)
+}
+
+// optional string user_id = 2;
+inline void OnlineUser::clear_user_id() {
+  user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& OnlineUser::user_id() const {
+  // @@protoc_insertion_point(field_get:zproto.OnlineUser.user_id)
+  return user_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void OnlineUser::set_user_id(const ::std::string& value) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.OnlineUser.user_id)
+}
+inline void OnlineUser::set_user_id(const char* value) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.OnlineUser.user_id)
+}
+inline void OnlineUser::set_user_id(const char* value, size_t size) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.OnlineUser.user_id)
+}
+inline ::std::string* OnlineUser::mutable_user_id() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.OnlineUser.user_id)
+  return user_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* OnlineUser::release_user_id() {
+  // @@protoc_insertion_point(field_release:zproto.OnlineUser.user_id)
+  
+  return user_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void OnlineUser::set_allocated_user_id(::std::string* user_id) {
+  if (user_id != NULL) {
+    
+  } else {
+    
+  }
+  user_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), user_id);
+  // @@protoc_insertion_point(field_set_allocated:zproto.OnlineUser.user_id)
+}
+
+// optional uint32 server_id = 3;
+inline void OnlineUser::clear_server_id() {
+  server_id_ = 0u;
+}
+inline ::google::protobuf::uint32 OnlineUser::server_id() const {
+  // @@protoc_insertion_point(field_get:zproto.OnlineUser.server_id)
+  return server_id_;
+}
+inline void OnlineUser::set_server_id(::google::protobuf::uint32 value) {
+  
+  server_id_ = value;
+  // @@protoc_insertion_point(field_set:zproto.OnlineUser.server_id)
+}
+
+// optional uint64 conn_id = 4;
+inline void OnlineUser::clear_conn_id() {
+  conn_id_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 OnlineUser::conn_id() const {
+  // @@protoc_insertion_point(field_get:zproto.OnlineUser.conn_id)
+  return conn_id_;
+}
+inline void OnlineUser::set_conn_id(::google::protobuf::uint64 value) {
+  
+  conn_id_ = value;
+  // @@protoc_insertion_point(field_set:zproto.OnlineUser.conn_id)
+}
+
+// -------------------------------------------------------------------
+
 // MessageContainer
 
 // optional uint64 message_id = 1;
@@ -1454,6 +1916,12 @@ inline void Dialog::set_allocated_peer(::zproto::Peer* peer) {
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

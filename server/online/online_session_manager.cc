@@ -90,6 +90,18 @@ size_t OnlineSessionManager::LookupEntrysByUserID(uint32_t app_id, const std::st
   return sessions->size();
 }
 
+size_t OnlineSessionManager::LookupEntrysByUserIDList(const std::list<std::string>& app_user_id_list, SessionEntryList* sessions) const {
+  std::lock_guard<std::mutex> g(sessions_mutex_);
+  
+  for (const auto& v : app_user_id_list) {
+    const auto& index=sessions_.get<APP_USER_ID>();
+    auto r = index.equal_range(v);
+    sessions->insert(sessions->begin(), r.first, r.second);
+  }
+  
+  return sessions->size();
+}
+
 size_t OnlineSessionManager::LookupEntrysByAppID(uint32_t app_id, SessionEntryList* sessions) const {
   DCHECK(sessions);
 

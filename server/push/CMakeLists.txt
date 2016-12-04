@@ -21,8 +21,12 @@ set (SRC_LIST
   push_server.h
   zrpc_push_service.cc
   zrpc_push_service.h
+  gate_channel_handler.cc
+  gate_channel_handler.h
+  gate_channel_manager.cc
+  gate_channel_manager.h
   )
 
 add_executable (push_server ${SRC_LIST})
-target_link_libraries (push_server nebula-net nebula-base proto)
+target_link_libraries (push_server biz_model nebula-net nebula-base proto)
 

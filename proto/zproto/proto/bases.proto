@@ -139,6 +139,16 @@ struct UserInfo {
 };
 */
 
+message UserID {
+  uint32 app_id = 1;
+  string user_id = 2;
+};
+
+message OnlineSessionStatusEntry {
+  uint32 app_id = 1;
+  string user_id = 2;
+};
+
 // 连接认证
 message UserToeken {
   string app_key     = 1;       //
@@ -185,6 +195,12 @@ message Peer {
 //  Peer peer = 2;
 //}
 
+message OnlineUser {
+  uint32 app_id       = 1;
+  string user_id      = 2;
+  uint32 server_id    = 3;
+  uint64 conn_id      = 4;
+}
 
 // 聊天消息内容
 message MessageContainer {

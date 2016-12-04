@@ -24,9 +24,11 @@
 
 bool OnlineStatusServer::Initialize() {
   RegisterService("online_status_server", "rpc_server", "zrpc");
+  RegisterService("status_http_server", "http_server", "http");
 
   ZRpcUtil::Register(zproto::CLIENT_ONLINE_REQ, DoClientOnline);
-  ZRpcUtil::Register(zproto::CLIENT_ONLINE_RSP, DoClientOffline);
+  ZRpcUtil::Register(zproto::CLIENT_OFFLINE_REQ, DoClientOffline);
+  ZRpcUtil::Register(zproto::QUERY_ONINE_USER_REQ, DoQueryOnlineUser);
   
   BaseServer::Initialize();
   

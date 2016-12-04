@@ -38,6 +38,7 @@ void protobuf_ShutdownFile_method_5ftypes_2eproto();
 
 enum MethodID {
   METHOD_ID_UNKNOWN = 0,
+  VOID_RSP = 1,
   USER_TOKEN_AUTH_REQ = 65025,
   USER_TOKEN_AUTH_RSP = 65026,
   SERVER_AUTH_REQ = 65281,
@@ -48,6 +49,8 @@ enum MethodID {
   CLIENT_ONLINE_RSP = 65286,
   CLIENT_OFFLINE_REQ = 65287,
   CLIENT_OFFLINE_RSP = 65288,
+  QUERY_ONINE_USER_REQ = 65305,
+  QUERY_ONINE_USER_RSP = 65306,
   SEND_MESSAGE_REQ = 65289,
   SEQ_DATE_RSP = 65290,
   MESSAGE_NOTIFY = 65291,
@@ -59,12 +62,13 @@ enum MethodID {
   LOAD_HISTORY_MESSAGE_RSP = 65297,
   LOAD_DIALOGS_REQ = 65298,
   LOAD_DIALOGS_RSP = 65299,
+  FORAWRD_MESSAGE_REQ = 65300,
   MethodID_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
   MethodID_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
 bool MethodID_IsValid(int value);
 const MethodID MethodID_MIN = METHOD_ID_UNKNOWN;
-const MethodID MethodID_MAX = LOAD_DIALOGS_RSP;
+const MethodID MethodID_MAX = QUERY_ONINE_USER_RSP;
 const int MethodID_ARRAYSIZE = MethodID_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* MethodID_descriptor();

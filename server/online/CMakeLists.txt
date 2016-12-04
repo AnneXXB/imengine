@@ -23,6 +23,8 @@ set (SRC_LIST
   rpc_online_service.h
   online_session_manager.cc
   online_session_manager.h
+  http_online_service.cc
+  http_online_service.h
   )
 
 add_executable (online_status_server ${SRC_LIST})

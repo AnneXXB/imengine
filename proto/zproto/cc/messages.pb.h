@@ -37,6 +37,7 @@ void protobuf_AddDesc_messages_2eproto();
 void protobuf_AssignDesc_messages_2eproto();
 void protobuf_ShutdownFile_messages_2eproto();
 
+class ForwardMessageReq;
 class LoadDialogsReq;
 class LoadDialogsRsp;
 class LoadHistoryMessageReq;
@@ -48,8 +49,67 @@ class MessageSyncReq;
 class MessageSyncRsp;
 class SendMessageReq;
 class SeqDateRsp;
+class VoidRsp;
 
 // ===================================================================
+
+class VoidRsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.VoidRsp) */ {
+ public:
+  VoidRsp();
+  virtual ~VoidRsp();
+
+  VoidRsp(const VoidRsp& from);
+
+  inline VoidRsp& operator=(const VoidRsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const VoidRsp& default_instance();
+
+  void Swap(VoidRsp* other);
+
+  // implements Message ----------------------------------------------
+
+  inline VoidRsp* New() const { return New(NULL); }
+
+  VoidRsp* New(::google::protobuf::Arena* arena) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(VoidRsp* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:zproto.VoidRsp)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_messages_2eproto();
+  friend void protobuf_AssignDesc_messages_2eproto();
+  friend void protobuf_ShutdownFile_messages_2eproto();
+
+  void InitAsDefaultInstance();
+  static VoidRsp* default_instance_;
+};
+// -------------------------------------------------------------------
 
 class SendMessageReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.SendMessageReq) */ {
  public:
@@ -188,6 +248,87 @@ class SeqDateRsp : public ::google::protobuf::Message /* @@protoc_insertion_poin
 
   void InitAsDefaultInstance();
   static SeqDateRsp* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class ForwardMessageReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.ForwardMessageReq) */ {
+ public:
+  ForwardMessageReq();
+  virtual ~ForwardMessageReq();
+
+  ForwardMessageReq(const ForwardMessageReq& from);
+
+  inline ForwardMessageReq& operator=(const ForwardMessageReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ForwardMessageReq& default_instance();
+
+  void Swap(ForwardMessageReq* other);
+
+  // implements Message ----------------------------------------------
+
+  inline ForwardMessageReq* New() const { return New(NULL); }
+
+  ForwardMessageReq* New(::google::protobuf::Arena* arena) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(ForwardMessageReq* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional .zproto.MessageContainer message_data = 1;
+  bool has_message_data() const;
+  void clear_message_data();
+  static const int kMessageDataFieldNumber = 1;
+  const ::zproto::MessageContainer& message_data() const;
+  ::zproto::MessageContainer* mutable_message_data();
+  ::zproto::MessageContainer* release_message_data();
+  void set_allocated_message_data(::zproto::MessageContainer* message_data);
+
+  // repeated uint64 not_send_conn_ids = 2;
+  int not_send_conn_ids_size() const;
+  void clear_not_send_conn_ids();
+  static const int kNotSendConnIdsFieldNumber = 2;
+  ::google::protobuf::uint64 not_send_conn_ids(int index) const;
+  void set_not_send_conn_ids(int index, ::google::protobuf::uint64 value);
+  void add_not_send_conn_ids(::google::protobuf::uint64 value);
+  const ::google::protobuf::RepeatedField< ::google::protobuf::uint64 >&
+      not_send_conn_ids() const;
+  ::google::protobuf::RepeatedField< ::google::protobuf::uint64 >*
+      mutable_not_send_conn_ids();
+
+  // @@protoc_insertion_point(class_scope:zproto.ForwardMessageReq)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::zproto::MessageContainer* message_data_;
+  ::google::protobuf::RepeatedField< ::google::protobuf::uint64 > not_send_conn_ids_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_messages_2eproto();
+  friend void protobuf_AssignDesc_messages_2eproto();
+  friend void protobuf_ShutdownFile_messages_2eproto();
+
+  void InitAsDefaultInstance();
+  static ForwardMessageReq* default_instance_;
 };
 // -------------------------------------------------------------------
 
@@ -842,6 +983,10 @@ class LoadDialogsRsp : public ::google::protobuf::Message /* @@protoc_insertion_
 // ===================================================================
 
 #if !PROTOBUF_INLINE_NOT_IN_HEADERS
+// VoidRsp
+
+// -------------------------------------------------------------------
+
 // SendMessageReq
 
 // optional .zproto.MessageContainer message_data = 1;
@@ -912,6 +1057,78 @@ inline void SeqDateRsp::set_created(::google::protobuf::uint64 value) {
   
   created_ = value;
   // @@protoc_insertion_point(field_set:zproto.SeqDateRsp.created)
+}
+
+// -------------------------------------------------------------------
+
+// ForwardMessageReq
+
+// optional .zproto.MessageContainer message_data = 1;
+inline bool ForwardMessageReq::has_message_data() const {
+  return !_is_default_instance_ && message_data_ != NULL;
+}
+inline void ForwardMessageReq::clear_message_data() {
+  if (GetArenaNoVirtual() == NULL && message_data_ != NULL) delete message_data_;
+  message_data_ = NULL;
+}
+inline const ::zproto::MessageContainer& ForwardMessageReq::message_data() const {
+  // @@protoc_insertion_point(field_get:zproto.ForwardMessageReq.message_data)
+  return message_data_ != NULL ? *message_data_ : *default_instance_->message_data_;
+}
+inline ::zproto::MessageContainer* ForwardMessageReq::mutable_message_data() {
+  
+  if (message_data_ == NULL) {
+    message_data_ = new ::zproto::MessageContainer;
+  }
+  // @@protoc_insertion_point(field_mutable:zproto.ForwardMessageReq.message_data)
+  return message_data_;
+}
+inline ::zproto::MessageContainer* ForwardMessageReq::release_message_data() {
+  // @@protoc_insertion_point(field_release:zproto.ForwardMessageReq.message_data)
+  
+  ::zproto::MessageContainer* temp = message_data_;
+  message_data_ = NULL;
+  return temp;
+}
+inline void ForwardMessageReq::set_allocated_message_data(::zproto::MessageContainer* message_data) {
+  delete message_data_;
+  message_data_ = message_data;
+  if (message_data) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zproto.ForwardMessageReq.message_data)
+}
+
+// repeated uint64 not_send_conn_ids = 2;
+inline int ForwardMessageReq::not_send_conn_ids_size() const {
+  return not_send_conn_ids_.size();
+}
+inline void ForwardMessageReq::clear_not_send_conn_ids() {
+  not_send_conn_ids_.Clear();
+}
+inline ::google::protobuf::uint64 ForwardMessageReq::not_send_conn_ids(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.ForwardMessageReq.not_send_conn_ids)
+  return not_send_conn_ids_.Get(index);
+}
+inline void ForwardMessageReq::set_not_send_conn_ids(int index, ::google::protobuf::uint64 value) {
+  not_send_conn_ids_.Set(index, value);
+  // @@protoc_insertion_point(field_set:zproto.ForwardMessageReq.not_send_conn_ids)
+}
+inline void ForwardMessageReq::add_not_send_conn_ids(::google::protobuf::uint64 value) {
+  not_send_conn_ids_.Add(value);
+  // @@protoc_insertion_point(field_add:zproto.ForwardMessageReq.not_send_conn_ids)
+}
+inline const ::google::protobuf::RepeatedField< ::google::protobuf::uint64 >&
+ForwardMessageReq::not_send_conn_ids() const {
+  // @@protoc_insertion_point(field_list:zproto.ForwardMessageReq.not_send_conn_ids)
+  return not_send_conn_ids_;
+}
+inline ::google::protobuf::RepeatedField< ::google::protobuf::uint64 >*
+ForwardMessageReq::mutable_not_send_conn_ids() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.ForwardMessageReq.not_send_conn_ids)
+  return &not_send_conn_ids_;
 }
 
 // -------------------------------------------------------------------
@@ -1267,6 +1484,10 @@ LoadDialogsRsp::dialogs() const {
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

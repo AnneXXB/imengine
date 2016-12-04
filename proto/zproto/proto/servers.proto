@@ -23,6 +23,8 @@ option java_package = "com.zchat.engine.zproto";
 option java_outer_classname = "ZProto";
 option optimize_for = CODE_SIZE;
 
+import "bases.proto";
+
 ///////////////////////////////////////////////////////////////////////
 // LOGIN_OK_PUSH = 0xff01;
 //message LoginOkPush {
@@ -91,4 +93,14 @@ message ClientOfflineReq {
 // CLIENT_OFFLINE_RSP
 message ClientOfflineRsp {
   uint64 index_id = 1;
+}
+
+//
+message QueryOnlineUserReq {
+  repeated UserID user_id_list = 1;
+}
+
+//
+message QueryOnlineUserRsp {
+  repeated OnlineUser online_users = 1;
 }

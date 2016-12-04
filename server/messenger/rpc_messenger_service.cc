@@ -150,6 +150,19 @@ ProtoRpcResponsePtr DoSendMessage(RpcRequestPtr request) {
     
     // TODO(@benqi): 未读计数
     
+    // 转发消息
+    auto forward = std::make_shared<ApiRpcRequest<zproto::ForwardMessageReq>>();
+    (*forward)->mutable_message_data()->CopyFrom(message_data);
+    (*forward)->add_not_send_conn_ids(request->session_id());
+    
+    ZRpcUtil::DoClientCall("push_client", forward)
+    .within(std::chrono::milliseconds(5000))
+    .then([](ProtoRpcResponsePtr rsp2) {
+      CHECK(rsp2);
+      LOG(INFO) << "push_client rsp: " << rsp2->ToString();
+      // auto online_rep = ToApiRpcOk<zproto::ClientOnlineRsp>(rsp2);
+      // LOG(INFO) << (*online_rep)->Utf8DebugString();
+    });
   } else {
     // 群聊
     // TODO(@benqi): 麻烦

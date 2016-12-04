@@ -25,6 +25,7 @@
 bool MessengerServer::Initialize() {
   // RegisterService("tcpd", "tcp_server");
   RegisterService("messenger_server", "rpc_server", "zrpc");
+  RegisterService("push_client", "rpc_client", "zrpc");
 
   ZRpcUtil::Register(zproto::SEND_MESSAGE_REQ, DoSendMessage);
   ZRpcUtil::Register(zproto::MESSAGE_SYNC_REQ, DoMessageSync);

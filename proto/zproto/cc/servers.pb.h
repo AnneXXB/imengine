@@ -27,6 +27,7 @@
 #include <google/protobuf/repeated_field.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/unknown_field_set.h>
+#include "bases.pb.h"
 // @@protoc_insertion_point(includes)
 
 namespace zproto {
@@ -40,6 +41,8 @@ class ClientOfflineReq;
 class ClientOfflineRsp;
 class ClientOnlineReq;
 class ClientOnlineRsp;
+class QueryOnlineUserReq;
+class QueryOnlineUserRsp;
 class ServerAuthReq;
 class ServerAuthRsp;
 
@@ -478,6 +481,148 @@ class ClientOfflineRsp : public ::google::protobuf::Message /* @@protoc_insertio
   void InitAsDefaultInstance();
   static ClientOfflineRsp* default_instance_;
 };
+// -------------------------------------------------------------------
+
+class QueryOnlineUserReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.QueryOnlineUserReq) */ {
+ public:
+  QueryOnlineUserReq();
+  virtual ~QueryOnlineUserReq();
+
+  QueryOnlineUserReq(const QueryOnlineUserReq& from);
+
+  inline QueryOnlineUserReq& operator=(const QueryOnlineUserReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const QueryOnlineUserReq& default_instance();
+
+  void Swap(QueryOnlineUserReq* other);
+
+  // implements Message ----------------------------------------------
+
+  inline QueryOnlineUserReq* New() const { return New(NULL); }
+
+  QueryOnlineUserReq* New(::google::protobuf::Arena* arena) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(QueryOnlineUserReq* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated .zproto.UserID user_id_list = 1;
+  int user_id_list_size() const;
+  void clear_user_id_list();
+  static const int kUserIdListFieldNumber = 1;
+  const ::zproto::UserID& user_id_list(int index) const;
+  ::zproto::UserID* mutable_user_id_list(int index);
+  ::zproto::UserID* add_user_id_list();
+  ::google::protobuf::RepeatedPtrField< ::zproto::UserID >*
+      mutable_user_id_list();
+  const ::google::protobuf::RepeatedPtrField< ::zproto::UserID >&
+      user_id_list() const;
+
+  // @@protoc_insertion_point(class_scope:zproto.QueryOnlineUserReq)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::RepeatedPtrField< ::zproto::UserID > user_id_list_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_servers_2eproto();
+  friend void protobuf_AssignDesc_servers_2eproto();
+  friend void protobuf_ShutdownFile_servers_2eproto();
+
+  void InitAsDefaultInstance();
+  static QueryOnlineUserReq* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class QueryOnlineUserRsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.QueryOnlineUserRsp) */ {
+ public:
+  QueryOnlineUserRsp();
+  virtual ~QueryOnlineUserRsp();
+
+  QueryOnlineUserRsp(const QueryOnlineUserRsp& from);
+
+  inline QueryOnlineUserRsp& operator=(const QueryOnlineUserRsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const QueryOnlineUserRsp& default_instance();
+
+  void Swap(QueryOnlineUserRsp* other);
+
+  // implements Message ----------------------------------------------
+
+  inline QueryOnlineUserRsp* New() const { return New(NULL); }
+
+  QueryOnlineUserRsp* New(::google::protobuf::Arena* arena) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(QueryOnlineUserRsp* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated .zproto.OnlineUser online_users = 1;
+  int online_users_size() const;
+  void clear_online_users();
+  static const int kOnlineUsersFieldNumber = 1;
+  const ::zproto::OnlineUser& online_users(int index) const;
+  ::zproto::OnlineUser* mutable_online_users(int index);
+  ::zproto::OnlineUser* add_online_users();
+  ::google::protobuf::RepeatedPtrField< ::zproto::OnlineUser >*
+      mutable_online_users();
+  const ::google::protobuf::RepeatedPtrField< ::zproto::OnlineUser >&
+      online_users() const;
+
+  // @@protoc_insertion_point(class_scope:zproto.QueryOnlineUserRsp)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::RepeatedPtrField< ::zproto::OnlineUser > online_users_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_servers_2eproto();
+  friend void protobuf_AssignDesc_servers_2eproto();
+  friend void protobuf_ShutdownFile_servers_2eproto();
+
+  void InitAsDefaultInstance();
+  static QueryOnlineUserRsp* default_instance_;
+};
 // ===================================================================
 
 
@@ -720,7 +865,79 @@ inline void ClientOfflineRsp::set_index_id(::google::protobuf::uint64 value) {
   // @@protoc_insertion_point(field_set:zproto.ClientOfflineRsp.index_id)
 }
 
+// -------------------------------------------------------------------
+
+// QueryOnlineUserReq
+
+// repeated .zproto.UserID user_id_list = 1;
+inline int QueryOnlineUserReq::user_id_list_size() const {
+  return user_id_list_.size();
+}
+inline void QueryOnlineUserReq::clear_user_id_list() {
+  user_id_list_.Clear();
+}
+inline const ::zproto::UserID& QueryOnlineUserReq::user_id_list(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.QueryOnlineUserReq.user_id_list)
+  return user_id_list_.Get(index);
+}
+inline ::zproto::UserID* QueryOnlineUserReq::mutable_user_id_list(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.QueryOnlineUserReq.user_id_list)
+  return user_id_list_.Mutable(index);
+}
+inline ::zproto::UserID* QueryOnlineUserReq::add_user_id_list() {
+  // @@protoc_insertion_point(field_add:zproto.QueryOnlineUserReq.user_id_list)
+  return user_id_list_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::zproto::UserID >*
+QueryOnlineUserReq::mutable_user_id_list() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.QueryOnlineUserReq.user_id_list)
+  return &user_id_list_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::zproto::UserID >&
+QueryOnlineUserReq::user_id_list() const {
+  // @@protoc_insertion_point(field_list:zproto.QueryOnlineUserReq.user_id_list)
+  return user_id_list_;
+}
+
+// -------------------------------------------------------------------
+
+// QueryOnlineUserRsp
+
+// repeated .zproto.OnlineUser online_users = 1;
+inline int QueryOnlineUserRsp::online_users_size() const {
+  return online_users_.size();
+}
+inline void QueryOnlineUserRsp::clear_online_users() {
+  online_users_.Clear();
+}
+inline const ::zproto::OnlineUser& QueryOnlineUserRsp::online_users(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.QueryOnlineUserRsp.online_users)
+  return online_users_.Get(index);
+}
+inline ::zproto::OnlineUser* QueryOnlineUserRsp::mutable_online_users(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.QueryOnlineUserRsp.online_users)
+  return online_users_.Mutable(index);
+}
+inline ::zproto::OnlineUser* QueryOnlineUserRsp::add_online_users() {
+  // @@protoc_insertion_point(field_add:zproto.QueryOnlineUserRsp.online_users)
+  return online_users_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::zproto::OnlineUser >*
+QueryOnlineUserRsp::mutable_online_users() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.QueryOnlineUserRsp.online_users)
+  return &online_users_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::zproto::OnlineUser >&
+QueryOnlineUserRsp::online_users() const {
+  // @@protoc_insertion_point(field_list:zproto.QueryOnlineUserRsp.online_users)
+  return online_users_;
+}
+
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

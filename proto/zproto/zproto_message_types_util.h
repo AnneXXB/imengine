@@ -30,6 +30,11 @@
 
 namespace proto {
 
+/////////////////////////////////////////////////////////////////////////////////
+template<>
+inline uint32_t GetMessageType<zproto::VoidRsp>() {
+  return zproto::VOID_RSP;
+}
   
 /////////////////////////////////////////////////////////////////////////////////
 template<>
@@ -85,6 +90,16 @@ inline uint32_t GetMessageType<zproto::ClientOfflineRsp>() {
 }
 
 template<>
+inline uint32_t GetMessageType<zproto::QueryOnlineUserReq>() {
+  return zproto::QUERY_ONINE_USER_REQ;
+}
+
+template<>
+inline uint32_t GetMessageType<zproto::QueryOnlineUserRsp>() {
+  return zproto::QUERY_ONINE_USER_RSP;
+}
+  
+template<>
 inline uint32_t GetMessageType<zproto::SendMessageReq>() {
   return zproto::SEND_MESSAGE_REQ;
 }
@@ -137,6 +152,11 @@ inline uint32_t GetMessageType<zproto::LoadDialogsReq>() {
 template<>
 inline uint32_t GetMessageType<zproto::LoadDialogsRsp>() {
   return zproto::LOAD_DIALOGS_RSP;
+}
+
+template<>
+inline uint32_t GetMessageType<zproto::ForwardMessageReq>() {
+  return zproto::FORAWRD_MESSAGE_REQ;
 }
 
 }

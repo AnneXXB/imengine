@@ -27,6 +27,8 @@ option optimize_for = CODE_SIZE;
 enum MethodID {
   METHOD_ID_UNKNOWN = 0;
 
+  VOID_RSP = 0x01;
+
   USER_TOKEN_AUTH_REQ = 0xfe01;
   USER_TOKEN_AUTH_RSP = 0xfe02;
 
@@ -41,7 +43,9 @@ enum MethodID {
   CLIENT_ONLINE_RSP = 0xff06;
   CLIENT_OFFLINE_REQ = 0xff07;
   CLIENT_OFFLINE_RSP = 0xff08;
-  
+  QUERY_ONINE_USER_REQ = 0xff19;
+  QUERY_ONINE_USER_RSP = 0xff1a;
+
   // messages
   SEND_MESSAGE_REQ = 0xff09;
   SEQ_DATE_RSP = 0xff0a;
@@ -54,4 +58,6 @@ enum MethodID {
   LOAD_HISTORY_MESSAGE_RSP = 0xff11;
   LOAD_DIALOGS_REQ = 0xff12;
   LOAD_DIALOGS_RSP = 0xff13;
+  
+  FORAWRD_MESSAGE_REQ = 0xff14;
 }

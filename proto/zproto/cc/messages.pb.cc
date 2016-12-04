@@ -21,12 +21,18 @@ namespace zproto {
 
 namespace {
 
+const ::google::protobuf::Descriptor* VoidRsp_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  VoidRsp_reflection_ = NULL;
 const ::google::protobuf::Descriptor* SendMessageReq_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   SendMessageReq_reflection_ = NULL;
 const ::google::protobuf::Descriptor* SeqDateRsp_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   SeqDateRsp_reflection_ = NULL;
+const ::google::protobuf::Descriptor* ForwardMessageReq_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  ForwardMessageReq_reflection_ = NULL;
 const ::google::protobuf::Descriptor* MessageNotify_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   MessageNotify_reflection_ = NULL;
@@ -65,7 +71,21 @@ void protobuf_AssignDesc_messages_2eproto() {
     ::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
       "messages.proto");
   GOOGLE_CHECK(file != NULL);
-  SendMessageReq_descriptor_ = file->message_type(0);
+  VoidRsp_descriptor_ = file->message_type(0);
+  static const int VoidRsp_offsets_[1] = {
+  };
+  VoidRsp_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      VoidRsp_descriptor_,
+      VoidRsp::default_instance_,
+      VoidRsp_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(VoidRsp),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VoidRsp, _internal_metadata_),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VoidRsp, _is_default_instance_));
+  SendMessageReq_descriptor_ = file->message_type(1);
   static const int SendMessageReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SendMessageReq, message_data_),
   };
@@ -80,7 +100,7 @@ void protobuf_AssignDesc_messages_2eproto() {
       sizeof(SendMessageReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SendMessageReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SendMessageReq, _is_default_instance_));
-  SeqDateRsp_descriptor_ = file->message_type(1);
+  SeqDateRsp_descriptor_ = file->message_type(2);
   static const int SeqDateRsp_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SeqDateRsp, seq_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SeqDateRsp, created_),
@@ -96,7 +116,23 @@ void protobuf_AssignDesc_messages_2eproto() {
       sizeof(SeqDateRsp),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SeqDateRsp, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SeqDateRsp, _is_default_instance_));
-  MessageNotify_descriptor_ = file->message_type(2);
+  ForwardMessageReq_descriptor_ = file->message_type(3);
+  static const int ForwardMessageReq_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ForwardMessageReq, message_data_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ForwardMessageReq, not_send_conn_ids_),
+  };
+  ForwardMessageReq_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      ForwardMessageReq_descriptor_,
+      ForwardMessageReq::default_instance_,
+      ForwardMessageReq_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(ForwardMessageReq),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ForwardMessageReq, _internal_metadata_),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ForwardMessageReq, _is_default_instance_));
+  MessageNotify_descriptor_ = file->message_type(4);
   static const int MessageNotify_offsets_[1] = {
   };
   MessageNotify_reflection_ =
@@ -110,7 +146,7 @@ void protobuf_AssignDesc_messages_2eproto() {
       sizeof(MessageNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageNotify, _is_default_instance_));
-  MessageDataNotify_descriptor_ = file->message_type(3);
+  MessageDataNotify_descriptor_ = file->message_type(5);
   static const int MessageDataNotify_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageDataNotify, message_data_),
   };
@@ -125,7 +161,7 @@ void protobuf_AssignDesc_messages_2eproto() {
       sizeof(MessageDataNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageDataNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageDataNotify, _is_default_instance_));
-  MessageSyncReq_descriptor_ = file->message_type(4);
+  MessageSyncReq_descriptor_ = file->message_type(6);
   static const int MessageSyncReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageSyncReq, received_max_seq_),
   };
@@ -140,7 +176,7 @@ void protobuf_AssignDesc_messages_2eproto() {
       sizeof(MessageSyncReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageSyncReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageSyncReq, _is_default_instance_));
-  MessageSyncRsp_descriptor_ = file->message_type(5);
+  MessageSyncRsp_descriptor_ = file->message_type(7);
   static const int MessageSyncRsp_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageSyncRsp, message_data_),
   };
@@ -155,7 +191,7 @@ void protobuf_AssignDesc_messages_2eproto() {
       sizeof(MessageSyncRsp),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageSyncRsp, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageSyncRsp, _is_default_instance_));
-  MessageReadReq_descriptor_ = file->message_type(6);
+  MessageReadReq_descriptor_ = file->message_type(8);
   static const int MessageReadReq_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadReq, peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadReq, read_max_seq_),
@@ -171,7 +207,7 @@ void protobuf_AssignDesc_messages_2eproto() {
       sizeof(MessageReadReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadReq, _is_default_instance_));
-  LoadHistoryMessageReq_descriptor_ = file->message_type(7);
+  LoadHistoryMessageReq_descriptor_ = file->message_type(9);
   static const int LoadHistoryMessageReq_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryMessageReq, peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryMessageReq, date_),
@@ -189,7 +225,7 @@ void protobuf_AssignDesc_messages_2eproto() {
       sizeof(LoadHistoryMessageReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryMessageReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryMessageReq, _is_default_instance_));
-  LoadHistoryMessageRsp_descriptor_ = file->message_type(8);
+  LoadHistoryMessageRsp_descriptor_ = file->message_type(10);
   static const int LoadHistoryMessageRsp_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryMessageRsp, history_),
   };
@@ -204,7 +240,7 @@ void protobuf_AssignDesc_messages_2eproto() {
       sizeof(LoadHistoryMessageRsp),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryMessageRsp, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryMessageRsp, _is_default_instance_));
-  LoadDialogsReq_descriptor_ = file->message_type(9);
+  LoadDialogsReq_descriptor_ = file->message_type(11);
   static const int LoadDialogsReq_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadDialogsReq, date_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadDialogsReq, load_mode_),
@@ -221,7 +257,7 @@ void protobuf_AssignDesc_messages_2eproto() {
       sizeof(LoadDialogsReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadDialogsReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadDialogsReq, _is_default_instance_));
-  LoadDialogsRsp_descriptor_ = file->message_type(10);
+  LoadDialogsRsp_descriptor_ = file->message_type(12);
   static const int LoadDialogsRsp_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadDialogsRsp, dialogs_),
   };
@@ -250,9 +286,13 @@ void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      VoidRsp_descriptor_, &VoidRsp::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       SendMessageReq_descriptor_, &SendMessageReq::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       SeqDateRsp_descriptor_, &SeqDateRsp::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      ForwardMessageReq_descriptor_, &ForwardMessageReq::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       MessageNotify_descriptor_, &MessageNotify::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
@@ -276,10 +316,14 @@ void protobuf_RegisterTypes(const ::std::string&) {
 }  // namespace
 
 void protobuf_ShutdownFile_messages_2eproto() {
+  delete VoidRsp::default_instance_;
+  delete VoidRsp_reflection_;
   delete SendMessageReq::default_instance_;
   delete SendMessageReq_reflection_;
   delete SeqDateRsp::default_instance_;
   delete SeqDateRsp_reflection_;
+  delete ForwardMessageReq::default_instance_;
+  delete ForwardMessageReq_reflection_;
   delete MessageNotify::default_instance_;
   delete MessageNotify_reflection_;
   delete MessageDataNotify::default_instance_;
@@ -309,31 +353,35 @@ void protobuf_AddDesc_messages_2eproto() {
 
   ::zproto::protobuf_AddDesc_bases_2eproto();
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\016messages.proto\022\006zproto\032\013bases.proto\"@\n"
-    "\016SendMessageReq\022.\n\014message_data\030\001 \001(\0132\030."
-    "zproto.MessageContainer\"*\n\nSeqDateRsp\022\013\n"
-    "\003seq\030\001 \001(\004\022\017\n\007created\030\002 \001(\004\"\017\n\rMessageNo"
-    "tify\"C\n\021MessageDataNotify\022.\n\014message_dat"
-    "a\030\001 \001(\0132\030.zproto.MessageContainer\"*\n\016Mes"
-    "sageSyncReq\022\030\n\020received_max_seq\030\001 \001(\004\"@\n"
-    "\016MessageSyncRsp\022.\n\014message_data\030\001 \003(\0132\030."
-    "zproto.MessageContainer\"B\n\016MessageReadRe"
-    "q\022\032\n\004peer\030\001 \001(\0132\014.zproto.Peer\022\024\n\014read_ma"
-    "x_seq\030\002 \001(\004\"\204\001\n\025LoadHistoryMessageReq\022\032\n"
-    "\004peer\030\001 \001(\0132\014.zproto.Peer\022\014\n\004date\030\002 \001(\r\022"
-    "2\n\tload_mode\030\003 \001(\0162\037.zproto.EnumHelper.L"
-    "istLoadMode\022\r\n\005limit\030\004 \001(\r\"B\n\025LoadHistor"
-    "yMessageRsp\022)\n\007history\030\001 \003(\0132\030.zproto.Me"
-    "ssageContainer\"a\n\016LoadDialogsReq\022\014\n\004date"
-    "\030\001 \001(\004\0222\n\tload_mode\030\002 \001(\0162\037.zproto.EnumH"
-    "elper.ListLoadMode\022\r\n\005limit\030\003 \001(\r\"1\n\016Loa"
-    "dDialogsRsp\022\037\n\007dialogs\030\001 \003(\0132\016.zproto.Di"
-    "alogB#\n\027com.zchat.engine.zprotoB\006ZProtoH"
-    "\002b\006proto3", 809);
+    "\n\016messages.proto\022\006zproto\032\013bases.proto\"\t\n"
+    "\007VoidRsp\"@\n\016SendMessageReq\022.\n\014message_da"
+    "ta\030\001 \001(\0132\030.zproto.MessageContainer\"*\n\nSe"
+    "qDateRsp\022\013\n\003seq\030\001 \001(\004\022\017\n\007created\030\002 \001(\004\"^"
+    "\n\021ForwardMessageReq\022.\n\014message_data\030\001 \001("
+    "\0132\030.zproto.MessageContainer\022\031\n\021not_send_"
+    "conn_ids\030\002 \003(\004\"\017\n\rMessageNotify\"C\n\021Messa"
+    "geDataNotify\022.\n\014message_data\030\001 \001(\0132\030.zpr"
+    "oto.MessageContainer\"*\n\016MessageSyncReq\022\030"
+    "\n\020received_max_seq\030\001 \001(\004\"@\n\016MessageSyncR"
+    "sp\022.\n\014message_data\030\001 \003(\0132\030.zproto.Messag"
+    "eContainer\"B\n\016MessageReadReq\022\032\n\004peer\030\001 \001"
+    "(\0132\014.zproto.Peer\022\024\n\014read_max_seq\030\002 \001(\004\"\204"
+    "\001\n\025LoadHistoryMessageReq\022\032\n\004peer\030\001 \001(\0132\014"
+    ".zproto.Peer\022\014\n\004date\030\002 \001(\r\0222\n\tload_mode\030"
+    "\003 \001(\0162\037.zproto.EnumHelper.ListLoadMode\022\r"
+    "\n\005limit\030\004 \001(\r\"B\n\025LoadHistoryMessageRsp\022)"
+    "\n\007history\030\001 \003(\0132\030.zproto.MessageContaine"
+    "r\"a\n\016LoadDialogsReq\022\014\n\004date\030\001 \001(\004\0222\n\tloa"
+    "d_mode\030\002 \001(\0162\037.zproto.EnumHelper.ListLoa"
+    "dMode\022\r\n\005limit\030\003 \001(\r\"1\n\016LoadDialogsRsp\022\037"
+    "\n\007dialogs\030\001 \003(\0132\016.zproto.DialogB#\n\027com.z"
+    "chat.engine.zprotoB\006ZProtoH\002b\006proto3", 916);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "messages.proto", &protobuf_RegisterTypes);
+  VoidRsp::default_instance_ = new VoidRsp();
   SendMessageReq::default_instance_ = new SendMessageReq();
   SeqDateRsp::default_instance_ = new SeqDateRsp();
+  ForwardMessageReq::default_instance_ = new ForwardMessageReq();
   MessageNotify::default_instance_ = new MessageNotify();
   MessageDataNotify::default_instance_ = new MessageDataNotify();
   MessageSyncReq::default_instance_ = new MessageSyncReq();
@@ -343,8 +391,10 @@ void protobuf_AddDesc_messages_2eproto() {
   LoadHistoryMessageRsp::default_instance_ = new LoadHistoryMessageRsp();
   LoadDialogsReq::default_instance_ = new LoadDialogsReq();
   LoadDialogsRsp::default_instance_ = new LoadDialogsRsp();
+  VoidRsp::default_instance_->InitAsDefaultInstance();
   SendMessageReq::default_instance_->InitAsDefaultInstance();
   SeqDateRsp::default_instance_->InitAsDefaultInstance();
+  ForwardMessageReq::default_instance_->InitAsDefaultInstance();
   MessageNotify::default_instance_->InitAsDefaultInstance();
   MessageDataNotify::default_instance_->InitAsDefaultInstance();
   MessageSyncReq::default_instance_->InitAsDefaultInstance();
@@ -363,6 +413,89 @@ struct StaticDescriptorInitializer_messages_2eproto {
     protobuf_AddDesc_messages_2eproto();
   }
 } static_descriptor_initializer_messages_2eproto_;
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+VoidRsp::VoidRsp()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.VoidRsp)
+}
+
+void VoidRsp::InitAsDefaultInstance() {
+  _is_default_instance_ = true;
+}
+
+VoidRsp::VoidRsp(const VoidRsp& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.VoidRsp)
+}
+
+void VoidRsp::SharedCtor() {
+    _is_default_instance_ = false;
+  _cached_size_ = 0;
+}
+
+VoidRsp::~VoidRsp() {
+  // @@protoc_insertion_point(destructor:zproto.VoidRsp)
+  SharedDtor();
+}
+
+void VoidRsp::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
+
+void VoidRsp::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* VoidRsp::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return VoidRsp_descriptor_;
+}
+
+const VoidRsp& VoidRsp::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_messages_2eproto();
+  return *default_instance_;
+}
+
+VoidRsp* VoidRsp::default_instance_ = NULL;
+
+VoidRsp* VoidRsp::New(::google::protobuf::Arena* arena) const {
+  VoidRsp* n = new VoidRsp;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void VoidRsp::Swap(VoidRsp* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void VoidRsp::InternalSwap(VoidRsp* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata VoidRsp::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = VoidRsp_descriptor_;
+  metadata.reflection = VoidRsp_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// VoidRsp
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
 
@@ -600,6 +733,162 @@ void SeqDateRsp::clear_created() {
   
   created_ = value;
   // @@protoc_insertion_point(field_set:zproto.SeqDateRsp.created)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ForwardMessageReq::kMessageDataFieldNumber;
+const int ForwardMessageReq::kNotSendConnIdsFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ForwardMessageReq::ForwardMessageReq()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.ForwardMessageReq)
+}
+
+void ForwardMessageReq::InitAsDefaultInstance() {
+  _is_default_instance_ = true;
+  message_data_ = const_cast< ::zproto::MessageContainer*>(&::zproto::MessageContainer::default_instance());
+}
+
+ForwardMessageReq::ForwardMessageReq(const ForwardMessageReq& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.ForwardMessageReq)
+}
+
+void ForwardMessageReq::SharedCtor() {
+    _is_default_instance_ = false;
+  _cached_size_ = 0;
+  message_data_ = NULL;
+}
+
+ForwardMessageReq::~ForwardMessageReq() {
+  // @@protoc_insertion_point(destructor:zproto.ForwardMessageReq)
+  SharedDtor();
+}
+
+void ForwardMessageReq::SharedDtor() {
+  if (this != default_instance_) {
+    delete message_data_;
+  }
+}
+
+void ForwardMessageReq::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* ForwardMessageReq::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ForwardMessageReq_descriptor_;
+}
+
+const ForwardMessageReq& ForwardMessageReq::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_messages_2eproto();
+  return *default_instance_;
+}
+
+ForwardMessageReq* ForwardMessageReq::default_instance_ = NULL;
+
+ForwardMessageReq* ForwardMessageReq::New(::google::protobuf::Arena* arena) const {
+  ForwardMessageReq* n = new ForwardMessageReq;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void ForwardMessageReq::Swap(ForwardMessageReq* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void ForwardMessageReq::InternalSwap(ForwardMessageReq* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata ForwardMessageReq::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = ForwardMessageReq_descriptor_;
+  metadata.reflection = ForwardMessageReq_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// ForwardMessageReq
+
+// optional .zproto.MessageContainer message_data = 1;
+bool ForwardMessageReq::has_message_data() const {
+  return !_is_default_instance_ && message_data_ != NULL;
+}
+void ForwardMessageReq::clear_message_data() {
+  if (GetArenaNoVirtual() == NULL && message_data_ != NULL) delete message_data_;
+  message_data_ = NULL;
+}
+const ::zproto::MessageContainer& ForwardMessageReq::message_data() const {
+  // @@protoc_insertion_point(field_get:zproto.ForwardMessageReq.message_data)
+  return message_data_ != NULL ? *message_data_ : *default_instance_->message_data_;
+}
+::zproto::MessageContainer* ForwardMessageReq::mutable_message_data() {
+  
+  if (message_data_ == NULL) {
+    message_data_ = new ::zproto::MessageContainer;
+  }
+  // @@protoc_insertion_point(field_mutable:zproto.ForwardMessageReq.message_data)
+  return message_data_;
+}
+::zproto::MessageContainer* ForwardMessageReq::release_message_data() {
+  // @@protoc_insertion_point(field_release:zproto.ForwardMessageReq.message_data)
+  
+  ::zproto::MessageContainer* temp = message_data_;
+  message_data_ = NULL;
+  return temp;
+}
+void ForwardMessageReq::set_allocated_message_data(::zproto::MessageContainer* message_data) {
+  delete message_data_;
+  message_data_ = message_data;
+  if (message_data) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zproto.ForwardMessageReq.message_data)
+}
+
+// repeated uint64 not_send_conn_ids = 2;
+int ForwardMessageReq::not_send_conn_ids_size() const {
+  return not_send_conn_ids_.size();
+}
+void ForwardMessageReq::clear_not_send_conn_ids() {
+  not_send_conn_ids_.Clear();
+}
+ ::google::protobuf::uint64 ForwardMessageReq::not_send_conn_ids(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.ForwardMessageReq.not_send_conn_ids)
+  return not_send_conn_ids_.Get(index);
+}
+ void ForwardMessageReq::set_not_send_conn_ids(int index, ::google::protobuf::uint64 value) {
+  not_send_conn_ids_.Set(index, value);
+  // @@protoc_insertion_point(field_set:zproto.ForwardMessageReq.not_send_conn_ids)
+}
+ void ForwardMessageReq::add_not_send_conn_ids(::google::protobuf::uint64 value) {
+  not_send_conn_ids_.Add(value);
+  // @@protoc_insertion_point(field_add:zproto.ForwardMessageReq.not_send_conn_ids)
+}
+ const ::google::protobuf::RepeatedField< ::google::protobuf::uint64 >&
+ForwardMessageReq::not_send_conn_ids() const {
+  // @@protoc_insertion_point(field_list:zproto.ForwardMessageReq.not_send_conn_ids)
+  return not_send_conn_ids_;
+}
+ ::google::protobuf::RepeatedField< ::google::protobuf::uint64 >*
+ForwardMessageReq::mutable_not_send_conn_ids() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.ForwardMessageReq.not_send_conn_ids)
+  return &not_send_conn_ids_;
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

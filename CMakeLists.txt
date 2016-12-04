@@ -16,7 +16,7 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-project(immengine C CXX)
+project(imengine C CXX)
 
 add_compile_options(-std=c++1y)
 add_compile_options(-fPIC)

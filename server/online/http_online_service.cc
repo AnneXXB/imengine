@@ -15,46 +15,16 @@
  * limitations under the License.
  */
 
-#include "online/rpc_online_service.h"
+#include "online/http_online_service.h"
 
-#include "proto/api_message_box.h"
+#include "nebula/net/handler/http/http_request_handler.h"
 
 #include "online/online_session_manager.h"
 
-ProtoRpcResponsePtr DoClientOnline(RpcRequestPtr request) {
-  auto req = ToApiRpcRequest<zproto::ClientOnlineReq>(request);
-  LOG(INFO) << (*req)->Utf8DebugString();
+REGISTER_HTTP_HANDLER(StatusHttpHandler, "/query", Query);
 
-  auto online_manager = OnlineSessionManager::GetInstance();
-  online_manager->AddEntry(static_cast<uint16_t>((*req)->server_id()),
-                           (*req)->conn_id(),
-                           (*req)->app_id(),
-                           (*req)->user_id(),
-                           static_cast<uint16_t>((*req)->state()));
-  
-  auto rsp = std::make_shared<ApiRpcOk<zproto::ClientOnlineRsp>>();
-  rsp->set_req_message_id(request->message_id());
-  (*rsp)->set_index_id(1234);
-  
-  return rsp;
-}
-
-ProtoRpcResponsePtr DoClientOffline(RpcRequestPtr request) {
-  auto req = ToApiRpcRequest<zproto::ClientOfflineReq>(request);
-  LOG(INFO) << (*req)->Utf8DebugString();
- 
-  auto online_manager = OnlineSessionManager::GetInstance();
-  online_manager->RemoveEntryBySessionID(static_cast<uint16_t>((*req)->server_id()),
-                                         (*req)->conn_id());
-  
-  auto rsp = std::make_shared<ApiRpcOk<zproto::ClientOfflineRsp>>();
-  rsp->set_req_message_id(request->message_id());
-  (*rsp)->set_index_id(1234);
-
-  return rsp;
-}
-
-ProtoRpcResponsePtr DoQueryOnlineUser(RpcRequestPtr request) {
+void Query(const proxygen::HTTPMessage& headers, const folly::IOBuf* body, proxygen::ResponseBuilder* r) {
+#if 0
   auto req = ToApiRpcRequest<zproto::QueryOnlineUserReq>(request);
   LOG(INFO) << (*req)->Utf8DebugString();
   
@@ -72,7 +42,7 @@ ProtoRpcResponsePtr DoQueryOnlineUser(RpcRequestPtr request) {
   
   auto rsp = std::make_shared<ApiRpcOk<zproto::QueryOnlineUserRsp>>();
   rsp->set_req_message_id(request->message_id());
-
+  
   for (auto& v : sessions) {
     auto online_user = (*rsp)->add_online_users();
     online_user->set_app_id(v.app_id);
@@ -82,6 +52,6 @@ ProtoRpcResponsePtr DoQueryOnlineUser(RpcRequestPtr request) {
   }
   
   return rsp;
+#endif
 }
-
 

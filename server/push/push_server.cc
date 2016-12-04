@@ -18,29 +18,30 @@
 #include "push/push_server.h"
 
 #include "proto/api_message_box.h"
-// #include "nebula/base/timer_manager.h"
+#include "proto/zproto/cc/method_types.pb.h"
+
 #include "push/zrpc_push_service.h"
+#include "push/gate_channel_handler.h"
 
 
 bool PushServer::Initialize() {
-  // 初始化处理器
-  RegisterService("push_server", "zrpc_server", "zrpc");
+  // 内部推送路由通道
+  RegisterService("push_server", "rpc_server", "zrpc");
+  // 接入网关通道
+  RegisterService("push_channel_server", "tcp_server", "zproto");
+  // 在线服务
+  RegisterService("online_status_client", "rpc_client", "zrpc");
   
+  // 初始化处理器
+  ZRpcUtil::Register(zproto::FORAWRD_MESSAGE_REQ, DoForwardMessage);
+  
+  // 连接router，使用zproto协议
+  ZProtoEventCallback::Initializer(push::OnNewConnection,
+                                   push::OnDataReceived,
+                                   push::OnConnectionClosed);
+
   // register rpc call
   BaseServer::Initialize();
-  
-  /*
-   // one
-   timer_manager_->ScheduleOneShotTimeout([]() {
-   LOG(INFO) << "ScheduleOneShotTimeout!!!!";
-   }, 1000);
-   
-   // once
-   timer_manager_->ScheduleRepeatingTimeout([]() {
-   static int i = 0;
-   LOG(INFO) << "ScheduleRepeatingTimeout - " << i++;
-   }, 1000);
-   */
   
   return true;
 }

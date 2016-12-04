@@ -39,6 +39,12 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* ClientOfflineRsp_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   ClientOfflineRsp_reflection_ = NULL;
+const ::google::protobuf::Descriptor* QueryOnlineUserReq_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  QueryOnlineUserReq_reflection_ = NULL;
+const ::google::protobuf::Descriptor* QueryOnlineUserRsp_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  QueryOnlineUserRsp_reflection_ = NULL;
 
 }  // namespace
 
@@ -145,6 +151,36 @@ void protobuf_AssignDesc_servers_2eproto() {
       sizeof(ClientOfflineRsp),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClientOfflineRsp, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClientOfflineRsp, _is_default_instance_));
+  QueryOnlineUserReq_descriptor_ = file->message_type(6);
+  static const int QueryOnlineUserReq_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QueryOnlineUserReq, user_id_list_),
+  };
+  QueryOnlineUserReq_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      QueryOnlineUserReq_descriptor_,
+      QueryOnlineUserReq::default_instance_,
+      QueryOnlineUserReq_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(QueryOnlineUserReq),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QueryOnlineUserReq, _internal_metadata_),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QueryOnlineUserReq, _is_default_instance_));
+  QueryOnlineUserRsp_descriptor_ = file->message_type(7);
+  static const int QueryOnlineUserRsp_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QueryOnlineUserRsp, online_users_),
+  };
+  QueryOnlineUserRsp_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      QueryOnlineUserRsp_descriptor_,
+      QueryOnlineUserRsp::default_instance_,
+      QueryOnlineUserRsp_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(QueryOnlineUserRsp),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QueryOnlineUserRsp, _internal_metadata_),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QueryOnlineUserRsp, _is_default_instance_));
 }
 
 namespace {
@@ -170,6 +206,10 @@ void protobuf_RegisterTypes(const ::std::string&) {
       ClientOfflineReq_descriptor_, &ClientOfflineReq::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       ClientOfflineRsp_descriptor_, &ClientOfflineRsp::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      QueryOnlineUserReq_descriptor_, &QueryOnlineUserReq::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      QueryOnlineUserRsp_descriptor_, &QueryOnlineUserRsp::default_instance());
 }
 
 }  // namespace
@@ -187,6 +227,10 @@ void protobuf_ShutdownFile_servers_2eproto() {
   delete ClientOfflineReq_reflection_;
   delete ClientOfflineRsp::default_instance_;
   delete ClientOfflineRsp_reflection_;
+  delete QueryOnlineUserReq::default_instance_;
+  delete QueryOnlineUserReq_reflection_;
+  delete QueryOnlineUserRsp::default_instance_;
+  delete QueryOnlineUserRsp_reflection_;
 }
 
 void protobuf_AddDesc_servers_2eproto() GOOGLE_ATTRIBUTE_COLD;
@@ -196,17 +240,21 @@ void protobuf_AddDesc_servers_2eproto() {
   already_here = true;
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+  ::zproto::protobuf_AddDesc_bases_2eproto();
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\rservers.proto\022\006zproto\"7\n\rServerAuthReq"
-    "\022\021\n\tserver_id\030\001 \001(\r\022\023\n\013server_name\030\002 \001(\t"
-    "\"\017\n\rServerAuthRsp\"e\n\017ClientOnlineReq\022\021\n\t"
-    "server_id\030\001 \001(\r\022\017\n\007conn_id\030\002 \001(\004\022\016\n\006app_"
-    "id\030\003 \001(\r\022\017\n\007user_id\030\004 \001(\t\022\r\n\005state\030\005 \001(\r"
-    "\"#\n\017ClientOnlineRsp\022\020\n\010index_id\030\001 \001(\004\"6\n"
-    "\020ClientOfflineReq\022\021\n\tserver_id\030\001 \001(\r\022\017\n\007"
-    "conn_id\030\002 \001(\004\"$\n\020ClientOfflineRsp\022\020\n\010ind"
-    "ex_id\030\001 \001(\004B#\n\027com.zchat.engine.zprotoB\006"
-    "ZProtoH\002b\006proto3", 376);
+    "\n\rservers.proto\022\006zproto\032\013bases.proto\"7\n\r"
+    "ServerAuthReq\022\021\n\tserver_id\030\001 \001(\r\022\023\n\013serv"
+    "er_name\030\002 \001(\t\"\017\n\rServerAuthRsp\"e\n\017Client"
+    "OnlineReq\022\021\n\tserver_id\030\001 \001(\r\022\017\n\007conn_id\030"
+    "\002 \001(\004\022\016\n\006app_id\030\003 \001(\r\022\017\n\007user_id\030\004 \001(\t\022\r"
+    "\n\005state\030\005 \001(\r\"#\n\017ClientOnlineRsp\022\020\n\010inde"
+    "x_id\030\001 \001(\004\"6\n\020ClientOfflineReq\022\021\n\tserver"
+    "_id\030\001 \001(\r\022\017\n\007conn_id\030\002 \001(\004\"$\n\020ClientOffl"
+    "ineRsp\022\020\n\010index_id\030\001 \001(\004\":\n\022QueryOnlineU"
+    "serReq\022$\n\014user_id_list\030\001 \003(\0132\016.zproto.Us"
+    "erID\">\n\022QueryOnlineUserRsp\022(\n\014online_use"
+    "rs\030\001 \003(\0132\022.zproto.OnlineUserB#\n\027com.zcha"
+    "t.engine.zprotoB\006ZProtoH\002b\006proto3", 513);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "servers.proto", &protobuf_RegisterTypes);
   ServerAuthReq::default_instance_ = new ServerAuthReq();
@@ -215,12 +263,16 @@ void protobuf_AddDesc_servers_2eproto() {
   ClientOnlineRsp::default_instance_ = new ClientOnlineRsp();
   ClientOfflineReq::default_instance_ = new ClientOfflineReq();
   ClientOfflineRsp::default_instance_ = new ClientOfflineRsp();
+  QueryOnlineUserReq::default_instance_ = new QueryOnlineUserReq();
+  QueryOnlineUserRsp::default_instance_ = new QueryOnlineUserRsp();
   ServerAuthReq::default_instance_->InitAsDefaultInstance();
   ServerAuthRsp::default_instance_->InitAsDefaultInstance();
   ClientOnlineReq::default_instance_->InitAsDefaultInstance();
   ClientOnlineRsp::default_instance_->InitAsDefaultInstance();
   ClientOfflineReq::default_instance_->InitAsDefaultInstance();
   ClientOfflineRsp::default_instance_->InitAsDefaultInstance();
+  QueryOnlineUserReq::default_instance_->InitAsDefaultInstance();
+  QueryOnlineUserRsp::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_servers_2eproto);
 }
 
@@ -965,6 +1017,234 @@ void ClientOfflineRsp::clear_index_id() {
   
   index_id_ = value;
   // @@protoc_insertion_point(field_set:zproto.ClientOfflineRsp.index_id)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int QueryOnlineUserReq::kUserIdListFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+QueryOnlineUserReq::QueryOnlineUserReq()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.QueryOnlineUserReq)
+}
+
+void QueryOnlineUserReq::InitAsDefaultInstance() {
+  _is_default_instance_ = true;
+}
+
+QueryOnlineUserReq::QueryOnlineUserReq(const QueryOnlineUserReq& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.QueryOnlineUserReq)
+}
+
+void QueryOnlineUserReq::SharedCtor() {
+    _is_default_instance_ = false;
+  _cached_size_ = 0;
+}
+
+QueryOnlineUserReq::~QueryOnlineUserReq() {
+  // @@protoc_insertion_point(destructor:zproto.QueryOnlineUserReq)
+  SharedDtor();
+}
+
+void QueryOnlineUserReq::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
+
+void QueryOnlineUserReq::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* QueryOnlineUserReq::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return QueryOnlineUserReq_descriptor_;
+}
+
+const QueryOnlineUserReq& QueryOnlineUserReq::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_servers_2eproto();
+  return *default_instance_;
+}
+
+QueryOnlineUserReq* QueryOnlineUserReq::default_instance_ = NULL;
+
+QueryOnlineUserReq* QueryOnlineUserReq::New(::google::protobuf::Arena* arena) const {
+  QueryOnlineUserReq* n = new QueryOnlineUserReq;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void QueryOnlineUserReq::Swap(QueryOnlineUserReq* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void QueryOnlineUserReq::InternalSwap(QueryOnlineUserReq* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata QueryOnlineUserReq::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = QueryOnlineUserReq_descriptor_;
+  metadata.reflection = QueryOnlineUserReq_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// QueryOnlineUserReq
+
+// repeated .zproto.UserID user_id_list = 1;
+int QueryOnlineUserReq::user_id_list_size() const {
+  return user_id_list_.size();
+}
+void QueryOnlineUserReq::clear_user_id_list() {
+  user_id_list_.Clear();
+}
+const ::zproto::UserID& QueryOnlineUserReq::user_id_list(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.QueryOnlineUserReq.user_id_list)
+  return user_id_list_.Get(index);
+}
+::zproto::UserID* QueryOnlineUserReq::mutable_user_id_list(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.QueryOnlineUserReq.user_id_list)
+  return user_id_list_.Mutable(index);
+}
+::zproto::UserID* QueryOnlineUserReq::add_user_id_list() {
+  // @@protoc_insertion_point(field_add:zproto.QueryOnlineUserReq.user_id_list)
+  return user_id_list_.Add();
+}
+::google::protobuf::RepeatedPtrField< ::zproto::UserID >*
+QueryOnlineUserReq::mutable_user_id_list() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.QueryOnlineUserReq.user_id_list)
+  return &user_id_list_;
+}
+const ::google::protobuf::RepeatedPtrField< ::zproto::UserID >&
+QueryOnlineUserReq::user_id_list() const {
+  // @@protoc_insertion_point(field_list:zproto.QueryOnlineUserReq.user_id_list)
+  return user_id_list_;
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int QueryOnlineUserRsp::kOnlineUsersFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+QueryOnlineUserRsp::QueryOnlineUserRsp()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.QueryOnlineUserRsp)
+}
+
+void QueryOnlineUserRsp::InitAsDefaultInstance() {
+  _is_default_instance_ = true;
+}
+
+QueryOnlineUserRsp::QueryOnlineUserRsp(const QueryOnlineUserRsp& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.QueryOnlineUserRsp)
+}
+
+void QueryOnlineUserRsp::SharedCtor() {
+    _is_default_instance_ = false;
+  _cached_size_ = 0;
+}
+
+QueryOnlineUserRsp::~QueryOnlineUserRsp() {
+  // @@protoc_insertion_point(destructor:zproto.QueryOnlineUserRsp)
+  SharedDtor();
+}
+
+void QueryOnlineUserRsp::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
+
+void QueryOnlineUserRsp::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* QueryOnlineUserRsp::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return QueryOnlineUserRsp_descriptor_;
+}
+
+const QueryOnlineUserRsp& QueryOnlineUserRsp::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_servers_2eproto();
+  return *default_instance_;
+}
+
+QueryOnlineUserRsp* QueryOnlineUserRsp::default_instance_ = NULL;
+
+QueryOnlineUserRsp* QueryOnlineUserRsp::New(::google::protobuf::Arena* arena) const {
+  QueryOnlineUserRsp* n = new QueryOnlineUserRsp;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void QueryOnlineUserRsp::Swap(QueryOnlineUserRsp* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void QueryOnlineUserRsp::InternalSwap(QueryOnlineUserRsp* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata QueryOnlineUserRsp::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = QueryOnlineUserRsp_descriptor_;
+  metadata.reflection = QueryOnlineUserRsp_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// QueryOnlineUserRsp
+
+// repeated .zproto.OnlineUser online_users = 1;
+int QueryOnlineUserRsp::online_users_size() const {
+  return online_users_.size();
+}
+void QueryOnlineUserRsp::clear_online_users() {
+  online_users_.Clear();
+}
+const ::zproto::OnlineUser& QueryOnlineUserRsp::online_users(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.QueryOnlineUserRsp.online_users)
+  return online_users_.Get(index);
+}
+::zproto::OnlineUser* QueryOnlineUserRsp::mutable_online_users(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.QueryOnlineUserRsp.online_users)
+  return online_users_.Mutable(index);
+}
+::zproto::OnlineUser* QueryOnlineUserRsp::add_online_users() {
+  // @@protoc_insertion_point(field_add:zproto.QueryOnlineUserRsp.online_users)
+  return online_users_.Add();
+}
+::google::protobuf::RepeatedPtrField< ::zproto::OnlineUser >*
+QueryOnlineUserRsp::mutable_online_users() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.QueryOnlineUserRsp.online_users)
+  return &online_users_;
+}
+const ::google::protobuf::RepeatedPtrField< ::zproto::OnlineUser >&
+QueryOnlineUserRsp::online_users() const {
+  // @@protoc_insertion_point(field_list:zproto.QueryOnlineUserRsp.online_users)
+  return online_users_;
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

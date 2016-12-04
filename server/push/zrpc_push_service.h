@@ -20,9 +20,7 @@
 
 #include "nebula/net/rpc/zrpc_service_util.h"
 
-//ProtoRpcResponsePtr DoMessageSync(RpcRequestPtr request);
-//ProtoRpcResponsePtr DoLoadHistoryMessage(RpcRequestPtr request);
-//ProtoRpcResponsePtr DoLoadDialogs(RpcRequestPtr request);
+ProtoRpcResponsePtr DoForwardMessage(RpcRequestPtr request);
 
 #endif // PUSH_ZRPC_PUSH_SERVICE_H_
 

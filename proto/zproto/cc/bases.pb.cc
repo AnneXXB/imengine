@@ -28,6 +28,12 @@ const ::google::protobuf::EnumDescriptor* EnumHelper_PeerType_descriptor_ = NULL
 const ::google::protobuf::EnumDescriptor* EnumHelper_ListLoadMode_descriptor_ = NULL;
 const ::google::protobuf::EnumDescriptor* EnumHelper_MessageState_descriptor_ = NULL;
 const ::google::protobuf::EnumDescriptor* EnumHelper_MessageType_descriptor_ = NULL;
+const ::google::protobuf::Descriptor* UserID_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  UserID_reflection_ = NULL;
+const ::google::protobuf::Descriptor* OnlineSessionStatusEntry_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  OnlineSessionStatusEntry_reflection_ = NULL;
 const ::google::protobuf::Descriptor* UserToeken_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   UserToeken_reflection_ = NULL;
@@ -37,6 +43,9 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* Peer_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   Peer_reflection_ = NULL;
+const ::google::protobuf::Descriptor* OnlineUser_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  OnlineUser_reflection_ = NULL;
 const ::google::protobuf::Descriptor* MessageContainer_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   MessageContainer_reflection_ = NULL;
@@ -72,7 +81,39 @@ void protobuf_AssignDesc_bases_2eproto() {
   EnumHelper_ListLoadMode_descriptor_ = EnumHelper_descriptor_->enum_type(1);
   EnumHelper_MessageState_descriptor_ = EnumHelper_descriptor_->enum_type(2);
   EnumHelper_MessageType_descriptor_ = EnumHelper_descriptor_->enum_type(3);
-  UserToeken_descriptor_ = file->message_type(1);
+  UserID_descriptor_ = file->message_type(1);
+  static const int UserID_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserID, app_id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserID, user_id_),
+  };
+  UserID_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      UserID_descriptor_,
+      UserID::default_instance_,
+      UserID_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(UserID),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserID, _internal_metadata_),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserID, _is_default_instance_));
+  OnlineSessionStatusEntry_descriptor_ = file->message_type(2);
+  static const int OnlineSessionStatusEntry_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnlineSessionStatusEntry, app_id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnlineSessionStatusEntry, user_id_),
+  };
+  OnlineSessionStatusEntry_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      OnlineSessionStatusEntry_descriptor_,
+      OnlineSessionStatusEntry::default_instance_,
+      OnlineSessionStatusEntry_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(OnlineSessionStatusEntry),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnlineSessionStatusEntry, _internal_metadata_),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnlineSessionStatusEntry, _is_default_instance_));
+  UserToeken_descriptor_ = file->message_type(3);
   static const int UserToeken_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserToeken, app_key_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserToeken, user_id_),
@@ -89,7 +130,7 @@ void protobuf_AssignDesc_bases_2eproto() {
       sizeof(UserToeken),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserToeken, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserToeken, _is_default_instance_));
-  UserInfo_descriptor_ = file->message_type(2);
+  UserInfo_descriptor_ = file->message_type(4);
   static const int UserInfo_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserInfo, app_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserInfo, user_id_),
@@ -107,7 +148,7 @@ void protobuf_AssignDesc_bases_2eproto() {
       sizeof(UserInfo),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserInfo, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserInfo, _is_default_instance_));
-  Peer_descriptor_ = file->message_type(3);
+  Peer_descriptor_ = file->message_type(5);
   static const int Peer_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Peer, type_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Peer, id_),
@@ -123,7 +164,25 @@ void protobuf_AssignDesc_bases_2eproto() {
       sizeof(Peer),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Peer, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Peer, _is_default_instance_));
-  MessageContainer_descriptor_ = file->message_type(4);
+  OnlineUser_descriptor_ = file->message_type(6);
+  static const int OnlineUser_offsets_[4] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnlineUser, app_id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnlineUser, user_id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnlineUser, server_id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnlineUser, conn_id_),
+  };
+  OnlineUser_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      OnlineUser_descriptor_,
+      OnlineUser::default_instance_,
+      OnlineUser_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(OnlineUser),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnlineUser, _internal_metadata_),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnlineUser, _is_default_instance_));
+  MessageContainer_descriptor_ = file->message_type(7);
   static const int MessageContainer_offsets_[10] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageContainer, message_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageContainer, sender_user_id_),
@@ -147,7 +206,7 @@ void protobuf_AssignDesc_bases_2eproto() {
       sizeof(MessageContainer),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageContainer, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageContainer, _is_default_instance_));
-  Dialog_descriptor_ = file->message_type(5);
+  Dialog_descriptor_ = file->message_type(8);
   static const int Dialog_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Dialog, peer_),
   };
@@ -178,11 +237,17 @@ void protobuf_RegisterTypes(const ::std::string&) {
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       EnumHelper_descriptor_, &EnumHelper::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      UserID_descriptor_, &UserID::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      OnlineSessionStatusEntry_descriptor_, &OnlineSessionStatusEntry::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       UserToeken_descriptor_, &UserToeken::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       UserInfo_descriptor_, &UserInfo::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       Peer_descriptor_, &Peer::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      OnlineUser_descriptor_, &OnlineUser::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       MessageContainer_descriptor_, &MessageContainer::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
@@ -194,12 +259,18 @@ void protobuf_RegisterTypes(const ::std::string&) {
 void protobuf_ShutdownFile_bases_2eproto() {
   delete EnumHelper::default_instance_;
   delete EnumHelper_reflection_;
+  delete UserID::default_instance_;
+  delete UserID_reflection_;
+  delete OnlineSessionStatusEntry::default_instance_;
+  delete OnlineSessionStatusEntry_reflection_;
   delete UserToeken::default_instance_;
   delete UserToeken_reflection_;
   delete UserInfo::default_instance_;
   delete UserInfo_reflection_;
   delete Peer::default_instance_;
   delete Peer_reflection_;
+  delete OnlineUser::default_instance_;
+  delete OnlineUser_reflection_;
   delete MessageContainer::default_instance_;
   delete MessageContainer_reflection_;
   delete Dialog::default_instance_;
@@ -221,34 +292,44 @@ void protobuf_AddDesc_bases_2eproto() {
     "\004BOTH\020\003\"G\n\014MessageState\022\025\n\021MessageState_"
     "NONE\020\000\022\010\n\004SENT\020\001\022\014\n\010RECEIVED\020\002\022\010\n\004READ\020\003"
     "\"C\n\013MessageType\022\024\n\020MessageType_NONE\020\000\022\010\n"
-    "\004TEXT\020\001\022\t\n\005AUDIO\020\002\022\t\n\005VIDEO\020\003\"B\n\nUserToe"
-    "ken\022\017\n\007app_key\030\001 \001(\t\022\017\n\007user_id\030\002 \001(\t\022\022\n"
-    "\nuser_token\030\003 \001(\t\"N\n\010UserInfo\022\016\n\006app_id\030"
-    "\001 \001(\r\022\017\n\007user_id\030\002 \001(\t\022\021\n\tpush_name\030\003 \001("
-    "\t\022\016\n\006avatar\030\004 \001(\t\" \n\004Peer\022\014\n\004type\030\001 \001(\r\022"
-    "\n\n\002id\030\002 \001(\t\"\267\002\n\020MessageContainer\022\022\n\nmess"
-    "age_id\030\001 \001(\004\022\026\n\016sender_user_id\030\002 \001(\t\022\032\n\004"
-    "peer\030\003 \001(\0132\014.zproto.Peer\022\031\n\021client_messa"
-    "ge_id\030\004 \001(\004\022\023\n\013message_seq\030\005 \001(\004\022.\n\005stat"
-    "e\030\006 \001(\0162\037.zproto.EnumHelper.MessageState"
-    "\0224\n\014message_type\030\007 \001(\0162\036.zproto.EnumHelp"
-    "er.MessageType\022\027\n\017message_content\030\010 \001(\014\022"
-    "\030\n\020passthrough_data\030\t \001(\014\022\022\n\nupdated_at\030"
-    "\n \001(\004\"$\n\006Dialog\022\032\n\004peer\030\001 \001(\0132\014.zproto.P"
-    "eerB#\n\027com.zchat.engine.zprotoB\006ZProtoH\002"
-    "b\006proto3", 888);
+    "\004TEXT\020\001\022\t\n\005AUDIO\020\002\022\t\n\005VIDEO\020\003\")\n\006UserID\022"
+    "\016\n\006app_id\030\001 \001(\r\022\017\n\007user_id\030\002 \001(\t\";\n\030Onli"
+    "neSessionStatusEntry\022\016\n\006app_id\030\001 \001(\r\022\017\n\007"
+    "user_id\030\002 \001(\t\"B\n\nUserToeken\022\017\n\007app_key\030\001"
+    " \001(\t\022\017\n\007user_id\030\002 \001(\t\022\022\n\nuser_token\030\003 \001("
+    "\t\"N\n\010UserInfo\022\016\n\006app_id\030\001 \001(\r\022\017\n\007user_id"
+    "\030\002 \001(\t\022\021\n\tpush_name\030\003 \001(\t\022\016\n\006avatar\030\004 \001("
+    "\t\" \n\004Peer\022\014\n\004type\030\001 \001(\r\022\n\n\002id\030\002 \001(\t\"Q\n\nO"
+    "nlineUser\022\016\n\006app_id\030\001 \001(\r\022\017\n\007user_id\030\002 \001"
+    "(\t\022\021\n\tserver_id\030\003 \001(\r\022\017\n\007conn_id\030\004 \001(\004\"\267"
+    "\002\n\020MessageContainer\022\022\n\nmessage_id\030\001 \001(\004\022"
+    "\026\n\016sender_user_id\030\002 \001(\t\022\032\n\004peer\030\003 \001(\0132\014."
+    "zproto.Peer\022\031\n\021client_message_id\030\004 \001(\004\022\023"
+    "\n\013message_seq\030\005 \001(\004\022.\n\005state\030\006 \001(\0162\037.zpr"
+    "oto.EnumHelper.MessageState\0224\n\014message_t"
+    "ype\030\007 \001(\0162\036.zproto.EnumHelper.MessageTyp"
+    "e\022\027\n\017message_content\030\010 \001(\014\022\030\n\020passthroug"
+    "h_data\030\t \001(\014\022\022\n\nupdated_at\030\n \001(\004\"$\n\006Dial"
+    "og\022\032\n\004peer\030\001 \001(\0132\014.zproto.PeerB#\n\027com.zc"
+    "hat.engine.zprotoB\006ZProtoH\002b\006proto3", 1075);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "bases.proto", &protobuf_RegisterTypes);
   EnumHelper::default_instance_ = new EnumHelper();
+  UserID::default_instance_ = new UserID();
+  OnlineSessionStatusEntry::default_instance_ = new OnlineSessionStatusEntry();
   UserToeken::default_instance_ = new UserToeken();
   UserInfo::default_instance_ = new UserInfo();
   Peer::default_instance_ = new Peer();
+  OnlineUser::default_instance_ = new OnlineUser();
   MessageContainer::default_instance_ = new MessageContainer();
   Dialog::default_instance_ = new Dialog();
   EnumHelper::default_instance_->InitAsDefaultInstance();
+  UserID::default_instance_->InitAsDefaultInstance();
+  OnlineSessionStatusEntry::default_instance_->InitAsDefaultInstance();
   UserToeken::default_instance_->InitAsDefaultInstance();
   UserInfo::default_instance_->InitAsDefaultInstance();
   Peer::default_instance_->InitAsDefaultInstance();
+  OnlineUser::default_instance_->InitAsDefaultInstance();
   MessageContainer::default_instance_->InitAsDefaultInstance();
   Dialog::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_bases_2eproto);
@@ -439,6 +520,300 @@ void EnumHelper::InternalSwap(EnumHelper* other) {
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // EnumHelper
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int UserID::kAppIdFieldNumber;
+const int UserID::kUserIdFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+UserID::UserID()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.UserID)
+}
+
+void UserID::InitAsDefaultInstance() {
+  _is_default_instance_ = true;
+}
+
+UserID::UserID(const UserID& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.UserID)
+}
+
+void UserID::SharedCtor() {
+    _is_default_instance_ = false;
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  app_id_ = 0u;
+  user_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+UserID::~UserID() {
+  // @@protoc_insertion_point(destructor:zproto.UserID)
+  SharedDtor();
+}
+
+void UserID::SharedDtor() {
+  user_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (this != default_instance_) {
+  }
+}
+
+void UserID::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* UserID::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return UserID_descriptor_;
+}
+
+const UserID& UserID::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_bases_2eproto();
+  return *default_instance_;
+}
+
+UserID* UserID::default_instance_ = NULL;
+
+UserID* UserID::New(::google::protobuf::Arena* arena) const {
+  UserID* n = new UserID;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void UserID::Swap(UserID* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void UserID::InternalSwap(UserID* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata UserID::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = UserID_descriptor_;
+  metadata.reflection = UserID_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// UserID
+
+// optional uint32 app_id = 1;
+void UserID::clear_app_id() {
+  app_id_ = 0u;
+}
+ ::google::protobuf::uint32 UserID::app_id() const {
+  // @@protoc_insertion_point(field_get:zproto.UserID.app_id)
+  return app_id_;
+}
+ void UserID::set_app_id(::google::protobuf::uint32 value) {
+  
+  app_id_ = value;
+  // @@protoc_insertion_point(field_set:zproto.UserID.app_id)
+}
+
+// optional string user_id = 2;
+void UserID::clear_user_id() {
+  user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& UserID::user_id() const {
+  // @@protoc_insertion_point(field_get:zproto.UserID.user_id)
+  return user_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void UserID::set_user_id(const ::std::string& value) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.UserID.user_id)
+}
+ void UserID::set_user_id(const char* value) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.UserID.user_id)
+}
+ void UserID::set_user_id(const char* value, size_t size) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.UserID.user_id)
+}
+ ::std::string* UserID::mutable_user_id() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.UserID.user_id)
+  return user_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* UserID::release_user_id() {
+  // @@protoc_insertion_point(field_release:zproto.UserID.user_id)
+  
+  return user_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void UserID::set_allocated_user_id(::std::string* user_id) {
+  if (user_id != NULL) {
+    
+  } else {
+    
+  }
+  user_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), user_id);
+  // @@protoc_insertion_point(field_set_allocated:zproto.UserID.user_id)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int OnlineSessionStatusEntry::kAppIdFieldNumber;
+const int OnlineSessionStatusEntry::kUserIdFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+OnlineSessionStatusEntry::OnlineSessionStatusEntry()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.OnlineSessionStatusEntry)
+}
+
+void OnlineSessionStatusEntry::InitAsDefaultInstance() {
+  _is_default_instance_ = true;
+}
+
+OnlineSessionStatusEntry::OnlineSessionStatusEntry(const OnlineSessionStatusEntry& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.OnlineSessionStatusEntry)
+}
+
+void OnlineSessionStatusEntry::SharedCtor() {
+    _is_default_instance_ = false;
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  app_id_ = 0u;
+  user_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+OnlineSessionStatusEntry::~OnlineSessionStatusEntry() {
+  // @@protoc_insertion_point(destructor:zproto.OnlineSessionStatusEntry)
+  SharedDtor();
+}
+
+void OnlineSessionStatusEntry::SharedDtor() {
+  user_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (this != default_instance_) {
+  }
+}
+
+void OnlineSessionStatusEntry::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* OnlineSessionStatusEntry::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return OnlineSessionStatusEntry_descriptor_;
+}
+
+const OnlineSessionStatusEntry& OnlineSessionStatusEntry::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_bases_2eproto();
+  return *default_instance_;
+}
+
+OnlineSessionStatusEntry* OnlineSessionStatusEntry::default_instance_ = NULL;
+
+OnlineSessionStatusEntry* OnlineSessionStatusEntry::New(::google::protobuf::Arena* arena) const {
+  OnlineSessionStatusEntry* n = new OnlineSessionStatusEntry;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void OnlineSessionStatusEntry::Swap(OnlineSessionStatusEntry* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void OnlineSessionStatusEntry::InternalSwap(OnlineSessionStatusEntry* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata OnlineSessionStatusEntry::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = OnlineSessionStatusEntry_descriptor_;
+  metadata.reflection = OnlineSessionStatusEntry_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// OnlineSessionStatusEntry
+
+// optional uint32 app_id = 1;
+void OnlineSessionStatusEntry::clear_app_id() {
+  app_id_ = 0u;
+}
+ ::google::protobuf::uint32 OnlineSessionStatusEntry::app_id() const {
+  // @@protoc_insertion_point(field_get:zproto.OnlineSessionStatusEntry.app_id)
+  return app_id_;
+}
+ void OnlineSessionStatusEntry::set_app_id(::google::protobuf::uint32 value) {
+  
+  app_id_ = value;
+  // @@protoc_insertion_point(field_set:zproto.OnlineSessionStatusEntry.app_id)
+}
+
+// optional string user_id = 2;
+void OnlineSessionStatusEntry::clear_user_id() {
+  user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& OnlineSessionStatusEntry::user_id() const {
+  // @@protoc_insertion_point(field_get:zproto.OnlineSessionStatusEntry.user_id)
+  return user_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void OnlineSessionStatusEntry::set_user_id(const ::std::string& value) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.OnlineSessionStatusEntry.user_id)
+}
+ void OnlineSessionStatusEntry::set_user_id(const char* value) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.OnlineSessionStatusEntry.user_id)
+}
+ void OnlineSessionStatusEntry::set_user_id(const char* value, size_t size) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.OnlineSessionStatusEntry.user_id)
+}
+ ::std::string* OnlineSessionStatusEntry::mutable_user_id() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.OnlineSessionStatusEntry.user_id)
+  return user_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* OnlineSessionStatusEntry::release_user_id() {
+  // @@protoc_insertion_point(field_release:zproto.OnlineSessionStatusEntry.user_id)
+  
+  return user_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void OnlineSessionStatusEntry::set_allocated_user_id(::std::string* user_id) {
+  if (user_id != NULL) {
+    
+  } else {
+    
+  }
+  user_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), user_id);
+  // @@protoc_insertion_point(field_set_allocated:zproto.OnlineSessionStatusEntry.user_id)
+}
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
@@ -1051,6 +1426,185 @@ void Peer::clear_id() {
   }
   id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), id);
   // @@protoc_insertion_point(field_set_allocated:zproto.Peer.id)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int OnlineUser::kAppIdFieldNumber;
+const int OnlineUser::kUserIdFieldNumber;
+const int OnlineUser::kServerIdFieldNumber;
+const int OnlineUser::kConnIdFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+OnlineUser::OnlineUser()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.OnlineUser)
+}
+
+void OnlineUser::InitAsDefaultInstance() {
+  _is_default_instance_ = true;
+}
+
+OnlineUser::OnlineUser(const OnlineUser& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.OnlineUser)
+}
+
+void OnlineUser::SharedCtor() {
+    _is_default_instance_ = false;
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  app_id_ = 0u;
+  user_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  server_id_ = 0u;
+  conn_id_ = GOOGLE_ULONGLONG(0);
+}
+
+OnlineUser::~OnlineUser() {
+  // @@protoc_insertion_point(destructor:zproto.OnlineUser)
+  SharedDtor();
+}
+
+void OnlineUser::SharedDtor() {
+  user_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (this != default_instance_) {
+  }
+}
+
+void OnlineUser::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* OnlineUser::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return OnlineUser_descriptor_;
+}
+
+const OnlineUser& OnlineUser::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_bases_2eproto();
+  return *default_instance_;
+}
+
+OnlineUser* OnlineUser::default_instance_ = NULL;
+
+OnlineUser* OnlineUser::New(::google::protobuf::Arena* arena) const {
+  OnlineUser* n = new OnlineUser;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void OnlineUser::Swap(OnlineUser* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void OnlineUser::InternalSwap(OnlineUser* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata OnlineUser::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = OnlineUser_descriptor_;
+  metadata.reflection = OnlineUser_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// OnlineUser
+
+// optional uint32 app_id = 1;
+void OnlineUser::clear_app_id() {
+  app_id_ = 0u;
+}
+ ::google::protobuf::uint32 OnlineUser::app_id() const {
+  // @@protoc_insertion_point(field_get:zproto.OnlineUser.app_id)
+  return app_id_;
+}
+ void OnlineUser::set_app_id(::google::protobuf::uint32 value) {
+  
+  app_id_ = value;
+  // @@protoc_insertion_point(field_set:zproto.OnlineUser.app_id)
+}
+
+// optional string user_id = 2;
+void OnlineUser::clear_user_id() {
+  user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& OnlineUser::user_id() const {
+  // @@protoc_insertion_point(field_get:zproto.OnlineUser.user_id)
+  return user_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void OnlineUser::set_user_id(const ::std::string& value) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.OnlineUser.user_id)
+}
+ void OnlineUser::set_user_id(const char* value) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.OnlineUser.user_id)
+}
+ void OnlineUser::set_user_id(const char* value, size_t size) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.OnlineUser.user_id)
+}
+ ::std::string* OnlineUser::mutable_user_id() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.OnlineUser.user_id)
+  return user_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* OnlineUser::release_user_id() {
+  // @@protoc_insertion_point(field_release:zproto.OnlineUser.user_id)
+  
+  return user_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void OnlineUser::set_allocated_user_id(::std::string* user_id) {
+  if (user_id != NULL) {
+    
+  } else {
+    
+  }
+  user_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), user_id);
+  // @@protoc_insertion_point(field_set_allocated:zproto.OnlineUser.user_id)
+}
+
+// optional uint32 server_id = 3;
+void OnlineUser::clear_server_id() {
+  server_id_ = 0u;
+}
+ ::google::protobuf::uint32 OnlineUser::server_id() const {
+  // @@protoc_insertion_point(field_get:zproto.OnlineUser.server_id)
+  return server_id_;
+}
+ void OnlineUser::set_server_id(::google::protobuf::uint32 value) {
+  
+  server_id_ = value;
+  // @@protoc_insertion_point(field_set:zproto.OnlineUser.server_id)
+}
+
+// optional uint64 conn_id = 4;
+void OnlineUser::clear_conn_id() {
+  conn_id_ = GOOGLE_ULONGLONG(0);
+}
+ ::google::protobuf::uint64 OnlineUser::conn_id() const {
+  // @@protoc_insertion_point(field_get:zproto.OnlineUser.conn_id)
+  return conn_id_;
+}
+ void OnlineUser::set_conn_id(::google::protobuf::uint64 value) {
+  
+  conn_id_ = value;
+  // @@protoc_insertion_point(field_set:zproto.OnlineUser.conn_id)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

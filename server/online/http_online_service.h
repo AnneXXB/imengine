@@ -15,15 +15,13 @@
  * limitations under the License.
  */
 
-#ifndef	ONLINE_RPC_ONLINE_SERVICE_H_
-#define	ONLINE_RPC_ONLINE_SERVICE_H_
+#ifndef	ONLINE_HTTP_ONLINE_SERVICE_H_
+#define	ONLINE_HTTP_ONLINE_SERVICE_H_
 
-#include "nebula/net/rpc/zrpc_service_util.h"
+#include "nebula/net/handler/http/http_request_handler.h"
 
-ProtoRpcResponsePtr DoClientOnline(RpcRequestPtr request);
-ProtoRpcResponsePtr DoClientOffline(RpcRequestPtr request);
-ProtoRpcResponsePtr DoQueryOnlineUser(RpcRequestPtr request);
+void Query(const proxygen::HTTPMessage& headers, const folly::IOBuf* body, proxygen::ResponseBuilder* r);
 
 
-#endif // ONLINE_RPC_ONLINE_SERVICE_H_
+#endif // ONLINE_HTTP_ONLINE_SERVICE_H_
 

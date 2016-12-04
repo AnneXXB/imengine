@@ -1,4 +1,4 @@
-/*
+/**
  *  Copyright (c) 2016, https://github.com/zhatalk
  *  All rights reserved.
  *
@@ -15,15 +15,29 @@
  * limitations under the License.
  */
 
-#ifndef	ONLINE_RPC_ONLINE_SERVICE_H_
-#define	ONLINE_RPC_ONLINE_SERVICE_H_
+#ifndef BIZ_MODEL_ONLINE_STATUS_HELPER_H_
+#define BIZ_MODEL_ONLINE_STATUS_HELPER_H_
 
-#include "nebula/net/rpc/zrpc_service_util.h"
+#include <string>
+#include <list>
 
-ProtoRpcResponsePtr DoClientOnline(RpcRequestPtr request);
-ProtoRpcResponsePtr DoClientOffline(RpcRequestPtr request);
-ProtoRpcResponsePtr DoQueryOnlineUser(RpcRequestPtr request);
+struct OnlineUserInfo {
+  OnlineUserInfo() = default;
+  OnlineUserInfo(uint32_t sid, uint64_t cid, int s)
+  : server_id(sid),
+    conn_id(cid),
+    state(s) {}
+  
+  // uint32_t app_id;
+  // std::string user_id;
+  uint32_t server_id;
+  uint64_t conn_id;
+  int state;
+};
 
+bool GetUsersOnlineStatus(uint32_t app_id,
+                          const std::list<std::string>& user_id_list,
+                          std::list<OnlineUserInfo>& onlines,
+                          uint64_t my_conn_id = 0);
 
-#endif // ONLINE_RPC_ONLINE_SERVICE_H_
-
+#endif
