@@ -137,22 +137,6 @@ struct ConversationID {
   uint32_t peer_type;
 };
 
-// DB表映射
-//struct MessageEntity {
-//  uint64_t id;
-//  uint32_t sender_user_id; // 发送方
-//  uint32_t peer_id;
-//  uint32_t peer_type;
-//  uint64_t client_message_id;
-//  uint32_t message_peer_seq;
-//  uint32_t message_content_type;
-//  std::string message_content_data;
-//  std::string passthrough_data;
-//  uint32_t status;
-//  uint64_t created_at;
-//  uint64_t updated_at;
-//};
-
 struct MessageEntity {
   uint64_t id;
   std::string user_id;
@@ -216,5 +200,41 @@ typedef std::list<UserDialogEntityPtr> UserDialogEntityList;
 //using BizResultPair = FuncFactoryManager<F, K>::RegisterTemplate;
 
 // using template<class T> BizResultPair = std::pair<int, std::shared_ptr<T>>;
+
+struct GroupEntity {
+  uint64_t id;
+  uint32_t app_id{1};
+  std::string group_id;
+  std::string creator_user_id;
+  uint64_t client_group_id;
+  std::string title;
+  std::string avatar;
+  std::string topic;
+  std::string about;
+  int status{0};
+  uint64_t created_at;
+  uint64_t updated_at;
+  std::string title_changer_user_id;
+  uint64_t title_changer_at{0};
+  std::string avatar_changer_user_id;
+  uint64_t avatar_changer_at{0};
+};
+typedef std::shared_ptr<GroupEntity> GroupEntityPtr;
+
+struct GroupMemberEntity {
+  uint64_t id;
+  uint32_t app_id{1};
+  std::string group_id;
+  std::string user_id;
+  int is_admin{0};
+  int status{0};
+  uint64_t invited_at;
+  std::string inviter_user_id;
+  uint64_t joined_at;
+  uint64_t created_at;
+  uint64_t updated_at;
+};
+typedef std::shared_ptr<GroupMemberEntity> GroupMemberEntityPtr;
+typedef std::list<GroupMemberEntityPtr> GroupMemberEntityList;
 
 #endif

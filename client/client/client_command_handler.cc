@@ -18,6 +18,8 @@
 #include "client/client_command_handler.h"
 
 #include "nebula/base/time_util.h"
+#include "nebula/base/id_util.h"
+
 #include "proto/api_message_box.h"
 #include "nebula/net/rpc/zrpc_service_util.h"
 
@@ -34,7 +36,6 @@ struct CmdEntry {
 
 
 int DoConnect(const std::vector<folly::StringPiece>& command_lines) {
-  // SELECT app_id,user_id,open_id,nick,avatar FROM users WHERE app_id=1 AND open_id='benqi@zhazha' AND user_token='benqi@zhazha.nebula.im'
   auto req = std::make_shared<ApiRpcRequest<zproto::UserTokenAuthReq>>();
   (*req)->set_app_key("nebula-im(zhazha)");
   (*req)->set_user_id("benqi@zhazha");
@@ -71,7 +72,7 @@ int DoSendMessage(const std::vector<folly::StringPiece>& command_lines) {
   auto peer = message_data->mutable_peer();
   peer->set_id(command_lines[1].toString());
   peer->set_type(zproto::EnumHelper::PRIVATE);
-  message_data->set_client_message_id(NowInMsecTime());
+  message_data->set_client_message_id(GetNextIDBySnowflake());
   message_data->set_message_type(zproto::EnumHelper::TEXT);
   message_data->set_message_content(command_lines[2].toString());
   
@@ -105,7 +106,37 @@ int DoMessageSync(const std::vector<folly::StringPiece>& command_lines) {
     //  LOG(INFO) << (*login_rsp)->Utf8DebugString();
     //}
   });
+  
+  return 0;
 }
+
+int DoCreateGroup(const std::vector<folly::StringPiece>& command_lines) {
+  auto req = std::make_shared<ApiRpcRequest<zproto::CreateGroupReq>>();
+  
+  (*req)->set_creator_user_id("benqi@zhazha");
+  (*req)->set_client_group_id(GetNextIDBySnowflake());
+  (*req)->set_title(command_lines[1].toString());
+  (*req)->add_user_ids("benqi@zhazha");
+  for (int i=2; i<command_lines.size(); ++i) {
+    (*req)->add_user_ids(command_lines[i].toString());
+  }
+
+  LOG(INFO) << "DoCreateGroup - req: " << req->ToString();
+  
+  ZRpcUtil::DoClientCall("gate_client", req)
+  .within(std::chrono::milliseconds(5000))
+  .then([](ProtoRpcResponsePtr rsp) {
+    LOG(INFO) << "DoMessageSync - rsp";
+    LOG(INFO) << rsp->ToString();
+    // if (rsp) {
+    //  auto login_rsp = ToApiRpcOk<zproto::SeqDateRsp>(rsp);
+    //  LOG(INFO) << (*login_rsp)->Utf8DebugString();
+    //}
+  });
+  
+  return 0;
+}
+
 
 int DoQuit(const std::vector<folly::StringPiece>& command_lines) {
   // exit(0);
@@ -117,6 +148,7 @@ CmdEntry g_cmds[] = {
   {"connect", "connect serv_ip serv_port user_id", 4, 0, DoConnect},
   {"sendmessage", "sendmessage user_id content", 3, 0, DoSendMessage},
   {"messagesync", "messagesync", 1, 0, DoMessageSync},
+  {"create_group", "create_group group_title uid1...", 3, 10, DoCreateGroup},
   // quit
   {"quit", "quit", 1, 0, DoQuit}
 };

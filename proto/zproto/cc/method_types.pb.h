@@ -63,12 +63,14 @@ enum MethodID {
   LOAD_DIALOGS_REQ = 65298,
   LOAD_DIALOGS_RSP = 65299,
   FORAWRD_MESSAGE_REQ = 65300,
+  CREATE_GROUP_REQ = 65312,
+  CREATE_GROUP_RSP = 65313,
   MethodID_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
   MethodID_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
 bool MethodID_IsValid(int value);
 const MethodID MethodID_MIN = METHOD_ID_UNKNOWN;
-const MethodID MethodID_MAX = QUERY_ONINE_USER_RSP;
+const MethodID MethodID_MAX = CREATE_GROUP_RSP;
 const int MethodID_ARRAYSIZE = MethodID_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* MethodID_descriptor();

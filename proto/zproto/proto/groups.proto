@@ -22,3 +22,34 @@ package zproto;
 option java_package = "com.zchat.engine.zproto";
 option java_outer_classname = "ZProto";
 option optimize_for = CODE_SIZE;
+
+
+message GroupMember {
+  string user_id = 1;     // 用户ID
+  string inviter_uid = 2; // 邀请者
+  int64  date = 3;        // 加入群时间
+  bool is_admin = 4;      // 是否群管理员
+}
+
+message Group {
+  string group_id = 1;              // 去ID
+  string title = 2;                 // 群标题
+  repeated GroupMember members = 3; // 群成员
+}
+
+// CreateGroupReq --> CreateGroupRsp
+message CreateGroupReq {
+  string creator_user_id = 1;
+  int64 client_group_id = 2;    // 客户端创建的随机ID，去重
+  string title = 3;             // 群标题
+  repeated string user_ids = 4; // 成员
+}
+
+// Created group
+message CreateGroupRsp {
+  uint64 seq = 1;                 // 序号
+  uint64 created = 2;             // 创建时间
+  Group group = 3;                // 群信息
+  repeated string user_ids = 4;   // 群成员
+}
+

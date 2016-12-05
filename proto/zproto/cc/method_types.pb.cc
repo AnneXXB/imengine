@@ -62,7 +62,7 @@ void protobuf_AddDesc_method_5ftypes_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\022method_types.proto\022\006zproto*\247\005\n\010MethodI"
+    "\n\022method_types.proto\022\006zproto*\327\005\n\010MethodI"
     "D\022\025\n\021METHOD_ID_UNKNOWN\020\000\022\014\n\010VOID_RSP\020\001\022\031"
     "\n\023USER_TOKEN_AUTH_REQ\020\201\374\003\022\031\n\023USER_TOKEN_"
     "AUTH_RSP\020\202\374\003\022\025\n\017SERVER_AUTH_REQ\020\201\376\003\022\025\n\017S"
@@ -79,8 +79,10 @@ void protobuf_AddDesc_method_5ftypes_2eproto() {
     "EAD_REQ\020\217\376\003\022\036\n\030LOAD_HISTORY_MESSAGE_REQ\020"
     "\220\376\003\022\036\n\030LOAD_HISTORY_MESSAGE_RSP\020\221\376\003\022\026\n\020L"
     "OAD_DIALOGS_REQ\020\222\376\003\022\026\n\020LOAD_DIALOGS_RSP\020"
-    "\223\376\003\022\031\n\023FORAWRD_MESSAGE_REQ\020\224\376\003B#\n\027com.zc"
-    "hat.engine.zprotoB\006ZProtoH\002b\006proto3", 755);
+    "\223\376\003\022\031\n\023FORAWRD_MESSAGE_REQ\020\224\376\003\022\026\n\020CREATE"
+    "_GROUP_REQ\020\240\376\003\022\026\n\020CREATE_GROUP_RSP\020\241\376\003B#"
+    "\n\027com.zchat.engine.zprotoB\006ZProtoH\002b\006pro"
+    "to3", 803);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "method_types.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_method_5ftypes_2eproto);
@@ -124,6 +126,8 @@ bool MethodID_IsValid(int value) {
     case 65300:
     case 65305:
     case 65306:
+    case 65312:
+    case 65313:
       return true;
     default:
       return false;

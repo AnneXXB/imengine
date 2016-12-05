@@ -23,8 +23,10 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>
 #include <google/protobuf/extension_set.h>
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 
 namespace zproto {
@@ -34,17 +36,946 @@ void protobuf_AddDesc_groups_2eproto();
 void protobuf_AssignDesc_groups_2eproto();
 void protobuf_ShutdownFile_groups_2eproto();
 
+class CreateGroupReq;
+class CreateGroupRsp;
+class Group;
+class GroupMember;
 
 // ===================================================================
 
+class GroupMember : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.GroupMember) */ {
+ public:
+  GroupMember();
+  virtual ~GroupMember();
 
+  GroupMember(const GroupMember& from);
+
+  inline GroupMember& operator=(const GroupMember& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const GroupMember& default_instance();
+
+  void Swap(GroupMember* other);
+
+  // implements Message ----------------------------------------------
+
+  inline GroupMember* New() const { return New(NULL); }
+
+  GroupMember* New(::google::protobuf::Arena* arena) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(GroupMember* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional string user_id = 1;
+  void clear_user_id();
+  static const int kUserIdFieldNumber = 1;
+  const ::std::string& user_id() const;
+  void set_user_id(const ::std::string& value);
+  void set_user_id(const char* value);
+  void set_user_id(const char* value, size_t size);
+  ::std::string* mutable_user_id();
+  ::std::string* release_user_id();
+  void set_allocated_user_id(::std::string* user_id);
+
+  // optional string inviter_uid = 2;
+  void clear_inviter_uid();
+  static const int kInviterUidFieldNumber = 2;
+  const ::std::string& inviter_uid() const;
+  void set_inviter_uid(const ::std::string& value);
+  void set_inviter_uid(const char* value);
+  void set_inviter_uid(const char* value, size_t size);
+  ::std::string* mutable_inviter_uid();
+  ::std::string* release_inviter_uid();
+  void set_allocated_inviter_uid(::std::string* inviter_uid);
+
+  // optional int64 date = 3;
+  void clear_date();
+  static const int kDateFieldNumber = 3;
+  ::google::protobuf::int64 date() const;
+  void set_date(::google::protobuf::int64 value);
+
+  // optional bool is_admin = 4;
+  void clear_is_admin();
+  static const int kIsAdminFieldNumber = 4;
+  bool is_admin() const;
+  void set_is_admin(bool value);
+
+  // @@protoc_insertion_point(class_scope:zproto.GroupMember)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::internal::ArenaStringPtr user_id_;
+  ::google::protobuf::internal::ArenaStringPtr inviter_uid_;
+  ::google::protobuf::int64 date_;
+  bool is_admin_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_groups_2eproto();
+  friend void protobuf_AssignDesc_groups_2eproto();
+  friend void protobuf_ShutdownFile_groups_2eproto();
+
+  void InitAsDefaultInstance();
+  static GroupMember* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class Group : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.Group) */ {
+ public:
+  Group();
+  virtual ~Group();
+
+  Group(const Group& from);
+
+  inline Group& operator=(const Group& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Group& default_instance();
+
+  void Swap(Group* other);
+
+  // implements Message ----------------------------------------------
+
+  inline Group* New() const { return New(NULL); }
+
+  Group* New(::google::protobuf::Arena* arena) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(Group* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional string group_id = 1;
+  void clear_group_id();
+  static const int kGroupIdFieldNumber = 1;
+  const ::std::string& group_id() const;
+  void set_group_id(const ::std::string& value);
+  void set_group_id(const char* value);
+  void set_group_id(const char* value, size_t size);
+  ::std::string* mutable_group_id();
+  ::std::string* release_group_id();
+  void set_allocated_group_id(::std::string* group_id);
+
+  // optional string title = 2;
+  void clear_title();
+  static const int kTitleFieldNumber = 2;
+  const ::std::string& title() const;
+  void set_title(const ::std::string& value);
+  void set_title(const char* value);
+  void set_title(const char* value, size_t size);
+  ::std::string* mutable_title();
+  ::std::string* release_title();
+  void set_allocated_title(::std::string* title);
+
+  // repeated .zproto.GroupMember members = 3;
+  int members_size() const;
+  void clear_members();
+  static const int kMembersFieldNumber = 3;
+  const ::zproto::GroupMember& members(int index) const;
+  ::zproto::GroupMember* mutable_members(int index);
+  ::zproto::GroupMember* add_members();
+  ::google::protobuf::RepeatedPtrField< ::zproto::GroupMember >*
+      mutable_members();
+  const ::google::protobuf::RepeatedPtrField< ::zproto::GroupMember >&
+      members() const;
+
+  // @@protoc_insertion_point(class_scope:zproto.Group)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::internal::ArenaStringPtr group_id_;
+  ::google::protobuf::internal::ArenaStringPtr title_;
+  ::google::protobuf::RepeatedPtrField< ::zproto::GroupMember > members_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_groups_2eproto();
+  friend void protobuf_AssignDesc_groups_2eproto();
+  friend void protobuf_ShutdownFile_groups_2eproto();
+
+  void InitAsDefaultInstance();
+  static Group* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CreateGroupReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.CreateGroupReq) */ {
+ public:
+  CreateGroupReq();
+  virtual ~CreateGroupReq();
+
+  CreateGroupReq(const CreateGroupReq& from);
+
+  inline CreateGroupReq& operator=(const CreateGroupReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CreateGroupReq& default_instance();
+
+  void Swap(CreateGroupReq* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CreateGroupReq* New() const { return New(NULL); }
+
+  CreateGroupReq* New(::google::protobuf::Arena* arena) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CreateGroupReq* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional string creator_user_id = 1;
+  void clear_creator_user_id();
+  static const int kCreatorUserIdFieldNumber = 1;
+  const ::std::string& creator_user_id() const;
+  void set_creator_user_id(const ::std::string& value);
+  void set_creator_user_id(const char* value);
+  void set_creator_user_id(const char* value, size_t size);
+  ::std::string* mutable_creator_user_id();
+  ::std::string* release_creator_user_id();
+  void set_allocated_creator_user_id(::std::string* creator_user_id);
+
+  // optional int64 client_group_id = 2;
+  void clear_client_group_id();
+  static const int kClientGroupIdFieldNumber = 2;
+  ::google::protobuf::int64 client_group_id() const;
+  void set_client_group_id(::google::protobuf::int64 value);
+
+  // optional string title = 3;
+  void clear_title();
+  static const int kTitleFieldNumber = 3;
+  const ::std::string& title() const;
+  void set_title(const ::std::string& value);
+  void set_title(const char* value);
+  void set_title(const char* value, size_t size);
+  ::std::string* mutable_title();
+  ::std::string* release_title();
+  void set_allocated_title(::std::string* title);
+
+  // repeated string user_ids = 4;
+  int user_ids_size() const;
+  void clear_user_ids();
+  static const int kUserIdsFieldNumber = 4;
+  const ::std::string& user_ids(int index) const;
+  ::std::string* mutable_user_ids(int index);
+  void set_user_ids(int index, const ::std::string& value);
+  void set_user_ids(int index, const char* value);
+  void set_user_ids(int index, const char* value, size_t size);
+  ::std::string* add_user_ids();
+  void add_user_ids(const ::std::string& value);
+  void add_user_ids(const char* value);
+  void add_user_ids(const char* value, size_t size);
+  const ::google::protobuf::RepeatedPtrField< ::std::string>& user_ids() const;
+  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_user_ids();
+
+  // @@protoc_insertion_point(class_scope:zproto.CreateGroupReq)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::internal::ArenaStringPtr creator_user_id_;
+  ::google::protobuf::int64 client_group_id_;
+  ::google::protobuf::internal::ArenaStringPtr title_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> user_ids_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_groups_2eproto();
+  friend void protobuf_AssignDesc_groups_2eproto();
+  friend void protobuf_ShutdownFile_groups_2eproto();
+
+  void InitAsDefaultInstance();
+  static CreateGroupReq* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CreateGroupRsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.CreateGroupRsp) */ {
+ public:
+  CreateGroupRsp();
+  virtual ~CreateGroupRsp();
+
+  CreateGroupRsp(const CreateGroupRsp& from);
+
+  inline CreateGroupRsp& operator=(const CreateGroupRsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CreateGroupRsp& default_instance();
+
+  void Swap(CreateGroupRsp* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CreateGroupRsp* New() const { return New(NULL); }
+
+  CreateGroupRsp* New(::google::protobuf::Arena* arena) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CreateGroupRsp* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 seq = 1;
+  void clear_seq();
+  static const int kSeqFieldNumber = 1;
+  ::google::protobuf::uint64 seq() const;
+  void set_seq(::google::protobuf::uint64 value);
+
+  // optional uint64 created = 2;
+  void clear_created();
+  static const int kCreatedFieldNumber = 2;
+  ::google::protobuf::uint64 created() const;
+  void set_created(::google::protobuf::uint64 value);
+
+  // optional .zproto.Group group = 3;
+  bool has_group() const;
+  void clear_group();
+  static const int kGroupFieldNumber = 3;
+  const ::zproto::Group& group() const;
+  ::zproto::Group* mutable_group();
+  ::zproto::Group* release_group();
+  void set_allocated_group(::zproto::Group* group);
+
+  // repeated string user_ids = 4;
+  int user_ids_size() const;
+  void clear_user_ids();
+  static const int kUserIdsFieldNumber = 4;
+  const ::std::string& user_ids(int index) const;
+  ::std::string* mutable_user_ids(int index);
+  void set_user_ids(int index, const ::std::string& value);
+  void set_user_ids(int index, const char* value);
+  void set_user_ids(int index, const char* value, size_t size);
+  ::std::string* add_user_ids();
+  void add_user_ids(const ::std::string& value);
+  void add_user_ids(const char* value);
+  void add_user_ids(const char* value, size_t size);
+  const ::google::protobuf::RepeatedPtrField< ::std::string>& user_ids() const;
+  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_user_ids();
+
+  // @@protoc_insertion_point(class_scope:zproto.CreateGroupRsp)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::uint64 seq_;
+  ::google::protobuf::uint64 created_;
+  ::zproto::Group* group_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> user_ids_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_groups_2eproto();
+  friend void protobuf_AssignDesc_groups_2eproto();
+  friend void protobuf_ShutdownFile_groups_2eproto();
+
+  void InitAsDefaultInstance();
+  static CreateGroupRsp* default_instance_;
+};
 // ===================================================================
 
 
 // ===================================================================
 
 #if !PROTOBUF_INLINE_NOT_IN_HEADERS
+// GroupMember
+
+// optional string user_id = 1;
+inline void GroupMember::clear_user_id() {
+  user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& GroupMember::user_id() const {
+  // @@protoc_insertion_point(field_get:zproto.GroupMember.user_id)
+  return user_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void GroupMember::set_user_id(const ::std::string& value) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.GroupMember.user_id)
+}
+inline void GroupMember::set_user_id(const char* value) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.GroupMember.user_id)
+}
+inline void GroupMember::set_user_id(const char* value, size_t size) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.GroupMember.user_id)
+}
+inline ::std::string* GroupMember::mutable_user_id() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.GroupMember.user_id)
+  return user_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* GroupMember::release_user_id() {
+  // @@protoc_insertion_point(field_release:zproto.GroupMember.user_id)
+  
+  return user_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void GroupMember::set_allocated_user_id(::std::string* user_id) {
+  if (user_id != NULL) {
+    
+  } else {
+    
+  }
+  user_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), user_id);
+  // @@protoc_insertion_point(field_set_allocated:zproto.GroupMember.user_id)
+}
+
+// optional string inviter_uid = 2;
+inline void GroupMember::clear_inviter_uid() {
+  inviter_uid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& GroupMember::inviter_uid() const {
+  // @@protoc_insertion_point(field_get:zproto.GroupMember.inviter_uid)
+  return inviter_uid_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void GroupMember::set_inviter_uid(const ::std::string& value) {
+  
+  inviter_uid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.GroupMember.inviter_uid)
+}
+inline void GroupMember::set_inviter_uid(const char* value) {
+  
+  inviter_uid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.GroupMember.inviter_uid)
+}
+inline void GroupMember::set_inviter_uid(const char* value, size_t size) {
+  
+  inviter_uid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.GroupMember.inviter_uid)
+}
+inline ::std::string* GroupMember::mutable_inviter_uid() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.GroupMember.inviter_uid)
+  return inviter_uid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* GroupMember::release_inviter_uid() {
+  // @@protoc_insertion_point(field_release:zproto.GroupMember.inviter_uid)
+  
+  return inviter_uid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void GroupMember::set_allocated_inviter_uid(::std::string* inviter_uid) {
+  if (inviter_uid != NULL) {
+    
+  } else {
+    
+  }
+  inviter_uid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), inviter_uid);
+  // @@protoc_insertion_point(field_set_allocated:zproto.GroupMember.inviter_uid)
+}
+
+// optional int64 date = 3;
+inline void GroupMember::clear_date() {
+  date_ = GOOGLE_LONGLONG(0);
+}
+inline ::google::protobuf::int64 GroupMember::date() const {
+  // @@protoc_insertion_point(field_get:zproto.GroupMember.date)
+  return date_;
+}
+inline void GroupMember::set_date(::google::protobuf::int64 value) {
+  
+  date_ = value;
+  // @@protoc_insertion_point(field_set:zproto.GroupMember.date)
+}
+
+// optional bool is_admin = 4;
+inline void GroupMember::clear_is_admin() {
+  is_admin_ = false;
+}
+inline bool GroupMember::is_admin() const {
+  // @@protoc_insertion_point(field_get:zproto.GroupMember.is_admin)
+  return is_admin_;
+}
+inline void GroupMember::set_is_admin(bool value) {
+  
+  is_admin_ = value;
+  // @@protoc_insertion_point(field_set:zproto.GroupMember.is_admin)
+}
+
+// -------------------------------------------------------------------
+
+// Group
+
+// optional string group_id = 1;
+inline void Group::clear_group_id() {
+  group_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Group::group_id() const {
+  // @@protoc_insertion_point(field_get:zproto.Group.group_id)
+  return group_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Group::set_group_id(const ::std::string& value) {
+  
+  group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.Group.group_id)
+}
+inline void Group::set_group_id(const char* value) {
+  
+  group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.Group.group_id)
+}
+inline void Group::set_group_id(const char* value, size_t size) {
+  
+  group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.Group.group_id)
+}
+inline ::std::string* Group::mutable_group_id() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.Group.group_id)
+  return group_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Group::release_group_id() {
+  // @@protoc_insertion_point(field_release:zproto.Group.group_id)
+  
+  return group_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Group::set_allocated_group_id(::std::string* group_id) {
+  if (group_id != NULL) {
+    
+  } else {
+    
+  }
+  group_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), group_id);
+  // @@protoc_insertion_point(field_set_allocated:zproto.Group.group_id)
+}
+
+// optional string title = 2;
+inline void Group::clear_title() {
+  title_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Group::title() const {
+  // @@protoc_insertion_point(field_get:zproto.Group.title)
+  return title_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Group::set_title(const ::std::string& value) {
+  
+  title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.Group.title)
+}
+inline void Group::set_title(const char* value) {
+  
+  title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.Group.title)
+}
+inline void Group::set_title(const char* value, size_t size) {
+  
+  title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.Group.title)
+}
+inline ::std::string* Group::mutable_title() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.Group.title)
+  return title_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Group::release_title() {
+  // @@protoc_insertion_point(field_release:zproto.Group.title)
+  
+  return title_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Group::set_allocated_title(::std::string* title) {
+  if (title != NULL) {
+    
+  } else {
+    
+  }
+  title_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), title);
+  // @@protoc_insertion_point(field_set_allocated:zproto.Group.title)
+}
+
+// repeated .zproto.GroupMember members = 3;
+inline int Group::members_size() const {
+  return members_.size();
+}
+inline void Group::clear_members() {
+  members_.Clear();
+}
+inline const ::zproto::GroupMember& Group::members(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.Group.members)
+  return members_.Get(index);
+}
+inline ::zproto::GroupMember* Group::mutable_members(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.Group.members)
+  return members_.Mutable(index);
+}
+inline ::zproto::GroupMember* Group::add_members() {
+  // @@protoc_insertion_point(field_add:zproto.Group.members)
+  return members_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::zproto::GroupMember >*
+Group::mutable_members() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.Group.members)
+  return &members_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::zproto::GroupMember >&
+Group::members() const {
+  // @@protoc_insertion_point(field_list:zproto.Group.members)
+  return members_;
+}
+
+// -------------------------------------------------------------------
+
+// CreateGroupReq
+
+// optional string creator_user_id = 1;
+inline void CreateGroupReq::clear_creator_user_id() {
+  creator_user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CreateGroupReq::creator_user_id() const {
+  // @@protoc_insertion_point(field_get:zproto.CreateGroupReq.creator_user_id)
+  return creator_user_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CreateGroupReq::set_creator_user_id(const ::std::string& value) {
+  
+  creator_user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.CreateGroupReq.creator_user_id)
+}
+inline void CreateGroupReq::set_creator_user_id(const char* value) {
+  
+  creator_user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.CreateGroupReq.creator_user_id)
+}
+inline void CreateGroupReq::set_creator_user_id(const char* value, size_t size) {
+  
+  creator_user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.CreateGroupReq.creator_user_id)
+}
+inline ::std::string* CreateGroupReq::mutable_creator_user_id() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.CreateGroupReq.creator_user_id)
+  return creator_user_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CreateGroupReq::release_creator_user_id() {
+  // @@protoc_insertion_point(field_release:zproto.CreateGroupReq.creator_user_id)
+  
+  return creator_user_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CreateGroupReq::set_allocated_creator_user_id(::std::string* creator_user_id) {
+  if (creator_user_id != NULL) {
+    
+  } else {
+    
+  }
+  creator_user_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), creator_user_id);
+  // @@protoc_insertion_point(field_set_allocated:zproto.CreateGroupReq.creator_user_id)
+}
+
+// optional int64 client_group_id = 2;
+inline void CreateGroupReq::clear_client_group_id() {
+  client_group_id_ = GOOGLE_LONGLONG(0);
+}
+inline ::google::protobuf::int64 CreateGroupReq::client_group_id() const {
+  // @@protoc_insertion_point(field_get:zproto.CreateGroupReq.client_group_id)
+  return client_group_id_;
+}
+inline void CreateGroupReq::set_client_group_id(::google::protobuf::int64 value) {
+  
+  client_group_id_ = value;
+  // @@protoc_insertion_point(field_set:zproto.CreateGroupReq.client_group_id)
+}
+
+// optional string title = 3;
+inline void CreateGroupReq::clear_title() {
+  title_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CreateGroupReq::title() const {
+  // @@protoc_insertion_point(field_get:zproto.CreateGroupReq.title)
+  return title_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CreateGroupReq::set_title(const ::std::string& value) {
+  
+  title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.CreateGroupReq.title)
+}
+inline void CreateGroupReq::set_title(const char* value) {
+  
+  title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.CreateGroupReq.title)
+}
+inline void CreateGroupReq::set_title(const char* value, size_t size) {
+  
+  title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.CreateGroupReq.title)
+}
+inline ::std::string* CreateGroupReq::mutable_title() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.CreateGroupReq.title)
+  return title_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CreateGroupReq::release_title() {
+  // @@protoc_insertion_point(field_release:zproto.CreateGroupReq.title)
+  
+  return title_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CreateGroupReq::set_allocated_title(::std::string* title) {
+  if (title != NULL) {
+    
+  } else {
+    
+  }
+  title_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), title);
+  // @@protoc_insertion_point(field_set_allocated:zproto.CreateGroupReq.title)
+}
+
+// repeated string user_ids = 4;
+inline int CreateGroupReq::user_ids_size() const {
+  return user_ids_.size();
+}
+inline void CreateGroupReq::clear_user_ids() {
+  user_ids_.Clear();
+}
+inline const ::std::string& CreateGroupReq::user_ids(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.CreateGroupReq.user_ids)
+  return user_ids_.Get(index);
+}
+inline ::std::string* CreateGroupReq::mutable_user_ids(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.CreateGroupReq.user_ids)
+  return user_ids_.Mutable(index);
+}
+inline void CreateGroupReq::set_user_ids(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:zproto.CreateGroupReq.user_ids)
+  user_ids_.Mutable(index)->assign(value);
+}
+inline void CreateGroupReq::set_user_ids(int index, const char* value) {
+  user_ids_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:zproto.CreateGroupReq.user_ids)
+}
+inline void CreateGroupReq::set_user_ids(int index, const char* value, size_t size) {
+  user_ids_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:zproto.CreateGroupReq.user_ids)
+}
+inline ::std::string* CreateGroupReq::add_user_ids() {
+  // @@protoc_insertion_point(field_add_mutable:zproto.CreateGroupReq.user_ids)
+  return user_ids_.Add();
+}
+inline void CreateGroupReq::add_user_ids(const ::std::string& value) {
+  user_ids_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:zproto.CreateGroupReq.user_ids)
+}
+inline void CreateGroupReq::add_user_ids(const char* value) {
+  user_ids_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:zproto.CreateGroupReq.user_ids)
+}
+inline void CreateGroupReq::add_user_ids(const char* value, size_t size) {
+  user_ids_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:zproto.CreateGroupReq.user_ids)
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+CreateGroupReq::user_ids() const {
+  // @@protoc_insertion_point(field_list:zproto.CreateGroupReq.user_ids)
+  return user_ids_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+CreateGroupReq::mutable_user_ids() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.CreateGroupReq.user_ids)
+  return &user_ids_;
+}
+
+// -------------------------------------------------------------------
+
+// CreateGroupRsp
+
+// optional uint64 seq = 1;
+inline void CreateGroupRsp::clear_seq() {
+  seq_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 CreateGroupRsp::seq() const {
+  // @@protoc_insertion_point(field_get:zproto.CreateGroupRsp.seq)
+  return seq_;
+}
+inline void CreateGroupRsp::set_seq(::google::protobuf::uint64 value) {
+  
+  seq_ = value;
+  // @@protoc_insertion_point(field_set:zproto.CreateGroupRsp.seq)
+}
+
+// optional uint64 created = 2;
+inline void CreateGroupRsp::clear_created() {
+  created_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 CreateGroupRsp::created() const {
+  // @@protoc_insertion_point(field_get:zproto.CreateGroupRsp.created)
+  return created_;
+}
+inline void CreateGroupRsp::set_created(::google::protobuf::uint64 value) {
+  
+  created_ = value;
+  // @@protoc_insertion_point(field_set:zproto.CreateGroupRsp.created)
+}
+
+// optional .zproto.Group group = 3;
+inline bool CreateGroupRsp::has_group() const {
+  return !_is_default_instance_ && group_ != NULL;
+}
+inline void CreateGroupRsp::clear_group() {
+  if (GetArenaNoVirtual() == NULL && group_ != NULL) delete group_;
+  group_ = NULL;
+}
+inline const ::zproto::Group& CreateGroupRsp::group() const {
+  // @@protoc_insertion_point(field_get:zproto.CreateGroupRsp.group)
+  return group_ != NULL ? *group_ : *default_instance_->group_;
+}
+inline ::zproto::Group* CreateGroupRsp::mutable_group() {
+  
+  if (group_ == NULL) {
+    group_ = new ::zproto::Group;
+  }
+  // @@protoc_insertion_point(field_mutable:zproto.CreateGroupRsp.group)
+  return group_;
+}
+inline ::zproto::Group* CreateGroupRsp::release_group() {
+  // @@protoc_insertion_point(field_release:zproto.CreateGroupRsp.group)
+  
+  ::zproto::Group* temp = group_;
+  group_ = NULL;
+  return temp;
+}
+inline void CreateGroupRsp::set_allocated_group(::zproto::Group* group) {
+  delete group_;
+  group_ = group;
+  if (group) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zproto.CreateGroupRsp.group)
+}
+
+// repeated string user_ids = 4;
+inline int CreateGroupRsp::user_ids_size() const {
+  return user_ids_.size();
+}
+inline void CreateGroupRsp::clear_user_ids() {
+  user_ids_.Clear();
+}
+inline const ::std::string& CreateGroupRsp::user_ids(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.CreateGroupRsp.user_ids)
+  return user_ids_.Get(index);
+}
+inline ::std::string* CreateGroupRsp::mutable_user_ids(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.CreateGroupRsp.user_ids)
+  return user_ids_.Mutable(index);
+}
+inline void CreateGroupRsp::set_user_ids(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:zproto.CreateGroupRsp.user_ids)
+  user_ids_.Mutable(index)->assign(value);
+}
+inline void CreateGroupRsp::set_user_ids(int index, const char* value) {
+  user_ids_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:zproto.CreateGroupRsp.user_ids)
+}
+inline void CreateGroupRsp::set_user_ids(int index, const char* value, size_t size) {
+  user_ids_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:zproto.CreateGroupRsp.user_ids)
+}
+inline ::std::string* CreateGroupRsp::add_user_ids() {
+  // @@protoc_insertion_point(field_add_mutable:zproto.CreateGroupRsp.user_ids)
+  return user_ids_.Add();
+}
+inline void CreateGroupRsp::add_user_ids(const ::std::string& value) {
+  user_ids_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:zproto.CreateGroupRsp.user_ids)
+}
+inline void CreateGroupRsp::add_user_ids(const char* value) {
+  user_ids_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:zproto.CreateGroupRsp.user_ids)
+}
+inline void CreateGroupRsp::add_user_ids(const char* value, size_t size) {
+  user_ids_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:zproto.CreateGroupRsp.user_ids)
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+CreateGroupRsp::user_ids() const {
+  // @@protoc_insertion_point(field_list:zproto.CreateGroupRsp.user_ids)
+  return user_ids_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+CreateGroupRsp::mutable_user_ids() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.CreateGroupRsp.user_ids)
+  return &user_ids_;
+}
+
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
 

@@ -15,8 +15,8 @@
  * limitations under the License.
  */
 
-#ifndef BIZ_MODEL_APP_MODEL_H_
-#define BIZ_MODEL_APP_MODEL_H_
+#ifndef BIZ_MODEL_USER_MODEL_H_
+#define BIZ_MODEL_USER_MODEL_H_
 
 #include "nebula/storage/storage_util.h"
 #include "biz_model/base_biz_model_data.h"

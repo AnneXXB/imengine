@@ -18,6 +18,8 @@
 #include "messenger/rpc_messenger_service.h"
 
 #include "nebula/base/time_util.h"
+#include "nebula/base/id_util.h"
+
 #include "proto/api_message_box.h"
 
 #include "biz_model/user_model.h"
@@ -25,7 +27,7 @@
 #include "biz_model/user_message_model.h"
 #include "biz_model/sequence_model.h"
 #include "biz_model/user_dialog_model.h"
-
+#include "biz_model/group_model.h"
 
 // #include "biz_model/model_main_manager.h"
 
@@ -291,5 +293,78 @@ ProtoRpcResponsePtr DoLoadDialogs(RpcRequestPtr request) {
     peer->set_id(d->peer_id);
     peer->set_type(d->peer_type);
   }
+  return response;
+}
+
+ProtoRpcResponsePtr DoCreateGroup(RpcRequestPtr request) {
+  auto create_group_req = ToApiRpcRequest<zproto::CreateGroupReq>(request);
+  LOG(INFO) << "DoCreateGroup - create_group_req: " << create_group_req->ToString();
+  
+  if (!CheckGroupDuplication((*create_group_req)->creator_user_id(), (*create_group_req)->client_group_id())) {
+    // TODO(@benqi):
+  }
+  
+  GroupEntity group_entity;
+  GroupMemberEntityList group_member_list;
+  auto now = NowInMsecTime();
+  
+  group_entity.group_id = folly::to<std::string>(GetNextIDBySnowflake());
+  group_entity.app_id = 1;
+  group_entity.creator_user_id = (*create_group_req)->creator_user_id();
+  group_entity.client_group_id = (*create_group_req)->client_group_id();
+  group_entity.title = (*create_group_req)->title();
+  group_entity.status = 1;
+  group_entity.created_at = now;
+  group_entity.updated_at = now;
+
+  for (int i=0; i<(*create_group_req)->user_ids_size(); ++i) {
+    auto group_memeber = std::make_shared<GroupMemberEntity>();
+    group_memeber->group_id = group_entity.group_id;
+    group_memeber->user_id = (*create_group_req)->user_ids(i);
+    group_memeber->inviter_user_id = group_entity.creator_user_id;
+    if (group_memeber->user_id == group_memeber->inviter_user_id) {
+      group_memeber->is_admin = 1;
+    } else {
+      group_memeber->is_admin = 0;
+    }
+    group_memeber->status = 1;
+
+    group_memeber->joined_at = now;
+    group_memeber->created_at = now;
+    group_memeber->updated_at = now;
+    
+    group_member_list.push_back(group_memeber);
+  }
+  
+  CreateGroup create_group(group_entity);
+  auto iid = SqlExecuteInsertID("nebula_engine", create_group);
+  if (iid<0) {
+    // TODO(@benqi):
+  }
+  
+  CreateGroupUsers create_group_users(group_member_list);
+  iid = SqlExecute("nebula_engine", create_group_users);
+  if (iid<0) {
+    // TODO(@benqi):
+  }
+  
+  auto response = std::make_shared<ApiRpcOk<zproto::CreateGroupRsp>>();
+  response->set_session_id(request->session_id());
+  response->set_req_message_id(request->message_id());
+
+  (*response)->set_seq(GetNextIDBySnowflake());
+  (*response)->set_created(now);
+  auto group = (*response)->mutable_group();
+  group->set_group_id(group_entity.group_id);
+  group->set_title(group_entity.title);
+  for (auto m : group_member_list) {
+    auto member = group->add_members();
+    member->set_user_id(m->user_id);
+    member->set_inviter_uid(m->inviter_user_id);
+    member->set_date(m->created_at);
+    member->set_is_admin(m->is_admin == 1);
+  }
+  
+  (*response)->mutable_user_ids()->CopyFrom((*create_group_req)->user_ids());
   return response;
 }

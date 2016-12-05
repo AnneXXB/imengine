@@ -32,6 +32,8 @@ set (SRC_LIST
   user_dialog_model.h
   online_status_model.cc
   online_status_model.h
+  group_model.cc
+  group_model.h
  )
 
 add_library(biz_model STATIC ${SRC_LIST})

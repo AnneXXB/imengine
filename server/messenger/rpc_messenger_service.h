@@ -25,5 +25,6 @@ ProtoRpcResponsePtr DoMessageSync(RpcRequestPtr request);
 ProtoRpcResponsePtr DoLoadHistoryMessage(RpcRequestPtr request);
 ProtoRpcResponsePtr DoLoadDialogs(RpcRequestPtr request);
 
+ProtoRpcResponsePtr DoCreateGroup(RpcRequestPtr request);
 
 #endif // MESSENGER_RPC_MESSENGER_RPC_SERVICE_H_

@@ -24,6 +24,7 @@
 
 #include "proto/zproto/cc/auths.pb.h"
 #include "proto/zproto/cc/servers.pb.h"
+#include "proto/zproto/cc/groups.pb.h"
 #include "proto/zproto/cc/messages.pb.h"
 
 // TODO(@benqi): 使用脚本自动生成
@@ -157,6 +158,16 @@ inline uint32_t GetMessageType<zproto::LoadDialogsRsp>() {
 template<>
 inline uint32_t GetMessageType<zproto::ForwardMessageReq>() {
   return zproto::FORAWRD_MESSAGE_REQ;
+}
+
+template<>
+inline uint32_t GetMessageType<zproto::CreateGroupReq>() {
+  return zproto::CREATE_GROUP_REQ;
+}
+
+template<>
+inline uint32_t GetMessageType<zproto::CreateGroupRsp>() {
+  return zproto::CREATE_GROUP_RSP;
 }
 
 }

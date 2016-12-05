@@ -32,6 +32,8 @@ bool MessengerServer::Initialize() {
   ZRpcUtil::Register(zproto::LOAD_HISTORY_MESSAGE_REQ, DoLoadHistoryMessage);
   ZRpcUtil::Register(zproto::LOAD_DIALOGS_REQ, DoLoadDialogs);
 
+  ZRpcUtil::Register(zproto::CREATE_GROUP_REQ, DoCreateGroup);
+
   BaseServer::Initialize();
   
 #if 0

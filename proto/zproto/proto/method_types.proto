@@ -60,4 +60,7 @@ enum MethodID {
   LOAD_DIALOGS_RSP = 0xff13;
   
   FORAWRD_MESSAGE_REQ = 0xff14;
+  
+  CREATE_GROUP_REQ = 0xff20;
+  CREATE_GROUP_RSP = 0xff21;
 }
