@@ -25,5 +25,5 @@ set (SRC_LIST
   )
 
 add_executable (gate_server ${SRC_LIST})
-target_link_libraries (gate_server nebula-net nebula-base proto)
+target_link_libraries (gate_server net base proto)
 

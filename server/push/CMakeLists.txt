@@ -28,5 +28,5 @@ set (SRC_LIST
   )
 
 add_executable (push_server ${SRC_LIST})
-target_link_libraries (push_server biz_model nebula-net nebula-base proto)
+target_link_libraries (push_server biz_model net base proto)
 

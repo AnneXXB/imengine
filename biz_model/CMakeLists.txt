@@ -37,5 +37,5 @@ set (SRC_LIST
  )
 
 add_library(biz_model STATIC ${SRC_LIST})
-target_link_libraries(biz_model nebula-storage)
+target_link_libraries(biz_model storage)
 

@@ -73,7 +73,7 @@ bool CreateGroup::SerializeToQuery(std::string& query_string) const {
 }
 
 bool CreateGroupUsers::SerializeToQuery(std::string& query_string) const {
-  StringBuilder<char> sb("INSERT INTO group_users "
+  StringBuilder sb("INSERT INTO group_users "
                          "(group_id,user_id,is_admin,status,invited_at,inviter_user_id,joined_at,created_at,updated_at) "
                          " VALUES ");
   bool first = true;

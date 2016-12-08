@@ -28,7 +28,7 @@ set (SRC_LIST
   )
 
 add_executable (online_status_server ${SRC_LIST})
-target_link_libraries (online_status_server nebula-net nebula-base proto)
+target_link_libraries (online_status_server net base proto)
 
 #add_subdirectory(test)
 

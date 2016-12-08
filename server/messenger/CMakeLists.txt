@@ -24,5 +24,5 @@ set (SRC_LIST
   )
 
 add_executable (messenger_server ${SRC_LIST})
-target_link_libraries (messenger_server biz_model nebula-net nebula-base proto)
+target_link_libraries (messenger_server biz_model net base proto)
 
