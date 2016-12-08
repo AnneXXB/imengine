@@ -126,7 +126,8 @@ struct UserEntity {
   std::string avatar;
   std::string nick;
   int status;
-  // uint32_t updated_at;
+  uint32_t created_at;
+  uint32_t updated_at;
 };
 
 /////////////////////////////////////////////////////////////////////////////

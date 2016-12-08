@@ -18,9 +18,11 @@ cmake_minimum_required(VERSION 2.8)
 
 project(imengine C CXX)
 
-add_compile_options(-std=c++1y)
+#add_compile_options(-std=c++1y)
 add_compile_options(-fPIC)
 add_compile_options(-DFOLLY_HAVE_CLOCK_GETTIME=1)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -std=c++1y")
 
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/)
 
@@ -71,4 +73,4 @@ add_subdirectory(nebula/nebula)
 add_subdirectory(proto)
 add_subdirectory(server)
 add_subdirectory(biz_model)
-add_subdirectory(client/client)
+#add_subdirectory(client/client)

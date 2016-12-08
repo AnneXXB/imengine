@@ -20,7 +20,9 @@
 
 #include <folly/io/async/EventBase.h>
 
-#include "nebula/net/handler/zproto/zproto_event_callback.h"
+#include "nebula/net/base/nebula_pipeline.h"
+#include "nebula/net/engine/tcp_service_base.h"
+#include "nebula/net/zproto/zproto_package_data.h"
 
 namespace client_handler {
   
