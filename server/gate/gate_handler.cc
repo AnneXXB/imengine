@@ -24,7 +24,7 @@
 #include "nebula/net/rpc/zrpc_service_util.h"
 #include "nebula/net/handler/nebula_handler_util.h"
 
-#include "proto/api_message_box.h"
+#include "proto/zproto/zproto_api_message_types.h"
 
 #include "gate/gate_server_util.h"
 // folly::future
@@ -58,7 +58,7 @@ int gate::OnNewConnection(nebula::TcpServiceBase* service, nebula::ZProtoPipelin
 }
 
 int gate::OnDataReceived(nebula::ZProtoPipeline* pipeline, std::shared_ptr<PackageMessage> message_data) {
-  LOG(INFO) << "OnDataReceived - recv data";
+  LOG(INFO) << "OnDataReceived - recv data" << message_data->ToString();
   // 拦截zproto::LoginOkPush
   //
   
@@ -91,9 +91,9 @@ int gate::OnDataReceived(nebula::ZProtoPipeline* pipeline, std::shared_ptr<Packa
         conn_data->state = ClientConnContext::State::WORKING;
         
         auto encoded = std::static_pointer_cast<EncodedRpcRequest>(message_data);
-        if (encoded->GetMethodID() != zproto::USER_TOKEN_AUTH_REQ) {
-          // TODO(@benqi): LOG(ERROR) << "";
-          
+        LOG(ERROR) << "zproto.UserTokenAuthReq => " << CRC32("zproto.UserTokenAuthReq");
+        if (encoded->GetMethodID() != CRC32("zproto.UserTokenAuthReq")) {
+          LOG(ERROR) << "recv a invalid method_id: " << encoded->GetMethodID();
           return 0;
         }
         
@@ -123,6 +123,7 @@ int gate::OnDataReceived(nebula::ZProtoPipeline* pipeline, std::shared_ptr<Packa
             (*req)->set_user_id((*login_rsp)->user_id());
             //folly::to<uint32_t>((*login_rsp)->user_id()));
             (*req)->set_state(1);
+
             ZRpcUtil::DoClientCall("online_status_client", req)
             .within(std::chrono::milliseconds(5000))
             .then([](ProtoRpcResponsePtr rsp2) {

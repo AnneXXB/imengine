@@ -19,7 +19,6 @@
 
 // #include "nebula/base/timer_manager.h"
 #include "auth/rpc_auth_service.h"
-#include "proto/zproto/cc/method_types.pb.h"
 
 bool AuthServer::Initialize() {
   // 初始化处理器
@@ -29,7 +28,7 @@ bool AuthServer::Initialize() {
 
   RegisterService("auth_server", "rpc_server", "zrpc");
  
-  ZRpcUtil::Register(zproto::USER_TOKEN_AUTH_REQ, DoUserTokenAuthReq);
+  ZRpcUtil::Register("zproto.UserTokenAuthReq", DoUserTokenAuthReq);
 
   // RegisterService("biz_server", "rpc_server", "zrpc");
 

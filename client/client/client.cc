@@ -17,7 +17,8 @@
 
 #include "client/client.h"
 
-#include "proto/api_message_box.h"
+#include "proto/zproto/zproto_api_message_types.h"
+
 #include "nebula/net/rpc/zrpc_service_util.h"
 #include "nebula/net/net_engine_manager.h"
 #include "nebula/base/readline_gets.h"

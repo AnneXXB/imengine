@@ -17,8 +17,8 @@
 
 #include "push/push_server.h"
 
-#include "proto/api_message_box.h"
-#include "proto/zproto/cc/method_types.pb.h"
+#include "proto/zproto/zproto_api_message_types.h"
+//include "proto/zproto/cc/method_types.pb.h"
 
 #include "push/zrpc_push_service.h"
 #include "push/gate_channel_handler.h"
@@ -33,7 +33,7 @@ bool PushServer::Initialize() {
   RegisterService("online_status_client", "rpc_client", "zrpc");
   
   // 初始化处理器
-  ZRpcUtil::Register(zproto::FORAWRD_MESSAGE_REQ, DoForwardMessage);
+  ZRpcUtil::Register("zproto.ForwardMessageReq", DoForwardMessage);
   
   // 连接router，使用zproto协议
   ZProtoEventCallback::Initializer(push::OnNewConnection,

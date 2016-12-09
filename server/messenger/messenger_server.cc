@@ -18,7 +18,7 @@
 #include "messenger/messenger_server.h"
 
 #include "nebula/base/timer_manager.h"
-#include "proto/zproto/cc/method_types.pb.h"
+// #include "proto/zproto/cc/method_types.pb.h"
 
 #include "messenger/rpc_messenger_service.h"
 
@@ -27,12 +27,12 @@ bool MessengerServer::Initialize() {
   RegisterService("messenger_server", "rpc_server", "zrpc");
   RegisterService("push_client", "rpc_client", "zrpc");
 
-  ZRpcUtil::Register(zproto::SEND_MESSAGE_REQ, DoSendMessage);
-  ZRpcUtil::Register(zproto::MESSAGE_SYNC_REQ, DoMessageSync);
-  ZRpcUtil::Register(zproto::LOAD_HISTORY_MESSAGE_REQ, DoLoadHistoryMessage);
-  ZRpcUtil::Register(zproto::LOAD_DIALOGS_REQ, DoLoadDialogs);
+  ZRpcUtil::Register("zproto.SendMessageReq", DoSendMessage);
+  ZRpcUtil::Register("zproto.MessageSyncReq", DoMessageSync);
+  ZRpcUtil::Register("zproto.LoadHistoryMessageReq", DoLoadHistoryMessage);
+  ZRpcUtil::Register("zproto.LoadDialogsReq", DoLoadDialogs);
 
-  ZRpcUtil::Register(zproto::CREATE_GROUP_REQ, DoCreateGroup);
+  ZRpcUtil::Register("zproto.CreateGroupReq", DoCreateGroup);
 
   BaseServer::Initialize();
   

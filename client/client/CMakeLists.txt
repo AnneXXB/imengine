@@ -28,5 +28,5 @@ set (SRC_LIST
   )
 
 add_executable (client ${SRC_LIST})
-target_link_libraries (client nebula-net nebula-base proto readline)
+target_link_libraries (client net base proto readline)
 

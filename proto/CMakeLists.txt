@@ -15,10 +15,7 @@
 #
 
 set (PROTO_SRC_LIST
-base_message_types_util.h
-api_message_box.h
-
-zproto/zproto_message_types_util.h
+zproto/zproto_api_message_types.h
 
 zproto/cc/auths.pb.cc
 zproto/cc/auths.pb.h
@@ -30,8 +27,6 @@ zproto/cc/groups.pb.cc
 zproto/cc/groups.pb.h
 zproto/cc/messages.pb.cc
 zproto/cc/messages.pb.h
-zproto/cc/method_types.pb.cc
-zproto/cc/method_types.pb.h
 zproto/cc/servers.pb.cc
 zproto/cc/servers.pb.h
 zproto/cc/biz_servers.pb.cc
@@ -42,7 +37,6 @@ zproto/proto/bases.proto
 zproto/proto/files.proto
 zproto/proto/groups.proto
 zproto/proto/messages.proto
-zproto/proto/method_types.proto
 zproto/proto/servers.proto
 zproto/proto/biz_servers.proto
 )

@@ -18,7 +18,9 @@
 #include "biz_model/online_status_model.h"
 
 #include "nebula/net/rpc/zrpc_service_util.h"
-#include "proto/api_message_box.h"
+
+#include "proto/zproto/cc/servers.pb.h"
+#include "proto/zproto/zproto_api_message_types.h"
 
 bool GetUsersOnlineStatus(uint32_t app_id,
                           const std::list<std::string>& user_id_list,

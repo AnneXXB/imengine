@@ -23,7 +23,7 @@
 #include "nebula/net/rpc/zrpc_service_util.h"
 #include "nebula/net/handler/nebula_handler_util.h"
 
-#include "proto/api_message_box.h"
+#include "proto/zproto/zproto_api_message_types.h"
 #include "push/gate_channel_manager.h"
 
 // folly::future
@@ -42,7 +42,7 @@ int push::OnDataReceived(nebula::ZProtoPipeline* pipeline, std::shared_ptr<Packa
   // gate_channel_server
 
   auto encoded = std::static_pointer_cast<EncodedRpcRequest>(message_data);
-  if (encoded->GetMethodID() != zproto::SERVER_AUTH_REQ) {
+  if (encoded->GetMethodID() != CRC32("zproto::ServerAuthReq")) {
     // TODO(@benqi): LOG(ERROR) << "";
     
     return 0;

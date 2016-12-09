@@ -20,7 +20,7 @@
 #include "nebula/base/time_util.h"
 #include "nebula/base/id_util.h"
 
-#include "proto/api_message_box.h"
+#include "proto/zproto/zproto_api_message_types.h"
 
 #include "biz_model/user_model.h"
 #include "biz_model/history_message_model.h"
@@ -34,14 +34,15 @@
 // #include "biz_model/login_manager.h"
 
 ProtoRpcResponsePtr DoSendMessage(RpcRequestPtr request) {
-  auto send_message_req = ToApiRpcRequest<zproto::SendMessageReq>(request);
+  CAST_RPC_REQUEST(SendMessageReq, send_message_req);
+
   // 检查send_message_req
   // TODO(@benqi): 回滚
-  const auto& message_data = (*send_message_req)->message_data();
-  CheckMessageDuplication check_duplication((*send_message_req)->message_data().sender_user_id(),
-         (*send_message_req)->message_data().peer().id(),
-         (*send_message_req)->message_data().peer().type(),
-         (*send_message_req)->message_data().client_message_id());
+  const auto& message_data = send_message_req.message_data();
+  CheckMessageDuplication check_duplication(send_message_req.message_data().sender_user_id(),
+         send_message_req.message_data().peer().id(),
+         send_message_req.message_data().peer().type(),
+         send_message_req.message_data().client_message_id());
   
   if (0 != SqlQuery("nebula_engine", check_duplication)) {
     // TODO(@benqi): 出错
@@ -153,11 +154,11 @@ ProtoRpcResponsePtr DoSendMessage(RpcRequestPtr request) {
     // TODO(@benqi): 未读计数
     
     // 转发消息
-    auto forward = std::make_shared<ApiRpcRequest<zproto::ForwardMessageReq>>();
-    (*forward)->mutable_message_data()->CopyFrom(message_data);
-    (*forward)->add_not_send_conn_ids(request->session_id());
+    zproto::ForwardMessageReq forward;
+    forward.mutable_message_data()->CopyFrom(message_data);
+    forward.add_not_send_conn_ids(request->session_id());
     
-    ZRpcUtil::DoClientCall("push_client", forward)
+    ZRpcUtil::DoClientCall("push_client", MakeRpcRequest(forward))
     .within(std::chrono::milliseconds(5000))
     .then([](ProtoRpcResponsePtr rsp2) {
       CHECK(rsp2);
@@ -170,21 +171,19 @@ ProtoRpcResponsePtr DoSendMessage(RpcRequestPtr request) {
     // TODO(@benqi): 麻烦
   }
   
-  auto response = std::make_shared<ApiRpcOk<zproto::SeqDateRsp>>();
-  response->set_session_id(request->session_id());
-  response->set_req_message_id(request->message_id());
-
-  (*response)->set_seq(sender_message_seq);
-  (*response)->set_created(created_at);
-  return response;
+  zproto::SeqDateRsp seq_date_rsp;
+  
+  seq_date_rsp.set_seq(sender_message_seq);
+  seq_date_rsp.set_created(created_at);
+  return MakeRpcOK(seq_date_rsp);
 }
 
 ProtoRpcResponsePtr DoMessageSync(RpcRequestPtr request) {
-  auto message_sync_req = ToApiRpcRequest<zproto::MessageSyncReq>(request);
-  LOG(INFO) << "DoMessageSync - message_sync_req: " << message_sync_req->ToString();
+  CAST_RPC_REQUEST(MessageSyncReq, message_sync_req);
+  LOG(INFO) << "DoMessageSync - message_sync_req: " << message_sync_req.Utf8DebugString();
   
   std::string user_id = "benqi@zhazha";
-  uint64_t received_max_seq = (*message_sync_req)->received_max_seq();
+  uint64_t received_max_seq = message_sync_req.received_max_seq();
   
   MessageEntityList message_list;
   LoadUserMessageList load_message_list(user_id, received_max_seq, message_list);
@@ -205,12 +204,13 @@ ProtoRpcResponsePtr DoMessageSync(RpcRequestPtr request) {
     // TODO(@benqi): 出错
   }
   
-  auto response = std::make_shared<ApiRpcOk<zproto::MessageSyncRsp>>();
-  response->set_session_id(request->session_id());
-  response->set_req_message_id(request->message_id());
+  zproto::MessageSyncRsp message_sync_rsp;
+  // auto response = std::make_shared<ApiRpcOk<zproto::MessageSyncRsp>>();
+  // response->set_session_id(request->session_id());
+  // response->set_req_message_id(request->message_id());
   
   for (auto& v : message_list) {
-    auto message_data = (*response)->add_message_data();
+    auto message_data = message_sync_rsp.add_message_data();
     message_data->set_message_id(v->id);
     message_data->set_sender_user_id(v->sender_user_id);
     message_data->mutable_peer()->set_id(v->peer_id);
@@ -218,21 +218,21 @@ ProtoRpcResponsePtr DoMessageSync(RpcRequestPtr request) {
     message_data->set_client_message_id(v->client_message_id);
   }
   
-  LOG(INFO) << "DoMessageSync - rsp: " << (*response)->Utf8DebugString();
-  return response;
+  LOG(INFO) << "DoMessageSync - rsp: " << message_sync_rsp.Utf8DebugString();
+  return MakeRpcOK(message_sync_rsp);
 }
 
 ProtoRpcResponsePtr DoLoadHistoryMessage(RpcRequestPtr request) {
-  auto load_history_message_req = ToApiRpcRequest<zproto::LoadHistoryMessageReq>(request);
-  LOG(INFO) << "DoLoadHistoryMessage - load_history_message_req: " << load_history_message_req->ToString();
+  CAST_RPC_REQUEST(LoadHistoryMessageReq, load_history_message_req);
+  LOG(INFO) << "DoLoadHistoryMessage - load_history_message_req: " << load_history_message_req.Utf8DebugString();
   
   std::string user_id = "benqi@zhazha";
   // uint64_t received_max_seq = (*message_sync_req)->received_max_seq();
   
   MessageEntityList message_list;
   LoadUserDialogMessageList load_message_list(user_id,
-                                              (*load_history_message_req)->peer().id(),
-                                              (*load_history_message_req)->peer().type(),
+                                              load_history_message_req.peer().id(),
+                                              load_history_message_req.peer().type(),
                                               message_list);
   if (0 != SqlQuery("nebula_engine", load_message_list)) {
     // LOG(ERROR) << "";
@@ -251,12 +251,10 @@ ProtoRpcResponsePtr DoLoadHistoryMessage(RpcRequestPtr request) {
     // TODO(@benqi): 出错
   }
   
-  auto response = std::make_shared<ApiRpcOk<zproto::LoadHistoryMessageRsp>>();
-  response->set_session_id(request->session_id());
-  response->set_req_message_id(request->message_id());
+  zproto::LoadHistoryMessageRsp load_history_message_rsp;
   
   for (auto& v : message_list) {
-    auto message_data = (*response)->add_history();
+    auto message_data = load_history_message_rsp.add_history();
     message_data->set_message_id(v->id);
     message_data->set_sender_user_id(v->sender_user_id);
     message_data->mutable_peer()->set_id(v->peer_id);
@@ -264,21 +262,21 @@ ProtoRpcResponsePtr DoLoadHistoryMessage(RpcRequestPtr request) {
     message_data->set_client_message_id(v->client_message_id);
   }
   
-  LOG(INFO) << "DoLoadHistoryMessage - rsp: " << (*response)->Utf8DebugString();
-  return response;
+  LOG(INFO) << "DoLoadHistoryMessage - rsp: " << load_history_message_rsp.Utf8DebugString();
+  return MakeRpcOK(load_history_message_rsp);
 }
 
 ProtoRpcResponsePtr DoLoadDialogs(RpcRequestPtr request) {
-  auto load_dialogs_req = ToApiRpcRequest<zproto::LoadDialogsReq>(request);
-  LOG(INFO) << "DoLoadDialogs - load_dialogs_req: " << load_dialogs_req->ToString();
+  CAST_RPC_REQUEST(LoadDialogsReq, load_dialogs_req);
+  LOG(INFO) << "DoLoadDialogs - load_dialogs_req: " << load_dialogs_req.Utf8DebugString();
 
   std::string user_id = "benqi@zhazha";
 
   UserDialogEntityList dialog_list;
   LoadUserDialogList load_dialog_list(user_id,
-                                      (*load_dialogs_req)->date(),
-                                      (*load_dialogs_req)->load_mode(),
-                                      (*load_dialogs_req)->limit(),
+                                      load_dialogs_req.date(),
+                                      load_dialogs_req.load_mode(),
+                                      load_dialogs_req.limit(),
                                       dialog_list);
   
   if (0 != SqlQuery("nebula_engine", load_dialog_list)) {
@@ -286,21 +284,22 @@ ProtoRpcResponsePtr DoLoadDialogs(RpcRequestPtr request) {
     // TODO(@benqi): 出错
   }
 
-  auto response = std::make_shared<ApiRpcOk<zproto::LoadDialogsRsp>>();
+  zproto::LoadDialogsRsp load_dialogs_rsp;
 
   for (auto & d : dialog_list) {
-    auto peer = (*response)->add_dialogs()->mutable_peer();
+    auto peer = load_dialogs_rsp.add_dialogs()->mutable_peer();
     peer->set_id(d->peer_id);
     peer->set_type(d->peer_type);
   }
-  return response;
+  return MakeRpcOK(load_dialogs_rsp);
 }
 
 ProtoRpcResponsePtr DoCreateGroup(RpcRequestPtr request) {
-  auto create_group_req = ToApiRpcRequest<zproto::CreateGroupReq>(request);
-  LOG(INFO) << "DoCreateGroup - create_group_req: " << create_group_req->ToString();
+  CAST_RPC_REQUEST(CreateGroupReq, create_group_req);
+  LOG(INFO) << "DoCreateGroup - create_group_req: " << create_group_req.Utf8DebugString();
   
-  if (!CheckGroupDuplication((*create_group_req)->creator_user_id(), (*create_group_req)->client_group_id())) {
+  if (!CheckGroupDuplication(create_group_req.creator_user_id(),
+                             create_group_req.client_group_id())) {
     // TODO(@benqi):
   }
   
@@ -310,17 +309,17 @@ ProtoRpcResponsePtr DoCreateGroup(RpcRequestPtr request) {
   
   group_entity.group_id = folly::to<std::string>(GetNextIDBySnowflake());
   group_entity.app_id = 1;
-  group_entity.creator_user_id = (*create_group_req)->creator_user_id();
-  group_entity.client_group_id = (*create_group_req)->client_group_id();
-  group_entity.title = (*create_group_req)->title();
+  group_entity.creator_user_id = create_group_req.creator_user_id();
+  group_entity.client_group_id = create_group_req.client_group_id();
+  group_entity.title = create_group_req.title();
   group_entity.status = 1;
   group_entity.created_at = now;
   group_entity.updated_at = now;
 
-  for (int i=0; i<(*create_group_req)->user_ids_size(); ++i) {
+  for (int i=0; i<create_group_req.user_ids_size(); ++i) {
     auto group_memeber = std::make_shared<GroupMemberEntity>();
     group_memeber->group_id = group_entity.group_id;
-    group_memeber->user_id = (*create_group_req)->user_ids(i);
+    group_memeber->user_id = create_group_req.user_ids(i);
     group_memeber->inviter_user_id = group_entity.creator_user_id;
     if (group_memeber->user_id == group_memeber->inviter_user_id) {
       group_memeber->is_admin = 1;
@@ -348,13 +347,11 @@ ProtoRpcResponsePtr DoCreateGroup(RpcRequestPtr request) {
     // TODO(@benqi):
   }
   
-  auto response = std::make_shared<ApiRpcOk<zproto::CreateGroupRsp>>();
-  response->set_session_id(request->session_id());
-  response->set_req_message_id(request->message_id());
+  zproto::CreateGroupRsp create_group_rsp;
 
-  (*response)->set_seq(GetNextIDBySnowflake());
-  (*response)->set_created(now);
-  auto group = (*response)->mutable_group();
+  create_group_rsp.set_seq(GetNextIDBySnowflake());
+  create_group_rsp.set_created(now);
+  auto group = create_group_rsp.mutable_group();
   group->set_group_id(group_entity.group_id);
   group->set_title(group_entity.title);
   for (auto m : group_member_list) {
@@ -365,6 +362,6 @@ ProtoRpcResponsePtr DoCreateGroup(RpcRequestPtr request) {
     member->set_is_admin(m->is_admin == 1);
   }
   
-  (*response)->mutable_user_ids()->CopyFrom((*create_group_req)->user_ids());
-  return response;
+  create_group_rsp.mutable_user_ids()->CopyFrom(create_group_req.user_ids());
+  return MakeRpcOK(create_group_rsp);
 }

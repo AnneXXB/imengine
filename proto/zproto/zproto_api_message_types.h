@@ -15,15 +15,14 @@
  * limitations under the License.
  */
 
-#ifndef	ONLINE_RPC_ONLINE_SERVICE_H_
-#define	ONLINE_RPC_ONLINE_SERVICE_H_
+#ifndef	PROTO_ZPROTO_API_MESSAGE_TYPES_H_
+#define	PROTO_ZPROTO_API_MESSAGE_TYPES_H_
 
-#include "nebula/net/rpc/zrpc_service_util.h"
+#include "proto/zproto/cc/auths.pb.h"
+#include "proto/zproto/cc/servers.pb.h"
+#include "proto/zproto/cc/groups.pb.h"
+#include "proto/zproto/cc/messages.pb.h"
 
-ProtoRpcResponsePtr DoClientOnlineReq(RpcRequestPtr request);
-ProtoRpcResponsePtr DoClientOfflineReq(RpcRequestPtr request);
-ProtoRpcResponsePtr DoQueryOnlineUserReq(RpcRequestPtr request);
+#include "nebula/net/zproto/api_message_box.h"
 
-
-#endif // ONLINE_RPC_ONLINE_SERVICE_H_
-
+#endif

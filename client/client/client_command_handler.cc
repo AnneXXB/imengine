@@ -20,7 +20,7 @@
 #include "nebula/base/time_util.h"
 #include "nebula/base/id_util.h"
 
-#include "proto/api_message_box.h"
+#include "proto/zproto/zproto_api_message_types.h"
 #include "nebula/net/rpc/zrpc_service_util.h"
 
 typedef int (*ClientCommandHandlerFunc)(const std::vector<folly::StringPiece>&);
@@ -34,15 +34,17 @@ struct CmdEntry {
   ClientCommandHandlerFunc handler;   // 命令处理函数
 };
 
-
 int DoConnect(const std::vector<folly::StringPiece>& command_lines) {
   auto req = std::make_shared<ApiRpcRequest<zproto::UserTokenAuthReq>>();
+  
   (*req)->set_app_key("nebula-im(zhazha)");
   (*req)->set_user_id("benqi@zhazha");
   (*req)->set_user_token("benqi@zhazha.nebula.im");
   //(*req)->set_online_status(teamtalk::USER_STATUS_ONLINE);
   //(*req)->set_client_type(teamtalk::CLIENT_TYPE_MAC);
-  
+
+  LOG(INFO) << "DoConnect : " << req->ToString();
+
   ZRpcUtil::DoClientCall("gate_client", req)
   .within(std::chrono::milliseconds(5000))
 //  .onTimeout(std::chrono::milliseconds(5000), []() {

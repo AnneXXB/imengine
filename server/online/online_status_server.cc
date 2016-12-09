@@ -19,16 +19,16 @@
 
 // #include "nebula/base/timer_manager.h"
 
-#include "proto/api_message_box.h"
+#include "proto/zproto/zproto_api_message_types.h"
 #include "online/rpc_online_service.h"
 
 bool OnlineStatusServer::Initialize() {
   RegisterService("online_status_server", "rpc_server", "zrpc");
   RegisterService("status_http_server", "http_server", "http");
 
-  ZRpcUtil::Register(zproto::CLIENT_ONLINE_REQ, DoClientOnline);
-  ZRpcUtil::Register(zproto::CLIENT_OFFLINE_REQ, DoClientOffline);
-  ZRpcUtil::Register(zproto::QUERY_ONINE_USER_REQ, DoQueryOnlineUser);
+  ZRpcUtil::Register("zproto.ClientOnlineReq", DoClientOnlineReq);
+  ZRpcUtil::Register("zproto.ClientOfflineReq", DoClientOfflineReq);
+  ZRpcUtil::Register("zproto.QueryOnlineReq", DoQueryOnlineUserReq);
   
   BaseServer::Initialize();
   

@@ -17,71 +17,67 @@
 
 #include "online/rpc_online_service.h"
 
-#include "proto/api_message_box.h"
+#include "proto/zproto/zproto_api_message_types.h"
 
 #include "online/online_session_manager.h"
 
-ProtoRpcResponsePtr DoClientOnline(RpcRequestPtr request) {
-  auto req = ToApiRpcRequest<zproto::ClientOnlineReq>(request);
-  LOG(INFO) << (*req)->Utf8DebugString();
+ProtoRpcResponsePtr DoClientOnlineReq(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(ClientOnlineReq, client_online_req);
+  LOG(INFO) << client_online_req.Utf8DebugString();
 
   auto online_manager = OnlineSessionManager::GetInstance();
-  online_manager->AddEntry(static_cast<uint16_t>((*req)->server_id()),
-                           (*req)->conn_id(),
-                           (*req)->app_id(),
-                           (*req)->user_id(),
-                           static_cast<uint16_t>((*req)->state()));
+  online_manager->AddEntry(static_cast<uint16_t>(client_online_req.server_id()),
+                           client_online_req.conn_id(),
+                           client_online_req.app_id(),
+                           client_online_req.user_id(),
+                           static_cast<uint16_t>(client_online_req.state()));
   
-  auto rsp = std::make_shared<ApiRpcOk<zproto::ClientOnlineRsp>>();
-  rsp->set_req_message_id(request->message_id());
-  (*rsp)->set_index_id(1234);
+  zproto::ClientOnlineRsp client_online_rsp;
+  client_online_rsp.set_index_id(1234);
   
-  return rsp;
+  return MakeRpcOK(client_online_rsp);
 }
 
-ProtoRpcResponsePtr DoClientOffline(RpcRequestPtr request) {
-  auto req = ToApiRpcRequest<zproto::ClientOfflineReq>(request);
-  LOG(INFO) << (*req)->Utf8DebugString();
+ProtoRpcResponsePtr DoClientOfflineReq(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(ClientOfflineReq, client_offline_req);
+  LOG(INFO) << client_offline_req.Utf8DebugString();
  
   auto online_manager = OnlineSessionManager::GetInstance();
-  online_manager->RemoveEntryBySessionID(static_cast<uint16_t>((*req)->server_id()),
-                                         (*req)->conn_id());
+  online_manager->RemoveEntryBySessionID(static_cast<uint16_t>(client_offline_req.server_id()),
+                                         client_offline_req.conn_id());
   
-  auto rsp = std::make_shared<ApiRpcOk<zproto::ClientOfflineRsp>>();
-  rsp->set_req_message_id(request->message_id());
-  (*rsp)->set_index_id(1234);
+  zproto::ClientOfflineRsp client_offline_rsp;
+  client_offline_rsp.set_index_id(1234);
 
-  return rsp;
+  return MakeRpcOK(client_offline_rsp);
 }
 
-ProtoRpcResponsePtr DoQueryOnlineUser(RpcRequestPtr request) {
-  auto req = ToApiRpcRequest<zproto::QueryOnlineUserReq>(request);
-  LOG(INFO) << (*req)->Utf8DebugString();
-  
+ProtoRpcResponsePtr DoQueryOnlineUserReq(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(QueryOnlineUserReq, query_online_user_req);
+  LOG(INFO) << query_online_user_req.Utf8DebugString();
+
   auto online_manager = OnlineSessionManager::GetInstance();
   
   std::list<std::string> app_user_id_list;
   SessionEntryList sessions;
   
-  for (int i=0; i<(*req)->user_id_list_size(); ++i) {
-    std::string app_user_id = (*req)->user_id_list(i).user_id() + "@" + folly::to<std::string>((*req)->user_id_list(i).app_id());
+  for (int i=0; i<query_online_user_req.user_id_list_size(); ++i) {
+    std::string app_user_id = query_online_user_req.user_id_list(i).user_id() + "@" + folly::to<std::string>(query_online_user_req.user_id_list(i).app_id());
     app_user_id_list.push_back(app_user_id);
   }
   
   online_manager->LookupEntrysByUserIDList(app_user_id_list, &sessions);
   
-  auto rsp = std::make_shared<ApiRpcOk<zproto::QueryOnlineUserRsp>>();
-  rsp->set_req_message_id(request->message_id());
-
+  zproto::QueryOnlineUserRsp query_online_user_rsp;
   for (auto& v : sessions) {
-    auto online_user = (*rsp)->add_online_users();
+    auto online_user = query_online_user_rsp.add_online_users();
     online_user->set_app_id(v.app_id);
     online_user->set_user_id(v.user_id);
     online_user->set_server_id(v.server_id);
     online_user->set_conn_id(v.session_id);
   }
   
-  return rsp;
+  return MakeRpcOK(query_online_user_rsp);
 }
 
 

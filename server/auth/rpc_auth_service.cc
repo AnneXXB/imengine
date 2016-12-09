@@ -19,29 +19,29 @@
 
 #include "nebula/base/time_util.h"
 #include "biz_model/user_model.h"
-#include "proto/api_message_box.h"
+#include "proto/zproto/zproto_api_message_types.h"
 
 
 ProtoRpcResponsePtr DoUserTokenAuthReq(RpcRequestPtr request) {
-  auto user_token_auth_req = ToApiRpcRequest<zproto::UserTokenAuthReq>(request);
-  LOG(INFO) << "DoUserTokenAuthReq - user_token_auth_req ==> " << user_token_auth_req->ToString();
-  LOG(INFO) << (*user_token_auth_req)->Utf8DebugString();
-  
+  CAST_RPC_REQUEST(UserTokenAuthReq, user_token_auth_req);
+  LOG(INFO) << user_token_auth_req.Utf8DebugString();
+
   UserEntity user_entity;
   GetUserInfoByUserNamePasswd get_user_info_by_user_name_passwd(
                                                                 1,
-                                                                (*user_token_auth_req)->user_id(),
-                                                                (*user_token_auth_req)->user_token(),
+                                                                user_token_auth_req.user_id(),
+                                                                user_token_auth_req.user_token(),
                                                                 user_entity);
   
-  auto rv = SqlQuery("nebula_platform", get_user_info_by_user_name_passwd);
+  SqlQuery("nebula_platform", get_user_info_by_user_name_passwd);
   
-  auto user_token_auth_rsp = std::make_shared<ApiRpcOk<zproto::UserTokenAuthRsp>>();
-  user_token_auth_rsp->set_req_message_id(request->message_id());
-  (*user_token_auth_rsp)->set_app_id(1);
-  (*user_token_auth_rsp)->set_user_id(user_entity.user_id);
-  (*user_token_auth_rsp)->set_nick(user_entity.nick);
-  (*user_token_auth_rsp)->set_avatar(user_entity.avatar);
+  zproto::UserTokenAuthRsp user_token_auth_rsp;
+
+  // user_token_auth_rsp->set_req_message_id(request->message_id());
+  user_token_auth_rsp.set_app_id(1);
+  user_token_auth_rsp.set_user_id(user_entity.user_id);
+  user_token_auth_rsp.set_nick(user_entity.nick);
+  user_token_auth_rsp.set_avatar(user_entity.avatar);
   
 //  (*login_rsp)->set_server_time(Now());
 //  (*login_rsp)->set_result_code(teamtalk::REFUSE_REASON_NONE);
@@ -61,7 +61,7 @@ ProtoRpcResponsePtr DoUserTokenAuthReq(RpcRequestPtr request) {
 //  
 //  LOG(INFO) << (*login_rsp)->Utf8DebugString();
   
-  LOG(INFO) << "DoUserTokenAuthReq - user_token_auth_rsp ==> " << user_token_auth_rsp->ToString();
+  LOG(INFO) << "DoUserTokenAuthReq - user_token_auth_rsp ==> " << user_token_auth_rsp.Utf8DebugString();
 
-  return user_token_auth_rsp;
+  return MakeRpcOK(user_token_auth_rsp);
 }
