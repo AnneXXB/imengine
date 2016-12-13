@@ -1,5 +1,5 @@
-/**
- *  Copyright (c) 2016, https://github.com/zhatalk
+/*
+ *  Copyright (c) 2016, https://github.com/nebula-im/imengine
  *  All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,12 +15,15 @@
  * limitations under the License.
  */
 
+#ifndef IMENGINGE_DAL_GROUP_USER_DAO_IMPL_H_
+#define IMENGINGE_DAL_GROUP_USER_DAO_IMPL_H_
 
-#ifndef BIZ_MODEL_APP_MODEL_H_
-#define BIZ_MODEL_APP_MODEL_H_
+#include "dal/group_user_dao.h"
 
-#include "nebula/storage/storage_util.h"
-#include "biz_model/base_biz_model_data.h"
-
+struct GroupUserDAOImpl : public GroupUserDAO {
+  virtual ~GroupUserDAOImpl() = default;
+  
+  int64_t Create(GroupUserDOList& group_users) override;
+};
 
 #endif

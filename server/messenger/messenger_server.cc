@@ -27,27 +27,15 @@ bool MessengerServer::Initialize() {
   RegisterService("messenger_server", "rpc_server", "zrpc");
   RegisterService("push_client", "rpc_client", "zrpc");
 
-  ZRpcUtil::Register("zproto.SendMessageReq", DoSendMessage);
-  ZRpcUtil::Register("zproto.MessageSyncReq", DoMessageSync);
-  ZRpcUtil::Register("zproto.LoadHistoryMessageReq", DoLoadHistoryMessage);
-  ZRpcUtil::Register("zproto.LoadDialogsReq", DoLoadDialogs);
+  MessengerRpcRegister();
 
-  ZRpcUtil::Register("zproto.CreateGroupReq", DoCreateGroup);
+//  ZRpcUtil::Register("zproto.SendMessageReq", DoSendMessage);
+//  ZRpcUtil::Register("zproto.MessageSyncReq", DoMessageSync);
+//  ZRpcUtil::Register("zproto.LoadHistoryMessageReq", DoLoadHistoryMessage);
+//  ZRpcUtil::Register("zproto.LoadDialogsReq", DoLoadDialogs);
+//  ZRpcUtil::Register("zproto.CreateGroupReq", DoCreateGroup);
 
   BaseServer::Initialize();
-  
-#if 0
-  // one
-  timer_manager_->ScheduleOneShotTimeout([]() {
-    LOG(INFO) << "ScheduleOneShotTimeout!!!!";
-  }, 1000);
-  
-  // once
-  timer_manager_->ScheduleRepeatingTimeout([]() {
-    static int i = 0;
-    LOG(INFO) << "ScheduleRepeatingTimeout - " << i++;
-  }, 1000);
-#endif
   
   return true;
 }

@@ -20,7 +20,7 @@
 #include "nebula/net/handler/nebula_handler_util.h"
 
 #include "proto/zproto/zproto_api_message_types.h"
-#include "biz_model/online_status_model.h"
+#include "dal/online_status_dao.h"
 #include "push/gate_channel_manager.h"
 
 // 转发
@@ -40,9 +40,9 @@ ProtoRpcResponsePtr DoForwardMessage(RpcRequestPtr request) {
   user_id_list.push_back(message_data.sender_user_id());
   user_id_list.push_back(message_data.peer().id());
   
-  std::list<OnlineUserInfo> onlines;
+  OnlineStatusDOList onlines;
   zproto::MessageNotify message_notify;
-  GetUsersOnlineStatus(1, user_id_list, onlines, request->session_id());
+  OnlineStatusDAO::GetInstance().GetUsersOnlineStatus(1, user_id_list, onlines, request->session_id());
   for (const auto& v : onlines) {
     auto gate_conn_id = GateChannelManager::GetInstance()->LookupConnID(v.server_id);
     if (gate_conn_id == 0) {

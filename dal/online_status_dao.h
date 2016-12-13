@@ -1,5 +1,5 @@
-/**
- *  Copyright (c) 2016, https://github.com/zhatalk
+/*
+ *  Copyright (c) 2016, https://github.com/nebula-im/imengine
  *  All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,4 +15,20 @@
  * limitations under the License.
  */
 
-#include "biz_model/app_model.h"
+#ifndef DAL_ONLINE_STATUS_DAO_H_
+#define DAL_ONLINE_STATUS_DAO_H_
+
+#include "dal/online_status_do.h"
+
+struct OnlineStatusDAO : public BaseDAO {
+  virtual ~OnlineStatusDAO() = default;
+  
+  static OnlineStatusDAO& GetInstance();
+
+  virtual bool GetUsersOnlineStatus(uint32_t app_id,
+                                    const std::list<std::string>& user_id_list,
+                                    OnlineStatusDOList& onlines,
+                                    uint64_t my_conn_id = 0) = 0;
+};
+
+#endif

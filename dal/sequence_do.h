@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2016, https://github.com/nebula-im
+ *  Copyright (c) 2016, https://github.com/nebula-im/imengine
  *  All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,14 +15,14 @@
  * limitations under the License.
  */
 
-#ifndef	PROTO_ZPROTO_API_MESSAGE_TYPES_H_
-#define	PROTO_ZPROTO_API_MESSAGE_TYPES_H_
+#ifndef DAL_SEQUENCE_DO_H_
+#define DAL_SEQUENCE_DO_H_
 
-#include "proto/zproto/cc/auths.pb.h"
-#include "proto/zproto/cc/servers.pb.h"
-#include "proto/zproto/cc/groups.pb.h"
-#include "proto/zproto/cc/messages.pb.h"
+#include <list>
+#include <string>
 
-#include "nebula/net/zproto/api_message_box.h"
+#include "dal/base_dal.h"
+
+typedef int64_t SequenceID;
 
 #endif

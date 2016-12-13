@@ -15,29 +15,23 @@
  * limitations under the License.
  */
 
-#ifndef BIZ_MODEL_ONLINE_STATUS_HELPER_H_
-#define BIZ_MODEL_ONLINE_STATUS_HELPER_H_
+#ifndef DAL_ONLINE_STATUS_DAO_IMPL_H_
+#define DAL_ONLINE_STATUS_DAO_IMPL_H_
+
+#include "dal/online_status_dao.h"
 
 #include <string>
 #include <list>
 
-struct OnlineUserInfo {
-  OnlineUserInfo() = default;
-  OnlineUserInfo(uint32_t sid, uint64_t cid, int s)
-  : server_id(sid),
-    conn_id(cid),
-    state(s) {}
+struct OnlineStatusDAOImpl : public OnlineStatusDAO {
+  virtual ~OnlineStatusDAOImpl() = default;
   
-  // uint32_t app_id;
-  // std::string user_id;
-  uint32_t server_id;
-  uint64_t conn_id;
-  int state;
+  // static UserDAO& GetInstance();
+  
+  bool GetUsersOnlineStatus(uint32_t app_id,
+                            const std::list<std::string>& user_id_list,
+                            OnlineStatusDOList& onlines,
+                            uint64_t my_conn_id = 0) override;
 };
-
-bool GetUsersOnlineStatus(uint32_t app_id,
-                          const std::list<std::string>& user_id_list,
-                          std::list<OnlineUserInfo>& onlines,
-                          uint64_t my_conn_id = 0);
 
 #endif

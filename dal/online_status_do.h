@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2016, https://github.com/zhatalk
+ *  Copyright (c) 2016, https://github.com/nebula-im/imengine
  *  All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,24 +15,25 @@
  * limitations under the License.
  */
 
-#ifndef BIZ_MODEL_SEQUENCE_MODEL_H_
-#define BIZ_MODEL_SEQUENCE_MODEL_H_
+#ifndef DAL_ONLINE_STATUS_DO_H_
+#define DAL_ONLINE_STATUS_DO_H_
 
-#include <stdint.h>
-#include <string>
-#include <map>
+#include "dal/base_dal.h"
 
-class SequenceModel {
-public:
-  SequenceModel() = default;
-
-  // uint32_t GetNextID(const uint64_t key);
-  // uint32_t AsyGetNextID(const uint64_t key);
-  uint64_t GetNextID(const std::string& key);
-
-private:
-  std::map<std::string, uint32_t> seqs_;
+struct OnlineStatusDO {
+  OnlineStatusDO() = default;
+  OnlineStatusDO(uint32_t sid, uint64_t cid, int s)
+    : server_id(sid),
+      conn_id(cid),
+      state(s) {}
+  
+  // uint32_t app_id;
+  // std::string user_id;
+  uint32_t server_id;
+  uint64_t conn_id;
+  int state;
 };
 
+using OnlineStatusDOList = std::list<OnlineStatusDO>;
 
 #endif

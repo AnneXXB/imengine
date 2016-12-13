@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2016, https://github.com/nebula-im
+ *  Copyright (c) 2016, https://github.com/nebula-im/imengine
  *  All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,14 +15,16 @@
  * limitations under the License.
  */
 
-#ifndef	PROTO_ZPROTO_API_MESSAGE_TYPES_H_
-#define	PROTO_ZPROTO_API_MESSAGE_TYPES_H_
+#ifndef IMENGINGE_DAL_GROUP_DAO_IMPL_H_
+#define IMENGINGE_DAL_GROUP_DAO_IMPL_H_
 
-#include "proto/zproto/cc/auths.pb.h"
-#include "proto/zproto/cc/servers.pb.h"
-#include "proto/zproto/cc/groups.pb.h"
-#include "proto/zproto/cc/messages.pb.h"
+#include "dal/group_dao.h"
 
-#include "nebula/net/zproto/api_message_box.h"
+struct GroupDAOImpl : public GroupDAO {
+  virtual ~GroupDAOImpl() = default;
+  
+  int CheckExists(const std::string& creator_user_id, uint64_t client_group_id) override;
+  int64_t Create(GroupDO& group) override;
+};
 
 #endif

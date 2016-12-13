@@ -15,17 +15,22 @@
  * limitations under the License.
  */
 
-#include "biz_model/online_status_model.h"
+#include "dal/online_status_dao_impl.h"
 
 #include "nebula/net/rpc/zrpc_service_util.h"
 
 #include "proto/zproto/cc/servers.pb.h"
 #include "proto/zproto/zproto_api_message_types.h"
 
-bool GetUsersOnlineStatus(uint32_t app_id,
-                          const std::list<std::string>& user_id_list,
-                          std::list<OnlineUserInfo>& onlines,
-                          uint64_t my_conn_id) {
+OnlineStatusDAO& OnlineStatusDAO::GetInstance() {
+  static OnlineStatusDAOImpl impl;
+  return impl;
+}
+
+bool OnlineStatusDAOImpl::GetUsersOnlineStatus(uint32_t app_id,
+                                               const std::list<std::string>& user_id_list,
+                                               OnlineStatusDOList& onlines,
+                                               uint64_t my_conn_id)  {
   auto req = std::make_shared<ApiRpcRequest<zproto::QueryOnlineUserReq>>();
   for (const auto& v : user_id_list) {
     auto user_id = (*req)->add_user_id_list();

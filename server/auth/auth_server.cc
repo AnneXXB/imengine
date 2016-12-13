@@ -28,7 +28,8 @@ bool AuthServer::Initialize() {
 
   RegisterService("auth_server", "rpc_server", "zrpc");
  
-  ZRpcUtil::Register("zproto.UserTokenAuthReq", DoUserTokenAuthReq);
+  AuthRpcRegister();
+  // ZRpcUtil::Register("zproto.UserTokenAuthReq", DoUserTokenAuthReq);
 
   // RegisterService("biz_server", "rpc_server", "zrpc");
 

@@ -24,5 +24,5 @@ set (SRC_LIST
   )
 
 add_executable (auth_server ${SRC_LIST})
-target_link_libraries (auth_server biz_model net base proto)
+target_link_libraries (auth_server dal net base proto)
 

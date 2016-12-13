@@ -20,11 +20,16 @@
 
 #include "nebula/net/rpc/zrpc_service_util.h"
 
+// TODO(@benqi): 自动生成
+// int DoSendMessage(const zproto::SendMessageReq& send_message_req, zproto::SeqDateRsp* seq_date_rsp);
 ProtoRpcResponsePtr DoSendMessage(RpcRequestPtr request);
 ProtoRpcResponsePtr DoMessageSync(RpcRequestPtr request);
 ProtoRpcResponsePtr DoLoadHistoryMessage(RpcRequestPtr request);
 ProtoRpcResponsePtr DoLoadDialogs(RpcRequestPtr request);
 
 ProtoRpcResponsePtr DoCreateGroup(RpcRequestPtr request);
+
+
+void MessengerRpcRegister();
 
 #endif // MESSENGER_RPC_MESSENGER_RPC_SERVICE_H_

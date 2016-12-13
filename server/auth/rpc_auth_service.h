@@ -23,5 +23,8 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 ProtoRpcResponsePtr DoUserTokenAuthReq(RpcRequestPtr request);
 
+
+void AuthRpcRegister();
+
 #endif // AUTHD_RPC_AUTH_SERVICE_H_
 

@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2016, https://github.com/nebula-im
+ *  Copyright (c) 2016, https://github.com/zhatalk
  *  All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,14 +15,16 @@
  * limitations under the License.
  */
 
-#ifndef	PROTO_ZPROTO_API_MESSAGE_TYPES_H_
-#define	PROTO_ZPROTO_API_MESSAGE_TYPES_H_
+#ifndef DAL_SEQUENCE_DAO_IMPL_H_
+#define DAL_SEQUENCE_DAO_IMPL_H_
 
-#include "proto/zproto/cc/auths.pb.h"
-#include "proto/zproto/cc/servers.pb.h"
-#include "proto/zproto/cc/groups.pb.h"
-#include "proto/zproto/cc/messages.pb.h"
+#include "dal/sequence_dao.h"
 
-#include "nebula/net/zproto/api_message_box.h"
+struct SequenceDAOImpl : public SequenceDAO {
+  virtual ~SequenceDAOImpl() = default;
+  
+  uint64_t GetNextID(const std::string& key) override;
+};
+
 
 #endif

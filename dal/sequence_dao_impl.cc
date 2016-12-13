@@ -15,33 +15,17 @@
  * limitations under the License.
  */
 
-#include "biz_model/sequence_model.h"
+#include "dal/sequence_dao_impl.h"
 
 #include "nebula/base/id_util.h"
 
-// TODO(@benqi):
-//  先用snowflake算法跑通流程
-uint64_t SequenceModel::GetNextID(const std::string& key) {
-  return GetNextIDBySnowflake();
-//  uint32_t s = 1;
-//  
-//  auto it = seqs_.find(key);
-//  if (it!=seqs_.end()) {
-//    s = ++it->second;
-//  } else {
-//    seqs_.insert(std::make_pair(key, s));
-//  }
-//  return s;
+SequenceDAO& SequenceDAO::GetInstance() {
+  static SequenceDAOImpl impl;
+  return impl;
 }
 
-//uint32_t SequenceModel::AsyGetNextID(const uint64_t key) {
-//  uint32_t s = 1;
-//  
-//  auto it = seqs_.find(key);
-//  if (it!=seqs_.end()) {
-//    s = ++it->second;
-//  } else {
-//    seqs_.insert(std::make_pair(key, s));
-//  }
-//  return s;
-//}
+// TODO(@benqi):
+//  先用snowflake算法跑通流程
+uint64_t SequenceDAOImpl::GetNextID(const std::string& key) {
+  return GetNextIDBySnowflake();
+}

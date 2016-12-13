@@ -18,50 +18,39 @@
 #include "auth/rpc_auth_service.h"
 
 #include "nebula/base/time_util.h"
-#include "biz_model/user_model.h"
+#include "dal/user_dao_impl.h"
+//#include "biz_model/user_model.h"
 #include "proto/zproto/zproto_api_message_types.h"
 
+void AuthRpcRegister() {
+  ZRpcUtil::Register("zproto.UserTokenAuthReq", DoUserTokenAuthReq);
+}
+
+///////////////////////////////////////////////////////////////////////////////
+int DoUserTokenAuthReqInternal(uint64_t conn_id,
+                               const zproto::UserTokenAuthReq& user_token_auth_req,
+                               zproto::UserTokenAuthRsp* user_token_auth_rsp) {
+
+  UserDO user;
+
+  UserDAO::GetInstance().GetUserByNamePasswd(1,
+                          user_token_auth_req.user_id(),
+                          user_token_auth_req.user_token(),
+                          user);
+
+  user_token_auth_rsp->set_app_id(1);
+  user_token_auth_rsp->set_user_id(user.user_id);
+  user_token_auth_rsp->set_nick(user.nick);
+  user_token_auth_rsp->set_avatar(user.avatar);
+  
+  return 0;
+}
 
 ProtoRpcResponsePtr DoUserTokenAuthReq(RpcRequestPtr request) {
   CAST_RPC_REQUEST(UserTokenAuthReq, user_token_auth_req);
-  LOG(INFO) << user_token_auth_req.Utf8DebugString();
-
-  UserEntity user_entity;
-  GetUserInfoByUserNamePasswd get_user_info_by_user_name_passwd(
-                                                                1,
-                                                                user_token_auth_req.user_id(),
-                                                                user_token_auth_req.user_token(),
-                                                                user_entity);
-  
-  SqlQuery("nebula_platform", get_user_info_by_user_name_passwd);
-  
   zproto::UserTokenAuthRsp user_token_auth_rsp;
-
-  // user_token_auth_rsp->set_req_message_id(request->message_id());
-  user_token_auth_rsp.set_app_id(1);
-  user_token_auth_rsp.set_user_id(user_entity.user_id);
-  user_token_auth_rsp.set_nick(user_entity.nick);
-  user_token_auth_rsp.set_avatar(user_entity.avatar);
   
-//  (*login_rsp)->set_server_time(Now());
-//  (*login_rsp)->set_result_code(teamtalk::REFUSE_REASON_NONE);
-//  (*login_rsp)->set_online_status(teamtalk::USER_STATUS_ONLINE);
-//  
-//  auto user_info = (*login_rsp)->mutable_user_info();
-//  user_info->set_id(user_entity.id);
-//  user_info->set_user_gender(1);
-//  user_info->set_user_nick_name(user_entity.nick);
-//  user_info->set_avatar_url(user_entity.avatar);
-//  user_info->set_department_id(1);
-//  user_info->set_email("wubenqi@gmail.com");
-//  user_info->set_user_real_name("wubenqi");
-//  user_info->set_user_tel("10086");
-//  user_info->set_user_domain("wubenqi");
-//  user_info->set_status(0);
-//  
-//  LOG(INFO) << (*login_rsp)->Utf8DebugString();
+  DoUserTokenAuthReqInternal(request->session_id(), user_token_auth_req, &user_token_auth_rsp);
   
-  LOG(INFO) << "DoUserTokenAuthReq - user_token_auth_rsp ==> " << user_token_auth_rsp.Utf8DebugString();
-
   return MakeRpcOK(user_token_auth_rsp);
 }

@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2016, https://github.com/nebula-im
+ *  Copyright (c) 2016, https://github.com/nebula-im/imengine
  *  All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,14 +15,22 @@
  * limitations under the License.
  */
 
-#ifndef	PROTO_ZPROTO_API_MESSAGE_TYPES_H_
-#define	PROTO_ZPROTO_API_MESSAGE_TYPES_H_
+#ifndef IMENGINGE_DAL_USER_DAO_IMPL_H_
+#define IMENGINGE_DAL_USER_DAO_IMPL_H_
 
-#include "proto/zproto/cc/auths.pb.h"
-#include "proto/zproto/cc/servers.pb.h"
-#include "proto/zproto/cc/groups.pb.h"
-#include "proto/zproto/cc/messages.pb.h"
+#include "dal/user_dao.h"
 
-#include "nebula/net/zproto/api_message_box.h"
+struct UserDAOImpl : public UserDAO {
+  virtual ~UserDAOImpl() = default;
+  
+  int GetUserByToken(const std::string& app_key,
+                    const std::string& user_token,
+                    UserDO& user_do) override;
+  
+  int GetUserByNamePasswd(uint32_t app_id,
+                         const std::string& user_id,
+                         const std::string& passwd,
+                         UserDO& user_do) override;
+};
 
 #endif
