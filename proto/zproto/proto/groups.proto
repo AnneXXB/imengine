@@ -23,7 +23,7 @@ option java_package = "com.zchat.engine.zproto";
 option java_outer_classname = "ZProto";
 option optimize_for = CODE_SIZE;
 
-
+// 群成员
 message GroupMember {
   string user_id = 1;     // 用户ID
   string inviter_uid = 2; // 邀请者
@@ -31,12 +31,15 @@ message GroupMember {
   bool is_admin = 4;      // 是否群管理员
 }
 
+// 群成员
 message Group {
-  string group_id = 1;              // 去ID
+  string group_id = 1;              // 群ID
   string title = 2;                 // 群标题
-  repeated GroupMember members = 3; // 群成员
+  string avatar = 3;                 // 群标题
+  repeated GroupMember members = 4; // 群成员
 }
 
+// 创建群请求
 // CreateGroupReq --> CreateGroupRsp
 message CreateGroupReq {
   string creator_user_id = 1;
@@ -45,7 +48,7 @@ message CreateGroupReq {
   repeated string user_ids = 4; // 成员
 }
 
-// Created group
+// 创建群响应
 message CreateGroupRsp {
   uint64 seq = 1;                 // 序号
   uint64 created = 2;             // 创建时间
@@ -53,3 +56,75 @@ message CreateGroupRsp {
   repeated string user_ids = 4;   // 群成员
 }
 
+// 加载群成员
+// LoadMembersReq --> LoadMembersRsp
+message LoadMembersReq {
+  string group_id = 1;  //
+  // TODO(@benqi): 先不考虑超大群，每次请求拉取全部群成员
+  // int32 limit = 2;      // Limit members
+  // int32 offset = 3;     //
+}
+
+// LoadMembersRsp
+message LoadMembersRsp {
+  repeated GroupMember members = 1;
+}
+
+// 加载群信息
+// LoadFullGroupsReq --> LoadFullGroupsRsp
+message LoadFullGroupsReq {
+  repeated string groups = 1; // Groups to load
+}
+
+// LoadFullGroupsRsp
+message LoadFullGroupsRsp {
+  repeated Group groups = 1; //   Groups to load
+}
+
+// 邀请用户加群
+// InviteUserReq --> SeqDateRsp
+message InviteUserReq {
+  string group_id = 1;  // Group's peer
+  int64 rid = 4;        // Random Id of operation
+  string invited_user_id = 3; // Users for invitation
+}
+
+// SeqDateRsp
+
+// 退群
+// LeaveGroupReq --> SeqDateRsp
+message LeaveGroupReq {
+  // int32 COMMAND_ID = 70;
+  string group_id = 1; // Group's peer
+  int64 rid = 2; // Random Id of operation
+}
+
+// SeqDateRsp
+
+// 退群并清空聊天记录
+// LeaveAndDeleteReq --> SeqRsp
+message LeaveAndDeleteReq {
+  // int32 COMMAND_ID = 2721;
+  string group_id = 1; // Group peer
+}
+
+// SeqRsp
+
+// 踢出群
+// KickUserReq --> SeqDateRsp
+message KickUserReq {
+  // int32 COMMAND_ID = 71;
+  string group_id = 1; // Group's peer
+  int64 rid = 4; // Random Id of operation
+  string user_id = 3; // users for removing
+}
+
+// SeqDateRsp
+
+// 同意进群
+// JoinGroupByPeerReq --> SeqRsp
+message JoinGroupByPeerReq {
+  string group_id = 1; // Group's peer
+}
+
+// SeqRsp

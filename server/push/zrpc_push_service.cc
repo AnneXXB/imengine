@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2016, https://github.com/zhatalk
+ *  Copyright (c) 2016, https://github.com/nebula-im
  *  All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,60 +15,14 @@
  * limitations under the License.
  */
 
+// TODO(@benqi): 使用zrpc-code-gen代码生成工具自动生成
+
 #include "push/zrpc_push_service.h"
 
-#include "nebula/net/handler/nebula_handler_util.h"
+#include "nebula/base/logger/glog_util.h"
 
-#include "proto/zproto/zproto_api_message_types.h"
-#include "dal/online_status_dao.h"
-#include "push/gate_channel_manager.h"
+//int ZRpcPushService::ForwardMessage(const zproto::ForwardMessageReq& request, zproto::VoidRsp* response) {
+//  LOG(ERROR) << "ZRpcPushService - ForwardMessage unimplemented";
+//  return -1;
+//}
 
-// 转发
-inline folly::Future<folly::Unit> WritePackage(uint64_t conn_id, std::shared_ptr<PackageMessage> message_data) {
-  std::unique_ptr<folly::IOBuf> data;
-  message_data->SerializeToIOBuf(data);
-  return WriterUtil::Write(conn_id, std::move(data));
-}
-
-ProtoRpcResponsePtr DoForwardMessage(RpcRequestPtr request) {
-  // 1.
-  CAST_RPC_REQUEST(ForwardMessageReq, forward_message_req);
-  const auto& message_data = forward_message_req.message_data();
-  // const auto& not_send_conn_ids = (*forward_message_req)->not_send_conn_ids();
-  
-  std::list<std::string> user_id_list;
-  user_id_list.push_back(message_data.sender_user_id());
-  user_id_list.push_back(message_data.peer().id());
-  
-  OnlineStatusDOList onlines;
-  zproto::MessageNotify message_notify;
-  OnlineStatusDAO::GetInstance().GetUsersOnlineStatus(1, user_id_list, onlines, request->session_id());
-  for (const auto& v : onlines) {
-    auto gate_conn_id = GateChannelManager::GetInstance()->LookupConnID(v.server_id);
-    if (gate_conn_id == 0) {
-      continue;
-    }
-    bool not_send = false;
-    for (int i=0; i<forward_message_req.not_send_conn_ids_size(); ++i) {
-      if (forward_message_req.not_send_conn_ids(i) == gate_conn_id) {
-        not_send = true;
-        break;
-      }
-    }
-    if (not_send ) {
-      continue;
-    }
-    
-    auto push = MakePush(message_notify);
-    // std::make_shared<ApiPush<zproto::MessageNotify>>();
-    push->set_session_id(v.conn_id);
-    WritePackage(gate_conn_id, push);
-  }
-
-  zproto::VoidRsp void_rsp;
-  
-  // auto response = std::make_shared<ApiRpcOk<zproto::VoidRsp>>();
-  // response->set_session_id(request->session_id());
-  // response->set_req_message_id(request->message_id());
-  return MakeRpcOK(void_rsp);
-}

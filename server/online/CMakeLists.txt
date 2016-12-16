@@ -19,12 +19,16 @@ include_directories(. .. ../../nebula)
 set (SRC_LIST
   online_status_server.cc
   online_status_server.h
-  rpc_online_service.cc
-  rpc_online_service.h
+  zrpc_online_dispatcher.cc
+  zrpc_online_dispatcher.h
+  zrpc_online_service.cc
+  zrpc_online_service.h
   online_session_manager.cc
   online_session_manager.h
   http_online_service.cc
   http_online_service.h
+  online_service_impl.cc
+  online_service_impl.h
   )
 
 add_executable (online_status_server ${SRC_LIST})

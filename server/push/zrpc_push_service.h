@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2016, https://github.com/zhatalk
+ *  Copyright (c) 2016, https://github.com/nebula-im
  *  All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,12 +15,21 @@
  * limitations under the License.
  */
 
+// TODO(@benqi): 使用zrpc-code-gen代码生成工具自动生成
+
 #ifndef	PUSH_ZRPC_PUSH_SERVICE_H_
 #define	PUSH_ZRPC_PUSH_SERVICE_H_
 
-#include "nebula/net/rpc/zrpc_service_util.h"
+// #include "proto/zproto/zproto_api_message_types.h"
+#include "proto/api/cc/messaging.pb.h"
+#include "nebula/net/zproto/api_message_box.h"
 
-ProtoRpcResponsePtr DoForwardMessage(RpcRequestPtr request);
+class ZRpcPushService {
+public:
+  virtual ~ZRpcPushService() = default;
+  
+  // virtual int ForwardMessage(const zproto::ForwardMessageReq& request, zproto::VoidRsp* response);
+  
+};
 
-#endif // PUSH_ZRPC_PUSH_SERVICE_H_
-
+#endif

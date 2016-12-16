@@ -23,16 +23,27 @@
 
 #include "dal/base_dal.h"
 
-// users表
+// 表名: users
 struct UserDO {
-  // DO成员
-  uint32_t id{0};
+  // `id` bigint(20) NOT NULL,
+  uint64_t id{0};
+  // `app_id` int(11) NOT NULL DEFAULT '1',
   uint32_t app_id{1};
+  // `user_id` varchar(256) NOT NULL,
+  std::string user_token;
+  // `user_token` varchar(256) NOT NULL,
   std::string user_id;
+  // `avatar` varchar(256) NOT NULL DEFAULT '',
   std::string avatar;
+  // `nick` varchar(256) NOT NULL DEFAULT '',
   std::string nick;
+  // `is_active` tinyint(4) NOT NULL DEFAULT '0',
+  int is_active;
+  // `status` tinyint(4) NOT NULL DEFAULT '0',
   int status{1};
+  //   `created_at` bigint(20) NOT NULL DEFAULT '0',
   uint32_t created_at{0};
+  // `updated_at` bigint(20) NOT NULL DEFAULT '0'
   uint32_t updated_at{0};
  
   //反射

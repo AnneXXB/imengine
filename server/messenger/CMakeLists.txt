@@ -19,8 +19,12 @@ include_directories(. .. ../../nebula)
 set (SRC_LIST
   messenger_server.cc
   messenger_server.h
-  rpc_messenger_service.cc
-  rpc_messenger_service.h
+  zrpc_messenger_dispatcher.cc
+  zrpc_messenger_dispatcher.h
+  zrpc_messenger_service.cc
+  zrpc_messenger_service.h
+  messenger_service_impl.cc
+  messenger_service_impl.h
   )
 
 add_executable (messenger_server ${SRC_LIST})

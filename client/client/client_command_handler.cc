@@ -20,7 +20,12 @@
 #include "nebula/base/time_util.h"
 #include "nebula/base/id_util.h"
 
-#include "proto/zproto/zproto_api_message_types.h"
+#include "proto/api/cc/auth.pb.h"
+#include "proto/api/cc/misc.pb.h"
+#include "proto/api/cc/messaging.pb.h"
+
+#include "nebula/net/zproto/api_message_box.h"
+
 #include "nebula/net/rpc/zrpc_service_util.h"
 
 typedef int (*ClientCommandHandlerFunc)(const std::vector<folly::StringPiece>&);
@@ -35,11 +40,11 @@ struct CmdEntry {
 };
 
 int DoConnect(const std::vector<folly::StringPiece>& command_lines) {
-  auto req = std::make_shared<ApiRpcRequest<zproto::UserTokenAuthReq>>();
+  auto req = std::make_shared<ApiRpcRequest<zproto::StartTokenAuthReq>>();
   
-  (*req)->set_app_key("nebula-im(zhazha)");
-  (*req)->set_user_id("benqi@zhazha");
-  (*req)->set_user_token("benqi@zhazha.nebula.im");
+  (*req)->set_api_key("nebula-im(zhazha)");
+  // (*req)->set_user_id("benqi@zhazha");
+  (*req)->set_token("benqi@zhazha.nebula.im");
   //(*req)->set_online_status(teamtalk::USER_STATUS_ONLINE);
   //(*req)->set_client_type(teamtalk::CLIENT_TYPE_MAC);
 
@@ -68,6 +73,7 @@ int DoConnect(const std::vector<folly::StringPiece>& command_lines) {
 }
 
 int DoSendMessage(const std::vector<folly::StringPiece>& command_lines) {
+/*
   auto req = std::make_shared<ApiRpcRequest<zproto::SendMessageReq>>();
   auto message_data = (*req)->mutable_message_data();
   message_data->set_sender_user_id("benqi@zhazha");
@@ -88,11 +94,12 @@ int DoSendMessage(const std::vector<folly::StringPiece>& command_lines) {
       // LOG(INFO) << (*login_rsp)->Utf8DebugString();
     }
   });
-
+ */
   return 0;
 }
 
 int DoMessageSync(const std::vector<folly::StringPiece>& command_lines) {
+/*
   auto req = std::make_shared<ApiRpcRequest<zproto::MessageSyncReq>>();
   (*req)->set_received_max_seq(0);
   
@@ -108,11 +115,12 @@ int DoMessageSync(const std::vector<folly::StringPiece>& command_lines) {
     //  LOG(INFO) << (*login_rsp)->Utf8DebugString();
     //}
   });
-  
+ */
   return 0;
 }
 
 int DoCreateGroup(const std::vector<folly::StringPiece>& command_lines) {
+/*
   auto req = std::make_shared<ApiRpcRequest<zproto::CreateGroupReq>>();
   
   (*req)->set_creator_user_id("benqi@zhazha");
@@ -135,6 +143,7 @@ int DoCreateGroup(const std::vector<folly::StringPiece>& command_lines) {
     //  LOG(INFO) << (*login_rsp)->Utf8DebugString();
     //}
   });
+ */
   
   return 0;
 }

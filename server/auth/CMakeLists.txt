@@ -19,8 +19,12 @@ include_directories(. .. ../../nebula)
 set (SRC_LIST
   auth_server.cc
   auth_server.h
-  rpc_auth_service.cc
-  rpc_auth_service.h
+  zrpc_auth_dispatcher.cc
+  zrpc_auth_dispatcher.h
+  zrpc_auth_service.cc
+  zrpc_auth_service.h
+  auth_service_impl.cc
+  auth_service_impl.h
   )
 
 add_executable (auth_server ${SRC_LIST})

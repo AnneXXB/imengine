@@ -24,7 +24,11 @@
 #include "nebula/net/rpc/zrpc_service_util.h"
 #include "nebula/net/handler/nebula_handler_util.h"
 
-#include "proto/zproto/zproto_api_message_types.h"
+
+#include "proto/api/cc/auth.pb.h"
+#include "proto/s2s/cc/presences.pb.h"
+#include "proto/s2s/cc/servers.pb.h"
+#include "nebula/net/zproto/api_message_box.h"
 
 #include "gate/gate_server_util.h"
 // folly::future
@@ -112,15 +116,15 @@ int gate::OnDataReceived(nebula::ZProtoPipeline* pipeline, std::shared_ptr<Packa
           WritePackage(conn_id, rsp);
           
           if (rsp->GetPackageType() == Package::RPC_OK) {
-            auto login_rsp = ToApiRpcOk<zproto::UserTokenAuthRsp>(rsp);
+            auto login_rsp = ToApiRpcOk<zproto::AuthRsp>(rsp);
             // TODO(@benqi): 移到用户认证成功后通知
             // 3. 上线通知在线状态服务器
             auto req = std::make_shared<ApiRpcRequest<zproto::ClientOnlineReq>>();
             (*req)->set_server_id(1);
             (*req)->set_conn_id(conn_id);
-            (*req)->set_app_id((*login_rsp)->app_id());
+            (*req)->set_app_id(1);
             // (*req)->set_user_id(folly::to<uint32_t>((*login_rsp)->user_id()));
-            (*req)->set_user_id((*login_rsp)->user_id());
+            (*req)->set_user_id((*login_rsp)->user().uid());
             //folly::to<uint32_t>((*login_rsp)->user_id()));
             (*req)->set_state(1);
 
@@ -173,32 +177,6 @@ int gate::OnConnectionClosed(nebula::TcpServiceBase* service, nebula::ZProtoPipe
   // TODO(@benqi):
   auto h = pipeline->getHandler<ZProtoHandler>();
   DCHECK(h);
-  
-//  if (service->GetServiceName() == "push_channel_client") {
-//  }
-  
-/*
-  if (service->GetServiceName() == "frontend") {
-    ClientConnContext* conn_data = h->CastByGetAttachData<ClientConnContext>();
-    DCHECK(conn_data);
-    
-    if (conn_data->state == ClientConnContext::State::WORKING) {
-      // 通知在线状态服务器
-      auto req = std::make_shared<ApiRpcRequest<zproto::ClientOfflineReq>>();
-      (*req)->set_server_id(1);
-      (*req)->set_conn_id(h->GetConnID());
-      // req->method_id = 2;
-      ZRpcUtil::DoClientCall("online_client", req).then([](ProtoRpcResponsePtr rsp) {
-        if (rsp) {
-          LOG(INFO) << rsp->ToString();
-        }
-      });
-    } else if (conn_data->state == ClientConnContext::State::FORWARD_TO_STATUS) {
-      // TODO(@benqi): 数据一致性分析
-      // 分析个中异常情况
-    }
-  }
- */
   
   return 0;
 }

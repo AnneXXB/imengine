@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2016, https://github.com/zhatalk
+ *  Copyright (c) 2016, https://github.com/nebula-im
  *  All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,8 +15,10 @@
  * limitations under the License.
  */
 
-#ifndef	AUTH_AUTH_DAEMON_H_
-#define	AUTH_AUTH_DAEMON_H_
+// TODO(@benqi): 使用zrpc-code-gen代码生成工具自动生成
+
+#ifndef	AUTH_AUTH_SERVER_H_
+#define	AUTH_AUTH_SERVER_H_
 
 #include <folly/io/async/EventBase.h>
 

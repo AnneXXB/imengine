@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2016, https://github.com/zhatalk
+ *  Copyright (c) 2016, https://github.com/nebula-im
  *  All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,21 +15,17 @@
  * limitations under the License.
  */
 
+// TODO(@benqi): 使用zrpc-code-gen代码生成工具自动生成
+
 #include "online/online_status_server.h"
 
 // #include "nebula/base/timer_manager.h"
-
-#include "proto/zproto/zproto_api_message_types.h"
-#include "online/rpc_online_service.h"
+// #include "online/zrpc_online_service.h"
 
 bool OnlineStatusServer::Initialize() {
   RegisterService("online_status_server", "rpc_server", "zrpc");
   RegisterService("status_http_server", "http_server", "http");
 
-  ZRpcUtil::Register("zproto.ClientOnlineReq", DoClientOnlineReq);
-  ZRpcUtil::Register("zproto.ClientOfflineReq", DoClientOfflineReq);
-  ZRpcUtil::Register("zproto.QueryOnlineReq", DoQueryOnlineUserReq);
-  
   BaseServer::Initialize();
   
 #if 0

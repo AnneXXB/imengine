@@ -24,6 +24,7 @@ option java_outer_classname = "ZProto";
 option optimize_for = CODE_SIZE;
 
 import "bases.proto";
+import "peers.proto";
 
 message VoidRsp {
 }
@@ -42,9 +43,12 @@ message SeqDateRsp {
   uint64 created  = 2;  // Date of response
 }
 
+// 转发给PushServer
+// ForwardMessageReq --> VoidRsp
 message ForwardMessageReq {
   MessageContainer message_data = 1;
   repeated uint64 not_send_conn_ids = 2;
+  uint64 my_conn_id = 3;
 }
 
 // 通知客户端有消息到达

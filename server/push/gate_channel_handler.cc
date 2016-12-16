@@ -23,7 +23,9 @@
 #include "nebula/net/rpc/zrpc_service_util.h"
 #include "nebula/net/handler/nebula_handler_util.h"
 
-#include "proto/zproto/zproto_api_message_types.h"
+#include "proto/s2s/cc/servers.pb.h"
+#include "nebula/net/zproto/api_message_box.h"
+// #include "proto/zproto/zproto_api_message_types.h"
 #include "push/gate_channel_manager.h"
 
 // folly::future

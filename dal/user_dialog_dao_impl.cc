@@ -17,7 +17,7 @@
 
 #include "dal/user_dialog_dao_impl.h"
 
-#include "proto/zproto/cc/bases.pb.h"
+#include "proto/api/cc/messaging_base.pb.h"
 
 UserDialogDAO& UserDialogDAO::GetInstance() {
   static UserDialogDAOImpl impl;
@@ -61,7 +61,7 @@ int UserDialogDAOImpl::LoadUserDialogList(const std::string& user_id,
                                           UserDialogDOList& user_dialogs) {
   return DoStorageQuery("nebula_engine",
                         [&](std::string& query_string) {
-                          if (load_mode == zproto::EnumHelper::FOWRARD) {
+                          if (load_mode == zproto::FORWARD) {
                             folly::format(&query_string, "SELECT id,peer_id,peer_type,updated_at FROM user_dialogs WHERE user_id='{}' AND updated_at<{} order by updated_at desc LIMIT {}",
                                                           user_id,
                                                           loaded_time,

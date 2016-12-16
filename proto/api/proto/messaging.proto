@@ -1,0 +1,346 @@
+/*
+ *  Copyright (c) 2016, https://github.com/wubenqi
+ *  All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+syntax = "proto3";
+package zproto;
+
+option java_package = "com.zchat.engine.zproto";
+option java_outer_classname = "ZProtoMessaging";
+option optimize_for = CODE_SIZE;
+
+import "peers.proto";
+import "users.proto";
+import "group_base.proto";
+import "sequence_base.proto";
+import "messaging_base.proto";
+
+// Sending plain message
+// SendMessageReq --> SeqDateRsp
+message SendMessageReq {
+  // int32 COMMAND_ID = 92;
+  OutPeer peer = 1; // Destination peer for message
+  int64 rid = 2; // Message random id (generated on client side)
+  InstantMessage message = 3;  // The message
+  bytes passthrough_data = 4;               // 透传数据
+}
+
+// SeqDateRsp
+
+// Changing Message content
+// UpdateMessageReq --> SeqDateRsp
+message UpdateMessageReq {
+  // int32 COMMAND_ID = 2658;
+  OutPeer peer = 1; // Destination Peer
+  int64 rid = 2; // Message random id
+  InstantMessage updated_message = 3; // Updated Message content
+}
+
+// SeqDateRsp
+
+// Confirmation of plain message receive by device
+// MessageReceivedReq --> VoidRsp
+message MessageReceivedReq {
+  // int32 COMMAND_ID = 55;
+  OutPeer peer = 1; // Destination peer
+  int64 date = 3; // Maximum date of received messages
+}
+
+// VoidRsp
+
+// Marking plain messages as read
+// MessageReadReq --> VoidRsp
+message MessageReadReq {
+  // int32 COMMAND_ID = 57;
+  OutPeer peer = 1; // Destination peer
+  int64 date = 3; // Maximum date of read messages
+}
+
+// VoidRsp
+
+// Deleting messages
+// DeleteMessageReq --> SeqRsp
+message DeleteMessageReq {
+  // int32 COMMAND_ID = 98;
+  OutPeer peer = 1; // Destination peer
+  repeated int64 rids = 3; // Message random id
+}
+
+// SeqRsp
+
+// Clearing of conversation (without removing dialog from dialogs list)
+// ClearChatReq --> SeqRsp
+message ClearChatReq {
+  // int32 COMMAND_ID = 99;
+  OutPeer peer = 1; // Conversation peer
+}
+
+// SeqRsp
+
+// Deleting of conversation (also leave group for group conversations)
+// DeleteChatReq --> SeqRsp
+message DeleteChatReq {
+  // int32 COMMAND_ID = 100;
+  OutPeer peer = 1; // Conversation peer
+}
+
+// SeqRsp
+
+// Archiving chat
+// ArchiveChatReq --> SeqRsp
+message ArchiveChatReq {
+  // int32 COMMAND_ID = 2654;
+  OutPeer peer = 1; // Conversation peer
+}
+
+// SeqRsp
+
+// Setting Message reaction
+// MessageSetReactionReq --> ReactionsResponseRsp
+message MessageSetReactionReq {
+  // int32 COMMAND_ID = 210;
+  OutPeer peer = 1; // Destination peer
+  int64 rid = 2; // Message random id
+  string code = 3; // Reaction code
+}
+
+// Update about plain message
+message MessageNotify {
+  // int32 COMMAND_ID = 55;
+  Peer peer = 1; //   Destination peer
+  string sender_uid = 2; //   Sender of message
+  int64 date = 3; //   date of message
+  int64 rid = 4; //   Rid of message
+  InstantMessage message = 5; //   message content
+}
+
+// Update about message change
+message MessageContentChangedNotify {
+  // int32 COMMAND_ID = 162;
+  Peer peer = 1; //   Destination peer
+  int64 rid = 2; //   Rid of message
+  InstantMessage message = 3; //   Message content
+}
+
+// Update about message date changed
+message MessageDateChangedNotify {
+  // int32 COMMAND_ID = 163;
+  Peer peer = 1; //   Destination peer
+  int64 rid = 2; //   Rid of message
+  int64 date = 3; //   Date of message
+}
+
+// Update about message sent
+message MessageSentNotify {
+  // int32 COMMAND_ID = 4;
+  Peer peer = 1; //   Destination peer
+  int64 rid = 2; //   Rid of message
+  int64 date = 3; //   Date of message
+}
+
+// Update about message received
+message MessageReceivedNotify {
+  // int32 COMMAND_ID = 54;
+  Peer peer = 1; //   Destination peer
+  int64 start_date = 2; //   Start date of received message
+  int64 received_date = 3; //   Date of receive
+}
+
+// Update about message read
+message MessageReadNotify {
+  // int32 COMMAND_ID = 19;
+  Peer peer = 1; //   Destination peer
+  int64 start_date = 2; //   Start date of read message
+  int64 read_date = 3; //   Date of read
+}
+
+// Update about message read by me
+message MessageReadByMeNotify {
+  // int32 COMMAND_ID = 50;
+  Peer peer = 1; //   Destination peer
+  int64 start_date = 2; //   Start date of read message
+  int32 unread_counter = 3; //   Optional unread counter in conversation
+}
+
+// Update about message delete
+message MessageDeleteNotify {
+  // int32 COMMAND_ID = 46;
+  Peer peer = 1; //   Destination peer
+  repeated int64 rids = 2; //   Deleted messages
+}
+
+// Update about chat clear
+message ChatClearNotify {
+  // int32 COMMAND_ID = 47;
+  Peer peer = 1; //   Destination peer
+}
+
+// Update about chat delete
+message ChatDeleteNotify {
+  // int32 COMMAND_ID = 48;
+  Peer peer = 1; //   Destination peer
+}
+
+// Update about chat archive
+message ChatArchiveNotify {
+  // int32 COMMAND_ID = 94;
+  Peer peer = 1; //   Destination peer
+}
+
+// Update about cache drop
+message ChatDropCacheNotify {
+  // int32 COMMAND_ID = 2690;
+  Peer peer = 1; //   Destination peer
+}
+
+// Update about chat groups changed. Called only when adding, removing and reordering of grouped dialog.
+message ChatGroupsChangedNotify {
+  // int32 COMMAND_ID = 1;
+  repeated DialogGroup dialogs = 1; //   New dialgos list
+}
+
+// Loading history of chat
+// LoadHistoryReq --> LoadHistoryRsp
+message LoadHistoryReq {
+  // int32 COMMAND_ID = 118;
+  OutPeer peer = 1; // Peer of conversation
+  int64 date = 3; // start date of messages for loading or 0 for loading from start
+  ListLoadMode load_mode = 5; // Loading mode: Forward loading, backward or both ways
+  int32 limit = 4; // maximum amount of messages (max is 100)
+  repeated UpdateOptimization optimizations = 6; // Enabled optimizations
+}
+
+// Loaded history
+message LoadHistoryRsp {
+  // int32 COMMAND_ID = 119;
+  repeated MessageContainer history = 1; //   Messages
+  repeated User users = 2; //   Loaded users
+  repeated UserOutPeer user_peers = 4;
+  repeated Group groups = 5;
+  repeated GroupOutPeer group_peers = 6;
+}
+
+// Loading conversation history
+// LoadDialogsReq --> LoadDialogsRsp
+message LoadDialogsReq {
+  // int32 COMMAND_ID = 104;
+  int64 min_date = 1; // start date of conversation loading. Use 0 to load latest messages
+  int32 limit = 2; // limit maximum amount of messages (max is 100)
+  repeated UpdateOptimization optimizations = 3; // Enabled optimizations
+}
+
+// Loaded dialogs
+message LoadDialogsRsp {
+  // int32 COMMAND_ID = 105;
+  repeated Group groups = 1; //   Loaded groups
+  repeated User users = 2; //   Loaded users
+  repeated Dialog dialogs = 3; //   Loaded dialogs
+  repeated UserOutPeer user_peers = 4;
+  repeated GroupOutPeer group_peers = 5;
+}
+
+// Loading archived messages
+// LoadArchivedReq --> LoadArchivedRsp
+message LoadArchivedReq {
+  // int32 COMMAND_ID = 2651;
+  bytes next_offset = 1; // Optional next offset
+  int32 limit = 2; // Maximum number of elements
+  repeated UpdateOptimization optimizations = 3; // Enabled optimizations
+}
+
+// Archived dialogs
+message LoadArchivedRsp {
+  // int32 COMMAND_ID = 2652;
+  repeated Group groups = 1; //   Referenced groups
+  repeated User users = 2; //   Referenced users
+  repeated Dialog dialogs = 3; //   Archived dialogs
+  repeated UserOutPeer user_peers = 5;
+  repeated GroupOutPeer group_peers = 6;
+  bytes next_offset = 4; //   Offset for next bunch
+}
+
+// Load all dialogs from grouped list
+// LoadGroupedDialogsReq --> LoadGroupedDialogsRsp
+message LoadGroupedDialogsReq {
+  // int32 COMMAND_ID = 225;
+  repeated UpdateOptimization optimizations = 1;
+}
+
+// Loaded grouped dialogs
+message LoadGroupedDialogsRsp {
+  // int32 COMMAND_ID = 226;
+  repeated DialogGroup dialogs = 1; //   Loaded groups of dialogs
+  repeated User users = 2; //   Loaded users
+  repeated Group groups = 3; //   Loaded groups
+  bool show_archived = 4; //   Show archived section
+  bool show_invite = 5; //   Show invite message
+  repeated UserOutPeer user_peers = 6;
+  repeated GroupOutPeer group_peers = 7;
+}
+
+// Dialogs order response
+message DialogsOrderRsp {
+  // int32 COMMAND_ID = 235;
+  int32 seq = 1; //   update seq
+  bytes state = 2; //   update state
+  repeated DialogGroup groups = 3; //   Update groups
+}
+
+// Hide Dialog from grouped list
+// HideDialogReq --> DialogsOrderRsp
+message HideDialogReq {
+  // int32 COMMAND_ID = 231;
+  OutPeer peer = 1; // Dialog peer
+}
+
+// DialogsOrderRsp
+
+// Show Dialog in grouped list
+// ShowDialogReq --> DialogsOrderRsp
+message ShowDialogReq {
+  // int32 COMMAND_ID = 232;
+  OutPeer peer = 1;
+}
+
+// DialogsOrderRsp
+
+// Marking dialog as favourite
+// FavouriteDialogReq --> DialogsOrderRsp
+message FavouriteDialogReq {
+  // int32 COMMAND_ID = 224;
+  OutPeer peer = 1; // Peer for favouriting
+}
+
+// DialogsOrderRsp
+
+// Making dialog as unfavourite
+// UnfavouriteDialogReq --> DialogsOrderRsp
+message UnfavouriteDialogReq {
+  // int32 COMMAND_ID = 227;
+  OutPeer peer = 1; // Peer for favouriting
+}
+
+// DialogsOrderRsp
+
+// Notifying about dialog open
+// NotifyDialogOpenedReq --> VoidRsp
+message NotifyDialogOpenedReq {
+  // int32 COMMAND_ID = 2785;
+  OutPeer peer = 1; // Peer that was opened
+}
+
+// VoidRsp
+

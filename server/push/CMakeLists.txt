@@ -19,12 +19,16 @@ include_directories(. .. ../../nebula)
 set (SRC_LIST
   push_server.cc
   push_server.h
+  zrpc_push_dispatcher.cc
+  zrpc_push_dispatcher.h
   zrpc_push_service.cc
   zrpc_push_service.h
   gate_channel_handler.cc
   gate_channel_handler.h
   gate_channel_manager.cc
   gate_channel_manager.h
+  push_service_impl.cc
+  push_service_impl.h
   )
 
 add_executable (push_server ${SRC_LIST})

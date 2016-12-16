@@ -23,13 +23,9 @@ option java_package = "com.zchat.engine.zproto";
 option java_outer_classname = "ZProto";
 option optimize_for = CODE_SIZE;
 
+import "peers.proto";
+
 message EnumHelper {
-  // PeerType
-  enum PeerType {
-    PeerType_NONE = 0;          // proto3必须要填一个值
-    PRIVATE = 1;                // 单聊
-    GROUP   = 2;                // 群聊
-  }
   
   // ListLoadMode
   enum ListLoadMode {
@@ -182,12 +178,6 @@ message UserInfo {
   string push_name  = 3;
   string avatar     = 4;
 };
-
-// Peer
-message Peer {
-  uint32 type        = 1; // Peer Type
-  string id          = 2;  // Peer Id
-}
 
 // 会话ID
 //message ConversationID {
