@@ -27,7 +27,7 @@ public:
   ZRpcPushDispatcher();
   ~ZRpcPushDispatcher() = default;
   
-  static ProtoRpcResponsePtr ForwardMessage(RpcRequestPtr request);
+  static ProtoRpcResponsePtr DeliveryDataToUsers(RpcRequestPtr request);
 };
 
 #endif // PUSH_ZRPC_PUSH_DISPATCHER_H_

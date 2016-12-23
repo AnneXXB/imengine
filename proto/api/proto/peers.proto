@@ -28,9 +28,9 @@ option optimize_for = CODE_SIZE;
 
 // PeerType
 enum PeerType {
-  PT_PRIVATE = 0;
-  PT_GROUP = 1;
-  PT_ENCRYPTED_PRIVATE = 2;
+  PEER_TYPE_PRIVATE = 0;
+  PEER_TYPE_GROUP = 1;
+  PEER_TYPE_ENCRYPTED_PRIVATE = 2;
 }
 
 // Peer

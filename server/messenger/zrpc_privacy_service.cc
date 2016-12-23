@@ -17,21 +17,21 @@
 
 // TODO(@benqi): 使用zrpc-code-gen代码生成工具自动生成
 
-#include "messenger/messenger_server.h"
+#include "messenger/zrpc_privacy_service.h"
 
-// #include "nebula/base/timer_manager.h"
+#include "nebula/base/logger/glog_util.h"
 
-bool MessengerServer::Initialize() {
-  // RegisterService("tcpd", "tcp_server");
-  RegisterService("messenger_server", "rpc_server", "zrpc");
-  RegisterService("push_client", "rpc_client", "zrpc");
-
-  BaseServer::Initialize();
-  
-  return true;
+int ZRpcPrivacyService::BlockUser(const zproto::BlockUserReq& request, zproto::SeqRsp* response) {
+  LOG(ERROR) << "ZRpcPrivacyService - BlockUser unimplemented";
+  return -1;
 }
 
+int ZRpcPrivacyService::UnblockUser(const zproto::UnblockUserReq& request, zproto::SeqRsp* response) {
+  LOG(ERROR) << "ZRpcPrivacyService - UnblockUser unimplemented";
+  return -1;
+}
 
-int main(int argc, char* argv[]) {
-    return nebula::DoMain<MessengerServer>(argc, argv);
+int ZRpcPrivacyService::LoadBlockedUsers(const zproto::LoadBlockedUsersReq& request, zproto::LoadBlockedUsersRsp* response) {
+  LOG(ERROR) << "ZRpcPrivacyService - LoadBlockedUsers unimplemented";
+  return -1;
 }

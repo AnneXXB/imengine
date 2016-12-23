@@ -20,8 +20,11 @@ syntax = "proto3";
 package zproto;
 
 option java_package = "com.zchat.engine.zproto";
-option java_outer_classname = "ZProto";
+option java_outer_classname = "ZProtoServers";
 option optimize_for = CODE_SIZE;
+
+// import "messaging_base.proto";
+// import "misc.proto";
 
 ///////////////////////////////////////////////////////////////////////
 // server_auth
@@ -35,3 +38,12 @@ message ServerAuthReq {
 message ServerAuthRsp {
 }
 
+//
+message DeliveryDataToUsersReq {
+  uint64 my_conn_id = 1;
+  repeated string  uid_list = 2;
+  uint32 raw_data_header = 4;
+  bytes  raw_data = 5;
+}
+
+// VoidRsp

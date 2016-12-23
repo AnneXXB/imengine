@@ -27,7 +27,7 @@ public:
   PushServiceImpl() = default;
   ~PushServiceImpl() = default;
   
-  // int ForwardMessage(const zproto::ForwardMessageReq& request, zproto::VoidRsp* response) override;
+  int DeliveryDataToUsers(const zproto::DeliveryDataToUsersReq& request, zproto::VoidRsp* response) override;
   
 };
 

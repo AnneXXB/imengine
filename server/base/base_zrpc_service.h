@@ -15,22 +15,44 @@
  * limitations under the License.
  */
 
-// TODO(@benqi): 使用zrpc-code-gen代码生成工具自动生成
+#ifndef	BASE_BASE_ZRPC_ZRPC_SERVICE_H_
+#define	BASE_BASE_ZRPC_ZRPC_SERVICE_H_
 
-#ifndef	PUSH_ZRPC_PUSH_SERVICE_H_
-#define	PUSH_ZRPC_PUSH_SERVICE_H_
-
-// #include "proto/zproto/zproto_api_message_types.h"
-#include "proto/api/cc/misc.pb.h"
-#include "proto/s2s/cc/servers.pb.h"
 #include "nebula/net/zproto/api_message_box.h"
 
-class ZRpcPushService {
+class BaseZRpcService {
 public:
-  virtual ~ZRpcPushService() = default;
+  enum AttachDataType {
+    UID   = 0,
+    APPID,
+    // TODO(@benqi):
+    //  设备信息等
+    MAX,
+  };
   
-  virtual int DeliveryDataToUsers(const zproto::DeliveryDataToUsersReq& request, zproto::VoidRsp* response);
+  virtual ~BaseZRpcService() = default;
+
+  virtual bool Initialize(RpcRequestPtr v);
   
+  uint64_t session_id() const {
+    return rpc_request_->session_id();
+  }
+  
+  const std::string& uid() const {
+    return *rpc_request_->attach_data.options[UID].data.s;
+  }
+
+  uint32_t app_id() const {
+    return static_cast<uint32_t>(rpc_request_->attach_data.options[APPID].data.n);
+  }
+
+  uint64_t conn_id() const {
+    return rpc_request_->birth_conn_id();
+  }
+
+protected:
+  RpcRequestPtr rpc_request_;
 };
 
 #endif
+

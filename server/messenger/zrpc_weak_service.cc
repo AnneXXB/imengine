@@ -17,21 +17,16 @@
 
 // TODO(@benqi): 使用zrpc-code-gen代码生成工具自动生成
 
-#include "messenger/messenger_server.h"
+#include "messenger/zrpc_weak_service.h"
 
-// #include "nebula/base/timer_manager.h"
+#include "nebula/base/logger/glog_util.h"
 
-bool MessengerServer::Initialize() {
-  // RegisterService("tcpd", "tcp_server");
-  RegisterService("messenger_server", "rpc_server", "zrpc");
-  RegisterService("push_client", "rpc_client", "zrpc");
-
-  BaseServer::Initialize();
-  
-  return true;
+int ZRpcWeakService::Typing(const zproto::TypingReq& request, zproto::VoidRsp* response) {
+  LOG(ERROR) << "ZRpcWeakService - Typing unimplemented";
+  return -1;
 }
 
-
-int main(int argc, char* argv[]) {
-    return nebula::DoMain<MessengerServer>(argc, argv);
+int ZRpcWeakService::StopTyping(const zproto::StopTypingReq& request, zproto::VoidRsp* response) {
+  LOG(ERROR) << "ZRpcWeakService - StopTyping unimplemented";
+  return -1;
 }

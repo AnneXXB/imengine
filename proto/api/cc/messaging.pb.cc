@@ -24,9 +24,6 @@ namespace {
 const ::google::protobuf::Descriptor* SendMessageReq_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   SendMessageReq_reflection_ = NULL;
-const ::google::protobuf::Descriptor* UpdateMessageReq_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  UpdateMessageReq_reflection_ = NULL;
 const ::google::protobuf::Descriptor* MessageReceivedReq_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   MessageReceivedReq_reflection_ = NULL;
@@ -42,12 +39,6 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* DeleteChatReq_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   DeleteChatReq_reflection_ = NULL;
-const ::google::protobuf::Descriptor* ArchiveChatReq_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  ArchiveChatReq_reflection_ = NULL;
-const ::google::protobuf::Descriptor* MessageSetReactionReq_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  MessageSetReactionReq_reflection_ = NULL;
 const ::google::protobuf::Descriptor* MessageNotify_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   MessageNotify_reflection_ = NULL;
@@ -78,12 +69,6 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* ChatDeleteNotify_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   ChatDeleteNotify_reflection_ = NULL;
-const ::google::protobuf::Descriptor* ChatArchiveNotify_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  ChatArchiveNotify_reflection_ = NULL;
-const ::google::protobuf::Descriptor* ChatDropCacheNotify_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  ChatDropCacheNotify_reflection_ = NULL;
 const ::google::protobuf::Descriptor* ChatGroupsChangedNotify_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   ChatGroupsChangedNotify_reflection_ = NULL;
@@ -99,36 +84,12 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* LoadDialogsRsp_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   LoadDialogsRsp_reflection_ = NULL;
-const ::google::protobuf::Descriptor* LoadArchivedReq_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  LoadArchivedReq_reflection_ = NULL;
-const ::google::protobuf::Descriptor* LoadArchivedRsp_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  LoadArchivedRsp_reflection_ = NULL;
 const ::google::protobuf::Descriptor* LoadGroupedDialogsReq_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   LoadGroupedDialogsReq_reflection_ = NULL;
 const ::google::protobuf::Descriptor* LoadGroupedDialogsRsp_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   LoadGroupedDialogsRsp_reflection_ = NULL;
-const ::google::protobuf::Descriptor* DialogsOrderRsp_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  DialogsOrderRsp_reflection_ = NULL;
-const ::google::protobuf::Descriptor* HideDialogReq_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  HideDialogReq_reflection_ = NULL;
-const ::google::protobuf::Descriptor* ShowDialogReq_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  ShowDialogReq_reflection_ = NULL;
-const ::google::protobuf::Descriptor* FavouriteDialogReq_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  FavouriteDialogReq_reflection_ = NULL;
-const ::google::protobuf::Descriptor* UnfavouriteDialogReq_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  UnfavouriteDialogReq_reflection_ = NULL;
-const ::google::protobuf::Descriptor* NotifyDialogOpenedReq_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  NotifyDialogOpenedReq_reflection_ = NULL;
 
 }  // namespace
 
@@ -158,24 +119,7 @@ void protobuf_AssignDesc_messaging_2eproto() {
       sizeof(SendMessageReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SendMessageReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SendMessageReq, _is_default_instance_));
-  UpdateMessageReq_descriptor_ = file->message_type(1);
-  static const int UpdateMessageReq_offsets_[3] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UpdateMessageReq, peer_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UpdateMessageReq, rid_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UpdateMessageReq, updated_message_),
-  };
-  UpdateMessageReq_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      UpdateMessageReq_descriptor_,
-      UpdateMessageReq::default_instance_,
-      UpdateMessageReq_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(UpdateMessageReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UpdateMessageReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UpdateMessageReq, _is_default_instance_));
-  MessageReceivedReq_descriptor_ = file->message_type(2);
+  MessageReceivedReq_descriptor_ = file->message_type(1);
   static const int MessageReceivedReq_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReceivedReq, peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReceivedReq, date_),
@@ -191,7 +135,7 @@ void protobuf_AssignDesc_messaging_2eproto() {
       sizeof(MessageReceivedReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReceivedReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReceivedReq, _is_default_instance_));
-  MessageReadReq_descriptor_ = file->message_type(3);
+  MessageReadReq_descriptor_ = file->message_type(2);
   static const int MessageReadReq_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadReq, peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadReq, date_),
@@ -207,7 +151,7 @@ void protobuf_AssignDesc_messaging_2eproto() {
       sizeof(MessageReadReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadReq, _is_default_instance_));
-  DeleteMessageReq_descriptor_ = file->message_type(4);
+  DeleteMessageReq_descriptor_ = file->message_type(3);
   static const int DeleteMessageReq_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeleteMessageReq, peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeleteMessageReq, rids_),
@@ -223,7 +167,7 @@ void protobuf_AssignDesc_messaging_2eproto() {
       sizeof(DeleteMessageReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeleteMessageReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeleteMessageReq, _is_default_instance_));
-  ClearChatReq_descriptor_ = file->message_type(5);
+  ClearChatReq_descriptor_ = file->message_type(4);
   static const int ClearChatReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClearChatReq, peer_),
   };
@@ -238,7 +182,7 @@ void protobuf_AssignDesc_messaging_2eproto() {
       sizeof(ClearChatReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClearChatReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClearChatReq, _is_default_instance_));
-  DeleteChatReq_descriptor_ = file->message_type(6);
+  DeleteChatReq_descriptor_ = file->message_type(5);
   static const int DeleteChatReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeleteChatReq, peer_),
   };
@@ -253,39 +197,7 @@ void protobuf_AssignDesc_messaging_2eproto() {
       sizeof(DeleteChatReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeleteChatReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeleteChatReq, _is_default_instance_));
-  ArchiveChatReq_descriptor_ = file->message_type(7);
-  static const int ArchiveChatReq_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ArchiveChatReq, peer_),
-  };
-  ArchiveChatReq_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      ArchiveChatReq_descriptor_,
-      ArchiveChatReq::default_instance_,
-      ArchiveChatReq_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(ArchiveChatReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ArchiveChatReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ArchiveChatReq, _is_default_instance_));
-  MessageSetReactionReq_descriptor_ = file->message_type(8);
-  static const int MessageSetReactionReq_offsets_[3] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageSetReactionReq, peer_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageSetReactionReq, rid_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageSetReactionReq, code_),
-  };
-  MessageSetReactionReq_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      MessageSetReactionReq_descriptor_,
-      MessageSetReactionReq::default_instance_,
-      MessageSetReactionReq_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(MessageSetReactionReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageSetReactionReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageSetReactionReq, _is_default_instance_));
-  MessageNotify_descriptor_ = file->message_type(9);
+  MessageNotify_descriptor_ = file->message_type(6);
   static const int MessageNotify_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageNotify, peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageNotify, sender_uid_),
@@ -304,7 +216,7 @@ void protobuf_AssignDesc_messaging_2eproto() {
       sizeof(MessageNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageNotify, _is_default_instance_));
-  MessageContentChangedNotify_descriptor_ = file->message_type(10);
+  MessageContentChangedNotify_descriptor_ = file->message_type(7);
   static const int MessageContentChangedNotify_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageContentChangedNotify, peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageContentChangedNotify, rid_),
@@ -321,7 +233,7 @@ void protobuf_AssignDesc_messaging_2eproto() {
       sizeof(MessageContentChangedNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageContentChangedNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageContentChangedNotify, _is_default_instance_));
-  MessageDateChangedNotify_descriptor_ = file->message_type(11);
+  MessageDateChangedNotify_descriptor_ = file->message_type(8);
   static const int MessageDateChangedNotify_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageDateChangedNotify, peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageDateChangedNotify, rid_),
@@ -338,7 +250,7 @@ void protobuf_AssignDesc_messaging_2eproto() {
       sizeof(MessageDateChangedNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageDateChangedNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageDateChangedNotify, _is_default_instance_));
-  MessageSentNotify_descriptor_ = file->message_type(12);
+  MessageSentNotify_descriptor_ = file->message_type(9);
   static const int MessageSentNotify_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageSentNotify, peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageSentNotify, rid_),
@@ -355,7 +267,7 @@ void protobuf_AssignDesc_messaging_2eproto() {
       sizeof(MessageSentNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageSentNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageSentNotify, _is_default_instance_));
-  MessageReceivedNotify_descriptor_ = file->message_type(13);
+  MessageReceivedNotify_descriptor_ = file->message_type(10);
   static const int MessageReceivedNotify_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReceivedNotify, peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReceivedNotify, start_date_),
@@ -372,7 +284,7 @@ void protobuf_AssignDesc_messaging_2eproto() {
       sizeof(MessageReceivedNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReceivedNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReceivedNotify, _is_default_instance_));
-  MessageReadNotify_descriptor_ = file->message_type(14);
+  MessageReadNotify_descriptor_ = file->message_type(11);
   static const int MessageReadNotify_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadNotify, peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadNotify, start_date_),
@@ -389,7 +301,7 @@ void protobuf_AssignDesc_messaging_2eproto() {
       sizeof(MessageReadNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadNotify, _is_default_instance_));
-  MessageReadByMeNotify_descriptor_ = file->message_type(15);
+  MessageReadByMeNotify_descriptor_ = file->message_type(12);
   static const int MessageReadByMeNotify_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadByMeNotify, peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadByMeNotify, start_date_),
@@ -406,7 +318,7 @@ void protobuf_AssignDesc_messaging_2eproto() {
       sizeof(MessageReadByMeNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadByMeNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadByMeNotify, _is_default_instance_));
-  MessageDeleteNotify_descriptor_ = file->message_type(16);
+  MessageDeleteNotify_descriptor_ = file->message_type(13);
   static const int MessageDeleteNotify_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageDeleteNotify, peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageDeleteNotify, rids_),
@@ -422,7 +334,7 @@ void protobuf_AssignDesc_messaging_2eproto() {
       sizeof(MessageDeleteNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageDeleteNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageDeleteNotify, _is_default_instance_));
-  ChatClearNotify_descriptor_ = file->message_type(17);
+  ChatClearNotify_descriptor_ = file->message_type(14);
   static const int ChatClearNotify_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatClearNotify, peer_),
   };
@@ -437,7 +349,7 @@ void protobuf_AssignDesc_messaging_2eproto() {
       sizeof(ChatClearNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatClearNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatClearNotify, _is_default_instance_));
-  ChatDeleteNotify_descriptor_ = file->message_type(18);
+  ChatDeleteNotify_descriptor_ = file->message_type(15);
   static const int ChatDeleteNotify_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatDeleteNotify, peer_),
   };
@@ -452,37 +364,7 @@ void protobuf_AssignDesc_messaging_2eproto() {
       sizeof(ChatDeleteNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatDeleteNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatDeleteNotify, _is_default_instance_));
-  ChatArchiveNotify_descriptor_ = file->message_type(19);
-  static const int ChatArchiveNotify_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatArchiveNotify, peer_),
-  };
-  ChatArchiveNotify_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      ChatArchiveNotify_descriptor_,
-      ChatArchiveNotify::default_instance_,
-      ChatArchiveNotify_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(ChatArchiveNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatArchiveNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatArchiveNotify, _is_default_instance_));
-  ChatDropCacheNotify_descriptor_ = file->message_type(20);
-  static const int ChatDropCacheNotify_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatDropCacheNotify, peer_),
-  };
-  ChatDropCacheNotify_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      ChatDropCacheNotify_descriptor_,
-      ChatDropCacheNotify::default_instance_,
-      ChatDropCacheNotify_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(ChatDropCacheNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatDropCacheNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatDropCacheNotify, _is_default_instance_));
-  ChatGroupsChangedNotify_descriptor_ = file->message_type(21);
+  ChatGroupsChangedNotify_descriptor_ = file->message_type(16);
   static const int ChatGroupsChangedNotify_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatGroupsChangedNotify, dialogs_),
   };
@@ -497,7 +379,7 @@ void protobuf_AssignDesc_messaging_2eproto() {
       sizeof(ChatGroupsChangedNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatGroupsChangedNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatGroupsChangedNotify, _is_default_instance_));
-  LoadHistoryReq_descriptor_ = file->message_type(22);
+  LoadHistoryReq_descriptor_ = file->message_type(17);
   static const int LoadHistoryReq_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryReq, peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryReq, date_),
@@ -516,7 +398,7 @@ void protobuf_AssignDesc_messaging_2eproto() {
       sizeof(LoadHistoryReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryReq, _is_default_instance_));
-  LoadHistoryRsp_descriptor_ = file->message_type(23);
+  LoadHistoryRsp_descriptor_ = file->message_type(18);
   static const int LoadHistoryRsp_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryRsp, history_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryRsp, users_),
@@ -535,7 +417,7 @@ void protobuf_AssignDesc_messaging_2eproto() {
       sizeof(LoadHistoryRsp),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryRsp, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryRsp, _is_default_instance_));
-  LoadDialogsReq_descriptor_ = file->message_type(24);
+  LoadDialogsReq_descriptor_ = file->message_type(19);
   static const int LoadDialogsReq_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadDialogsReq, min_date_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadDialogsReq, limit_),
@@ -552,7 +434,7 @@ void protobuf_AssignDesc_messaging_2eproto() {
       sizeof(LoadDialogsReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadDialogsReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadDialogsReq, _is_default_instance_));
-  LoadDialogsRsp_descriptor_ = file->message_type(25);
+  LoadDialogsRsp_descriptor_ = file->message_type(20);
   static const int LoadDialogsRsp_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadDialogsRsp, groups_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadDialogsRsp, users_),
@@ -571,44 +453,7 @@ void protobuf_AssignDesc_messaging_2eproto() {
       sizeof(LoadDialogsRsp),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadDialogsRsp, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadDialogsRsp, _is_default_instance_));
-  LoadArchivedReq_descriptor_ = file->message_type(26);
-  static const int LoadArchivedReq_offsets_[3] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadArchivedReq, next_offset_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadArchivedReq, limit_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadArchivedReq, optimizations_),
-  };
-  LoadArchivedReq_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      LoadArchivedReq_descriptor_,
-      LoadArchivedReq::default_instance_,
-      LoadArchivedReq_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(LoadArchivedReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadArchivedReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadArchivedReq, _is_default_instance_));
-  LoadArchivedRsp_descriptor_ = file->message_type(27);
-  static const int LoadArchivedRsp_offsets_[6] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadArchivedRsp, groups_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadArchivedRsp, users_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadArchivedRsp, dialogs_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadArchivedRsp, user_peers_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadArchivedRsp, group_peers_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadArchivedRsp, next_offset_),
-  };
-  LoadArchivedRsp_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      LoadArchivedRsp_descriptor_,
-      LoadArchivedRsp::default_instance_,
-      LoadArchivedRsp_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(LoadArchivedRsp),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadArchivedRsp, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadArchivedRsp, _is_default_instance_));
-  LoadGroupedDialogsReq_descriptor_ = file->message_type(28);
+  LoadGroupedDialogsReq_descriptor_ = file->message_type(21);
   static const int LoadGroupedDialogsReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadGroupedDialogsReq, optimizations_),
   };
@@ -623,7 +468,7 @@ void protobuf_AssignDesc_messaging_2eproto() {
       sizeof(LoadGroupedDialogsReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadGroupedDialogsReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadGroupedDialogsReq, _is_default_instance_));
-  LoadGroupedDialogsRsp_descriptor_ = file->message_type(29);
+  LoadGroupedDialogsRsp_descriptor_ = file->message_type(22);
   static const int LoadGroupedDialogsRsp_offsets_[7] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadGroupedDialogsRsp, dialogs_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadGroupedDialogsRsp, users_),
@@ -644,98 +489,6 @@ void protobuf_AssignDesc_messaging_2eproto() {
       sizeof(LoadGroupedDialogsRsp),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadGroupedDialogsRsp, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadGroupedDialogsRsp, _is_default_instance_));
-  DialogsOrderRsp_descriptor_ = file->message_type(30);
-  static const int DialogsOrderRsp_offsets_[3] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DialogsOrderRsp, seq_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DialogsOrderRsp, state_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DialogsOrderRsp, groups_),
-  };
-  DialogsOrderRsp_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      DialogsOrderRsp_descriptor_,
-      DialogsOrderRsp::default_instance_,
-      DialogsOrderRsp_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(DialogsOrderRsp),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DialogsOrderRsp, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DialogsOrderRsp, _is_default_instance_));
-  HideDialogReq_descriptor_ = file->message_type(31);
-  static const int HideDialogReq_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HideDialogReq, peer_),
-  };
-  HideDialogReq_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      HideDialogReq_descriptor_,
-      HideDialogReq::default_instance_,
-      HideDialogReq_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(HideDialogReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HideDialogReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HideDialogReq, _is_default_instance_));
-  ShowDialogReq_descriptor_ = file->message_type(32);
-  static const int ShowDialogReq_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShowDialogReq, peer_),
-  };
-  ShowDialogReq_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      ShowDialogReq_descriptor_,
-      ShowDialogReq::default_instance_,
-      ShowDialogReq_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(ShowDialogReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShowDialogReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShowDialogReq, _is_default_instance_));
-  FavouriteDialogReq_descriptor_ = file->message_type(33);
-  static const int FavouriteDialogReq_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FavouriteDialogReq, peer_),
-  };
-  FavouriteDialogReq_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      FavouriteDialogReq_descriptor_,
-      FavouriteDialogReq::default_instance_,
-      FavouriteDialogReq_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(FavouriteDialogReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FavouriteDialogReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FavouriteDialogReq, _is_default_instance_));
-  UnfavouriteDialogReq_descriptor_ = file->message_type(34);
-  static const int UnfavouriteDialogReq_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UnfavouriteDialogReq, peer_),
-  };
-  UnfavouriteDialogReq_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      UnfavouriteDialogReq_descriptor_,
-      UnfavouriteDialogReq::default_instance_,
-      UnfavouriteDialogReq_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(UnfavouriteDialogReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UnfavouriteDialogReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UnfavouriteDialogReq, _is_default_instance_));
-  NotifyDialogOpenedReq_descriptor_ = file->message_type(35);
-  static const int NotifyDialogOpenedReq_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(NotifyDialogOpenedReq, peer_),
-  };
-  NotifyDialogOpenedReq_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      NotifyDialogOpenedReq_descriptor_,
-      NotifyDialogOpenedReq::default_instance_,
-      NotifyDialogOpenedReq_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(NotifyDialogOpenedReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(NotifyDialogOpenedReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(NotifyDialogOpenedReq, _is_default_instance_));
 }
 
 namespace {
@@ -752,8 +505,6 @@ void protobuf_RegisterTypes(const ::std::string&) {
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       SendMessageReq_descriptor_, &SendMessageReq::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      UpdateMessageReq_descriptor_, &UpdateMessageReq::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       MessageReceivedReq_descriptor_, &MessageReceivedReq::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       MessageReadReq_descriptor_, &MessageReadReq::default_instance());
@@ -763,10 +514,6 @@ void protobuf_RegisterTypes(const ::std::string&) {
       ClearChatReq_descriptor_, &ClearChatReq::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       DeleteChatReq_descriptor_, &DeleteChatReq::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      ArchiveChatReq_descriptor_, &ArchiveChatReq::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MessageSetReactionReq_descriptor_, &MessageSetReactionReq::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       MessageNotify_descriptor_, &MessageNotify::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
@@ -788,10 +535,6 @@ void protobuf_RegisterTypes(const ::std::string&) {
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       ChatDeleteNotify_descriptor_, &ChatDeleteNotify::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      ChatArchiveNotify_descriptor_, &ChatArchiveNotify::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      ChatDropCacheNotify_descriptor_, &ChatDropCacheNotify::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       ChatGroupsChangedNotify_descriptor_, &ChatGroupsChangedNotify::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       LoadHistoryReq_descriptor_, &LoadHistoryReq::default_instance());
@@ -802,25 +545,9 @@ void protobuf_RegisterTypes(const ::std::string&) {
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       LoadDialogsRsp_descriptor_, &LoadDialogsRsp::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      LoadArchivedReq_descriptor_, &LoadArchivedReq::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      LoadArchivedRsp_descriptor_, &LoadArchivedRsp::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       LoadGroupedDialogsReq_descriptor_, &LoadGroupedDialogsReq::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       LoadGroupedDialogsRsp_descriptor_, &LoadGroupedDialogsRsp::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      DialogsOrderRsp_descriptor_, &DialogsOrderRsp::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      HideDialogReq_descriptor_, &HideDialogReq::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      ShowDialogReq_descriptor_, &ShowDialogReq::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      FavouriteDialogReq_descriptor_, &FavouriteDialogReq::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      UnfavouriteDialogReq_descriptor_, &UnfavouriteDialogReq::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      NotifyDialogOpenedReq_descriptor_, &NotifyDialogOpenedReq::default_instance());
 }
 
 }  // namespace
@@ -828,8 +555,6 @@ void protobuf_RegisterTypes(const ::std::string&) {
 void protobuf_ShutdownFile_messaging_2eproto() {
   delete SendMessageReq::default_instance_;
   delete SendMessageReq_reflection_;
-  delete UpdateMessageReq::default_instance_;
-  delete UpdateMessageReq_reflection_;
   delete MessageReceivedReq::default_instance_;
   delete MessageReceivedReq_reflection_;
   delete MessageReadReq::default_instance_;
@@ -840,10 +565,6 @@ void protobuf_ShutdownFile_messaging_2eproto() {
   delete ClearChatReq_reflection_;
   delete DeleteChatReq::default_instance_;
   delete DeleteChatReq_reflection_;
-  delete ArchiveChatReq::default_instance_;
-  delete ArchiveChatReq_reflection_;
-  delete MessageSetReactionReq::default_instance_;
-  delete MessageSetReactionReq_reflection_;
   delete MessageNotify::default_instance_;
   delete MessageNotify_reflection_;
   delete MessageContentChangedNotify::default_instance_;
@@ -864,10 +585,6 @@ void protobuf_ShutdownFile_messaging_2eproto() {
   delete ChatClearNotify_reflection_;
   delete ChatDeleteNotify::default_instance_;
   delete ChatDeleteNotify_reflection_;
-  delete ChatArchiveNotify::default_instance_;
-  delete ChatArchiveNotify_reflection_;
-  delete ChatDropCacheNotify::default_instance_;
-  delete ChatDropCacheNotify_reflection_;
   delete ChatGroupsChangedNotify::default_instance_;
   delete ChatGroupsChangedNotify_reflection_;
   delete LoadHistoryReq::default_instance_;
@@ -878,26 +595,10 @@ void protobuf_ShutdownFile_messaging_2eproto() {
   delete LoadDialogsReq_reflection_;
   delete LoadDialogsRsp::default_instance_;
   delete LoadDialogsRsp_reflection_;
-  delete LoadArchivedReq::default_instance_;
-  delete LoadArchivedReq_reflection_;
-  delete LoadArchivedRsp::default_instance_;
-  delete LoadArchivedRsp_reflection_;
   delete LoadGroupedDialogsReq::default_instance_;
   delete LoadGroupedDialogsReq_reflection_;
   delete LoadGroupedDialogsRsp::default_instance_;
   delete LoadGroupedDialogsRsp_reflection_;
-  delete DialogsOrderRsp::default_instance_;
-  delete DialogsOrderRsp_reflection_;
-  delete HideDialogReq::default_instance_;
-  delete HideDialogReq_reflection_;
-  delete ShowDialogReq::default_instance_;
-  delete ShowDialogReq_reflection_;
-  delete FavouriteDialogReq::default_instance_;
-  delete FavouriteDialogReq_reflection_;
-  delete UnfavouriteDialogReq::default_instance_;
-  delete UnfavouriteDialogReq_reflection_;
-  delete NotifyDialogOpenedReq::default_instance_;
-  delete NotifyDialogOpenedReq_reflection_;
 }
 
 void protobuf_AddDesc_messaging_2eproto() GOOGLE_ATTRIBUTE_COLD;
@@ -907,111 +608,83 @@ void protobuf_AddDesc_messaging_2eproto() {
   already_here = true;
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+  ::zproto::protobuf_AddDesc_misc_2eproto();
   ::zproto::protobuf_AddDesc_peers_2eproto();
   ::zproto::protobuf_AddDesc_users_2eproto();
   ::zproto::protobuf_AddDesc_group_5fbase_2eproto();
-  ::zproto::protobuf_AddDesc_sequence_5fbase_2eproto();
   ::zproto::protobuf_AddDesc_messaging_5fbase_2eproto();
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\017messaging.proto\022\006zproto\032\013peers.proto\032\013"
-    "users.proto\032\020group_base.proto\032\023sequence_"
-    "base.proto\032\024messaging_base.proto\"\177\n\016Send"
-    "MessageReq\022\035\n\004peer\030\001 \001(\0132\017.zproto.OutPee"
-    "r\022\013\n\003rid\030\002 \001(\003\022\'\n\007message\030\003 \001(\0132\026.zproto"
-    ".InstantMessage\022\030\n\020passthrough_data\030\004 \001("
-    "\014\"o\n\020UpdateMessageReq\022\035\n\004peer\030\001 \001(\0132\017.zp"
-    "roto.OutPeer\022\013\n\003rid\030\002 \001(\003\022/\n\017updated_mes"
-    "sage\030\003 \001(\0132\026.zproto.InstantMessage\"A\n\022Me"
-    "ssageReceivedReq\022\035\n\004peer\030\001 \001(\0132\017.zproto."
-    "OutPeer\022\014\n\004date\030\003 \001(\003\"=\n\016MessageReadReq\022"
-    "\035\n\004peer\030\001 \001(\0132\017.zproto.OutPeer\022\014\n\004date\030\003"
-    " \001(\003\"\?\n\020DeleteMessageReq\022\035\n\004peer\030\001 \001(\0132\017"
-    ".zproto.OutPeer\022\014\n\004rids\030\003 \003(\003\"-\n\014ClearCh"
-    "atReq\022\035\n\004peer\030\001 \001(\0132\017.zproto.OutPeer\".\n\r"
-    "DeleteChatReq\022\035\n\004peer\030\001 \001(\0132\017.zproto.Out"
-    "Peer\"/\n\016ArchiveChatReq\022\035\n\004peer\030\001 \001(\0132\017.z"
-    "proto.OutPeer\"Q\n\025MessageSetReactionReq\022\035"
-    "\n\004peer\030\001 \001(\0132\017.zproto.OutPeer\022\013\n\003rid\030\002 \001"
-    "(\003\022\014\n\004code\030\003 \001(\t\"\203\001\n\rMessageNotify\022\032\n\004pe"
-    "er\030\001 \001(\0132\014.zproto.Peer\022\022\n\nsender_uid\030\002 \001"
-    "(\t\022\014\n\004date\030\003 \001(\003\022\013\n\003rid\030\004 \001(\003\022\'\n\007message"
-    "\030\005 \001(\0132\026.zproto.InstantMessage\"o\n\033Messag"
-    "eContentChangedNotify\022\032\n\004peer\030\001 \001(\0132\014.zp"
-    "roto.Peer\022\013\n\003rid\030\002 \001(\003\022\'\n\007message\030\003 \001(\0132"
-    "\026.zproto.InstantMessage\"Q\n\030MessageDateCh"
-    "angedNotify\022\032\n\004peer\030\001 \001(\0132\014.zproto.Peer\022"
-    "\013\n\003rid\030\002 \001(\003\022\014\n\004date\030\003 \001(\003\"J\n\021MessageSen"
-    "tNotify\022\032\n\004peer\030\001 \001(\0132\014.zproto.Peer\022\013\n\003r"
-    "id\030\002 \001(\003\022\014\n\004date\030\003 \001(\003\"^\n\025MessageReceive"
-    "dNotify\022\032\n\004peer\030\001 \001(\0132\014.zproto.Peer\022\022\n\ns"
-    "tart_date\030\002 \001(\003\022\025\n\rreceived_date\030\003 \001(\003\"V"
-    "\n\021MessageReadNotify\022\032\n\004peer\030\001 \001(\0132\014.zpro"
-    "to.Peer\022\022\n\nstart_date\030\002 \001(\003\022\021\n\tread_date"
-    "\030\003 \001(\003\"_\n\025MessageReadByMeNotify\022\032\n\004peer\030"
-    "\001 \001(\0132\014.zproto.Peer\022\022\n\nstart_date\030\002 \001(\003\022"
-    "\026\n\016unread_counter\030\003 \001(\005\"\?\n\023MessageDelete"
-    "Notify\022\032\n\004peer\030\001 \001(\0132\014.zproto.Peer\022\014\n\004ri"
-    "ds\030\002 \003(\003\"-\n\017ChatClearNotify\022\032\n\004peer\030\001 \001("
-    "\0132\014.zproto.Peer\".\n\020ChatDeleteNotify\022\032\n\004p"
-    "eer\030\001 \001(\0132\014.zproto.Peer\"/\n\021ChatArchiveNo"
-    "tify\022\032\n\004peer\030\001 \001(\0132\014.zproto.Peer\"1\n\023Chat"
-    "DropCacheNotify\022\032\n\004peer\030\001 \001(\0132\014.zproto.P"
-    "eer\"\?\n\027ChatGroupsChangedNotify\022$\n\007dialog"
-    "s\030\001 \003(\0132\023.zproto.DialogGroup\"\250\001\n\016LoadHis"
-    "toryReq\022\035\n\004peer\030\001 \001(\0132\017.zproto.OutPeer\022\014"
-    "\n\004date\030\003 \001(\003\022\'\n\tload_mode\030\005 \001(\0162\024.zproto"
-    ".ListLoadMode\022\r\n\005limit\030\004 \001(\005\0221\n\roptimiza"
-    "tions\030\006 \003(\0162\032.zproto.UpdateOptimization\""
-    "\313\001\n\016LoadHistoryRsp\022)\n\007history\030\001 \003(\0132\030.zp"
-    "roto.MessageContainer\022\033\n\005users\030\002 \003(\0132\014.z"
-    "proto.User\022\'\n\nuser_peers\030\004 \003(\0132\023.zproto."
-    "UserOutPeer\022\035\n\006groups\030\005 \003(\0132\r.zproto.Gro"
-    "up\022)\n\013group_peers\030\006 \003(\0132\024.zproto.GroupOu"
-    "tPeer\"d\n\016LoadDialogsReq\022\020\n\010min_date\030\001 \001("
-    "\003\022\r\n\005limit\030\002 \001(\005\0221\n\roptimizations\030\003 \003(\0162"
-    "\032.zproto.UpdateOptimization\"\301\001\n\016LoadDial"
-    "ogsRsp\022\035\n\006groups\030\001 \003(\0132\r.zproto.Group\022\033\n"
-    "\005users\030\002 \003(\0132\014.zproto.User\022\037\n\007dialogs\030\003 "
-    "\003(\0132\016.zproto.Dialog\022\'\n\nuser_peers\030\004 \003(\0132"
-    "\023.zproto.UserOutPeer\022)\n\013group_peers\030\005 \003("
-    "\0132\024.zproto.GroupOutPeer\"h\n\017LoadArchivedR"
-    "eq\022\023\n\013next_offset\030\001 \001(\014\022\r\n\005limit\030\002 \001(\005\0221"
-    "\n\roptimizations\030\003 \003(\0162\032.zproto.UpdateOpt"
-    "imization\"\327\001\n\017LoadArchivedRsp\022\035\n\006groups\030"
-    "\001 \003(\0132\r.zproto.Group\022\033\n\005users\030\002 \003(\0132\014.zp"
-    "roto.User\022\037\n\007dialogs\030\003 \003(\0132\016.zproto.Dial"
-    "og\022\'\n\nuser_peers\030\005 \003(\0132\023.zproto.UserOutP"
-    "eer\022)\n\013group_peers\030\006 \003(\0132\024.zproto.GroupO"
-    "utPeer\022\023\n\013next_offset\030\004 \001(\014\"J\n\025LoadGroup"
-    "edDialogsReq\0221\n\roptimizations\030\001 \003(\0162\032.zp"
-    "roto.UpdateOptimization\"\371\001\n\025LoadGroupedD"
-    "ialogsRsp\022$\n\007dialogs\030\001 \003(\0132\023.zproto.Dial"
-    "ogGroup\022\033\n\005users\030\002 \003(\0132\014.zproto.User\022\035\n\006"
-    "groups\030\003 \003(\0132\r.zproto.Group\022\025\n\rshow_arch"
-    "ived\030\004 \001(\010\022\023\n\013show_invite\030\005 \001(\010\022\'\n\nuser_"
-    "peers\030\006 \003(\0132\023.zproto.UserOutPeer\022)\n\013grou"
-    "p_peers\030\007 \003(\0132\024.zproto.GroupOutPeer\"R\n\017D"
-    "ialogsOrderRsp\022\013\n\003seq\030\001 \001(\005\022\r\n\005state\030\002 \001"
-    "(\014\022#\n\006groups\030\003 \003(\0132\023.zproto.DialogGroup\""
-    ".\n\rHideDialogReq\022\035\n\004peer\030\001 \001(\0132\017.zproto."
-    "OutPeer\".\n\rShowDialogReq\022\035\n\004peer\030\001 \001(\0132\017"
-    ".zproto.OutPeer\"3\n\022FavouriteDialogReq\022\035\n"
-    "\004peer\030\001 \001(\0132\017.zproto.OutPeer\"5\n\024Unfavour"
-    "iteDialogReq\022\035\n\004peer\030\001 \001(\0132\017.zproto.OutP"
-    "eer\"6\n\025NotifyDialogOpenedReq\022\035\n\004peer\030\001 \001"
-    "(\0132\017.zproto.OutPeerB,\n\027com.zchat.engine."
-    "zprotoB\017ZProtoMessagingH\002b\006proto3", 3513);
+    "\n\017messaging.proto\022\006zproto\032\nmisc.proto\032\013p"
+    "eers.proto\032\013users.proto\032\020group_base.prot"
+    "o\032\024messaging_base.proto\"\177\n\016SendMessageRe"
+    "q\022\035\n\004peer\030\001 \001(\0132\017.zproto.OutPeer\022\013\n\003rid\030"
+    "\002 \001(\003\022\'\n\007message\030\003 \001(\0132\026.zproto.InstantM"
+    "essage\022\030\n\020passthrough_data\030\004 \001(\014\"A\n\022Mess"
+    "ageReceivedReq\022\035\n\004peer\030\001 \001(\0132\017.zproto.Ou"
+    "tPeer\022\014\n\004date\030\003 \001(\003\"=\n\016MessageReadReq\022\035\n"
+    "\004peer\030\001 \001(\0132\017.zproto.OutPeer\022\014\n\004date\030\003 \001"
+    "(\003\"\?\n\020DeleteMessageReq\022\035\n\004peer\030\001 \001(\0132\017.z"
+    "proto.OutPeer\022\014\n\004rids\030\003 \003(\003\"-\n\014ClearChat"
+    "Req\022\035\n\004peer\030\001 \001(\0132\017.zproto.OutPeer\".\n\rDe"
+    "leteChatReq\022\035\n\004peer\030\001 \001(\0132\017.zproto.OutPe"
+    "er\"\203\001\n\rMessageNotify\022\032\n\004peer\030\001 \001(\0132\014.zpr"
+    "oto.Peer\022\022\n\nsender_uid\030\002 \001(\t\022\014\n\004date\030\003 \001"
+    "(\003\022\013\n\003rid\030\004 \001(\003\022\'\n\007message\030\005 \001(\0132\026.zprot"
+    "o.InstantMessage\"o\n\033MessageContentChange"
+    "dNotify\022\032\n\004peer\030\001 \001(\0132\014.zproto.Peer\022\013\n\003r"
+    "id\030\002 \001(\003\022\'\n\007message\030\003 \001(\0132\026.zproto.Insta"
+    "ntMessage\"Q\n\030MessageDateChangedNotify\022\032\n"
+    "\004peer\030\001 \001(\0132\014.zproto.Peer\022\013\n\003rid\030\002 \001(\003\022\014"
+    "\n\004date\030\003 \001(\003\"J\n\021MessageSentNotify\022\032\n\004pee"
+    "r\030\001 \001(\0132\014.zproto.Peer\022\013\n\003rid\030\002 \001(\003\022\014\n\004da"
+    "te\030\003 \001(\003\"^\n\025MessageReceivedNotify\022\032\n\004pee"
+    "r\030\001 \001(\0132\014.zproto.Peer\022\022\n\nstart_date\030\002 \001("
+    "\003\022\025\n\rreceived_date\030\003 \001(\003\"V\n\021MessageReadN"
+    "otify\022\032\n\004peer\030\001 \001(\0132\014.zproto.Peer\022\022\n\nsta"
+    "rt_date\030\002 \001(\003\022\021\n\tread_date\030\003 \001(\003\"_\n\025Mess"
+    "ageReadByMeNotify\022\032\n\004peer\030\001 \001(\0132\014.zproto"
+    ".Peer\022\022\n\nstart_date\030\002 \001(\003\022\026\n\016unread_coun"
+    "ter\030\003 \001(\005\"\?\n\023MessageDeleteNotify\022\032\n\004peer"
+    "\030\001 \001(\0132\014.zproto.Peer\022\014\n\004rids\030\002 \003(\003\"-\n\017Ch"
+    "atClearNotify\022\032\n\004peer\030\001 \001(\0132\014.zproto.Pee"
+    "r\".\n\020ChatDeleteNotify\022\032\n\004peer\030\001 \001(\0132\014.zp"
+    "roto.Peer\"\?\n\027ChatGroupsChangedNotify\022$\n\007"
+    "dialogs\030\001 \003(\0132\023.zproto.DialogGroup\"\250\001\n\016L"
+    "oadHistoryReq\022\035\n\004peer\030\001 \001(\0132\017.zproto.Out"
+    "Peer\022\014\n\004date\030\003 \001(\003\022\'\n\tload_mode\030\005 \001(\0162\024."
+    "zproto.ListLoadMode\022\r\n\005limit\030\004 \001(\005\0221\n\rop"
+    "timizations\030\006 \003(\0162\032.zproto.UpdateOptimiz"
+    "ation\"\313\001\n\016LoadHistoryRsp\022)\n\007history\030\001 \003("
+    "\0132\030.zproto.MessageContainer\022\033\n\005users\030\002 \003"
+    "(\0132\014.zproto.User\022\'\n\nuser_peers\030\004 \003(\0132\023.z"
+    "proto.UserOutPeer\022\035\n\006groups\030\005 \003(\0132\r.zpro"
+    "to.Group\022)\n\013group_peers\030\006 \003(\0132\024.zproto.G"
+    "roupOutPeer\"d\n\016LoadDialogsReq\022\020\n\010min_dat"
+    "e\030\001 \001(\003\022\r\n\005limit\030\002 \001(\005\0221\n\roptimizations\030"
+    "\003 \003(\0162\032.zproto.UpdateOptimization\"\301\001\n\016Lo"
+    "adDialogsRsp\022\035\n\006groups\030\001 \003(\0132\r.zproto.Gr"
+    "oup\022\033\n\005users\030\002 \003(\0132\014.zproto.User\022\037\n\007dial"
+    "ogs\030\003 \003(\0132\016.zproto.Dialog\022\'\n\nuser_peers\030"
+    "\004 \003(\0132\023.zproto.UserOutPeer\022)\n\013group_peer"
+    "s\030\005 \003(\0132\024.zproto.GroupOutPeer\"J\n\025LoadGro"
+    "upedDialogsReq\0221\n\roptimizations\030\001 \003(\0162\032."
+    "zproto.UpdateOptimization\"\371\001\n\025LoadGroupe"
+    "dDialogsRsp\022$\n\007dialogs\030\001 \003(\0132\023.zproto.Di"
+    "alogGroup\022\033\n\005users\030\002 \003(\0132\014.zproto.User\022\035"
+    "\n\006groups\030\003 \003(\0132\r.zproto.Group\022\025\n\rshow_ar"
+    "chived\030\004 \001(\010\022\023\n\013show_invite\030\005 \001(\010\022\'\n\nuse"
+    "r_peers\030\006 \003(\0132\023.zproto.UserOutPeer\022)\n\013gr"
+    "oup_peers\030\007 \003(\0132\024.zproto.GroupOutPeerB,\n"
+    "\027com.zchat.engine.zprotoB\017ZProtoMessagin"
+    "gH\002b\006proto3", 2491);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "messaging.proto", &protobuf_RegisterTypes);
   SendMessageReq::default_instance_ = new SendMessageReq();
-  UpdateMessageReq::default_instance_ = new UpdateMessageReq();
   MessageReceivedReq::default_instance_ = new MessageReceivedReq();
   MessageReadReq::default_instance_ = new MessageReadReq();
   DeleteMessageReq::default_instance_ = new DeleteMessageReq();
   ClearChatReq::default_instance_ = new ClearChatReq();
   DeleteChatReq::default_instance_ = new DeleteChatReq();
-  ArchiveChatReq::default_instance_ = new ArchiveChatReq();
-  MessageSetReactionReq::default_instance_ = new MessageSetReactionReq();
   MessageNotify::default_instance_ = new MessageNotify();
   MessageContentChangedNotify::default_instance_ = new MessageContentChangedNotify();
   MessageDateChangedNotify::default_instance_ = new MessageDateChangedNotify();
@@ -1022,32 +695,19 @@ void protobuf_AddDesc_messaging_2eproto() {
   MessageDeleteNotify::default_instance_ = new MessageDeleteNotify();
   ChatClearNotify::default_instance_ = new ChatClearNotify();
   ChatDeleteNotify::default_instance_ = new ChatDeleteNotify();
-  ChatArchiveNotify::default_instance_ = new ChatArchiveNotify();
-  ChatDropCacheNotify::default_instance_ = new ChatDropCacheNotify();
   ChatGroupsChangedNotify::default_instance_ = new ChatGroupsChangedNotify();
   LoadHistoryReq::default_instance_ = new LoadHistoryReq();
   LoadHistoryRsp::default_instance_ = new LoadHistoryRsp();
   LoadDialogsReq::default_instance_ = new LoadDialogsReq();
   LoadDialogsRsp::default_instance_ = new LoadDialogsRsp();
-  LoadArchivedReq::default_instance_ = new LoadArchivedReq();
-  LoadArchivedRsp::default_instance_ = new LoadArchivedRsp();
   LoadGroupedDialogsReq::default_instance_ = new LoadGroupedDialogsReq();
   LoadGroupedDialogsRsp::default_instance_ = new LoadGroupedDialogsRsp();
-  DialogsOrderRsp::default_instance_ = new DialogsOrderRsp();
-  HideDialogReq::default_instance_ = new HideDialogReq();
-  ShowDialogReq::default_instance_ = new ShowDialogReq();
-  FavouriteDialogReq::default_instance_ = new FavouriteDialogReq();
-  UnfavouriteDialogReq::default_instance_ = new UnfavouriteDialogReq();
-  NotifyDialogOpenedReq::default_instance_ = new NotifyDialogOpenedReq();
   SendMessageReq::default_instance_->InitAsDefaultInstance();
-  UpdateMessageReq::default_instance_->InitAsDefaultInstance();
   MessageReceivedReq::default_instance_->InitAsDefaultInstance();
   MessageReadReq::default_instance_->InitAsDefaultInstance();
   DeleteMessageReq::default_instance_->InitAsDefaultInstance();
   ClearChatReq::default_instance_->InitAsDefaultInstance();
   DeleteChatReq::default_instance_->InitAsDefaultInstance();
-  ArchiveChatReq::default_instance_->InitAsDefaultInstance();
-  MessageSetReactionReq::default_instance_->InitAsDefaultInstance();
   MessageNotify::default_instance_->InitAsDefaultInstance();
   MessageContentChangedNotify::default_instance_->InitAsDefaultInstance();
   MessageDateChangedNotify::default_instance_->InitAsDefaultInstance();
@@ -1058,23 +718,13 @@ void protobuf_AddDesc_messaging_2eproto() {
   MessageDeleteNotify::default_instance_->InitAsDefaultInstance();
   ChatClearNotify::default_instance_->InitAsDefaultInstance();
   ChatDeleteNotify::default_instance_->InitAsDefaultInstance();
-  ChatArchiveNotify::default_instance_->InitAsDefaultInstance();
-  ChatDropCacheNotify::default_instance_->InitAsDefaultInstance();
   ChatGroupsChangedNotify::default_instance_->InitAsDefaultInstance();
   LoadHistoryReq::default_instance_->InitAsDefaultInstance();
   LoadHistoryRsp::default_instance_->InitAsDefaultInstance();
   LoadDialogsReq::default_instance_->InitAsDefaultInstance();
   LoadDialogsRsp::default_instance_->InitAsDefaultInstance();
-  LoadArchivedReq::default_instance_->InitAsDefaultInstance();
-  LoadArchivedRsp::default_instance_->InitAsDefaultInstance();
   LoadGroupedDialogsReq::default_instance_->InitAsDefaultInstance();
   LoadGroupedDialogsRsp::default_instance_->InitAsDefaultInstance();
-  DialogsOrderRsp::default_instance_->InitAsDefaultInstance();
-  HideDialogReq::default_instance_->InitAsDefaultInstance();
-  ShowDialogReq::default_instance_->InitAsDefaultInstance();
-  FavouriteDialogReq::default_instance_->InitAsDefaultInstance();
-  UnfavouriteDialogReq::default_instance_->InitAsDefaultInstance();
-  NotifyDialogOpenedReq::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_messaging_2eproto);
 }
 
@@ -1312,189 +962,6 @@ void SendMessageReq::clear_passthrough_data() {
   }
   passthrough_data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), passthrough_data);
   // @@protoc_insertion_point(field_set_allocated:zproto.SendMessageReq.passthrough_data)
-}
-
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int UpdateMessageReq::kPeerFieldNumber;
-const int UpdateMessageReq::kRidFieldNumber;
-const int UpdateMessageReq::kUpdatedMessageFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-UpdateMessageReq::UpdateMessageReq()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.UpdateMessageReq)
-}
-
-void UpdateMessageReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::OutPeer*>(&::zproto::OutPeer::default_instance());
-  updated_message_ = const_cast< ::zproto::InstantMessage*>(&::zproto::InstantMessage::default_instance());
-}
-
-UpdateMessageReq::UpdateMessageReq(const UpdateMessageReq& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.UpdateMessageReq)
-}
-
-void UpdateMessageReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
-  peer_ = NULL;
-  rid_ = GOOGLE_LONGLONG(0);
-  updated_message_ = NULL;
-}
-
-UpdateMessageReq::~UpdateMessageReq() {
-  // @@protoc_insertion_point(destructor:zproto.UpdateMessageReq)
-  SharedDtor();
-}
-
-void UpdateMessageReq::SharedDtor() {
-  if (this != default_instance_) {
-    delete peer_;
-    delete updated_message_;
-  }
-}
-
-void UpdateMessageReq::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* UpdateMessageReq::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return UpdateMessageReq_descriptor_;
-}
-
-const UpdateMessageReq& UpdateMessageReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
-}
-
-UpdateMessageReq* UpdateMessageReq::default_instance_ = NULL;
-
-UpdateMessageReq* UpdateMessageReq::New(::google::protobuf::Arena* arena) const {
-  UpdateMessageReq* n = new UpdateMessageReq;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void UpdateMessageReq::Swap(UpdateMessageReq* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void UpdateMessageReq::InternalSwap(UpdateMessageReq* other) {
-  GetReflection()->Swap(this, other);}
-
-::google::protobuf::Metadata UpdateMessageReq::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = UpdateMessageReq_descriptor_;
-  metadata.reflection = UpdateMessageReq_reflection_;
-  return metadata;
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// UpdateMessageReq
-
-// optional .zproto.OutPeer peer = 1;
-bool UpdateMessageReq::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
-}
-void UpdateMessageReq::clear_peer() {
-  if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
-  peer_ = NULL;
-}
-const ::zproto::OutPeer& UpdateMessageReq::peer() const {
-  // @@protoc_insertion_point(field_get:zproto.UpdateMessageReq.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
-}
-::zproto::OutPeer* UpdateMessageReq::mutable_peer() {
-  
-  if (peer_ == NULL) {
-    peer_ = new ::zproto::OutPeer;
-  }
-  // @@protoc_insertion_point(field_mutable:zproto.UpdateMessageReq.peer)
-  return peer_;
-}
-::zproto::OutPeer* UpdateMessageReq::release_peer() {
-  // @@protoc_insertion_point(field_release:zproto.UpdateMessageReq.peer)
-  
-  ::zproto::OutPeer* temp = peer_;
-  peer_ = NULL;
-  return temp;
-}
-void UpdateMessageReq::set_allocated_peer(::zproto::OutPeer* peer) {
-  delete peer_;
-  peer_ = peer;
-  if (peer) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zproto.UpdateMessageReq.peer)
-}
-
-// optional int64 rid = 2;
-void UpdateMessageReq::clear_rid() {
-  rid_ = GOOGLE_LONGLONG(0);
-}
- ::google::protobuf::int64 UpdateMessageReq::rid() const {
-  // @@protoc_insertion_point(field_get:zproto.UpdateMessageReq.rid)
-  return rid_;
-}
- void UpdateMessageReq::set_rid(::google::protobuf::int64 value) {
-  
-  rid_ = value;
-  // @@protoc_insertion_point(field_set:zproto.UpdateMessageReq.rid)
-}
-
-// optional .zproto.InstantMessage updated_message = 3;
-bool UpdateMessageReq::has_updated_message() const {
-  return !_is_default_instance_ && updated_message_ != NULL;
-}
-void UpdateMessageReq::clear_updated_message() {
-  if (GetArenaNoVirtual() == NULL && updated_message_ != NULL) delete updated_message_;
-  updated_message_ = NULL;
-}
-const ::zproto::InstantMessage& UpdateMessageReq::updated_message() const {
-  // @@protoc_insertion_point(field_get:zproto.UpdateMessageReq.updated_message)
-  return updated_message_ != NULL ? *updated_message_ : *default_instance_->updated_message_;
-}
-::zproto::InstantMessage* UpdateMessageReq::mutable_updated_message() {
-  
-  if (updated_message_ == NULL) {
-    updated_message_ = new ::zproto::InstantMessage;
-  }
-  // @@protoc_insertion_point(field_mutable:zproto.UpdateMessageReq.updated_message)
-  return updated_message_;
-}
-::zproto::InstantMessage* UpdateMessageReq::release_updated_message() {
-  // @@protoc_insertion_point(field_release:zproto.UpdateMessageReq.updated_message)
-  
-  ::zproto::InstantMessage* temp = updated_message_;
-  updated_message_ = NULL;
-  return temp;
-}
-void UpdateMessageReq::set_allocated_updated_message(::zproto::InstantMessage* updated_message) {
-  delete updated_message_;
-  updated_message_ = updated_message;
-  if (updated_message) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zproto.UpdateMessageReq.updated_message)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -2183,320 +1650,6 @@ void DeleteChatReq::set_allocated_peer(::zproto::OutPeer* peer) {
     
   }
   // @@protoc_insertion_point(field_set_allocated:zproto.DeleteChatReq.peer)
-}
-
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int ArchiveChatReq::kPeerFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-ArchiveChatReq::ArchiveChatReq()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.ArchiveChatReq)
-}
-
-void ArchiveChatReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::OutPeer*>(&::zproto::OutPeer::default_instance());
-}
-
-ArchiveChatReq::ArchiveChatReq(const ArchiveChatReq& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.ArchiveChatReq)
-}
-
-void ArchiveChatReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
-  peer_ = NULL;
-}
-
-ArchiveChatReq::~ArchiveChatReq() {
-  // @@protoc_insertion_point(destructor:zproto.ArchiveChatReq)
-  SharedDtor();
-}
-
-void ArchiveChatReq::SharedDtor() {
-  if (this != default_instance_) {
-    delete peer_;
-  }
-}
-
-void ArchiveChatReq::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* ArchiveChatReq::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return ArchiveChatReq_descriptor_;
-}
-
-const ArchiveChatReq& ArchiveChatReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
-}
-
-ArchiveChatReq* ArchiveChatReq::default_instance_ = NULL;
-
-ArchiveChatReq* ArchiveChatReq::New(::google::protobuf::Arena* arena) const {
-  ArchiveChatReq* n = new ArchiveChatReq;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void ArchiveChatReq::Swap(ArchiveChatReq* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void ArchiveChatReq::InternalSwap(ArchiveChatReq* other) {
-  GetReflection()->Swap(this, other);}
-
-::google::protobuf::Metadata ArchiveChatReq::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = ArchiveChatReq_descriptor_;
-  metadata.reflection = ArchiveChatReq_reflection_;
-  return metadata;
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// ArchiveChatReq
-
-// optional .zproto.OutPeer peer = 1;
-bool ArchiveChatReq::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
-}
-void ArchiveChatReq::clear_peer() {
-  if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
-  peer_ = NULL;
-}
-const ::zproto::OutPeer& ArchiveChatReq::peer() const {
-  // @@protoc_insertion_point(field_get:zproto.ArchiveChatReq.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
-}
-::zproto::OutPeer* ArchiveChatReq::mutable_peer() {
-  
-  if (peer_ == NULL) {
-    peer_ = new ::zproto::OutPeer;
-  }
-  // @@protoc_insertion_point(field_mutable:zproto.ArchiveChatReq.peer)
-  return peer_;
-}
-::zproto::OutPeer* ArchiveChatReq::release_peer() {
-  // @@protoc_insertion_point(field_release:zproto.ArchiveChatReq.peer)
-  
-  ::zproto::OutPeer* temp = peer_;
-  peer_ = NULL;
-  return temp;
-}
-void ArchiveChatReq::set_allocated_peer(::zproto::OutPeer* peer) {
-  delete peer_;
-  peer_ = peer;
-  if (peer) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zproto.ArchiveChatReq.peer)
-}
-
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int MessageSetReactionReq::kPeerFieldNumber;
-const int MessageSetReactionReq::kRidFieldNumber;
-const int MessageSetReactionReq::kCodeFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-MessageSetReactionReq::MessageSetReactionReq()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.MessageSetReactionReq)
-}
-
-void MessageSetReactionReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::OutPeer*>(&::zproto::OutPeer::default_instance());
-}
-
-MessageSetReactionReq::MessageSetReactionReq(const MessageSetReactionReq& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.MessageSetReactionReq)
-}
-
-void MessageSetReactionReq::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  peer_ = NULL;
-  rid_ = GOOGLE_LONGLONG(0);
-  code_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-
-MessageSetReactionReq::~MessageSetReactionReq() {
-  // @@protoc_insertion_point(destructor:zproto.MessageSetReactionReq)
-  SharedDtor();
-}
-
-void MessageSetReactionReq::SharedDtor() {
-  code_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-    delete peer_;
-  }
-}
-
-void MessageSetReactionReq::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* MessageSetReactionReq::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return MessageSetReactionReq_descriptor_;
-}
-
-const MessageSetReactionReq& MessageSetReactionReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
-}
-
-MessageSetReactionReq* MessageSetReactionReq::default_instance_ = NULL;
-
-MessageSetReactionReq* MessageSetReactionReq::New(::google::protobuf::Arena* arena) const {
-  MessageSetReactionReq* n = new MessageSetReactionReq;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void MessageSetReactionReq::Swap(MessageSetReactionReq* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void MessageSetReactionReq::InternalSwap(MessageSetReactionReq* other) {
-  GetReflection()->Swap(this, other);}
-
-::google::protobuf::Metadata MessageSetReactionReq::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = MessageSetReactionReq_descriptor_;
-  metadata.reflection = MessageSetReactionReq_reflection_;
-  return metadata;
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// MessageSetReactionReq
-
-// optional .zproto.OutPeer peer = 1;
-bool MessageSetReactionReq::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
-}
-void MessageSetReactionReq::clear_peer() {
-  if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
-  peer_ = NULL;
-}
-const ::zproto::OutPeer& MessageSetReactionReq::peer() const {
-  // @@protoc_insertion_point(field_get:zproto.MessageSetReactionReq.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
-}
-::zproto::OutPeer* MessageSetReactionReq::mutable_peer() {
-  
-  if (peer_ == NULL) {
-    peer_ = new ::zproto::OutPeer;
-  }
-  // @@protoc_insertion_point(field_mutable:zproto.MessageSetReactionReq.peer)
-  return peer_;
-}
-::zproto::OutPeer* MessageSetReactionReq::release_peer() {
-  // @@protoc_insertion_point(field_release:zproto.MessageSetReactionReq.peer)
-  
-  ::zproto::OutPeer* temp = peer_;
-  peer_ = NULL;
-  return temp;
-}
-void MessageSetReactionReq::set_allocated_peer(::zproto::OutPeer* peer) {
-  delete peer_;
-  peer_ = peer;
-  if (peer) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zproto.MessageSetReactionReq.peer)
-}
-
-// optional int64 rid = 2;
-void MessageSetReactionReq::clear_rid() {
-  rid_ = GOOGLE_LONGLONG(0);
-}
- ::google::protobuf::int64 MessageSetReactionReq::rid() const {
-  // @@protoc_insertion_point(field_get:zproto.MessageSetReactionReq.rid)
-  return rid_;
-}
- void MessageSetReactionReq::set_rid(::google::protobuf::int64 value) {
-  
-  rid_ = value;
-  // @@protoc_insertion_point(field_set:zproto.MessageSetReactionReq.rid)
-}
-
-// optional string code = 3;
-void MessageSetReactionReq::clear_code() {
-  code_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- const ::std::string& MessageSetReactionReq::code() const {
-  // @@protoc_insertion_point(field_get:zproto.MessageSetReactionReq.code)
-  return code_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void MessageSetReactionReq::set_code(const ::std::string& value) {
-  
-  code_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.MessageSetReactionReq.code)
-}
- void MessageSetReactionReq::set_code(const char* value) {
-  
-  code_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.MessageSetReactionReq.code)
-}
- void MessageSetReactionReq::set_code(const char* value, size_t size) {
-  
-  code_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.MessageSetReactionReq.code)
-}
- ::std::string* MessageSetReactionReq::mutable_code() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.MessageSetReactionReq.code)
-  return code_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- ::std::string* MessageSetReactionReq::release_code() {
-  // @@protoc_insertion_point(field_release:zproto.MessageSetReactionReq.code)
-  
-  return code_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void MessageSetReactionReq::set_allocated_code(::std::string* code) {
-  if (code != NULL) {
-    
-  } else {
-    
-  }
-  code_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), code);
-  // @@protoc_insertion_point(field_set_allocated:zproto.MessageSetReactionReq.code)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -4125,256 +3278,6 @@ void ChatDeleteNotify::set_allocated_peer(::zproto::Peer* peer) {
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int ChatArchiveNotify::kPeerFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-ChatArchiveNotify::ChatArchiveNotify()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.ChatArchiveNotify)
-}
-
-void ChatArchiveNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::Peer*>(&::zproto::Peer::default_instance());
-}
-
-ChatArchiveNotify::ChatArchiveNotify(const ChatArchiveNotify& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.ChatArchiveNotify)
-}
-
-void ChatArchiveNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
-  peer_ = NULL;
-}
-
-ChatArchiveNotify::~ChatArchiveNotify() {
-  // @@protoc_insertion_point(destructor:zproto.ChatArchiveNotify)
-  SharedDtor();
-}
-
-void ChatArchiveNotify::SharedDtor() {
-  if (this != default_instance_) {
-    delete peer_;
-  }
-}
-
-void ChatArchiveNotify::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* ChatArchiveNotify::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return ChatArchiveNotify_descriptor_;
-}
-
-const ChatArchiveNotify& ChatArchiveNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
-}
-
-ChatArchiveNotify* ChatArchiveNotify::default_instance_ = NULL;
-
-ChatArchiveNotify* ChatArchiveNotify::New(::google::protobuf::Arena* arena) const {
-  ChatArchiveNotify* n = new ChatArchiveNotify;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void ChatArchiveNotify::Swap(ChatArchiveNotify* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void ChatArchiveNotify::InternalSwap(ChatArchiveNotify* other) {
-  GetReflection()->Swap(this, other);}
-
-::google::protobuf::Metadata ChatArchiveNotify::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = ChatArchiveNotify_descriptor_;
-  metadata.reflection = ChatArchiveNotify_reflection_;
-  return metadata;
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// ChatArchiveNotify
-
-// optional .zproto.Peer peer = 1;
-bool ChatArchiveNotify::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
-}
-void ChatArchiveNotify::clear_peer() {
-  if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
-  peer_ = NULL;
-}
-const ::zproto::Peer& ChatArchiveNotify::peer() const {
-  // @@protoc_insertion_point(field_get:zproto.ChatArchiveNotify.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
-}
-::zproto::Peer* ChatArchiveNotify::mutable_peer() {
-  
-  if (peer_ == NULL) {
-    peer_ = new ::zproto::Peer;
-  }
-  // @@protoc_insertion_point(field_mutable:zproto.ChatArchiveNotify.peer)
-  return peer_;
-}
-::zproto::Peer* ChatArchiveNotify::release_peer() {
-  // @@protoc_insertion_point(field_release:zproto.ChatArchiveNotify.peer)
-  
-  ::zproto::Peer* temp = peer_;
-  peer_ = NULL;
-  return temp;
-}
-void ChatArchiveNotify::set_allocated_peer(::zproto::Peer* peer) {
-  delete peer_;
-  peer_ = peer;
-  if (peer) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zproto.ChatArchiveNotify.peer)
-}
-
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int ChatDropCacheNotify::kPeerFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-ChatDropCacheNotify::ChatDropCacheNotify()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.ChatDropCacheNotify)
-}
-
-void ChatDropCacheNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::Peer*>(&::zproto::Peer::default_instance());
-}
-
-ChatDropCacheNotify::ChatDropCacheNotify(const ChatDropCacheNotify& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.ChatDropCacheNotify)
-}
-
-void ChatDropCacheNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
-  peer_ = NULL;
-}
-
-ChatDropCacheNotify::~ChatDropCacheNotify() {
-  // @@protoc_insertion_point(destructor:zproto.ChatDropCacheNotify)
-  SharedDtor();
-}
-
-void ChatDropCacheNotify::SharedDtor() {
-  if (this != default_instance_) {
-    delete peer_;
-  }
-}
-
-void ChatDropCacheNotify::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* ChatDropCacheNotify::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return ChatDropCacheNotify_descriptor_;
-}
-
-const ChatDropCacheNotify& ChatDropCacheNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
-}
-
-ChatDropCacheNotify* ChatDropCacheNotify::default_instance_ = NULL;
-
-ChatDropCacheNotify* ChatDropCacheNotify::New(::google::protobuf::Arena* arena) const {
-  ChatDropCacheNotify* n = new ChatDropCacheNotify;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void ChatDropCacheNotify::Swap(ChatDropCacheNotify* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void ChatDropCacheNotify::InternalSwap(ChatDropCacheNotify* other) {
-  GetReflection()->Swap(this, other);}
-
-::google::protobuf::Metadata ChatDropCacheNotify::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = ChatDropCacheNotify_descriptor_;
-  metadata.reflection = ChatDropCacheNotify_reflection_;
-  return metadata;
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// ChatDropCacheNotify
-
-// optional .zproto.Peer peer = 1;
-bool ChatDropCacheNotify::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
-}
-void ChatDropCacheNotify::clear_peer() {
-  if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
-  peer_ = NULL;
-}
-const ::zproto::Peer& ChatDropCacheNotify::peer() const {
-  // @@protoc_insertion_point(field_get:zproto.ChatDropCacheNotify.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
-}
-::zproto::Peer* ChatDropCacheNotify::mutable_peer() {
-  
-  if (peer_ == NULL) {
-    peer_ = new ::zproto::Peer;
-  }
-  // @@protoc_insertion_point(field_mutable:zproto.ChatDropCacheNotify.peer)
-  return peer_;
-}
-::zproto::Peer* ChatDropCacheNotify::release_peer() {
-  // @@protoc_insertion_point(field_release:zproto.ChatDropCacheNotify.peer)
-  
-  ::zproto::Peer* temp = peer_;
-  peer_ = NULL;
-  return temp;
-}
-void ChatDropCacheNotify::set_allocated_peer(::zproto::Peer* peer) {
-  delete peer_;
-  peer_ = peer;
-  if (peer) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zproto.ChatDropCacheNotify.peer)
-}
-
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int ChatGroupsChangedNotify::kDialogsFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
@@ -5315,470 +4218,6 @@ LoadDialogsRsp::group_peers() const {
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int LoadArchivedReq::kNextOffsetFieldNumber;
-const int LoadArchivedReq::kLimitFieldNumber;
-const int LoadArchivedReq::kOptimizationsFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-LoadArchivedReq::LoadArchivedReq()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.LoadArchivedReq)
-}
-
-void LoadArchivedReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-}
-
-LoadArchivedReq::LoadArchivedReq(const LoadArchivedReq& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.LoadArchivedReq)
-}
-
-void LoadArchivedReq::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  next_offset_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  limit_ = 0;
-}
-
-LoadArchivedReq::~LoadArchivedReq() {
-  // @@protoc_insertion_point(destructor:zproto.LoadArchivedReq)
-  SharedDtor();
-}
-
-void LoadArchivedReq::SharedDtor() {
-  next_offset_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
-}
-
-void LoadArchivedReq::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* LoadArchivedReq::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return LoadArchivedReq_descriptor_;
-}
-
-const LoadArchivedReq& LoadArchivedReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
-}
-
-LoadArchivedReq* LoadArchivedReq::default_instance_ = NULL;
-
-LoadArchivedReq* LoadArchivedReq::New(::google::protobuf::Arena* arena) const {
-  LoadArchivedReq* n = new LoadArchivedReq;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void LoadArchivedReq::Swap(LoadArchivedReq* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void LoadArchivedReq::InternalSwap(LoadArchivedReq* other) {
-  GetReflection()->Swap(this, other);}
-
-::google::protobuf::Metadata LoadArchivedReq::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = LoadArchivedReq_descriptor_;
-  metadata.reflection = LoadArchivedReq_reflection_;
-  return metadata;
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// LoadArchivedReq
-
-// optional bytes next_offset = 1;
-void LoadArchivedReq::clear_next_offset() {
-  next_offset_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- const ::std::string& LoadArchivedReq::next_offset() const {
-  // @@protoc_insertion_point(field_get:zproto.LoadArchivedReq.next_offset)
-  return next_offset_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void LoadArchivedReq::set_next_offset(const ::std::string& value) {
-  
-  next_offset_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.LoadArchivedReq.next_offset)
-}
- void LoadArchivedReq::set_next_offset(const char* value) {
-  
-  next_offset_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.LoadArchivedReq.next_offset)
-}
- void LoadArchivedReq::set_next_offset(const void* value, size_t size) {
-  
-  next_offset_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.LoadArchivedReq.next_offset)
-}
- ::std::string* LoadArchivedReq::mutable_next_offset() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.LoadArchivedReq.next_offset)
-  return next_offset_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- ::std::string* LoadArchivedReq::release_next_offset() {
-  // @@protoc_insertion_point(field_release:zproto.LoadArchivedReq.next_offset)
-  
-  return next_offset_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void LoadArchivedReq::set_allocated_next_offset(::std::string* next_offset) {
-  if (next_offset != NULL) {
-    
-  } else {
-    
-  }
-  next_offset_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), next_offset);
-  // @@protoc_insertion_point(field_set_allocated:zproto.LoadArchivedReq.next_offset)
-}
-
-// optional int32 limit = 2;
-void LoadArchivedReq::clear_limit() {
-  limit_ = 0;
-}
- ::google::protobuf::int32 LoadArchivedReq::limit() const {
-  // @@protoc_insertion_point(field_get:zproto.LoadArchivedReq.limit)
-  return limit_;
-}
- void LoadArchivedReq::set_limit(::google::protobuf::int32 value) {
-  
-  limit_ = value;
-  // @@protoc_insertion_point(field_set:zproto.LoadArchivedReq.limit)
-}
-
-// repeated .zproto.UpdateOptimization optimizations = 3;
-int LoadArchivedReq::optimizations_size() const {
-  return optimizations_.size();
-}
-void LoadArchivedReq::clear_optimizations() {
-  optimizations_.Clear();
-}
- ::zproto::UpdateOptimization LoadArchivedReq::optimizations(int index) const {
-  // @@protoc_insertion_point(field_get:zproto.LoadArchivedReq.optimizations)
-  return static_cast< ::zproto::UpdateOptimization >(optimizations_.Get(index));
-}
- void LoadArchivedReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
-  optimizations_.Set(index, value);
-  // @@protoc_insertion_point(field_set:zproto.LoadArchivedReq.optimizations)
-}
- void LoadArchivedReq::add_optimizations(::zproto::UpdateOptimization value) {
-  optimizations_.Add(value);
-  // @@protoc_insertion_point(field_add:zproto.LoadArchivedReq.optimizations)
-}
- const ::google::protobuf::RepeatedField<int>&
-LoadArchivedReq::optimizations() const {
-  // @@protoc_insertion_point(field_list:zproto.LoadArchivedReq.optimizations)
-  return optimizations_;
-}
- ::google::protobuf::RepeatedField<int>*
-LoadArchivedReq::mutable_optimizations() {
-  // @@protoc_insertion_point(field_mutable_list:zproto.LoadArchivedReq.optimizations)
-  return &optimizations_;
-}
-
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int LoadArchivedRsp::kGroupsFieldNumber;
-const int LoadArchivedRsp::kUsersFieldNumber;
-const int LoadArchivedRsp::kDialogsFieldNumber;
-const int LoadArchivedRsp::kUserPeersFieldNumber;
-const int LoadArchivedRsp::kGroupPeersFieldNumber;
-const int LoadArchivedRsp::kNextOffsetFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-LoadArchivedRsp::LoadArchivedRsp()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.LoadArchivedRsp)
-}
-
-void LoadArchivedRsp::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-}
-
-LoadArchivedRsp::LoadArchivedRsp(const LoadArchivedRsp& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.LoadArchivedRsp)
-}
-
-void LoadArchivedRsp::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  next_offset_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-
-LoadArchivedRsp::~LoadArchivedRsp() {
-  // @@protoc_insertion_point(destructor:zproto.LoadArchivedRsp)
-  SharedDtor();
-}
-
-void LoadArchivedRsp::SharedDtor() {
-  next_offset_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
-}
-
-void LoadArchivedRsp::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* LoadArchivedRsp::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return LoadArchivedRsp_descriptor_;
-}
-
-const LoadArchivedRsp& LoadArchivedRsp::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
-}
-
-LoadArchivedRsp* LoadArchivedRsp::default_instance_ = NULL;
-
-LoadArchivedRsp* LoadArchivedRsp::New(::google::protobuf::Arena* arena) const {
-  LoadArchivedRsp* n = new LoadArchivedRsp;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void LoadArchivedRsp::Swap(LoadArchivedRsp* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void LoadArchivedRsp::InternalSwap(LoadArchivedRsp* other) {
-  GetReflection()->Swap(this, other);}
-
-::google::protobuf::Metadata LoadArchivedRsp::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = LoadArchivedRsp_descriptor_;
-  metadata.reflection = LoadArchivedRsp_reflection_;
-  return metadata;
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// LoadArchivedRsp
-
-// repeated .zproto.Group groups = 1;
-int LoadArchivedRsp::groups_size() const {
-  return groups_.size();
-}
-void LoadArchivedRsp::clear_groups() {
-  groups_.Clear();
-}
-const ::zproto::Group& LoadArchivedRsp::groups(int index) const {
-  // @@protoc_insertion_point(field_get:zproto.LoadArchivedRsp.groups)
-  return groups_.Get(index);
-}
-::zproto::Group* LoadArchivedRsp::mutable_groups(int index) {
-  // @@protoc_insertion_point(field_mutable:zproto.LoadArchivedRsp.groups)
-  return groups_.Mutable(index);
-}
-::zproto::Group* LoadArchivedRsp::add_groups() {
-  // @@protoc_insertion_point(field_add:zproto.LoadArchivedRsp.groups)
-  return groups_.Add();
-}
-::google::protobuf::RepeatedPtrField< ::zproto::Group >*
-LoadArchivedRsp::mutable_groups() {
-  // @@protoc_insertion_point(field_mutable_list:zproto.LoadArchivedRsp.groups)
-  return &groups_;
-}
-const ::google::protobuf::RepeatedPtrField< ::zproto::Group >&
-LoadArchivedRsp::groups() const {
-  // @@protoc_insertion_point(field_list:zproto.LoadArchivedRsp.groups)
-  return groups_;
-}
-
-// repeated .zproto.User users = 2;
-int LoadArchivedRsp::users_size() const {
-  return users_.size();
-}
-void LoadArchivedRsp::clear_users() {
-  users_.Clear();
-}
-const ::zproto::User& LoadArchivedRsp::users(int index) const {
-  // @@protoc_insertion_point(field_get:zproto.LoadArchivedRsp.users)
-  return users_.Get(index);
-}
-::zproto::User* LoadArchivedRsp::mutable_users(int index) {
-  // @@protoc_insertion_point(field_mutable:zproto.LoadArchivedRsp.users)
-  return users_.Mutable(index);
-}
-::zproto::User* LoadArchivedRsp::add_users() {
-  // @@protoc_insertion_point(field_add:zproto.LoadArchivedRsp.users)
-  return users_.Add();
-}
-::google::protobuf::RepeatedPtrField< ::zproto::User >*
-LoadArchivedRsp::mutable_users() {
-  // @@protoc_insertion_point(field_mutable_list:zproto.LoadArchivedRsp.users)
-  return &users_;
-}
-const ::google::protobuf::RepeatedPtrField< ::zproto::User >&
-LoadArchivedRsp::users() const {
-  // @@protoc_insertion_point(field_list:zproto.LoadArchivedRsp.users)
-  return users_;
-}
-
-// repeated .zproto.Dialog dialogs = 3;
-int LoadArchivedRsp::dialogs_size() const {
-  return dialogs_.size();
-}
-void LoadArchivedRsp::clear_dialogs() {
-  dialogs_.Clear();
-}
-const ::zproto::Dialog& LoadArchivedRsp::dialogs(int index) const {
-  // @@protoc_insertion_point(field_get:zproto.LoadArchivedRsp.dialogs)
-  return dialogs_.Get(index);
-}
-::zproto::Dialog* LoadArchivedRsp::mutable_dialogs(int index) {
-  // @@protoc_insertion_point(field_mutable:zproto.LoadArchivedRsp.dialogs)
-  return dialogs_.Mutable(index);
-}
-::zproto::Dialog* LoadArchivedRsp::add_dialogs() {
-  // @@protoc_insertion_point(field_add:zproto.LoadArchivedRsp.dialogs)
-  return dialogs_.Add();
-}
-::google::protobuf::RepeatedPtrField< ::zproto::Dialog >*
-LoadArchivedRsp::mutable_dialogs() {
-  // @@protoc_insertion_point(field_mutable_list:zproto.LoadArchivedRsp.dialogs)
-  return &dialogs_;
-}
-const ::google::protobuf::RepeatedPtrField< ::zproto::Dialog >&
-LoadArchivedRsp::dialogs() const {
-  // @@protoc_insertion_point(field_list:zproto.LoadArchivedRsp.dialogs)
-  return dialogs_;
-}
-
-// repeated .zproto.UserOutPeer user_peers = 5;
-int LoadArchivedRsp::user_peers_size() const {
-  return user_peers_.size();
-}
-void LoadArchivedRsp::clear_user_peers() {
-  user_peers_.Clear();
-}
-const ::zproto::UserOutPeer& LoadArchivedRsp::user_peers(int index) const {
-  // @@protoc_insertion_point(field_get:zproto.LoadArchivedRsp.user_peers)
-  return user_peers_.Get(index);
-}
-::zproto::UserOutPeer* LoadArchivedRsp::mutable_user_peers(int index) {
-  // @@protoc_insertion_point(field_mutable:zproto.LoadArchivedRsp.user_peers)
-  return user_peers_.Mutable(index);
-}
-::zproto::UserOutPeer* LoadArchivedRsp::add_user_peers() {
-  // @@protoc_insertion_point(field_add:zproto.LoadArchivedRsp.user_peers)
-  return user_peers_.Add();
-}
-::google::protobuf::RepeatedPtrField< ::zproto::UserOutPeer >*
-LoadArchivedRsp::mutable_user_peers() {
-  // @@protoc_insertion_point(field_mutable_list:zproto.LoadArchivedRsp.user_peers)
-  return &user_peers_;
-}
-const ::google::protobuf::RepeatedPtrField< ::zproto::UserOutPeer >&
-LoadArchivedRsp::user_peers() const {
-  // @@protoc_insertion_point(field_list:zproto.LoadArchivedRsp.user_peers)
-  return user_peers_;
-}
-
-// repeated .zproto.GroupOutPeer group_peers = 6;
-int LoadArchivedRsp::group_peers_size() const {
-  return group_peers_.size();
-}
-void LoadArchivedRsp::clear_group_peers() {
-  group_peers_.Clear();
-}
-const ::zproto::GroupOutPeer& LoadArchivedRsp::group_peers(int index) const {
-  // @@protoc_insertion_point(field_get:zproto.LoadArchivedRsp.group_peers)
-  return group_peers_.Get(index);
-}
-::zproto::GroupOutPeer* LoadArchivedRsp::mutable_group_peers(int index) {
-  // @@protoc_insertion_point(field_mutable:zproto.LoadArchivedRsp.group_peers)
-  return group_peers_.Mutable(index);
-}
-::zproto::GroupOutPeer* LoadArchivedRsp::add_group_peers() {
-  // @@protoc_insertion_point(field_add:zproto.LoadArchivedRsp.group_peers)
-  return group_peers_.Add();
-}
-::google::protobuf::RepeatedPtrField< ::zproto::GroupOutPeer >*
-LoadArchivedRsp::mutable_group_peers() {
-  // @@protoc_insertion_point(field_mutable_list:zproto.LoadArchivedRsp.group_peers)
-  return &group_peers_;
-}
-const ::google::protobuf::RepeatedPtrField< ::zproto::GroupOutPeer >&
-LoadArchivedRsp::group_peers() const {
-  // @@protoc_insertion_point(field_list:zproto.LoadArchivedRsp.group_peers)
-  return group_peers_;
-}
-
-// optional bytes next_offset = 4;
-void LoadArchivedRsp::clear_next_offset() {
-  next_offset_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- const ::std::string& LoadArchivedRsp::next_offset() const {
-  // @@protoc_insertion_point(field_get:zproto.LoadArchivedRsp.next_offset)
-  return next_offset_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void LoadArchivedRsp::set_next_offset(const ::std::string& value) {
-  
-  next_offset_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.LoadArchivedRsp.next_offset)
-}
- void LoadArchivedRsp::set_next_offset(const char* value) {
-  
-  next_offset_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.LoadArchivedRsp.next_offset)
-}
- void LoadArchivedRsp::set_next_offset(const void* value, size_t size) {
-  
-  next_offset_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.LoadArchivedRsp.next_offset)
-}
- ::std::string* LoadArchivedRsp::mutable_next_offset() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.LoadArchivedRsp.next_offset)
-  return next_offset_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- ::std::string* LoadArchivedRsp::release_next_offset() {
-  // @@protoc_insertion_point(field_release:zproto.LoadArchivedRsp.next_offset)
-  
-  return next_offset_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void LoadArchivedRsp::set_allocated_next_offset(::std::string* next_offset) {
-  if (next_offset != NULL) {
-    
-  } else {
-    
-  }
-  next_offset_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), next_offset);
-  // @@protoc_insertion_point(field_set_allocated:zproto.LoadArchivedRsp.next_offset)
-}
-
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int LoadGroupedDialogsReq::kOptimizationsFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
@@ -6156,809 +4595,6 @@ const ::google::protobuf::RepeatedPtrField< ::zproto::GroupOutPeer >&
 LoadGroupedDialogsRsp::group_peers() const {
   // @@protoc_insertion_point(field_list:zproto.LoadGroupedDialogsRsp.group_peers)
   return group_peers_;
-}
-
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int DialogsOrderRsp::kSeqFieldNumber;
-const int DialogsOrderRsp::kStateFieldNumber;
-const int DialogsOrderRsp::kGroupsFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-DialogsOrderRsp::DialogsOrderRsp()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.DialogsOrderRsp)
-}
-
-void DialogsOrderRsp::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-}
-
-DialogsOrderRsp::DialogsOrderRsp(const DialogsOrderRsp& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.DialogsOrderRsp)
-}
-
-void DialogsOrderRsp::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  seq_ = 0;
-  state_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-
-DialogsOrderRsp::~DialogsOrderRsp() {
-  // @@protoc_insertion_point(destructor:zproto.DialogsOrderRsp)
-  SharedDtor();
-}
-
-void DialogsOrderRsp::SharedDtor() {
-  state_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
-}
-
-void DialogsOrderRsp::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* DialogsOrderRsp::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return DialogsOrderRsp_descriptor_;
-}
-
-const DialogsOrderRsp& DialogsOrderRsp::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
-}
-
-DialogsOrderRsp* DialogsOrderRsp::default_instance_ = NULL;
-
-DialogsOrderRsp* DialogsOrderRsp::New(::google::protobuf::Arena* arena) const {
-  DialogsOrderRsp* n = new DialogsOrderRsp;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void DialogsOrderRsp::Swap(DialogsOrderRsp* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void DialogsOrderRsp::InternalSwap(DialogsOrderRsp* other) {
-  GetReflection()->Swap(this, other);}
-
-::google::protobuf::Metadata DialogsOrderRsp::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = DialogsOrderRsp_descriptor_;
-  metadata.reflection = DialogsOrderRsp_reflection_;
-  return metadata;
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// DialogsOrderRsp
-
-// optional int32 seq = 1;
-void DialogsOrderRsp::clear_seq() {
-  seq_ = 0;
-}
- ::google::protobuf::int32 DialogsOrderRsp::seq() const {
-  // @@protoc_insertion_point(field_get:zproto.DialogsOrderRsp.seq)
-  return seq_;
-}
- void DialogsOrderRsp::set_seq(::google::protobuf::int32 value) {
-  
-  seq_ = value;
-  // @@protoc_insertion_point(field_set:zproto.DialogsOrderRsp.seq)
-}
-
-// optional bytes state = 2;
-void DialogsOrderRsp::clear_state() {
-  state_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- const ::std::string& DialogsOrderRsp::state() const {
-  // @@protoc_insertion_point(field_get:zproto.DialogsOrderRsp.state)
-  return state_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void DialogsOrderRsp::set_state(const ::std::string& value) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.DialogsOrderRsp.state)
-}
- void DialogsOrderRsp::set_state(const char* value) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.DialogsOrderRsp.state)
-}
- void DialogsOrderRsp::set_state(const void* value, size_t size) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.DialogsOrderRsp.state)
-}
- ::std::string* DialogsOrderRsp::mutable_state() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.DialogsOrderRsp.state)
-  return state_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- ::std::string* DialogsOrderRsp::release_state() {
-  // @@protoc_insertion_point(field_release:zproto.DialogsOrderRsp.state)
-  
-  return state_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void DialogsOrderRsp::set_allocated_state(::std::string* state) {
-  if (state != NULL) {
-    
-  } else {
-    
-  }
-  state_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), state);
-  // @@protoc_insertion_point(field_set_allocated:zproto.DialogsOrderRsp.state)
-}
-
-// repeated .zproto.DialogGroup groups = 3;
-int DialogsOrderRsp::groups_size() const {
-  return groups_.size();
-}
-void DialogsOrderRsp::clear_groups() {
-  groups_.Clear();
-}
-const ::zproto::DialogGroup& DialogsOrderRsp::groups(int index) const {
-  // @@protoc_insertion_point(field_get:zproto.DialogsOrderRsp.groups)
-  return groups_.Get(index);
-}
-::zproto::DialogGroup* DialogsOrderRsp::mutable_groups(int index) {
-  // @@protoc_insertion_point(field_mutable:zproto.DialogsOrderRsp.groups)
-  return groups_.Mutable(index);
-}
-::zproto::DialogGroup* DialogsOrderRsp::add_groups() {
-  // @@protoc_insertion_point(field_add:zproto.DialogsOrderRsp.groups)
-  return groups_.Add();
-}
-::google::protobuf::RepeatedPtrField< ::zproto::DialogGroup >*
-DialogsOrderRsp::mutable_groups() {
-  // @@protoc_insertion_point(field_mutable_list:zproto.DialogsOrderRsp.groups)
-  return &groups_;
-}
-const ::google::protobuf::RepeatedPtrField< ::zproto::DialogGroup >&
-DialogsOrderRsp::groups() const {
-  // @@protoc_insertion_point(field_list:zproto.DialogsOrderRsp.groups)
-  return groups_;
-}
-
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int HideDialogReq::kPeerFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-HideDialogReq::HideDialogReq()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.HideDialogReq)
-}
-
-void HideDialogReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::OutPeer*>(&::zproto::OutPeer::default_instance());
-}
-
-HideDialogReq::HideDialogReq(const HideDialogReq& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.HideDialogReq)
-}
-
-void HideDialogReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
-  peer_ = NULL;
-}
-
-HideDialogReq::~HideDialogReq() {
-  // @@protoc_insertion_point(destructor:zproto.HideDialogReq)
-  SharedDtor();
-}
-
-void HideDialogReq::SharedDtor() {
-  if (this != default_instance_) {
-    delete peer_;
-  }
-}
-
-void HideDialogReq::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* HideDialogReq::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return HideDialogReq_descriptor_;
-}
-
-const HideDialogReq& HideDialogReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
-}
-
-HideDialogReq* HideDialogReq::default_instance_ = NULL;
-
-HideDialogReq* HideDialogReq::New(::google::protobuf::Arena* arena) const {
-  HideDialogReq* n = new HideDialogReq;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void HideDialogReq::Swap(HideDialogReq* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void HideDialogReq::InternalSwap(HideDialogReq* other) {
-  GetReflection()->Swap(this, other);}
-
-::google::protobuf::Metadata HideDialogReq::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = HideDialogReq_descriptor_;
-  metadata.reflection = HideDialogReq_reflection_;
-  return metadata;
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// HideDialogReq
-
-// optional .zproto.OutPeer peer = 1;
-bool HideDialogReq::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
-}
-void HideDialogReq::clear_peer() {
-  if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
-  peer_ = NULL;
-}
-const ::zproto::OutPeer& HideDialogReq::peer() const {
-  // @@protoc_insertion_point(field_get:zproto.HideDialogReq.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
-}
-::zproto::OutPeer* HideDialogReq::mutable_peer() {
-  
-  if (peer_ == NULL) {
-    peer_ = new ::zproto::OutPeer;
-  }
-  // @@protoc_insertion_point(field_mutable:zproto.HideDialogReq.peer)
-  return peer_;
-}
-::zproto::OutPeer* HideDialogReq::release_peer() {
-  // @@protoc_insertion_point(field_release:zproto.HideDialogReq.peer)
-  
-  ::zproto::OutPeer* temp = peer_;
-  peer_ = NULL;
-  return temp;
-}
-void HideDialogReq::set_allocated_peer(::zproto::OutPeer* peer) {
-  delete peer_;
-  peer_ = peer;
-  if (peer) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zproto.HideDialogReq.peer)
-}
-
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int ShowDialogReq::kPeerFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-ShowDialogReq::ShowDialogReq()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.ShowDialogReq)
-}
-
-void ShowDialogReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::OutPeer*>(&::zproto::OutPeer::default_instance());
-}
-
-ShowDialogReq::ShowDialogReq(const ShowDialogReq& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.ShowDialogReq)
-}
-
-void ShowDialogReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
-  peer_ = NULL;
-}
-
-ShowDialogReq::~ShowDialogReq() {
-  // @@protoc_insertion_point(destructor:zproto.ShowDialogReq)
-  SharedDtor();
-}
-
-void ShowDialogReq::SharedDtor() {
-  if (this != default_instance_) {
-    delete peer_;
-  }
-}
-
-void ShowDialogReq::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* ShowDialogReq::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return ShowDialogReq_descriptor_;
-}
-
-const ShowDialogReq& ShowDialogReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
-}
-
-ShowDialogReq* ShowDialogReq::default_instance_ = NULL;
-
-ShowDialogReq* ShowDialogReq::New(::google::protobuf::Arena* arena) const {
-  ShowDialogReq* n = new ShowDialogReq;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void ShowDialogReq::Swap(ShowDialogReq* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void ShowDialogReq::InternalSwap(ShowDialogReq* other) {
-  GetReflection()->Swap(this, other);}
-
-::google::protobuf::Metadata ShowDialogReq::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = ShowDialogReq_descriptor_;
-  metadata.reflection = ShowDialogReq_reflection_;
-  return metadata;
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// ShowDialogReq
-
-// optional .zproto.OutPeer peer = 1;
-bool ShowDialogReq::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
-}
-void ShowDialogReq::clear_peer() {
-  if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
-  peer_ = NULL;
-}
-const ::zproto::OutPeer& ShowDialogReq::peer() const {
-  // @@protoc_insertion_point(field_get:zproto.ShowDialogReq.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
-}
-::zproto::OutPeer* ShowDialogReq::mutable_peer() {
-  
-  if (peer_ == NULL) {
-    peer_ = new ::zproto::OutPeer;
-  }
-  // @@protoc_insertion_point(field_mutable:zproto.ShowDialogReq.peer)
-  return peer_;
-}
-::zproto::OutPeer* ShowDialogReq::release_peer() {
-  // @@protoc_insertion_point(field_release:zproto.ShowDialogReq.peer)
-  
-  ::zproto::OutPeer* temp = peer_;
-  peer_ = NULL;
-  return temp;
-}
-void ShowDialogReq::set_allocated_peer(::zproto::OutPeer* peer) {
-  delete peer_;
-  peer_ = peer;
-  if (peer) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zproto.ShowDialogReq.peer)
-}
-
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int FavouriteDialogReq::kPeerFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-FavouriteDialogReq::FavouriteDialogReq()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.FavouriteDialogReq)
-}
-
-void FavouriteDialogReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::OutPeer*>(&::zproto::OutPeer::default_instance());
-}
-
-FavouriteDialogReq::FavouriteDialogReq(const FavouriteDialogReq& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.FavouriteDialogReq)
-}
-
-void FavouriteDialogReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
-  peer_ = NULL;
-}
-
-FavouriteDialogReq::~FavouriteDialogReq() {
-  // @@protoc_insertion_point(destructor:zproto.FavouriteDialogReq)
-  SharedDtor();
-}
-
-void FavouriteDialogReq::SharedDtor() {
-  if (this != default_instance_) {
-    delete peer_;
-  }
-}
-
-void FavouriteDialogReq::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* FavouriteDialogReq::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return FavouriteDialogReq_descriptor_;
-}
-
-const FavouriteDialogReq& FavouriteDialogReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
-}
-
-FavouriteDialogReq* FavouriteDialogReq::default_instance_ = NULL;
-
-FavouriteDialogReq* FavouriteDialogReq::New(::google::protobuf::Arena* arena) const {
-  FavouriteDialogReq* n = new FavouriteDialogReq;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void FavouriteDialogReq::Swap(FavouriteDialogReq* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void FavouriteDialogReq::InternalSwap(FavouriteDialogReq* other) {
-  GetReflection()->Swap(this, other);}
-
-::google::protobuf::Metadata FavouriteDialogReq::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = FavouriteDialogReq_descriptor_;
-  metadata.reflection = FavouriteDialogReq_reflection_;
-  return metadata;
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// FavouriteDialogReq
-
-// optional .zproto.OutPeer peer = 1;
-bool FavouriteDialogReq::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
-}
-void FavouriteDialogReq::clear_peer() {
-  if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
-  peer_ = NULL;
-}
-const ::zproto::OutPeer& FavouriteDialogReq::peer() const {
-  // @@protoc_insertion_point(field_get:zproto.FavouriteDialogReq.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
-}
-::zproto::OutPeer* FavouriteDialogReq::mutable_peer() {
-  
-  if (peer_ == NULL) {
-    peer_ = new ::zproto::OutPeer;
-  }
-  // @@protoc_insertion_point(field_mutable:zproto.FavouriteDialogReq.peer)
-  return peer_;
-}
-::zproto::OutPeer* FavouriteDialogReq::release_peer() {
-  // @@protoc_insertion_point(field_release:zproto.FavouriteDialogReq.peer)
-  
-  ::zproto::OutPeer* temp = peer_;
-  peer_ = NULL;
-  return temp;
-}
-void FavouriteDialogReq::set_allocated_peer(::zproto::OutPeer* peer) {
-  delete peer_;
-  peer_ = peer;
-  if (peer) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zproto.FavouriteDialogReq.peer)
-}
-
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int UnfavouriteDialogReq::kPeerFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-UnfavouriteDialogReq::UnfavouriteDialogReq()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.UnfavouriteDialogReq)
-}
-
-void UnfavouriteDialogReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::OutPeer*>(&::zproto::OutPeer::default_instance());
-}
-
-UnfavouriteDialogReq::UnfavouriteDialogReq(const UnfavouriteDialogReq& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.UnfavouriteDialogReq)
-}
-
-void UnfavouriteDialogReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
-  peer_ = NULL;
-}
-
-UnfavouriteDialogReq::~UnfavouriteDialogReq() {
-  // @@protoc_insertion_point(destructor:zproto.UnfavouriteDialogReq)
-  SharedDtor();
-}
-
-void UnfavouriteDialogReq::SharedDtor() {
-  if (this != default_instance_) {
-    delete peer_;
-  }
-}
-
-void UnfavouriteDialogReq::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* UnfavouriteDialogReq::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return UnfavouriteDialogReq_descriptor_;
-}
-
-const UnfavouriteDialogReq& UnfavouriteDialogReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
-}
-
-UnfavouriteDialogReq* UnfavouriteDialogReq::default_instance_ = NULL;
-
-UnfavouriteDialogReq* UnfavouriteDialogReq::New(::google::protobuf::Arena* arena) const {
-  UnfavouriteDialogReq* n = new UnfavouriteDialogReq;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void UnfavouriteDialogReq::Swap(UnfavouriteDialogReq* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void UnfavouriteDialogReq::InternalSwap(UnfavouriteDialogReq* other) {
-  GetReflection()->Swap(this, other);}
-
-::google::protobuf::Metadata UnfavouriteDialogReq::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = UnfavouriteDialogReq_descriptor_;
-  metadata.reflection = UnfavouriteDialogReq_reflection_;
-  return metadata;
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// UnfavouriteDialogReq
-
-// optional .zproto.OutPeer peer = 1;
-bool UnfavouriteDialogReq::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
-}
-void UnfavouriteDialogReq::clear_peer() {
-  if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
-  peer_ = NULL;
-}
-const ::zproto::OutPeer& UnfavouriteDialogReq::peer() const {
-  // @@protoc_insertion_point(field_get:zproto.UnfavouriteDialogReq.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
-}
-::zproto::OutPeer* UnfavouriteDialogReq::mutable_peer() {
-  
-  if (peer_ == NULL) {
-    peer_ = new ::zproto::OutPeer;
-  }
-  // @@protoc_insertion_point(field_mutable:zproto.UnfavouriteDialogReq.peer)
-  return peer_;
-}
-::zproto::OutPeer* UnfavouriteDialogReq::release_peer() {
-  // @@protoc_insertion_point(field_release:zproto.UnfavouriteDialogReq.peer)
-  
-  ::zproto::OutPeer* temp = peer_;
-  peer_ = NULL;
-  return temp;
-}
-void UnfavouriteDialogReq::set_allocated_peer(::zproto::OutPeer* peer) {
-  delete peer_;
-  peer_ = peer;
-  if (peer) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zproto.UnfavouriteDialogReq.peer)
-}
-
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int NotifyDialogOpenedReq::kPeerFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-NotifyDialogOpenedReq::NotifyDialogOpenedReq()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.NotifyDialogOpenedReq)
-}
-
-void NotifyDialogOpenedReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::OutPeer*>(&::zproto::OutPeer::default_instance());
-}
-
-NotifyDialogOpenedReq::NotifyDialogOpenedReq(const NotifyDialogOpenedReq& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.NotifyDialogOpenedReq)
-}
-
-void NotifyDialogOpenedReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
-  peer_ = NULL;
-}
-
-NotifyDialogOpenedReq::~NotifyDialogOpenedReq() {
-  // @@protoc_insertion_point(destructor:zproto.NotifyDialogOpenedReq)
-  SharedDtor();
-}
-
-void NotifyDialogOpenedReq::SharedDtor() {
-  if (this != default_instance_) {
-    delete peer_;
-  }
-}
-
-void NotifyDialogOpenedReq::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* NotifyDialogOpenedReq::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return NotifyDialogOpenedReq_descriptor_;
-}
-
-const NotifyDialogOpenedReq& NotifyDialogOpenedReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
-}
-
-NotifyDialogOpenedReq* NotifyDialogOpenedReq::default_instance_ = NULL;
-
-NotifyDialogOpenedReq* NotifyDialogOpenedReq::New(::google::protobuf::Arena* arena) const {
-  NotifyDialogOpenedReq* n = new NotifyDialogOpenedReq;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void NotifyDialogOpenedReq::Swap(NotifyDialogOpenedReq* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void NotifyDialogOpenedReq::InternalSwap(NotifyDialogOpenedReq* other) {
-  GetReflection()->Swap(this, other);}
-
-::google::protobuf::Metadata NotifyDialogOpenedReq::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = NotifyDialogOpenedReq_descriptor_;
-  metadata.reflection = NotifyDialogOpenedReq_reflection_;
-  return metadata;
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// NotifyDialogOpenedReq
-
-// optional .zproto.OutPeer peer = 1;
-bool NotifyDialogOpenedReq::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
-}
-void NotifyDialogOpenedReq::clear_peer() {
-  if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
-  peer_ = NULL;
-}
-const ::zproto::OutPeer& NotifyDialogOpenedReq::peer() const {
-  // @@protoc_insertion_point(field_get:zproto.NotifyDialogOpenedReq.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
-}
-::zproto::OutPeer* NotifyDialogOpenedReq::mutable_peer() {
-  
-  if (peer_ == NULL) {
-    peer_ = new ::zproto::OutPeer;
-  }
-  // @@protoc_insertion_point(field_mutable:zproto.NotifyDialogOpenedReq.peer)
-  return peer_;
-}
-::zproto::OutPeer* NotifyDialogOpenedReq::release_peer() {
-  // @@protoc_insertion_point(field_release:zproto.NotifyDialogOpenedReq.peer)
-  
-  ::zproto::OutPeer* temp = peer_;
-  peer_ = NULL;
-  return temp;
-}
-void NotifyDialogOpenedReq::set_allocated_peer(::zproto::OutPeer* peer) {
-  delete peer_;
-  peer_ = peer;
-  if (peer) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zproto.NotifyDialogOpenedReq.peer)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

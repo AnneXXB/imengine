@@ -161,10 +161,10 @@ void protobuf_AddDesc_peers_2eproto() {
     "id\030\002 \001(\t\022\023\n\013access_hash\030\003 \001(\003\"/\n\013UserOut"
     "Peer\022\013\n\003uid\030\001 \001(\t\022\023\n\013access_hash\030\002 \001(\003\"5"
     "\n\014GroupOutPeer\022\020\n\010group_id\030\001 \001(\t\022\023\n\013acce"
-    "ss_hash\030\002 \001(\003*B\n\010PeerType\022\016\n\nPT_PRIVATE\020"
-    "\000\022\014\n\010PT_GROUP\020\001\022\030\n\024PT_ENCRYPTED_PRIVATE\020"
-    "\002B(\n\027com.zchat.engine.zprotoB\013ZProtoPeer"
-    "sH\002b\006proto3", 371);
+    "ss_hash\030\002 \001(\003*W\n\010PeerType\022\025\n\021PEER_TYPE_P"
+    "RIVATE\020\000\022\023\n\017PEER_TYPE_GROUP\020\001\022\037\n\033PEER_TY"
+    "PE_ENCRYPTED_PRIVATE\020\002B(\n\027com.zchat.engi"
+    "ne.zprotoB\013ZProtoPeersH\002b\006proto3", 392);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "peers.proto", &protobuf_RegisterTypes);
   Peer::default_instance_ = new Peer();

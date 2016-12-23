@@ -15,23 +15,9 @@
  * limitations under the License.
  */
 
-// TODO(@benqi): 使用zrpc-code-gen代码生成工具自动生成
+// TODO(@benqi): 使用zrpc-code-gen代码生成工具自动生成服务框架代码
 
-#include "messenger/messenger_server.h"
+#include "messenger/privacy_service_impl.h"
 
-// #include "nebula/base/timer_manager.h"
+#include "nebula/net/rpc/zrpc_service_util.h"
 
-bool MessengerServer::Initialize() {
-  // RegisterService("tcpd", "tcp_server");
-  RegisterService("messenger_server", "rpc_server", "zrpc");
-  RegisterService("push_client", "rpc_client", "zrpc");
-
-  BaseServer::Initialize();
-  
-  return true;
-}
-
-
-int main(int argc, char* argv[]) {
-    return nebula::DoMain<MessengerServer>(argc, argv);
-}

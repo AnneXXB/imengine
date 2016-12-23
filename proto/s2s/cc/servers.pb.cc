@@ -27,6 +27,9 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* ServerAuthRsp_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   ServerAuthRsp_reflection_ = NULL;
+const ::google::protobuf::Descriptor* DeliveryDataToUsersReq_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  DeliveryDataToUsersReq_reflection_ = NULL;
 
 }  // namespace
 
@@ -68,6 +71,24 @@ void protobuf_AssignDesc_servers_2eproto() {
       sizeof(ServerAuthRsp),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ServerAuthRsp, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ServerAuthRsp, _is_default_instance_));
+  DeliveryDataToUsersReq_descriptor_ = file->message_type(2);
+  static const int DeliveryDataToUsersReq_offsets_[4] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeliveryDataToUsersReq, my_conn_id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeliveryDataToUsersReq, uid_list_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeliveryDataToUsersReq, raw_data_header_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeliveryDataToUsersReq, raw_data_),
+  };
+  DeliveryDataToUsersReq_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      DeliveryDataToUsersReq_descriptor_,
+      DeliveryDataToUsersReq::default_instance_,
+      DeliveryDataToUsersReq_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(DeliveryDataToUsersReq),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeliveryDataToUsersReq, _internal_metadata_),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeliveryDataToUsersReq, _is_default_instance_));
 }
 
 namespace {
@@ -85,6 +106,8 @@ void protobuf_RegisterTypes(const ::std::string&) {
       ServerAuthReq_descriptor_, &ServerAuthReq::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       ServerAuthRsp_descriptor_, &ServerAuthRsp::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      DeliveryDataToUsersReq_descriptor_, &DeliveryDataToUsersReq::default_instance());
 }
 
 }  // namespace
@@ -94,6 +117,8 @@ void protobuf_ShutdownFile_servers_2eproto() {
   delete ServerAuthReq_reflection_;
   delete ServerAuthRsp::default_instance_;
   delete ServerAuthRsp_reflection_;
+  delete DeliveryDataToUsersReq::default_instance_;
+  delete DeliveryDataToUsersReq_reflection_;
 }
 
 void protobuf_AddDesc_servers_2eproto() GOOGLE_ATTRIBUTE_COLD;
@@ -106,14 +131,19 @@ void protobuf_AddDesc_servers_2eproto() {
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
     "\n\rservers.proto\022\006zproto\"7\n\rServerAuthReq"
     "\022\021\n\tserver_id\030\001 \001(\r\022\023\n\013server_name\030\002 \001(\t"
-    "\"\017\n\rServerAuthRspB#\n\027com.zchat.engine.zp"
-    "rotoB\006ZProtoH\002b\006proto3", 142);
+    "\"\017\n\rServerAuthRsp\"i\n\026DeliveryDataToUsers"
+    "Req\022\022\n\nmy_conn_id\030\001 \001(\004\022\020\n\010uid_list\030\002 \003("
+    "\t\022\027\n\017raw_data_header\030\004 \001(\r\022\020\n\010raw_data\030\005"
+    " \001(\014B*\n\027com.zchat.engine.zprotoB\rZProtoS"
+    "erversH\002b\006proto3", 256);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "servers.proto", &protobuf_RegisterTypes);
   ServerAuthReq::default_instance_ = new ServerAuthReq();
   ServerAuthRsp::default_instance_ = new ServerAuthRsp();
+  DeliveryDataToUsersReq::default_instance_ = new DeliveryDataToUsersReq();
   ServerAuthReq::default_instance_->InitAsDefaultInstance();
   ServerAuthRsp::default_instance_->InitAsDefaultInstance();
+  DeliveryDataToUsersReq::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_servers_2eproto);
 }
 
@@ -351,6 +381,225 @@ void ServerAuthRsp::InternalSwap(ServerAuthRsp* other) {
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // ServerAuthRsp
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int DeliveryDataToUsersReq::kMyConnIdFieldNumber;
+const int DeliveryDataToUsersReq::kUidListFieldNumber;
+const int DeliveryDataToUsersReq::kRawDataHeaderFieldNumber;
+const int DeliveryDataToUsersReq::kRawDataFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+DeliveryDataToUsersReq::DeliveryDataToUsersReq()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.DeliveryDataToUsersReq)
+}
+
+void DeliveryDataToUsersReq::InitAsDefaultInstance() {
+  _is_default_instance_ = true;
+}
+
+DeliveryDataToUsersReq::DeliveryDataToUsersReq(const DeliveryDataToUsersReq& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.DeliveryDataToUsersReq)
+}
+
+void DeliveryDataToUsersReq::SharedCtor() {
+    _is_default_instance_ = false;
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  my_conn_id_ = GOOGLE_ULONGLONG(0);
+  raw_data_header_ = 0u;
+  raw_data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+DeliveryDataToUsersReq::~DeliveryDataToUsersReq() {
+  // @@protoc_insertion_point(destructor:zproto.DeliveryDataToUsersReq)
+  SharedDtor();
+}
+
+void DeliveryDataToUsersReq::SharedDtor() {
+  raw_data_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (this != default_instance_) {
+  }
+}
+
+void DeliveryDataToUsersReq::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* DeliveryDataToUsersReq::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return DeliveryDataToUsersReq_descriptor_;
+}
+
+const DeliveryDataToUsersReq& DeliveryDataToUsersReq::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_servers_2eproto();
+  return *default_instance_;
+}
+
+DeliveryDataToUsersReq* DeliveryDataToUsersReq::default_instance_ = NULL;
+
+DeliveryDataToUsersReq* DeliveryDataToUsersReq::New(::google::protobuf::Arena* arena) const {
+  DeliveryDataToUsersReq* n = new DeliveryDataToUsersReq;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void DeliveryDataToUsersReq::Swap(DeliveryDataToUsersReq* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void DeliveryDataToUsersReq::InternalSwap(DeliveryDataToUsersReq* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata DeliveryDataToUsersReq::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = DeliveryDataToUsersReq_descriptor_;
+  metadata.reflection = DeliveryDataToUsersReq_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// DeliveryDataToUsersReq
+
+// optional uint64 my_conn_id = 1;
+void DeliveryDataToUsersReq::clear_my_conn_id() {
+  my_conn_id_ = GOOGLE_ULONGLONG(0);
+}
+ ::google::protobuf::uint64 DeliveryDataToUsersReq::my_conn_id() const {
+  // @@protoc_insertion_point(field_get:zproto.DeliveryDataToUsersReq.my_conn_id)
+  return my_conn_id_;
+}
+ void DeliveryDataToUsersReq::set_my_conn_id(::google::protobuf::uint64 value) {
+  
+  my_conn_id_ = value;
+  // @@protoc_insertion_point(field_set:zproto.DeliveryDataToUsersReq.my_conn_id)
+}
+
+// repeated string uid_list = 2;
+int DeliveryDataToUsersReq::uid_list_size() const {
+  return uid_list_.size();
+}
+void DeliveryDataToUsersReq::clear_uid_list() {
+  uid_list_.Clear();
+}
+ const ::std::string& DeliveryDataToUsersReq::uid_list(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.DeliveryDataToUsersReq.uid_list)
+  return uid_list_.Get(index);
+}
+ ::std::string* DeliveryDataToUsersReq::mutable_uid_list(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.DeliveryDataToUsersReq.uid_list)
+  return uid_list_.Mutable(index);
+}
+ void DeliveryDataToUsersReq::set_uid_list(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:zproto.DeliveryDataToUsersReq.uid_list)
+  uid_list_.Mutable(index)->assign(value);
+}
+ void DeliveryDataToUsersReq::set_uid_list(int index, const char* value) {
+  uid_list_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:zproto.DeliveryDataToUsersReq.uid_list)
+}
+ void DeliveryDataToUsersReq::set_uid_list(int index, const char* value, size_t size) {
+  uid_list_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:zproto.DeliveryDataToUsersReq.uid_list)
+}
+ ::std::string* DeliveryDataToUsersReq::add_uid_list() {
+  // @@protoc_insertion_point(field_add_mutable:zproto.DeliveryDataToUsersReq.uid_list)
+  return uid_list_.Add();
+}
+ void DeliveryDataToUsersReq::add_uid_list(const ::std::string& value) {
+  uid_list_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:zproto.DeliveryDataToUsersReq.uid_list)
+}
+ void DeliveryDataToUsersReq::add_uid_list(const char* value) {
+  uid_list_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:zproto.DeliveryDataToUsersReq.uid_list)
+}
+ void DeliveryDataToUsersReq::add_uid_list(const char* value, size_t size) {
+  uid_list_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:zproto.DeliveryDataToUsersReq.uid_list)
+}
+ const ::google::protobuf::RepeatedPtrField< ::std::string>&
+DeliveryDataToUsersReq::uid_list() const {
+  // @@protoc_insertion_point(field_list:zproto.DeliveryDataToUsersReq.uid_list)
+  return uid_list_;
+}
+ ::google::protobuf::RepeatedPtrField< ::std::string>*
+DeliveryDataToUsersReq::mutable_uid_list() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.DeliveryDataToUsersReq.uid_list)
+  return &uid_list_;
+}
+
+// optional uint32 raw_data_header = 4;
+void DeliveryDataToUsersReq::clear_raw_data_header() {
+  raw_data_header_ = 0u;
+}
+ ::google::protobuf::uint32 DeliveryDataToUsersReq::raw_data_header() const {
+  // @@protoc_insertion_point(field_get:zproto.DeliveryDataToUsersReq.raw_data_header)
+  return raw_data_header_;
+}
+ void DeliveryDataToUsersReq::set_raw_data_header(::google::protobuf::uint32 value) {
+  
+  raw_data_header_ = value;
+  // @@protoc_insertion_point(field_set:zproto.DeliveryDataToUsersReq.raw_data_header)
+}
+
+// optional bytes raw_data = 5;
+void DeliveryDataToUsersReq::clear_raw_data() {
+  raw_data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& DeliveryDataToUsersReq::raw_data() const {
+  // @@protoc_insertion_point(field_get:zproto.DeliveryDataToUsersReq.raw_data)
+  return raw_data_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void DeliveryDataToUsersReq::set_raw_data(const ::std::string& value) {
+  
+  raw_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.DeliveryDataToUsersReq.raw_data)
+}
+ void DeliveryDataToUsersReq::set_raw_data(const char* value) {
+  
+  raw_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.DeliveryDataToUsersReq.raw_data)
+}
+ void DeliveryDataToUsersReq::set_raw_data(const void* value, size_t size) {
+  
+  raw_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.DeliveryDataToUsersReq.raw_data)
+}
+ ::std::string* DeliveryDataToUsersReq::mutable_raw_data() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.DeliveryDataToUsersReq.raw_data)
+  return raw_data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* DeliveryDataToUsersReq::release_raw_data() {
+  // @@protoc_insertion_point(field_release:zproto.DeliveryDataToUsersReq.raw_data)
+  
+  return raw_data_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void DeliveryDataToUsersReq::set_allocated_raw_data(::std::string* raw_data) {
+  if (raw_data != NULL) {
+    
+  } else {
+    
+  }
+  raw_data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), raw_data);
+  // @@protoc_insertion_point(field_set_allocated:zproto.DeliveryDataToUsersReq.raw_data)
+}
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 

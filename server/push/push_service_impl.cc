@@ -21,11 +21,10 @@
 
 #include "nebula/net/handler/nebula_handler_util.h"
 
-// #include "proto/zproto/zproto_api_message_types.h"
+#include "proto/api/cc/messaging.pb.h"
 #include "dal/online_status_dao.h"
 #include "push/gate_channel_manager.h"
 
-/*
 // 转发
 inline folly::Future<folly::Unit> WritePackage(uint64_t conn_id, std::shared_ptr<PackageMessage> message_data) {
   std::unique_ptr<folly::IOBuf> data;
@@ -33,30 +32,20 @@ inline folly::Future<folly::Unit> WritePackage(uint64_t conn_id, std::shared_ptr
   return WriterUtil::Write(conn_id, std::move(data));
 }
 
-int PushServiceImpl::ForwardMessage(const zproto::ForwardMessageReq& request, zproto::VoidRsp* response) {
-  const auto& message_data = request.message_data();
-  // const auto& not_send_conn_ids = (*forward_message_req)->not_send_conn_ids();
-  
+int PushServiceImpl::DeliveryDataToUsers(const zproto::DeliveryDataToUsersReq& request, zproto::VoidRsp* response) {
+  // const auto& message_data = request.message_data();
   std::list<std::string> user_id_list;
-  user_id_list.push_back(message_data.sender_user_id());
-  user_id_list.push_back(message_data.peer().id());
+  
+  for (int i=0; i<request.uid_list_size(); ++i) {
+    user_id_list.push_back(request.uid_list(i));
+  }
   
   OnlineStatusDOList onlines;
   zproto::MessageNotify message_notify;
   OnlineStatusDAO::GetInstance().GetUsersOnlineStatus(1, user_id_list, onlines, request.my_conn_id());
   for (const auto& v : onlines) {
     auto gate_conn_id = GateChannelManager::GetInstance()->LookupConnID(v.server_id);
-    if (gate_conn_id == 0) {
-      continue;
-    }
-    bool not_send = false;
-    for (int i=0; i<request.not_send_conn_ids_size(); ++i) {
-      if (request.not_send_conn_ids(i) == gate_conn_id) {
-        not_send = true;
-        break;
-      }
-    }
-    if (not_send ) {
+    if (gate_conn_id == 0 || request.my_conn_id() == gate_conn_id) {
       continue;
     }
     
@@ -68,4 +57,3 @@ int PushServiceImpl::ForwardMessage(const zproto::ForwardMessageReq& request, zp
 
   return 0;
 }
-*/

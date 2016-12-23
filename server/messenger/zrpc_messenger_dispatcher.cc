@@ -21,13 +21,17 @@
 
 #include "nebula/net/rpc/zrpc_service_util.h"
 
-#include "messenger/messenger_service_impl.h"
+#include "messenger/messaging_service_impl.h"
+#include "messenger/groups_service_impl.h"
+#include "messenger/privacy_service_impl.h"
+#include "messenger/sequence_service_impl.h"
+#include "messenger/weak_service_impl.h"
 
 static ZRpcMessengerDispatcher g_messenger_push_dispatcher;
 
 ZRpcMessengerDispatcher::ZRpcMessengerDispatcher() {
-  /*
   ZRpcUtil::Register("zproto.SendMessageReq", SendMessage);
+  /*
   ZRpcUtil::Register("zproto.MessageSyncReq", MessageSync);
   ZRpcUtil::Register("zproto.LoadHistoryMessageReq", LoadHistoryMessage);
   ZRpcUtil::Register("zproto.LoadDialogsReq", LoadDialogs);
@@ -39,12 +43,12 @@ ProtoRpcResponsePtr ZRpcMessengerDispatcher::SendMessage(RpcRequestPtr request) 
   CAST_RPC_REQUEST(SendMessageReq, send_message_req);
   LOG(INFO) << send_message_req.Utf8DebugString();
   
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
   zproto::SeqDateRsp seq_date_rsp;
   
-  MessengerServiceImpl service_impl;
-  service_impl.set_rpc_request(request);
-  
-  //service_impl.SendMessage(send_message_req, &seq_date_rsp);
+  MessagingServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.SendMessage(send_message_req, &seq_date_rsp);
   
   return MakeRpcOK(seq_date_rsp);
 }

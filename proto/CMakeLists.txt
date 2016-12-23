@@ -54,8 +54,6 @@ api/cc/privacy.pb.cc
 api/cc/privacy.pb.h
 api/cc/sequence.pb.cc
 api/cc/sequence.pb.h
-api/cc/sequence_base.pb.cc
-api/cc/sequence_base.pb.h
 api/cc/stats.pb.cc
 api/cc/stats.pb.h
 api/cc/types.pb.cc
@@ -78,7 +76,6 @@ api/proto/messaging.proto
 api/proto/misc.proto
 api/proto/peers.proto
 api/proto/privacy.proto
-api/proto/sequence_base.proto
 api/proto/sequence.proto
 api/proto/stats.proto
 api/proto/users.proto

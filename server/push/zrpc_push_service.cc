@@ -21,8 +21,8 @@
 
 #include "nebula/base/logger/glog_util.h"
 
-//int ZRpcPushService::ForwardMessage(const zproto::ForwardMessageReq& request, zproto::VoidRsp* response) {
-//  LOG(ERROR) << "ZRpcPushService - ForwardMessage unimplemented";
-//  return -1;
-//}
+int ZRpcPushService::DeliveryDataToUsers(const zproto::DeliveryDataToUsersReq& request, zproto::VoidRsp* response) {
+  LOG(ERROR) << "ZRpcPushService - DeliveryDataToUsersReq unimplemented";
+  return -1;
+}
 

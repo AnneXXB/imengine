@@ -17,21 +17,15 @@
 
 // TODO(@benqi): 使用zrpc-code-gen代码生成工具自动生成
 
-#include "messenger/messenger_server.h"
+#ifndef	MESSENGER_PRIVACY_SERVICE_IMPL_H_
+#define	MESSENGER_PRIVACY_SERVICE_IMPL_H_
 
-// #include "nebula/base/timer_manager.h"
+#include "messenger/zrpc_privacy_service.h"
 
-bool MessengerServer::Initialize() {
-  // RegisterService("tcpd", "tcp_server");
-  RegisterService("messenger_server", "rpc_server", "zrpc");
-  RegisterService("push_client", "rpc_client", "zrpc");
+class PrivacyServiceImpl : public ZRpcPrivacyService {
+public:
+  PrivacyServiceImpl() = default;
+  ~PrivacyServiceImpl() = default;
+};
 
-  BaseServer::Initialize();
-  
-  return true;
-}
-
-
-int main(int argc, char* argv[]) {
-    return nebula::DoMain<MessengerServer>(argc, argv);
-}
+#endif

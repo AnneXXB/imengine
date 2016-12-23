@@ -22,11 +22,11 @@ option java_package = "com.zchat.engine.zproto";
 option java_outer_classname = "ZProtoGroups";
 option optimize_for = CODE_SIZE;
 
+import "misc.proto";
 import "peers.proto";
 import "types.proto";
 import "files.proto";
 import "users.proto";
-import "sequence_base.proto";
 import "group_base.proto";
 
 // Loading Full Groups

@@ -43,15 +43,15 @@ class Peer;
 class UserOutPeer;
 
 enum PeerType {
-  PT_PRIVATE = 0,
-  PT_GROUP = 1,
-  PT_ENCRYPTED_PRIVATE = 2,
+  PEER_TYPE_PRIVATE = 0,
+  PEER_TYPE_GROUP = 1,
+  PEER_TYPE_ENCRYPTED_PRIVATE = 2,
   PeerType_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
   PeerType_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
 bool PeerType_IsValid(int value);
-const PeerType PeerType_MIN = PT_PRIVATE;
-const PeerType PeerType_MAX = PT_ENCRYPTED_PRIVATE;
+const PeerType PeerType_MIN = PEER_TYPE_PRIVATE;
+const PeerType PeerType_MAX = PEER_TYPE_ENCRYPTED_PRIVATE;
 const int PeerType_ARRAYSIZE = PeerType_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* PeerType_descriptor();

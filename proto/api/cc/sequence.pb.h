@@ -27,11 +27,11 @@
 #include <google/protobuf/repeated_field.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/unknown_field_set.h>
+#include "misc.pb.h"
 #include "peers.pb.h"
 #include "users.pb.h"
 #include "group_base.pb.h"
 #include "messaging_base.pb.h"
-#include "sequence_base.pb.h"
 // @@protoc_insertion_point(includes)
 
 namespace zproto {
@@ -41,19 +41,709 @@ void protobuf_AddDesc_sequence_2eproto();
 void protobuf_AssignDesc_sequence_2eproto();
 void protobuf_ShutdownFile_sequence_2eproto();
 
+class CombinedUpdate;
 class EmptyUpdateNotify;
+class FatSeqUpdate;
 class GetDifferenceReq;
 class GetDifferenceRsp;
 class GetReferencedEntititesReq;
 class GetReferencedEntititesRsp;
 class GetStateReq;
 class RawUpdateNotify;
+class SeqUpdate;
+class SeqUpdateTooLong;
 class SubscribeFromGroupOnlineReq;
 class SubscribeFromOnlineReq;
 class SubscribeToGroupOnlineReq;
 class SubscribeToOnlineReq;
+class UpdateContainer;
+class WeakFatUpdate;
+class WeakUpdate;
 
 // ===================================================================
+
+class SeqUpdate : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.SeqUpdate) */ {
+ public:
+  SeqUpdate();
+  virtual ~SeqUpdate();
+
+  SeqUpdate(const SeqUpdate& from);
+
+  inline SeqUpdate& operator=(const SeqUpdate& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const SeqUpdate& default_instance();
+
+  void Swap(SeqUpdate* other);
+
+  // implements Message ----------------------------------------------
+
+  inline SeqUpdate* New() const { return New(NULL); }
+
+  SeqUpdate* New(::google::protobuf::Arena* arena) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(SeqUpdate* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional int32 seq = 1;
+  void clear_seq();
+  static const int kSeqFieldNumber = 1;
+  ::google::protobuf::int32 seq() const;
+  void set_seq(::google::protobuf::int32 value);
+
+  // optional bytes state = 2;
+  void clear_state();
+  static const int kStateFieldNumber = 2;
+  const ::std::string& state() const;
+  void set_state(const ::std::string& value);
+  void set_state(const char* value);
+  void set_state(const void* value, size_t size);
+  ::std::string* mutable_state();
+  ::std::string* release_state();
+  void set_allocated_state(::std::string* state);
+
+  // optional int32 update_header = 3;
+  void clear_update_header();
+  static const int kUpdateHeaderFieldNumber = 3;
+  ::google::protobuf::int32 update_header() const;
+  void set_update_header(::google::protobuf::int32 value);
+
+  // optional bytes update = 4;
+  void clear_update();
+  static const int kUpdateFieldNumber = 4;
+  const ::std::string& update() const;
+  void set_update(const ::std::string& value);
+  void set_update(const char* value);
+  void set_update(const void* value, size_t size);
+  ::std::string* mutable_update();
+  ::std::string* release_update();
+  void set_allocated_update(::std::string* update);
+
+  // @@protoc_insertion_point(class_scope:zproto.SeqUpdate)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::internal::ArenaStringPtr state_;
+  ::google::protobuf::int32 seq_;
+  ::google::protobuf::int32 update_header_;
+  ::google::protobuf::internal::ArenaStringPtr update_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_sequence_2eproto();
+  friend void protobuf_AssignDesc_sequence_2eproto();
+  friend void protobuf_ShutdownFile_sequence_2eproto();
+
+  void InitAsDefaultInstance();
+  static SeqUpdate* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class FatSeqUpdate : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.FatSeqUpdate) */ {
+ public:
+  FatSeqUpdate();
+  virtual ~FatSeqUpdate();
+
+  FatSeqUpdate(const FatSeqUpdate& from);
+
+  inline FatSeqUpdate& operator=(const FatSeqUpdate& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const FatSeqUpdate& default_instance();
+
+  void Swap(FatSeqUpdate* other);
+
+  // implements Message ----------------------------------------------
+
+  inline FatSeqUpdate* New() const { return New(NULL); }
+
+  FatSeqUpdate* New(::google::protobuf::Arena* arena) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(FatSeqUpdate* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional int32 seq = 1;
+  void clear_seq();
+  static const int kSeqFieldNumber = 1;
+  ::google::protobuf::int32 seq() const;
+  void set_seq(::google::protobuf::int32 value);
+
+  // optional bytes state = 2;
+  void clear_state();
+  static const int kStateFieldNumber = 2;
+  const ::std::string& state() const;
+  void set_state(const ::std::string& value);
+  void set_state(const char* value);
+  void set_state(const void* value, size_t size);
+  ::std::string* mutable_state();
+  ::std::string* release_state();
+  void set_allocated_state(::std::string* state);
+
+  // optional int32 update_header = 3;
+  void clear_update_header();
+  static const int kUpdateHeaderFieldNumber = 3;
+  ::google::protobuf::int32 update_header() const;
+  void set_update_header(::google::protobuf::int32 value);
+
+  // optional bytes update = 4;
+  void clear_update();
+  static const int kUpdateFieldNumber = 4;
+  const ::std::string& update() const;
+  void set_update(const ::std::string& value);
+  void set_update(const char* value);
+  void set_update(const void* value, size_t size);
+  ::std::string* mutable_update();
+  ::std::string* release_update();
+  void set_allocated_update(::std::string* update);
+
+  // repeated .zproto.User users = 5;
+  int users_size() const;
+  void clear_users();
+  static const int kUsersFieldNumber = 5;
+  const ::zproto::User& users(int index) const;
+  ::zproto::User* mutable_users(int index);
+  ::zproto::User* add_users();
+  ::google::protobuf::RepeatedPtrField< ::zproto::User >*
+      mutable_users();
+  const ::google::protobuf::RepeatedPtrField< ::zproto::User >&
+      users() const;
+
+  // repeated .zproto.Group groups = 6;
+  int groups_size() const;
+  void clear_groups();
+  static const int kGroupsFieldNumber = 6;
+  const ::zproto::Group& groups(int index) const;
+  ::zproto::Group* mutable_groups(int index);
+  ::zproto::Group* add_groups();
+  ::google::protobuf::RepeatedPtrField< ::zproto::Group >*
+      mutable_groups();
+  const ::google::protobuf::RepeatedPtrField< ::zproto::Group >&
+      groups() const;
+
+  // @@protoc_insertion_point(class_scope:zproto.FatSeqUpdate)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::internal::ArenaStringPtr state_;
+  ::google::protobuf::int32 seq_;
+  ::google::protobuf::int32 update_header_;
+  ::google::protobuf::internal::ArenaStringPtr update_;
+  ::google::protobuf::RepeatedPtrField< ::zproto::User > users_;
+  ::google::protobuf::RepeatedPtrField< ::zproto::Group > groups_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_sequence_2eproto();
+  friend void protobuf_AssignDesc_sequence_2eproto();
+  friend void protobuf_ShutdownFile_sequence_2eproto();
+
+  void InitAsDefaultInstance();
+  static FatSeqUpdate* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class WeakUpdate : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.WeakUpdate) */ {
+ public:
+  WeakUpdate();
+  virtual ~WeakUpdate();
+
+  WeakUpdate(const WeakUpdate& from);
+
+  inline WeakUpdate& operator=(const WeakUpdate& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const WeakUpdate& default_instance();
+
+  void Swap(WeakUpdate* other);
+
+  // implements Message ----------------------------------------------
+
+  inline WeakUpdate* New() const { return New(NULL); }
+
+  WeakUpdate* New(::google::protobuf::Arena* arena) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(WeakUpdate* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional int64 date = 1;
+  void clear_date();
+  static const int kDateFieldNumber = 1;
+  ::google::protobuf::int64 date() const;
+  void set_date(::google::protobuf::int64 value);
+
+  // optional int32 update_header = 2;
+  void clear_update_header();
+  static const int kUpdateHeaderFieldNumber = 2;
+  ::google::protobuf::int32 update_header() const;
+  void set_update_header(::google::protobuf::int32 value);
+
+  // optional bytes update = 3;
+  void clear_update();
+  static const int kUpdateFieldNumber = 3;
+  const ::std::string& update() const;
+  void set_update(const ::std::string& value);
+  void set_update(const char* value);
+  void set_update(const void* value, size_t size);
+  ::std::string* mutable_update();
+  ::std::string* release_update();
+  void set_allocated_update(::std::string* update);
+
+  // @@protoc_insertion_point(class_scope:zproto.WeakUpdate)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::int64 date_;
+  ::google::protobuf::internal::ArenaStringPtr update_;
+  ::google::protobuf::int32 update_header_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_sequence_2eproto();
+  friend void protobuf_AssignDesc_sequence_2eproto();
+  friend void protobuf_ShutdownFile_sequence_2eproto();
+
+  void InitAsDefaultInstance();
+  static WeakUpdate* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class WeakFatUpdate : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.WeakFatUpdate) */ {
+ public:
+  WeakFatUpdate();
+  virtual ~WeakFatUpdate();
+
+  WeakFatUpdate(const WeakFatUpdate& from);
+
+  inline WeakFatUpdate& operator=(const WeakFatUpdate& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const WeakFatUpdate& default_instance();
+
+  void Swap(WeakFatUpdate* other);
+
+  // implements Message ----------------------------------------------
+
+  inline WeakFatUpdate* New() const { return New(NULL); }
+
+  WeakFatUpdate* New(::google::protobuf::Arena* arena) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(WeakFatUpdate* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional int64 date = 1;
+  void clear_date();
+  static const int kDateFieldNumber = 1;
+  ::google::protobuf::int64 date() const;
+  void set_date(::google::protobuf::int64 value);
+
+  // optional int32 update_header = 2;
+  void clear_update_header();
+  static const int kUpdateHeaderFieldNumber = 2;
+  ::google::protobuf::int32 update_header() const;
+  void set_update_header(::google::protobuf::int32 value);
+
+  // optional bytes update = 3;
+  void clear_update();
+  static const int kUpdateFieldNumber = 3;
+  const ::std::string& update() const;
+  void set_update(const ::std::string& value);
+  void set_update(const char* value);
+  void set_update(const void* value, size_t size);
+  ::std::string* mutable_update();
+  ::std::string* release_update();
+  void set_allocated_update(::std::string* update);
+
+  // repeated .zproto.User users = 4;
+  int users_size() const;
+  void clear_users();
+  static const int kUsersFieldNumber = 4;
+  const ::zproto::User& users(int index) const;
+  ::zproto::User* mutable_users(int index);
+  ::zproto::User* add_users();
+  ::google::protobuf::RepeatedPtrField< ::zproto::User >*
+      mutable_users();
+  const ::google::protobuf::RepeatedPtrField< ::zproto::User >&
+      users() const;
+
+  // repeated .zproto.Group groups = 5;
+  int groups_size() const;
+  void clear_groups();
+  static const int kGroupsFieldNumber = 5;
+  const ::zproto::Group& groups(int index) const;
+  ::zproto::Group* mutable_groups(int index);
+  ::zproto::Group* add_groups();
+  ::google::protobuf::RepeatedPtrField< ::zproto::Group >*
+      mutable_groups();
+  const ::google::protobuf::RepeatedPtrField< ::zproto::Group >&
+      groups() const;
+
+  // @@protoc_insertion_point(class_scope:zproto.WeakFatUpdate)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::int64 date_;
+  ::google::protobuf::internal::ArenaStringPtr update_;
+  ::google::protobuf::RepeatedPtrField< ::zproto::User > users_;
+  ::google::protobuf::RepeatedPtrField< ::zproto::Group > groups_;
+  ::google::protobuf::int32 update_header_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_sequence_2eproto();
+  friend void protobuf_AssignDesc_sequence_2eproto();
+  friend void protobuf_ShutdownFile_sequence_2eproto();
+
+  void InitAsDefaultInstance();
+  static WeakFatUpdate* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class SeqUpdateTooLong : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.SeqUpdateTooLong) */ {
+ public:
+  SeqUpdateTooLong();
+  virtual ~SeqUpdateTooLong();
+
+  SeqUpdateTooLong(const SeqUpdateTooLong& from);
+
+  inline SeqUpdateTooLong& operator=(const SeqUpdateTooLong& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const SeqUpdateTooLong& default_instance();
+
+  void Swap(SeqUpdateTooLong* other);
+
+  // implements Message ----------------------------------------------
+
+  inline SeqUpdateTooLong* New() const { return New(NULL); }
+
+  SeqUpdateTooLong* New(::google::protobuf::Arena* arena) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(SeqUpdateTooLong* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:zproto.SeqUpdateTooLong)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_sequence_2eproto();
+  friend void protobuf_AssignDesc_sequence_2eproto();
+  friend void protobuf_ShutdownFile_sequence_2eproto();
+
+  void InitAsDefaultInstance();
+  static SeqUpdateTooLong* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class UpdateContainer : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.UpdateContainer) */ {
+ public:
+  UpdateContainer();
+  virtual ~UpdateContainer();
+
+  UpdateContainer(const UpdateContainer& from);
+
+  inline UpdateContainer& operator=(const UpdateContainer& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const UpdateContainer& default_instance();
+
+  void Swap(UpdateContainer* other);
+
+  // implements Message ----------------------------------------------
+
+  inline UpdateContainer* New() const { return New(NULL); }
+
+  UpdateContainer* New(::google::protobuf::Arena* arena) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(UpdateContainer* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional int32 update_header = 1;
+  void clear_update_header();
+  static const int kUpdateHeaderFieldNumber = 1;
+  ::google::protobuf::int32 update_header() const;
+  void set_update_header(::google::protobuf::int32 value);
+
+  // optional bytes update = 2;
+  void clear_update();
+  static const int kUpdateFieldNumber = 2;
+  const ::std::string& update() const;
+  void set_update(const ::std::string& value);
+  void set_update(const char* value);
+  void set_update(const void* value, size_t size);
+  ::std::string* mutable_update();
+  ::std::string* release_update();
+  void set_allocated_update(::std::string* update);
+
+  // @@protoc_insertion_point(class_scope:zproto.UpdateContainer)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::internal::ArenaStringPtr update_;
+  ::google::protobuf::int32 update_header_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_sequence_2eproto();
+  friend void protobuf_AssignDesc_sequence_2eproto();
+  friend void protobuf_ShutdownFile_sequence_2eproto();
+
+  void InitAsDefaultInstance();
+  static UpdateContainer* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CombinedUpdate : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.CombinedUpdate) */ {
+ public:
+  CombinedUpdate();
+  virtual ~CombinedUpdate();
+
+  CombinedUpdate(const CombinedUpdate& from);
+
+  inline CombinedUpdate& operator=(const CombinedUpdate& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CombinedUpdate& default_instance();
+
+  void Swap(CombinedUpdate* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CombinedUpdate* New() const { return New(NULL); }
+
+  CombinedUpdate* New(::google::protobuf::Arena* arena) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CombinedUpdate* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional int32 seq_start = 1;
+  void clear_seq_start();
+  static const int kSeqStartFieldNumber = 1;
+  ::google::protobuf::int32 seq_start() const;
+  void set_seq_start(::google::protobuf::int32 value);
+
+  // optional int32 seq_end = 2;
+  void clear_seq_end();
+  static const int kSeqEndFieldNumber = 2;
+  ::google::protobuf::int32 seq_end() const;
+  void set_seq_end(::google::protobuf::int32 value);
+
+  // optional bytes state = 3;
+  void clear_state();
+  static const int kStateFieldNumber = 3;
+  const ::std::string& state() const;
+  void set_state(const ::std::string& value);
+  void set_state(const char* value);
+  void set_state(const void* value, size_t size);
+  ::std::string* mutable_state();
+  ::std::string* release_state();
+  void set_allocated_state(::std::string* state);
+
+  // repeated .zproto.User users = 4;
+  int users_size() const;
+  void clear_users();
+  static const int kUsersFieldNumber = 4;
+  const ::zproto::User& users(int index) const;
+  ::zproto::User* mutable_users(int index);
+  ::zproto::User* add_users();
+  ::google::protobuf::RepeatedPtrField< ::zproto::User >*
+      mutable_users();
+  const ::google::protobuf::RepeatedPtrField< ::zproto::User >&
+      users() const;
+
+  // repeated .zproto.Group groups = 5;
+  int groups_size() const;
+  void clear_groups();
+  static const int kGroupsFieldNumber = 5;
+  const ::zproto::Group& groups(int index) const;
+  ::zproto::Group* mutable_groups(int index);
+  ::zproto::Group* add_groups();
+  ::google::protobuf::RepeatedPtrField< ::zproto::Group >*
+      mutable_groups();
+  const ::google::protobuf::RepeatedPtrField< ::zproto::Group >&
+      groups() const;
+
+  // repeated .zproto.UpdateContainer updates = 6;
+  int updates_size() const;
+  void clear_updates();
+  static const int kUpdatesFieldNumber = 6;
+  const ::zproto::UpdateContainer& updates(int index) const;
+  ::zproto::UpdateContainer* mutable_updates(int index);
+  ::zproto::UpdateContainer* add_updates();
+  ::google::protobuf::RepeatedPtrField< ::zproto::UpdateContainer >*
+      mutable_updates();
+  const ::google::protobuf::RepeatedPtrField< ::zproto::UpdateContainer >&
+      updates() const;
+
+  // repeated .zproto.MessageContainer messages = 7;
+  int messages_size() const;
+  void clear_messages();
+  static const int kMessagesFieldNumber = 7;
+  const ::zproto::MessageContainer& messages(int index) const;
+  ::zproto::MessageContainer* mutable_messages(int index);
+  ::zproto::MessageContainer* add_messages();
+  ::google::protobuf::RepeatedPtrField< ::zproto::MessageContainer >*
+      mutable_messages();
+  const ::google::protobuf::RepeatedPtrField< ::zproto::MessageContainer >&
+      messages() const;
+
+  // @@protoc_insertion_point(class_scope:zproto.CombinedUpdate)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::int32 seq_start_;
+  ::google::protobuf::int32 seq_end_;
+  ::google::protobuf::internal::ArenaStringPtr state_;
+  ::google::protobuf::RepeatedPtrField< ::zproto::User > users_;
+  ::google::protobuf::RepeatedPtrField< ::zproto::Group > groups_;
+  ::google::protobuf::RepeatedPtrField< ::zproto::UpdateContainer > updates_;
+  ::google::protobuf::RepeatedPtrField< ::zproto::MessageContainer > messages_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_sequence_2eproto();
+  friend void protobuf_AssignDesc_sequence_2eproto();
+  friend void protobuf_ShutdownFile_sequence_2eproto();
+
+  void InitAsDefaultInstance();
+  static CombinedUpdate* default_instance_;
+};
+// -------------------------------------------------------------------
 
 class GetStateReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.GetStateReq) */ {
  public:
@@ -970,6 +1660,780 @@ class SubscribeFromGroupOnlineReq : public ::google::protobuf::Message /* @@prot
 // ===================================================================
 
 #if !PROTOBUF_INLINE_NOT_IN_HEADERS
+// SeqUpdate
+
+// optional int32 seq = 1;
+inline void SeqUpdate::clear_seq() {
+  seq_ = 0;
+}
+inline ::google::protobuf::int32 SeqUpdate::seq() const {
+  // @@protoc_insertion_point(field_get:zproto.SeqUpdate.seq)
+  return seq_;
+}
+inline void SeqUpdate::set_seq(::google::protobuf::int32 value) {
+  
+  seq_ = value;
+  // @@protoc_insertion_point(field_set:zproto.SeqUpdate.seq)
+}
+
+// optional bytes state = 2;
+inline void SeqUpdate::clear_state() {
+  state_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& SeqUpdate::state() const {
+  // @@protoc_insertion_point(field_get:zproto.SeqUpdate.state)
+  return state_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void SeqUpdate::set_state(const ::std::string& value) {
+  
+  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.SeqUpdate.state)
+}
+inline void SeqUpdate::set_state(const char* value) {
+  
+  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.SeqUpdate.state)
+}
+inline void SeqUpdate::set_state(const void* value, size_t size) {
+  
+  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.SeqUpdate.state)
+}
+inline ::std::string* SeqUpdate::mutable_state() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.SeqUpdate.state)
+  return state_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* SeqUpdate::release_state() {
+  // @@protoc_insertion_point(field_release:zproto.SeqUpdate.state)
+  
+  return state_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void SeqUpdate::set_allocated_state(::std::string* state) {
+  if (state != NULL) {
+    
+  } else {
+    
+  }
+  state_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), state);
+  // @@protoc_insertion_point(field_set_allocated:zproto.SeqUpdate.state)
+}
+
+// optional int32 update_header = 3;
+inline void SeqUpdate::clear_update_header() {
+  update_header_ = 0;
+}
+inline ::google::protobuf::int32 SeqUpdate::update_header() const {
+  // @@protoc_insertion_point(field_get:zproto.SeqUpdate.update_header)
+  return update_header_;
+}
+inline void SeqUpdate::set_update_header(::google::protobuf::int32 value) {
+  
+  update_header_ = value;
+  // @@protoc_insertion_point(field_set:zproto.SeqUpdate.update_header)
+}
+
+// optional bytes update = 4;
+inline void SeqUpdate::clear_update() {
+  update_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& SeqUpdate::update() const {
+  // @@protoc_insertion_point(field_get:zproto.SeqUpdate.update)
+  return update_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void SeqUpdate::set_update(const ::std::string& value) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.SeqUpdate.update)
+}
+inline void SeqUpdate::set_update(const char* value) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.SeqUpdate.update)
+}
+inline void SeqUpdate::set_update(const void* value, size_t size) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.SeqUpdate.update)
+}
+inline ::std::string* SeqUpdate::mutable_update() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.SeqUpdate.update)
+  return update_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* SeqUpdate::release_update() {
+  // @@protoc_insertion_point(field_release:zproto.SeqUpdate.update)
+  
+  return update_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void SeqUpdate::set_allocated_update(::std::string* update) {
+  if (update != NULL) {
+    
+  } else {
+    
+  }
+  update_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), update);
+  // @@protoc_insertion_point(field_set_allocated:zproto.SeqUpdate.update)
+}
+
+// -------------------------------------------------------------------
+
+// FatSeqUpdate
+
+// optional int32 seq = 1;
+inline void FatSeqUpdate::clear_seq() {
+  seq_ = 0;
+}
+inline ::google::protobuf::int32 FatSeqUpdate::seq() const {
+  // @@protoc_insertion_point(field_get:zproto.FatSeqUpdate.seq)
+  return seq_;
+}
+inline void FatSeqUpdate::set_seq(::google::protobuf::int32 value) {
+  
+  seq_ = value;
+  // @@protoc_insertion_point(field_set:zproto.FatSeqUpdate.seq)
+}
+
+// optional bytes state = 2;
+inline void FatSeqUpdate::clear_state() {
+  state_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& FatSeqUpdate::state() const {
+  // @@protoc_insertion_point(field_get:zproto.FatSeqUpdate.state)
+  return state_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void FatSeqUpdate::set_state(const ::std::string& value) {
+  
+  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.FatSeqUpdate.state)
+}
+inline void FatSeqUpdate::set_state(const char* value) {
+  
+  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.FatSeqUpdate.state)
+}
+inline void FatSeqUpdate::set_state(const void* value, size_t size) {
+  
+  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.FatSeqUpdate.state)
+}
+inline ::std::string* FatSeqUpdate::mutable_state() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.FatSeqUpdate.state)
+  return state_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* FatSeqUpdate::release_state() {
+  // @@protoc_insertion_point(field_release:zproto.FatSeqUpdate.state)
+  
+  return state_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void FatSeqUpdate::set_allocated_state(::std::string* state) {
+  if (state != NULL) {
+    
+  } else {
+    
+  }
+  state_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), state);
+  // @@protoc_insertion_point(field_set_allocated:zproto.FatSeqUpdate.state)
+}
+
+// optional int32 update_header = 3;
+inline void FatSeqUpdate::clear_update_header() {
+  update_header_ = 0;
+}
+inline ::google::protobuf::int32 FatSeqUpdate::update_header() const {
+  // @@protoc_insertion_point(field_get:zproto.FatSeqUpdate.update_header)
+  return update_header_;
+}
+inline void FatSeqUpdate::set_update_header(::google::protobuf::int32 value) {
+  
+  update_header_ = value;
+  // @@protoc_insertion_point(field_set:zproto.FatSeqUpdate.update_header)
+}
+
+// optional bytes update = 4;
+inline void FatSeqUpdate::clear_update() {
+  update_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& FatSeqUpdate::update() const {
+  // @@protoc_insertion_point(field_get:zproto.FatSeqUpdate.update)
+  return update_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void FatSeqUpdate::set_update(const ::std::string& value) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.FatSeqUpdate.update)
+}
+inline void FatSeqUpdate::set_update(const char* value) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.FatSeqUpdate.update)
+}
+inline void FatSeqUpdate::set_update(const void* value, size_t size) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.FatSeqUpdate.update)
+}
+inline ::std::string* FatSeqUpdate::mutable_update() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.FatSeqUpdate.update)
+  return update_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* FatSeqUpdate::release_update() {
+  // @@protoc_insertion_point(field_release:zproto.FatSeqUpdate.update)
+  
+  return update_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void FatSeqUpdate::set_allocated_update(::std::string* update) {
+  if (update != NULL) {
+    
+  } else {
+    
+  }
+  update_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), update);
+  // @@protoc_insertion_point(field_set_allocated:zproto.FatSeqUpdate.update)
+}
+
+// repeated .zproto.User users = 5;
+inline int FatSeqUpdate::users_size() const {
+  return users_.size();
+}
+inline void FatSeqUpdate::clear_users() {
+  users_.Clear();
+}
+inline const ::zproto::User& FatSeqUpdate::users(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.FatSeqUpdate.users)
+  return users_.Get(index);
+}
+inline ::zproto::User* FatSeqUpdate::mutable_users(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.FatSeqUpdate.users)
+  return users_.Mutable(index);
+}
+inline ::zproto::User* FatSeqUpdate::add_users() {
+  // @@protoc_insertion_point(field_add:zproto.FatSeqUpdate.users)
+  return users_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::zproto::User >*
+FatSeqUpdate::mutable_users() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.FatSeqUpdate.users)
+  return &users_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::zproto::User >&
+FatSeqUpdate::users() const {
+  // @@protoc_insertion_point(field_list:zproto.FatSeqUpdate.users)
+  return users_;
+}
+
+// repeated .zproto.Group groups = 6;
+inline int FatSeqUpdate::groups_size() const {
+  return groups_.size();
+}
+inline void FatSeqUpdate::clear_groups() {
+  groups_.Clear();
+}
+inline const ::zproto::Group& FatSeqUpdate::groups(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.FatSeqUpdate.groups)
+  return groups_.Get(index);
+}
+inline ::zproto::Group* FatSeqUpdate::mutable_groups(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.FatSeqUpdate.groups)
+  return groups_.Mutable(index);
+}
+inline ::zproto::Group* FatSeqUpdate::add_groups() {
+  // @@protoc_insertion_point(field_add:zproto.FatSeqUpdate.groups)
+  return groups_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::zproto::Group >*
+FatSeqUpdate::mutable_groups() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.FatSeqUpdate.groups)
+  return &groups_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::zproto::Group >&
+FatSeqUpdate::groups() const {
+  // @@protoc_insertion_point(field_list:zproto.FatSeqUpdate.groups)
+  return groups_;
+}
+
+// -------------------------------------------------------------------
+
+// WeakUpdate
+
+// optional int64 date = 1;
+inline void WeakUpdate::clear_date() {
+  date_ = GOOGLE_LONGLONG(0);
+}
+inline ::google::protobuf::int64 WeakUpdate::date() const {
+  // @@protoc_insertion_point(field_get:zproto.WeakUpdate.date)
+  return date_;
+}
+inline void WeakUpdate::set_date(::google::protobuf::int64 value) {
+  
+  date_ = value;
+  // @@protoc_insertion_point(field_set:zproto.WeakUpdate.date)
+}
+
+// optional int32 update_header = 2;
+inline void WeakUpdate::clear_update_header() {
+  update_header_ = 0;
+}
+inline ::google::protobuf::int32 WeakUpdate::update_header() const {
+  // @@protoc_insertion_point(field_get:zproto.WeakUpdate.update_header)
+  return update_header_;
+}
+inline void WeakUpdate::set_update_header(::google::protobuf::int32 value) {
+  
+  update_header_ = value;
+  // @@protoc_insertion_point(field_set:zproto.WeakUpdate.update_header)
+}
+
+// optional bytes update = 3;
+inline void WeakUpdate::clear_update() {
+  update_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& WeakUpdate::update() const {
+  // @@protoc_insertion_point(field_get:zproto.WeakUpdate.update)
+  return update_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void WeakUpdate::set_update(const ::std::string& value) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.WeakUpdate.update)
+}
+inline void WeakUpdate::set_update(const char* value) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.WeakUpdate.update)
+}
+inline void WeakUpdate::set_update(const void* value, size_t size) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.WeakUpdate.update)
+}
+inline ::std::string* WeakUpdate::mutable_update() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.WeakUpdate.update)
+  return update_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* WeakUpdate::release_update() {
+  // @@protoc_insertion_point(field_release:zproto.WeakUpdate.update)
+  
+  return update_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void WeakUpdate::set_allocated_update(::std::string* update) {
+  if (update != NULL) {
+    
+  } else {
+    
+  }
+  update_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), update);
+  // @@protoc_insertion_point(field_set_allocated:zproto.WeakUpdate.update)
+}
+
+// -------------------------------------------------------------------
+
+// WeakFatUpdate
+
+// optional int64 date = 1;
+inline void WeakFatUpdate::clear_date() {
+  date_ = GOOGLE_LONGLONG(0);
+}
+inline ::google::protobuf::int64 WeakFatUpdate::date() const {
+  // @@protoc_insertion_point(field_get:zproto.WeakFatUpdate.date)
+  return date_;
+}
+inline void WeakFatUpdate::set_date(::google::protobuf::int64 value) {
+  
+  date_ = value;
+  // @@protoc_insertion_point(field_set:zproto.WeakFatUpdate.date)
+}
+
+// optional int32 update_header = 2;
+inline void WeakFatUpdate::clear_update_header() {
+  update_header_ = 0;
+}
+inline ::google::protobuf::int32 WeakFatUpdate::update_header() const {
+  // @@protoc_insertion_point(field_get:zproto.WeakFatUpdate.update_header)
+  return update_header_;
+}
+inline void WeakFatUpdate::set_update_header(::google::protobuf::int32 value) {
+  
+  update_header_ = value;
+  // @@protoc_insertion_point(field_set:zproto.WeakFatUpdate.update_header)
+}
+
+// optional bytes update = 3;
+inline void WeakFatUpdate::clear_update() {
+  update_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& WeakFatUpdate::update() const {
+  // @@protoc_insertion_point(field_get:zproto.WeakFatUpdate.update)
+  return update_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void WeakFatUpdate::set_update(const ::std::string& value) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.WeakFatUpdate.update)
+}
+inline void WeakFatUpdate::set_update(const char* value) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.WeakFatUpdate.update)
+}
+inline void WeakFatUpdate::set_update(const void* value, size_t size) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.WeakFatUpdate.update)
+}
+inline ::std::string* WeakFatUpdate::mutable_update() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.WeakFatUpdate.update)
+  return update_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* WeakFatUpdate::release_update() {
+  // @@protoc_insertion_point(field_release:zproto.WeakFatUpdate.update)
+  
+  return update_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void WeakFatUpdate::set_allocated_update(::std::string* update) {
+  if (update != NULL) {
+    
+  } else {
+    
+  }
+  update_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), update);
+  // @@protoc_insertion_point(field_set_allocated:zproto.WeakFatUpdate.update)
+}
+
+// repeated .zproto.User users = 4;
+inline int WeakFatUpdate::users_size() const {
+  return users_.size();
+}
+inline void WeakFatUpdate::clear_users() {
+  users_.Clear();
+}
+inline const ::zproto::User& WeakFatUpdate::users(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.WeakFatUpdate.users)
+  return users_.Get(index);
+}
+inline ::zproto::User* WeakFatUpdate::mutable_users(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.WeakFatUpdate.users)
+  return users_.Mutable(index);
+}
+inline ::zproto::User* WeakFatUpdate::add_users() {
+  // @@protoc_insertion_point(field_add:zproto.WeakFatUpdate.users)
+  return users_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::zproto::User >*
+WeakFatUpdate::mutable_users() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.WeakFatUpdate.users)
+  return &users_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::zproto::User >&
+WeakFatUpdate::users() const {
+  // @@protoc_insertion_point(field_list:zproto.WeakFatUpdate.users)
+  return users_;
+}
+
+// repeated .zproto.Group groups = 5;
+inline int WeakFatUpdate::groups_size() const {
+  return groups_.size();
+}
+inline void WeakFatUpdate::clear_groups() {
+  groups_.Clear();
+}
+inline const ::zproto::Group& WeakFatUpdate::groups(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.WeakFatUpdate.groups)
+  return groups_.Get(index);
+}
+inline ::zproto::Group* WeakFatUpdate::mutable_groups(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.WeakFatUpdate.groups)
+  return groups_.Mutable(index);
+}
+inline ::zproto::Group* WeakFatUpdate::add_groups() {
+  // @@protoc_insertion_point(field_add:zproto.WeakFatUpdate.groups)
+  return groups_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::zproto::Group >*
+WeakFatUpdate::mutable_groups() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.WeakFatUpdate.groups)
+  return &groups_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::zproto::Group >&
+WeakFatUpdate::groups() const {
+  // @@protoc_insertion_point(field_list:zproto.WeakFatUpdate.groups)
+  return groups_;
+}
+
+// -------------------------------------------------------------------
+
+// SeqUpdateTooLong
+
+// -------------------------------------------------------------------
+
+// UpdateContainer
+
+// optional int32 update_header = 1;
+inline void UpdateContainer::clear_update_header() {
+  update_header_ = 0;
+}
+inline ::google::protobuf::int32 UpdateContainer::update_header() const {
+  // @@protoc_insertion_point(field_get:zproto.UpdateContainer.update_header)
+  return update_header_;
+}
+inline void UpdateContainer::set_update_header(::google::protobuf::int32 value) {
+  
+  update_header_ = value;
+  // @@protoc_insertion_point(field_set:zproto.UpdateContainer.update_header)
+}
+
+// optional bytes update = 2;
+inline void UpdateContainer::clear_update() {
+  update_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& UpdateContainer::update() const {
+  // @@protoc_insertion_point(field_get:zproto.UpdateContainer.update)
+  return update_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void UpdateContainer::set_update(const ::std::string& value) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.UpdateContainer.update)
+}
+inline void UpdateContainer::set_update(const char* value) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.UpdateContainer.update)
+}
+inline void UpdateContainer::set_update(const void* value, size_t size) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.UpdateContainer.update)
+}
+inline ::std::string* UpdateContainer::mutable_update() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.UpdateContainer.update)
+  return update_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* UpdateContainer::release_update() {
+  // @@protoc_insertion_point(field_release:zproto.UpdateContainer.update)
+  
+  return update_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void UpdateContainer::set_allocated_update(::std::string* update) {
+  if (update != NULL) {
+    
+  } else {
+    
+  }
+  update_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), update);
+  // @@protoc_insertion_point(field_set_allocated:zproto.UpdateContainer.update)
+}
+
+// -------------------------------------------------------------------
+
+// CombinedUpdate
+
+// optional int32 seq_start = 1;
+inline void CombinedUpdate::clear_seq_start() {
+  seq_start_ = 0;
+}
+inline ::google::protobuf::int32 CombinedUpdate::seq_start() const {
+  // @@protoc_insertion_point(field_get:zproto.CombinedUpdate.seq_start)
+  return seq_start_;
+}
+inline void CombinedUpdate::set_seq_start(::google::protobuf::int32 value) {
+  
+  seq_start_ = value;
+  // @@protoc_insertion_point(field_set:zproto.CombinedUpdate.seq_start)
+}
+
+// optional int32 seq_end = 2;
+inline void CombinedUpdate::clear_seq_end() {
+  seq_end_ = 0;
+}
+inline ::google::protobuf::int32 CombinedUpdate::seq_end() const {
+  // @@protoc_insertion_point(field_get:zproto.CombinedUpdate.seq_end)
+  return seq_end_;
+}
+inline void CombinedUpdate::set_seq_end(::google::protobuf::int32 value) {
+  
+  seq_end_ = value;
+  // @@protoc_insertion_point(field_set:zproto.CombinedUpdate.seq_end)
+}
+
+// optional bytes state = 3;
+inline void CombinedUpdate::clear_state() {
+  state_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CombinedUpdate::state() const {
+  // @@protoc_insertion_point(field_get:zproto.CombinedUpdate.state)
+  return state_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CombinedUpdate::set_state(const ::std::string& value) {
+  
+  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.CombinedUpdate.state)
+}
+inline void CombinedUpdate::set_state(const char* value) {
+  
+  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.CombinedUpdate.state)
+}
+inline void CombinedUpdate::set_state(const void* value, size_t size) {
+  
+  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.CombinedUpdate.state)
+}
+inline ::std::string* CombinedUpdate::mutable_state() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.CombinedUpdate.state)
+  return state_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CombinedUpdate::release_state() {
+  // @@protoc_insertion_point(field_release:zproto.CombinedUpdate.state)
+  
+  return state_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CombinedUpdate::set_allocated_state(::std::string* state) {
+  if (state != NULL) {
+    
+  } else {
+    
+  }
+  state_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), state);
+  // @@protoc_insertion_point(field_set_allocated:zproto.CombinedUpdate.state)
+}
+
+// repeated .zproto.User users = 4;
+inline int CombinedUpdate::users_size() const {
+  return users_.size();
+}
+inline void CombinedUpdate::clear_users() {
+  users_.Clear();
+}
+inline const ::zproto::User& CombinedUpdate::users(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.CombinedUpdate.users)
+  return users_.Get(index);
+}
+inline ::zproto::User* CombinedUpdate::mutable_users(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.CombinedUpdate.users)
+  return users_.Mutable(index);
+}
+inline ::zproto::User* CombinedUpdate::add_users() {
+  // @@protoc_insertion_point(field_add:zproto.CombinedUpdate.users)
+  return users_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::zproto::User >*
+CombinedUpdate::mutable_users() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.CombinedUpdate.users)
+  return &users_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::zproto::User >&
+CombinedUpdate::users() const {
+  // @@protoc_insertion_point(field_list:zproto.CombinedUpdate.users)
+  return users_;
+}
+
+// repeated .zproto.Group groups = 5;
+inline int CombinedUpdate::groups_size() const {
+  return groups_.size();
+}
+inline void CombinedUpdate::clear_groups() {
+  groups_.Clear();
+}
+inline const ::zproto::Group& CombinedUpdate::groups(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.CombinedUpdate.groups)
+  return groups_.Get(index);
+}
+inline ::zproto::Group* CombinedUpdate::mutable_groups(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.CombinedUpdate.groups)
+  return groups_.Mutable(index);
+}
+inline ::zproto::Group* CombinedUpdate::add_groups() {
+  // @@protoc_insertion_point(field_add:zproto.CombinedUpdate.groups)
+  return groups_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::zproto::Group >*
+CombinedUpdate::mutable_groups() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.CombinedUpdate.groups)
+  return &groups_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::zproto::Group >&
+CombinedUpdate::groups() const {
+  // @@protoc_insertion_point(field_list:zproto.CombinedUpdate.groups)
+  return groups_;
+}
+
+// repeated .zproto.UpdateContainer updates = 6;
+inline int CombinedUpdate::updates_size() const {
+  return updates_.size();
+}
+inline void CombinedUpdate::clear_updates() {
+  updates_.Clear();
+}
+inline const ::zproto::UpdateContainer& CombinedUpdate::updates(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.CombinedUpdate.updates)
+  return updates_.Get(index);
+}
+inline ::zproto::UpdateContainer* CombinedUpdate::mutable_updates(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.CombinedUpdate.updates)
+  return updates_.Mutable(index);
+}
+inline ::zproto::UpdateContainer* CombinedUpdate::add_updates() {
+  // @@protoc_insertion_point(field_add:zproto.CombinedUpdate.updates)
+  return updates_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::zproto::UpdateContainer >*
+CombinedUpdate::mutable_updates() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.CombinedUpdate.updates)
+  return &updates_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::zproto::UpdateContainer >&
+CombinedUpdate::updates() const {
+  // @@protoc_insertion_point(field_list:zproto.CombinedUpdate.updates)
+  return updates_;
+}
+
+// repeated .zproto.MessageContainer messages = 7;
+inline int CombinedUpdate::messages_size() const {
+  return messages_.size();
+}
+inline void CombinedUpdate::clear_messages() {
+  messages_.Clear();
+}
+inline const ::zproto::MessageContainer& CombinedUpdate::messages(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.CombinedUpdate.messages)
+  return messages_.Get(index);
+}
+inline ::zproto::MessageContainer* CombinedUpdate::mutable_messages(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.CombinedUpdate.messages)
+  return messages_.Mutable(index);
+}
+inline ::zproto::MessageContainer* CombinedUpdate::add_messages() {
+  // @@protoc_insertion_point(field_add:zproto.CombinedUpdate.messages)
+  return messages_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::zproto::MessageContainer >*
+CombinedUpdate::mutable_messages() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.CombinedUpdate.messages)
+  return &messages_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::zproto::MessageContainer >&
+CombinedUpdate::messages() const {
+  // @@protoc_insertion_point(field_list:zproto.CombinedUpdate.messages)
+  return messages_;
+}
+
+// -------------------------------------------------------------------
+
 // GetStateReq
 
 // repeated .zproto.UpdateOptimization optimizations = 1;
@@ -1711,6 +3175,20 @@ SubscribeFromGroupOnlineReq::groups() const {
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

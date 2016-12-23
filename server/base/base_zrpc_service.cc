@@ -15,23 +15,23 @@
  * limitations under the License.
  */
 
-// TODO(@benqi): 使用zrpc-code-gen代码生成工具自动生成
+#include "base/base_zrpc_service.h"
 
-#include "messenger/messenger_server.h"
+#include "nebula/base/logger/glog_util.h"
 
-// #include "nebula/base/timer_manager.h"
-
-bool MessengerServer::Initialize() {
-  // RegisterService("tcpd", "tcp_server");
-  RegisterService("messenger_server", "rpc_server", "zrpc");
-  RegisterService("push_client", "rpc_client", "zrpc");
-
-  BaseServer::Initialize();
+bool BaseZRpcService::Initialize(RpcRequestPtr v) {
+  if (!v->has_attach_data()) {
+    LOG(ERROR) << "Initialize - attach_data empty!!! " << v->ToString();
+    return false;
+  }
   
-  return true;
-}
-
-
-int main(int argc, char* argv[]) {
-    return nebula::DoMain<MessengerServer>(argc, argv);
+  if (v->attach_data.options.size() != MAX) {
+    LOG(ERROR) << "Initialize - attach_data empty!!! " << v->ToString();
+    return false;
+  }
+  
+  // TODO(@benqi): 检查附加字段
+  rpc_request_ = v;
+  
+  return false;
 }

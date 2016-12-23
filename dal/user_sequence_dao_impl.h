@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2016, https://github.com/nebula-im
+ *  Copyright (c) 2016, https://github.com/zhatalk
  *  All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,23 +15,16 @@
  * limitations under the License.
  */
 
-// TODO(@benqi): 使用zrpc-code-gen代码生成工具自动生成
+#ifndef DAL_USER_SEQUENCE_DAO_IMPL_H_
+#define DAL_USER_SEQUENCE_DAO_IMPL_H_
 
-#include "messenger/messenger_server.h"
+#include "dal/user_sequence_dao.h"
 
-// #include "nebula/base/timer_manager.h"
-
-bool MessengerServer::Initialize() {
-  // RegisterService("tcpd", "tcp_server");
-  RegisterService("messenger_server", "rpc_server", "zrpc");
-  RegisterService("push_client", "rpc_client", "zrpc");
-
-  BaseServer::Initialize();
+struct UserSequenceDAOImpl : public UserSequenceDAO {
+  virtual ~UserSequenceDAOImpl() = default;
   
-  return true;
-}
+  int64_t Create(UserSequenceDO& user_sequence) override;
+};
 
 
-int main(int argc, char* argv[]) {
-    return nebula::DoMain<MessengerServer>(argc, argv);
-}
+#endif

@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2016, https://github.com/nebula-im
+ *  Copyright (c) 2016, https://github.com/nebula-im/imengine
  *  All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,23 +15,28 @@
  * limitations under the License.
  */
 
-// TODO(@benqi): 使用zrpc-code-gen代码生成工具自动生成
+#ifndef DAL_USER_SEQUENCE_DO_H_
+#define DAL_USER_SEQUENCE_DO_H_
 
-#include "messenger/messenger_server.h"
+#include <list>
+#include <string>
 
-// #include "nebula/base/timer_manager.h"
+#include "dal/base_dal.h"
 
-bool MessengerServer::Initialize() {
-  // RegisterService("tcpd", "tcp_server");
-  RegisterService("messenger_server", "rpc_server", "zrpc");
-  RegisterService("push_client", "rpc_client", "zrpc");
+// user_messages表
+struct UserSequenceDO {
+  // DO成员
+  uint64_t id;
+  std::string user_id;
+  uint64_t seq;
+  uint64_t header;
+  std::string data; // 发送方
+  uint64_t created_at;
+  //反射
+  // META(id, user_id, seq, header, data, created_at);
+};
 
-  BaseServer::Initialize();
-  
-  return true;
-}
+using UserSequenceDOPtr = std::shared_ptr<UserSequenceDO>;
+using UserSequenceDOList = std::list<UserSequenceDOPtr>;
 
-
-int main(int argc, char* argv[]) {
-    return nebula::DoMain<MessengerServer>(argc, argv);
-}
+#endif

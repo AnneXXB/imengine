@@ -22,10 +22,10 @@ option java_package = "com.zchat.engine.zproto";
 option java_outer_classname = "ZProtoMessaging";
 option optimize_for = CODE_SIZE;
 
+import "misc.proto";
 import "peers.proto";
 import "users.proto";
 import "group_base.proto";
-import "sequence_base.proto";
 import "messaging_base.proto";
 
 // Sending plain message
@@ -36,17 +36,6 @@ message SendMessageReq {
   int64 rid = 2; // Message random id (generated on client side)
   InstantMessage message = 3;  // The message
   bytes passthrough_data = 4;               // 透传数据
-}
-
-// SeqDateRsp
-
-// Changing Message content
-// UpdateMessageReq --> SeqDateRsp
-message UpdateMessageReq {
-  // int32 COMMAND_ID = 2658;
-  OutPeer peer = 1; // Destination Peer
-  int64 rid = 2; // Message random id
-  InstantMessage updated_message = 3; // Updated Message content
 }
 
 // SeqDateRsp
@@ -98,24 +87,6 @@ message DeleteChatReq {
 }
 
 // SeqRsp
-
-// Archiving chat
-// ArchiveChatReq --> SeqRsp
-message ArchiveChatReq {
-  // int32 COMMAND_ID = 2654;
-  OutPeer peer = 1; // Conversation peer
-}
-
-// SeqRsp
-
-// Setting Message reaction
-// MessageSetReactionReq --> ReactionsResponseRsp
-message MessageSetReactionReq {
-  // int32 COMMAND_ID = 210;
-  OutPeer peer = 1; // Destination peer
-  int64 rid = 2; // Message random id
-  string code = 3; // Reaction code
-}
 
 // Update about plain message
 message MessageNotify {
@@ -194,18 +165,6 @@ message ChatDeleteNotify {
   Peer peer = 1; //   Destination peer
 }
 
-// Update about chat archive
-message ChatArchiveNotify {
-  // int32 COMMAND_ID = 94;
-  Peer peer = 1; //   Destination peer
-}
-
-// Update about cache drop
-message ChatDropCacheNotify {
-  // int32 COMMAND_ID = 2690;
-  Peer peer = 1; //   Destination peer
-}
-
 // Update about chat groups changed. Called only when adding, removing and reordering of grouped dialog.
 message ChatGroupsChangedNotify {
   // int32 COMMAND_ID = 1;
@@ -252,26 +211,6 @@ message LoadDialogsRsp {
   repeated GroupOutPeer group_peers = 5;
 }
 
-// Loading archived messages
-// LoadArchivedReq --> LoadArchivedRsp
-message LoadArchivedReq {
-  // int32 COMMAND_ID = 2651;
-  bytes next_offset = 1; // Optional next offset
-  int32 limit = 2; // Maximum number of elements
-  repeated UpdateOptimization optimizations = 3; // Enabled optimizations
-}
-
-// Archived dialogs
-message LoadArchivedRsp {
-  // int32 COMMAND_ID = 2652;
-  repeated Group groups = 1; //   Referenced groups
-  repeated User users = 2; //   Referenced users
-  repeated Dialog dialogs = 3; //   Archived dialogs
-  repeated UserOutPeer user_peers = 5;
-  repeated GroupOutPeer group_peers = 6;
-  bytes next_offset = 4; //   Offset for next bunch
-}
-
 // Load all dialogs from grouped list
 // LoadGroupedDialogsReq --> LoadGroupedDialogsRsp
 message LoadGroupedDialogsReq {
@@ -291,56 +230,4 @@ message LoadGroupedDialogsRsp {
   repeated GroupOutPeer group_peers = 7;
 }
 
-// Dialogs order response
-message DialogsOrderRsp {
-  // int32 COMMAND_ID = 235;
-  int32 seq = 1; //   update seq
-  bytes state = 2; //   update state
-  repeated DialogGroup groups = 3; //   Update groups
-}
-
-// Hide Dialog from grouped list
-// HideDialogReq --> DialogsOrderRsp
-message HideDialogReq {
-  // int32 COMMAND_ID = 231;
-  OutPeer peer = 1; // Dialog peer
-}
-
-// DialogsOrderRsp
-
-// Show Dialog in grouped list
-// ShowDialogReq --> DialogsOrderRsp
-message ShowDialogReq {
-  // int32 COMMAND_ID = 232;
-  OutPeer peer = 1;
-}
-
-// DialogsOrderRsp
-
-// Marking dialog as favourite
-// FavouriteDialogReq --> DialogsOrderRsp
-message FavouriteDialogReq {
-  // int32 COMMAND_ID = 224;
-  OutPeer peer = 1; // Peer for favouriting
-}
-
-// DialogsOrderRsp
-
-// Making dialog as unfavourite
-// UnfavouriteDialogReq --> DialogsOrderRsp
-message UnfavouriteDialogReq {
-  // int32 COMMAND_ID = 227;
-  OutPeer peer = 1; // Peer for favouriting
-}
-
-// DialogsOrderRsp
-
-// Notifying about dialog open
-// NotifyDialogOpenedReq --> VoidRsp
-message NotifyDialogOpenedReq {
-  // int32 COMMAND_ID = 2785;
-  OutPeer peer = 1; // Peer that was opened
-}
-
-// VoidRsp
 

@@ -21,6 +21,27 @@ namespace zproto {
 
 namespace {
 
+const ::google::protobuf::Descriptor* SeqUpdate_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  SeqUpdate_reflection_ = NULL;
+const ::google::protobuf::Descriptor* FatSeqUpdate_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  FatSeqUpdate_reflection_ = NULL;
+const ::google::protobuf::Descriptor* WeakUpdate_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  WeakUpdate_reflection_ = NULL;
+const ::google::protobuf::Descriptor* WeakFatUpdate_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  WeakFatUpdate_reflection_ = NULL;
+const ::google::protobuf::Descriptor* SeqUpdateTooLong_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  SeqUpdateTooLong_reflection_ = NULL;
+const ::google::protobuf::Descriptor* UpdateContainer_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  UpdateContainer_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CombinedUpdate_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CombinedUpdate_reflection_ = NULL;
 const ::google::protobuf::Descriptor* GetStateReq_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   GetStateReq_reflection_ = NULL;
@@ -65,7 +86,132 @@ void protobuf_AssignDesc_sequence_2eproto() {
     ::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
       "sequence.proto");
   GOOGLE_CHECK(file != NULL);
-  GetStateReq_descriptor_ = file->message_type(0);
+  SeqUpdate_descriptor_ = file->message_type(0);
+  static const int SeqUpdate_offsets_[4] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SeqUpdate, seq_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SeqUpdate, state_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SeqUpdate, update_header_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SeqUpdate, update_),
+  };
+  SeqUpdate_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      SeqUpdate_descriptor_,
+      SeqUpdate::default_instance_,
+      SeqUpdate_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(SeqUpdate),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SeqUpdate, _internal_metadata_),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SeqUpdate, _is_default_instance_));
+  FatSeqUpdate_descriptor_ = file->message_type(1);
+  static const int FatSeqUpdate_offsets_[6] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FatSeqUpdate, seq_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FatSeqUpdate, state_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FatSeqUpdate, update_header_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FatSeqUpdate, update_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FatSeqUpdate, users_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FatSeqUpdate, groups_),
+  };
+  FatSeqUpdate_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      FatSeqUpdate_descriptor_,
+      FatSeqUpdate::default_instance_,
+      FatSeqUpdate_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(FatSeqUpdate),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FatSeqUpdate, _internal_metadata_),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FatSeqUpdate, _is_default_instance_));
+  WeakUpdate_descriptor_ = file->message_type(2);
+  static const int WeakUpdate_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(WeakUpdate, date_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(WeakUpdate, update_header_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(WeakUpdate, update_),
+  };
+  WeakUpdate_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      WeakUpdate_descriptor_,
+      WeakUpdate::default_instance_,
+      WeakUpdate_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(WeakUpdate),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(WeakUpdate, _internal_metadata_),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(WeakUpdate, _is_default_instance_));
+  WeakFatUpdate_descriptor_ = file->message_type(3);
+  static const int WeakFatUpdate_offsets_[5] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(WeakFatUpdate, date_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(WeakFatUpdate, update_header_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(WeakFatUpdate, update_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(WeakFatUpdate, users_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(WeakFatUpdate, groups_),
+  };
+  WeakFatUpdate_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      WeakFatUpdate_descriptor_,
+      WeakFatUpdate::default_instance_,
+      WeakFatUpdate_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(WeakFatUpdate),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(WeakFatUpdate, _internal_metadata_),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(WeakFatUpdate, _is_default_instance_));
+  SeqUpdateTooLong_descriptor_ = file->message_type(4);
+  static const int SeqUpdateTooLong_offsets_[1] = {
+  };
+  SeqUpdateTooLong_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      SeqUpdateTooLong_descriptor_,
+      SeqUpdateTooLong::default_instance_,
+      SeqUpdateTooLong_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(SeqUpdateTooLong),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SeqUpdateTooLong, _internal_metadata_),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SeqUpdateTooLong, _is_default_instance_));
+  UpdateContainer_descriptor_ = file->message_type(5);
+  static const int UpdateContainer_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UpdateContainer, update_header_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UpdateContainer, update_),
+  };
+  UpdateContainer_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      UpdateContainer_descriptor_,
+      UpdateContainer::default_instance_,
+      UpdateContainer_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(UpdateContainer),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UpdateContainer, _internal_metadata_),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UpdateContainer, _is_default_instance_));
+  CombinedUpdate_descriptor_ = file->message_type(6);
+  static const int CombinedUpdate_offsets_[7] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CombinedUpdate, seq_start_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CombinedUpdate, seq_end_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CombinedUpdate, state_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CombinedUpdate, users_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CombinedUpdate, groups_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CombinedUpdate, updates_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CombinedUpdate, messages_),
+  };
+  CombinedUpdate_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      CombinedUpdate_descriptor_,
+      CombinedUpdate::default_instance_,
+      CombinedUpdate_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(CombinedUpdate),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CombinedUpdate, _internal_metadata_),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CombinedUpdate, _is_default_instance_));
+  GetStateReq_descriptor_ = file->message_type(7);
   static const int GetStateReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetStateReq, optimizations_),
   };
@@ -80,7 +226,7 @@ void protobuf_AssignDesc_sequence_2eproto() {
       sizeof(GetStateReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetStateReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetStateReq, _is_default_instance_));
-  GetDifferenceReq_descriptor_ = file->message_type(1);
+  GetDifferenceReq_descriptor_ = file->message_type(8);
   static const int GetDifferenceReq_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetDifferenceReq, seq_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetDifferenceReq, state_),
@@ -97,7 +243,7 @@ void protobuf_AssignDesc_sequence_2eproto() {
       sizeof(GetDifferenceReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetDifferenceReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetDifferenceReq, _is_default_instance_));
-  GetDifferenceRsp_descriptor_ = file->message_type(2);
+  GetDifferenceRsp_descriptor_ = file->message_type(9);
   static const int GetDifferenceRsp_offsets_[9] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetDifferenceRsp, seq_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetDifferenceRsp, state_),
@@ -120,7 +266,7 @@ void protobuf_AssignDesc_sequence_2eproto() {
       sizeof(GetDifferenceRsp),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetDifferenceRsp, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetDifferenceRsp, _is_default_instance_));
-  GetReferencedEntititesReq_descriptor_ = file->message_type(3);
+  GetReferencedEntititesReq_descriptor_ = file->message_type(10);
   static const int GetReferencedEntititesReq_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetReferencedEntititesReq, users_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetReferencedEntititesReq, groups_),
@@ -136,7 +282,7 @@ void protobuf_AssignDesc_sequence_2eproto() {
       sizeof(GetReferencedEntititesReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetReferencedEntititesReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetReferencedEntititesReq, _is_default_instance_));
-  GetReferencedEntititesRsp_descriptor_ = file->message_type(4);
+  GetReferencedEntititesRsp_descriptor_ = file->message_type(11);
   static const int GetReferencedEntititesRsp_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetReferencedEntititesRsp, users_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetReferencedEntititesRsp, groups_),
@@ -152,7 +298,7 @@ void protobuf_AssignDesc_sequence_2eproto() {
       sizeof(GetReferencedEntititesRsp),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetReferencedEntititesRsp, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetReferencedEntititesRsp, _is_default_instance_));
-  RawUpdateNotify_descriptor_ = file->message_type(5);
+  RawUpdateNotify_descriptor_ = file->message_type(12);
   static const int RawUpdateNotify_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RawUpdateNotify, type_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RawUpdateNotify, bytes_),
@@ -168,7 +314,7 @@ void protobuf_AssignDesc_sequence_2eproto() {
       sizeof(RawUpdateNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RawUpdateNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RawUpdateNotify, _is_default_instance_));
-  EmptyUpdateNotify_descriptor_ = file->message_type(6);
+  EmptyUpdateNotify_descriptor_ = file->message_type(13);
   static const int EmptyUpdateNotify_offsets_[1] = {
   };
   EmptyUpdateNotify_reflection_ =
@@ -182,7 +328,7 @@ void protobuf_AssignDesc_sequence_2eproto() {
       sizeof(EmptyUpdateNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EmptyUpdateNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EmptyUpdateNotify, _is_default_instance_));
-  SubscribeToOnlineReq_descriptor_ = file->message_type(7);
+  SubscribeToOnlineReq_descriptor_ = file->message_type(14);
   static const int SubscribeToOnlineReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SubscribeToOnlineReq, users_),
   };
@@ -197,7 +343,7 @@ void protobuf_AssignDesc_sequence_2eproto() {
       sizeof(SubscribeToOnlineReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SubscribeToOnlineReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SubscribeToOnlineReq, _is_default_instance_));
-  SubscribeFromOnlineReq_descriptor_ = file->message_type(8);
+  SubscribeFromOnlineReq_descriptor_ = file->message_type(15);
   static const int SubscribeFromOnlineReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SubscribeFromOnlineReq, users_),
   };
@@ -212,7 +358,7 @@ void protobuf_AssignDesc_sequence_2eproto() {
       sizeof(SubscribeFromOnlineReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SubscribeFromOnlineReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SubscribeFromOnlineReq, _is_default_instance_));
-  SubscribeToGroupOnlineReq_descriptor_ = file->message_type(9);
+  SubscribeToGroupOnlineReq_descriptor_ = file->message_type(16);
   static const int SubscribeToGroupOnlineReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SubscribeToGroupOnlineReq, groups_),
   };
@@ -227,7 +373,7 @@ void protobuf_AssignDesc_sequence_2eproto() {
       sizeof(SubscribeToGroupOnlineReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SubscribeToGroupOnlineReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SubscribeToGroupOnlineReq, _is_default_instance_));
-  SubscribeFromGroupOnlineReq_descriptor_ = file->message_type(10);
+  SubscribeFromGroupOnlineReq_descriptor_ = file->message_type(17);
   static const int SubscribeFromGroupOnlineReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SubscribeFromGroupOnlineReq, groups_),
   };
@@ -256,6 +402,20 @@ void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      SeqUpdate_descriptor_, &SeqUpdate::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      FatSeqUpdate_descriptor_, &FatSeqUpdate::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      WeakUpdate_descriptor_, &WeakUpdate::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      WeakFatUpdate_descriptor_, &WeakFatUpdate::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      SeqUpdateTooLong_descriptor_, &SeqUpdateTooLong::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      UpdateContainer_descriptor_, &UpdateContainer::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      CombinedUpdate_descriptor_, &CombinedUpdate::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       GetStateReq_descriptor_, &GetStateReq::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       GetDifferenceReq_descriptor_, &GetDifferenceReq::default_instance());
@@ -282,6 +442,20 @@ void protobuf_RegisterTypes(const ::std::string&) {
 }  // namespace
 
 void protobuf_ShutdownFile_sequence_2eproto() {
+  delete SeqUpdate::default_instance_;
+  delete SeqUpdate_reflection_;
+  delete FatSeqUpdate::default_instance_;
+  delete FatSeqUpdate_reflection_;
+  delete WeakUpdate::default_instance_;
+  delete WeakUpdate_reflection_;
+  delete WeakFatUpdate::default_instance_;
+  delete WeakFatUpdate_reflection_;
+  delete SeqUpdateTooLong::default_instance_;
+  delete SeqUpdateTooLong_reflection_;
+  delete UpdateContainer::default_instance_;
+  delete UpdateContainer_reflection_;
+  delete CombinedUpdate::default_instance_;
+  delete CombinedUpdate_reflection_;
   delete GetStateReq::default_instance_;
   delete GetStateReq_reflection_;
   delete GetDifferenceReq::default_instance_;
@@ -313,43 +487,68 @@ void protobuf_AddDesc_sequence_2eproto() {
   already_here = true;
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+  ::zproto::protobuf_AddDesc_misc_2eproto();
   ::zproto::protobuf_AddDesc_peers_2eproto();
   ::zproto::protobuf_AddDesc_users_2eproto();
   ::zproto::protobuf_AddDesc_group_5fbase_2eproto();
   ::zproto::protobuf_AddDesc_messaging_5fbase_2eproto();
-  ::zproto::protobuf_AddDesc_sequence_5fbase_2eproto();
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\016sequence.proto\022\006zproto\032\013peers.proto\032\013u"
-    "sers.proto\032\020group_base.proto\032\024messaging_"
-    "base.proto\032\023sequence_base.proto\"@\n\013GetSt"
-    "ateReq\0221\n\roptimizations\030\001 \003(\0162\032.zproto.U"
-    "pdateOptimization\"a\n\020GetDifferenceReq\022\013\n"
-    "\003seq\030\001 \001(\005\022\r\n\005state\030\002 \001(\014\0221\n\roptimizatio"
-    "ns\030\003 \003(\0162\032.zproto.UpdateOptimization\"\247\002\n"
-    "\020GetDifferenceRsp\022\013\n\003seq\030\001 \001(\005\022\r\n\005state\030"
-    "\002 \001(\014\022\033\n\005users\030\003 \003(\0132\014.zproto.User\022\035\n\006gr"
-    "oups\030\004 \003(\0132\r.zproto.Group\022(\n\007updates\030\005 \003"
-    "(\0132\027.zproto.UpdateContainer\022*\n\010messages\030"
-    "\006 \003(\0132\030.zproto.MessageContainer\022\021\n\tneed_"
-    "more\030\007 \001(\010\022\'\n\nusers_refs\030\010 \003(\0132\023.zproto."
-    "UserOutPeer\022)\n\013groups_refs\030\t \003(\0132\024.zprot"
-    "o.GroupOutPeer\"e\n\031GetReferencedEntitites"
-    "Req\022\"\n\005users\030\001 \003(\0132\023.zproto.UserOutPeer\022"
-    "$\n\006groups\030\002 \003(\0132\024.zproto.GroupOutPeer\"W\n"
-    "\031GetReferencedEntititesRsp\022\033\n\005users\030\001 \003("
-    "\0132\014.zproto.User\022\035\n\006groups\030\002 \003(\0132\r.zproto"
-    ".Group\".\n\017RawUpdateNotify\022\014\n\004type\030\001 \001(\t\022"
-    "\r\n\005bytes\030\002 \001(\014\"\023\n\021EmptyUpdateNotify\":\n\024S"
-    "ubscribeToOnlineReq\022\"\n\005users\030\001 \003(\0132\023.zpr"
-    "oto.UserOutPeer\"<\n\026SubscribeFromOnlineRe"
-    "q\022\"\n\005users\030\001 \003(\0132\023.zproto.UserOutPeer\"A\n"
-    "\031SubscribeToGroupOnlineReq\022$\n\006groups\030\001 \003"
-    "(\0132\024.zproto.GroupOutPeer\"C\n\033SubscribeFro"
-    "mGroupOnlineReq\022$\n\006groups\030\001 \003(\0132\024.zproto"
-    ".GroupOutPeerB+\n\027com.zchat.engine.zproto"
-    "B\016ZProtoSequenceH\002b\006proto3", 1146);
+    "\n\016sequence.proto\022\006zproto\032\nmisc.proto\032\013pe"
+    "ers.proto\032\013users.proto\032\020group_base.proto"
+    "\032\024messaging_base.proto\"N\n\tSeqUpdate\022\013\n\003s"
+    "eq\030\001 \001(\005\022\r\n\005state\030\002 \001(\014\022\025\n\rupdate_header"
+    "\030\003 \001(\005\022\016\n\006update\030\004 \001(\014\"\215\001\n\014FatSeqUpdate\022"
+    "\013\n\003seq\030\001 \001(\005\022\r\n\005state\030\002 \001(\014\022\025\n\rupdate_he"
+    "ader\030\003 \001(\005\022\016\n\006update\030\004 \001(\014\022\033\n\005users\030\005 \003("
+    "\0132\014.zproto.User\022\035\n\006groups\030\006 \003(\0132\r.zproto"
+    ".Group\"A\n\nWeakUpdate\022\014\n\004date\030\001 \001(\003\022\025\n\rup"
+    "date_header\030\002 \001(\005\022\016\n\006update\030\003 \001(\014\"\200\001\n\rWe"
+    "akFatUpdate\022\014\n\004date\030\001 \001(\003\022\025\n\rupdate_head"
+    "er\030\002 \001(\005\022\016\n\006update\030\003 \001(\014\022\033\n\005users\030\004 \003(\0132"
+    "\014.zproto.User\022\035\n\006groups\030\005 \003(\0132\r.zproto.G"
+    "roup\"\022\n\020SeqUpdateTooLong\"8\n\017UpdateContai"
+    "ner\022\025\n\rupdate_header\030\001 \001(\005\022\016\n\006update\030\002 \001"
+    "(\014\"\325\001\n\016CombinedUpdate\022\021\n\tseq_start\030\001 \001(\005"
+    "\022\017\n\007seq_end\030\002 \001(\005\022\r\n\005state\030\003 \001(\014\022\033\n\005user"
+    "s\030\004 \003(\0132\014.zproto.User\022\035\n\006groups\030\005 \003(\0132\r."
+    "zproto.Group\022(\n\007updates\030\006 \003(\0132\027.zproto.U"
+    "pdateContainer\022*\n\010messages\030\007 \003(\0132\030.zprot"
+    "o.MessageContainer\"@\n\013GetStateReq\0221\n\ropt"
+    "imizations\030\001 \003(\0162\032.zproto.UpdateOptimiza"
+    "tion\"a\n\020GetDifferenceReq\022\013\n\003seq\030\001 \001(\005\022\r\n"
+    "\005state\030\002 \001(\014\0221\n\roptimizations\030\003 \003(\0162\032.zp"
+    "roto.UpdateOptimization\"\247\002\n\020GetDifferenc"
+    "eRsp\022\013\n\003seq\030\001 \001(\005\022\r\n\005state\030\002 \001(\014\022\033\n\005user"
+    "s\030\003 \003(\0132\014.zproto.User\022\035\n\006groups\030\004 \003(\0132\r."
+    "zproto.Group\022(\n\007updates\030\005 \003(\0132\027.zproto.U"
+    "pdateContainer\022*\n\010messages\030\006 \003(\0132\030.zprot"
+    "o.MessageContainer\022\021\n\tneed_more\030\007 \001(\010\022\'\n"
+    "\nusers_refs\030\010 \003(\0132\023.zproto.UserOutPeer\022)"
+    "\n\013groups_refs\030\t \003(\0132\024.zproto.GroupOutPee"
+    "r\"e\n\031GetReferencedEntititesReq\022\"\n\005users\030"
+    "\001 \003(\0132\023.zproto.UserOutPeer\022$\n\006groups\030\002 \003"
+    "(\0132\024.zproto.GroupOutPeer\"W\n\031GetReference"
+    "dEntititesRsp\022\033\n\005users\030\001 \003(\0132\014.zproto.Us"
+    "er\022\035\n\006groups\030\002 \003(\0132\r.zproto.Group\".\n\017Raw"
+    "UpdateNotify\022\014\n\004type\030\001 \001(\t\022\r\n\005bytes\030\002 \001("
+    "\014\"\023\n\021EmptyUpdateNotify\":\n\024SubscribeToOnl"
+    "ineReq\022\"\n\005users\030\001 \003(\0132\023.zproto.UserOutPe"
+    "er\"<\n\026SubscribeFromOnlineReq\022\"\n\005users\030\001 "
+    "\003(\0132\023.zproto.UserOutPeer\"A\n\031SubscribeToG"
+    "roupOnlineReq\022$\n\006groups\030\001 \003(\0132\024.zproto.G"
+    "roupOutPeer\"C\n\033SubscribeFromGroupOnlineR"
+    "eq\022$\n\006groups\030\001 \003(\0132\024.zproto.GroupOutPeer"
+    "B+\n\027com.zchat.engine.zprotoB\016ZProtoSeque"
+    "nceH\002b\006proto3", 1853);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "sequence.proto", &protobuf_RegisterTypes);
+  SeqUpdate::default_instance_ = new SeqUpdate();
+  FatSeqUpdate::default_instance_ = new FatSeqUpdate();
+  WeakUpdate::default_instance_ = new WeakUpdate();
+  WeakFatUpdate::default_instance_ = new WeakFatUpdate();
+  SeqUpdateTooLong::default_instance_ = new SeqUpdateTooLong();
+  UpdateContainer::default_instance_ = new UpdateContainer();
+  CombinedUpdate::default_instance_ = new CombinedUpdate();
   GetStateReq::default_instance_ = new GetStateReq();
   GetDifferenceReq::default_instance_ = new GetDifferenceReq();
   GetDifferenceRsp::default_instance_ = new GetDifferenceRsp();
@@ -361,6 +560,13 @@ void protobuf_AddDesc_sequence_2eproto() {
   SubscribeFromOnlineReq::default_instance_ = new SubscribeFromOnlineReq();
   SubscribeToGroupOnlineReq::default_instance_ = new SubscribeToGroupOnlineReq();
   SubscribeFromGroupOnlineReq::default_instance_ = new SubscribeFromGroupOnlineReq();
+  SeqUpdate::default_instance_->InitAsDefaultInstance();
+  FatSeqUpdate::default_instance_->InitAsDefaultInstance();
+  WeakUpdate::default_instance_->InitAsDefaultInstance();
+  WeakFatUpdate::default_instance_->InitAsDefaultInstance();
+  SeqUpdateTooLong::default_instance_->InitAsDefaultInstance();
+  UpdateContainer::default_instance_->InitAsDefaultInstance();
+  CombinedUpdate::default_instance_->InitAsDefaultInstance();
   GetStateReq::default_instance_->InitAsDefaultInstance();
   GetDifferenceReq::default_instance_->InitAsDefaultInstance();
   GetDifferenceRsp::default_instance_->InitAsDefaultInstance();
@@ -381,6 +587,1393 @@ struct StaticDescriptorInitializer_sequence_2eproto {
     protobuf_AddDesc_sequence_2eproto();
   }
 } static_descriptor_initializer_sequence_2eproto_;
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int SeqUpdate::kSeqFieldNumber;
+const int SeqUpdate::kStateFieldNumber;
+const int SeqUpdate::kUpdateHeaderFieldNumber;
+const int SeqUpdate::kUpdateFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+SeqUpdate::SeqUpdate()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.SeqUpdate)
+}
+
+void SeqUpdate::InitAsDefaultInstance() {
+  _is_default_instance_ = true;
+}
+
+SeqUpdate::SeqUpdate(const SeqUpdate& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.SeqUpdate)
+}
+
+void SeqUpdate::SharedCtor() {
+    _is_default_instance_ = false;
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  seq_ = 0;
+  state_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  update_header_ = 0;
+  update_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+SeqUpdate::~SeqUpdate() {
+  // @@protoc_insertion_point(destructor:zproto.SeqUpdate)
+  SharedDtor();
+}
+
+void SeqUpdate::SharedDtor() {
+  state_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  update_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (this != default_instance_) {
+  }
+}
+
+void SeqUpdate::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* SeqUpdate::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return SeqUpdate_descriptor_;
+}
+
+const SeqUpdate& SeqUpdate::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_sequence_2eproto();
+  return *default_instance_;
+}
+
+SeqUpdate* SeqUpdate::default_instance_ = NULL;
+
+SeqUpdate* SeqUpdate::New(::google::protobuf::Arena* arena) const {
+  SeqUpdate* n = new SeqUpdate;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void SeqUpdate::Swap(SeqUpdate* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void SeqUpdate::InternalSwap(SeqUpdate* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata SeqUpdate::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = SeqUpdate_descriptor_;
+  metadata.reflection = SeqUpdate_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// SeqUpdate
+
+// optional int32 seq = 1;
+void SeqUpdate::clear_seq() {
+  seq_ = 0;
+}
+ ::google::protobuf::int32 SeqUpdate::seq() const {
+  // @@protoc_insertion_point(field_get:zproto.SeqUpdate.seq)
+  return seq_;
+}
+ void SeqUpdate::set_seq(::google::protobuf::int32 value) {
+  
+  seq_ = value;
+  // @@protoc_insertion_point(field_set:zproto.SeqUpdate.seq)
+}
+
+// optional bytes state = 2;
+void SeqUpdate::clear_state() {
+  state_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& SeqUpdate::state() const {
+  // @@protoc_insertion_point(field_get:zproto.SeqUpdate.state)
+  return state_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void SeqUpdate::set_state(const ::std::string& value) {
+  
+  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.SeqUpdate.state)
+}
+ void SeqUpdate::set_state(const char* value) {
+  
+  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.SeqUpdate.state)
+}
+ void SeqUpdate::set_state(const void* value, size_t size) {
+  
+  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.SeqUpdate.state)
+}
+ ::std::string* SeqUpdate::mutable_state() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.SeqUpdate.state)
+  return state_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* SeqUpdate::release_state() {
+  // @@protoc_insertion_point(field_release:zproto.SeqUpdate.state)
+  
+  return state_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void SeqUpdate::set_allocated_state(::std::string* state) {
+  if (state != NULL) {
+    
+  } else {
+    
+  }
+  state_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), state);
+  // @@protoc_insertion_point(field_set_allocated:zproto.SeqUpdate.state)
+}
+
+// optional int32 update_header = 3;
+void SeqUpdate::clear_update_header() {
+  update_header_ = 0;
+}
+ ::google::protobuf::int32 SeqUpdate::update_header() const {
+  // @@protoc_insertion_point(field_get:zproto.SeqUpdate.update_header)
+  return update_header_;
+}
+ void SeqUpdate::set_update_header(::google::protobuf::int32 value) {
+  
+  update_header_ = value;
+  // @@protoc_insertion_point(field_set:zproto.SeqUpdate.update_header)
+}
+
+// optional bytes update = 4;
+void SeqUpdate::clear_update() {
+  update_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& SeqUpdate::update() const {
+  // @@protoc_insertion_point(field_get:zproto.SeqUpdate.update)
+  return update_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void SeqUpdate::set_update(const ::std::string& value) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.SeqUpdate.update)
+}
+ void SeqUpdate::set_update(const char* value) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.SeqUpdate.update)
+}
+ void SeqUpdate::set_update(const void* value, size_t size) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.SeqUpdate.update)
+}
+ ::std::string* SeqUpdate::mutable_update() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.SeqUpdate.update)
+  return update_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* SeqUpdate::release_update() {
+  // @@protoc_insertion_point(field_release:zproto.SeqUpdate.update)
+  
+  return update_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void SeqUpdate::set_allocated_update(::std::string* update) {
+  if (update != NULL) {
+    
+  } else {
+    
+  }
+  update_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), update);
+  // @@protoc_insertion_point(field_set_allocated:zproto.SeqUpdate.update)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int FatSeqUpdate::kSeqFieldNumber;
+const int FatSeqUpdate::kStateFieldNumber;
+const int FatSeqUpdate::kUpdateHeaderFieldNumber;
+const int FatSeqUpdate::kUpdateFieldNumber;
+const int FatSeqUpdate::kUsersFieldNumber;
+const int FatSeqUpdate::kGroupsFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+FatSeqUpdate::FatSeqUpdate()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.FatSeqUpdate)
+}
+
+void FatSeqUpdate::InitAsDefaultInstance() {
+  _is_default_instance_ = true;
+}
+
+FatSeqUpdate::FatSeqUpdate(const FatSeqUpdate& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.FatSeqUpdate)
+}
+
+void FatSeqUpdate::SharedCtor() {
+    _is_default_instance_ = false;
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  seq_ = 0;
+  state_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  update_header_ = 0;
+  update_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+FatSeqUpdate::~FatSeqUpdate() {
+  // @@protoc_insertion_point(destructor:zproto.FatSeqUpdate)
+  SharedDtor();
+}
+
+void FatSeqUpdate::SharedDtor() {
+  state_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  update_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (this != default_instance_) {
+  }
+}
+
+void FatSeqUpdate::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* FatSeqUpdate::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return FatSeqUpdate_descriptor_;
+}
+
+const FatSeqUpdate& FatSeqUpdate::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_sequence_2eproto();
+  return *default_instance_;
+}
+
+FatSeqUpdate* FatSeqUpdate::default_instance_ = NULL;
+
+FatSeqUpdate* FatSeqUpdate::New(::google::protobuf::Arena* arena) const {
+  FatSeqUpdate* n = new FatSeqUpdate;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void FatSeqUpdate::Swap(FatSeqUpdate* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void FatSeqUpdate::InternalSwap(FatSeqUpdate* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata FatSeqUpdate::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = FatSeqUpdate_descriptor_;
+  metadata.reflection = FatSeqUpdate_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// FatSeqUpdate
+
+// optional int32 seq = 1;
+void FatSeqUpdate::clear_seq() {
+  seq_ = 0;
+}
+ ::google::protobuf::int32 FatSeqUpdate::seq() const {
+  // @@protoc_insertion_point(field_get:zproto.FatSeqUpdate.seq)
+  return seq_;
+}
+ void FatSeqUpdate::set_seq(::google::protobuf::int32 value) {
+  
+  seq_ = value;
+  // @@protoc_insertion_point(field_set:zproto.FatSeqUpdate.seq)
+}
+
+// optional bytes state = 2;
+void FatSeqUpdate::clear_state() {
+  state_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& FatSeqUpdate::state() const {
+  // @@protoc_insertion_point(field_get:zproto.FatSeqUpdate.state)
+  return state_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void FatSeqUpdate::set_state(const ::std::string& value) {
+  
+  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.FatSeqUpdate.state)
+}
+ void FatSeqUpdate::set_state(const char* value) {
+  
+  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.FatSeqUpdate.state)
+}
+ void FatSeqUpdate::set_state(const void* value, size_t size) {
+  
+  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.FatSeqUpdate.state)
+}
+ ::std::string* FatSeqUpdate::mutable_state() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.FatSeqUpdate.state)
+  return state_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* FatSeqUpdate::release_state() {
+  // @@protoc_insertion_point(field_release:zproto.FatSeqUpdate.state)
+  
+  return state_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void FatSeqUpdate::set_allocated_state(::std::string* state) {
+  if (state != NULL) {
+    
+  } else {
+    
+  }
+  state_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), state);
+  // @@protoc_insertion_point(field_set_allocated:zproto.FatSeqUpdate.state)
+}
+
+// optional int32 update_header = 3;
+void FatSeqUpdate::clear_update_header() {
+  update_header_ = 0;
+}
+ ::google::protobuf::int32 FatSeqUpdate::update_header() const {
+  // @@protoc_insertion_point(field_get:zproto.FatSeqUpdate.update_header)
+  return update_header_;
+}
+ void FatSeqUpdate::set_update_header(::google::protobuf::int32 value) {
+  
+  update_header_ = value;
+  // @@protoc_insertion_point(field_set:zproto.FatSeqUpdate.update_header)
+}
+
+// optional bytes update = 4;
+void FatSeqUpdate::clear_update() {
+  update_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& FatSeqUpdate::update() const {
+  // @@protoc_insertion_point(field_get:zproto.FatSeqUpdate.update)
+  return update_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void FatSeqUpdate::set_update(const ::std::string& value) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.FatSeqUpdate.update)
+}
+ void FatSeqUpdate::set_update(const char* value) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.FatSeqUpdate.update)
+}
+ void FatSeqUpdate::set_update(const void* value, size_t size) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.FatSeqUpdate.update)
+}
+ ::std::string* FatSeqUpdate::mutable_update() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.FatSeqUpdate.update)
+  return update_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* FatSeqUpdate::release_update() {
+  // @@protoc_insertion_point(field_release:zproto.FatSeqUpdate.update)
+  
+  return update_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void FatSeqUpdate::set_allocated_update(::std::string* update) {
+  if (update != NULL) {
+    
+  } else {
+    
+  }
+  update_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), update);
+  // @@protoc_insertion_point(field_set_allocated:zproto.FatSeqUpdate.update)
+}
+
+// repeated .zproto.User users = 5;
+int FatSeqUpdate::users_size() const {
+  return users_.size();
+}
+void FatSeqUpdate::clear_users() {
+  users_.Clear();
+}
+const ::zproto::User& FatSeqUpdate::users(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.FatSeqUpdate.users)
+  return users_.Get(index);
+}
+::zproto::User* FatSeqUpdate::mutable_users(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.FatSeqUpdate.users)
+  return users_.Mutable(index);
+}
+::zproto::User* FatSeqUpdate::add_users() {
+  // @@protoc_insertion_point(field_add:zproto.FatSeqUpdate.users)
+  return users_.Add();
+}
+::google::protobuf::RepeatedPtrField< ::zproto::User >*
+FatSeqUpdate::mutable_users() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.FatSeqUpdate.users)
+  return &users_;
+}
+const ::google::protobuf::RepeatedPtrField< ::zproto::User >&
+FatSeqUpdate::users() const {
+  // @@protoc_insertion_point(field_list:zproto.FatSeqUpdate.users)
+  return users_;
+}
+
+// repeated .zproto.Group groups = 6;
+int FatSeqUpdate::groups_size() const {
+  return groups_.size();
+}
+void FatSeqUpdate::clear_groups() {
+  groups_.Clear();
+}
+const ::zproto::Group& FatSeqUpdate::groups(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.FatSeqUpdate.groups)
+  return groups_.Get(index);
+}
+::zproto::Group* FatSeqUpdate::mutable_groups(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.FatSeqUpdate.groups)
+  return groups_.Mutable(index);
+}
+::zproto::Group* FatSeqUpdate::add_groups() {
+  // @@protoc_insertion_point(field_add:zproto.FatSeqUpdate.groups)
+  return groups_.Add();
+}
+::google::protobuf::RepeatedPtrField< ::zproto::Group >*
+FatSeqUpdate::mutable_groups() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.FatSeqUpdate.groups)
+  return &groups_;
+}
+const ::google::protobuf::RepeatedPtrField< ::zproto::Group >&
+FatSeqUpdate::groups() const {
+  // @@protoc_insertion_point(field_list:zproto.FatSeqUpdate.groups)
+  return groups_;
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int WeakUpdate::kDateFieldNumber;
+const int WeakUpdate::kUpdateHeaderFieldNumber;
+const int WeakUpdate::kUpdateFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+WeakUpdate::WeakUpdate()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.WeakUpdate)
+}
+
+void WeakUpdate::InitAsDefaultInstance() {
+  _is_default_instance_ = true;
+}
+
+WeakUpdate::WeakUpdate(const WeakUpdate& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.WeakUpdate)
+}
+
+void WeakUpdate::SharedCtor() {
+    _is_default_instance_ = false;
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  date_ = GOOGLE_LONGLONG(0);
+  update_header_ = 0;
+  update_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+WeakUpdate::~WeakUpdate() {
+  // @@protoc_insertion_point(destructor:zproto.WeakUpdate)
+  SharedDtor();
+}
+
+void WeakUpdate::SharedDtor() {
+  update_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (this != default_instance_) {
+  }
+}
+
+void WeakUpdate::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* WeakUpdate::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return WeakUpdate_descriptor_;
+}
+
+const WeakUpdate& WeakUpdate::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_sequence_2eproto();
+  return *default_instance_;
+}
+
+WeakUpdate* WeakUpdate::default_instance_ = NULL;
+
+WeakUpdate* WeakUpdate::New(::google::protobuf::Arena* arena) const {
+  WeakUpdate* n = new WeakUpdate;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void WeakUpdate::Swap(WeakUpdate* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void WeakUpdate::InternalSwap(WeakUpdate* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata WeakUpdate::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = WeakUpdate_descriptor_;
+  metadata.reflection = WeakUpdate_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// WeakUpdate
+
+// optional int64 date = 1;
+void WeakUpdate::clear_date() {
+  date_ = GOOGLE_LONGLONG(0);
+}
+ ::google::protobuf::int64 WeakUpdate::date() const {
+  // @@protoc_insertion_point(field_get:zproto.WeakUpdate.date)
+  return date_;
+}
+ void WeakUpdate::set_date(::google::protobuf::int64 value) {
+  
+  date_ = value;
+  // @@protoc_insertion_point(field_set:zproto.WeakUpdate.date)
+}
+
+// optional int32 update_header = 2;
+void WeakUpdate::clear_update_header() {
+  update_header_ = 0;
+}
+ ::google::protobuf::int32 WeakUpdate::update_header() const {
+  // @@protoc_insertion_point(field_get:zproto.WeakUpdate.update_header)
+  return update_header_;
+}
+ void WeakUpdate::set_update_header(::google::protobuf::int32 value) {
+  
+  update_header_ = value;
+  // @@protoc_insertion_point(field_set:zproto.WeakUpdate.update_header)
+}
+
+// optional bytes update = 3;
+void WeakUpdate::clear_update() {
+  update_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& WeakUpdate::update() const {
+  // @@protoc_insertion_point(field_get:zproto.WeakUpdate.update)
+  return update_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void WeakUpdate::set_update(const ::std::string& value) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.WeakUpdate.update)
+}
+ void WeakUpdate::set_update(const char* value) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.WeakUpdate.update)
+}
+ void WeakUpdate::set_update(const void* value, size_t size) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.WeakUpdate.update)
+}
+ ::std::string* WeakUpdate::mutable_update() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.WeakUpdate.update)
+  return update_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* WeakUpdate::release_update() {
+  // @@protoc_insertion_point(field_release:zproto.WeakUpdate.update)
+  
+  return update_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void WeakUpdate::set_allocated_update(::std::string* update) {
+  if (update != NULL) {
+    
+  } else {
+    
+  }
+  update_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), update);
+  // @@protoc_insertion_point(field_set_allocated:zproto.WeakUpdate.update)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int WeakFatUpdate::kDateFieldNumber;
+const int WeakFatUpdate::kUpdateHeaderFieldNumber;
+const int WeakFatUpdate::kUpdateFieldNumber;
+const int WeakFatUpdate::kUsersFieldNumber;
+const int WeakFatUpdate::kGroupsFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+WeakFatUpdate::WeakFatUpdate()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.WeakFatUpdate)
+}
+
+void WeakFatUpdate::InitAsDefaultInstance() {
+  _is_default_instance_ = true;
+}
+
+WeakFatUpdate::WeakFatUpdate(const WeakFatUpdate& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.WeakFatUpdate)
+}
+
+void WeakFatUpdate::SharedCtor() {
+    _is_default_instance_ = false;
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  date_ = GOOGLE_LONGLONG(0);
+  update_header_ = 0;
+  update_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+WeakFatUpdate::~WeakFatUpdate() {
+  // @@protoc_insertion_point(destructor:zproto.WeakFatUpdate)
+  SharedDtor();
+}
+
+void WeakFatUpdate::SharedDtor() {
+  update_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (this != default_instance_) {
+  }
+}
+
+void WeakFatUpdate::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* WeakFatUpdate::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return WeakFatUpdate_descriptor_;
+}
+
+const WeakFatUpdate& WeakFatUpdate::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_sequence_2eproto();
+  return *default_instance_;
+}
+
+WeakFatUpdate* WeakFatUpdate::default_instance_ = NULL;
+
+WeakFatUpdate* WeakFatUpdate::New(::google::protobuf::Arena* arena) const {
+  WeakFatUpdate* n = new WeakFatUpdate;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void WeakFatUpdate::Swap(WeakFatUpdate* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void WeakFatUpdate::InternalSwap(WeakFatUpdate* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata WeakFatUpdate::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = WeakFatUpdate_descriptor_;
+  metadata.reflection = WeakFatUpdate_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// WeakFatUpdate
+
+// optional int64 date = 1;
+void WeakFatUpdate::clear_date() {
+  date_ = GOOGLE_LONGLONG(0);
+}
+ ::google::protobuf::int64 WeakFatUpdate::date() const {
+  // @@protoc_insertion_point(field_get:zproto.WeakFatUpdate.date)
+  return date_;
+}
+ void WeakFatUpdate::set_date(::google::protobuf::int64 value) {
+  
+  date_ = value;
+  // @@protoc_insertion_point(field_set:zproto.WeakFatUpdate.date)
+}
+
+// optional int32 update_header = 2;
+void WeakFatUpdate::clear_update_header() {
+  update_header_ = 0;
+}
+ ::google::protobuf::int32 WeakFatUpdate::update_header() const {
+  // @@protoc_insertion_point(field_get:zproto.WeakFatUpdate.update_header)
+  return update_header_;
+}
+ void WeakFatUpdate::set_update_header(::google::protobuf::int32 value) {
+  
+  update_header_ = value;
+  // @@protoc_insertion_point(field_set:zproto.WeakFatUpdate.update_header)
+}
+
+// optional bytes update = 3;
+void WeakFatUpdate::clear_update() {
+  update_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& WeakFatUpdate::update() const {
+  // @@protoc_insertion_point(field_get:zproto.WeakFatUpdate.update)
+  return update_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void WeakFatUpdate::set_update(const ::std::string& value) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.WeakFatUpdate.update)
+}
+ void WeakFatUpdate::set_update(const char* value) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.WeakFatUpdate.update)
+}
+ void WeakFatUpdate::set_update(const void* value, size_t size) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.WeakFatUpdate.update)
+}
+ ::std::string* WeakFatUpdate::mutable_update() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.WeakFatUpdate.update)
+  return update_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* WeakFatUpdate::release_update() {
+  // @@protoc_insertion_point(field_release:zproto.WeakFatUpdate.update)
+  
+  return update_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void WeakFatUpdate::set_allocated_update(::std::string* update) {
+  if (update != NULL) {
+    
+  } else {
+    
+  }
+  update_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), update);
+  // @@protoc_insertion_point(field_set_allocated:zproto.WeakFatUpdate.update)
+}
+
+// repeated .zproto.User users = 4;
+int WeakFatUpdate::users_size() const {
+  return users_.size();
+}
+void WeakFatUpdate::clear_users() {
+  users_.Clear();
+}
+const ::zproto::User& WeakFatUpdate::users(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.WeakFatUpdate.users)
+  return users_.Get(index);
+}
+::zproto::User* WeakFatUpdate::mutable_users(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.WeakFatUpdate.users)
+  return users_.Mutable(index);
+}
+::zproto::User* WeakFatUpdate::add_users() {
+  // @@protoc_insertion_point(field_add:zproto.WeakFatUpdate.users)
+  return users_.Add();
+}
+::google::protobuf::RepeatedPtrField< ::zproto::User >*
+WeakFatUpdate::mutable_users() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.WeakFatUpdate.users)
+  return &users_;
+}
+const ::google::protobuf::RepeatedPtrField< ::zproto::User >&
+WeakFatUpdate::users() const {
+  // @@protoc_insertion_point(field_list:zproto.WeakFatUpdate.users)
+  return users_;
+}
+
+// repeated .zproto.Group groups = 5;
+int WeakFatUpdate::groups_size() const {
+  return groups_.size();
+}
+void WeakFatUpdate::clear_groups() {
+  groups_.Clear();
+}
+const ::zproto::Group& WeakFatUpdate::groups(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.WeakFatUpdate.groups)
+  return groups_.Get(index);
+}
+::zproto::Group* WeakFatUpdate::mutable_groups(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.WeakFatUpdate.groups)
+  return groups_.Mutable(index);
+}
+::zproto::Group* WeakFatUpdate::add_groups() {
+  // @@protoc_insertion_point(field_add:zproto.WeakFatUpdate.groups)
+  return groups_.Add();
+}
+::google::protobuf::RepeatedPtrField< ::zproto::Group >*
+WeakFatUpdate::mutable_groups() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.WeakFatUpdate.groups)
+  return &groups_;
+}
+const ::google::protobuf::RepeatedPtrField< ::zproto::Group >&
+WeakFatUpdate::groups() const {
+  // @@protoc_insertion_point(field_list:zproto.WeakFatUpdate.groups)
+  return groups_;
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+SeqUpdateTooLong::SeqUpdateTooLong()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.SeqUpdateTooLong)
+}
+
+void SeqUpdateTooLong::InitAsDefaultInstance() {
+  _is_default_instance_ = true;
+}
+
+SeqUpdateTooLong::SeqUpdateTooLong(const SeqUpdateTooLong& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.SeqUpdateTooLong)
+}
+
+void SeqUpdateTooLong::SharedCtor() {
+    _is_default_instance_ = false;
+  _cached_size_ = 0;
+}
+
+SeqUpdateTooLong::~SeqUpdateTooLong() {
+  // @@protoc_insertion_point(destructor:zproto.SeqUpdateTooLong)
+  SharedDtor();
+}
+
+void SeqUpdateTooLong::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
+
+void SeqUpdateTooLong::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* SeqUpdateTooLong::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return SeqUpdateTooLong_descriptor_;
+}
+
+const SeqUpdateTooLong& SeqUpdateTooLong::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_sequence_2eproto();
+  return *default_instance_;
+}
+
+SeqUpdateTooLong* SeqUpdateTooLong::default_instance_ = NULL;
+
+SeqUpdateTooLong* SeqUpdateTooLong::New(::google::protobuf::Arena* arena) const {
+  SeqUpdateTooLong* n = new SeqUpdateTooLong;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void SeqUpdateTooLong::Swap(SeqUpdateTooLong* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void SeqUpdateTooLong::InternalSwap(SeqUpdateTooLong* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata SeqUpdateTooLong::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = SeqUpdateTooLong_descriptor_;
+  metadata.reflection = SeqUpdateTooLong_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// SeqUpdateTooLong
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int UpdateContainer::kUpdateHeaderFieldNumber;
+const int UpdateContainer::kUpdateFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+UpdateContainer::UpdateContainer()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.UpdateContainer)
+}
+
+void UpdateContainer::InitAsDefaultInstance() {
+  _is_default_instance_ = true;
+}
+
+UpdateContainer::UpdateContainer(const UpdateContainer& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.UpdateContainer)
+}
+
+void UpdateContainer::SharedCtor() {
+    _is_default_instance_ = false;
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  update_header_ = 0;
+  update_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+UpdateContainer::~UpdateContainer() {
+  // @@protoc_insertion_point(destructor:zproto.UpdateContainer)
+  SharedDtor();
+}
+
+void UpdateContainer::SharedDtor() {
+  update_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (this != default_instance_) {
+  }
+}
+
+void UpdateContainer::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* UpdateContainer::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return UpdateContainer_descriptor_;
+}
+
+const UpdateContainer& UpdateContainer::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_sequence_2eproto();
+  return *default_instance_;
+}
+
+UpdateContainer* UpdateContainer::default_instance_ = NULL;
+
+UpdateContainer* UpdateContainer::New(::google::protobuf::Arena* arena) const {
+  UpdateContainer* n = new UpdateContainer;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void UpdateContainer::Swap(UpdateContainer* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void UpdateContainer::InternalSwap(UpdateContainer* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata UpdateContainer::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = UpdateContainer_descriptor_;
+  metadata.reflection = UpdateContainer_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// UpdateContainer
+
+// optional int32 update_header = 1;
+void UpdateContainer::clear_update_header() {
+  update_header_ = 0;
+}
+ ::google::protobuf::int32 UpdateContainer::update_header() const {
+  // @@protoc_insertion_point(field_get:zproto.UpdateContainer.update_header)
+  return update_header_;
+}
+ void UpdateContainer::set_update_header(::google::protobuf::int32 value) {
+  
+  update_header_ = value;
+  // @@protoc_insertion_point(field_set:zproto.UpdateContainer.update_header)
+}
+
+// optional bytes update = 2;
+void UpdateContainer::clear_update() {
+  update_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& UpdateContainer::update() const {
+  // @@protoc_insertion_point(field_get:zproto.UpdateContainer.update)
+  return update_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void UpdateContainer::set_update(const ::std::string& value) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.UpdateContainer.update)
+}
+ void UpdateContainer::set_update(const char* value) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.UpdateContainer.update)
+}
+ void UpdateContainer::set_update(const void* value, size_t size) {
+  
+  update_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.UpdateContainer.update)
+}
+ ::std::string* UpdateContainer::mutable_update() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.UpdateContainer.update)
+  return update_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* UpdateContainer::release_update() {
+  // @@protoc_insertion_point(field_release:zproto.UpdateContainer.update)
+  
+  return update_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void UpdateContainer::set_allocated_update(::std::string* update) {
+  if (update != NULL) {
+    
+  } else {
+    
+  }
+  update_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), update);
+  // @@protoc_insertion_point(field_set_allocated:zproto.UpdateContainer.update)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CombinedUpdate::kSeqStartFieldNumber;
+const int CombinedUpdate::kSeqEndFieldNumber;
+const int CombinedUpdate::kStateFieldNumber;
+const int CombinedUpdate::kUsersFieldNumber;
+const int CombinedUpdate::kGroupsFieldNumber;
+const int CombinedUpdate::kUpdatesFieldNumber;
+const int CombinedUpdate::kMessagesFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CombinedUpdate::CombinedUpdate()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.CombinedUpdate)
+}
+
+void CombinedUpdate::InitAsDefaultInstance() {
+  _is_default_instance_ = true;
+}
+
+CombinedUpdate::CombinedUpdate(const CombinedUpdate& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.CombinedUpdate)
+}
+
+void CombinedUpdate::SharedCtor() {
+    _is_default_instance_ = false;
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  seq_start_ = 0;
+  seq_end_ = 0;
+  state_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+CombinedUpdate::~CombinedUpdate() {
+  // @@protoc_insertion_point(destructor:zproto.CombinedUpdate)
+  SharedDtor();
+}
+
+void CombinedUpdate::SharedDtor() {
+  state_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (this != default_instance_) {
+  }
+}
+
+void CombinedUpdate::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CombinedUpdate::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CombinedUpdate_descriptor_;
+}
+
+const CombinedUpdate& CombinedUpdate::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_sequence_2eproto();
+  return *default_instance_;
+}
+
+CombinedUpdate* CombinedUpdate::default_instance_ = NULL;
+
+CombinedUpdate* CombinedUpdate::New(::google::protobuf::Arena* arena) const {
+  CombinedUpdate* n = new CombinedUpdate;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CombinedUpdate::Swap(CombinedUpdate* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CombinedUpdate::InternalSwap(CombinedUpdate* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata CombinedUpdate::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CombinedUpdate_descriptor_;
+  metadata.reflection = CombinedUpdate_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CombinedUpdate
+
+// optional int32 seq_start = 1;
+void CombinedUpdate::clear_seq_start() {
+  seq_start_ = 0;
+}
+ ::google::protobuf::int32 CombinedUpdate::seq_start() const {
+  // @@protoc_insertion_point(field_get:zproto.CombinedUpdate.seq_start)
+  return seq_start_;
+}
+ void CombinedUpdate::set_seq_start(::google::protobuf::int32 value) {
+  
+  seq_start_ = value;
+  // @@protoc_insertion_point(field_set:zproto.CombinedUpdate.seq_start)
+}
+
+// optional int32 seq_end = 2;
+void CombinedUpdate::clear_seq_end() {
+  seq_end_ = 0;
+}
+ ::google::protobuf::int32 CombinedUpdate::seq_end() const {
+  // @@protoc_insertion_point(field_get:zproto.CombinedUpdate.seq_end)
+  return seq_end_;
+}
+ void CombinedUpdate::set_seq_end(::google::protobuf::int32 value) {
+  
+  seq_end_ = value;
+  // @@protoc_insertion_point(field_set:zproto.CombinedUpdate.seq_end)
+}
+
+// optional bytes state = 3;
+void CombinedUpdate::clear_state() {
+  state_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& CombinedUpdate::state() const {
+  // @@protoc_insertion_point(field_get:zproto.CombinedUpdate.state)
+  return state_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void CombinedUpdate::set_state(const ::std::string& value) {
+  
+  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.CombinedUpdate.state)
+}
+ void CombinedUpdate::set_state(const char* value) {
+  
+  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.CombinedUpdate.state)
+}
+ void CombinedUpdate::set_state(const void* value, size_t size) {
+  
+  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.CombinedUpdate.state)
+}
+ ::std::string* CombinedUpdate::mutable_state() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.CombinedUpdate.state)
+  return state_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* CombinedUpdate::release_state() {
+  // @@protoc_insertion_point(field_release:zproto.CombinedUpdate.state)
+  
+  return state_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void CombinedUpdate::set_allocated_state(::std::string* state) {
+  if (state != NULL) {
+    
+  } else {
+    
+  }
+  state_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), state);
+  // @@protoc_insertion_point(field_set_allocated:zproto.CombinedUpdate.state)
+}
+
+// repeated .zproto.User users = 4;
+int CombinedUpdate::users_size() const {
+  return users_.size();
+}
+void CombinedUpdate::clear_users() {
+  users_.Clear();
+}
+const ::zproto::User& CombinedUpdate::users(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.CombinedUpdate.users)
+  return users_.Get(index);
+}
+::zproto::User* CombinedUpdate::mutable_users(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.CombinedUpdate.users)
+  return users_.Mutable(index);
+}
+::zproto::User* CombinedUpdate::add_users() {
+  // @@protoc_insertion_point(field_add:zproto.CombinedUpdate.users)
+  return users_.Add();
+}
+::google::protobuf::RepeatedPtrField< ::zproto::User >*
+CombinedUpdate::mutable_users() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.CombinedUpdate.users)
+  return &users_;
+}
+const ::google::protobuf::RepeatedPtrField< ::zproto::User >&
+CombinedUpdate::users() const {
+  // @@protoc_insertion_point(field_list:zproto.CombinedUpdate.users)
+  return users_;
+}
+
+// repeated .zproto.Group groups = 5;
+int CombinedUpdate::groups_size() const {
+  return groups_.size();
+}
+void CombinedUpdate::clear_groups() {
+  groups_.Clear();
+}
+const ::zproto::Group& CombinedUpdate::groups(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.CombinedUpdate.groups)
+  return groups_.Get(index);
+}
+::zproto::Group* CombinedUpdate::mutable_groups(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.CombinedUpdate.groups)
+  return groups_.Mutable(index);
+}
+::zproto::Group* CombinedUpdate::add_groups() {
+  // @@protoc_insertion_point(field_add:zproto.CombinedUpdate.groups)
+  return groups_.Add();
+}
+::google::protobuf::RepeatedPtrField< ::zproto::Group >*
+CombinedUpdate::mutable_groups() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.CombinedUpdate.groups)
+  return &groups_;
+}
+const ::google::protobuf::RepeatedPtrField< ::zproto::Group >&
+CombinedUpdate::groups() const {
+  // @@protoc_insertion_point(field_list:zproto.CombinedUpdate.groups)
+  return groups_;
+}
+
+// repeated .zproto.UpdateContainer updates = 6;
+int CombinedUpdate::updates_size() const {
+  return updates_.size();
+}
+void CombinedUpdate::clear_updates() {
+  updates_.Clear();
+}
+const ::zproto::UpdateContainer& CombinedUpdate::updates(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.CombinedUpdate.updates)
+  return updates_.Get(index);
+}
+::zproto::UpdateContainer* CombinedUpdate::mutable_updates(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.CombinedUpdate.updates)
+  return updates_.Mutable(index);
+}
+::zproto::UpdateContainer* CombinedUpdate::add_updates() {
+  // @@protoc_insertion_point(field_add:zproto.CombinedUpdate.updates)
+  return updates_.Add();
+}
+::google::protobuf::RepeatedPtrField< ::zproto::UpdateContainer >*
+CombinedUpdate::mutable_updates() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.CombinedUpdate.updates)
+  return &updates_;
+}
+const ::google::protobuf::RepeatedPtrField< ::zproto::UpdateContainer >&
+CombinedUpdate::updates() const {
+  // @@protoc_insertion_point(field_list:zproto.CombinedUpdate.updates)
+  return updates_;
+}
+
+// repeated .zproto.MessageContainer messages = 7;
+int CombinedUpdate::messages_size() const {
+  return messages_.size();
+}
+void CombinedUpdate::clear_messages() {
+  messages_.Clear();
+}
+const ::zproto::MessageContainer& CombinedUpdate::messages(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.CombinedUpdate.messages)
+  return messages_.Get(index);
+}
+::zproto::MessageContainer* CombinedUpdate::mutable_messages(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.CombinedUpdate.messages)
+  return messages_.Mutable(index);
+}
+::zproto::MessageContainer* CombinedUpdate::add_messages() {
+  // @@protoc_insertion_point(field_add:zproto.CombinedUpdate.messages)
+  return messages_.Add();
+}
+::google::protobuf::RepeatedPtrField< ::zproto::MessageContainer >*
+CombinedUpdate::mutable_messages() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.CombinedUpdate.messages)
+  return &messages_;
+}
+const ::google::protobuf::RepeatedPtrField< ::zproto::MessageContainer >&
+CombinedUpdate::messages() const {
+  // @@protoc_insertion_point(field_list:zproto.CombinedUpdate.messages)
+  return messages_;
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
 

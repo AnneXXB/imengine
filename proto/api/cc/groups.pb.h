@@ -29,11 +29,11 @@
 #include <google/protobuf/map.h>
 #include <google/protobuf/map_field_inl.h>
 #include <google/protobuf/unknown_field_set.h>
+#include "misc.pb.h"
 #include "peers.pb.h"
 #include "types.pb.h"
 #include "files.pb.h"
 #include "users.pb.h"
-#include "sequence_base.pb.h"
 #include "group_base.pb.h"
 // @@protoc_insertion_point(includes)
 

@@ -15,23 +15,14 @@
  * limitations under the License.
  */
 
-// TODO(@benqi): 使用zrpc-code-gen代码生成工具自动生成
+#ifndef	PROTO_ERROR_CODES_H_
+#define	PROTO_ERROR_CODES_H_
 
-#include "messenger/messenger_server.h"
+const int kErrorNo_OK         = 0;
 
-// #include "nebula/base/timer_manager.h"
+const int kErrorNo_DBError    = 1000; // DB无法连接
+const int kErrorNo_DBConn     = 1001; // DB无法连接
+const int kErrorNo_DBSql      = 1002; // SQL非法
+const int kErrorNo_DBData     = 1003; // QueryAnswer解析有问题
 
-bool MessengerServer::Initialize() {
-  // RegisterService("tcpd", "tcp_server");
-  RegisterService("messenger_server", "rpc_server", "zrpc");
-  RegisterService("push_client", "rpc_client", "zrpc");
-
-  BaseServer::Initialize();
-  
-  return true;
-}
-
-
-int main(int argc, char* argv[]) {
-    return nebula::DoMain<MessengerServer>(argc, argv);
-}
+#endif

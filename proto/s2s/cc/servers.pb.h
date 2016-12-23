@@ -36,6 +36,7 @@ void protobuf_AddDesc_servers_2eproto();
 void protobuf_AssignDesc_servers_2eproto();
 void protobuf_ShutdownFile_servers_2eproto();
 
+class DeliveryDataToUsersReq;
 class ServerAuthReq;
 class ServerAuthRsp;
 
@@ -174,6 +175,107 @@ class ServerAuthRsp : public ::google::protobuf::Message /* @@protoc_insertion_p
   void InitAsDefaultInstance();
   static ServerAuthRsp* default_instance_;
 };
+// -------------------------------------------------------------------
+
+class DeliveryDataToUsersReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.DeliveryDataToUsersReq) */ {
+ public:
+  DeliveryDataToUsersReq();
+  virtual ~DeliveryDataToUsersReq();
+
+  DeliveryDataToUsersReq(const DeliveryDataToUsersReq& from);
+
+  inline DeliveryDataToUsersReq& operator=(const DeliveryDataToUsersReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const DeliveryDataToUsersReq& default_instance();
+
+  void Swap(DeliveryDataToUsersReq* other);
+
+  // implements Message ----------------------------------------------
+
+  inline DeliveryDataToUsersReq* New() const { return New(NULL); }
+
+  DeliveryDataToUsersReq* New(::google::protobuf::Arena* arena) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(DeliveryDataToUsersReq* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 my_conn_id = 1;
+  void clear_my_conn_id();
+  static const int kMyConnIdFieldNumber = 1;
+  ::google::protobuf::uint64 my_conn_id() const;
+  void set_my_conn_id(::google::protobuf::uint64 value);
+
+  // repeated string uid_list = 2;
+  int uid_list_size() const;
+  void clear_uid_list();
+  static const int kUidListFieldNumber = 2;
+  const ::std::string& uid_list(int index) const;
+  ::std::string* mutable_uid_list(int index);
+  void set_uid_list(int index, const ::std::string& value);
+  void set_uid_list(int index, const char* value);
+  void set_uid_list(int index, const char* value, size_t size);
+  ::std::string* add_uid_list();
+  void add_uid_list(const ::std::string& value);
+  void add_uid_list(const char* value);
+  void add_uid_list(const char* value, size_t size);
+  const ::google::protobuf::RepeatedPtrField< ::std::string>& uid_list() const;
+  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_uid_list();
+
+  // optional uint32 raw_data_header = 4;
+  void clear_raw_data_header();
+  static const int kRawDataHeaderFieldNumber = 4;
+  ::google::protobuf::uint32 raw_data_header() const;
+  void set_raw_data_header(::google::protobuf::uint32 value);
+
+  // optional bytes raw_data = 5;
+  void clear_raw_data();
+  static const int kRawDataFieldNumber = 5;
+  const ::std::string& raw_data() const;
+  void set_raw_data(const ::std::string& value);
+  void set_raw_data(const char* value);
+  void set_raw_data(const void* value, size_t size);
+  ::std::string* mutable_raw_data();
+  ::std::string* release_raw_data();
+  void set_allocated_raw_data(::std::string* raw_data);
+
+  // @@protoc_insertion_point(class_scope:zproto.DeliveryDataToUsersReq)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::uint64 my_conn_id_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> uid_list_;
+  ::google::protobuf::internal::ArenaStringPtr raw_data_;
+  ::google::protobuf::uint32 raw_data_header_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_servers_2eproto();
+  friend void protobuf_AssignDesc_servers_2eproto();
+  friend void protobuf_ShutdownFile_servers_2eproto();
+
+  void InitAsDefaultInstance();
+  static DeliveryDataToUsersReq* default_instance_;
+};
 // ===================================================================
 
 
@@ -244,7 +346,140 @@ inline void ServerAuthReq::set_allocated_server_name(::std::string* server_name)
 
 // ServerAuthRsp
 
+// -------------------------------------------------------------------
+
+// DeliveryDataToUsersReq
+
+// optional uint64 my_conn_id = 1;
+inline void DeliveryDataToUsersReq::clear_my_conn_id() {
+  my_conn_id_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 DeliveryDataToUsersReq::my_conn_id() const {
+  // @@protoc_insertion_point(field_get:zproto.DeliveryDataToUsersReq.my_conn_id)
+  return my_conn_id_;
+}
+inline void DeliveryDataToUsersReq::set_my_conn_id(::google::protobuf::uint64 value) {
+  
+  my_conn_id_ = value;
+  // @@protoc_insertion_point(field_set:zproto.DeliveryDataToUsersReq.my_conn_id)
+}
+
+// repeated string uid_list = 2;
+inline int DeliveryDataToUsersReq::uid_list_size() const {
+  return uid_list_.size();
+}
+inline void DeliveryDataToUsersReq::clear_uid_list() {
+  uid_list_.Clear();
+}
+inline const ::std::string& DeliveryDataToUsersReq::uid_list(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.DeliveryDataToUsersReq.uid_list)
+  return uid_list_.Get(index);
+}
+inline ::std::string* DeliveryDataToUsersReq::mutable_uid_list(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.DeliveryDataToUsersReq.uid_list)
+  return uid_list_.Mutable(index);
+}
+inline void DeliveryDataToUsersReq::set_uid_list(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:zproto.DeliveryDataToUsersReq.uid_list)
+  uid_list_.Mutable(index)->assign(value);
+}
+inline void DeliveryDataToUsersReq::set_uid_list(int index, const char* value) {
+  uid_list_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:zproto.DeliveryDataToUsersReq.uid_list)
+}
+inline void DeliveryDataToUsersReq::set_uid_list(int index, const char* value, size_t size) {
+  uid_list_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:zproto.DeliveryDataToUsersReq.uid_list)
+}
+inline ::std::string* DeliveryDataToUsersReq::add_uid_list() {
+  // @@protoc_insertion_point(field_add_mutable:zproto.DeliveryDataToUsersReq.uid_list)
+  return uid_list_.Add();
+}
+inline void DeliveryDataToUsersReq::add_uid_list(const ::std::string& value) {
+  uid_list_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:zproto.DeliveryDataToUsersReq.uid_list)
+}
+inline void DeliveryDataToUsersReq::add_uid_list(const char* value) {
+  uid_list_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:zproto.DeliveryDataToUsersReq.uid_list)
+}
+inline void DeliveryDataToUsersReq::add_uid_list(const char* value, size_t size) {
+  uid_list_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:zproto.DeliveryDataToUsersReq.uid_list)
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+DeliveryDataToUsersReq::uid_list() const {
+  // @@protoc_insertion_point(field_list:zproto.DeliveryDataToUsersReq.uid_list)
+  return uid_list_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+DeliveryDataToUsersReq::mutable_uid_list() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.DeliveryDataToUsersReq.uid_list)
+  return &uid_list_;
+}
+
+// optional uint32 raw_data_header = 4;
+inline void DeliveryDataToUsersReq::clear_raw_data_header() {
+  raw_data_header_ = 0u;
+}
+inline ::google::protobuf::uint32 DeliveryDataToUsersReq::raw_data_header() const {
+  // @@protoc_insertion_point(field_get:zproto.DeliveryDataToUsersReq.raw_data_header)
+  return raw_data_header_;
+}
+inline void DeliveryDataToUsersReq::set_raw_data_header(::google::protobuf::uint32 value) {
+  
+  raw_data_header_ = value;
+  // @@protoc_insertion_point(field_set:zproto.DeliveryDataToUsersReq.raw_data_header)
+}
+
+// optional bytes raw_data = 5;
+inline void DeliveryDataToUsersReq::clear_raw_data() {
+  raw_data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& DeliveryDataToUsersReq::raw_data() const {
+  // @@protoc_insertion_point(field_get:zproto.DeliveryDataToUsersReq.raw_data)
+  return raw_data_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void DeliveryDataToUsersReq::set_raw_data(const ::std::string& value) {
+  
+  raw_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.DeliveryDataToUsersReq.raw_data)
+}
+inline void DeliveryDataToUsersReq::set_raw_data(const char* value) {
+  
+  raw_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.DeliveryDataToUsersReq.raw_data)
+}
+inline void DeliveryDataToUsersReq::set_raw_data(const void* value, size_t size) {
+  
+  raw_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.DeliveryDataToUsersReq.raw_data)
+}
+inline ::std::string* DeliveryDataToUsersReq::mutable_raw_data() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.DeliveryDataToUsersReq.raw_data)
+  return raw_data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* DeliveryDataToUsersReq::release_raw_data() {
+  // @@protoc_insertion_point(field_release:zproto.DeliveryDataToUsersReq.raw_data)
+  
+  return raw_data_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void DeliveryDataToUsersReq::set_allocated_raw_data(::std::string* raw_data) {
+  if (raw_data != NULL) {
+    
+  } else {
+    
+  }
+  raw_data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), raw_data);
+  // @@protoc_insertion_point(field_set_allocated:zproto.DeliveryDataToUsersReq.raw_data)
+}
+
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 

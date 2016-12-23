@@ -42,6 +42,7 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* ConfigNotify_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   ConfigNotify_reflection_ = NULL;
+const ::google::protobuf::EnumDescriptor* UpdateOptimization_descriptor_ = NULL;
 
 }  // namespace
 
@@ -68,9 +69,8 @@ void protobuf_AssignDesc_misc_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VoidRsp, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VoidRsp, _is_default_instance_));
   SeqRsp_descriptor_ = file->message_type(1);
-  static const int SeqRsp_offsets_[2] = {
+  static const int SeqRsp_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SeqRsp, seq_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SeqRsp, state_),
   };
   SeqRsp_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
@@ -84,9 +84,8 @@ void protobuf_AssignDesc_misc_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SeqRsp, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SeqRsp, _is_default_instance_));
   SeqDateRsp_descriptor_ = file->message_type(2);
-  static const int SeqDateRsp_offsets_[3] = {
+  static const int SeqDateRsp_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SeqDateRsp, seq_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SeqDateRsp, state_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SeqDateRsp, date_),
   };
   SeqDateRsp_reflection_ =
@@ -161,6 +160,7 @@ void protobuf_AssignDesc_misc_2eproto() {
       sizeof(ConfigNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConfigNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConfigNotify, _is_default_instance_));
+  UpdateOptimization_descriptor_ = file->enum_type(0);
 }
 
 namespace {
@@ -217,15 +217,17 @@ void protobuf_AddDesc_misc_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\nmisc.proto\022\006zproto\"\t\n\007VoidRsp\"$\n\006SeqRs"
-    "p\022\013\n\003seq\030\001 \001(\005\022\r\n\005state\030\002 \001(\014\"6\n\nSeqDate"
-    "Rsp\022\013\n\003seq\030\001 \001(\005\022\r\n\005state\030\002 \001(\014\022\014\n\004date\030"
-    "\003 \001(\003\"\030\n\007BoolRsp\022\r\n\005value\030\001 \001(\010\" \n\006Confi"
-    "g\022\026\n\016max_group_size\030\001 \001(\005\"%\n\tExtension\022\n"
-    "\n\002id\030\001 \001(\005\022\014\n\004data\030\002 \001(\014\".\n\014ConfigNotify"
-    "\022\036\n\006config\030\001 \001(\0132\016.zproto.ConfigB\'\n\027com."
-    "zchat.engine.zprotoB\nZProtoMiscH\002b\006proto"
-    "3", 321);
+    "\n\nmisc.proto\022\006zproto\"\t\n\007VoidRsp\"\025\n\006SeqRs"
+    "p\022\013\n\003seq\030\001 \001(\003\"\'\n\nSeqDateRsp\022\013\n\003seq\030\001 \001("
+    "\003\022\014\n\004date\030\002 \001(\003\"\030\n\007BoolRsp\022\r\n\005value\030\001 \001("
+    "\010\" \n\006Config\022\026\n\016max_group_size\030\001 \001(\005\"%\n\tE"
+    "xtension\022\n\n\002id\030\001 \001(\005\022\014\n\004data\030\002 \001(\014\".\n\014Co"
+    "nfigNotify\022\036\n\006config\030\001 \001(\0132\016.zproto.Conf"
+    "ig*\222\001\n\022UpdateOptimization\022\010\n\004NONE\020\000\022\022\n\016S"
+    "TRIP_ENTITIES\020\001\022\023\n\017ENABLE_COMBINED\020\002\022\023\n\017"
+    "FASTER_MESSAGES\020\003\022\022\n\016STRIP_COUNTERS\020\004\022\021\n"
+    "\rCOMPACT_USERS\020\005\022\r\n\tGROUPS_V2\020\006B\'\n\027com.z"
+    "chat.engine.zprotoB\nZProtoMiscH\002b\006proto3", 440);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "misc.proto", &protobuf_RegisterTypes);
   VoidRsp::default_instance_ = new VoidRsp();
@@ -251,6 +253,25 @@ struct StaticDescriptorInitializer_misc_2eproto {
     protobuf_AddDesc_misc_2eproto();
   }
 } static_descriptor_initializer_misc_2eproto_;
+const ::google::protobuf::EnumDescriptor* UpdateOptimization_descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return UpdateOptimization_descriptor_;
+}
+bool UpdateOptimization_IsValid(int value) {
+  switch(value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      return true;
+    default:
+      return false;
+  }
+}
+
 
 // ===================================================================
 
@@ -339,7 +360,6 @@ void VoidRsp::InternalSwap(VoidRsp* other) {
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int SeqRsp::kSeqFieldNumber;
-const int SeqRsp::kStateFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 SeqRsp::SeqRsp()
@@ -362,10 +382,8 @@ SeqRsp::SeqRsp(const SeqRsp& from)
 
 void SeqRsp::SharedCtor() {
     _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
-  seq_ = 0;
-  state_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  seq_ = GOOGLE_LONGLONG(0);
 }
 
 SeqRsp::~SeqRsp() {
@@ -374,7 +392,6 @@ SeqRsp::~SeqRsp() {
 }
 
 void SeqRsp::SharedDtor() {
-  state_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != default_instance_) {
   }
 }
@@ -422,62 +439,18 @@ void SeqRsp::InternalSwap(SeqRsp* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // SeqRsp
 
-// optional int32 seq = 1;
+// optional int64 seq = 1;
 void SeqRsp::clear_seq() {
-  seq_ = 0;
+  seq_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int32 SeqRsp::seq() const {
+ ::google::protobuf::int64 SeqRsp::seq() const {
   // @@protoc_insertion_point(field_get:zproto.SeqRsp.seq)
   return seq_;
 }
- void SeqRsp::set_seq(::google::protobuf::int32 value) {
+ void SeqRsp::set_seq(::google::protobuf::int64 value) {
   
   seq_ = value;
   // @@protoc_insertion_point(field_set:zproto.SeqRsp.seq)
-}
-
-// optional bytes state = 2;
-void SeqRsp::clear_state() {
-  state_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- const ::std::string& SeqRsp::state() const {
-  // @@protoc_insertion_point(field_get:zproto.SeqRsp.state)
-  return state_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void SeqRsp::set_state(const ::std::string& value) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.SeqRsp.state)
-}
- void SeqRsp::set_state(const char* value) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.SeqRsp.state)
-}
- void SeqRsp::set_state(const void* value, size_t size) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.SeqRsp.state)
-}
- ::std::string* SeqRsp::mutable_state() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.SeqRsp.state)
-  return state_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- ::std::string* SeqRsp::release_state() {
-  // @@protoc_insertion_point(field_release:zproto.SeqRsp.state)
-  
-  return state_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void SeqRsp::set_allocated_state(::std::string* state) {
-  if (state != NULL) {
-    
-  } else {
-    
-  }
-  state_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), state);
-  // @@protoc_insertion_point(field_set_allocated:zproto.SeqRsp.state)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -486,7 +459,6 @@ void SeqRsp::clear_state() {
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int SeqDateRsp::kSeqFieldNumber;
-const int SeqDateRsp::kStateFieldNumber;
 const int SeqDateRsp::kDateFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
@@ -510,10 +482,8 @@ SeqDateRsp::SeqDateRsp(const SeqDateRsp& from)
 
 void SeqDateRsp::SharedCtor() {
     _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
-  seq_ = 0;
-  state_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  seq_ = GOOGLE_LONGLONG(0);
   date_ = GOOGLE_LONGLONG(0);
 }
 
@@ -523,7 +493,6 @@ SeqDateRsp::~SeqDateRsp() {
 }
 
 void SeqDateRsp::SharedDtor() {
-  state_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != default_instance_) {
   }
 }
@@ -571,65 +540,21 @@ void SeqDateRsp::InternalSwap(SeqDateRsp* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // SeqDateRsp
 
-// optional int32 seq = 1;
+// optional int64 seq = 1;
 void SeqDateRsp::clear_seq() {
-  seq_ = 0;
+  seq_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int32 SeqDateRsp::seq() const {
+ ::google::protobuf::int64 SeqDateRsp::seq() const {
   // @@protoc_insertion_point(field_get:zproto.SeqDateRsp.seq)
   return seq_;
 }
- void SeqDateRsp::set_seq(::google::protobuf::int32 value) {
+ void SeqDateRsp::set_seq(::google::protobuf::int64 value) {
   
   seq_ = value;
   // @@protoc_insertion_point(field_set:zproto.SeqDateRsp.seq)
 }
 
-// optional bytes state = 2;
-void SeqDateRsp::clear_state() {
-  state_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- const ::std::string& SeqDateRsp::state() const {
-  // @@protoc_insertion_point(field_get:zproto.SeqDateRsp.state)
-  return state_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void SeqDateRsp::set_state(const ::std::string& value) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.SeqDateRsp.state)
-}
- void SeqDateRsp::set_state(const char* value) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.SeqDateRsp.state)
-}
- void SeqDateRsp::set_state(const void* value, size_t size) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.SeqDateRsp.state)
-}
- ::std::string* SeqDateRsp::mutable_state() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.SeqDateRsp.state)
-  return state_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- ::std::string* SeqDateRsp::release_state() {
-  // @@protoc_insertion_point(field_release:zproto.SeqDateRsp.state)
-  
-  return state_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void SeqDateRsp::set_allocated_state(::std::string* state) {
-  if (state != NULL) {
-    
-  } else {
-    
-  }
-  state_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), state);
-  // @@protoc_insertion_point(field_set_allocated:zproto.SeqDateRsp.state)
-}
-
-// optional int64 date = 3;
+// optional int64 date = 2;
 void SeqDateRsp::clear_date() {
   date_ = GOOGLE_LONGLONG(0);
 }

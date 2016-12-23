@@ -17,21 +17,22 @@
 
 // TODO(@benqi): 使用zrpc-code-gen代码生成工具自动生成
 
-#include "messenger/messenger_server.h"
+#ifndef	MESSENGER_ZRPC_PRIVACY_SERVICE_H_
+#define	MESSENGER_ZRPC_PRIVACY_SERVICE_H_
 
-// #include "nebula/base/timer_manager.h"
+#include "proto/api/cc/misc.pb.h"
+#include "proto/api/cc/privacy.pb.h"
+#include "base/base_zrpc_service.h"
 
-bool MessengerServer::Initialize() {
-  // RegisterService("tcpd", "tcp_server");
-  RegisterService("messenger_server", "rpc_server", "zrpc");
-  RegisterService("push_client", "rpc_client", "zrpc");
-
-  BaseServer::Initialize();
+class ZRpcPrivacyService : public BaseZRpcService {
+public:
+  virtual ~ZRpcPrivacyService() = default;
   
-  return true;
-}
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+  virtual int BlockUser(const zproto::BlockUserReq& request, zproto::SeqRsp* response);
+  virtual int UnblockUser(const zproto::UnblockUserReq& request, zproto::SeqRsp* response);
+  virtual int LoadBlockedUsers(const zproto::LoadBlockedUsersReq& request, zproto::LoadBlockedUsersRsp* response);
 
+};
 
-int main(int argc, char* argv[]) {
-    return nebula::DoMain<MessengerServer>(argc, argv);
-}
+#endif

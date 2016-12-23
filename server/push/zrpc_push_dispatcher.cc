@@ -21,23 +21,24 @@
 
 #include "nebula/net/rpc/zrpc_service_util.h"
 
-#include "proto/api/cc/misc.pb.h"
+#include "proto/s2s/cc/servers.pb.h"
+
 #include "push/push_service_impl.h"
 
 static ZRpcPushDispatcher g_rpc_push_dispatcher;
 
 ZRpcPushDispatcher::ZRpcPushDispatcher() {
-  ZRpcUtil::Register("zproto.ForwardMessageReq", ZRpcPushDispatcher::ForwardMessage);
+  ZRpcUtil::Register("zproto.DeliveryDataToUsersReq", ZRpcPushDispatcher::DeliveryDataToUsers);
 }
 
-ProtoRpcResponsePtr ZRpcPushDispatcher::ForwardMessage(RpcRequestPtr request) {
-  // CAST_RPC_REQUEST(ForwardMessageReq, forward_message_req);
-  // LOG(INFO) << forward_message_req.Utf8DebugString();
+ProtoRpcResponsePtr ZRpcPushDispatcher::DeliveryDataToUsers(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(DeliveryDataToUsersReq, delivery_data_to_users_req);
+  LOG(INFO) << delivery_data_to_users_req.Utf8DebugString();
   
   zproto::VoidRsp void_rsp;
   
-  // PushServiceImpl service_impl;
-  // service_impl.ForwardMessage(forward_message_req, &void_rsp);
+  PushServiceImpl service_impl;
+  service_impl.DeliveryDataToUsers(delivery_data_to_users_req, &void_rsp);
 
   return MakeRpcOK(void_rsp);
 }

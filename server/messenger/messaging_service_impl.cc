@@ -1,0 +1,412 @@
+/*
+ *  Copyright (c) 2016, https://github.com/nebula-im
+ *  All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+// TODO(@benqi): 使用zrpc-code-gen代码生成工具自动生成服务框架代码
+
+#include "messenger/messaging_service_impl.h"
+
+#include "nebula/net/rpc/zrpc_service_util.h"
+#include "nebula/base/time_util.h"
+#include "nebula/base/id_util.h"
+
+#include "proto/api/error_codes.h"
+
+#include "proto/s2s/cc/servers.pb.h"
+
+#include "dal/user_dao.h"
+#include "dal/history_message_dao.h"
+#include "dal/user_message_dao.h"
+#include "dal/user_dialog_dao.h"
+#include "dal/sequence_dao.h"
+#include "dal/group_dao.h"
+#include "dal/group_user_dao.h"
+#include "dal/user_sequence_dao.h"
+
+int MessagingServiceImpl::SendMessage(const zproto::SendMessageReq& request, zproto::SeqDateRsp* response) {
+  auto& history_message_dao = HistoryMessageDAO::GetInstance();
+
+  // 去重
+  int r = history_message_dao.CheckExists(uid(),
+                                          request.peer().id(),
+                                          request.peer().type(),
+                                          request.rid());
+
+  if (r<0) {
+    // TODO(@benqi): 区分数据库异常和重复问题
+    LOG(ERROR) << "SendMessage - CheckExists DBError";
+    return kErrorNo_DBError;
+  } else if (r > 0) {
+    // 幂等操作，如果History存在，则认为已经走完流程了。
+    // 已经存在，直接返回
+    LOG(WARNING) << "SendMessage - isexists by uid: " << uid() << ", rid: " << request.rid();
+
+    auto seq = SequenceDAO::GetInstance().GetNextID(uid());
+    auto now = NowInMsecTime();
+
+    // 直接生成一个SEQ返回，
+    response->set_seq(seq);
+    response->set_date(now);
+
+    return 0;
+  }
+
+  if (request.peer().type() == zproto::PEER_TYPE_PRIVATE) {
+    r = SendPrivateMessage(request, response);
+  } else {
+    r = SendGroupMessage(request, response);
+  }
+
+  return r;
+
+#if 0
+  /*
+  // 检查request
+  // TODO(@benqi): 回滚
+  // const auto& message_data = request.message_data();
+  int rv = -1;
+  do {
+    auto& history_message_dao = HistoryMessageDAO::GetInstance();
+    // 去重
+    int64_t r = history_message_dao.CheckExists(uid(),
+                                            request.peer().id(),
+                                            request.peer().type(),
+                                            request.rid());
+
+    if (r<0) {
+      // TODO(@benqi): 区分数据库异常和重复问题
+      LOG(ERROR) << "SendMessage - CheckExists DBError";
+      rv = kErrorNo_DBError;
+      break;
+    } else if (r > 0) {
+      // 已经存在，直接返回
+      LOG(WARNING) << "SendMessage - isexists by uid: " << uid() << ", rid: " << request.rid();
+
+      auto seq = SequenceDAO::GetInstance().GetNextID(uid());
+      auto now = NowInMsecTime();
+
+      // 直接生成一个SEQ返回，
+      response->set_seq(seq);
+      response->set_date(now);
+
+      rv = 0;
+      break;
+    }
+
+
+    uint64_t sender_message_seq = 0;
+    
+    message_entity.message_id = message_id;
+    // 创建用户消息
+    if (message_entity.peer_type == zproto::PEER_TYPE_PRIVATE) {
+      // 单聊
+      // 创建者
+      // biz_model::UserMessageEntity user_message_entity;
+      // 发送者
+      sender_message_seq = SequenceDAO::GetInstance().GetNextID(message_entity.sender_user_id);
+      message_entity.message_seq = sender_message_seq;
+      message_entity.user_id = message_entity.sender_user_id;
+      
+      UserMessageDO user_message;
+      
+      user_message.message_seq = sender_message_seq;
+      user_message.user_id = message_entity.sender_user_id;
+      user_message.message_id = message_entity.message_id;
+      user_message.sender_user_id = message_entity.sender_user_id;
+      user_message.peer_id = message_entity.peer_id;
+      user_message.peer_type = message_entity.peer_type;
+      user_message.message_peer_seq = message_entity.message_peer_seq;
+      user_message.created_at = created_at;
+      user_message.updated_at = created_at;
+      
+      r = UserMessageDAO::GetInstance().Create(user_message);
+      if (r<0) {
+        LOG(ERROR) << "SendMessage - Create error!!";
+        // TODO(@benqi): 是否回滚？
+        rv = kErrorNo_DBError;
+        break;
+      }
+      
+      // 接收者
+      sender_message_seq = SequenceDAO::GetInstance().GetNextID(message_entity.peer_id);
+      user_message.message_seq = sender_message_seq;
+      user_message.user_id = message_entity.peer_id;
+      r = UserMessageDAO::GetInstance().Create(user_message);
+      if (r<0) {
+        LOG(ERROR) << "SendMessage - Create error!!";
+        // TODO(@benqi): 是否回滚？
+        return -1;
+      }
+      
+
+    } else {
+      // 群聊
+      // TODO(@benqi): 麻烦
+    }
+    
+    rv = 0;
+    
+  } while (0);
+
+  return rv;
+  */
+#endif
+}
+
+int MessagingServiceImpl::MessageReceived(const zproto::MessageReceivedReq& request, zproto::VoidRsp* response) {
+  return -1;
+}
+
+int MessagingServiceImpl::MessageRead(const zproto::MessageReadReq& request, zproto::VoidRsp* response) {
+  return -1;
+}
+
+int MessagingServiceImpl::DeleteMessage(const zproto::DeleteMessageReq& request, zproto::SeqRsp* response) {
+  return -1;
+}
+
+int MessagingServiceImpl::ClearChat(const zproto::ClearChatReq& request, zproto::SeqRsp* response) {
+  return -1;
+}
+
+int MessagingServiceImpl::DeleteChat(const zproto::DeleteChatReq& request, zproto::SeqRsp* response) {
+  return -1;
+}
+
+int MessagingServiceImpl::LoadHistory(const zproto::LoadHistoryReq& request, zproto::LoadHistoryRsp* response) {
+ /*
+  std::string user_id = "benqi@zhazha";
+  // uint64_t received_max_seq = (*message_sync_req)->received_max_seq();
+  
+  UserMessageDOList user_message_list;
+  UserMessageDAO::GetInstance().LoadUserDialogMessageList(user_id,
+                                                          request.peer().id(),
+                                                          request.peer().type(),
+                                                          user_message_list);
+  // TODO(@benqi): 出错
+  
+  std::list<uint64_t> message_ids;
+  for (auto& v : user_message_list) {
+    message_ids.push_back(v->message_id);
+  }
+  
+  HistoryMessageDOList history_message_list;
+  HistoryMessageDAO::GetInstance().LoadHistoryMessageList(message_ids, history_message_list);
+  // TODO(@benqi): 出错
+  
+  for (auto& v : history_message_list) {
+    auto message_data = response->add_history();
+    message_data->set_message_id(v->id);
+    message_data->set_sender_user_id(v->sender_user_id);
+    message_data->mutable_peer()->set_id(v->peer_id);
+    message_data->mutable_peer()->set_type((zproto::PeerType)v->peer_type);
+    message_data->set_client_message_id(v->client_message_id);
+  }
+  
+  return 0;
+*/
+  return -1;
+}
+
+int MessagingServiceImpl::LoadDialogs(const zproto::LoadDialogsReq& request, zproto::LoadDialogsRsp* response) {
+ /*
+  std::string user_id = "benqi@zhazha";
+  
+  UserDialogDOList dialog_list;
+  UserDialogDAO::GetInstance().LoadUserDialogList(user_id,
+                                                  request.date(),
+                                                  request.load_mode(),
+                                                  request.limit(),
+                                                  dialog_list);
+  // TODO(@benqi): 出错
+  
+  for (auto & d : dialog_list) {
+    auto peer = response->add_dialogs()->mutable_peer();
+    peer->set_id(d->peer_id);
+    peer->set_type((zproto::PeerType)d->peer_type);
+  }
+  
+  return 0;
+*/
+  return -1;
+}
+
+int MessagingServiceImpl::LoadGroupedDialogs(const zproto::LoadGroupedDialogsReq& request, zproto::LoadGroupedDialogsRsp* response) {
+  return -1;
+}
+
+/*
+
+int MessengerServiceImpl::MessageSync(const zproto::MessageSyncReq& request, zproto::MessageSyncRsp* response) {
+  std::string user_id = "benqi@zhazha";
+  uint64_t received_max_seq = request.received_max_seq();
+  
+  UserMessageDOList user_message_list;
+  UserMessageDAO::GetInstance().LoadUserMessageList(user_id, received_max_seq, user_message_list);
+  // TODO(@benqi): 出错
+  
+  std::list<uint64_t> message_ids;
+  for (auto& v : user_message_list) {
+    message_ids.push_back(v->message_id);
+  }
+  
+  HistoryMessageDOList history_message_list;
+  HistoryMessageDAO::GetInstance().LoadHistoryMessageList(message_ids, history_message_list);
+  // TODO(@benqi): 出错
+  
+  for (auto& v : history_message_list) {
+    auto message_data = response->add_message_data();
+    message_data->set_message_id(v->id);
+    message_data->set_sender_user_id(v->sender_user_id);
+    message_data->mutable_peer()->set_id(v->peer_id);
+    message_data->mutable_peer()->set_type((zproto::PeerType)v->peer_type);
+    message_data->set_client_message_id(v->client_message_id);
+  }
+
+  return 0;
+}
+
+*/
+
+// 发送私聊
+int MessagingServiceImpl::SendPrivateMessage(const zproto::SendMessageReq& request, zproto::SeqDateRsp* response) {
+  auto& history_message_dao = HistoryMessageDAO::GetInstance();
+
+  auto message_peer_seq = SequenceDAO::GetInstance().GetNextID(uid());
+  auto now = NowInMsecTime();
+
+  HistoryMessageDO message_do;
+
+  // 入库
+  message_do.sender_user_id = uid();
+  message_do.peer_id = request.peer().id();
+  message_do.peer_type = request.peer().type();
+  message_do.message_peer_seq = message_peer_seq;
+  message_do.client_message_id = request.rid();
+  message_do.message_content_type = request.message().message_type();
+  // 这个地方比较重
+  message_do.message_content_data = request.message().message_data();
+  message_do.passthrough_data = request.passthrough_data();
+  message_do.status = 1;
+  message_do.created_at = now;
+  message_do.updated_at = now;
+
+  auto message_id = history_message_dao.Create(message_do);
+  if (message_id<0) {
+    // TODO(@benqi): 数据库异常，让客户端重试吧
+    LOG(ERROR) << "SendMessage - Create error!!";
+    return kErrorNo_DBError;
+  }
+
+  // 会话处理
+  // 正向
+  // 检查会话是否存在
+  int r = UserDialogDAO::GetInstance().CheckExists(uid(),
+                                                   request.peer().id(),
+                                                   request.peer().type());
+  // TODO(@benqi): 出错
+  if (r == 0) {
+    UserDialogDO user_dialog;
+    user_dialog.user_id = uid();
+    user_dialog.peer_id = request.peer().id();
+    user_dialog.peer_type = request.peer().type();
+    user_dialog.created_at = now;
+    user_dialog.updated_at = now;
+
+    r = UserDialogDAO::GetInstance().Create(user_dialog);
+    if (r<0) {
+      LOG(ERROR) << "SendMessage - Create error!!";
+      // TODO(@benqi): 是否回滚？
+      r = kErrorNo_DBError;
+    }
+  } else {
+    // ERROR
+  }
+
+  // 反向
+  // 检查会话是否存在
+  r = UserDialogDAO::GetInstance().CheckExists(request.peer().id(),
+                                               uid(),
+                                               request.peer().type());
+  if (r == 0) {
+    UserDialogDO user_dialog;
+    user_dialog.user_id = request.peer().id();
+    user_dialog.peer_id = uid();
+    user_dialog.peer_type = request.peer().type();
+    user_dialog.created_at = now;
+    user_dialog.updated_at = now;
+
+    r = UserDialogDAO::GetInstance().Create(user_dialog);
+    if (r<0) {
+      LOG(ERROR) << "SendMessage - Create error!!";
+      // TODO(@benqi): 是否回滚？
+      r = kErrorNo_DBError;
+      // break;
+    }
+  }
+
+  // 可以异步处理
+  // TODO(@benqi): 未读计数
+  // TODO(@benqi): 缓存最后一条消息
+
+  // 同步队列
+  UserSequenceDO user_sequence_do;
+  auto seq = SequenceDAO::GetInstance().GetNextID(uid());
+
+  user_sequence_do.seq = seq;
+  user_sequence_do.user_id = uid();
+  user_sequence_do.header = CRC32(request.GetTypeName());
+  request.SerializeToString(&user_sequence_do.data);
+  user_sequence_do.created_at = now;
+  UserSequenceDAO::GetInstance().Create(user_sequence_do);
+
+  user_sequence_do.user_id = request.peer().id();
+  seq = SequenceDAO::GetInstance().GetNextID(uid());
+  UserSequenceDAO::GetInstance().Create(user_sequence_do);
+
+  // 转发消息
+  zproto::DeliveryDataToUsersReq delivery;
+  delivery.set_my_conn_id(session_id());
+  delivery.add_uid_list(uid());
+  delivery.add_uid_list(request.peer().id());
+  delivery.set_raw_data_header(user_sequence_do.header);
+  delivery.set_raw_data(user_sequence_do.data);
+
+  // TODO(@benqi): 还是用协程简单
+  // 转发给push_server成功后才能返回
+  // 如果push_server有问题，则可能会导致丢消息，解决:
+  // 1. 告诉客户端发送消息失败，让客户端重试
+  // 2. 服务端重试
+  ZRpcUtil::DoClientCall("push_client", MakeRpcRequest(delivery))
+    .within(std::chrono::milliseconds(5000))
+    .then([](ProtoRpcResponsePtr rsp2) {
+      CHECK(rsp2);
+      LOG(INFO) << "push_client rsp: " << rsp2->ToString();
+      // auto online_rep = ToApiRpcOk<zproto::ClientOnlineRsp>(rsp2);
+      // LOG(INFO) << (*online_rep)->Utf8DebugString();
+      //
+    });
+
+  // ACK
+  response->set_seq(message_peer_seq);
+  response->set_date(now);
+
+  return 0;
+}
+
+int MessagingServiceImpl::SendGroupMessage(const zproto::SendMessageReq& request, zproto::SeqDateRsp* response) {
+  return 0;
+}
