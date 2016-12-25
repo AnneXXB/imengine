@@ -27,6 +27,7 @@ public:
   AuthServiceImpl() = default;
   ~AuthServiceImpl() = default;
   
+  int StartTestingAuth(const zproto::StartTestingAuthReq& request, zproto::AuthRsp* response) override;
   int StartTokenAuth(const zproto::StartTokenAuthReq& request, zproto::AuthRsp* response) override;
 };
 

@@ -23,8 +23,8 @@
 class BaseZRpcService {
 public:
   enum AttachDataType {
-    UID   = 0,
-    APPID,
+    APPID = 0,
+    UID,
     // TODO(@benqi):
     //  设备信息等
     MAX,
@@ -39,7 +39,7 @@ public:
   }
   
   const std::string& uid() const {
-    return *rpc_request_->attach_data.options[UID].data.s;
+    return *(rpc_request_->attach_data.options[UID].data.s);
   }
 
   uint32_t app_id() const {

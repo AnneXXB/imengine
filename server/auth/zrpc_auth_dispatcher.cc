@@ -31,6 +31,7 @@ static ZRpcAuthDispatcher g_rpc_auth_dispatcher;
 
 ZRpcAuthDispatcher::ZRpcAuthDispatcher() {
   ZRpcUtil::Register("zproto.StartTokenAuthReq", ZRpcAuthDispatcher::StartTokenAuth);
+  ZRpcUtil::Register("zproto.StartTestingAuthReq", ZRpcAuthDispatcher::StartTestingAuth);
 }
 
 ProtoRpcResponsePtr ZRpcAuthDispatcher::StartTokenAuth(RpcRequestPtr request) {
@@ -40,6 +41,16 @@ ProtoRpcResponsePtr ZRpcAuthDispatcher::StartTokenAuth(RpcRequestPtr request) {
   AuthServiceImpl service_impl;
   service_impl.StartTokenAuth(start_token_auth_req, &auth_rsp);
 
+  return MakeRpcOK(auth_rsp);
+}
+
+ProtoRpcResponsePtr ZRpcAuthDispatcher::StartTestingAuth(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(StartTestingAuthReq, start_testing_auth_req);
+  zproto::AuthRsp auth_rsp;
+  
+  AuthServiceImpl service_impl;
+  service_impl.StartTestingAuth(start_testing_auth_req, &auth_rsp);
+  
   return MakeRpcOK(auth_rsp);
 }
 

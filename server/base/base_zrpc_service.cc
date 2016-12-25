@@ -21,7 +21,7 @@
 
 bool BaseZRpcService::Initialize(RpcRequestPtr v) {
   if (!v->has_attach_data()) {
-    LOG(ERROR) << "Initialize - attach_data empty!!! " << v->ToString();
+    LOG(FATAL) << "Initialize - attach_data empty!!! " << v->ToString();
     return false;
   }
   

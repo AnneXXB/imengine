@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2016, https://github.com/nebula-im
+ *  Copyright (c) 2016, https://github.com/nebula-im/imengine
  *  All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,18 +15,18 @@
  * limitations under the License.
  */
 
-// TODO(@benqi): 使用zrpc-code-gen代码生成工具自动生成
+#ifndef DAL_SEQ_UPDATES_NGEN_DAO_H_
+#define DAL_SEQ_UPDATES_NGEN_DAO_H_
 
-#include "auth/zrpc_auth_service.h"
+#include "dal/seq_updates_ngen_do.h"
 
-#include "nebula/base/logger/glog_util.h"
+struct SeqUpdatesNgenDAO : public BaseDAO {
+  virtual ~SeqUpdatesNgenDAO() = default;
+  
+  static SeqUpdatesNgenDAO& GetInstance();
+  
+  virtual int64_t GetSequence(const std::string& user_id) = 0;
+  virtual int Upsert(SeqUpdatesNgenDO& seq_updates_ngen_do) = 0;
+};
 
-int ZRpcAuthService::StartTestingAuth(const zproto::StartTestingAuthReq& request, zproto::AuthRsp* response) {
-  LOG(ERROR) << "ZRpcAuthService - StartTestingAuth unimplemented";
-  return -1;
-}
-
-int ZRpcAuthService::StartTokenAuth(const zproto::StartTokenAuthReq& request, zproto::AuthRsp* response) {
-  LOG(ERROR) << "ZRpcAuthService - StartTokenAuth unimplemented";
-  return -1;
-}
+#endif

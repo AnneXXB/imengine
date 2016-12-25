@@ -28,6 +28,7 @@ class ZRpcAuthService {
 public:
   virtual ~ZRpcAuthService() = default;
   
+  virtual int StartTestingAuth(const zproto::StartTestingAuthReq& request, zproto::AuthRsp* response);
   virtual int StartTokenAuth(const zproto::StartTokenAuthReq& request, zproto::AuthRsp* response);
 };
 

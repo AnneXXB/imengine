@@ -40,6 +40,18 @@ message StartTokenAuthReq {
   repeated string preferred_languages = 7; // Preferred languages
 }
 
+// Starting token-based login
+// StartTestingAuthReq --> AuthRsp
+message StartTestingAuthReq {
+  // int32 COMMAND_ID = 203;
+  uint32 app_id = 1; // Application Id
+  string user_id = 2; // User id
+  bytes device_hash = 4; // Hash of device unique id and app bundle id. Used for autologout users when app is reinstalled
+  string device_title = 5; // Device Title
+  string time_zone = 6; // TimeZone of device
+  repeated string preferred_languages = 7; // Preferred languages
+}
+
 // AuthRsp
 
 // Authentication result

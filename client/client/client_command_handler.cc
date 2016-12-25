@@ -40,11 +40,11 @@ struct CmdEntry {
 };
 
 int DoConnect(const std::vector<folly::StringPiece>& command_lines) {
-  auto req = std::make_shared<ApiRpcRequest<zproto::StartTokenAuthReq>>();
+  auto req = std::make_shared<ApiRpcRequest<zproto::StartTestingAuthReq>>();
   
-  (*req)->set_api_key("nebula-im(zhazha)");
-  // (*req)->set_user_id("benqi@zhazha");
-  (*req)->set_token("benqi@zhazha.nebula.im");
+  (*req)->set_app_id(1);
+  (*req)->set_user_id(command_lines[3].toString());
+  // (*req)->set_token("benqi@zhazha.nebula.im");
   //(*req)->set_online_status(teamtalk::USER_STATUS_ONLINE);
   //(*req)->set_client_type(teamtalk::CLIENT_TYPE_MAC);
 
@@ -73,16 +73,15 @@ int DoConnect(const std::vector<folly::StringPiece>& command_lines) {
 }
 
 int DoSendMessage(const std::vector<folly::StringPiece>& command_lines) {
-/*
   auto req = std::make_shared<ApiRpcRequest<zproto::SendMessageReq>>();
-  auto message_data = (*req)->mutable_message_data();
-  message_data->set_sender_user_id("benqi@zhazha");
-  auto peer = message_data->mutable_peer();
+  auto peer = (*req)->mutable_peer();
   peer->set_id(command_lines[1].toString());
-  peer->set_type(zproto::EnumHelper::PRIVATE);
-  message_data->set_client_message_id(GetNextIDBySnowflake());
-  message_data->set_message_type(zproto::EnumHelper::TEXT);
-  message_data->set_message_content(command_lines[2].toString());
+  peer->set_type(zproto::PEER_TYPE_PRIVATE);
+  peer->set_access_hash(1);
+  auto message = (*req)->mutable_message();
+  message->set_message_type(zproto::TEXT);
+  message->set_message_data(command_lines[2].toString());
+  (*req)->set_rid(GetNextIDBySnowflake());
   
   ZRpcUtil::DoClientCall("gate_client", req)
   .within(std::chrono::milliseconds(5000))
@@ -94,7 +93,6 @@ int DoSendMessage(const std::vector<folly::StringPiece>& command_lines) {
       // LOG(INFO) << (*login_rsp)->Utf8DebugString();
     }
   });
- */
   return 0;
 }
 

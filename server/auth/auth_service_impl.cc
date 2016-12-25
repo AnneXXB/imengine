@@ -24,6 +24,21 @@
 //#include "biz_model/user_model.h"
 // #include "proto/zproto/zproto_api_message_types.h"
 
+int AuthServiceImpl::StartTestingAuth(const zproto::StartTestingAuthReq& request, zproto::AuthRsp* response) {
+  UserDO user_do;
+  UserDAO::GetInstance().GetUserByUserID(1,
+                                         request.user_id(),
+                                         user_do);
+  
+  auto user = response->mutable_user();
+  user->set_uid(user_do.user_id);
+  user->set_nick(user_do.nick);
+  user->set_name(user_do.nick);
+  // user->mutable_avatar()->set set_avatar(user_do.avatar);
+  
+  return 0;
+}
+
 ///////////////////////////////////////////////////////////////////////////////
 int AuthServiceImpl::StartTokenAuth(const zproto::StartTokenAuthReq& request, zproto::AuthRsp* response) {
   UserDO user_do;

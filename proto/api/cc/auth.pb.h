@@ -39,6 +39,7 @@ void protobuf_AssignDesc_auth_2eproto();
 void protobuf_ShutdownFile_auth_2eproto();
 
 class AuthRsp;
+class StartTestingAuthReq;
 class StartTokenAuthReq;
 
 // ===================================================================
@@ -182,6 +183,136 @@ class StartTokenAuthReq : public ::google::protobuf::Message /* @@protoc_inserti
 
   void InitAsDefaultInstance();
   static StartTokenAuthReq* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class StartTestingAuthReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.StartTestingAuthReq) */ {
+ public:
+  StartTestingAuthReq();
+  virtual ~StartTestingAuthReq();
+
+  StartTestingAuthReq(const StartTestingAuthReq& from);
+
+  inline StartTestingAuthReq& operator=(const StartTestingAuthReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const StartTestingAuthReq& default_instance();
+
+  void Swap(StartTestingAuthReq* other);
+
+  // implements Message ----------------------------------------------
+
+  inline StartTestingAuthReq* New() const { return New(NULL); }
+
+  StartTestingAuthReq* New(::google::protobuf::Arena* arena) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(StartTestingAuthReq* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 app_id = 1;
+  void clear_app_id();
+  static const int kAppIdFieldNumber = 1;
+  ::google::protobuf::uint32 app_id() const;
+  void set_app_id(::google::protobuf::uint32 value);
+
+  // optional string user_id = 2;
+  void clear_user_id();
+  static const int kUserIdFieldNumber = 2;
+  const ::std::string& user_id() const;
+  void set_user_id(const ::std::string& value);
+  void set_user_id(const char* value);
+  void set_user_id(const char* value, size_t size);
+  ::std::string* mutable_user_id();
+  ::std::string* release_user_id();
+  void set_allocated_user_id(::std::string* user_id);
+
+  // optional bytes device_hash = 4;
+  void clear_device_hash();
+  static const int kDeviceHashFieldNumber = 4;
+  const ::std::string& device_hash() const;
+  void set_device_hash(const ::std::string& value);
+  void set_device_hash(const char* value);
+  void set_device_hash(const void* value, size_t size);
+  ::std::string* mutable_device_hash();
+  ::std::string* release_device_hash();
+  void set_allocated_device_hash(::std::string* device_hash);
+
+  // optional string device_title = 5;
+  void clear_device_title();
+  static const int kDeviceTitleFieldNumber = 5;
+  const ::std::string& device_title() const;
+  void set_device_title(const ::std::string& value);
+  void set_device_title(const char* value);
+  void set_device_title(const char* value, size_t size);
+  ::std::string* mutable_device_title();
+  ::std::string* release_device_title();
+  void set_allocated_device_title(::std::string* device_title);
+
+  // optional string time_zone = 6;
+  void clear_time_zone();
+  static const int kTimeZoneFieldNumber = 6;
+  const ::std::string& time_zone() const;
+  void set_time_zone(const ::std::string& value);
+  void set_time_zone(const char* value);
+  void set_time_zone(const char* value, size_t size);
+  ::std::string* mutable_time_zone();
+  ::std::string* release_time_zone();
+  void set_allocated_time_zone(::std::string* time_zone);
+
+  // repeated string preferred_languages = 7;
+  int preferred_languages_size() const;
+  void clear_preferred_languages();
+  static const int kPreferredLanguagesFieldNumber = 7;
+  const ::std::string& preferred_languages(int index) const;
+  ::std::string* mutable_preferred_languages(int index);
+  void set_preferred_languages(int index, const ::std::string& value);
+  void set_preferred_languages(int index, const char* value);
+  void set_preferred_languages(int index, const char* value, size_t size);
+  ::std::string* add_preferred_languages();
+  void add_preferred_languages(const ::std::string& value);
+  void add_preferred_languages(const char* value);
+  void add_preferred_languages(const char* value, size_t size);
+  const ::google::protobuf::RepeatedPtrField< ::std::string>& preferred_languages() const;
+  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_preferred_languages();
+
+  // @@protoc_insertion_point(class_scope:zproto.StartTestingAuthReq)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::internal::ArenaStringPtr user_id_;
+  ::google::protobuf::internal::ArenaStringPtr device_hash_;
+  ::google::protobuf::internal::ArenaStringPtr device_title_;
+  ::google::protobuf::internal::ArenaStringPtr time_zone_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> preferred_languages_;
+  ::google::protobuf::uint32 app_id_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_auth_2eproto();
+  friend void protobuf_AssignDesc_auth_2eproto();
+  friend void protobuf_ShutdownFile_auth_2eproto();
+
+  void InitAsDefaultInstance();
+  static StartTestingAuthReq* default_instance_;
 };
 // -------------------------------------------------------------------
 
@@ -560,6 +691,255 @@ StartTokenAuthReq::mutable_preferred_languages() {
 
 // -------------------------------------------------------------------
 
+// StartTestingAuthReq
+
+// optional uint32 app_id = 1;
+inline void StartTestingAuthReq::clear_app_id() {
+  app_id_ = 0u;
+}
+inline ::google::protobuf::uint32 StartTestingAuthReq::app_id() const {
+  // @@protoc_insertion_point(field_get:zproto.StartTestingAuthReq.app_id)
+  return app_id_;
+}
+inline void StartTestingAuthReq::set_app_id(::google::protobuf::uint32 value) {
+  
+  app_id_ = value;
+  // @@protoc_insertion_point(field_set:zproto.StartTestingAuthReq.app_id)
+}
+
+// optional string user_id = 2;
+inline void StartTestingAuthReq::clear_user_id() {
+  user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& StartTestingAuthReq::user_id() const {
+  // @@protoc_insertion_point(field_get:zproto.StartTestingAuthReq.user_id)
+  return user_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void StartTestingAuthReq::set_user_id(const ::std::string& value) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.StartTestingAuthReq.user_id)
+}
+inline void StartTestingAuthReq::set_user_id(const char* value) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.StartTestingAuthReq.user_id)
+}
+inline void StartTestingAuthReq::set_user_id(const char* value, size_t size) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.StartTestingAuthReq.user_id)
+}
+inline ::std::string* StartTestingAuthReq::mutable_user_id() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.StartTestingAuthReq.user_id)
+  return user_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* StartTestingAuthReq::release_user_id() {
+  // @@protoc_insertion_point(field_release:zproto.StartTestingAuthReq.user_id)
+  
+  return user_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void StartTestingAuthReq::set_allocated_user_id(::std::string* user_id) {
+  if (user_id != NULL) {
+    
+  } else {
+    
+  }
+  user_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), user_id);
+  // @@protoc_insertion_point(field_set_allocated:zproto.StartTestingAuthReq.user_id)
+}
+
+// optional bytes device_hash = 4;
+inline void StartTestingAuthReq::clear_device_hash() {
+  device_hash_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& StartTestingAuthReq::device_hash() const {
+  // @@protoc_insertion_point(field_get:zproto.StartTestingAuthReq.device_hash)
+  return device_hash_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void StartTestingAuthReq::set_device_hash(const ::std::string& value) {
+  
+  device_hash_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.StartTestingAuthReq.device_hash)
+}
+inline void StartTestingAuthReq::set_device_hash(const char* value) {
+  
+  device_hash_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.StartTestingAuthReq.device_hash)
+}
+inline void StartTestingAuthReq::set_device_hash(const void* value, size_t size) {
+  
+  device_hash_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.StartTestingAuthReq.device_hash)
+}
+inline ::std::string* StartTestingAuthReq::mutable_device_hash() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.StartTestingAuthReq.device_hash)
+  return device_hash_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* StartTestingAuthReq::release_device_hash() {
+  // @@protoc_insertion_point(field_release:zproto.StartTestingAuthReq.device_hash)
+  
+  return device_hash_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void StartTestingAuthReq::set_allocated_device_hash(::std::string* device_hash) {
+  if (device_hash != NULL) {
+    
+  } else {
+    
+  }
+  device_hash_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), device_hash);
+  // @@protoc_insertion_point(field_set_allocated:zproto.StartTestingAuthReq.device_hash)
+}
+
+// optional string device_title = 5;
+inline void StartTestingAuthReq::clear_device_title() {
+  device_title_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& StartTestingAuthReq::device_title() const {
+  // @@protoc_insertion_point(field_get:zproto.StartTestingAuthReq.device_title)
+  return device_title_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void StartTestingAuthReq::set_device_title(const ::std::string& value) {
+  
+  device_title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.StartTestingAuthReq.device_title)
+}
+inline void StartTestingAuthReq::set_device_title(const char* value) {
+  
+  device_title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.StartTestingAuthReq.device_title)
+}
+inline void StartTestingAuthReq::set_device_title(const char* value, size_t size) {
+  
+  device_title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.StartTestingAuthReq.device_title)
+}
+inline ::std::string* StartTestingAuthReq::mutable_device_title() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.StartTestingAuthReq.device_title)
+  return device_title_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* StartTestingAuthReq::release_device_title() {
+  // @@protoc_insertion_point(field_release:zproto.StartTestingAuthReq.device_title)
+  
+  return device_title_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void StartTestingAuthReq::set_allocated_device_title(::std::string* device_title) {
+  if (device_title != NULL) {
+    
+  } else {
+    
+  }
+  device_title_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), device_title);
+  // @@protoc_insertion_point(field_set_allocated:zproto.StartTestingAuthReq.device_title)
+}
+
+// optional string time_zone = 6;
+inline void StartTestingAuthReq::clear_time_zone() {
+  time_zone_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& StartTestingAuthReq::time_zone() const {
+  // @@protoc_insertion_point(field_get:zproto.StartTestingAuthReq.time_zone)
+  return time_zone_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void StartTestingAuthReq::set_time_zone(const ::std::string& value) {
+  
+  time_zone_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.StartTestingAuthReq.time_zone)
+}
+inline void StartTestingAuthReq::set_time_zone(const char* value) {
+  
+  time_zone_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.StartTestingAuthReq.time_zone)
+}
+inline void StartTestingAuthReq::set_time_zone(const char* value, size_t size) {
+  
+  time_zone_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.StartTestingAuthReq.time_zone)
+}
+inline ::std::string* StartTestingAuthReq::mutable_time_zone() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.StartTestingAuthReq.time_zone)
+  return time_zone_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* StartTestingAuthReq::release_time_zone() {
+  // @@protoc_insertion_point(field_release:zproto.StartTestingAuthReq.time_zone)
+  
+  return time_zone_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void StartTestingAuthReq::set_allocated_time_zone(::std::string* time_zone) {
+  if (time_zone != NULL) {
+    
+  } else {
+    
+  }
+  time_zone_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), time_zone);
+  // @@protoc_insertion_point(field_set_allocated:zproto.StartTestingAuthReq.time_zone)
+}
+
+// repeated string preferred_languages = 7;
+inline int StartTestingAuthReq::preferred_languages_size() const {
+  return preferred_languages_.size();
+}
+inline void StartTestingAuthReq::clear_preferred_languages() {
+  preferred_languages_.Clear();
+}
+inline const ::std::string& StartTestingAuthReq::preferred_languages(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.StartTestingAuthReq.preferred_languages)
+  return preferred_languages_.Get(index);
+}
+inline ::std::string* StartTestingAuthReq::mutable_preferred_languages(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.StartTestingAuthReq.preferred_languages)
+  return preferred_languages_.Mutable(index);
+}
+inline void StartTestingAuthReq::set_preferred_languages(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:zproto.StartTestingAuthReq.preferred_languages)
+  preferred_languages_.Mutable(index)->assign(value);
+}
+inline void StartTestingAuthReq::set_preferred_languages(int index, const char* value) {
+  preferred_languages_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:zproto.StartTestingAuthReq.preferred_languages)
+}
+inline void StartTestingAuthReq::set_preferred_languages(int index, const char* value, size_t size) {
+  preferred_languages_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:zproto.StartTestingAuthReq.preferred_languages)
+}
+inline ::std::string* StartTestingAuthReq::add_preferred_languages() {
+  // @@protoc_insertion_point(field_add_mutable:zproto.StartTestingAuthReq.preferred_languages)
+  return preferred_languages_.Add();
+}
+inline void StartTestingAuthReq::add_preferred_languages(const ::std::string& value) {
+  preferred_languages_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:zproto.StartTestingAuthReq.preferred_languages)
+}
+inline void StartTestingAuthReq::add_preferred_languages(const char* value) {
+  preferred_languages_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:zproto.StartTestingAuthReq.preferred_languages)
+}
+inline void StartTestingAuthReq::add_preferred_languages(const char* value, size_t size) {
+  preferred_languages_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:zproto.StartTestingAuthReq.preferred_languages)
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+StartTestingAuthReq::preferred_languages() const {
+  // @@protoc_insertion_point(field_list:zproto.StartTestingAuthReq.preferred_languages)
+  return preferred_languages_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+StartTestingAuthReq::mutable_preferred_languages() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.StartTestingAuthReq.preferred_languages)
+  return &preferred_languages_;
+}
+
+// -------------------------------------------------------------------
+
 // AuthRsp
 
 // optional .zproto.User user = 2;
@@ -639,6 +1019,8 @@ inline void AuthRsp::set_allocated_config(::zproto::Config* config) {
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 

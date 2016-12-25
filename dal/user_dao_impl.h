@@ -23,6 +23,10 @@
 struct UserDAOImpl : public UserDAO {
   virtual ~UserDAOImpl() = default;
   
+  int GetUserByUserID(uint32_t app_id,
+                      const std::string& user_id,
+                      UserDO& user_do) override;
+
   int GetUserByToken(const std::string& app_key,
                     const std::string& user_token,
                     UserDO& user_do) override;

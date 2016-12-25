@@ -105,32 +105,21 @@ class SeqUpdate : public ::google::protobuf::Message /* @@protoc_insertion_point
 
   // accessors -------------------------------------------------------
 
-  // optional int32 seq = 1;
+  // optional int64 seq = 1;
   void clear_seq();
   static const int kSeqFieldNumber = 1;
-  ::google::protobuf::int32 seq() const;
-  void set_seq(::google::protobuf::int32 value);
+  ::google::protobuf::int64 seq() const;
+  void set_seq(::google::protobuf::int64 value);
 
-  // optional bytes state = 2;
-  void clear_state();
-  static const int kStateFieldNumber = 2;
-  const ::std::string& state() const;
-  void set_state(const ::std::string& value);
-  void set_state(const char* value);
-  void set_state(const void* value, size_t size);
-  ::std::string* mutable_state();
-  ::std::string* release_state();
-  void set_allocated_state(::std::string* state);
-
-  // optional int32 update_header = 3;
+  // optional int32 update_header = 2;
   void clear_update_header();
-  static const int kUpdateHeaderFieldNumber = 3;
+  static const int kUpdateHeaderFieldNumber = 2;
   ::google::protobuf::int32 update_header() const;
   void set_update_header(::google::protobuf::int32 value);
 
-  // optional bytes update = 4;
+  // optional bytes update = 3;
   void clear_update();
-  static const int kUpdateFieldNumber = 4;
+  static const int kUpdateFieldNumber = 3;
   const ::std::string& update() const;
   void set_update(const ::std::string& value);
   void set_update(const char* value);
@@ -144,10 +133,9 @@ class SeqUpdate : public ::google::protobuf::Message /* @@protoc_insertion_point
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
-  ::google::protobuf::internal::ArenaStringPtr state_;
-  ::google::protobuf::int32 seq_;
-  ::google::protobuf::int32 update_header_;
+  ::google::protobuf::int64 seq_;
   ::google::protobuf::internal::ArenaStringPtr update_;
+  ::google::protobuf::int32 update_header_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_sequence_2eproto();
   friend void protobuf_AssignDesc_sequence_2eproto();
@@ -207,17 +195,6 @@ class FatSeqUpdate : public ::google::protobuf::Message /* @@protoc_insertion_po
   ::google::protobuf::int32 seq() const;
   void set_seq(::google::protobuf::int32 value);
 
-  // optional bytes state = 2;
-  void clear_state();
-  static const int kStateFieldNumber = 2;
-  const ::std::string& state() const;
-  void set_state(const ::std::string& value);
-  void set_state(const char* value);
-  void set_state(const void* value, size_t size);
-  ::std::string* mutable_state();
-  ::std::string* release_state();
-  void set_allocated_state(::std::string* state);
-
   // optional int32 update_header = 3;
   void clear_update_header();
   static const int kUpdateHeaderFieldNumber = 3;
@@ -264,7 +241,6 @@ class FatSeqUpdate : public ::google::protobuf::Message /* @@protoc_insertion_po
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
-  ::google::protobuf::internal::ArenaStringPtr state_;
   ::google::protobuf::int32 seq_;
   ::google::protobuf::int32 update_header_;
   ::google::protobuf::internal::ArenaStringPtr update_;
@@ -652,28 +628,17 @@ class CombinedUpdate : public ::google::protobuf::Message /* @@protoc_insertion_
 
   // accessors -------------------------------------------------------
 
-  // optional int32 seq_start = 1;
+  // optional int64 seq_start = 1;
   void clear_seq_start();
   static const int kSeqStartFieldNumber = 1;
-  ::google::protobuf::int32 seq_start() const;
-  void set_seq_start(::google::protobuf::int32 value);
+  ::google::protobuf::int64 seq_start() const;
+  void set_seq_start(::google::protobuf::int64 value);
 
-  // optional int32 seq_end = 2;
+  // optional int64 seq_end = 2;
   void clear_seq_end();
   static const int kSeqEndFieldNumber = 2;
-  ::google::protobuf::int32 seq_end() const;
-  void set_seq_end(::google::protobuf::int32 value);
-
-  // optional bytes state = 3;
-  void clear_state();
-  static const int kStateFieldNumber = 3;
-  const ::std::string& state() const;
-  void set_state(const ::std::string& value);
-  void set_state(const char* value);
-  void set_state(const void* value, size_t size);
-  ::std::string* mutable_state();
-  ::std::string* release_state();
-  void set_allocated_state(::std::string* state);
+  ::google::protobuf::int64 seq_end() const;
+  void set_seq_end(::google::protobuf::int64 value);
 
   // repeated .zproto.User users = 4;
   int users_size() const;
@@ -728,9 +693,8 @@ class CombinedUpdate : public ::google::protobuf::Message /* @@protoc_insertion_
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
-  ::google::protobuf::int32 seq_start_;
-  ::google::protobuf::int32 seq_end_;
-  ::google::protobuf::internal::ArenaStringPtr state_;
+  ::google::protobuf::int64 seq_start_;
+  ::google::protobuf::int64 seq_end_;
   ::google::protobuf::RepeatedPtrField< ::zproto::User > users_;
   ::google::protobuf::RepeatedPtrField< ::zproto::Group > groups_;
   ::google::protobuf::RepeatedPtrField< ::zproto::UpdateContainer > updates_;
@@ -857,22 +821,11 @@ class GetDifferenceReq : public ::google::protobuf::Message /* @@protoc_insertio
 
   // accessors -------------------------------------------------------
 
-  // optional int32 seq = 1;
+  // optional int64 seq = 1;
   void clear_seq();
   static const int kSeqFieldNumber = 1;
-  ::google::protobuf::int32 seq() const;
-  void set_seq(::google::protobuf::int32 value);
-
-  // optional bytes state = 2;
-  void clear_state();
-  static const int kStateFieldNumber = 2;
-  const ::std::string& state() const;
-  void set_state(const ::std::string& value);
-  void set_state(const char* value);
-  void set_state(const void* value, size_t size);
-  ::std::string* mutable_state();
-  ::std::string* release_state();
-  void set_allocated_state(::std::string* state);
+  ::google::protobuf::int64 seq() const;
+  void set_seq(::google::protobuf::int64 value);
 
   // repeated .zproto.UpdateOptimization optimizations = 3;
   int optimizations_size() const;
@@ -889,9 +842,8 @@ class GetDifferenceReq : public ::google::protobuf::Message /* @@protoc_insertio
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
-  ::google::protobuf::internal::ArenaStringPtr state_;
+  ::google::protobuf::int64 seq_;
   ::google::protobuf::RepeatedField<int> optimizations_;
-  ::google::protobuf::int32 seq_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_sequence_2eproto();
   friend void protobuf_AssignDesc_sequence_2eproto();
@@ -945,22 +897,11 @@ class GetDifferenceRsp : public ::google::protobuf::Message /* @@protoc_insertio
 
   // accessors -------------------------------------------------------
 
-  // optional int32 seq = 1;
+  // optional int64 seq = 1;
   void clear_seq();
   static const int kSeqFieldNumber = 1;
-  ::google::protobuf::int32 seq() const;
-  void set_seq(::google::protobuf::int32 value);
-
-  // optional bytes state = 2;
-  void clear_state();
-  static const int kStateFieldNumber = 2;
-  const ::std::string& state() const;
-  void set_state(const ::std::string& value);
-  void set_state(const char* value);
-  void set_state(const void* value, size_t size);
-  ::std::string* mutable_state();
-  ::std::string* release_state();
-  void set_allocated_state(::std::string* state);
+  ::google::protobuf::int64 seq() const;
+  void set_seq(::google::protobuf::int64 value);
 
   // repeated .zproto.User users = 3;
   int users_size() const;
@@ -1045,15 +986,14 @@ class GetDifferenceRsp : public ::google::protobuf::Message /* @@protoc_insertio
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
-  ::google::protobuf::internal::ArenaStringPtr state_;
+  ::google::protobuf::int64 seq_;
   ::google::protobuf::RepeatedPtrField< ::zproto::User > users_;
   ::google::protobuf::RepeatedPtrField< ::zproto::Group > groups_;
-  ::google::protobuf::int32 seq_;
-  bool need_more_;
   ::google::protobuf::RepeatedPtrField< ::zproto::UpdateContainer > updates_;
   ::google::protobuf::RepeatedPtrField< ::zproto::MessageContainer > messages_;
   ::google::protobuf::RepeatedPtrField< ::zproto::UserOutPeer > users_refs_;
   ::google::protobuf::RepeatedPtrField< ::zproto::GroupOutPeer > groups_refs_;
+  bool need_more_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_sequence_2eproto();
   friend void protobuf_AssignDesc_sequence_2eproto();
@@ -1662,65 +1602,21 @@ class SubscribeFromGroupOnlineReq : public ::google::protobuf::Message /* @@prot
 #if !PROTOBUF_INLINE_NOT_IN_HEADERS
 // SeqUpdate
 
-// optional int32 seq = 1;
+// optional int64 seq = 1;
 inline void SeqUpdate::clear_seq() {
-  seq_ = 0;
+  seq_ = GOOGLE_LONGLONG(0);
 }
-inline ::google::protobuf::int32 SeqUpdate::seq() const {
+inline ::google::protobuf::int64 SeqUpdate::seq() const {
   // @@protoc_insertion_point(field_get:zproto.SeqUpdate.seq)
   return seq_;
 }
-inline void SeqUpdate::set_seq(::google::protobuf::int32 value) {
+inline void SeqUpdate::set_seq(::google::protobuf::int64 value) {
   
   seq_ = value;
   // @@protoc_insertion_point(field_set:zproto.SeqUpdate.seq)
 }
 
-// optional bytes state = 2;
-inline void SeqUpdate::clear_state() {
-  state_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& SeqUpdate::state() const {
-  // @@protoc_insertion_point(field_get:zproto.SeqUpdate.state)
-  return state_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void SeqUpdate::set_state(const ::std::string& value) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.SeqUpdate.state)
-}
-inline void SeqUpdate::set_state(const char* value) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.SeqUpdate.state)
-}
-inline void SeqUpdate::set_state(const void* value, size_t size) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.SeqUpdate.state)
-}
-inline ::std::string* SeqUpdate::mutable_state() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.SeqUpdate.state)
-  return state_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* SeqUpdate::release_state() {
-  // @@protoc_insertion_point(field_release:zproto.SeqUpdate.state)
-  
-  return state_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void SeqUpdate::set_allocated_state(::std::string* state) {
-  if (state != NULL) {
-    
-  } else {
-    
-  }
-  state_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), state);
-  // @@protoc_insertion_point(field_set_allocated:zproto.SeqUpdate.state)
-}
-
-// optional int32 update_header = 3;
+// optional int32 update_header = 2;
 inline void SeqUpdate::clear_update_header() {
   update_header_ = 0;
 }
@@ -1734,7 +1630,7 @@ inline void SeqUpdate::set_update_header(::google::protobuf::int32 value) {
   // @@protoc_insertion_point(field_set:zproto.SeqUpdate.update_header)
 }
 
-// optional bytes update = 4;
+// optional bytes update = 3;
 inline void SeqUpdate::clear_update() {
   update_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1794,50 +1690,6 @@ inline void FatSeqUpdate::set_seq(::google::protobuf::int32 value) {
   
   seq_ = value;
   // @@protoc_insertion_point(field_set:zproto.FatSeqUpdate.seq)
-}
-
-// optional bytes state = 2;
-inline void FatSeqUpdate::clear_state() {
-  state_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& FatSeqUpdate::state() const {
-  // @@protoc_insertion_point(field_get:zproto.FatSeqUpdate.state)
-  return state_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void FatSeqUpdate::set_state(const ::std::string& value) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.FatSeqUpdate.state)
-}
-inline void FatSeqUpdate::set_state(const char* value) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.FatSeqUpdate.state)
-}
-inline void FatSeqUpdate::set_state(const void* value, size_t size) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.FatSeqUpdate.state)
-}
-inline ::std::string* FatSeqUpdate::mutable_state() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.FatSeqUpdate.state)
-  return state_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* FatSeqUpdate::release_state() {
-  // @@protoc_insertion_point(field_release:zproto.FatSeqUpdate.state)
-  
-  return state_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void FatSeqUpdate::set_allocated_state(::std::string* state) {
-  if (state != NULL) {
-    
-  } else {
-    
-  }
-  state_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), state);
-  // @@protoc_insertion_point(field_set_allocated:zproto.FatSeqUpdate.state)
 }
 
 // optional int32 update_header = 3;
@@ -2240,76 +2092,32 @@ inline void UpdateContainer::set_allocated_update(::std::string* update) {
 
 // CombinedUpdate
 
-// optional int32 seq_start = 1;
+// optional int64 seq_start = 1;
 inline void CombinedUpdate::clear_seq_start() {
-  seq_start_ = 0;
+  seq_start_ = GOOGLE_LONGLONG(0);
 }
-inline ::google::protobuf::int32 CombinedUpdate::seq_start() const {
+inline ::google::protobuf::int64 CombinedUpdate::seq_start() const {
   // @@protoc_insertion_point(field_get:zproto.CombinedUpdate.seq_start)
   return seq_start_;
 }
-inline void CombinedUpdate::set_seq_start(::google::protobuf::int32 value) {
+inline void CombinedUpdate::set_seq_start(::google::protobuf::int64 value) {
   
   seq_start_ = value;
   // @@protoc_insertion_point(field_set:zproto.CombinedUpdate.seq_start)
 }
 
-// optional int32 seq_end = 2;
+// optional int64 seq_end = 2;
 inline void CombinedUpdate::clear_seq_end() {
-  seq_end_ = 0;
+  seq_end_ = GOOGLE_LONGLONG(0);
 }
-inline ::google::protobuf::int32 CombinedUpdate::seq_end() const {
+inline ::google::protobuf::int64 CombinedUpdate::seq_end() const {
   // @@protoc_insertion_point(field_get:zproto.CombinedUpdate.seq_end)
   return seq_end_;
 }
-inline void CombinedUpdate::set_seq_end(::google::protobuf::int32 value) {
+inline void CombinedUpdate::set_seq_end(::google::protobuf::int64 value) {
   
   seq_end_ = value;
   // @@protoc_insertion_point(field_set:zproto.CombinedUpdate.seq_end)
-}
-
-// optional bytes state = 3;
-inline void CombinedUpdate::clear_state() {
-  state_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& CombinedUpdate::state() const {
-  // @@protoc_insertion_point(field_get:zproto.CombinedUpdate.state)
-  return state_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void CombinedUpdate::set_state(const ::std::string& value) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.CombinedUpdate.state)
-}
-inline void CombinedUpdate::set_state(const char* value) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.CombinedUpdate.state)
-}
-inline void CombinedUpdate::set_state(const void* value, size_t size) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.CombinedUpdate.state)
-}
-inline ::std::string* CombinedUpdate::mutable_state() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.CombinedUpdate.state)
-  return state_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* CombinedUpdate::release_state() {
-  // @@protoc_insertion_point(field_release:zproto.CombinedUpdate.state)
-  
-  return state_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void CombinedUpdate::set_allocated_state(::std::string* state) {
-  if (state != NULL) {
-    
-  } else {
-    
-  }
-  state_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), state);
-  // @@protoc_insertion_point(field_set_allocated:zproto.CombinedUpdate.state)
 }
 
 // repeated .zproto.User users = 4;
@@ -2470,62 +2278,18 @@ GetStateReq::mutable_optimizations() {
 
 // GetDifferenceReq
 
-// optional int32 seq = 1;
+// optional int64 seq = 1;
 inline void GetDifferenceReq::clear_seq() {
-  seq_ = 0;
+  seq_ = GOOGLE_LONGLONG(0);
 }
-inline ::google::protobuf::int32 GetDifferenceReq::seq() const {
+inline ::google::protobuf::int64 GetDifferenceReq::seq() const {
   // @@protoc_insertion_point(field_get:zproto.GetDifferenceReq.seq)
   return seq_;
 }
-inline void GetDifferenceReq::set_seq(::google::protobuf::int32 value) {
+inline void GetDifferenceReq::set_seq(::google::protobuf::int64 value) {
   
   seq_ = value;
   // @@protoc_insertion_point(field_set:zproto.GetDifferenceReq.seq)
-}
-
-// optional bytes state = 2;
-inline void GetDifferenceReq::clear_state() {
-  state_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& GetDifferenceReq::state() const {
-  // @@protoc_insertion_point(field_get:zproto.GetDifferenceReq.state)
-  return state_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void GetDifferenceReq::set_state(const ::std::string& value) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.GetDifferenceReq.state)
-}
-inline void GetDifferenceReq::set_state(const char* value) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.GetDifferenceReq.state)
-}
-inline void GetDifferenceReq::set_state(const void* value, size_t size) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.GetDifferenceReq.state)
-}
-inline ::std::string* GetDifferenceReq::mutable_state() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.GetDifferenceReq.state)
-  return state_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* GetDifferenceReq::release_state() {
-  // @@protoc_insertion_point(field_release:zproto.GetDifferenceReq.state)
-  
-  return state_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void GetDifferenceReq::set_allocated_state(::std::string* state) {
-  if (state != NULL) {
-    
-  } else {
-    
-  }
-  state_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), state);
-  // @@protoc_insertion_point(field_set_allocated:zproto.GetDifferenceReq.state)
 }
 
 // repeated .zproto.UpdateOptimization optimizations = 3;
@@ -2562,62 +2326,18 @@ GetDifferenceReq::mutable_optimizations() {
 
 // GetDifferenceRsp
 
-// optional int32 seq = 1;
+// optional int64 seq = 1;
 inline void GetDifferenceRsp::clear_seq() {
-  seq_ = 0;
+  seq_ = GOOGLE_LONGLONG(0);
 }
-inline ::google::protobuf::int32 GetDifferenceRsp::seq() const {
+inline ::google::protobuf::int64 GetDifferenceRsp::seq() const {
   // @@protoc_insertion_point(field_get:zproto.GetDifferenceRsp.seq)
   return seq_;
 }
-inline void GetDifferenceRsp::set_seq(::google::protobuf::int32 value) {
+inline void GetDifferenceRsp::set_seq(::google::protobuf::int64 value) {
   
   seq_ = value;
   // @@protoc_insertion_point(field_set:zproto.GetDifferenceRsp.seq)
-}
-
-// optional bytes state = 2;
-inline void GetDifferenceRsp::clear_state() {
-  state_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& GetDifferenceRsp::state() const {
-  // @@protoc_insertion_point(field_get:zproto.GetDifferenceRsp.state)
-  return state_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void GetDifferenceRsp::set_state(const ::std::string& value) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.GetDifferenceRsp.state)
-}
-inline void GetDifferenceRsp::set_state(const char* value) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.GetDifferenceRsp.state)
-}
-inline void GetDifferenceRsp::set_state(const void* value, size_t size) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.GetDifferenceRsp.state)
-}
-inline ::std::string* GetDifferenceRsp::mutable_state() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.GetDifferenceRsp.state)
-  return state_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* GetDifferenceRsp::release_state() {
-  // @@protoc_insertion_point(field_release:zproto.GetDifferenceRsp.state)
-  
-  return state_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void GetDifferenceRsp::set_allocated_state(::std::string* state) {
-  if (state != NULL) {
-    
-  } else {
-    
-  }
-  state_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), state);
-  // @@protoc_insertion_point(field_set_allocated:zproto.GetDifferenceRsp.state)
 }
 
 // repeated .zproto.User users = 3;

@@ -28,7 +28,8 @@ int HistoryMessageDAOImpl::CheckExists(const std::string& user_id,
                                       uint64_t message_client_id) {
   return DoStorageQuery("nebula_engine",
                         [&](std::string& query_string) {
-                          folly::format(&query_string, "SELECT id FROM history_messages WHERE sender_user_id='{}' AND client_message_id={} LIMIT 1",
+                          folly::format(&query_string,
+                                        "SELECT id FROM history_messages WHERE sender_user_id='{}' AND client_message_id={} LIMIT 1",
                                         user_id,
                                         message_client_id);
                         },

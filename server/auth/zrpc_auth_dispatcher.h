@@ -28,6 +28,8 @@ public:
   ~ZRpcAuthDispatcher() = default;
   
   static ProtoRpcResponsePtr StartTokenAuth(RpcRequestPtr request);
+  static ProtoRpcResponsePtr StartTestingAuth(RpcRequestPtr request);
+  
 };
 
 #endif // AUTH_ZRPC_AUTH_DISPATCHER_H_

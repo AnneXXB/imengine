@@ -23,7 +23,8 @@
 #include "nebula/net/net_engine_manager.h"
 #include "nebula/net/rpc/zrpc_service_util.h"
 #include "nebula/net/handler/nebula_handler_util.h"
-
+#include "nebula/base/id_util.h"
+#include "nebula/base/time_util.h"
 
 #include "proto/api/cc/auth.pb.h"
 #include "proto/s2s/cc/presences.pb.h"
@@ -95,8 +96,8 @@ int gate::OnDataReceived(nebula::ZProtoPipeline* pipeline, std::shared_ptr<Packa
         conn_data->state = ClientConnContext::State::WORKING;
         
         auto encoded = std::static_pointer_cast<EncodedRpcRequest>(message_data);
-        LOG(ERROR) << "zproto.UserTokenAuthReq => " << CRC32("zproto.UserTokenAuthReq");
-        if (encoded->GetMethodID() != CRC32("zproto.UserTokenAuthReq")) {
+        LOG(ERROR) << "zproto.StartTestingAuthReq => " << CRC32("zproto.StartTestingAuthReq");
+        if (encoded->GetMethodID() != CRC32("zproto.StartTestingAuthReq")) {
           LOG(ERROR) << "recv a invalid method_id: " << encoded->GetMethodID();
           return 0;
         }
@@ -109,7 +110,9 @@ int gate::OnDataReceived(nebula::ZProtoPipeline* pipeline, std::shared_ptr<Packa
 
         ZRpcUtil::DoClientCall("auth_client", encoded)
         .within(std::chrono::milliseconds(5000))
-        .then([conn_id](ProtoRpcResponsePtr rsp) {
+        
+        // TODO(@benqi): conn_data可能会失效
+        .then([conn_data, conn_id](ProtoRpcResponsePtr rsp) {
           CHECK(rsp);
           LOG(INFO) << "auth_client rsp: " << rsp->ToString();
           // (*login_rsp)->Utf8DebugString();
@@ -117,6 +120,8 @@ int gate::OnDataReceived(nebula::ZProtoPipeline* pipeline, std::shared_ptr<Packa
           
           if (rsp->GetPackageType() == Package::RPC_OK) {
             auto login_rsp = ToApiRpcOk<zproto::AuthRsp>(rsp);
+            LOG(INFO) << "auth_client login_rsp: " << (*login_rsp)->Utf8DebugString();
+
             // TODO(@benqi): 移到用户认证成功后通知
             // 3. 上线通知在线状态服务器
             auto req = std::make_shared<ApiRpcRequest<zproto::ClientOnlineReq>>();
@@ -128,6 +133,9 @@ int gate::OnDataReceived(nebula::ZProtoPipeline* pipeline, std::shared_ptr<Packa
             //folly::to<uint32_t>((*login_rsp)->user_id()));
             (*req)->set_state(1);
 
+            conn_data->app_id = 1;
+            conn_data->user_id = (*login_rsp)->user().uid();
+            
             ZRpcUtil::DoClientCall("online_status_client", req)
             .within(std::chrono::milliseconds(5000))
             .then([](ProtoRpcResponsePtr rsp2) {
@@ -146,6 +154,15 @@ int gate::OnDataReceived(nebula::ZProtoPipeline* pipeline, std::shared_ptr<Packa
       
       // 转发到router_server
       message_data->set_session_id(h->GetConnID());
+      message_data->set_birth_conn_id(h->GetConnID());
+      message_data->set_birth_server_id(1);
+      message_data->set_birth_track_uuid(GetNextIDBySnowflake());
+      message_data->set_birth_timetick(NowInMsecTime());
+      message_data->set_birth_remote_ip(h->GetRemoteAddress());
+      message_data->set_birth_from("gate_server");
+      message_data->push_back_option(1);
+      message_data->push_back_option(conn_data->user_id);
+      
       WritePackage("messenger_client", message_data);
       
       //    auto encoded = std::static_pointer_cast<teamtalk::EncodedMessage>(message_data);

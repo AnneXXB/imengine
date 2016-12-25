@@ -22,6 +22,32 @@ UserDAO& UserDAO::GetInstance() {
   return impl;
 }
 
+int UserDAOImpl::GetUserByUserID(uint32_t app_id,
+                                 const std::string& user_id,
+                                 UserDO& user_do) {
+  return DoStorageQuery("nebula_platform",
+                        [&](std::string& query_string) {
+                          folly::format(&query_string,
+                                        "SELECT app_id,user_id,nick,avatar FROM users WHERE "
+                                        "app_id={} AND user_id='{}'",
+                                        app_id,
+                                        user_id);
+                        },
+                        [&](db::QueryAnswer& answ) -> int {
+                          int result = CONTINUE;
+                          
+                          do {
+                            // DB_GET_RETURN_COLUMN(idx, message->id);
+                            DB_GET_RETURN_COLUMN(0, user_do.app_id);
+                            DB_GET_COLUMN(1, user_do.user_id);
+                            DB_GET_COLUMN(2, user_do.nick);
+                            DB_GET_COLUMN(3, user_do.avatar);
+                          } while (0);
+                          
+                          return BREAK;
+                        });
+}
+
 int UserDAOImpl::GetUserByToken(const std::string& app_key,
                                const std::string& user_token,
                                UserDO& user_do) {
@@ -40,9 +66,9 @@ int UserDAOImpl::GetUserByToken(const std::string& app_key,
                           do {
                             // DB_GET_RETURN_COLUMN(idx, message->id);
                             DB_GET_RETURN_COLUMN(0, user_do.app_id);
-                            DB_GET_COLUMN(2, user_do.user_id);
-                            DB_GET_COLUMN(3, user_do.nick);
-                            DB_GET_COLUMN(4, user_do.avatar);
+                            DB_GET_COLUMN(1, user_do.user_id);
+                            DB_GET_COLUMN(2, user_do.nick);
+                            DB_GET_COLUMN(3, user_do.avatar);
                           } while (0);
                           
                           return BREAK;
@@ -57,10 +83,10 @@ int UserDAOImpl::GetUserByNamePasswd(uint32_t app_id,
                         [&](std::string& query_string) {
                           folly::format(&query_string,
                                         "SELECT app_id,user_id,nick,avatar FROM users WHERE "
-                                        "app_id={} AND user_id='{}' AND user_token='{}'",
-                                        app_id,
-                                        user_id,
-                                        passwd);
+                                        "app_id=1 AND user_id='{}'",
+                                        // app_id,
+                                        user_id);
+                                        // passwd);
                         },
                         [&](db::QueryAnswer& answ) -> int {
                           int result = CONTINUE;

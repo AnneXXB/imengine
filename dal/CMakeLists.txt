@@ -54,6 +54,10 @@ set (SRC_LIST
   user_sequence_dao.h
   user_sequence_dao_impl.h
   user_sequence_dao_impl.cc
+  seq_updates_ngen_do.h
+  seq_updates_ngen_dao.h
+  seq_updates_ngen_dao_impl.cc
+  seq_updates_ngen_dao_impl.h
  )
 
 add_library(dal STATIC ${SRC_LIST})
