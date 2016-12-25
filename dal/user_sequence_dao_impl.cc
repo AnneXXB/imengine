@@ -29,13 +29,13 @@ int64_t UserSequenceDAOImpl::Create(UserSequenceDO& user_sequence) {
                              p.AddParam(user_sequence.user_id.c_str());
                              p.AddParam(&user_sequence.seq);
                              p.AddParam(&user_sequence.header);
-                             // p.AddParamEsc(user_sequence.data.c_str());
+                             p.AddParamEsc(user_sequence.data.c_str());
                              p.AddParam(&user_sequence.created_at);
                              
                              db::MakeQueryString("INSERT INTO user_sequence"
                                                  "(user_id,seq,header,data,created_at)"
                                                  " VALUES "
-                                                 "(:1,:2,:3,'testing',:4)",
+                                                 "(:1,:2,:3,:4,:5)",
                                                  &p,
                                                  &query_string);
                            });
