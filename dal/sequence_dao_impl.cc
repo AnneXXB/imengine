@@ -47,7 +47,7 @@ uint64_t SequenceDAOImpl::GetNextID(const std::string& key) {
   SeqUpdatesNgenDO seq_updates_ngen_do;
   seq_updates_ngen_do.user_id = key;
   seq_updates_ngen_do.timestamp = NowInMsecTime();
-  seq_updates_ngen_do.seq = 1;
+  seq_updates_ngen_do.seq = seq;
 
   auto& seq_updates_ngen_dao = SeqUpdatesNgenDAO::GetInstance();
   

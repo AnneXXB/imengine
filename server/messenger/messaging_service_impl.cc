@@ -361,9 +361,15 @@ int MessagingServiceImpl::SendGroupMessage(const zproto::SendMessageReq& request
   std::list<std::string> group_user_ids;
   GroupUserDAO::GetInstance().GetGroupUserIDList(request.peer().id(), group_user_ids);
   for (auto& v : group_user_ids) {
-    auto seq = SequenceDAO::GetInstance().GetNextID(v);
+    int64_t seq = 0;
+    if (v == uid()) {
+      seq = message_peer_seq;
+    } else {
+      seq = SequenceDAO::GetInstance().GetNextID(v);
+    }
+    
     user_sequence_do.seq = seq;
-    user_sequence_do.user_id = uid();
+    user_sequence_do.user_id = v;
     
     UserSequenceDAO::GetInstance().Create(user_sequence_do);
     delivery.add_uid_list(v);
