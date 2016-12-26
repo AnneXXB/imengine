@@ -31,7 +31,7 @@ int64_t GroupUserDAOImpl::Create(GroupUserDOList& group_users) {
                                               "(group_id,user_id,is_admin,status,invited_at,inviter_user_id,joined_at,created_at,updated_at) "
                                               " VALUES ");
                              bool first = true;
-                             for (auto v : group_users) {
+                             for (auto& v : group_users) {
                                if (first) {
                                  first = false;
                                } else {
@@ -50,5 +50,22 @@ int64_t GroupUserDAOImpl::Create(GroupUserDOList& group_users) {
                              }
                              
                              query_string = sb.ToString();
+                             LOG(INFO) << query_string;
+
                            });
+}
+
+int GroupUserDAOImpl::GetGroupUserIDList(const std::string& group_id, std::list<std::string>& group_user_ids) {
+  return DoStorageQuery("nebula_engine",
+                        [&](std::string& query_string) {
+                          query_string = folly::sformat("SELECT user_id FROM group_users WHERE group_id='{}'",
+                                                        group_id);
+                        },
+                        [&](db::QueryAnswer& answ) -> int {
+                          std::string id;
+                          if (answ.GetColumn(0, &id) && !id.empty()) {
+                            group_user_ids.push_back(id);
+                          }
+                          return CONTINUE;
+                        });
 }

@@ -27,6 +27,7 @@ struct GroupDAO : public BaseDAO {
 
   virtual int CheckExists(const std::string& creator_user_id, uint64_t client_group_id) = 0;
   virtual int64_t Create(GroupDO& group) = 0;
+  virtual int GetGroup(const std::string& group_id, GroupDO& group) = 0;
 };
 
 #endif

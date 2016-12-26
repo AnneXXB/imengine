@@ -30,15 +30,45 @@
 static ZRpcMessengerDispatcher g_messenger_push_dispatcher;
 
 ZRpcMessengerDispatcher::ZRpcMessengerDispatcher() {
+  // message
   ZRpcUtil::Register("zproto.SendMessageReq", SendMessage);
-  /*
-  ZRpcUtil::Register("zproto.MessageSyncReq", MessageSync);
-  ZRpcUtil::Register("zproto.LoadHistoryMessageReq", LoadHistoryMessage);
+  ZRpcUtil::Register("zproto.MessageReceivedReq", MessageReceived);
+  ZRpcUtil::Register("zproto.MessageReadReq", MessageRead);
+  ZRpcUtil::Register("zproto.DeleteMessageReq", DeleteMessage);
+  ZRpcUtil::Register("zproto.ClearChatReq", ClearChat);
+  ZRpcUtil::Register("zproto.DeleteChatReq", DeleteChat);
+  
+  // dialog
+  ZRpcUtil::Register("zproto.LoadHistoryReq", LoadHistory);
   ZRpcUtil::Register("zproto.LoadDialogsReq", LoadDialogs);
+  ZRpcUtil::Register("zproto.LoadGroupedDialogsReq", LoadGroupedDialogs);
+  
+  // group
+  ZRpcUtil::Register("zproto.LoadFullGroupsReq", LoadFullGroups);
+  ZRpcUtil::Register("zproto.LoadMembersReq", LoadMembers);
   ZRpcUtil::Register("zproto.CreateGroupReq", CreateGroup);
-   */
+  ZRpcUtil::Register("zproto.EditGroupTitleReq", EditGroupTitle);
+  ZRpcUtil::Register("zproto.EditGroupAvatarReq", EditGroupAvatar);
+  ZRpcUtil::Register("zproto.RemoveGroupAvatarReq", RemoveGroupAvatar);
+  ZRpcUtil::Register("zproto.EditGroupShortNameReq", EditGroupShortName);
+  ZRpcUtil::Register("zproto.EditGroupTopicReq", EditGroupTopic);
+  ZRpcUtil::Register("zproto.EditGroupAboutReq", EditGroupAbout);
+  ZRpcUtil::Register("zproto.InviteUserReq", InviteUser);
+  ZRpcUtil::Register("zproto.LeaveGroupReq", LeaveGroup);
+  ZRpcUtil::Register("zproto.LeaveAndDeleteReq", LeaveAndDelete);
+  ZRpcUtil::Register("zproto.KickUserReq", KickUser);
+  ZRpcUtil::Register("zproto.JoinGroupByPeerReq", JoinGroupByPeer);
+  ZRpcUtil::Register("zproto.MakeUserAdminReq", MakeUserAdmin);
+  ZRpcUtil::Register("zproto.DismissUserAdminReq", DismissUserAdmin);
+  ZRpcUtil::Register("zproto.TransferOwnershipReq", TransferOwnership);
+  ZRpcUtil::Register("zproto.LoadAdminSettingsReq", LoadAdminSettings);
+  ZRpcUtil::Register("zproto.SaveAdminSettingsReq", SaveAdminSettings);
+  ZRpcUtil::Register("zproto.DeleteGroupReq", DeleteGroup);
+  ZRpcUtil::Register("zproto.JoinGroupReq", JoinGroup);
 }
 
+/////////////////////////////////////////////////////////////////////////////////
+// message
 ProtoRpcResponsePtr ZRpcMessengerDispatcher::SendMessage(RpcRequestPtr request) {
   CAST_RPC_REQUEST(SendMessageReq, send_message_req);
   LOG(INFO) << send_message_req.Utf8DebugString();
@@ -53,52 +83,413 @@ ProtoRpcResponsePtr ZRpcMessengerDispatcher::SendMessage(RpcRequestPtr request) 
   return MakeRpcOK(seq_date_rsp);
 }
 
-/*
-ProtoRpcResponsePtr ZRpcMessengerDispatcher::MessageSync(RpcRequestPtr request) {
-  CAST_RPC_REQUEST(MessageSyncReq, message_sync_req);
-  LOG(INFO) << "DoMessageSync - message_sync_req: " << message_sync_req.Utf8DebugString();
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::MessageReceived(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(MessageReceivedReq, message_received_req);
+  LOG(INFO) << message_received_req.Utf8DebugString();
   
-  zproto::MessageSyncRsp message_sync_rsp;
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::VoidRsp void_rsp;
   
-  MessengerServiceImpl service_impl;
-  service_impl.MessageSync(message_sync_req, &message_sync_rsp);
+  MessagingServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.MessageReceived(message_received_req, &void_rsp);
   
-  return MakeRpcOK(message_sync_rsp);
+  return MakeRpcOK(void_rsp);
 }
 
-ProtoRpcResponsePtr ZRpcMessengerDispatcher::LoadHistoryMessage(RpcRequestPtr request) {
-  CAST_RPC_REQUEST(LoadHistoryMessageReq, load_history_message_req);
-  LOG(INFO) << "DoLoadHistoryMessage - load_history_message_req: " << load_history_message_req.Utf8DebugString();
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::MessageRead(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(MessageReadReq, message_read_req);
+  LOG(INFO) << message_read_req.Utf8DebugString();
   
-  zproto::LoadHistoryMessageRsp load_history_message_rsp;
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::VoidRsp void_rsp;
   
-  MessengerServiceImpl service_impl;
-  service_impl.LoadHistoryMessage(load_history_message_req, &load_history_message_rsp);
+  MessagingServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.MessageRead(message_read_req, &void_rsp);
   
-  return MakeRpcOK(load_history_message_rsp);
+  return MakeRpcOK(void_rsp);
+}
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::DeleteMessage(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(DeleteMessageReq, delete_message_req);
+  LOG(INFO) << delete_message_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::SeqRsp seq_rsp;
+  
+  MessagingServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.DeleteMessage(delete_message_req, &seq_rsp);
+  
+  return MakeRpcOK(seq_rsp);
+}
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::ClearChat(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(ClearChatReq, clear_chat_req);
+  LOG(INFO) << clear_chat_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::SeqRsp seq_rsp;
+  
+  MessagingServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.ClearChat(clear_chat_req, &seq_rsp);
+  
+  return MakeRpcOK(seq_rsp);
+}
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::DeleteChat(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(DeleteChatReq, delete_chat_req);
+  LOG(INFO) << delete_chat_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::SeqRsp seq_rsp;
+  
+  MessagingServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.DeleteChat(delete_chat_req, &seq_rsp);
+  
+  return MakeRpcOK(seq_rsp);
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+// dialog
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::LoadHistory(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(LoadHistoryReq, load_history_req);
+  LOG(INFO) << load_history_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::LoadHistoryRsp load_history_rsp;
+  
+  MessagingServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.LoadHistory(load_history_req, &load_history_rsp);
+  
+  return MakeRpcOK(load_history_rsp);
 }
 
 ProtoRpcResponsePtr ZRpcMessengerDispatcher::LoadDialogs(RpcRequestPtr request) {
   CAST_RPC_REQUEST(LoadDialogsReq, load_dialogs_req);
-  LOG(INFO) << "DoLoadDialogs - load_dialogs_req: " << load_dialogs_req.Utf8DebugString();
+  LOG(INFO) << load_dialogs_req.Utf8DebugString();
   
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
   zproto::LoadDialogsRsp load_dialogs_rsp;
-
-  MessengerServiceImpl service_impl;
+  
+  MessagingServiceImpl service_impl;
+  service_impl.Initialize(request);
   service_impl.LoadDialogs(load_dialogs_req, &load_dialogs_rsp);
   
   return MakeRpcOK(load_dialogs_rsp);
 }
 
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::LoadGroupedDialogs(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(LoadGroupedDialogsReq, load_grouped_dialogs_req);
+  LOG(INFO) << load_grouped_dialogs_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::LoadGroupedDialogsRsp load_grouped_dialogs_rsp;
+  
+  MessagingServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.LoadGroupedDialogs(load_grouped_dialogs_req, &load_grouped_dialogs_rsp);
+  
+  return MakeRpcOK(load_grouped_dialogs_rsp);
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+// group
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::LoadFullGroups(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(LoadFullGroupsReq, load_full_group_req);
+  LOG(INFO) << load_full_group_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::LoadFullGroupsRsp load_full_group_rsp;
+  
+  GroupsServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.LoadFullGroups(load_full_group_req, &load_full_group_rsp);
+  
+  return MakeRpcOK(load_full_group_rsp);
+}
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::LoadMembers(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(LoadMembersReq, load_members_req);
+  LOG(INFO) << load_members_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::LoadMembersRsp load_members_rsp;
+  
+  GroupsServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.LoadMembers(load_members_req, &load_members_rsp);
+  
+  return MakeRpcOK(load_members_rsp);
+}
+
 ProtoRpcResponsePtr ZRpcMessengerDispatcher::CreateGroup(RpcRequestPtr request) {
   CAST_RPC_REQUEST(CreateGroupReq, create_group_req);
-  LOG(INFO) << "DoCreateGroup - create_group_req: " << create_group_req.Utf8DebugString();
-
+  LOG(INFO) << create_group_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
   zproto::CreateGroupRsp create_group_rsp;
   
-  MessengerServiceImpl service_impl;
+  GroupsServiceImpl service_impl;
+  service_impl.Initialize(request);
   service_impl.CreateGroup(create_group_req, &create_group_rsp);
   
   return MakeRpcOK(create_group_rsp);
 }
-*/
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::EditGroupTitle(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(EditGroupTitleReq, edit_group_title_req);
+  LOG(INFO) << edit_group_title_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::SeqDateRsp seq_date_rsp;
+  
+  GroupsServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.EditGroupTitle(edit_group_title_req, &seq_date_rsp);
+  
+  return MakeRpcOK(seq_date_rsp);
+}
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::EditGroupAvatar(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(EditGroupAvatarReq, edit_group_avatar_req);
+  LOG(INFO) << edit_group_avatar_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::EditGroupAvatarRsp edit_group_avatar_rsp;
+  
+  GroupsServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.EditGroupAvatar(edit_group_avatar_req, &edit_group_avatar_rsp);
+  
+  return MakeRpcOK(edit_group_avatar_rsp);
+}
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::RemoveGroupAvatar(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(RemoveGroupAvatarReq, remove_group_avatar_req);
+  LOG(INFO) << remove_group_avatar_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::SeqDateRsp seq_date_rsp;
+  
+  GroupsServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.RemoveGroupAvatar(remove_group_avatar_req, &seq_date_rsp);
+  
+  return MakeRpcOK(seq_date_rsp);
+}
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::EditGroupShortName(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(EditGroupShortNameReq, edit_group_short_name_req);
+  LOG(INFO) << edit_group_short_name_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::SeqRsp seq_rsp;
+  
+  GroupsServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.EditGroupShortName(edit_group_short_name_req, &seq_rsp);
+  
+  return MakeRpcOK(seq_rsp);
+}
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::EditGroupTopic(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(EditGroupTopicReq, edit_group_topic_req);
+  LOG(INFO) << edit_group_topic_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::SeqDateRsp seq_date_rsp;
+  
+  GroupsServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.EditGroupTopic(edit_group_topic_req, &seq_date_rsp);
+  
+  return MakeRpcOK(seq_date_rsp);
+}
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::EditGroupAbout(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(EditGroupAboutReq, edit_group_about_req);
+  LOG(INFO) << edit_group_about_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::SeqDateRsp seq_date_rsp;
+  
+  GroupsServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.EditGroupAbout(edit_group_about_req, &seq_date_rsp);
+  
+  return MakeRpcOK(seq_date_rsp);
+}
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::InviteUser(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(InviteUserReq, invite_user_req);
+  LOG(INFO) << invite_user_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::SeqDateRsp seq_date_rsp;
+  
+  GroupsServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.InviteUser(invite_user_req, &seq_date_rsp);
+  
+  return MakeRpcOK(seq_date_rsp);
+}
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::LeaveGroup(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(LeaveGroupReq, leave_group_req);
+  LOG(INFO) << leave_group_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::SeqDateRsp seq_date_rsp;
+  
+  GroupsServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.LeaveGroup(leave_group_req, &seq_date_rsp);
+  
+  return MakeRpcOK(seq_date_rsp);
+}
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::LeaveAndDelete(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(LeaveAndDeleteReq, leave_and_delete_req);
+  LOG(INFO) << leave_and_delete_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::SeqDateRsp seq_date_rsp;
+  
+  GroupsServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.LeaveAndDelete(leave_and_delete_req, &seq_date_rsp);
+  
+  return MakeRpcOK(seq_date_rsp);
+}
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::KickUser(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(KickUserReq, kick_user_req);
+  LOG(INFO) << kick_user_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::SeqDateRsp seq_date_rsp;
+  
+  GroupsServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.KickUser(kick_user_req, &seq_date_rsp);
+  
+  return MakeRpcOK(seq_date_rsp);
+}
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::JoinGroupByPeer(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(JoinGroupByPeerReq, join_group_by_peer_req);
+  LOG(INFO) << join_group_by_peer_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::SeqRsp seq_rsp;
+  
+  GroupsServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.JoinGroupByPeer(join_group_by_peer_req, &seq_rsp);
+  
+  return MakeRpcOK(seq_rsp);
+}
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::MakeUserAdmin(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(MakeUserAdminReq, make_user_admin_req);
+  LOG(INFO) << make_user_admin_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::SeqDateRsp seq_date_rsp;
+  
+  GroupsServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.MakeUserAdmin(make_user_admin_req, &seq_date_rsp);
+  
+  return MakeRpcOK(seq_date_rsp);
+}
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::DismissUserAdmin(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(DismissUserAdminReq, dismiss_user_admin_req);
+  LOG(INFO) << dismiss_user_admin_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::SeqDateRsp seq_date_rsp;
+  
+  GroupsServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.DismissUserAdmin(dismiss_user_admin_req, &seq_date_rsp);
+  
+  return MakeRpcOK(seq_date_rsp);
+}
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::TransferOwnership(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(TransferOwnershipReq, transfer_owner_ship_req);
+  LOG(INFO) << transfer_owner_ship_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::SeqDateRsp seq_date_rsp;
+  
+  GroupsServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.TransferOwnership(transfer_owner_ship_req, &seq_date_rsp);
+  
+  return MakeRpcOK(seq_date_rsp);
+}
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::LoadAdminSettings(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(LoadAdminSettingsReq, load_admin_settings_req);
+  LOG(INFO) << load_admin_settings_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::SeqDateRsp seq_date_rsp;
+  
+  GroupsServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.LoadAdminSettings(load_admin_settings_req, &seq_date_rsp);
+  
+  return MakeRpcOK(seq_date_rsp);
+}
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::SaveAdminSettings(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(SaveAdminSettingsReq, save_admin_setting_req);
+  LOG(INFO) << save_admin_setting_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::SeqDateRsp seq_date_rsp;
+  
+  GroupsServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.SaveAdminSettings(save_admin_setting_req, &seq_date_rsp);
+  
+  return MakeRpcOK(seq_date_rsp);
+}
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::DeleteGroup(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(DeleteGroupReq, delete_group_req);
+  LOG(INFO) << delete_group_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::SeqDateRsp seq_date_rsp;
+  
+  GroupsServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.DeleteGroup(delete_group_req, &seq_date_rsp);
+  
+  return MakeRpcOK(seq_date_rsp);
+}
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::JoinGroup(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(JoinGroupReq, join_group_req);
+  LOG(INFO) << join_group_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::JoinGroupRsp join_group_rsp;
+  
+  GroupsServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.JoinGroup(join_group_req, &join_group_rsp);
+  
+  return MakeRpcOK(join_group_rsp);
+}
+

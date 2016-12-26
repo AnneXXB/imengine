@@ -196,15 +196,14 @@ message CreateGroupReq {
   int64 rid = 1; // Random Id for avoiding double create
   string title = 2; // Group Title
   repeated UserOutPeer users = 3; // Members of group
-  GroupType group_type = 6; // Group Type
-  repeated UpdateOptimization optimizations = 7; // Enabled Optimizations
+  repeated UpdateOptimization optimizations = 4; // Enabled Optimizations
 }
 
 // Created group
 message CreateGroupRsp {
   // int32 COMMAND_ID = 216;
   int32 seq = 1; //   Update Seq
-  bytes state = 2; //   Update state
+  // bytes state = 2; //   Update state
   int64 date = 6; //   Group creation date
   Group group = 3; //   Created group
   repeated User users = 4; //   Referenced users

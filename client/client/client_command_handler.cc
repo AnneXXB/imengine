@@ -23,6 +23,7 @@
 #include "proto/api/cc/auth.pb.h"
 #include "proto/api/cc/misc.pb.h"
 #include "proto/api/cc/messaging.pb.h"
+#include "proto/api/cc/groups.pb.h"
 
 #include "nebula/net/zproto/api_message_box.h"
 
@@ -39,10 +40,13 @@ struct CmdEntry {
   ClientCommandHandlerFunc handler;   // 命令处理函数
 };
 
+static std::string g_my_uid;
+
 int DoConnect(const std::vector<folly::StringPiece>& command_lines) {
   auto req = std::make_shared<ApiRpcRequest<zproto::StartTestingAuthReq>>();
   
   (*req)->set_app_id(1);
+  g_my_uid = command_lines[3].toString();
   (*req)->set_user_id(command_lines[3].toString());
   // (*req)->set_token("benqi@zhazha.nebula.im");
   //(*req)->set_online_status(teamtalk::USER_STATUS_ONLINE);
@@ -96,6 +100,30 @@ int DoSendMessage(const std::vector<folly::StringPiece>& command_lines) {
   return 0;
 }
 
+int DoSendGroupMessage(const std::vector<folly::StringPiece>& command_lines) {
+  auto req = std::make_shared<ApiRpcRequest<zproto::SendMessageReq>>();
+  auto peer = (*req)->mutable_peer();
+  peer->set_id(command_lines[1].toString());
+  peer->set_type(zproto::PEER_TYPE_GROUP);
+  peer->set_access_hash(1);
+  auto message = (*req)->mutable_message();
+  message->set_message_type(zproto::TEXT);
+  message->set_message_data(command_lines[2].toString());
+  (*req)->set_rid(GetNextIDBySnowflake());
+  
+  ZRpcUtil::DoClientCall("gate_client", req)
+  .within(std::chrono::milliseconds(5000))
+  .then([](ProtoRpcResponsePtr rsp) {
+    LOG(INFO) << "DoSendMessage - rsp";
+    if (rsp) {
+      LOG(INFO) << rsp->ToString();
+      // auto login_rsp = ToApiRpcOk<zproto::SeqDateRsp>(rsp);
+      // LOG(INFO) << (*login_rsp)->Utf8DebugString();
+    }
+  });
+  return 0;
+}
+
 int DoMessageSync(const std::vector<folly::StringPiece>& command_lines) {
 /*
   auto req = std::make_shared<ApiRpcRequest<zproto::MessageSyncReq>>();
@@ -116,33 +144,27 @@ int DoMessageSync(const std::vector<folly::StringPiece>& command_lines) {
  */
   return 0;
 }
-
+// Creating group chat
+// CreateGroupReq --> CreateGroupRsp
 int DoCreateGroup(const std::vector<folly::StringPiece>& command_lines) {
-/*
-  auto req = std::make_shared<ApiRpcRequest<zproto::CreateGroupReq>>();
+  zproto::CreateGroupReq create_group_req;
+  create_group_req.set_rid(GetNextIDBySnowflake());
+  create_group_req.set_title(command_lines[1].toString());
   
-  (*req)->set_creator_user_id("benqi@zhazha");
-  (*req)->set_client_group_id(GetNextIDBySnowflake());
-  (*req)->set_title(command_lines[1].toString());
-  (*req)->add_user_ids("benqi@zhazha");
-  for (int i=2; i<command_lines.size(); ++i) {
-    (*req)->add_user_ids(command_lines[i].toString());
+  for (size_t i=2; i<command_lines.size(); ++i) {
+    auto user = create_group_req.add_users();
+    user->set_access_hash(i);
+    user->set_uid(command_lines[i].toString());
   }
 
-  LOG(INFO) << "DoCreateGroup - req: " << req->ToString();
+  LOG(INFO) << "DoCreateGroup - req: " << create_group_req.Utf8DebugString();
   
-  ZRpcUtil::DoClientCall("gate_client", req)
+  ZRpcUtil::DoClientCall("gate_client", MakeRpcRequest(create_group_req))
   .within(std::chrono::milliseconds(5000))
   .then([](ProtoRpcResponsePtr rsp) {
-    LOG(INFO) << "DoMessageSync - rsp";
+    LOG(INFO) << "DoCreateGroup - rsp";
     LOG(INFO) << rsp->ToString();
-    // if (rsp) {
-    //  auto login_rsp = ToApiRpcOk<zproto::SeqDateRsp>(rsp);
-    //  LOG(INFO) << (*login_rsp)->Utf8DebugString();
-    //}
   });
- */
-  
   return 0;
 }
 
@@ -155,7 +177,8 @@ int DoQuit(const std::vector<folly::StringPiece>& command_lines) {
 CmdEntry g_cmds[] = {
   // login/logout
   {"connect", "connect serv_ip serv_port user_id", 4, 0, DoConnect},
-  {"sendmessage", "sendmessage user_id content", 3, 0, DoSendMessage},
+  {"send_message", "sendmessage user_id content", 3, 0, DoSendMessage},
+  {"send_group_message", "send_group_message group_id content", 3, 0, DoSendGroupMessage},
   {"messagesync", "messagesync", 1, 0, DoMessageSync},
   {"create_group", "create_group group_title uid1...", 3, 10, DoCreateGroup},
   // quit

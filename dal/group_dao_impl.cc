@@ -56,3 +56,16 @@ int64_t GroupDAOImpl::Create(GroupDO& group) {
                                                  &query_string);
                            });
 }
+
+int GroupDAOImpl::GetGroup(const std::string& group_id, GroupDO& group) {
+  return DoStorageQuery("nebula_engine",
+                        [&](std::string& query_string) {
+                          folly::format(&query_string, "SELECT id FROM groups WHERE group_id='{}' LIMIT 1",
+                                        group_id);
+                        },
+                        [&](db::QueryAnswer& answ) -> int {
+                          group.app_id = 1;
+                          // ...
+                          return BREAK;
+                        });
+}

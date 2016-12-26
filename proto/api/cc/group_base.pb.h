@@ -45,27 +45,6 @@ class Group;
 class GroupFull;
 class Member;
 
-enum GroupType {
-  GROUP = 0,
-  CHANNEL = 1,
-  GroupType_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
-  GroupType_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
-};
-bool GroupType_IsValid(int value);
-const GroupType GroupType_MIN = GROUP;
-const GroupType GroupType_MAX = CHANNEL;
-const int GroupType_ARRAYSIZE = GroupType_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* GroupType_descriptor();
-inline const ::std::string& GroupType_Name(GroupType value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    GroupType_descriptor(), value);
-}
-inline bool GroupType_Parse(
-    const ::std::string& name, GroupType* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<GroupType>(
-    GroupType_descriptor(), name, value);
-}
 enum GroupPermissions {
   SEND_MESSAGE = 0,
   CLEAR = 1,
@@ -301,9 +280,9 @@ class Group : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::zproto::Avatar* release_avatar();
   void set_allocated_avatar(::zproto::Avatar* avatar);
 
-  // optional int32 members_count = 24;
+  // optional int32 members_count = 5;
   void clear_members_count();
-  static const int kMembersCountFieldNumber = 24;
+  static const int kMembersCountFieldNumber = 5;
   ::google::protobuf::int32 members_count() const;
   void set_members_count(::google::protobuf::int32 value);
 
@@ -313,95 +292,32 @@ class Group : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   bool is_member() const;
   void set_is_member(bool value);
 
-  // optional bool is_hidden = 20;
+  // optional bool is_hidden = 7;
   void clear_is_hidden();
-  static const int kIsHiddenFieldNumber = 20;
+  static const int kIsHiddenFieldNumber = 7;
   bool is_hidden() const;
   void set_is_hidden(bool value);
 
-  // optional .zproto.GroupType group_type = 25;
-  void clear_group_type();
-  static const int kGroupTypeFieldNumber = 25;
-  ::zproto::GroupType group_type() const;
-  void set_group_type(::zproto::GroupType value);
-
-  // optional int64 permissions = 26;
+  // optional int64 permissions = 8;
   void clear_permissions();
-  static const int kPermissionsFieldNumber = 26;
+  static const int kPermissionsFieldNumber = 8;
   ::google::protobuf::int64 permissions() const;
   void set_permissions(::google::protobuf::int64 value);
 
-  // optional bool is_deleted = 27;
+  // optional bool is_deleted = 9;
   void clear_is_deleted();
-  static const int kIsDeletedFieldNumber = 27;
+  static const int kIsDeletedFieldNumber = 9;
   bool is_deleted() const;
   void set_is_deleted(bool value);
 
-  // map<string, .zproto.RawArrayValue> ext = 22;
+  // map<string, .zproto.RawArrayValue> ext = 10;
   int ext_size() const;
   void clear_ext();
-  static const int kExtFieldNumber = 22;
+  static const int kExtFieldNumber = 10;
   const ::google::protobuf::Map< ::std::string, ::zproto::RawArrayValue >&
       ext() const;
   ::google::protobuf::Map< ::std::string, ::zproto::RawArrayValue >*
       mutable_ext();
-
-  // optional bool is_admin = 16;
-  void clear_is_admin();
-  static const int kIsAdminFieldNumber = 16;
-  bool is_admin() const;
-  void set_is_admin(bool value);
-
-  // optional string creator_uid = 8;
-  void clear_creator_uid();
-  static const int kCreatorUidFieldNumber = 8;
-  const ::std::string& creator_uid() const;
-  void set_creator_uid(const ::std::string& value);
-  void set_creator_uid(const char* value);
-  void set_creator_uid(const char* value, size_t size);
-  ::std::string* mutable_creator_uid();
-  ::std::string* release_creator_uid();
-  void set_allocated_creator_uid(::std::string* creator_uid);
-
-  // repeated .zproto.Member members = 9;
-  int members_size() const;
-  void clear_members();
-  static const int kMembersFieldNumber = 9;
-  const ::zproto::Member& members(int index) const;
-  ::zproto::Member* mutable_members(int index);
-  ::zproto::Member* add_members();
-  ::google::protobuf::RepeatedPtrField< ::zproto::Member >*
-      mutable_members();
-  const ::google::protobuf::RepeatedPtrField< ::zproto::Member >&
-      members() const;
-
-  // optional int64 create_date = 10;
-  void clear_create_date();
-  static const int kCreateDateFieldNumber = 10;
-  ::google::protobuf::int64 create_date() const;
-  void set_create_date(::google::protobuf::int64 value);
-
-  // optional string theme = 17;
-  void clear_theme();
-  static const int kThemeFieldNumber = 17;
-  const ::std::string& theme() const;
-  void set_theme(const ::std::string& value);
-  void set_theme(const char* value);
-  void set_theme(const char* value, size_t size);
-  ::std::string* mutable_theme();
-  ::std::string* release_theme();
-  void set_allocated_theme(::std::string* theme);
-
-  // optional string about = 18;
-  void clear_about();
-  static const int kAboutFieldNumber = 18;
-  const ::std::string& about() const;
-  void set_about(const ::std::string& value);
-  void set_about(const char* value);
-  void set_about(const char* value, size_t size);
-  ::std::string* mutable_about();
-  ::std::string* release_about();
-  void set_allocated_about(::std::string* about);
 
   // @@protoc_insertion_point(class_scope:zproto.Group)
  private:
@@ -413,7 +329,9 @@ class Group : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::google::protobuf::internal::ArenaStringPtr title_;
   ::zproto::Avatar* avatar_;
   ::google::protobuf::int32 members_count_;
-  int group_type_;
+  bool is_member_;
+  bool is_hidden_;
+  bool is_deleted_;
   ::google::protobuf::int64 permissions_;
   typedef ::google::protobuf::internal::MapEntryLite<
       ::std::string, ::zproto::RawArrayValue,
@@ -426,15 +344,6 @@ class Group : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
       ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
       ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
       0 > ext_;
-  ::google::protobuf::internal::ArenaStringPtr creator_uid_;
-  ::google::protobuf::RepeatedPtrField< ::zproto::Member > members_;
-  ::google::protobuf::int64 create_date_;
-  ::google::protobuf::internal::ArenaStringPtr theme_;
-  ::google::protobuf::internal::ArenaStringPtr about_;
-  bool is_member_;
-  bool is_hidden_;
-  bool is_deleted_;
-  bool is_admin_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_group_5fbase_2eproto();
   friend void protobuf_AssignDesc_group_5fbase_2eproto();
@@ -891,7 +800,7 @@ inline void Group::set_allocated_avatar(::zproto::Avatar* avatar) {
   // @@protoc_insertion_point(field_set_allocated:zproto.Group.avatar)
 }
 
-// optional int32 members_count = 24;
+// optional int32 members_count = 5;
 inline void Group::clear_members_count() {
   members_count_ = 0;
 }
@@ -919,7 +828,7 @@ inline void Group::set_is_member(bool value) {
   // @@protoc_insertion_point(field_set:zproto.Group.is_member)
 }
 
-// optional bool is_hidden = 20;
+// optional bool is_hidden = 7;
 inline void Group::clear_is_hidden() {
   is_hidden_ = false;
 }
@@ -933,21 +842,7 @@ inline void Group::set_is_hidden(bool value) {
   // @@protoc_insertion_point(field_set:zproto.Group.is_hidden)
 }
 
-// optional .zproto.GroupType group_type = 25;
-inline void Group::clear_group_type() {
-  group_type_ = 0;
-}
-inline ::zproto::GroupType Group::group_type() const {
-  // @@protoc_insertion_point(field_get:zproto.Group.group_type)
-  return static_cast< ::zproto::GroupType >(group_type_);
-}
-inline void Group::set_group_type(::zproto::GroupType value) {
-  
-  group_type_ = value;
-  // @@protoc_insertion_point(field_set:zproto.Group.group_type)
-}
-
-// optional int64 permissions = 26;
+// optional int64 permissions = 8;
 inline void Group::clear_permissions() {
   permissions_ = GOOGLE_LONGLONG(0);
 }
@@ -961,7 +856,7 @@ inline void Group::set_permissions(::google::protobuf::int64 value) {
   // @@protoc_insertion_point(field_set:zproto.Group.permissions)
 }
 
-// optional bool is_deleted = 27;
+// optional bool is_deleted = 9;
 inline void Group::clear_is_deleted() {
   is_deleted_ = false;
 }
@@ -975,7 +870,7 @@ inline void Group::set_is_deleted(bool value) {
   // @@protoc_insertion_point(field_set:zproto.Group.is_deleted)
 }
 
-// map<string, .zproto.RawArrayValue> ext = 22;
+// map<string, .zproto.RawArrayValue> ext = 10;
 inline int Group::ext_size() const {
   return ext_.size();
 }
@@ -991,196 +886,6 @@ inline ::google::protobuf::Map< ::std::string, ::zproto::RawArrayValue >*
 Group::mutable_ext() {
   // @@protoc_insertion_point(field_mutable_map:zproto.Group.ext)
   return ext_.MutableMap();
-}
-
-// optional bool is_admin = 16;
-inline void Group::clear_is_admin() {
-  is_admin_ = false;
-}
-inline bool Group::is_admin() const {
-  // @@protoc_insertion_point(field_get:zproto.Group.is_admin)
-  return is_admin_;
-}
-inline void Group::set_is_admin(bool value) {
-  
-  is_admin_ = value;
-  // @@protoc_insertion_point(field_set:zproto.Group.is_admin)
-}
-
-// optional string creator_uid = 8;
-inline void Group::clear_creator_uid() {
-  creator_uid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& Group::creator_uid() const {
-  // @@protoc_insertion_point(field_get:zproto.Group.creator_uid)
-  return creator_uid_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void Group::set_creator_uid(const ::std::string& value) {
-  
-  creator_uid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.Group.creator_uid)
-}
-inline void Group::set_creator_uid(const char* value) {
-  
-  creator_uid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.Group.creator_uid)
-}
-inline void Group::set_creator_uid(const char* value, size_t size) {
-  
-  creator_uid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.Group.creator_uid)
-}
-inline ::std::string* Group::mutable_creator_uid() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.Group.creator_uid)
-  return creator_uid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* Group::release_creator_uid() {
-  // @@protoc_insertion_point(field_release:zproto.Group.creator_uid)
-  
-  return creator_uid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void Group::set_allocated_creator_uid(::std::string* creator_uid) {
-  if (creator_uid != NULL) {
-    
-  } else {
-    
-  }
-  creator_uid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), creator_uid);
-  // @@protoc_insertion_point(field_set_allocated:zproto.Group.creator_uid)
-}
-
-// repeated .zproto.Member members = 9;
-inline int Group::members_size() const {
-  return members_.size();
-}
-inline void Group::clear_members() {
-  members_.Clear();
-}
-inline const ::zproto::Member& Group::members(int index) const {
-  // @@protoc_insertion_point(field_get:zproto.Group.members)
-  return members_.Get(index);
-}
-inline ::zproto::Member* Group::mutable_members(int index) {
-  // @@protoc_insertion_point(field_mutable:zproto.Group.members)
-  return members_.Mutable(index);
-}
-inline ::zproto::Member* Group::add_members() {
-  // @@protoc_insertion_point(field_add:zproto.Group.members)
-  return members_.Add();
-}
-inline ::google::protobuf::RepeatedPtrField< ::zproto::Member >*
-Group::mutable_members() {
-  // @@protoc_insertion_point(field_mutable_list:zproto.Group.members)
-  return &members_;
-}
-inline const ::google::protobuf::RepeatedPtrField< ::zproto::Member >&
-Group::members() const {
-  // @@protoc_insertion_point(field_list:zproto.Group.members)
-  return members_;
-}
-
-// optional int64 create_date = 10;
-inline void Group::clear_create_date() {
-  create_date_ = GOOGLE_LONGLONG(0);
-}
-inline ::google::protobuf::int64 Group::create_date() const {
-  // @@protoc_insertion_point(field_get:zproto.Group.create_date)
-  return create_date_;
-}
-inline void Group::set_create_date(::google::protobuf::int64 value) {
-  
-  create_date_ = value;
-  // @@protoc_insertion_point(field_set:zproto.Group.create_date)
-}
-
-// optional string theme = 17;
-inline void Group::clear_theme() {
-  theme_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& Group::theme() const {
-  // @@protoc_insertion_point(field_get:zproto.Group.theme)
-  return theme_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void Group::set_theme(const ::std::string& value) {
-  
-  theme_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.Group.theme)
-}
-inline void Group::set_theme(const char* value) {
-  
-  theme_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.Group.theme)
-}
-inline void Group::set_theme(const char* value, size_t size) {
-  
-  theme_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.Group.theme)
-}
-inline ::std::string* Group::mutable_theme() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.Group.theme)
-  return theme_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* Group::release_theme() {
-  // @@protoc_insertion_point(field_release:zproto.Group.theme)
-  
-  return theme_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void Group::set_allocated_theme(::std::string* theme) {
-  if (theme != NULL) {
-    
-  } else {
-    
-  }
-  theme_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), theme);
-  // @@protoc_insertion_point(field_set_allocated:zproto.Group.theme)
-}
-
-// optional string about = 18;
-inline void Group::clear_about() {
-  about_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& Group::about() const {
-  // @@protoc_insertion_point(field_get:zproto.Group.about)
-  return about_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void Group::set_about(const ::std::string& value) {
-  
-  about_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.Group.about)
-}
-inline void Group::set_about(const char* value) {
-  
-  about_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.Group.about)
-}
-inline void Group::set_about(const char* value, size_t size) {
-  
-  about_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.Group.about)
-}
-inline ::std::string* Group::mutable_about() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.Group.about)
-  return about_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* Group::release_about() {
-  // @@protoc_insertion_point(field_release:zproto.Group.about)
-  
-  return about_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void Group::set_allocated_about(::std::string* about) {
-  if (about != NULL) {
-    
-  } else {
-    
-  }
-  about_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), about);
-  // @@protoc_insertion_point(field_set_allocated:zproto.Group.about)
 }
 
 // -------------------------------------------------------------------
@@ -1525,11 +1230,6 @@ inline void GroupFull::set_permissions(::google::protobuf::int64 value) {
 namespace google {
 namespace protobuf {
 
-template <> struct is_proto_enum< ::zproto::GroupType> : ::google::protobuf::internal::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::zproto::GroupType>() {
-  return ::zproto::GroupType_descriptor();
-}
 template <> struct is_proto_enum< ::zproto::GroupPermissions> : ::google::protobuf::internal::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::zproto::GroupPermissions>() {

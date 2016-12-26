@@ -24,6 +24,8 @@ struct GroupUserDAOImpl : public GroupUserDAO {
   virtual ~GroupUserDAOImpl() = default;
   
   int64_t Create(GroupUserDOList& group_users) override;
+  int GetGroupUserIDList(const std::string& group_id, std::list<std::string>& group_user_ids) override;
+
 };
 
 #endif

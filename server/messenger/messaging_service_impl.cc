@@ -71,99 +71,6 @@ int MessagingServiceImpl::SendMessage(const zproto::SendMessageReq& request, zpr
   }
 
   return r;
-
-#if 0
-  /*
-  // 检查request
-  // TODO(@benqi): 回滚
-  // const auto& message_data = request.message_data();
-  int rv = -1;
-  do {
-    auto& history_message_dao = HistoryMessageDAO::GetInstance();
-    // 去重
-    int64_t r = history_message_dao.CheckExists(uid(),
-                                            request.peer().id(),
-                                            request.peer().type(),
-                                            request.rid());
-
-    if (r<0) {
-      // TODO(@benqi): 区分数据库异常和重复问题
-      LOG(ERROR) << "SendMessage - CheckExists DBError";
-      rv = kErrorNo_DBError;
-      break;
-    } else if (r > 0) {
-      // 已经存在，直接返回
-      LOG(WARNING) << "SendMessage - isexists by uid: " << uid() << ", rid: " << request.rid();
-
-      auto seq = SequenceDAO::GetInstance().GetNextID(uid());
-      auto now = NowInMsecTime();
-
-      // 直接生成一个SEQ返回，
-      response->set_seq(seq);
-      response->set_date(now);
-
-      rv = 0;
-      break;
-    }
-
-
-    uint64_t sender_message_seq = 0;
-    
-    message_entity.message_id = message_id;
-    // 创建用户消息
-    if (message_entity.peer_type == zproto::PEER_TYPE_PRIVATE) {
-      // 单聊
-      // 创建者
-      // biz_model::UserMessageEntity user_message_entity;
-      // 发送者
-      sender_message_seq = SequenceDAO::GetInstance().GetNextID(message_entity.sender_user_id);
-      message_entity.message_seq = sender_message_seq;
-      message_entity.user_id = message_entity.sender_user_id;
-      
-      UserMessageDO user_message;
-      
-      user_message.message_seq = sender_message_seq;
-      user_message.user_id = message_entity.sender_user_id;
-      user_message.message_id = message_entity.message_id;
-      user_message.sender_user_id = message_entity.sender_user_id;
-      user_message.peer_id = message_entity.peer_id;
-      user_message.peer_type = message_entity.peer_type;
-      user_message.message_peer_seq = message_entity.message_peer_seq;
-      user_message.created_at = created_at;
-      user_message.updated_at = created_at;
-      
-      r = UserMessageDAO::GetInstance().Create(user_message);
-      if (r<0) {
-        LOG(ERROR) << "SendMessage - Create error!!";
-        // TODO(@benqi): 是否回滚？
-        rv = kErrorNo_DBError;
-        break;
-      }
-      
-      // 接收者
-      sender_message_seq = SequenceDAO::GetInstance().GetNextID(message_entity.peer_id);
-      user_message.message_seq = sender_message_seq;
-      user_message.user_id = message_entity.peer_id;
-      r = UserMessageDAO::GetInstance().Create(user_message);
-      if (r<0) {
-        LOG(ERROR) << "SendMessage - Create error!!";
-        // TODO(@benqi): 是否回滚？
-        return -1;
-      }
-      
-
-    } else {
-      // 群聊
-      // TODO(@benqi): 麻烦
-    }
-    
-    rv = 0;
-    
-  } while (0);
-
-  return rv;
-  */
-#endif
 }
 
 int MessagingServiceImpl::MessageReceived(const zproto::MessageReceivedReq& request, zproto::VoidRsp* response) {
@@ -311,6 +218,7 @@ int MessagingServiceImpl::SendPrivateMessage(const zproto::SendMessageReq& reque
     return kErrorNo_DBError;
   }
 
+  // TODO(@benqi): 最好能有个地方能保证保证会话已经存在
   // 会话处理
   // 正向
   // 检查会话是否存在
@@ -357,7 +265,7 @@ int MessagingServiceImpl::SendPrivateMessage(const zproto::SendMessageReq& reque
       // break;
     }
   }
-
+  
   // 可以异步处理
   // TODO(@benqi): 未读计数
   // TODO(@benqi): 缓存最后一条消息
@@ -374,7 +282,7 @@ int MessagingServiceImpl::SendPrivateMessage(const zproto::SendMessageReq& reque
   UserSequenceDAO::GetInstance().Create(user_sequence_do);
 
   user_sequence_do.user_id = request.peer().id();
-  seq = SequenceDAO::GetInstance().GetNextID(uid());
+  seq = SequenceDAO::GetInstance().GetNextID(request.peer().id());
   UserSequenceDAO::GetInstance().Create(user_sequence_do);
 
   // 转发消息
@@ -408,5 +316,82 @@ int MessagingServiceImpl::SendPrivateMessage(const zproto::SendMessageReq& reque
 }
 
 int MessagingServiceImpl::SendGroupMessage(const zproto::SendMessageReq& request, zproto::SeqDateRsp* response) {
+  auto& history_message_dao = HistoryMessageDAO::GetInstance();
+  
+  auto message_peer_seq = SequenceDAO::GetInstance().GetNextID(uid());
+  auto now = NowInMsecTime();
+  
+  HistoryMessageDO message_do;
+  
+  // 入库
+  message_do.sender_user_id = uid();
+  message_do.peer_id = request.peer().id();
+  message_do.peer_type = request.peer().type();
+  message_do.message_peer_seq = message_peer_seq;
+  message_do.client_message_id = request.rid();
+  message_do.message_content_type = request.message().message_type();
+  // 这个地方比较重
+  message_do.message_content_data = request.message().message_data();
+  message_do.passthrough_data = request.passthrough_data();
+  message_do.status = 1;
+  message_do.created_at = now;
+  message_do.updated_at = now;
+  
+  auto message_id = history_message_dao.Create(message_do);
+  if (message_id<0) {
+    // TODO(@benqi): 数据库异常，让客户端重试吧
+    LOG(ERROR) << "SendMessage - Create error!!";
+    return kErrorNo_DBError;
+  }
+  
+  // 可以异步处理
+  // TODO(@benqi): 未读计数
+  // TODO(@benqi): 缓存最后一条消息
+
+  // 同步队列
+  UserSequenceDO user_sequence_do;
+  user_sequence_do.header = CRC32(request.GetTypeName());
+  request.SerializeToString(&user_sequence_do.data);
+  user_sequence_do.created_at = now;
+
+  // 转发消息
+  zproto::DeliveryDataToUsersReq delivery;
+
+  // 创建群聊
+  std::list<std::string> group_user_ids;
+  GroupUserDAO::GetInstance().GetGroupUserIDList(request.peer().id(), group_user_ids);
+  for (auto& v : group_user_ids) {
+    auto seq = SequenceDAO::GetInstance().GetNextID(v);
+    user_sequence_do.seq = seq;
+    user_sequence_do.user_id = uid();
+    
+    UserSequenceDAO::GetInstance().Create(user_sequence_do);
+    delivery.add_uid_list(v);
+  }
+  
+  delivery.set_my_conn_id(session_id());
+  delivery.add_uid_list(request.peer().id());
+  delivery.set_raw_data_header(user_sequence_do.header);
+  delivery.set_raw_data(user_sequence_do.data);
+  
+  // TODO(@benqi): 还是用协程简单
+  // 转发给push_server成功后才能返回
+  // 如果push_server有问题，则可能会导致丢消息，解决:
+  // 1. 告诉客户端发送消息失败，让客户端重试
+  // 2. 服务端重试
+  ZRpcUtil::DoClientCall("push_client", MakeRpcRequest(delivery))
+  .within(std::chrono::milliseconds(5000))
+  .then([](ProtoRpcResponsePtr rsp2) {
+    CHECK(rsp2);
+    LOG(INFO) << "push_client rsp: " << rsp2->ToString();
+    // auto online_rep = ToApiRpcOk<zproto::ClientOnlineRsp>(rsp2);
+    // LOG(INFO) << (*online_rep)->Utf8DebugString();
+    //
+  });
+  
+  // ACK
+  response->set_seq(message_peer_seq);
+  response->set_date(now);
+  
   return 0;
 }

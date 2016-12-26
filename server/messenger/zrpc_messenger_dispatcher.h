@@ -26,12 +26,43 @@ class ZRpcMessengerDispatcher {
 public:
   ZRpcMessengerDispatcher();
   ~ZRpcMessengerDispatcher() = default;
-  
+
+  // message
   static ProtoRpcResponsePtr SendMessage(RpcRequestPtr request);
-  static ProtoRpcResponsePtr MessageSync(RpcRequestPtr request);
-  static ProtoRpcResponsePtr LoadHistoryMessage(RpcRequestPtr request);
+  static ProtoRpcResponsePtr MessageReceived(RpcRequestPtr request);
+  static ProtoRpcResponsePtr MessageRead(RpcRequestPtr request);
+  static ProtoRpcResponsePtr DeleteMessage(RpcRequestPtr request);
+  static ProtoRpcResponsePtr ClearChat(RpcRequestPtr request);
+  static ProtoRpcResponsePtr DeleteChat(RpcRequestPtr request);
+
+  // dialog
+  static ProtoRpcResponsePtr LoadHistory(RpcRequestPtr request);
   static ProtoRpcResponsePtr LoadDialogs(RpcRequestPtr request);
+  static ProtoRpcResponsePtr LoadGroupedDialogs(RpcRequestPtr request);
+
+  // group
+  static ProtoRpcResponsePtr LoadFullGroups(RpcRequestPtr request);
+  static ProtoRpcResponsePtr LoadMembers(RpcRequestPtr request);
   static ProtoRpcResponsePtr CreateGroup(RpcRequestPtr request);
+  static ProtoRpcResponsePtr EditGroupTitle(RpcRequestPtr request);
+  static ProtoRpcResponsePtr EditGroupAvatar(RpcRequestPtr request);
+  static ProtoRpcResponsePtr RemoveGroupAvatar(RpcRequestPtr request);
+  static ProtoRpcResponsePtr EditGroupShortName(RpcRequestPtr request);
+  static ProtoRpcResponsePtr EditGroupTopic(RpcRequestPtr request);
+  static ProtoRpcResponsePtr EditGroupAbout(RpcRequestPtr request);
+  static ProtoRpcResponsePtr InviteUser(RpcRequestPtr request);
+  static ProtoRpcResponsePtr LeaveGroup(RpcRequestPtr request);
+  static ProtoRpcResponsePtr LeaveAndDelete(RpcRequestPtr request);
+  static ProtoRpcResponsePtr KickUser(RpcRequestPtr request);
+  static ProtoRpcResponsePtr JoinGroupByPeer(RpcRequestPtr request);
+  static ProtoRpcResponsePtr MakeUserAdmin(RpcRequestPtr request);
+  static ProtoRpcResponsePtr DismissUserAdmin(RpcRequestPtr request);
+  static ProtoRpcResponsePtr TransferOwnership(RpcRequestPtr request);
+  static ProtoRpcResponsePtr LoadAdminSettings(RpcRequestPtr request);
+  static ProtoRpcResponsePtr SaveAdminSettings(RpcRequestPtr request);
+  static ProtoRpcResponsePtr DeleteGroup(RpcRequestPtr request);
+  static ProtoRpcResponsePtr JoinGroup(RpcRequestPtr request);
+  
 };
 
 #endif // MESSENGER_ZRPC_MESSENGER_DISPATCHER_H_

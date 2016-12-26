@@ -539,11 +539,10 @@ void protobuf_AssignDesc_groups_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberAdminChangedNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberAdminChangedNotify, _is_default_instance_));
   CreateGroupReq_descriptor_ = file->message_type(22);
-  static const int CreateGroupReq_offsets_[5] = {
+  static const int CreateGroupReq_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupReq, rid_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupReq, title_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupReq, users_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupReq, group_type_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupReq, optimizations_),
   };
   CreateGroupReq_reflection_ =
@@ -558,9 +557,8 @@ void protobuf_AssignDesc_groups_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupReq, _is_default_instance_));
   CreateGroupRsp_descriptor_ = file->message_type(23);
-  static const int CreateGroupRsp_offsets_[6] = {
+  static const int CreateGroupRsp_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupRsp, seq_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupRsp, state_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupRsp, date_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupRsp, group_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupRsp, users_),
@@ -1306,85 +1304,84 @@ void protobuf_AddDesc_groups_2eproto() {
     "y\022\020\n\010group_id\030\001 \001(\t\022\025\n\rmembers_count\030\002 \001"
     "(\005\"T\n\035GroupMemberAdminChangedNotify\022\020\n\010g"
     "roup_id\030\001 \001(\t\022\017\n\007user_id\030\002 \001(\t\022\020\n\010is_adm"
-    "in\030\003 \001(\010\"\252\001\n\016CreateGroupReq\022\013\n\003rid\030\001 \001(\003"
+    "in\030\003 \001(\010\"\203\001\n\016CreateGroupReq\022\013\n\003rid\030\001 \001(\003"
     "\022\r\n\005title\030\002 \001(\t\022\"\n\005users\030\003 \003(\0132\023.zproto."
-    "UserOutPeer\022%\n\ngroup_type\030\006 \001(\0162\021.zproto"
-    ".GroupType\0221\n\roptimizations\030\007 \003(\0162\032.zpro"
-    "to.UpdateOptimization\"\236\001\n\016CreateGroupRsp"
-    "\022\013\n\003seq\030\001 \001(\005\022\r\n\005state\030\002 \001(\014\022\014\n\004date\030\006 \001"
-    "(\003\022\034\n\005group\030\003 \001(\0132\r.zproto.Group\022\033\n\005user"
-    "s\030\004 \003(\0132\014.zproto.User\022\'\n\nuser_peers\030\005 \003("
-    "\0132\023.zproto.UserOutPeer\"\214\001\n\021EditGroupTitl"
-    "eReq\022(\n\ngroup_peer\030\001 \001(\0132\024.zproto.GroupO"
-    "utPeer\022\013\n\003rid\030\004 \001(\003\022\r\n\005title\030\003 \001(\t\0221\n\rop"
+    "UserOutPeer\0221\n\roptimizations\030\004 \003(\0162\032.zpr"
+    "oto.UpdateOptimization\"\217\001\n\016CreateGroupRs"
+    "p\022\013\n\003seq\030\001 \001(\005\022\014\n\004date\030\006 \001(\003\022\034\n\005group\030\003 "
+    "\001(\0132\r.zproto.Group\022\033\n\005users\030\004 \003(\0132\014.zpro"
+    "to.User\022\'\n\nuser_peers\030\005 \003(\0132\023.zproto.Use"
+    "rOutPeer\"\214\001\n\021EditGroupTitleReq\022(\n\ngroup_"
+    "peer\030\001 \001(\0132\024.zproto.GroupOutPeer\022\013\n\003rid\030"
+    "\004 \001(\003\022\r\n\005title\030\003 \001(\t\0221\n\roptimizations\030\005 "
+    "\003(\0162\032.zproto.UpdateOptimization\"\253\001\n\022Edit"
+    "GroupAvatarReq\022(\n\ngroup_peer\030\001 \001(\0132\024.zpr"
+    "oto.GroupOutPeer\022\013\n\003rid\030\004 \001(\t\022+\n\rfile_lo"
+    "cation\030\003 \001(\0132\024.zproto.FileLocation\0221\n\rop"
     "timizations\030\005 \003(\0162\032.zproto.UpdateOptimiz"
-    "ation\"\253\001\n\022EditGroupAvatarReq\022(\n\ngroup_pe"
-    "er\030\001 \001(\0132\024.zproto.GroupOutPeer\022\013\n\003rid\030\004 "
-    "\001(\t\022+\n\rfile_location\030\003 \001(\0132\024.zproto.File"
-    "Location\0221\n\roptimizations\030\005 \003(\0162\032.zproto"
-    ".UpdateOptimization\"^\n\022EditGroupAvatarRs"
-    "p\022\036\n\006avatar\030\001 \001(\0132\016.zproto.Avatar\022\013\n\003seq"
-    "\030\002 \001(\005\022\r\n\005state\030\003 \001(\014\022\014\n\004date\030\004 \001(\003\"\200\001\n\024"
-    "RemoveGroupAvatarReq\022(\n\ngroup_peer\030\001 \001(\013"
-    "2\024.zproto.GroupOutPeer\022\013\n\003rid\030\004 \001(\003\0221\n\ro"
-    "ptimizations\030\005 \003(\0162\032.zproto.UpdateOptimi"
-    "zation\"U\n\025EditGroupShortNameReq\022(\n\ngroup"
-    "_peer\030\001 \001(\0132\024.zproto.GroupOutPeer\022\022\n\nsho"
-    "rt_name\030\002 \001(\t\"\214\001\n\021EditGroupTopicReq\022(\n\ng"
-    "roup_peer\030\001 \001(\0132\024.zproto.GroupOutPeer\022\013\n"
-    "\003rid\030\002 \001(\003\022\r\n\005topic\030\003 \001(\t\0221\n\roptimizatio"
-    "ns\030\004 \003(\0162\032.zproto.UpdateOptimization\"\214\001\n"
-    "\021EditGroupAboutReq\022(\n\ngroup_peer\030\001 \001(\0132\024"
-    ".zproto.GroupOutPeer\022\013\n\003rid\030\002 \001(\003\022\r\n\005abo"
-    "ut\030\003 \001(\t\0221\n\roptimizations\030\005 \003(\0162\032.zproto"
-    ".UpdateOptimization\"\234\001\n\rInviteUserReq\022(\n"
-    "\ngroup_peer\030\001 \001(\0132\024.zproto.GroupOutPeer\022"
-    "\013\n\003rid\030\004 \001(\003\022!\n\004user\030\003 \001(\0132\023.zproto.User"
-    "OutPeer\0221\n\roptimizations\030\005 \003(\0162\032.zproto."
-    "UpdateOptimization\"y\n\rLeaveGroupReq\022(\n\ng"
-    "roup_peer\030\001 \001(\0132\024.zproto.GroupOutPeer\022\013\n"
-    "\003rid\030\002 \001(\003\0221\n\roptimizations\030\003 \003(\0162\032.zpro"
-    "to.UpdateOptimization\"=\n\021LeaveAndDeleteR"
+    "ation\"^\n\022EditGroupAvatarRsp\022\036\n\006avatar\030\001 "
+    "\001(\0132\016.zproto.Avatar\022\013\n\003seq\030\002 \001(\005\022\r\n\005stat"
+    "e\030\003 \001(\014\022\014\n\004date\030\004 \001(\003\"\200\001\n\024RemoveGroupAva"
+    "tarReq\022(\n\ngroup_peer\030\001 \001(\0132\024.zproto.Grou"
+    "pOutPeer\022\013\n\003rid\030\004 \001(\003\0221\n\roptimizations\030\005"
+    " \003(\0162\032.zproto.UpdateOptimization\"U\n\025Edit"
+    "GroupShortNameReq\022(\n\ngroup_peer\030\001 \001(\0132\024."
+    "zproto.GroupOutPeer\022\022\n\nshort_name\030\002 \001(\t\""
+    "\214\001\n\021EditGroupTopicReq\022(\n\ngroup_peer\030\001 \001("
+    "\0132\024.zproto.GroupOutPeer\022\013\n\003rid\030\002 \001(\003\022\r\n\005"
+    "topic\030\003 \001(\t\0221\n\roptimizations\030\004 \003(\0162\032.zpr"
+    "oto.UpdateOptimization\"\214\001\n\021EditGroupAbou"
+    "tReq\022(\n\ngroup_peer\030\001 \001(\0132\024.zproto.GroupO"
+    "utPeer\022\013\n\003rid\030\002 \001(\003\022\r\n\005about\030\003 \001(\t\0221\n\rop"
+    "timizations\030\005 \003(\0162\032.zproto.UpdateOptimiz"
+    "ation\"\234\001\n\rInviteUserReq\022(\n\ngroup_peer\030\001 "
+    "\001(\0132\024.zproto.GroupOutPeer\022\013\n\003rid\030\004 \001(\003\022!"
+    "\n\004user\030\003 \001(\0132\023.zproto.UserOutPeer\0221\n\ropt"
+    "imizations\030\005 \003(\0162\032.zproto.UpdateOptimiza"
+    "tion\"y\n\rLeaveGroupReq\022(\n\ngroup_peer\030\001 \001("
+    "\0132\024.zproto.GroupOutPeer\022\013\n\003rid\030\002 \001(\003\0221\n\r"
+    "optimizations\030\003 \003(\0162\032.zproto.UpdateOptim"
+    "ization\"=\n\021LeaveAndDeleteReq\022(\n\ngroup_pe"
+    "er\030\001 \001(\0132\024.zproto.GroupOutPeer\"\232\001\n\013KickU"
+    "serReq\022(\n\ngroup_peer\030\001 \001(\0132\024.zproto.Grou"
+    "pOutPeer\022\013\n\003rid\030\004 \001(\003\022!\n\004user\030\003 \001(\0132\023.zp"
+    "roto.UserOutPeer\0221\n\roptimizations\030\005 \003(\0162"
+    "\032.zproto.UpdateOptimization\">\n\022JoinGroup"
+    "ByPeerReq\022(\n\ngroup_peer\030\001 \001(\0132\024.zproto.G"
+    "roupOutPeer\"d\n\020MakeUserAdminReq\022(\n\ngroup"
+    "_peer\030\001 \001(\0132\024.zproto.GroupOutPeer\022&\n\tuse"
+    "r_peer\030\002 \001(\0132\023.zproto.UserOutPeer\"g\n\023Dis"
+    "missUserAdminReq\022(\n\ngroup_peer\030\001 \001(\0132\024.z"
+    "proto.GroupOutPeer\022&\n\tuser_peer\030\002 \001(\0132\023."
+    "zproto.UserOutPeer\"h\n\024TransferOwnershipR"
     "eq\022(\n\ngroup_peer\030\001 \001(\0132\024.zproto.GroupOut"
-    "Peer\"\232\001\n\013KickUserReq\022(\n\ngroup_peer\030\001 \001(\013"
-    "2\024.zproto.GroupOutPeer\022\013\n\003rid\030\004 \001(\003\022!\n\004u"
-    "ser\030\003 \001(\0132\023.zproto.UserOutPeer\0221\n\roptimi"
-    "zations\030\005 \003(\0162\032.zproto.UpdateOptimizatio"
-    "n\">\n\022JoinGroupByPeerReq\022(\n\ngroup_peer\030\001 "
-    "\001(\0132\024.zproto.GroupOutPeer\"d\n\020MakeUserAdm"
-    "inReq\022(\n\ngroup_peer\030\001 \001(\0132\024.zproto.Group"
-    "OutPeer\022&\n\tuser_peer\030\002 \001(\0132\023.zproto.User"
-    "OutPeer\"g\n\023DismissUserAdminReq\022(\n\ngroup_"
-    "peer\030\001 \001(\0132\024.zproto.GroupOutPeer\022&\n\tuser"
-    "_peer\030\002 \001(\0132\023.zproto.UserOutPeer\"h\n\024Tran"
-    "sferOwnershipReq\022(\n\ngroup_peer\030\001 \001(\0132\024.z"
-    "proto.GroupOutPeer\022&\n\tnew_owner\030\002 \001(\0132\023."
-    "zproto.UserOutPeer\"\266\001\n\rAdminSettings\022\036\n\026"
-    "show_admins_to_members\030\001 \001(\010\022\032\n\022can_memb"
-    "ers_invite\030\002 \001(\010\022#\n\033can_members_edit_gro"
-    "up_info\030\003 \001(\010\022\"\n\032can_admins_edit_group_i"
-    "nfo\030\004 \001(\010\022 \n\030show_join_leave_messages\030\005 "
-    "\001(\010\"@\n\024LoadAdminSettingsReq\022(\n\ngroup_pee"
-    "r\030\001 \001(\0132\024.zproto.GroupOutPeer\"\?\n\024LoadAdm"
-    "inSettingsRsp\022\'\n\010settings\030\001 \001(\0132\025.zproto"
-    ".AdminSettings\"i\n\024SaveAdminSettingsReq\022("
-    "\n\ngroup_peer\030\001 \001(\0132\024.zproto.GroupOutPeer"
-    "\022\'\n\010settings\030\002 \001(\0132\025.zproto.AdminSetting"
-    "s\":\n\016DeleteGroupReq\022(\n\ngroup_peer\030\001 \001(\0132"
-    "\024.zproto.GroupOutPeer\";\n\017ShareHistoryReq"
-    "\022(\n\ngroup_peer\030\001 \001(\0132\024.zproto.GroupOutPe"
-    "er\"\033\n\014InviteUrlRsp\022\013\n\003url\030\001 \001(\t\"@\n\024GetGr"
-    "oupInviteUrlReq\022(\n\ngroup_peer\030\001 \001(\0132\024.zp"
-    "roto.GroupOutPeer\">\n\022RevokeInviteUrlReq\022"
-    "(\n\ngroup_peer\030\001 \001(\0132\024.zproto.GroupOutPee"
-    "r\"P\n\014JoinGroupReq\022\r\n\005token\030\001 \001(\t\0221\n\ropti"
-    "mizations\030\002 \003(\0162\032.zproto.UpdateOptimizat"
-    "ion\"\251\001\n\014JoinGroupRsp\022\034\n\005group\030\001 \001(\0132\r.zp"
-    "roto.Group\022\033\n\005users\030\005 \003(\0132\014.zproto.User\022"
-    "\'\n\nuser_peers\030\007 \003(\0132\023.zproto.UserOutPeer"
-    "\022\013\n\003rid\030\006 \001(\003\022\013\n\003seq\030\002 \001(\005\022\r\n\005state\030\003 \001("
-    "\014\022\014\n\004date\030\004 \001(\003B)\n\027com.zchat.engine.zpro"
-    "toB\014ZProtoGroupsH\002b\006proto3", 4986);
+    "Peer\022&\n\tnew_owner\030\002 \001(\0132\023.zproto.UserOut"
+    "Peer\"\266\001\n\rAdminSettings\022\036\n\026show_admins_to"
+    "_members\030\001 \001(\010\022\032\n\022can_members_invite\030\002 \001"
+    "(\010\022#\n\033can_members_edit_group_info\030\003 \001(\010\022"
+    "\"\n\032can_admins_edit_group_info\030\004 \001(\010\022 \n\030s"
+    "how_join_leave_messages\030\005 \001(\010\"@\n\024LoadAdm"
+    "inSettingsReq\022(\n\ngroup_peer\030\001 \001(\0132\024.zpro"
+    "to.GroupOutPeer\"\?\n\024LoadAdminSettingsRsp\022"
+    "\'\n\010settings\030\001 \001(\0132\025.zproto.AdminSettings"
+    "\"i\n\024SaveAdminSettingsReq\022(\n\ngroup_peer\030\001"
+    " \001(\0132\024.zproto.GroupOutPeer\022\'\n\010settings\030\002"
+    " \001(\0132\025.zproto.AdminSettings\":\n\016DeleteGro"
+    "upReq\022(\n\ngroup_peer\030\001 \001(\0132\024.zproto.Group"
+    "OutPeer\";\n\017ShareHistoryReq\022(\n\ngroup_peer"
+    "\030\001 \001(\0132\024.zproto.GroupOutPeer\"\033\n\014InviteUr"
+    "lRsp\022\013\n\003url\030\001 \001(\t\"@\n\024GetGroupInviteUrlRe"
+    "q\022(\n\ngroup_peer\030\001 \001(\0132\024.zproto.GroupOutP"
+    "eer\">\n\022RevokeInviteUrlReq\022(\n\ngroup_peer\030"
+    "\001 \001(\0132\024.zproto.GroupOutPeer\"P\n\014JoinGroup"
+    "Req\022\r\n\005token\030\001 \001(\t\0221\n\roptimizations\030\002 \003("
+    "\0162\032.zproto.UpdateOptimization\"\251\001\n\014JoinGr"
+    "oupRsp\022\034\n\005group\030\001 \001(\0132\r.zproto.Group\022\033\n\005"
+    "users\030\005 \003(\0132\014.zproto.User\022\'\n\nuser_peers\030"
+    "\007 \003(\0132\023.zproto.UserOutPeer\022\013\n\003rid\030\006 \001(\003\022"
+    "\013\n\003seq\030\002 \001(\005\022\r\n\005state\030\003 \001(\014\022\014\n\004date\030\004 \001("
+    "\003B)\n\027com.zchat.engine.zprotoB\014ZProtoGrou"
+    "psH\002b\006proto3", 4932);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "groups.proto", &protobuf_RegisterTypes);
   LoadFullGroupsReq::default_instance_ = new LoadFullGroupsReq();
@@ -5030,7 +5027,6 @@ void GroupMemberAdminChangedNotify::clear_is_admin() {
 const int CreateGroupReq::kRidFieldNumber;
 const int CreateGroupReq::kTitleFieldNumber;
 const int CreateGroupReq::kUsersFieldNumber;
-const int CreateGroupReq::kGroupTypeFieldNumber;
 const int CreateGroupReq::kOptimizationsFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
@@ -5058,7 +5054,6 @@ void CreateGroupReq::SharedCtor() {
   _cached_size_ = 0;
   rid_ = GOOGLE_LONGLONG(0);
   title_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  group_type_ = 0;
 }
 
 CreateGroupReq::~CreateGroupReq() {
@@ -5203,21 +5198,7 @@ CreateGroupReq::users() const {
   return users_;
 }
 
-// optional .zproto.GroupType group_type = 6;
-void CreateGroupReq::clear_group_type() {
-  group_type_ = 0;
-}
- ::zproto::GroupType CreateGroupReq::group_type() const {
-  // @@protoc_insertion_point(field_get:zproto.CreateGroupReq.group_type)
-  return static_cast< ::zproto::GroupType >(group_type_);
-}
- void CreateGroupReq::set_group_type(::zproto::GroupType value) {
-  
-  group_type_ = value;
-  // @@protoc_insertion_point(field_set:zproto.CreateGroupReq.group_type)
-}
-
-// repeated .zproto.UpdateOptimization optimizations = 7;
+// repeated .zproto.UpdateOptimization optimizations = 4;
 int CreateGroupReq::optimizations_size() const {
   return optimizations_.size();
 }
@@ -5253,7 +5234,6 @@ CreateGroupReq::mutable_optimizations() {
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CreateGroupRsp::kSeqFieldNumber;
-const int CreateGroupRsp::kStateFieldNumber;
 const int CreateGroupRsp::kDateFieldNumber;
 const int CreateGroupRsp::kGroupFieldNumber;
 const int CreateGroupRsp::kUsersFieldNumber;
@@ -5281,10 +5261,8 @@ CreateGroupRsp::CreateGroupRsp(const CreateGroupRsp& from)
 
 void CreateGroupRsp::SharedCtor() {
     _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
   seq_ = 0;
-  state_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   date_ = GOOGLE_LONGLONG(0);
   group_ = NULL;
 }
@@ -5295,7 +5273,6 @@ CreateGroupRsp::~CreateGroupRsp() {
 }
 
 void CreateGroupRsp::SharedDtor() {
-  state_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != default_instance_) {
     delete group_;
   }
@@ -5356,50 +5333,6 @@ void CreateGroupRsp::clear_seq() {
   
   seq_ = value;
   // @@protoc_insertion_point(field_set:zproto.CreateGroupRsp.seq)
-}
-
-// optional bytes state = 2;
-void CreateGroupRsp::clear_state() {
-  state_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- const ::std::string& CreateGroupRsp::state() const {
-  // @@protoc_insertion_point(field_get:zproto.CreateGroupRsp.state)
-  return state_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void CreateGroupRsp::set_state(const ::std::string& value) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.CreateGroupRsp.state)
-}
- void CreateGroupRsp::set_state(const char* value) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.CreateGroupRsp.state)
-}
- void CreateGroupRsp::set_state(const void* value, size_t size) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.CreateGroupRsp.state)
-}
- ::std::string* CreateGroupRsp::mutable_state() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.CreateGroupRsp.state)
-  return state_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- ::std::string* CreateGroupRsp::release_state() {
-  // @@protoc_insertion_point(field_release:zproto.CreateGroupRsp.state)
-  
-  return state_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void CreateGroupRsp::set_allocated_state(::std::string* state) {
-  if (state != NULL) {
-    
-  } else {
-    
-  }
-  state_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), state);
-  // @@protoc_insertion_point(field_set_allocated:zproto.CreateGroupRsp.state)
 }
 
 // optional int64 date = 6;

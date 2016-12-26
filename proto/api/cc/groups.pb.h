@@ -1959,16 +1959,10 @@ class CreateGroupReq : public ::google::protobuf::Message /* @@protoc_insertion_
   const ::google::protobuf::RepeatedPtrField< ::zproto::UserOutPeer >&
       users() const;
 
-  // optional .zproto.GroupType group_type = 6;
-  void clear_group_type();
-  static const int kGroupTypeFieldNumber = 6;
-  ::zproto::GroupType group_type() const;
-  void set_group_type(::zproto::GroupType value);
-
-  // repeated .zproto.UpdateOptimization optimizations = 7;
+  // repeated .zproto.UpdateOptimization optimizations = 4;
   int optimizations_size() const;
   void clear_optimizations();
-  static const int kOptimizationsFieldNumber = 7;
+  static const int kOptimizationsFieldNumber = 4;
   ::zproto::UpdateOptimization optimizations(int index) const;
   void set_optimizations(int index, ::zproto::UpdateOptimization value);
   void add_optimizations(::zproto::UpdateOptimization value);
@@ -1984,7 +1978,6 @@ class CreateGroupReq : public ::google::protobuf::Message /* @@protoc_insertion_
   ::google::protobuf::internal::ArenaStringPtr title_;
   ::google::protobuf::RepeatedPtrField< ::zproto::UserOutPeer > users_;
   ::google::protobuf::RepeatedField<int> optimizations_;
-  int group_type_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_groups_2eproto();
   friend void protobuf_AssignDesc_groups_2eproto();
@@ -2044,17 +2037,6 @@ class CreateGroupRsp : public ::google::protobuf::Message /* @@protoc_insertion_
   ::google::protobuf::int32 seq() const;
   void set_seq(::google::protobuf::int32 value);
 
-  // optional bytes state = 2;
-  void clear_state();
-  static const int kStateFieldNumber = 2;
-  const ::std::string& state() const;
-  void set_state(const ::std::string& value);
-  void set_state(const char* value);
-  void set_state(const void* value, size_t size);
-  ::std::string* mutable_state();
-  ::std::string* release_state();
-  void set_allocated_state(::std::string* state);
-
   // optional int64 date = 6;
   void clear_date();
   static const int kDateFieldNumber = 6;
@@ -2099,7 +2081,6 @@ class CreateGroupRsp : public ::google::protobuf::Message /* @@protoc_insertion_
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
-  ::google::protobuf::internal::ArenaStringPtr state_;
   ::google::protobuf::int64 date_;
   ::zproto::Group* group_;
   ::google::protobuf::RepeatedPtrField< ::zproto::User > users_;
@@ -6021,21 +6002,7 @@ CreateGroupReq::users() const {
   return users_;
 }
 
-// optional .zproto.GroupType group_type = 6;
-inline void CreateGroupReq::clear_group_type() {
-  group_type_ = 0;
-}
-inline ::zproto::GroupType CreateGroupReq::group_type() const {
-  // @@protoc_insertion_point(field_get:zproto.CreateGroupReq.group_type)
-  return static_cast< ::zproto::GroupType >(group_type_);
-}
-inline void CreateGroupReq::set_group_type(::zproto::GroupType value) {
-  
-  group_type_ = value;
-  // @@protoc_insertion_point(field_set:zproto.CreateGroupReq.group_type)
-}
-
-// repeated .zproto.UpdateOptimization optimizations = 7;
+// repeated .zproto.UpdateOptimization optimizations = 4;
 inline int CreateGroupReq::optimizations_size() const {
   return optimizations_.size();
 }
@@ -6081,50 +6048,6 @@ inline void CreateGroupRsp::set_seq(::google::protobuf::int32 value) {
   
   seq_ = value;
   // @@protoc_insertion_point(field_set:zproto.CreateGroupRsp.seq)
-}
-
-// optional bytes state = 2;
-inline void CreateGroupRsp::clear_state() {
-  state_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& CreateGroupRsp::state() const {
-  // @@protoc_insertion_point(field_get:zproto.CreateGroupRsp.state)
-  return state_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void CreateGroupRsp::set_state(const ::std::string& value) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.CreateGroupRsp.state)
-}
-inline void CreateGroupRsp::set_state(const char* value) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.CreateGroupRsp.state)
-}
-inline void CreateGroupRsp::set_state(const void* value, size_t size) {
-  
-  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.CreateGroupRsp.state)
-}
-inline ::std::string* CreateGroupRsp::mutable_state() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.CreateGroupRsp.state)
-  return state_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* CreateGroupRsp::release_state() {
-  // @@protoc_insertion_point(field_release:zproto.CreateGroupRsp.state)
-  
-  return state_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void CreateGroupRsp::set_allocated_state(::std::string* state) {
-  if (state != NULL) {
-    
-  } else {
-    
-  }
-  state_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), state);
-  // @@protoc_insertion_point(field_set_allocated:zproto.CreateGroupRsp.state)
 }
 
 // optional int64 date = 6;

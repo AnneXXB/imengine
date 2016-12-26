@@ -25,6 +25,7 @@ struct GroupDAOImpl : public GroupDAO {
   
   int CheckExists(const std::string& creator_user_id, uint64_t client_group_id) override;
   int64_t Create(GroupDO& group) override;
+  int GetGroup(const std::string& group_id, GroupDO& group) override;
 };
 
 #endif

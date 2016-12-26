@@ -56,7 +56,7 @@ int ZRpcGroupsService::EditGroupShortName(const zproto::EditGroupShortNameReq& r
   return -1;
 }
 
-int ZRpcGroupsService::EditGroupTopic(const zproto::EditGroupShortNameReq& request, zproto::SeqDateRsp* response) {
+int ZRpcGroupsService::EditGroupTopic(const zproto::EditGroupTopicReq& request, zproto::SeqDateRsp* response) {
   LOG(ERROR) << "ZRpcGroupsService - EditGroupTopic unimplemented";
   return -1;
 }

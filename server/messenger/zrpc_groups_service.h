@@ -37,7 +37,7 @@ public:
   virtual int EditGroupAvatar(const zproto::EditGroupAvatarReq& request, zproto::EditGroupAvatarRsp* response);
   virtual int RemoveGroupAvatar(const zproto::RemoveGroupAvatarReq& request, zproto::SeqDateRsp* response);
   virtual int EditGroupShortName(const zproto::EditGroupShortNameReq& request, zproto::SeqRsp* response);
-  virtual int EditGroupTopic(const zproto::EditGroupShortNameReq& request, zproto::SeqDateRsp* response);
+  virtual int EditGroupTopic(const zproto::EditGroupTopicReq& request, zproto::SeqDateRsp* response);
   virtual int EditGroupAbout(const zproto::EditGroupAboutReq& request, zproto::SeqDateRsp* response);
   virtual int InviteUser(const zproto::InviteUserReq& request, zproto::SeqDateRsp* response);
   virtual int LeaveGroup(const zproto::LeaveGroupReq& request, zproto::SeqDateRsp* response);

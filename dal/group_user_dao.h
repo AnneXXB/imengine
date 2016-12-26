@@ -26,6 +26,8 @@ struct GroupUserDAO : public BaseDAO {
   static GroupUserDAO& GetInstance();
 
   virtual int64_t Create(GroupUserDOList& group_users) = 0 ;
+  virtual int GetGroupUserIDList(const std::string& group_id, std::list<std::string>& group_user_ids) = 0;
+
 
 };
 

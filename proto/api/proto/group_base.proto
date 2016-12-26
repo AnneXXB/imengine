@@ -37,12 +37,6 @@ message Member {
   bool is_admin = 4; //   is member admin of group
 }
 
-// GroupType
-enum GroupType {
-  GROUP = 0;
-  CHANNEL = 1;
-}
-
 // GroupPermissions
 enum GroupPermissions {
   SEND_MESSAGE = 0;
@@ -91,19 +85,12 @@ message Group {
   int64 access_hash = 2; //   Access hash of group
   string title = 3; //   Title of group
   Avatar avatar = 4; //   Avatar of group
-  int32 members_count = 24; //   Number of members
+  int32 members_count = 5; //   Number of members
   bool is_member = 6; //   Is current user a member of a group. Default is true.
-  bool is_hidden = 20; //   Is group hidden (not showing it in recent list). Default is false.
-  GroupType group_type = 25; //   Group Type. Used only for displaying information. Default is GROUP.
-  int64 permissions = 26; //   Permissions of group object
-  bool is_deleted = 27; //   Is this group deleted
-  map<string, RawArrayValue> ext = 22; //   Group extension Data
-  bool is_admin = 16; //   [DEPRECATED] Is current user an admin of a group
-  string creator_uid = 8; //   [DEPRECATED] Group creator
-  repeated Member members = 9; //   [DEPRECATED] Members of group
-  int64 create_date = 10; //   [DEPRECATED] Date of creation
-  string theme = 17; //   [DEPRECATED] Theme of group
-  string about = 18; //   [DEPRECATED] About of group
+  bool is_hidden = 7; //   Is group hidden (not showing it in recent list). Default is false.
+  int64 permissions = 8; //   Permissions of group object
+  bool is_deleted = 9; //   Is this group deleted
+  map<string, RawArrayValue> ext = 10; //   Group extension Data
 }
 
 // Goup Full information

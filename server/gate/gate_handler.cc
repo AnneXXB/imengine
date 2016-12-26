@@ -110,7 +110,6 @@ int gate::OnDataReceived(nebula::ZProtoPipeline* pipeline, std::shared_ptr<Packa
 
         ZRpcUtil::DoClientCall("auth_client", encoded)
         .within(std::chrono::milliseconds(5000))
-        
         // TODO(@benqi): conn_data可能会失效
         .then([conn_data, conn_id](ProtoRpcResponsePtr rsp) {
           CHECK(rsp);

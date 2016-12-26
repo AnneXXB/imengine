@@ -32,7 +32,6 @@ const ::google::protobuf::Descriptor* GroupFull_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   GroupFull_reflection_ = NULL;
 const ::google::protobuf::Descriptor* GroupFull_ExtEntry_descriptor_ = NULL;
-const ::google::protobuf::EnumDescriptor* GroupType_descriptor_ = NULL;
 const ::google::protobuf::EnumDescriptor* GroupPermissions_descriptor_ = NULL;
 const ::google::protobuf::EnumDescriptor* GroupFullPermissions_descriptor_ = NULL;
 
@@ -65,7 +64,7 @@ void protobuf_AssignDesc_group_5fbase_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Member, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Member, _is_default_instance_));
   Group_descriptor_ = file->message_type(1);
-  static const int Group_offsets_[17] = {
+  static const int Group_offsets_[10] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Group, id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Group, access_hash_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Group, title_),
@@ -73,16 +72,9 @@ void protobuf_AssignDesc_group_5fbase_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Group, members_count_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Group, is_member_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Group, is_hidden_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Group, group_type_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Group, permissions_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Group, is_deleted_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Group, ext_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Group, is_admin_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Group, creator_uid_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Group, members_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Group, create_date_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Group, theme_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Group, about_),
   };
   Group_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
@@ -122,9 +114,8 @@ void protobuf_AssignDesc_group_5fbase_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupFull, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupFull, _is_default_instance_));
   GroupFull_ExtEntry_descriptor_ = GroupFull_descriptor_->nested_type(0);
-  GroupType_descriptor_ = file->enum_type(0);
-  GroupPermissions_descriptor_ = file->enum_type(1);
-  GroupFullPermissions_descriptor_ = file->enum_type(2);
+  GroupPermissions_descriptor_ = file->enum_type(0);
+  GroupFullPermissions_descriptor_ = file->enum_type(1);
 }
 
 namespace {
@@ -188,37 +179,32 @@ void protobuf_AddDesc_group_5fbase_2eproto() {
     "\n\020group_base.proto\022\006zproto\032\013types.proto\032"
     "\013files.proto\"J\n\006Member\022\013\n\003uid\030\001 \001(\t\022\023\n\013i"
     "nviter_uid\030\002 \001(\t\022\014\n\004date\030\003 \001(\003\022\020\n\010is_adm"
-    "in\030\004 \001(\010\"\307\003\n\005Group\022\n\n\002id\030\001 \001(\t\022\023\n\013access"
+    "in\030\004 \001(\010\"\245\002\n\005Group\022\n\n\002id\030\001 \001(\t\022\023\n\013access"
     "_hash\030\002 \001(\003\022\r\n\005title\030\003 \001(\t\022\036\n\006avatar\030\004 \001"
-    "(\0132\016.zproto.Avatar\022\025\n\rmembers_count\030\030 \001("
-    "\005\022\021\n\tis_member\030\006 \001(\010\022\021\n\tis_hidden\030\024 \001(\010\022"
-    "%\n\ngroup_type\030\031 \001(\0162\021.zproto.GroupType\022\023"
-    "\n\013permissions\030\032 \001(\003\022\022\n\nis_deleted\030\033 \001(\010\022"
-    "#\n\003ext\030\026 \003(\0132\026.zproto.Group.ExtEntry\022\020\n\010"
-    "is_admin\030\020 \001(\010\022\023\n\013creator_uid\030\010 \001(\t\022\037\n\007m"
-    "embers\030\t \003(\0132\016.zproto.Member\022\023\n\013create_d"
-    "ate\030\n \001(\003\022\r\n\005theme\030\021 \001(\t\022\r\n\005about\030\022 \001(\t\032"
-    "A\n\010ExtEntry\022\013\n\003key\030\001 \001(\t\022$\n\005value\030\002 \001(\0132"
-    "\025.zproto.RawArrayValue:\0028\001\"\310\002\n\tGroupFull"
-    "\022\n\n\002id\030\001 \001(\t\022\023\n\013create_date\030\002 \001(\003\022\021\n\town"
-    "er_uid\030\003 \001(\t\022\037\n\007members\030\004 \003(\0132\016.zproto.M"
-    "ember\022\r\n\005theme\030\005 \001(\t\022\r\n\005about\030\006 \001(\t\022\'\n\003e"
-    "xt\030\007 \003(\0132\032.zproto.GroupFull.ExtEntry\022\030\n\020"
-    "is_async_members\030\010 \001(\010\022\031\n\021is_shared_hist"
-    "ory\030\t \001(\010\022\022\n\nshort_name\030\n \001(\t\022\023\n\013permiss"
-    "ions\030\013 \001(\003\032A\n\010ExtEntry\022\013\n\003key\030\001 \001(\t\022$\n\005v"
-    "alue\030\002 \001(\0132\025.zproto.RawArrayValue:\0028\001*#\n"
-    "\tGroupType\022\t\n\005GROUP\020\000\022\013\n\007CHANNEL\020\001*_\n\020Gr"
-    "oupPermissions\022\020\n\014SEND_MESSAGE\020\000\022\t\n\005CLEA"
-    "R\020\001\022\t\n\005LEAVE\020\002\022\n\n\006DELETE\020\003\022\010\n\004JOIN\020\004\022\r\n\t"
-    "VIEW_INFO\020\005*\356\001\n\024GroupFullPermissions\022\r\n\t"
-    "EDIT_INFO\020\000\022\020\n\014VIEW_MEMBERS\020\001\022\022\n\016INVITE_"
-    "MEMBERS\020\002\022\023\n\017INVITE_VIA_LINK\020\003\022\010\n\004CALL\020\004"
-    "\022\027\n\023EDIT_ADMIN_SETTINGS\020\005\022\017\n\013VIEW_ADMINS"
-    "\020\006\022\017\n\013EDIT_ADMINS\020\007\022\020\n\014KICK_INVITED\020\010\022\017\n"
-    "\013KICK_ANYONE\020\t\022\020\n\014EDIT_FOREIGN\020\n\022\022\n\016DELE"
-    "TE_FOREIGN\020\013B)\n\027com.zchat.engine.zprotoB"
-    "\014ZProtoGroupsH\002b\006proto3", 1343);
+    "(\0132\016.zproto.Avatar\022\025\n\rmembers_count\030\005 \001("
+    "\005\022\021\n\tis_member\030\006 \001(\010\022\021\n\tis_hidden\030\007 \001(\010\022"
+    "\023\n\013permissions\030\010 \001(\003\022\022\n\nis_deleted\030\t \001(\010"
+    "\022#\n\003ext\030\n \003(\0132\026.zproto.Group.ExtEntry\032A\n"
+    "\010ExtEntry\022\013\n\003key\030\001 \001(\t\022$\n\005value\030\002 \001(\0132\025."
+    "zproto.RawArrayValue:\0028\001\"\310\002\n\tGroupFull\022\n"
+    "\n\002id\030\001 \001(\t\022\023\n\013create_date\030\002 \001(\003\022\021\n\towner"
+    "_uid\030\003 \001(\t\022\037\n\007members\030\004 \003(\0132\016.zproto.Mem"
+    "ber\022\r\n\005theme\030\005 \001(\t\022\r\n\005about\030\006 \001(\t\022\'\n\003ext"
+    "\030\007 \003(\0132\032.zproto.GroupFull.ExtEntry\022\030\n\020is"
+    "_async_members\030\010 \001(\010\022\031\n\021is_shared_histor"
+    "y\030\t \001(\010\022\022\n\nshort_name\030\n \001(\t\022\023\n\013permissio"
+    "ns\030\013 \001(\003\032A\n\010ExtEntry\022\013\n\003key\030\001 \001(\t\022$\n\005val"
+    "ue\030\002 \001(\0132\025.zproto.RawArrayValue:\0028\001*_\n\020G"
+    "roupPermissions\022\020\n\014SEND_MESSAGE\020\000\022\t\n\005CLE"
+    "AR\020\001\022\t\n\005LEAVE\020\002\022\n\n\006DELETE\020\003\022\010\n\004JOIN\020\004\022\r\n"
+    "\tVIEW_INFO\020\005*\356\001\n\024GroupFullPermissions\022\r\n"
+    "\tEDIT_INFO\020\000\022\020\n\014VIEW_MEMBERS\020\001\022\022\n\016INVITE"
+    "_MEMBERS\020\002\022\023\n\017INVITE_VIA_LINK\020\003\022\010\n\004CALL\020"
+    "\004\022\027\n\023EDIT_ADMIN_SETTINGS\020\005\022\017\n\013VIEW_ADMIN"
+    "S\020\006\022\017\n\013EDIT_ADMINS\020\007\022\020\n\014KICK_INVITED\020\010\022\017"
+    "\n\013KICK_ANYONE\020\t\022\020\n\014EDIT_FOREIGN\020\n\022\022\n\016DEL"
+    "ETE_FOREIGN\020\013B)\n\027com.zchat.engine.zproto"
+    "B\014ZProtoGroupsH\002b\006proto3", 1144);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "group_base.proto", &protobuf_RegisterTypes);
   Member::default_instance_ = new Member();
@@ -236,20 +222,6 @@ struct StaticDescriptorInitializer_group_5fbase_2eproto {
     protobuf_AddDesc_group_5fbase_2eproto();
   }
 } static_descriptor_initializer_group_5fbase_2eproto_;
-const ::google::protobuf::EnumDescriptor* GroupType_descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return GroupType_descriptor_;
-}
-bool GroupType_IsValid(int value) {
-  switch(value) {
-    case 0:
-    case 1:
-      return true;
-    default:
-      return false;
-  }
-}
-
 const ::google::protobuf::EnumDescriptor* GroupPermissions_descriptor() {
   protobuf_AssignDescriptorsOnce();
   return GroupPermissions_descriptor_;
@@ -513,16 +485,9 @@ const int Group::kAvatarFieldNumber;
 const int Group::kMembersCountFieldNumber;
 const int Group::kIsMemberFieldNumber;
 const int Group::kIsHiddenFieldNumber;
-const int Group::kGroupTypeFieldNumber;
 const int Group::kPermissionsFieldNumber;
 const int Group::kIsDeletedFieldNumber;
 const int Group::kExtFieldNumber;
-const int Group::kIsAdminFieldNumber;
-const int Group::kCreatorUidFieldNumber;
-const int Group::kMembersFieldNumber;
-const int Group::kCreateDateFieldNumber;
-const int Group::kThemeFieldNumber;
-const int Group::kAboutFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Group::Group()
@@ -555,18 +520,12 @@ void Group::SharedCtor() {
   members_count_ = 0;
   is_member_ = false;
   is_hidden_ = false;
-  group_type_ = 0;
   permissions_ = GOOGLE_LONGLONG(0);
   is_deleted_ = false;
   ext_.SetAssignDescriptorCallback(
       protobuf_AssignDescriptorsOnce);
   ext_.SetEntryDescriptor(
       &::zproto::Group_ExtEntry_descriptor_);
-  is_admin_ = false;
-  creator_uid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  create_date_ = GOOGLE_LONGLONG(0);
-  theme_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  about_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 Group::~Group() {
@@ -577,9 +536,6 @@ Group::~Group() {
 void Group::SharedDtor() {
   id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   title_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  creator_uid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  theme_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  about_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != default_instance_) {
     delete avatar_;
   }
@@ -768,7 +724,7 @@ void Group::set_allocated_avatar(::zproto::Avatar* avatar) {
   // @@protoc_insertion_point(field_set_allocated:zproto.Group.avatar)
 }
 
-// optional int32 members_count = 24;
+// optional int32 members_count = 5;
 void Group::clear_members_count() {
   members_count_ = 0;
 }
@@ -796,7 +752,7 @@ void Group::clear_is_member() {
   // @@protoc_insertion_point(field_set:zproto.Group.is_member)
 }
 
-// optional bool is_hidden = 20;
+// optional bool is_hidden = 7;
 void Group::clear_is_hidden() {
   is_hidden_ = false;
 }
@@ -810,21 +766,7 @@ void Group::clear_is_hidden() {
   // @@protoc_insertion_point(field_set:zproto.Group.is_hidden)
 }
 
-// optional .zproto.GroupType group_type = 25;
-void Group::clear_group_type() {
-  group_type_ = 0;
-}
- ::zproto::GroupType Group::group_type() const {
-  // @@protoc_insertion_point(field_get:zproto.Group.group_type)
-  return static_cast< ::zproto::GroupType >(group_type_);
-}
- void Group::set_group_type(::zproto::GroupType value) {
-  
-  group_type_ = value;
-  // @@protoc_insertion_point(field_set:zproto.Group.group_type)
-}
-
-// optional int64 permissions = 26;
+// optional int64 permissions = 8;
 void Group::clear_permissions() {
   permissions_ = GOOGLE_LONGLONG(0);
 }
@@ -838,7 +780,7 @@ void Group::clear_permissions() {
   // @@protoc_insertion_point(field_set:zproto.Group.permissions)
 }
 
-// optional bool is_deleted = 27;
+// optional bool is_deleted = 9;
 void Group::clear_is_deleted() {
   is_deleted_ = false;
 }
@@ -852,7 +794,7 @@ void Group::clear_is_deleted() {
   // @@protoc_insertion_point(field_set:zproto.Group.is_deleted)
 }
 
-// map<string, .zproto.RawArrayValue> ext = 22;
+// map<string, .zproto.RawArrayValue> ext = 10;
 int Group::ext_size() const {
   return ext_.size();
 }
@@ -868,196 +810,6 @@ Group::ext() const {
 Group::mutable_ext() {
   // @@protoc_insertion_point(field_mutable_map:zproto.Group.ext)
   return ext_.MutableMap();
-}
-
-// optional bool is_admin = 16;
-void Group::clear_is_admin() {
-  is_admin_ = false;
-}
- bool Group::is_admin() const {
-  // @@protoc_insertion_point(field_get:zproto.Group.is_admin)
-  return is_admin_;
-}
- void Group::set_is_admin(bool value) {
-  
-  is_admin_ = value;
-  // @@protoc_insertion_point(field_set:zproto.Group.is_admin)
-}
-
-// optional string creator_uid = 8;
-void Group::clear_creator_uid() {
-  creator_uid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- const ::std::string& Group::creator_uid() const {
-  // @@protoc_insertion_point(field_get:zproto.Group.creator_uid)
-  return creator_uid_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void Group::set_creator_uid(const ::std::string& value) {
-  
-  creator_uid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.Group.creator_uid)
-}
- void Group::set_creator_uid(const char* value) {
-  
-  creator_uid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.Group.creator_uid)
-}
- void Group::set_creator_uid(const char* value, size_t size) {
-  
-  creator_uid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.Group.creator_uid)
-}
- ::std::string* Group::mutable_creator_uid() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.Group.creator_uid)
-  return creator_uid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- ::std::string* Group::release_creator_uid() {
-  // @@protoc_insertion_point(field_release:zproto.Group.creator_uid)
-  
-  return creator_uid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void Group::set_allocated_creator_uid(::std::string* creator_uid) {
-  if (creator_uid != NULL) {
-    
-  } else {
-    
-  }
-  creator_uid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), creator_uid);
-  // @@protoc_insertion_point(field_set_allocated:zproto.Group.creator_uid)
-}
-
-// repeated .zproto.Member members = 9;
-int Group::members_size() const {
-  return members_.size();
-}
-void Group::clear_members() {
-  members_.Clear();
-}
-const ::zproto::Member& Group::members(int index) const {
-  // @@protoc_insertion_point(field_get:zproto.Group.members)
-  return members_.Get(index);
-}
-::zproto::Member* Group::mutable_members(int index) {
-  // @@protoc_insertion_point(field_mutable:zproto.Group.members)
-  return members_.Mutable(index);
-}
-::zproto::Member* Group::add_members() {
-  // @@protoc_insertion_point(field_add:zproto.Group.members)
-  return members_.Add();
-}
-::google::protobuf::RepeatedPtrField< ::zproto::Member >*
-Group::mutable_members() {
-  // @@protoc_insertion_point(field_mutable_list:zproto.Group.members)
-  return &members_;
-}
-const ::google::protobuf::RepeatedPtrField< ::zproto::Member >&
-Group::members() const {
-  // @@protoc_insertion_point(field_list:zproto.Group.members)
-  return members_;
-}
-
-// optional int64 create_date = 10;
-void Group::clear_create_date() {
-  create_date_ = GOOGLE_LONGLONG(0);
-}
- ::google::protobuf::int64 Group::create_date() const {
-  // @@protoc_insertion_point(field_get:zproto.Group.create_date)
-  return create_date_;
-}
- void Group::set_create_date(::google::protobuf::int64 value) {
-  
-  create_date_ = value;
-  // @@protoc_insertion_point(field_set:zproto.Group.create_date)
-}
-
-// optional string theme = 17;
-void Group::clear_theme() {
-  theme_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- const ::std::string& Group::theme() const {
-  // @@protoc_insertion_point(field_get:zproto.Group.theme)
-  return theme_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void Group::set_theme(const ::std::string& value) {
-  
-  theme_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.Group.theme)
-}
- void Group::set_theme(const char* value) {
-  
-  theme_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.Group.theme)
-}
- void Group::set_theme(const char* value, size_t size) {
-  
-  theme_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.Group.theme)
-}
- ::std::string* Group::mutable_theme() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.Group.theme)
-  return theme_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- ::std::string* Group::release_theme() {
-  // @@protoc_insertion_point(field_release:zproto.Group.theme)
-  
-  return theme_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void Group::set_allocated_theme(::std::string* theme) {
-  if (theme != NULL) {
-    
-  } else {
-    
-  }
-  theme_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), theme);
-  // @@protoc_insertion_point(field_set_allocated:zproto.Group.theme)
-}
-
-// optional string about = 18;
-void Group::clear_about() {
-  about_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- const ::std::string& Group::about() const {
-  // @@protoc_insertion_point(field_get:zproto.Group.about)
-  return about_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void Group::set_about(const ::std::string& value) {
-  
-  about_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.Group.about)
-}
- void Group::set_about(const char* value) {
-  
-  about_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.Group.about)
-}
- void Group::set_about(const char* value, size_t size) {
-  
-  about_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.Group.about)
-}
- ::std::string* Group::mutable_about() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.Group.about)
-  return about_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- ::std::string* Group::release_about() {
-  // @@protoc_insertion_point(field_release:zproto.Group.about)
-  
-  return about_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void Group::set_allocated_about(::std::string* about) {
-  if (about != NULL) {
-    
-  } else {
-    
-  }
-  about_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), about);
-  // @@protoc_insertion_point(field_set_allocated:zproto.Group.about)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
