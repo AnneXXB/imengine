@@ -58,6 +58,18 @@ set (SRC_LIST
   seq_updates_ngen_dao.h
   seq_updates_ngen_dao_impl.cc
   seq_updates_ngen_dao_impl.h
+  group_invite_token_do.h
+  group_invite_token_dao.h
+  group_invite_token_dao_impl.cc
+  group_invite_token_dao_impl.h
+  file_do.h
+  file_dao.h
+  file_dao_impl.cc
+  file_dao_impl.h
+  file_part_do.h
+  file_part_dao.h
+  file_part_dao_impl.cc
+  file_part_dao_impl.h
  )
 
 add_library(dal STATIC ${SRC_LIST})
