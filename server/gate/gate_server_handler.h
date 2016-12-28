@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2016, https://github.com/zhatalk
+ *  Copyright (c) 2016, https://github.com/nebula-im/imengine
  *  All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,15 +15,14 @@
  * limitations under the License.
  */
 
-#ifndef	GATE_GATE_SERVER_UTIL_H_
-#define	GATE_GATE_SERVER_UTIL_H_
+#ifndef	GATE_GATE_SERVER_HANDLER_H_
+#define	GATE_GATE_SERVER_HANDLER_H_
 
-/*
+#include <folly/io/async/EventBase.h>
 #include "nebula/net/handler/nebula_base_handler.h"
-#include "nebula/net/zproto/zproto_package_data.h"
-// #include "nebula/net/handler/teamtalk/teamtalk_package_data.h"
-#include "nebula/net/handler/nebula_handler_util.h"
+#include "nebula/net/handler/zproto/zproto_handler.h"
 
+#include "gate/gate_base_handler.h"
 
 // 客户端连接成功后
 // 1. 10秒内没收到数据包则断开
@@ -34,7 +33,11 @@
 // 6. 通知成功后返回后认证成功
 // 7. 可以接收客户端消息
 // 8. 收到消息后转发给router
-struct ClientConnContext : public nebula::ConnAttachData {
+class GateServerHandler : public GateBaseHandler {
+public:
+  GateServerHandler() = default;
+  virtual ~GateServerHandler() = default;
+
   enum class State : int
   {
     NONE = 0,
@@ -43,34 +46,34 @@ struct ClientConnContext : public nebula::ConnAttachData {
     AUTH = 3,
     FORWARD_TO_STATUS = 4,
     WORKING = 5,
-    ERROR = 6
+    CLOSING = 6,
+    ERROR = 7
   };
+
+  ///////////////////////////////////////////////////////////////////////////////////////
+  int OnNewConnection() override;
+  int OnDataReceived(std::shared_ptr<PackageMessage> message_data) override;
+  int OnConnectionClosed() override;
+
+  // TODO(@benqi): 支持异步关闭
+  void Close(int resaon);
+
+  void NotifyClientOnline();
+  void NotifyClientOffline();
   
-  State state{State::NONE};
-  
+  int OnGateClientAuthReq(std::shared_ptr<PackageMessage> message_data);
+  int OnAuthServerAuthRsp(ProtoRpcResponsePtr response);
+
+protected:
+  State state_ {State::NONE};
+
   // 用户基本信息
-  uint32_t app_id{1};
-  std::string user_id;
-  // uint32_t user_id;
-  std::string nick;
-  std::string avatar;
+  // TODO(@benqi): 缓存更多的用户数据
+  uint32_t app_id_ {1};
+  std::string user_id_;
+  std::string nick_;
+  std::string avatar_;
 };
 
-inline folly::Future<folly::Unit> WritePackage(const std::string& service_name, std::shared_ptr<PackageMessage> message_data) {
-  std::unique_ptr<folly::IOBuf> data;
-  message_data->SerializeToIOBuf(data);
-  return WriterUtil::Write(service_name, std::move(data));
-}
+#endif // GATE_GATE_SERVER_HANDLER_H_
 
-inline folly::Future<folly::Unit> WritePackage(uint64_t conn_id, std::shared_ptr<PackageMessage> message_data) {
-  std::unique_ptr<folly::IOBuf> data;
-  message_data->SerializeToIOBuf(data);
-  return WriterUtil::Write(conn_id, std::move(data));
-}
-*/
-
-inline uint32_t GetServerID() {
-  return 1;
-}
-
-#endif

@@ -21,8 +21,21 @@ set (SRC_LIST
   gate_server.h
   gate_handler.cc
   gate_handler.h
+  gate_base_handler.cc
+  gate_base_handler.h
   gate_server_util.h
-  )
+  gate_server_handler.cc
+  gate_server_handler.h
+  push_channel_client_handler.cc
+  push_channel_client_handler.h
+  messenger_client_handler.cc
+  messenger_client_handler.h
+  online_status_client_handler.cc
+  online_status_client_handler.h
+  auth_client_handler.cc
+  auth_client_handler.h
+  ../base/message_handler_util.h
+)
 
 add_executable (gate_server ${SRC_LIST})
 target_link_libraries (gate_server net base proto)

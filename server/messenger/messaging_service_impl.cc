@@ -155,39 +155,6 @@ int MessagingServiceImpl::LoadGroupedDialogs(const zproto::LoadGroupedDialogsReq
   return -1;
 }
 
-/*
-
-int MessengerServiceImpl::MessageSync(const zproto::MessageSyncReq& request, zproto::MessageSyncRsp* response) {
-  std::string user_id = "benqi@zhazha";
-  uint64_t received_max_seq = request.received_max_seq();
-  
-  UserMessageDOList user_message_list;
-  UserMessageDAO::GetInstance().LoadUserMessageList(user_id, received_max_seq, user_message_list);
-  // TODO(@benqi): 出错
-  
-  std::list<uint64_t> message_ids;
-  for (auto& v : user_message_list) {
-    message_ids.push_back(v->message_id);
-  }
-  
-  HistoryMessageDOList history_message_list;
-  HistoryMessageDAO::GetInstance().LoadHistoryMessageList(message_ids, history_message_list);
-  // TODO(@benqi): 出错
-  
-  for (auto& v : history_message_list) {
-    auto message_data = response->add_message_data();
-    message_data->set_message_id(v->id);
-    message_data->set_sender_user_id(v->sender_user_id);
-    message_data->mutable_peer()->set_id(v->peer_id);
-    message_data->mutable_peer()->set_type((zproto::PeerType)v->peer_type);
-    message_data->set_client_message_id(v->client_message_id);
-  }
-
-  return 0;
-}
-
-*/
-
 // 发送私聊
 int MessagingServiceImpl::SendPrivateMessage(const zproto::SendMessageReq& request, zproto::SeqDateRsp* response) {
   auto& history_message_dao = HistoryMessageDAO::GetInstance();

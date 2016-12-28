@@ -20,27 +20,20 @@
 
 bool GateServer::Initialize() {
   // 初始化处理器
-
-//  // 连接router，使用zproto协议
-//  TeamtalkEventCallback::Initializer(FrontendHandler::OnNewConnection,
-//                                     FrontendHandler::OnDataReceived,
-//                                     FrontendHandler::OnConnectionClosed);
-
-  // 连接router，使用zproto协议
   ZProtoEventCallback::Initializer(gate::OnNewConnection,
                                    gate::OnDataReceived,
                                    gate::OnConnectionClosed);
 
   // 注册服务
+  // 客户端连接服务
   RegisterService("gate_server", "tcp_server", "zproto");
-  
+  // TODO(@benqi): 直接转发到router_server
   // 推消息等
   RegisterService("push_channel_client", "tcp_client", "zproto");
   // 在线状态
-  RegisterService("online_status_client", "rpc_client", "zrpc");
+  RegisterService("online_status_client", "tcp_client", "zproto");
   // 登录认证
-  RegisterService("auth_client", "rpc_client", "zrpc");
-
+  RegisterService("auth_client", "tcp_client", "zproto");
   // IM核心服务
   RegisterService("messenger_client", "tcp_client", "zproto");
   // 非IM核心业务
@@ -50,7 +43,9 @@ bool GateServer::Initialize() {
 }
 
 bool GateServer::Run() {
-  return BaseServer::Run();
+  BaseServer::Run();
+  ZProtoEventCallback::Destroy();
+  return true;
 }
 
 
