@@ -17,41 +17,70 @@
 
 #include "online/http_online_service.h"
 
+#include <folly/dynamic.h>
+#include <folly/json.h>
+
 #include "nebula/net/handler/http/http_request_handler.h"
 
 #include "online/online_session_manager.h"
 
 REGISTER_HTTP_HANDLER(StatusHttpHandler, "/query", Query);
 
+/*
+ 查询用户状态
+ get请求：
+ http://status.nebulaim.com:15001/query?uid=xxx
+ 返回数据结构：
+ {
+  [
+    {
+      "server_id": xxx, // gate_server编号
+      "app_id": xxx,		// app_id
+      "user_id": xxx,   // 用户id
+      "conn_id": xxx,   // 连接id
+      "status": xxx     // 状态
+    }
+	]
+ }
+ */
+
 void Query(const proxygen::HTTPMessage& headers, const folly::IOBuf* body, proxygen::ResponseBuilder* r) {
-#if 0
-  auto req = ToApiRpcRequest<zproto::QueryOnlineUserReq>(request);
-  LOG(INFO) << (*req)->Utf8DebugString();
+  std::string uids = headers.getDecodedQueryParam("uids");
+  std::string app_id = headers.getDecodedQueryParam("app_id");
   
-  auto online_manager = OnlineSessionManager::GetInstance();
-  
+  std::vector<folly::StringPiece> v;
+  folly::split(",", uids, v);
+
   std::list<std::string> app_user_id_list;
-  SessionEntryList sessions;
   
-  for (int i=0; i<(*req)->user_id_list_size(); ++i) {
-    std::string app_user_id = (*req)->user_id_list(i).user_id() + "@" + folly::to<std::string>((*req)->user_id_list(i).app_id());
+  for (auto& uid : v) {
+    std::string app_user_id = uid.str() + "@" + app_id;
     app_user_id_list.push_back(app_user_id);
   }
   
+  SessionEntryList sessions;
+  auto online_manager = OnlineSessionManager::GetInstance();
   online_manager->LookupEntrysByUserIDList(app_user_id_list, &sessions);
   
-  auto rsp = std::make_shared<ApiRpcOk<zproto::QueryOnlineUserRsp>>();
-  rsp->set_req_message_id(request->message_id());
-  
+  folly::dynamic d = folly::dynamic::array;
+  // object();
+
   for (auto& v : sessions) {
-    auto online_user = (*rsp)->add_online_users();
-    online_user->set_app_id(v.app_id);
-    online_user->set_user_id(v.user_id);
-    online_user->set_server_id(v.server_id);
-    online_user->set_conn_id(v.session_id);
+    folly::dynamic d2 = folly::dynamic::object();
+    d2["app_id"] = v.app_id;
+    d2["user_id"] = v.user_id;
+    d2["server_id"] = v.server_id;
+    d2["conn_id"] = v.session_id;
+    d2["status"] = 1;
+
+    d.push_back(d2);
   }
+  auto json = folly::toJson(d);
+  json.push_back('\n');
+  std::unique_ptr<folly::IOBuf> json_string = folly::IOBuf::copyBuffer(json.c_str(), json.length());
   
-  return rsp;
-#endif
+  LOG(INFO) << "Query - query result: " << json;
+  
+  r->header("Content-Type", "application/json;charset=utf-8").body(std::move(json_string));
 }
 

@@ -44,7 +44,9 @@ bool PushServer::Initialize() {
 }
 
 bool PushServer::Run() {
-  return BaseServer::Run();
+  BaseServer::Run();
+  ZProtoEventCallback::Destroy();
+  return true;
 }
 
 int main(int argc, char* argv[]) {
