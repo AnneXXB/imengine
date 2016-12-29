@@ -26,6 +26,7 @@ struct SequenceDAO : public BaseDAO {
   static SequenceDAO& GetInstance();
 
   virtual uint64_t GetNextID(const std::string& key) = 0;
+  virtual uint64_t GetNextID2(const std::string& key) = 0;
 };
 
 #endif

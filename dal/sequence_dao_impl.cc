@@ -64,6 +64,8 @@ uint64_t SequenceDAOImpl::GetNextID(const std::string& key) {
       
       // 重新设置redis
       conn->set(seq_key, folly::to<std::string>(seq_updates_ngen_do.seq));
+    } else {
+      seq_updates_ngen_do.seq = 1;
     }
   }
   

@@ -33,7 +33,7 @@ SequenceModel& SequenceModel::GetInstance() {
   return instance;
 }
 
-int SequenceModel::DeliveryUpdateDataNotMe(uint64_t my_conn_id, const std::list<std::string>& uid_list, int update_header, const std::string& update_data) {
+int SequenceModel::DeliveryUpdateDataNotMe(uint64_t my_conn_id, const std::list<std::string>& uid_list, uint32_t update_header, const std::string& update_data) {
   // 同步队列
   auto& sequence_dao = SequenceDAO::GetInstance();
   auto& user_sequence_dao = UserSequenceDAO::GetInstance();
@@ -54,7 +54,7 @@ int SequenceModel::DeliveryUpdateDataNotMe(uint64_t my_conn_id, const std::list<
   // auto seq =
   for (auto & uid : uid_list) {
     // user_sequence_do
-    user_sequence_do.seq = sequence_dao.GetNextID(uid);
+    user_sequence_do.seq = sequence_dao.GetNextID2(uid);
     user_sequence_do.user_id = uid;
     
     int r = user_sequence_dao.Create(user_sequence_do);

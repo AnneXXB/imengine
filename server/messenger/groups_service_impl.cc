@@ -25,10 +25,12 @@
 #include "nebula/net/rpc/zrpc_service_util.h"
 
 #include "proto/api/error_codes.h"
+#include "proto/api/cc/messaging.pb.h"
 #include "dal/sequence_dao.h"
 
 #include "biz_model/group_model.h"
 #include "biz_model/dialog_model.h"
+#include "biz_model/message_model.h"
 
 int GroupsServiceImpl::LoadFullGroups(const zproto::LoadFullGroupsReq& request, zproto::LoadFullGroupsRsp* response) {
   return -1;
@@ -55,6 +57,9 @@ int GroupsServiceImpl::CreateGroup(const zproto::CreateGroupReq& request, zproto
   // 创建群ID
   std::string group_id;
   
+  auto seq = SequenceDAO::GetInstance().GetNextID(uid());
+  auto now = NowInMsecTime();
+  
   int rv = GroupModel::GetInstance().CreateIfNotExists(uid(),
                                                        request.rid(),
                                                        request.title(),
@@ -66,9 +71,6 @@ int GroupsServiceImpl::CreateGroup(const zproto::CreateGroupReq& request, zproto
     // 幂等操作，如果Group存在，则认为已经走完流程了。
     // 已经存在，直接返回
     LOG(WARNING) << "CreateGroup - isexists by uid: " << uid() << ", rid: " << request.rid();
-    
-    auto seq = SequenceDAO::GetInstance().GetNextID(uid());
-    auto now = NowInMsecTime();
     
     // 直接生成一个SEQ返回，
     response->set_seq(seq);
@@ -84,8 +86,15 @@ int GroupsServiceImpl::CreateGroup(const zproto::CreateGroupReq& request, zproto
   // TODO(@benqi): 创建会话(user_dialog)
   rv = DialogModel::GetInstance().CreateIfNotExists(member_list, zproto::PEER_TYPE_GROUP, group_id);
   
+
   // TODO(@benqi): 发一群创建消息
-  
+  MessageModel::GetInstance().SendServerGroupMessage(uid(),
+                                                     group_id,
+                                                     member_list,
+                                                     seq,
+                                                     zproto::TEXT,
+                                                     "uid",
+                                                     "");
   // 返回
   response->set_seq(GetNextIDBySnowflake());
   response->set_date(NowInMsecTime());

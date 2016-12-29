@@ -177,7 +177,7 @@ int DoQuit(const std::vector<folly::StringPiece>& command_lines) {
 CmdEntry g_cmds[] = {
   // login/logout
   {"connect", "connect serv_ip serv_port user_id", 4, 0, DoConnect},
-  {"send_message", "sendmessage user_id content", 3, 0, DoSendMessage},
+  {"send_message", "send_message user_id content", 3, 0, DoSendMessage},
   {"send_group_message", "send_group_message group_id content", 3, 0, DoSendGroupMessage},
   {"messagesync", "messagesync", 1, 0, DoMessageSync},
   {"create_group", "create_group group_title uid1...", 3, 10, DoCreateGroup},

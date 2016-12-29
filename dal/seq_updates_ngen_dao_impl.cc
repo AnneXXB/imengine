@@ -27,7 +27,7 @@ int64_t SeqUpdatesNgenDAOImpl::GetSequence(const std::string& user_id) {
   DoStorageQuery("nebula_engine",
                         [&](std::string& query_string) {
                           folly::format(&query_string,
-                                        "SELECT seq FROM seq_updates_ngen WHERE user_id='{}')",
+                                        "SELECT seq FROM seq_updates_ngen WHERE user_id='{}'",
                                         user_id);
                         },
                         [&](db::QueryAnswer& answ) -> int {

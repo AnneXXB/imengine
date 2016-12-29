@@ -20,6 +20,7 @@
 
 
 #include <string>
+#include <list>
 
 class MessageModel {
 public:
@@ -35,6 +36,23 @@ public:
                         int message_content_type,
                         const std::string& message_content_data,
                         const std::string& passthrough_data);
+  
+  // 发送服务端消息
+  int SendServerMessage(const std::string& from_id,
+                        const std::string& to_id,
+                        uint64_t message_peer_seq,
+                        int message_content_type,
+                        const std::string& message_content_data,
+                        const std::string& passthrough_data);
+
+  int SendServerGroupMessage(const std::string& from_id,
+                             const std::string& group_id,
+                             const std::list<std::string>& group_user_id_list,
+                             uint64_t message_peer_seq,
+                             int message_content_type,
+                             const std::string& message_content_data,
+                             const std::string& passthrough_data);
+
 };
 
 

@@ -18,8 +18,15 @@
 #include "biz_model/message_model.h"
 
 #include "nebula/base/time_util.h"
+#include "nebula/base/id_util.h"
+
 #include "proto/api/error_codes.h"
+#include "proto/api/cc/messaging.pb.h"
+#include "proto/api/cc/groups.pb.h"
+#include "nebula/net/zproto/api_message_box.h"
+
 #include "dal/history_message_dao.h"
+#include "biz_model/sequence_model.h"
 
 MessageModel& MessageModel::GetInstance() {
   static MessageModel instance;
@@ -76,3 +83,77 @@ int MessageModel::CreateIfNotExists(const std::string& sender_user_id,
   
   return kErrOK;
 }
+
+int MessageModel::SendServerMessage(const std::string& from_id,
+                                    const std::string& to_id,
+                                    uint64_t message_peer_seq,
+                                    int message_content_type,
+                                    const std::string& message_content_data,
+                                    const std::string& passthrough_data) {
+  auto rid = GetNextIDBySnowflake();
+  
+  CreateIfNotExists(from_id,
+                    zproto::PEER_TYPE_PRIVATE,
+                    to_id,
+                    message_peer_seq,
+                    rid,
+                    message_content_type,
+                    message_content_data,
+                    passthrough_data);
+  
+  std::list<std::string> uid_list;
+  uid_list.push_back(from_id);
+  uid_list.push_back(to_id);
+  
+  zproto::MessageNotify message_notify;
+  message_notify.mutable_peer()->set_id(to_id);
+  message_notify.mutable_peer()->set_type(zproto::PEER_TYPE_PRIVATE);
+  message_notify.set_sender_uid(from_id);
+  message_notify.set_rid(rid);
+  message_notify.set_date(NowInMsecTime());
+  message_notify.mutable_message()->set_message_type(zproto::TEXT);
+  message_notify.mutable_message()->set_message_data(message_content_data);
+  
+  auto update_header = CRC32("zproto::MessageNotify");
+  std::string update_data;
+  message_notify.SerializeToString(&update_data);
+  
+  SequenceModel::GetInstance().DeliveryUpdateDataNotMe(0, uid_list, update_header, update_data);
+  return kErrOK;
+}
+
+int MessageModel::SendServerGroupMessage(const std::string& from_id,
+                           const std::string& group_id,
+                           const std::list<std::string>& group_user_id_list,
+                           uint64_t message_peer_seq,
+                           int message_content_type,
+                           const std::string& message_content_data,
+                           const std::string& passthrough_data) {
+  auto rid = GetNextIDBySnowflake();
+  
+  CreateIfNotExists(from_id,
+                    zproto::PEER_TYPE_GROUP,
+                    group_id,
+                    message_peer_seq,
+                    rid,
+                    message_content_type,
+                    message_content_data,
+                    passthrough_data);
+  
+  zproto::MessageNotify message_notify;
+  message_notify.mutable_peer()->set_id(group_id);
+  message_notify.mutable_peer()->set_type(zproto::PEER_TYPE_GROUP);
+  message_notify.set_sender_uid(from_id);
+  message_notify.set_rid(rid);
+  message_notify.set_date(NowInMsecTime());
+  message_notify.mutable_message()->set_message_type(zproto::TEXT);
+  message_notify.mutable_message()->set_message_data(message_content_data);
+  
+  auto update_header = CRC32("zproto::MessageNotify");
+  std::string update_data;
+  message_notify.SerializeToString(&update_data);
+  
+  SequenceModel::GetInstance().DeliveryUpdateDataNotMe(0, group_user_id_list, update_header, update_data);
+  return kErrOK;
+}
+

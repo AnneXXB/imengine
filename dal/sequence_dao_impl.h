@@ -24,6 +24,10 @@ struct SequenceDAOImpl : public SequenceDAO {
   virtual ~SequenceDAOImpl() = default;
   
   uint64_t GetNextID(const std::string& key) override;
+  uint64_t GetNextID2(const std::string& key) override {
+    return GetNextID(key + "_2");
+  }
+
 };
 
 
