@@ -24,53 +24,75 @@
 #include "nebula/base/id_util.h"
 
 #include "proto/api/error_codes.h"
-
-#include "proto/s2s/cc/servers.pb.h"
-
-#include "dal/user_dao.h"
-#include "dal/history_message_dao.h"
-#include "dal/user_message_dao.h"
-#include "dal/user_dialog_dao.h"
+//
+//#include "proto/s2s/cc/servers.pb.h"
+//
+//#include "dal/user_dao.h"
+//#include "dal/history_message_dao.h"
+//#include "dal/user_message_dao.h"
+//#include "dal/user_dialog_dao.h"
 #include "dal/sequence_dao.h"
-#include "dal/group_dao.h"
+
+//#include "dal/group_dao.h"
 #include "dal/group_user_dao.h"
-#include "dal/user_sequence_dao.h"
+//#include "dal/user_sequence_dao.h"
+#include "biz_model/message_model.h"
+#include "biz_model/dialog_model.h"
+#include "biz_model/sequence_model.h"
 
 int MessagingServiceImpl::SendMessage(const zproto::SendMessageReq& request, zproto::SeqDateRsp* response) {
-  auto& history_message_dao = HistoryMessageDAO::GetInstance();
+  // auto& history_message_dao = HistoryMessageDAO::GetInstance();
 
-  // 去重
-  int r = history_message_dao.CheckExists(uid(),
-                                          request.peer().id(),
-                                          request.peer().type(),
-                                          request.rid());
+  auto message_peer_seq = SequenceDAO::GetInstance().GetNextID(uid());
 
-  if (r<0) {
+  int rv = MessageModel::GetInstance().CreateIfNotExists(uid(),
+                                                         request.peer().type(),
+                                                         request.peer().id(),
+                                                         message_peer_seq,
+                                                         request.rid(),
+                                                         request.message().message_type(),
+                                                         request.message().message_data(),
+                                                         request.passthrough_data());
+  
+  if (rv==kErrDBError) {
     // TODO(@benqi): 区分数据库异常和重复问题
-    LOG(ERROR) << "SendMessage - CheckExists DBError";
-    return kErrorNo_DBError;
-  } else if (r > 0) {
+    LOG(ERROR) << "CreateIfNotExists - CheckExists DBError by uid: " << uid() << ", rid: " << request.rid();
+    return kErrDBError;
+  } else if (rv==kErrDBDup) {
+    // 直接生成一个SEQ返回，
     // 幂等操作，如果History存在，则认为已经走完流程了。
     // 已经存在，直接返回
-    LOG(WARNING) << "SendMessage - isexists by uid: " << uid() << ", rid: " << request.rid();
-
-    auto seq = SequenceDAO::GetInstance().GetNextID(uid());
-    auto now = NowInMsecTime();
-
-    // 直接生成一个SEQ返回，
-    response->set_seq(seq);
-    response->set_date(now);
-
-    return 0;
+    LOG(WARNING) << "CreateIfNotExists - isexists by uid: " << uid() << ", rid: " << request.rid();
+    response->set_seq(message_peer_seq);
+    response->set_date(NowInMsecTime());
+    return kErrOK;
   }
+  
+  std::list<std::string> uid_list;
 
   if (request.peer().type() == zproto::PEER_TYPE_PRIVATE) {
-    r = SendPrivateMessage(request, response);
+    // 创建会话
+    rv = DialogModel::GetInstance().CreateIfNotExists(uid(), request.peer().type(), request.peer().id());
+    // TODO(@benqi): 检查rv
+    
+    uid_list.push_back(uid());
+    uid_list.push_back(request.peer().id());
   } else {
-    r = SendGroupMessage(request, response);
+    // 会话已创建，在建群时会预先创建一会话
+    GroupUserDAO::GetInstance().GetGroupUserIDList(request.peer().id(), uid_list);
   }
+  
+  auto update_header = CRC32(request.GetTypeName());
+  std::string update_data;
+  request.SerializeToString(&update_data);
+  
+  SequenceModel::GetInstance().DeliveryUpdateDataNotMe(conn_id(), uid_list, update_header, update_data);
 
-  return r;
+  // ACK
+  response->set_seq(message_peer_seq);
+  response->set_date(NowInMsecTime());
+
+  return kErrOK;
 }
 
 int MessagingServiceImpl::MessageReceived(const zproto::MessageReceivedReq& request, zproto::VoidRsp* response) {
@@ -155,6 +177,7 @@ int MessagingServiceImpl::LoadGroupedDialogs(const zproto::LoadGroupedDialogsReq
   return -1;
 }
 
+#if 0
 // 发送私聊
 int MessagingServiceImpl::SendPrivateMessage(const zproto::SendMessageReq& request, zproto::SeqDateRsp* response) {
   auto& history_message_dao = HistoryMessageDAO::GetInstance();
@@ -164,6 +187,14 @@ int MessagingServiceImpl::SendPrivateMessage(const zproto::SendMessageReq& reque
 
   HistoryMessageDO message_do;
 
+  CreateIfNotExists(const std::string& sender_user_id,
+                    int peer_type,
+                    const std::string& peer_id,
+                    uint64_t message_peer_seq,
+                    uint64_t rid,
+                    int message_content_type,
+                    const std::string& message_content_data,
+                    const std::string& passthrough_data);
   // 入库
   message_do.sender_user_id = uid();
   message_do.peer_id = request.peer().id();
@@ -368,3 +399,5 @@ int MessagingServiceImpl::SendGroupMessage(const zproto::SendMessageReq& request
   
   return 0;
 }
+#endif
+

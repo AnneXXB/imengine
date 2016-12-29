@@ -21,3 +21,26 @@
 
 #include "nebula/net/rpc/zrpc_service_util.h"
 
+int SequenceServiceImpl::GetState(const zproto::GetStateReq& request, zproto::SeqRsp* response) {
+  return -1;
+}
+
+int SequenceServiceImpl::GetDifference(const zproto::GetDifferenceReq& request, zproto::GetDifferenceRsp* response) {
+  return -1;
+}
+
+int SequenceServiceImpl::SubscribeToOnline(const zproto::SubscribeToOnlineReq& request, zproto::VoidRsp* response) {
+  return -1;
+}
+
+int SequenceServiceImpl::SubscribeFromOnline(const zproto::SubscribeFromOnlineReq& request, zproto::VoidRsp* response) {
+  return -1;
+}
+
+int SequenceServiceImpl::SubscribeToGroupOnline(const zproto::SubscribeToGroupOnlineReq& request, zproto::VoidRsp* response) {
+  return -1;
+}
+
+int SequenceServiceImpl::SubscribeFromGroupOnline(const zproto::SubscribeFromGroupOnlineReq& request, zproto::VoidRsp* response) {
+  return -1;
+}

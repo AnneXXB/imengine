@@ -25,10 +25,10 @@
 #include "nebula/net/rpc/zrpc_service_util.h"
 
 #include "proto/api/error_codes.h"
-
-#include "dal/group_dao.h"
-#include "dal/group_user_dao.h"
 #include "dal/sequence_dao.h"
+
+#include "biz_model/group_model.h"
+#include "biz_model/dialog_model.h"
 
 int GroupsServiceImpl::LoadFullGroups(const zproto::LoadFullGroupsReq& request, zproto::LoadFullGroupsRsp* response) {
   return -1;
@@ -39,16 +39,30 @@ int GroupsServiceImpl::LoadMembers(const zproto::LoadMembersReq& request, zproto
 }
 
 int GroupsServiceImpl::CreateGroup(const zproto::CreateGroupReq& request, zproto::CreateGroupRsp* response) {
-  auto& group_dao = GroupDAO::GetInstance();
+  //  创建一个群最少要有3个人
+  //  1(创建者) + request.users_size(>2)
+  if (request.users_size() < 2) {
+    LOG(ERROR) << "CreateGroup - member's size < 3!!!";
+    return -1;
+  }
   
-  auto r = group_dao.CheckExists(uid(),
-                                 request.rid());
+  std::list<std::string> member_list;
+  for (int i=0; i<request.users_size(); ++i) {
+    const auto& user = request.users(i);
+    member_list.push_back(user.uid());
+  }
+
+  // 创建群ID
+  std::string group_id;
   
-  if (r<0) {
-    // TODO(@benqi): 区分数据库异常和重复问题
-    LOG(ERROR) << "CreateGroup - CheckExists DBError";
-    return kErrorNo_DBError;
-  } else if (r > 0) {
+  int rv = GroupModel::GetInstance().CreateIfNotExists(uid(),
+                                                       request.rid(),
+                                                       request.title(),
+                                                       member_list,
+                                                       &group_id);
+  if (rv == kErrDBDup) {
+    LOG(ERROR) << "CreateGroup - CreateIfNotExists error";
+    
     // 幂等操作，如果Group存在，则认为已经走完流程了。
     // 已经存在，直接返回
     LOG(WARNING) << "CreateGroup - isexists by uid: " << uid() << ", rid: " << request.rid();
@@ -60,83 +74,26 @@ int GroupsServiceImpl::CreateGroup(const zproto::CreateGroupReq& request, zproto
     response->set_seq(seq);
     response->set_date(now);
     
-    return 0;
-  }
-
-  // TODO(@benqi):
-  //  创建一个群最少要有3个人
-  //  1(创建者) + request.users_size(>2)
-  
-  GroupDO group_do;
-  GroupUserDOList group_user_do_list;
-  auto now = NowInMsecTime();
-  
-  group_do.group_id = folly::to<std::string>(GetNextIDBySnowflake());
-  group_do.app_id = 1;
-  group_do.creator_user_id = uid();
-  group_do.client_group_id = request.rid();
-  group_do.title = request.title();
-  group_do.status = 1;
-  group_do.created_at = now;
-  group_do.updated_at = now;
-
-  auto group_user_do = std::make_shared<GroupUserDO>();
-  group_user_do->group_id = group_do.group_id;
-  group_user_do->user_id = uid();
-  group_user_do->inviter_user_id = uid();
-  group_user_do->is_admin = 1;
-  group_user_do->status = 1;
-  group_user_do->joined_at = now;
-  group_user_do->created_at = now;
-  group_user_do->updated_at = now;
-  group_user_do_list.push_back(group_user_do);
-  
-  for (int i=0; i<request.users_size(); ++i) {
-    group_user_do = std::make_shared<GroupUserDO>();
-    const auto& user = request.users(i);
-    group_user_do->group_id = group_do.group_id;
-    group_user_do->user_id = user.uid();
-    group_user_do->inviter_user_id = uid();
-    if (group_user_do->user_id == group_user_do->inviter_user_id) {
-      group_user_do->is_admin = 1;
-    } else {
-      group_user_do->is_admin = 0;
-    }
-    group_user_do->status = 1;
-    
-    group_user_do->joined_at = now;
-    group_user_do->created_at = now;
-    group_user_do->updated_at = now;
-    
-    group_user_do_list.push_back(group_user_do);
+    return kErrOK;
+  } else if (rv != kErrOK) {
+    LOG(ERROR) << "CreateGroup - ";
+    return rv;
   }
   
-  r = group_dao.Create(group_do);
-  if (r<0) {
-    LOG(ERROR) << "CreateGroup - Create error!!";
-    // TODO(@benqi): 是否回滚？
-    return kErrorNo_DBError;
-  }
-  
-  r = GroupUserDAO::GetInstance().Create(group_user_do_list);
-  if (r<0) {
-    LOG(ERROR) << "CreateGroup - Create error!!";
-    // TODO(@benqi): 是否回滚？
-    return kErrorNo_DBError;
-  }
-  
+  member_list.push_front(uid());
   // TODO(@benqi): 创建会话(user_dialog)
+  rv = DialogModel::GetInstance().CreateIfNotExists(member_list, zproto::PEER_TYPE_GROUP, group_id);
   
   // TODO(@benqi): 发一群创建消息
   
   // 返回
   response->set_seq(GetNextIDBySnowflake());
-  response->set_date(now);
+  response->set_date(NowInMsecTime());
   auto group = response->mutable_group();
-  group->set_id(group_do.group_id);
-  group->set_title(group_do.title);
+  group->set_id(group_id);
+  group->set_title(request.title());
 
-  return 0;
+  return kErrOK;
 }
 
 int GroupsServiceImpl::EditGroupTitle(const zproto::EditGroupTitleReq& request, zproto::SeqDateRsp* response) {

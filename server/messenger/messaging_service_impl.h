@@ -45,11 +45,10 @@ public:
   int CreateGroup(const zproto::CreateGroupReq& request, zproto::CreateGroupRsp* response) override;
  */
 
-
 private:
   // 发送消息
-  int SendPrivateMessage(const zproto::SendMessageReq& request, zproto::SeqDateRsp* response);
-  int SendGroupMessage(const zproto::SendMessageReq& request, zproto::SeqDateRsp* response);
+  // int SendPrivateMessage(const zproto::SendMessageReq& request, zproto::SeqDateRsp* response);
+  // int SendGroupMessage(const zproto::SendMessageReq& request, zproto::SeqDateRsp* response);
 
 };
 

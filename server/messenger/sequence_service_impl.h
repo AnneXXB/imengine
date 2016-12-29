@@ -26,6 +26,13 @@ class SequenceServiceImpl : public ZRpcSequenceService {
 public:
   SequenceServiceImpl() = default;
   ~SequenceServiceImpl() = default;
+  
+  int GetState(const zproto::GetStateReq& request, zproto::SeqRsp* response) override;
+  int GetDifference(const zproto::GetDifferenceReq& request, zproto::GetDifferenceRsp* response) override;
+  int SubscribeToOnline(const zproto::SubscribeToOnlineReq& request, zproto::VoidRsp* response) override;
+  int SubscribeFromOnline(const zproto::SubscribeFromOnlineReq& request, zproto::VoidRsp* response) override;
+  int SubscribeToGroupOnline(const zproto::SubscribeToGroupOnlineReq& request, zproto::VoidRsp* response) override;
+  int SubscribeFromGroupOnline(const zproto::SubscribeFromGroupOnlineReq& request, zproto::VoidRsp* response) override;
 };
 
 #endif

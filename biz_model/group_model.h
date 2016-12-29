@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2016, https://github.com/nebula-im
+ *  Copyright (c) 2016, https://github.com/nebula-im/imengine
  *  All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,14 +15,24 @@
  * limitations under the License.
  */
 
-#ifndef	PROTO_ERROR_CODES_H_
-#define	PROTO_ERROR_CODES_H_
+#ifndef BIZ_MODEL_GROUP_MODEL_H_
+#define BIZ_MODEL_GROUP_MODEL_H_
 
-const int kErrorNo_OK         = 0;
+#include <string>
+#include <list>
 
-const int kErrorNo_DBError    = 1000; // DB无法连接
-const int kErrorNo_DBConn     = 1001; // DB无法连接
-const int kErrorNo_DBSql      = 1002; // SQL非法
-const int kErrorNo_DBData     = 1003; // QueryAnswer解析有问题
+class GroupModel {
+public:
+  ~GroupModel() = default;
+  
+  static GroupModel& GetInstance();
+  
+  int CreateIfNotExists(const std::string& creator_user_id,
+                        uint64_t rid,
+                        const std::string& title,
+                        const std::list<std::string>& member_list,
+                        std::string* group_id);
+};
+
 
 #endif

@@ -59,7 +59,7 @@ int PushChannelClientHandler::OnDataReceived(std::shared_ptr<PackageMessage> mes
       LOG(ERROR) << "OnDataReceived - recv invalid packaet, server_auth_message_id_: " << server_auth_message_id_
                   << ", message_data: " << message_data->ToString();
 
-      // 主动关闭，是否要在下个循环里关闭？
+      // TODO(@benqi): 主动关闭，还是在下个循环里关闭？
       pipeline_->close();
       return -1;
     }
@@ -69,7 +69,7 @@ int PushChannelClientHandler::OnDataReceived(std::shared_ptr<PackageMessage> mes
     LOG(ERROR) << "OnDataReceived - Invalid state: " << static_cast<int>(state_)
                 << ", message_data: " << message_data->ToString();
 
-    // 主动关闭，是否要在下个循环里关闭？
+    // TODO(@benqi): 主动关闭，还是在下个循环里关闭？
     pipeline_->close();
     return -1;
   }

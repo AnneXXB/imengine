@@ -27,6 +27,9 @@ public:
   WeakServiceImpl() = default;
   ~WeakServiceImpl() = default;
   
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+  int Typing(const zproto::TypingReq& request, zproto::VoidRsp* response) override;
+  int StopTyping(const zproto::StopTypingReq& request, zproto::VoidRsp* response) override;
 };
 
 #endif

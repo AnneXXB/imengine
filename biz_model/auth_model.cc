@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2016, https://github.com/nebula-im
+ *  Copyright (c) 2016, https://github.com/nebula-im/imengine
  *  All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,16 +15,4 @@
  * limitations under the License.
  */
 
-// TODO(@benqi): 使用zrpc-code-gen代码生成工具自动生成服务框架代码
-
-#include "messenger/weak_service_impl.h"
-
-#include "nebula/net/rpc/zrpc_service_util.h"
-
-int WeakServiceImpl::Typing(const zproto::TypingReq& request, zproto::VoidRsp* response) {
-  return -1;
-}
-
-int WeakServiceImpl::StopTyping(const zproto::StopTypingReq& request, zproto::VoidRsp* response) {
-  return -1;
-}
+#include "biz_model/auth_model.h"

@@ -72,6 +72,6 @@ ${PROXYGEN_LIBRARYDIR}
 add_subdirectory(nebula/nebula)
 add_subdirectory(proto)
 add_subdirectory(server)
-#add_subdirectory(biz_model)
+add_subdirectory(biz_model)
 add_subdirectory(dal)
 add_subdirectory(client/client)

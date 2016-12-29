@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2016, https://github.com/nebula-im
+ *  Copyright (c) 2016, https://github.com/nebula-im/imengine
  *  All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,16 +15,23 @@
  * limitations under the License.
  */
 
-// TODO(@benqi): 使用zrpc-code-gen代码生成工具自动生成服务框架代码
+#ifndef BIZ_MODEL_DIALOG_MODEL_H_
+#define BIZ_MODEL_DIALOG_MODEL_H_
 
-#include "messenger/weak_service_impl.h"
+#include <string>
+#include <list>
 
-#include "nebula/net/rpc/zrpc_service_util.h"
+class DialogModel {
+public:
+  ~DialogModel() = default;
+  
+  static DialogModel& GetInstance();
+  
+  // 创建私聊双向会话
+  int CreateIfNotExists(const std::string& uid, uint32_t peer_type, const std::string& peer_id);
+  
+  // 创建群会话
+  int CreateIfNotExists(const std::list<std::string>& members, uint32_t peer_type, const std::string& peer_id);
+};
 
-int WeakServiceImpl::Typing(const zproto::TypingReq& request, zproto::VoidRsp* response) {
-  return -1;
-}
-
-int WeakServiceImpl::StopTyping(const zproto::StopTypingReq& request, zproto::VoidRsp* response) {
-  return -1;
-}
+#endif
