@@ -20,6 +20,7 @@
 
 #include <string>
 #include <list>
+#include <google/protobuf/message.h>
 
 class SequenceModel {
 public:
@@ -29,6 +30,7 @@ public:
 
   // int Create(const std::list<std::string>& uid_list, int update_header, const std::string& update_data);
   int DeliveryUpdateDataNotMe(uint64_t my_conn_id, const std::list<std::string>& uid_list, uint32_t update_header, const std::string& update_data);
+  int DeliveryUpdateDataNotMe(uint64_t my_conn_id, const std::list<std::string>& uid_list, const google::protobuf::Message& message);
 };
 
 #endif

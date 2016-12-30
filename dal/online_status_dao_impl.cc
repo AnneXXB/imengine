@@ -41,7 +41,7 @@ bool OnlineStatusDAOImpl::GetUsersOnlineStatus(uint32_t app_id,
   // TODO(@benqi): 还是用协程简单
   
   bool rv = false;
-  auto rsp = ZRpcUtil::DoClientCall("online_status_client", req)
+  auto rsp = ZRpcUtil::DoClientCall("status_rpc_client", req)
   .within(std::chrono::milliseconds(5000))
   .then([&](ProtoRpcResponsePtr rsp) {
     CHECK(rsp);

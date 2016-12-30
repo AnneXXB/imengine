@@ -42,16 +42,18 @@ int PushServiceImpl::DeliveryDataToUsers(const zproto::DeliveryDataToUsersReq& r
   
   OnlineStatusDOList onlines;
   zproto::MessageNotify message_notify;
+  message_notify.ParseFromString(request.raw_data());
   OnlineStatusDAO::GetInstance().GetUsersOnlineStatus(1, user_id_list, onlines, request.my_conn_id());
   for (const auto& v : onlines) {
     auto gate_conn_id = GateChannelManager::GetInstance()->LookupConnID(v.server_id);
-    if (gate_conn_id == 0 || request.my_conn_id() == gate_conn_id) {
+    if (gate_conn_id == 0 || request.my_conn_id() == v.conn_id) {
       continue;
     }
     
     auto push = MakePush(message_notify);
     // std::make_shared<ApiPush<zproto::MessageNotify>>();
     push->set_session_id(v.conn_id);
+    push->set_birth_conn_id(v.conn_id);
     WritePackage(gate_conn_id, push);
   }
 

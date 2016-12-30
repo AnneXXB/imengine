@@ -84,3 +84,10 @@ int SequenceModel::DeliveryUpdateDataNotMe(uint64_t my_conn_id, const std::list<
 
   return kErrOK;
 }
+
+int SequenceModel::DeliveryUpdateDataNotMe(uint64_t my_conn_id, const std::list<std::string>& uid_list, const google::protobuf::Message& message) {
+  auto update_header = CRC32(message.GetTypeName());
+  std::string update_data;
+  message.SerializeToString(&update_data);
+  return DeliveryUpdateDataNotMe(my_conn_id, uid_list, update_header, update_data);
+}

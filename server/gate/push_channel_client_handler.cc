@@ -54,8 +54,10 @@ int PushChannelClientHandler::OnDataReceived(std::shared_ptr<PackageMessage> mes
   } else if (state_ == State::CONNECTED) {
     // 能且只能收到ServerAuthRsp
 
+    auto encoded = std::static_pointer_cast<ProtoRpcResponse>(message_data);
+
     // 检查message_id
-    if (message_data->message_id() != server_auth_message_id_) {
+    if (encoded->req_message_id != server_auth_message_id_) {
       LOG(ERROR) << "OnDataReceived - recv invalid packaet, server_auth_message_id_: " << server_auth_message_id_
                   << ", message_data: " << message_data->ToString();
 

@@ -30,7 +30,7 @@ bool PushServer::Initialize() {
   // 接入网关通道
   RegisterService("push_channel_server", "tcp_server", "zproto");
   // 在线服务
-  RegisterService("online_status_client", "rpc_client", "zrpc");
+  RegisterService("status_rpc_client", "rpc_client", "zrpc");
   
   // 连接router，使用zproto协议
   ZProtoEventCallback::Initializer(push::OnNewConnection,

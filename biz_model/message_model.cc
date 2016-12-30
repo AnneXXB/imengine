@@ -114,7 +114,7 @@ int MessageModel::SendServerMessage(const std::string& from_id,
   message_notify.mutable_message()->set_message_type(zproto::TEXT);
   message_notify.mutable_message()->set_message_data(message_content_data);
   
-  auto update_header = CRC32("zproto::MessageNotify");
+  auto update_header = CRC32(message_notify.GetTypeName());
   std::string update_data;
   message_notify.SerializeToString(&update_data);
   

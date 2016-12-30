@@ -81,12 +81,16 @@ int MessagingServiceImpl::SendMessage(const zproto::SendMessageReq& request, zpr
     // 会话已创建，在建群时会预先创建一会话
     GroupUserDAO::GetInstance().GetGroupUserIDList(request.peer().id(), uid_list);
   }
-  
-  auto update_header = CRC32(request.GetTypeName());
-  std::string update_data;
-  request.SerializeToString(&update_data);
-  
-  SequenceModel::GetInstance().DeliveryUpdateDataNotMe(conn_id(), uid_list, update_header, update_data);
+
+  zproto::MessageNotify message_notify;
+  message_notify.mutable_peer()->set_id(request.peer().id());
+  message_notify.mutable_peer()->set_type(request.peer().type());
+  message_notify.set_sender_uid(uid());
+  message_notify.set_rid(request.rid());
+  message_notify.set_date(NowInMsecTime());
+  message_notify.mutable_message ()->CopyFrom(request.message());
+
+  SequenceModel::GetInstance().DeliveryUpdateDataNotMe(conn_id(), uid_list, message_notify);
 
   // ACK
   response->set_seq(message_peer_seq);

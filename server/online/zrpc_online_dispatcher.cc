@@ -28,7 +28,7 @@ static ZRpcOnlineDispatcher g_rpc_online_dispatcher;
 ZRpcOnlineDispatcher::ZRpcOnlineDispatcher() {
   ZRpcUtil::Register("zproto.ClientOnlineReq", ZRpcOnlineDispatcher::ClientOnline);
   ZRpcUtil::Register("zproto.ClientOfflineReq", ZRpcOnlineDispatcher::ClientOffline);
-  ZRpcUtil::Register("zproto.QueryOnlineReq", ZRpcOnlineDispatcher::QueryOnlineUser);
+  ZRpcUtil::Register("zproto.QueryOnlineUserReq", ZRpcOnlineDispatcher::QueryOnlineUser);
 }
 
 ProtoRpcResponsePtr ZRpcOnlineDispatcher::ClientOnline(RpcRequestPtr request) {

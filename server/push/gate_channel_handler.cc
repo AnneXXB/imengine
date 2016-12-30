@@ -39,12 +39,12 @@ int push::OnNewConnection(nebula::TcpServiceBase* service, nebula::ZProtoPipelin
 }
 
 int push::OnDataReceived(nebula::ZProtoPipeline* pipeline, std::shared_ptr<PackageMessage> message_data) {
-  LOG(INFO) << "OnDataReceived - recv data";
+  LOG(INFO) << "OnDataReceived - recv data: " << message_data->ToString();
   
   // gate_channel_server
 
   auto encoded = std::static_pointer_cast<EncodedRpcRequest>(message_data);
-  if (encoded->GetMethodID() != CRC32("zproto::ServerAuthReq")) {
+  if (encoded->GetMethodID() != CRC32("zproto.ServerAuthReq")) {
     // TODO(@benqi): LOG(ERROR) << "";
     
     return 0;
@@ -53,9 +53,18 @@ int push::OnDataReceived(nebula::ZProtoPipeline* pipeline, std::shared_ptr<Packa
   auto server_auth_req = ToApiRpcRequest<zproto::ServerAuthReq>(encoded);
   DCHECK(server_auth_req);
   auto h = pipeline->getHandler<ZProtoHandler>();
+  LOG(INFO) << "OnDataReceived - recv data: " << server_auth_req->ToString() << ", conn_id: " << h->GetConnID();
 
   GateChannelManager::GetInstance()->OnNewGateChannel((*server_auth_req)->server_id(),
                                                       h->GetConnID());
+
+  zproto::ServerAuthRsp server_auth_rsp;
+  auto rpc_ok = MakeRpcOK(server_auth_rsp);
+  rpc_ok->set_req_message_id(server_auth_req->message_id());
+  
+  std::unique_ptr<folly::IOBuf> data;
+  rpc_ok->SerializeToIOBuf(data);
+  pipeline->write(std::move(data));
 
   return 0;
 }
