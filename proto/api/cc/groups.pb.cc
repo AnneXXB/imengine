@@ -45,23 +45,9 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* GroupAboutChangedNotify_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   GroupAboutChangedNotify_reflection_ = NULL;
-const ::google::protobuf::Descriptor* GroupExtChangedNotify_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  GroupExtChangedNotify_reflection_ = NULL;
-const ::google::protobuf::Descriptor* GroupExtChangedNotify_ExtEntry_descriptor_ = NULL;
-const ::google::protobuf::Descriptor* GroupFullExtChangedNotify_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  GroupFullExtChangedNotify_reflection_ = NULL;
-const ::google::protobuf::Descriptor* GroupFullExtChangedNotify_ExtEntry_descriptor_ = NULL;
-const ::google::protobuf::Descriptor* GroupShortNameChangedNotify_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  GroupShortNameChangedNotify_reflection_ = NULL;
 const ::google::protobuf::Descriptor* GroupOwnerChangedNotify_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   GroupOwnerChangedNotify_reflection_ = NULL;
-const ::google::protobuf::Descriptor* GroupHistorySharedNotify_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  GroupHistorySharedNotify_reflection_ = NULL;
 const ::google::protobuf::Descriptor* GroupDeletedNotify_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   GroupDeletedNotify_reflection_ = NULL;
@@ -312,57 +298,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(GroupAboutChangedNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupAboutChangedNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupAboutChangedNotify, _is_default_instance_));
-  GroupExtChangedNotify_descriptor_ = file->message_type(8);
-  static const int GroupExtChangedNotify_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupExtChangedNotify, group_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupExtChangedNotify, ext_),
-  };
-  GroupExtChangedNotify_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      GroupExtChangedNotify_descriptor_,
-      GroupExtChangedNotify::default_instance_,
-      GroupExtChangedNotify_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(GroupExtChangedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupExtChangedNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupExtChangedNotify, _is_default_instance_));
-  GroupExtChangedNotify_ExtEntry_descriptor_ = GroupExtChangedNotify_descriptor_->nested_type(0);
-  GroupFullExtChangedNotify_descriptor_ = file->message_type(9);
-  static const int GroupFullExtChangedNotify_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupFullExtChangedNotify, group_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupFullExtChangedNotify, ext_),
-  };
-  GroupFullExtChangedNotify_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      GroupFullExtChangedNotify_descriptor_,
-      GroupFullExtChangedNotify::default_instance_,
-      GroupFullExtChangedNotify_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(GroupFullExtChangedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupFullExtChangedNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupFullExtChangedNotify, _is_default_instance_));
-  GroupFullExtChangedNotify_ExtEntry_descriptor_ = GroupFullExtChangedNotify_descriptor_->nested_type(0);
-  GroupShortNameChangedNotify_descriptor_ = file->message_type(10);
-  static const int GroupShortNameChangedNotify_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupShortNameChangedNotify, group_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupShortNameChangedNotify, short_name_),
-  };
-  GroupShortNameChangedNotify_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      GroupShortNameChangedNotify_descriptor_,
-      GroupShortNameChangedNotify::default_instance_,
-      GroupShortNameChangedNotify_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(GroupShortNameChangedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupShortNameChangedNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupShortNameChangedNotify, _is_default_instance_));
-  GroupOwnerChangedNotify_descriptor_ = file->message_type(11);
+  GroupOwnerChangedNotify_descriptor_ = file->message_type(8);
   static const int GroupOwnerChangedNotify_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupOwnerChangedNotify, group_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupOwnerChangedNotify, user_id_),
@@ -378,22 +314,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(GroupOwnerChangedNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupOwnerChangedNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupOwnerChangedNotify, _is_default_instance_));
-  GroupHistorySharedNotify_descriptor_ = file->message_type(12);
-  static const int GroupHistorySharedNotify_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupHistorySharedNotify, group_id_),
-  };
-  GroupHistorySharedNotify_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      GroupHistorySharedNotify_descriptor_,
-      GroupHistorySharedNotify::default_instance_,
-      GroupHistorySharedNotify_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(GroupHistorySharedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupHistorySharedNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupHistorySharedNotify, _is_default_instance_));
-  GroupDeletedNotify_descriptor_ = file->message_type(13);
+  GroupDeletedNotify_descriptor_ = file->message_type(9);
   static const int GroupDeletedNotify_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupDeletedNotify, group_id_),
   };
@@ -408,7 +329,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(GroupDeletedNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupDeletedNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupDeletedNotify, _is_default_instance_));
-  GroupPermissionsChangedNotify_descriptor_ = file->message_type(14);
+  GroupPermissionsChangedNotify_descriptor_ = file->message_type(10);
   static const int GroupPermissionsChangedNotify_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupPermissionsChangedNotify, group_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupPermissionsChangedNotify, permissions_),
@@ -424,7 +345,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(GroupPermissionsChangedNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupPermissionsChangedNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupPermissionsChangedNotify, _is_default_instance_));
-  GroupFullPermissionsChangedNotify_descriptor_ = file->message_type(15);
+  GroupFullPermissionsChangedNotify_descriptor_ = file->message_type(11);
   static const int GroupFullPermissionsChangedNotify_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupFullPermissionsChangedNotify, group_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupFullPermissionsChangedNotify, permissions_),
@@ -440,7 +361,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(GroupFullPermissionsChangedNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupFullPermissionsChangedNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupFullPermissionsChangedNotify, _is_default_instance_));
-  GroupMemberChangedNotify_descriptor_ = file->message_type(16);
+  GroupMemberChangedNotify_descriptor_ = file->message_type(12);
   static const int GroupMemberChangedNotify_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberChangedNotify, group_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberChangedNotify, is_member_),
@@ -456,7 +377,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(GroupMemberChangedNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberChangedNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberChangedNotify, _is_default_instance_));
-  GroupMembersBecameAsyncNotify_descriptor_ = file->message_type(17);
+  GroupMembersBecameAsyncNotify_descriptor_ = file->message_type(13);
   static const int GroupMembersBecameAsyncNotify_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMembersBecameAsyncNotify, group_id_),
   };
@@ -471,7 +392,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(GroupMembersBecameAsyncNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMembersBecameAsyncNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMembersBecameAsyncNotify, _is_default_instance_));
-  GroupMembersUpdatedNotify_descriptor_ = file->message_type(18);
+  GroupMembersUpdatedNotify_descriptor_ = file->message_type(14);
   static const int GroupMembersUpdatedNotify_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMembersUpdatedNotify, group_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMembersUpdatedNotify, members_),
@@ -487,7 +408,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(GroupMembersUpdatedNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMembersUpdatedNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMembersUpdatedNotify, _is_default_instance_));
-  GroupMemberDiffNotify_descriptor_ = file->message_type(19);
+  GroupMemberDiffNotify_descriptor_ = file->message_type(15);
   static const int GroupMemberDiffNotify_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberDiffNotify, group_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberDiffNotify, removed_users_),
@@ -505,7 +426,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(GroupMemberDiffNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberDiffNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberDiffNotify, _is_default_instance_));
-  GroupMembersCountChangedNotify_descriptor_ = file->message_type(20);
+  GroupMembersCountChangedNotify_descriptor_ = file->message_type(16);
   static const int GroupMembersCountChangedNotify_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMembersCountChangedNotify, group_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMembersCountChangedNotify, members_count_),
@@ -521,7 +442,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(GroupMembersCountChangedNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMembersCountChangedNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMembersCountChangedNotify, _is_default_instance_));
-  GroupMemberAdminChangedNotify_descriptor_ = file->message_type(21);
+  GroupMemberAdminChangedNotify_descriptor_ = file->message_type(17);
   static const int GroupMemberAdminChangedNotify_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberAdminChangedNotify, group_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberAdminChangedNotify, user_id_),
@@ -538,7 +459,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(GroupMemberAdminChangedNotify),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberAdminChangedNotify, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberAdminChangedNotify, _is_default_instance_));
-  CreateGroupReq_descriptor_ = file->message_type(22);
+  CreateGroupReq_descriptor_ = file->message_type(18);
   static const int CreateGroupReq_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupReq, rid_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupReq, title_),
@@ -556,7 +477,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(CreateGroupReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupReq, _is_default_instance_));
-  CreateGroupRsp_descriptor_ = file->message_type(23);
+  CreateGroupRsp_descriptor_ = file->message_type(19);
   static const int CreateGroupRsp_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupRsp, seq_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupRsp, date_),
@@ -575,7 +496,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(CreateGroupRsp),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupRsp, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupRsp, _is_default_instance_));
-  EditGroupTitleReq_descriptor_ = file->message_type(24);
+  EditGroupTitleReq_descriptor_ = file->message_type(20);
   static const int EditGroupTitleReq_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupTitleReq, group_peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupTitleReq, rid_),
@@ -593,7 +514,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(EditGroupTitleReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupTitleReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupTitleReq, _is_default_instance_));
-  EditGroupAvatarReq_descriptor_ = file->message_type(25);
+  EditGroupAvatarReq_descriptor_ = file->message_type(21);
   static const int EditGroupAvatarReq_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAvatarReq, group_peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAvatarReq, rid_),
@@ -611,7 +532,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(EditGroupAvatarReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAvatarReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAvatarReq, _is_default_instance_));
-  EditGroupAvatarRsp_descriptor_ = file->message_type(26);
+  EditGroupAvatarRsp_descriptor_ = file->message_type(22);
   static const int EditGroupAvatarRsp_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAvatarRsp, avatar_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAvatarRsp, seq_),
@@ -629,7 +550,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(EditGroupAvatarRsp),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAvatarRsp, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAvatarRsp, _is_default_instance_));
-  RemoveGroupAvatarReq_descriptor_ = file->message_type(27);
+  RemoveGroupAvatarReq_descriptor_ = file->message_type(23);
   static const int RemoveGroupAvatarReq_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RemoveGroupAvatarReq, group_peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RemoveGroupAvatarReq, rid_),
@@ -646,7 +567,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(RemoveGroupAvatarReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RemoveGroupAvatarReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RemoveGroupAvatarReq, _is_default_instance_));
-  EditGroupShortNameReq_descriptor_ = file->message_type(28);
+  EditGroupShortNameReq_descriptor_ = file->message_type(24);
   static const int EditGroupShortNameReq_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupShortNameReq, group_peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupShortNameReq, short_name_),
@@ -662,7 +583,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(EditGroupShortNameReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupShortNameReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupShortNameReq, _is_default_instance_));
-  EditGroupTopicReq_descriptor_ = file->message_type(29);
+  EditGroupTopicReq_descriptor_ = file->message_type(25);
   static const int EditGroupTopicReq_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupTopicReq, group_peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupTopicReq, rid_),
@@ -680,7 +601,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(EditGroupTopicReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupTopicReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupTopicReq, _is_default_instance_));
-  EditGroupAboutReq_descriptor_ = file->message_type(30);
+  EditGroupAboutReq_descriptor_ = file->message_type(26);
   static const int EditGroupAboutReq_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAboutReq, group_peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAboutReq, rid_),
@@ -698,7 +619,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(EditGroupAboutReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAboutReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAboutReq, _is_default_instance_));
-  InviteUserReq_descriptor_ = file->message_type(31);
+  InviteUserReq_descriptor_ = file->message_type(27);
   static const int InviteUserReq_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(InviteUserReq, group_peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(InviteUserReq, rid_),
@@ -716,7 +637,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(InviteUserReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(InviteUserReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(InviteUserReq, _is_default_instance_));
-  LeaveGroupReq_descriptor_ = file->message_type(32);
+  LeaveGroupReq_descriptor_ = file->message_type(28);
   static const int LeaveGroupReq_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LeaveGroupReq, group_peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LeaveGroupReq, rid_),
@@ -733,7 +654,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(LeaveGroupReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LeaveGroupReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LeaveGroupReq, _is_default_instance_));
-  LeaveAndDeleteReq_descriptor_ = file->message_type(33);
+  LeaveAndDeleteReq_descriptor_ = file->message_type(29);
   static const int LeaveAndDeleteReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LeaveAndDeleteReq, group_peer_),
   };
@@ -748,7 +669,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(LeaveAndDeleteReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LeaveAndDeleteReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LeaveAndDeleteReq, _is_default_instance_));
-  KickUserReq_descriptor_ = file->message_type(34);
+  KickUserReq_descriptor_ = file->message_type(30);
   static const int KickUserReq_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(KickUserReq, group_peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(KickUserReq, rid_),
@@ -766,7 +687,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(KickUserReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(KickUserReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(KickUserReq, _is_default_instance_));
-  JoinGroupByPeerReq_descriptor_ = file->message_type(35);
+  JoinGroupByPeerReq_descriptor_ = file->message_type(31);
   static const int JoinGroupByPeerReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JoinGroupByPeerReq, group_peer_),
   };
@@ -781,7 +702,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(JoinGroupByPeerReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JoinGroupByPeerReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JoinGroupByPeerReq, _is_default_instance_));
-  MakeUserAdminReq_descriptor_ = file->message_type(36);
+  MakeUserAdminReq_descriptor_ = file->message_type(32);
   static const int MakeUserAdminReq_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MakeUserAdminReq, group_peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MakeUserAdminReq, user_peer_),
@@ -797,7 +718,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(MakeUserAdminReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MakeUserAdminReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MakeUserAdminReq, _is_default_instance_));
-  DismissUserAdminReq_descriptor_ = file->message_type(37);
+  DismissUserAdminReq_descriptor_ = file->message_type(33);
   static const int DismissUserAdminReq_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DismissUserAdminReq, group_peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DismissUserAdminReq, user_peer_),
@@ -813,7 +734,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(DismissUserAdminReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DismissUserAdminReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DismissUserAdminReq, _is_default_instance_));
-  TransferOwnershipReq_descriptor_ = file->message_type(38);
+  TransferOwnershipReq_descriptor_ = file->message_type(34);
   static const int TransferOwnershipReq_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TransferOwnershipReq, group_peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TransferOwnershipReq, new_owner_),
@@ -829,7 +750,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(TransferOwnershipReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TransferOwnershipReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TransferOwnershipReq, _is_default_instance_));
-  AdminSettings_descriptor_ = file->message_type(39);
+  AdminSettings_descriptor_ = file->message_type(35);
   static const int AdminSettings_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AdminSettings, show_admins_to_members_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AdminSettings, can_members_invite_),
@@ -848,7 +769,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(AdminSettings),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AdminSettings, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AdminSettings, _is_default_instance_));
-  LoadAdminSettingsReq_descriptor_ = file->message_type(40);
+  LoadAdminSettingsReq_descriptor_ = file->message_type(36);
   static const int LoadAdminSettingsReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadAdminSettingsReq, group_peer_),
   };
@@ -863,7 +784,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(LoadAdminSettingsReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadAdminSettingsReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadAdminSettingsReq, _is_default_instance_));
-  LoadAdminSettingsRsp_descriptor_ = file->message_type(41);
+  LoadAdminSettingsRsp_descriptor_ = file->message_type(37);
   static const int LoadAdminSettingsRsp_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadAdminSettingsRsp, settings_),
   };
@@ -878,7 +799,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(LoadAdminSettingsRsp),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadAdminSettingsRsp, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadAdminSettingsRsp, _is_default_instance_));
-  SaveAdminSettingsReq_descriptor_ = file->message_type(42);
+  SaveAdminSettingsReq_descriptor_ = file->message_type(38);
   static const int SaveAdminSettingsReq_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SaveAdminSettingsReq, group_peer_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SaveAdminSettingsReq, settings_),
@@ -894,7 +815,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(SaveAdminSettingsReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SaveAdminSettingsReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SaveAdminSettingsReq, _is_default_instance_));
-  DeleteGroupReq_descriptor_ = file->message_type(43);
+  DeleteGroupReq_descriptor_ = file->message_type(39);
   static const int DeleteGroupReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeleteGroupReq, group_peer_),
   };
@@ -909,7 +830,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(DeleteGroupReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeleteGroupReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeleteGroupReq, _is_default_instance_));
-  ShareHistoryReq_descriptor_ = file->message_type(44);
+  ShareHistoryReq_descriptor_ = file->message_type(40);
   static const int ShareHistoryReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShareHistoryReq, group_peer_),
   };
@@ -924,7 +845,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(ShareHistoryReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShareHistoryReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShareHistoryReq, _is_default_instance_));
-  InviteUrlRsp_descriptor_ = file->message_type(45);
+  InviteUrlRsp_descriptor_ = file->message_type(41);
   static const int InviteUrlRsp_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(InviteUrlRsp, url_),
   };
@@ -939,7 +860,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(InviteUrlRsp),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(InviteUrlRsp, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(InviteUrlRsp, _is_default_instance_));
-  GetGroupInviteUrlReq_descriptor_ = file->message_type(46);
+  GetGroupInviteUrlReq_descriptor_ = file->message_type(42);
   static const int GetGroupInviteUrlReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetGroupInviteUrlReq, group_peer_),
   };
@@ -954,7 +875,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(GetGroupInviteUrlReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetGroupInviteUrlReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetGroupInviteUrlReq, _is_default_instance_));
-  RevokeInviteUrlReq_descriptor_ = file->message_type(47);
+  RevokeInviteUrlReq_descriptor_ = file->message_type(43);
   static const int RevokeInviteUrlReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RevokeInviteUrlReq, group_peer_),
   };
@@ -969,7 +890,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(RevokeInviteUrlReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RevokeInviteUrlReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RevokeInviteUrlReq, _is_default_instance_));
-  JoinGroupReq_descriptor_ = file->message_type(48);
+  JoinGroupReq_descriptor_ = file->message_type(44);
   static const int JoinGroupReq_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JoinGroupReq, token_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JoinGroupReq, optimizations_),
@@ -985,7 +906,7 @@ void protobuf_AssignDesc_groups_2eproto() {
       sizeof(JoinGroupReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JoinGroupReq, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JoinGroupReq, _is_default_instance_));
-  JoinGroupRsp_descriptor_ = file->message_type(49);
+  JoinGroupRsp_descriptor_ = file->message_type(45);
   static const int JoinGroupRsp_offsets_[7] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JoinGroupRsp, group_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JoinGroupRsp, users_),
@@ -1036,33 +957,7 @@ void protobuf_RegisterTypes(const ::std::string&) {
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       GroupAboutChangedNotify_descriptor_, &GroupAboutChangedNotify::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      GroupExtChangedNotify_descriptor_, &GroupExtChangedNotify::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-        GroupExtChangedNotify_ExtEntry_descriptor_,
-        ::google::protobuf::internal::MapEntry<
-            ::std::string,
-            ::zproto::RawArrayValue,
-            ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
-            ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
-            0>::CreateDefaultInstance(
-                GroupExtChangedNotify_ExtEntry_descriptor_));
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      GroupFullExtChangedNotify_descriptor_, &GroupFullExtChangedNotify::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-        GroupFullExtChangedNotify_ExtEntry_descriptor_,
-        ::google::protobuf::internal::MapEntry<
-            ::std::string,
-            ::zproto::RawArrayValue,
-            ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
-            ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
-            0>::CreateDefaultInstance(
-                GroupFullExtChangedNotify_ExtEntry_descriptor_));
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      GroupShortNameChangedNotify_descriptor_, &GroupShortNameChangedNotify::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       GroupOwnerChangedNotify_descriptor_, &GroupOwnerChangedNotify::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      GroupHistorySharedNotify_descriptor_, &GroupHistorySharedNotify::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       GroupDeletedNotify_descriptor_, &GroupDeletedNotify::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
@@ -1158,16 +1053,8 @@ void protobuf_ShutdownFile_groups_2eproto() {
   delete GroupTopicChangedNotify_reflection_;
   delete GroupAboutChangedNotify::default_instance_;
   delete GroupAboutChangedNotify_reflection_;
-  delete GroupExtChangedNotify::default_instance_;
-  delete GroupExtChangedNotify_reflection_;
-  delete GroupFullExtChangedNotify::default_instance_;
-  delete GroupFullExtChangedNotify_reflection_;
-  delete GroupShortNameChangedNotify::default_instance_;
-  delete GroupShortNameChangedNotify_reflection_;
   delete GroupOwnerChangedNotify::default_instance_;
   delete GroupOwnerChangedNotify_reflection_;
-  delete GroupHistorySharedNotify::default_instance_;
-  delete GroupHistorySharedNotify_reflection_;
   delete GroupDeletedNotify::default_instance_;
   delete GroupDeletedNotify_reflection_;
   delete GroupPermissionsChangedNotify::default_instance_;
@@ -1253,135 +1140,122 @@ void protobuf_AddDesc_groups_2eproto() {
 
   ::zproto::protobuf_AddDesc_misc_2eproto();
   ::zproto::protobuf_AddDesc_peers_2eproto();
-  ::zproto::protobuf_AddDesc_types_2eproto();
   ::zproto::protobuf_AddDesc_files_2eproto();
   ::zproto::protobuf_AddDesc_users_2eproto();
   ::zproto::protobuf_AddDesc_group_5fbase_2eproto();
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
     "\n\014groups.proto\022\006zproto\032\nmisc.proto\032\013peer"
-    "s.proto\032\013types.proto\032\013files.proto\032\013users"
-    ".proto\032\020group_base.proto\"9\n\021LoadFullGrou"
-    "psReq\022$\n\006groups\030\001 \003(\0132\024.zproto.GroupOutP"
-    "eer\"6\n\021LoadFullGroupsRsp\022!\n\006groups\030\001 \003(\013"
-    "2\021.zproto.GroupFull\"R\n\016LoadMembersReq\022#\n"
-    "\005group\030\001 \001(\0132\024.zproto.GroupOutPeer\022\r\n\005li"
-    "mit\030\002 \001(\005\022\014\n\004next\030\003 \001(\014\"c\n\016LoadMembersRs"
-    "p\022\037\n\007members\030\001 \003(\0132\016.zproto.Member\022\"\n\005us"
-    "ers\030\002 \003(\0132\023.zproto.UserOutPeer\022\014\n\004next\030\003"
-    " \001(\014\":\n\027GroupTitleChangedNotify\022\020\n\010group"
-    "_id\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\"L\n\030GroupAvatarC"
-    "hangedNotify\022\020\n\010group_id\030\001 \001(\t\022\036\n\006avatar"
-    "\030\002 \001(\0132\016.zproto.Avatar\":\n\027GroupTopicChan"
-    "gedNotify\022\020\n\010group_id\030\001 \001(\t\022\r\n\005topic\030\002 \001"
-    "(\t\":\n\027GroupAboutChangedNotify\022\020\n\010group_i"
-    "d\030\001 \001(\t\022\r\n\005about\030\002 \001(\t\"\241\001\n\025GroupExtChang"
-    "edNotify\022\020\n\010group_id\030\001 \001(\t\0223\n\003ext\030\002 \003(\0132"
-    "&.zproto.GroupExtChangedNotify.ExtEntry\032"
-    "A\n\010ExtEntry\022\013\n\003key\030\001 \001(\t\022$\n\005value\030\002 \001(\0132"
-    "\025.zproto.RawArrayValue:\0028\001\"\251\001\n\031GroupFull"
-    "ExtChangedNotify\022\020\n\010group_id\030\001 \001(\t\0227\n\003ex"
-    "t\030\002 \003(\0132*.zproto.GroupFullExtChangedNoti"
-    "fy.ExtEntry\032A\n\010ExtEntry\022\013\n\003key\030\001 \001(\t\022$\n\005"
-    "value\030\002 \001(\0132\025.zproto.RawArrayValue:\0028\001\"C"
-    "\n\033GroupShortNameChangedNotify\022\020\n\010group_i"
-    "d\030\001 \001(\t\022\022\n\nshort_name\030\002 \001(\t\"<\n\027GroupOwne"
-    "rChangedNotify\022\020\n\010group_id\030\001 \001(\t\022\017\n\007user"
-    "_id\030\002 \001(\t\",\n\030GroupHistorySharedNotify\022\020\n"
-    "\010group_id\030\001 \001(\t\"&\n\022GroupDeletedNotify\022\020\n"
-    "\010group_id\030\001 \001(\t\"F\n\035GroupPermissionsChang"
-    "edNotify\022\020\n\010group_id\030\001 \001(\t\022\023\n\013permission"
-    "s\030\002 \001(\003\"J\n!GroupFullPermissionsChangedNo"
-    "tify\022\020\n\010group_id\030\001 \001(\t\022\023\n\013permissions\030\002 "
-    "\001(\003\"\?\n\030GroupMemberChangedNotify\022\020\n\010group"
-    "_id\030\001 \001(\t\022\021\n\tis_member\030\002 \001(\010\"1\n\035GroupMem"
-    "bersBecameAsyncNotify\022\020\n\010group_id\030\001 \001(\t\""
-    "N\n\031GroupMembersUpdatedNotify\022\020\n\010group_id"
-    "\030\001 \001(\t\022\037\n\007members\030\002 \003(\0132\016.zproto.Member\""
-    "~\n\025GroupMemberDiffNotify\022\020\n\010group_id\030\001 \001"
-    "(\t\022\025\n\rremoved_users\030\002 \003(\005\022%\n\radded_membe"
-    "rs\030\003 \003(\0132\016.zproto.Member\022\025\n\rmembers_coun"
-    "t\030\004 \001(\005\"I\n\036GroupMembersCountChangedNotif"
-    "y\022\020\n\010group_id\030\001 \001(\t\022\025\n\rmembers_count\030\002 \001"
-    "(\005\"T\n\035GroupMemberAdminChangedNotify\022\020\n\010g"
-    "roup_id\030\001 \001(\t\022\017\n\007user_id\030\002 \001(\t\022\020\n\010is_adm"
-    "in\030\003 \001(\010\"\203\001\n\016CreateGroupReq\022\013\n\003rid\030\001 \001(\003"
-    "\022\r\n\005title\030\002 \001(\t\022\"\n\005users\030\003 \003(\0132\023.zproto."
-    "UserOutPeer\0221\n\roptimizations\030\004 \003(\0162\032.zpr"
-    "oto.UpdateOptimization\"\217\001\n\016CreateGroupRs"
-    "p\022\013\n\003seq\030\001 \001(\005\022\014\n\004date\030\006 \001(\003\022\034\n\005group\030\003 "
-    "\001(\0132\r.zproto.Group\022\033\n\005users\030\004 \003(\0132\014.zpro"
-    "to.User\022\'\n\nuser_peers\030\005 \003(\0132\023.zproto.Use"
-    "rOutPeer\"\214\001\n\021EditGroupTitleReq\022(\n\ngroup_"
+    "s.proto\032\013files.proto\032\013users.proto\032\020group"
+    "_base.proto\"9\n\021LoadFullGroupsReq\022$\n\006grou"
+    "ps\030\001 \003(\0132\024.zproto.GroupOutPeer\"6\n\021LoadFu"
+    "llGroupsRsp\022!\n\006groups\030\001 \003(\0132\021.zproto.Gro"
+    "upFull\"R\n\016LoadMembersReq\022#\n\005group\030\001 \001(\0132"
+    "\024.zproto.GroupOutPeer\022\r\n\005limit\030\002 \001(\005\022\014\n\004"
+    "next\030\003 \001(\014\"c\n\016LoadMembersRsp\022\037\n\007members\030"
+    "\001 \003(\0132\016.zproto.Member\022\"\n\005users\030\002 \003(\0132\023.z"
+    "proto.UserOutPeer\022\014\n\004next\030\003 \001(\014\":\n\027Group"
+    "TitleChangedNotify\022\020\n\010group_id\030\001 \001(\t\022\r\n\005"
+    "title\030\002 \001(\t\"L\n\030GroupAvatarChangedNotify\022"
+    "\020\n\010group_id\030\001 \001(\t\022\036\n\006avatar\030\002 \001(\0132\016.zpro"
+    "to.Avatar\":\n\027GroupTopicChangedNotify\022\020\n\010"
+    "group_id\030\001 \001(\t\022\r\n\005topic\030\002 \001(\t\":\n\027GroupAb"
+    "outChangedNotify\022\020\n\010group_id\030\001 \001(\t\022\r\n\005ab"
+    "out\030\002 \001(\t\"<\n\027GroupOwnerChangedNotify\022\020\n\010"
+    "group_id\030\001 \001(\t\022\017\n\007user_id\030\002 \001(\t\"&\n\022Group"
+    "DeletedNotify\022\020\n\010group_id\030\001 \001(\t\"F\n\035Group"
+    "PermissionsChangedNotify\022\020\n\010group_id\030\001 \001"
+    "(\t\022\023\n\013permissions\030\002 \001(\003\"J\n!GroupFullPerm"
+    "issionsChangedNotify\022\020\n\010group_id\030\001 \001(\t\022\023"
+    "\n\013permissions\030\002 \001(\003\"\?\n\030GroupMemberChange"
+    "dNotify\022\020\n\010group_id\030\001 \001(\t\022\021\n\tis_member\030\002"
+    " \001(\010\"1\n\035GroupMembersBecameAsyncNotify\022\020\n"
+    "\010group_id\030\001 \001(\t\"N\n\031GroupMembersUpdatedNo"
+    "tify\022\020\n\010group_id\030\001 \001(\t\022\037\n\007members\030\002 \003(\0132"
+    "\016.zproto.Member\"~\n\025GroupMemberDiffNotify"
+    "\022\020\n\010group_id\030\001 \001(\t\022\025\n\rremoved_users\030\002 \003("
+    "\005\022%\n\radded_members\030\003 \003(\0132\016.zproto.Member"
+    "\022\025\n\rmembers_count\030\004 \001(\005\"I\n\036GroupMembersC"
+    "ountChangedNotify\022\020\n\010group_id\030\001 \001(\t\022\025\n\rm"
+    "embers_count\030\002 \001(\005\"T\n\035GroupMemberAdminCh"
+    "angedNotify\022\020\n\010group_id\030\001 \001(\t\022\017\n\007user_id"
+    "\030\002 \001(\t\022\020\n\010is_admin\030\003 \001(\010\"\203\001\n\016CreateGroup"
+    "Req\022\013\n\003rid\030\001 \001(\003\022\r\n\005title\030\002 \001(\t\022\"\n\005users"
+    "\030\003 \003(\0132\023.zproto.UserOutPeer\0221\n\roptimizat"
+    "ions\030\004 \003(\0162\032.zproto.UpdateOptimization\"\217"
+    "\001\n\016CreateGroupRsp\022\013\n\003seq\030\001 \001(\005\022\014\n\004date\030\006"
+    " \001(\003\022\034\n\005group\030\003 \001(\0132\r.zproto.Group\022\033\n\005us"
+    "ers\030\004 \003(\0132\014.zproto.User\022\'\n\nuser_peers\030\005 "
+    "\003(\0132\023.zproto.UserOutPeer\"\214\001\n\021EditGroupTi"
+    "tleReq\022(\n\ngroup_peer\030\001 \001(\0132\024.zproto.Grou"
+    "pOutPeer\022\013\n\003rid\030\004 \001(\003\022\r\n\005title\030\003 \001(\t\0221\n\r"
+    "optimizations\030\005 \003(\0162\032.zproto.UpdateOptim"
+    "ization\"\253\001\n\022EditGroupAvatarReq\022(\n\ngroup_"
     "peer\030\001 \001(\0132\024.zproto.GroupOutPeer\022\013\n\003rid\030"
-    "\004 \001(\003\022\r\n\005title\030\003 \001(\t\0221\n\roptimizations\030\005 "
-    "\003(\0162\032.zproto.UpdateOptimization\"\253\001\n\022Edit"
-    "GroupAvatarReq\022(\n\ngroup_peer\030\001 \001(\0132\024.zpr"
-    "oto.GroupOutPeer\022\013\n\003rid\030\004 \001(\t\022+\n\rfile_lo"
-    "cation\030\003 \001(\0132\024.zproto.FileLocation\0221\n\rop"
-    "timizations\030\005 \003(\0162\032.zproto.UpdateOptimiz"
-    "ation\"^\n\022EditGroupAvatarRsp\022\036\n\006avatar\030\001 "
-    "\001(\0132\016.zproto.Avatar\022\013\n\003seq\030\002 \001(\005\022\r\n\005stat"
-    "e\030\003 \001(\014\022\014\n\004date\030\004 \001(\003\"\200\001\n\024RemoveGroupAva"
-    "tarReq\022(\n\ngroup_peer\030\001 \001(\0132\024.zproto.Grou"
-    "pOutPeer\022\013\n\003rid\030\004 \001(\003\0221\n\roptimizations\030\005"
-    " \003(\0162\032.zproto.UpdateOptimization\"U\n\025Edit"
-    "GroupShortNameReq\022(\n\ngroup_peer\030\001 \001(\0132\024."
-    "zproto.GroupOutPeer\022\022\n\nshort_name\030\002 \001(\t\""
-    "\214\001\n\021EditGroupTopicReq\022(\n\ngroup_peer\030\001 \001("
-    "\0132\024.zproto.GroupOutPeer\022\013\n\003rid\030\002 \001(\003\022\r\n\005"
-    "topic\030\003 \001(\t\0221\n\roptimizations\030\004 \003(\0162\032.zpr"
-    "oto.UpdateOptimization\"\214\001\n\021EditGroupAbou"
-    "tReq\022(\n\ngroup_peer\030\001 \001(\0132\024.zproto.GroupO"
-    "utPeer\022\013\n\003rid\030\002 \001(\003\022\r\n\005about\030\003 \001(\t\0221\n\rop"
-    "timizations\030\005 \003(\0162\032.zproto.UpdateOptimiz"
-    "ation\"\234\001\n\rInviteUserReq\022(\n\ngroup_peer\030\001 "
-    "\001(\0132\024.zproto.GroupOutPeer\022\013\n\003rid\030\004 \001(\003\022!"
-    "\n\004user\030\003 \001(\0132\023.zproto.UserOutPeer\0221\n\ropt"
-    "imizations\030\005 \003(\0162\032.zproto.UpdateOptimiza"
-    "tion\"y\n\rLeaveGroupReq\022(\n\ngroup_peer\030\001 \001("
-    "\0132\024.zproto.GroupOutPeer\022\013\n\003rid\030\002 \001(\003\0221\n\r"
-    "optimizations\030\003 \003(\0162\032.zproto.UpdateOptim"
-    "ization\"=\n\021LeaveAndDeleteReq\022(\n\ngroup_pe"
-    "er\030\001 \001(\0132\024.zproto.GroupOutPeer\"\232\001\n\013KickU"
-    "serReq\022(\n\ngroup_peer\030\001 \001(\0132\024.zproto.Grou"
-    "pOutPeer\022\013\n\003rid\030\004 \001(\003\022!\n\004user\030\003 \001(\0132\023.zp"
-    "roto.UserOutPeer\0221\n\roptimizations\030\005 \003(\0162"
-    "\032.zproto.UpdateOptimization\">\n\022JoinGroup"
-    "ByPeerReq\022(\n\ngroup_peer\030\001 \001(\0132\024.zproto.G"
-    "roupOutPeer\"d\n\020MakeUserAdminReq\022(\n\ngroup"
-    "_peer\030\001 \001(\0132\024.zproto.GroupOutPeer\022&\n\tuse"
-    "r_peer\030\002 \001(\0132\023.zproto.UserOutPeer\"g\n\023Dis"
-    "missUserAdminReq\022(\n\ngroup_peer\030\001 \001(\0132\024.z"
-    "proto.GroupOutPeer\022&\n\tuser_peer\030\002 \001(\0132\023."
-    "zproto.UserOutPeer\"h\n\024TransferOwnershipR"
+    "\004 \001(\t\022+\n\rfile_location\030\003 \001(\0132\024.zproto.Fi"
+    "leLocation\0221\n\roptimizations\030\005 \003(\0162\032.zpro"
+    "to.UpdateOptimization\"^\n\022EditGroupAvatar"
+    "Rsp\022\036\n\006avatar\030\001 \001(\0132\016.zproto.Avatar\022\013\n\003s"
+    "eq\030\002 \001(\005\022\r\n\005state\030\003 \001(\014\022\014\n\004date\030\004 \001(\003\"\200\001"
+    "\n\024RemoveGroupAvatarReq\022(\n\ngroup_peer\030\001 \001"
+    "(\0132\024.zproto.GroupOutPeer\022\013\n\003rid\030\004 \001(\003\0221\n"
+    "\roptimizations\030\005 \003(\0162\032.zproto.UpdateOpti"
+    "mization\"U\n\025EditGroupShortNameReq\022(\n\ngro"
+    "up_peer\030\001 \001(\0132\024.zproto.GroupOutPeer\022\022\n\ns"
+    "hort_name\030\002 \001(\t\"\214\001\n\021EditGroupTopicReq\022(\n"
+    "\ngroup_peer\030\001 \001(\0132\024.zproto.GroupOutPeer\022"
+    "\013\n\003rid\030\002 \001(\003\022\r\n\005topic\030\003 \001(\t\0221\n\roptimizat"
+    "ions\030\004 \003(\0162\032.zproto.UpdateOptimization\"\214"
+    "\001\n\021EditGroupAboutReq\022(\n\ngroup_peer\030\001 \001(\013"
+    "2\024.zproto.GroupOutPeer\022\013\n\003rid\030\002 \001(\003\022\r\n\005a"
+    "bout\030\003 \001(\t\0221\n\roptimizations\030\005 \003(\0162\032.zpro"
+    "to.UpdateOptimization\"\234\001\n\rInviteUserReq\022"
+    "(\n\ngroup_peer\030\001 \001(\0132\024.zproto.GroupOutPee"
+    "r\022\013\n\003rid\030\004 \001(\003\022!\n\004user\030\003 \001(\0132\023.zproto.Us"
+    "erOutPeer\0221\n\roptimizations\030\005 \003(\0162\032.zprot"
+    "o.UpdateOptimization\"y\n\rLeaveGroupReq\022(\n"
+    "\ngroup_peer\030\001 \001(\0132\024.zproto.GroupOutPeer\022"
+    "\013\n\003rid\030\002 \001(\003\0221\n\roptimizations\030\003 \003(\0162\032.zp"
+    "roto.UpdateOptimization\"=\n\021LeaveAndDelet"
+    "eReq\022(\n\ngroup_peer\030\001 \001(\0132\024.zproto.GroupO"
+    "utPeer\"\232\001\n\013KickUserReq\022(\n\ngroup_peer\030\001 \001"
+    "(\0132\024.zproto.GroupOutPeer\022\013\n\003rid\030\004 \001(\003\022!\n"
+    "\004user\030\003 \001(\0132\023.zproto.UserOutPeer\0221\n\ropti"
+    "mizations\030\005 \003(\0162\032.zproto.UpdateOptimizat"
+    "ion\">\n\022JoinGroupByPeerReq\022(\n\ngroup_peer\030"
+    "\001 \001(\0132\024.zproto.GroupOutPeer\"d\n\020MakeUserA"
+    "dminReq\022(\n\ngroup_peer\030\001 \001(\0132\024.zproto.Gro"
+    "upOutPeer\022&\n\tuser_peer\030\002 \001(\0132\023.zproto.Us"
+    "erOutPeer\"g\n\023DismissUserAdminReq\022(\n\ngrou"
+    "p_peer\030\001 \001(\0132\024.zproto.GroupOutPeer\022&\n\tus"
+    "er_peer\030\002 \001(\0132\023.zproto.UserOutPeer\"h\n\024Tr"
+    "ansferOwnershipReq\022(\n\ngroup_peer\030\001 \001(\0132\024"
+    ".zproto.GroupOutPeer\022&\n\tnew_owner\030\002 \001(\0132"
+    "\023.zproto.UserOutPeer\"\266\001\n\rAdminSettings\022\036"
+    "\n\026show_admins_to_members\030\001 \001(\010\022\032\n\022can_me"
+    "mbers_invite\030\002 \001(\010\022#\n\033can_members_edit_g"
+    "roup_info\030\003 \001(\010\022\"\n\032can_admins_edit_group"
+    "_info\030\004 \001(\010\022 \n\030show_join_leave_messages\030"
+    "\005 \001(\010\"@\n\024LoadAdminSettingsReq\022(\n\ngroup_p"
+    "eer\030\001 \001(\0132\024.zproto.GroupOutPeer\"\?\n\024LoadA"
+    "dminSettingsRsp\022\'\n\010settings\030\001 \001(\0132\025.zpro"
+    "to.AdminSettings\"i\n\024SaveAdminSettingsReq"
+    "\022(\n\ngroup_peer\030\001 \001(\0132\024.zproto.GroupOutPe"
+    "er\022\'\n\010settings\030\002 \001(\0132\025.zproto.AdminSetti"
+    "ngs\":\n\016DeleteGroupReq\022(\n\ngroup_peer\030\001 \001("
+    "\0132\024.zproto.GroupOutPeer\";\n\017ShareHistoryR"
     "eq\022(\n\ngroup_peer\030\001 \001(\0132\024.zproto.GroupOut"
-    "Peer\022&\n\tnew_owner\030\002 \001(\0132\023.zproto.UserOut"
-    "Peer\"\266\001\n\rAdminSettings\022\036\n\026show_admins_to"
-    "_members\030\001 \001(\010\022\032\n\022can_members_invite\030\002 \001"
-    "(\010\022#\n\033can_members_edit_group_info\030\003 \001(\010\022"
-    "\"\n\032can_admins_edit_group_info\030\004 \001(\010\022 \n\030s"
-    "how_join_leave_messages\030\005 \001(\010\"@\n\024LoadAdm"
-    "inSettingsReq\022(\n\ngroup_peer\030\001 \001(\0132\024.zpro"
-    "to.GroupOutPeer\"\?\n\024LoadAdminSettingsRsp\022"
-    "\'\n\010settings\030\001 \001(\0132\025.zproto.AdminSettings"
-    "\"i\n\024SaveAdminSettingsReq\022(\n\ngroup_peer\030\001"
-    " \001(\0132\024.zproto.GroupOutPeer\022\'\n\010settings\030\002"
-    " \001(\0132\025.zproto.AdminSettings\":\n\016DeleteGro"
-    "upReq\022(\n\ngroup_peer\030\001 \001(\0132\024.zproto.Group"
-    "OutPeer\";\n\017ShareHistoryReq\022(\n\ngroup_peer"
-    "\030\001 \001(\0132\024.zproto.GroupOutPeer\"\033\n\014InviteUr"
-    "lRsp\022\013\n\003url\030\001 \001(\t\"@\n\024GetGroupInviteUrlRe"
+    "Peer\"\033\n\014InviteUrlRsp\022\013\n\003url\030\001 \001(\t\"@\n\024Get"
+    "GroupInviteUrlReq\022(\n\ngroup_peer\030\001 \001(\0132\024."
+    "zproto.GroupOutPeer\">\n\022RevokeInviteUrlRe"
     "q\022(\n\ngroup_peer\030\001 \001(\0132\024.zproto.GroupOutP"
-    "eer\">\n\022RevokeInviteUrlReq\022(\n\ngroup_peer\030"
-    "\001 \001(\0132\024.zproto.GroupOutPeer\"P\n\014JoinGroup"
-    "Req\022\r\n\005token\030\001 \001(\t\0221\n\roptimizations\030\002 \003("
-    "\0162\032.zproto.UpdateOptimization\"\251\001\n\014JoinGr"
-    "oupRsp\022\034\n\005group\030\001 \001(\0132\r.zproto.Group\022\033\n\005"
-    "users\030\005 \003(\0132\014.zproto.User\022\'\n\nuser_peers\030"
-    "\007 \003(\0132\023.zproto.UserOutPeer\022\013\n\003rid\030\006 \001(\003\022"
-    "\013\n\003seq\030\002 \001(\005\022\r\n\005state\030\003 \001(\014\022\014\n\004date\030\004 \001("
-    "\003B)\n\027com.zchat.engine.zprotoB\014ZProtoGrou"
-    "psH\002b\006proto3", 4932);
+    "eer\"P\n\014JoinGroupReq\022\r\n\005token\030\001 \001(\t\0221\n\rop"
+    "timizations\030\002 \003(\0162\032.zproto.UpdateOptimiz"
+    "ation\"\251\001\n\014JoinGroupRsp\022\034\n\005group\030\001 \001(\0132\r."
+    "zproto.Group\022\033\n\005users\030\005 \003(\0132\014.zproto.Use"
+    "r\022\'\n\nuser_peers\030\007 \003(\0132\023.zproto.UserOutPe"
+    "er\022\013\n\003rid\030\006 \001(\003\022\013\n\003seq\030\002 \001(\005\022\r\n\005state\030\003 "
+    "\001(\014\022\014\n\004date\030\004 \001(\003B)\n\027com.zchat.engine.zp"
+    "rotoB\014ZProtoGroupsH\002b\006proto3", 4468);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "groups.proto", &protobuf_RegisterTypes);
   LoadFullGroupsReq::default_instance_ = new LoadFullGroupsReq();
@@ -1392,11 +1266,7 @@ void protobuf_AddDesc_groups_2eproto() {
   GroupAvatarChangedNotify::default_instance_ = new GroupAvatarChangedNotify();
   GroupTopicChangedNotify::default_instance_ = new GroupTopicChangedNotify();
   GroupAboutChangedNotify::default_instance_ = new GroupAboutChangedNotify();
-  GroupExtChangedNotify::default_instance_ = new GroupExtChangedNotify();
-  GroupFullExtChangedNotify::default_instance_ = new GroupFullExtChangedNotify();
-  GroupShortNameChangedNotify::default_instance_ = new GroupShortNameChangedNotify();
   GroupOwnerChangedNotify::default_instance_ = new GroupOwnerChangedNotify();
-  GroupHistorySharedNotify::default_instance_ = new GroupHistorySharedNotify();
   GroupDeletedNotify::default_instance_ = new GroupDeletedNotify();
   GroupPermissionsChangedNotify::default_instance_ = new GroupPermissionsChangedNotify();
   GroupFullPermissionsChangedNotify::default_instance_ = new GroupFullPermissionsChangedNotify();
@@ -1442,11 +1312,7 @@ void protobuf_AddDesc_groups_2eproto() {
   GroupAvatarChangedNotify::default_instance_->InitAsDefaultInstance();
   GroupTopicChangedNotify::default_instance_->InitAsDefaultInstance();
   GroupAboutChangedNotify::default_instance_->InitAsDefaultInstance();
-  GroupExtChangedNotify::default_instance_->InitAsDefaultInstance();
-  GroupFullExtChangedNotify::default_instance_->InitAsDefaultInstance();
-  GroupShortNameChangedNotify::default_instance_->InitAsDefaultInstance();
   GroupOwnerChangedNotify::default_instance_->InitAsDefaultInstance();
-  GroupHistorySharedNotify::default_instance_->InitAsDefaultInstance();
   GroupDeletedNotify::default_instance_->InitAsDefaultInstance();
   GroupPermissionsChangedNotify::default_instance_->InitAsDefaultInstance();
   GroupFullPermissionsChangedNotify::default_instance_->InitAsDefaultInstance();
@@ -2814,492 +2680,6 @@ void GroupAboutChangedNotify::clear_about() {
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int GroupExtChangedNotify::kGroupIdFieldNumber;
-const int GroupExtChangedNotify::kExtFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-GroupExtChangedNotify::GroupExtChangedNotify()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.GroupExtChangedNotify)
-}
-
-void GroupExtChangedNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-}
-
-GroupExtChangedNotify::GroupExtChangedNotify(const GroupExtChangedNotify& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.GroupExtChangedNotify)
-}
-
-void GroupExtChangedNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  group_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ext_.SetAssignDescriptorCallback(
-      protobuf_AssignDescriptorsOnce);
-  ext_.SetEntryDescriptor(
-      &::zproto::GroupExtChangedNotify_ExtEntry_descriptor_);
-}
-
-GroupExtChangedNotify::~GroupExtChangedNotify() {
-  // @@protoc_insertion_point(destructor:zproto.GroupExtChangedNotify)
-  SharedDtor();
-}
-
-void GroupExtChangedNotify::SharedDtor() {
-  group_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
-}
-
-void GroupExtChangedNotify::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* GroupExtChangedNotify::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return GroupExtChangedNotify_descriptor_;
-}
-
-const GroupExtChangedNotify& GroupExtChangedNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
-}
-
-GroupExtChangedNotify* GroupExtChangedNotify::default_instance_ = NULL;
-
-GroupExtChangedNotify* GroupExtChangedNotify::New(::google::protobuf::Arena* arena) const {
-  GroupExtChangedNotify* n = new GroupExtChangedNotify;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void GroupExtChangedNotify::Swap(GroupExtChangedNotify* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void GroupExtChangedNotify::InternalSwap(GroupExtChangedNotify* other) {
-  GetReflection()->Swap(this, other);}
-
-::google::protobuf::Metadata GroupExtChangedNotify::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = GroupExtChangedNotify_descriptor_;
-  metadata.reflection = GroupExtChangedNotify_reflection_;
-  return metadata;
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// GroupExtChangedNotify
-
-// optional string group_id = 1;
-void GroupExtChangedNotify::clear_group_id() {
-  group_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- const ::std::string& GroupExtChangedNotify::group_id() const {
-  // @@protoc_insertion_point(field_get:zproto.GroupExtChangedNotify.group_id)
-  return group_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void GroupExtChangedNotify::set_group_id(const ::std::string& value) {
-  
-  group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.GroupExtChangedNotify.group_id)
-}
- void GroupExtChangedNotify::set_group_id(const char* value) {
-  
-  group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.GroupExtChangedNotify.group_id)
-}
- void GroupExtChangedNotify::set_group_id(const char* value, size_t size) {
-  
-  group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.GroupExtChangedNotify.group_id)
-}
- ::std::string* GroupExtChangedNotify::mutable_group_id() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.GroupExtChangedNotify.group_id)
-  return group_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- ::std::string* GroupExtChangedNotify::release_group_id() {
-  // @@protoc_insertion_point(field_release:zproto.GroupExtChangedNotify.group_id)
-  
-  return group_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void GroupExtChangedNotify::set_allocated_group_id(::std::string* group_id) {
-  if (group_id != NULL) {
-    
-  } else {
-    
-  }
-  group_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), group_id);
-  // @@protoc_insertion_point(field_set_allocated:zproto.GroupExtChangedNotify.group_id)
-}
-
-// map<string, .zproto.RawArrayValue> ext = 2;
-int GroupExtChangedNotify::ext_size() const {
-  return ext_.size();
-}
-void GroupExtChangedNotify::clear_ext() {
-  ext_.Clear();
-}
- const ::google::protobuf::Map< ::std::string, ::zproto::RawArrayValue >&
-GroupExtChangedNotify::ext() const {
-  // @@protoc_insertion_point(field_map:zproto.GroupExtChangedNotify.ext)
-  return ext_.GetMap();
-}
- ::google::protobuf::Map< ::std::string, ::zproto::RawArrayValue >*
-GroupExtChangedNotify::mutable_ext() {
-  // @@protoc_insertion_point(field_mutable_map:zproto.GroupExtChangedNotify.ext)
-  return ext_.MutableMap();
-}
-
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int GroupFullExtChangedNotify::kGroupIdFieldNumber;
-const int GroupFullExtChangedNotify::kExtFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-GroupFullExtChangedNotify::GroupFullExtChangedNotify()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.GroupFullExtChangedNotify)
-}
-
-void GroupFullExtChangedNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-}
-
-GroupFullExtChangedNotify::GroupFullExtChangedNotify(const GroupFullExtChangedNotify& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.GroupFullExtChangedNotify)
-}
-
-void GroupFullExtChangedNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  group_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ext_.SetAssignDescriptorCallback(
-      protobuf_AssignDescriptorsOnce);
-  ext_.SetEntryDescriptor(
-      &::zproto::GroupFullExtChangedNotify_ExtEntry_descriptor_);
-}
-
-GroupFullExtChangedNotify::~GroupFullExtChangedNotify() {
-  // @@protoc_insertion_point(destructor:zproto.GroupFullExtChangedNotify)
-  SharedDtor();
-}
-
-void GroupFullExtChangedNotify::SharedDtor() {
-  group_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
-}
-
-void GroupFullExtChangedNotify::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* GroupFullExtChangedNotify::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return GroupFullExtChangedNotify_descriptor_;
-}
-
-const GroupFullExtChangedNotify& GroupFullExtChangedNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
-}
-
-GroupFullExtChangedNotify* GroupFullExtChangedNotify::default_instance_ = NULL;
-
-GroupFullExtChangedNotify* GroupFullExtChangedNotify::New(::google::protobuf::Arena* arena) const {
-  GroupFullExtChangedNotify* n = new GroupFullExtChangedNotify;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void GroupFullExtChangedNotify::Swap(GroupFullExtChangedNotify* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void GroupFullExtChangedNotify::InternalSwap(GroupFullExtChangedNotify* other) {
-  GetReflection()->Swap(this, other);}
-
-::google::protobuf::Metadata GroupFullExtChangedNotify::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = GroupFullExtChangedNotify_descriptor_;
-  metadata.reflection = GroupFullExtChangedNotify_reflection_;
-  return metadata;
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// GroupFullExtChangedNotify
-
-// optional string group_id = 1;
-void GroupFullExtChangedNotify::clear_group_id() {
-  group_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- const ::std::string& GroupFullExtChangedNotify::group_id() const {
-  // @@protoc_insertion_point(field_get:zproto.GroupFullExtChangedNotify.group_id)
-  return group_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void GroupFullExtChangedNotify::set_group_id(const ::std::string& value) {
-  
-  group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.GroupFullExtChangedNotify.group_id)
-}
- void GroupFullExtChangedNotify::set_group_id(const char* value) {
-  
-  group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.GroupFullExtChangedNotify.group_id)
-}
- void GroupFullExtChangedNotify::set_group_id(const char* value, size_t size) {
-  
-  group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.GroupFullExtChangedNotify.group_id)
-}
- ::std::string* GroupFullExtChangedNotify::mutable_group_id() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.GroupFullExtChangedNotify.group_id)
-  return group_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- ::std::string* GroupFullExtChangedNotify::release_group_id() {
-  // @@protoc_insertion_point(field_release:zproto.GroupFullExtChangedNotify.group_id)
-  
-  return group_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void GroupFullExtChangedNotify::set_allocated_group_id(::std::string* group_id) {
-  if (group_id != NULL) {
-    
-  } else {
-    
-  }
-  group_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), group_id);
-  // @@protoc_insertion_point(field_set_allocated:zproto.GroupFullExtChangedNotify.group_id)
-}
-
-// map<string, .zproto.RawArrayValue> ext = 2;
-int GroupFullExtChangedNotify::ext_size() const {
-  return ext_.size();
-}
-void GroupFullExtChangedNotify::clear_ext() {
-  ext_.Clear();
-}
- const ::google::protobuf::Map< ::std::string, ::zproto::RawArrayValue >&
-GroupFullExtChangedNotify::ext() const {
-  // @@protoc_insertion_point(field_map:zproto.GroupFullExtChangedNotify.ext)
-  return ext_.GetMap();
-}
- ::google::protobuf::Map< ::std::string, ::zproto::RawArrayValue >*
-GroupFullExtChangedNotify::mutable_ext() {
-  // @@protoc_insertion_point(field_mutable_map:zproto.GroupFullExtChangedNotify.ext)
-  return ext_.MutableMap();
-}
-
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int GroupShortNameChangedNotify::kGroupIdFieldNumber;
-const int GroupShortNameChangedNotify::kShortNameFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-GroupShortNameChangedNotify::GroupShortNameChangedNotify()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.GroupShortNameChangedNotify)
-}
-
-void GroupShortNameChangedNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-}
-
-GroupShortNameChangedNotify::GroupShortNameChangedNotify(const GroupShortNameChangedNotify& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.GroupShortNameChangedNotify)
-}
-
-void GroupShortNameChangedNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  group_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  short_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-
-GroupShortNameChangedNotify::~GroupShortNameChangedNotify() {
-  // @@protoc_insertion_point(destructor:zproto.GroupShortNameChangedNotify)
-  SharedDtor();
-}
-
-void GroupShortNameChangedNotify::SharedDtor() {
-  group_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  short_name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
-}
-
-void GroupShortNameChangedNotify::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* GroupShortNameChangedNotify::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return GroupShortNameChangedNotify_descriptor_;
-}
-
-const GroupShortNameChangedNotify& GroupShortNameChangedNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
-}
-
-GroupShortNameChangedNotify* GroupShortNameChangedNotify::default_instance_ = NULL;
-
-GroupShortNameChangedNotify* GroupShortNameChangedNotify::New(::google::protobuf::Arena* arena) const {
-  GroupShortNameChangedNotify* n = new GroupShortNameChangedNotify;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void GroupShortNameChangedNotify::Swap(GroupShortNameChangedNotify* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void GroupShortNameChangedNotify::InternalSwap(GroupShortNameChangedNotify* other) {
-  GetReflection()->Swap(this, other);}
-
-::google::protobuf::Metadata GroupShortNameChangedNotify::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = GroupShortNameChangedNotify_descriptor_;
-  metadata.reflection = GroupShortNameChangedNotify_reflection_;
-  return metadata;
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// GroupShortNameChangedNotify
-
-// optional string group_id = 1;
-void GroupShortNameChangedNotify::clear_group_id() {
-  group_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- const ::std::string& GroupShortNameChangedNotify::group_id() const {
-  // @@protoc_insertion_point(field_get:zproto.GroupShortNameChangedNotify.group_id)
-  return group_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void GroupShortNameChangedNotify::set_group_id(const ::std::string& value) {
-  
-  group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.GroupShortNameChangedNotify.group_id)
-}
- void GroupShortNameChangedNotify::set_group_id(const char* value) {
-  
-  group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.GroupShortNameChangedNotify.group_id)
-}
- void GroupShortNameChangedNotify::set_group_id(const char* value, size_t size) {
-  
-  group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.GroupShortNameChangedNotify.group_id)
-}
- ::std::string* GroupShortNameChangedNotify::mutable_group_id() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.GroupShortNameChangedNotify.group_id)
-  return group_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- ::std::string* GroupShortNameChangedNotify::release_group_id() {
-  // @@protoc_insertion_point(field_release:zproto.GroupShortNameChangedNotify.group_id)
-  
-  return group_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void GroupShortNameChangedNotify::set_allocated_group_id(::std::string* group_id) {
-  if (group_id != NULL) {
-    
-  } else {
-    
-  }
-  group_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), group_id);
-  // @@protoc_insertion_point(field_set_allocated:zproto.GroupShortNameChangedNotify.group_id)
-}
-
-// optional string short_name = 2;
-void GroupShortNameChangedNotify::clear_short_name() {
-  short_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- const ::std::string& GroupShortNameChangedNotify::short_name() const {
-  // @@protoc_insertion_point(field_get:zproto.GroupShortNameChangedNotify.short_name)
-  return short_name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void GroupShortNameChangedNotify::set_short_name(const ::std::string& value) {
-  
-  short_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.GroupShortNameChangedNotify.short_name)
-}
- void GroupShortNameChangedNotify::set_short_name(const char* value) {
-  
-  short_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.GroupShortNameChangedNotify.short_name)
-}
- void GroupShortNameChangedNotify::set_short_name(const char* value, size_t size) {
-  
-  short_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.GroupShortNameChangedNotify.short_name)
-}
- ::std::string* GroupShortNameChangedNotify::mutable_short_name() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.GroupShortNameChangedNotify.short_name)
-  return short_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- ::std::string* GroupShortNameChangedNotify::release_short_name() {
-  // @@protoc_insertion_point(field_release:zproto.GroupShortNameChangedNotify.short_name)
-  
-  return short_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void GroupShortNameChangedNotify::set_allocated_short_name(::std::string* short_name) {
-  if (short_name != NULL) {
-    
-  } else {
-    
-  }
-  short_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), short_name);
-  // @@protoc_insertion_point(field_set_allocated:zproto.GroupShortNameChangedNotify.short_name)
-}
-
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int GroupOwnerChangedNotify::kGroupIdFieldNumber;
 const int GroupOwnerChangedNotify::kUserIdFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
@@ -3471,137 +2851,6 @@ void GroupOwnerChangedNotify::clear_user_id() {
   }
   user_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), user_id);
   // @@protoc_insertion_point(field_set_allocated:zproto.GroupOwnerChangedNotify.user_id)
-}
-
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int GroupHistorySharedNotify::kGroupIdFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-GroupHistorySharedNotify::GroupHistorySharedNotify()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.GroupHistorySharedNotify)
-}
-
-void GroupHistorySharedNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-}
-
-GroupHistorySharedNotify::GroupHistorySharedNotify(const GroupHistorySharedNotify& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.GroupHistorySharedNotify)
-}
-
-void GroupHistorySharedNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  group_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-
-GroupHistorySharedNotify::~GroupHistorySharedNotify() {
-  // @@protoc_insertion_point(destructor:zproto.GroupHistorySharedNotify)
-  SharedDtor();
-}
-
-void GroupHistorySharedNotify::SharedDtor() {
-  group_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
-}
-
-void GroupHistorySharedNotify::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* GroupHistorySharedNotify::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return GroupHistorySharedNotify_descriptor_;
-}
-
-const GroupHistorySharedNotify& GroupHistorySharedNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
-}
-
-GroupHistorySharedNotify* GroupHistorySharedNotify::default_instance_ = NULL;
-
-GroupHistorySharedNotify* GroupHistorySharedNotify::New(::google::protobuf::Arena* arena) const {
-  GroupHistorySharedNotify* n = new GroupHistorySharedNotify;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void GroupHistorySharedNotify::Swap(GroupHistorySharedNotify* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void GroupHistorySharedNotify::InternalSwap(GroupHistorySharedNotify* other) {
-  GetReflection()->Swap(this, other);}
-
-::google::protobuf::Metadata GroupHistorySharedNotify::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = GroupHistorySharedNotify_descriptor_;
-  metadata.reflection = GroupHistorySharedNotify_reflection_;
-  return metadata;
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// GroupHistorySharedNotify
-
-// optional string group_id = 1;
-void GroupHistorySharedNotify::clear_group_id() {
-  group_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- const ::std::string& GroupHistorySharedNotify::group_id() const {
-  // @@protoc_insertion_point(field_get:zproto.GroupHistorySharedNotify.group_id)
-  return group_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void GroupHistorySharedNotify::set_group_id(const ::std::string& value) {
-  
-  group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.GroupHistorySharedNotify.group_id)
-}
- void GroupHistorySharedNotify::set_group_id(const char* value) {
-  
-  group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.GroupHistorySharedNotify.group_id)
-}
- void GroupHistorySharedNotify::set_group_id(const char* value, size_t size) {
-  
-  group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.GroupHistorySharedNotify.group_id)
-}
- ::std::string* GroupHistorySharedNotify::mutable_group_id() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.GroupHistorySharedNotify.group_id)
-  return group_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- ::std::string* GroupHistorySharedNotify::release_group_id() {
-  // @@protoc_insertion_point(field_release:zproto.GroupHistorySharedNotify.group_id)
-  
-  return group_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
- void GroupHistorySharedNotify::set_allocated_group_id(::std::string* group_id) {
-  if (group_id != NULL) {
-    
-  } else {
-    
-  }
-  group_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), group_id);
-  // @@protoc_insertion_point(field_set_allocated:zproto.GroupHistorySharedNotify.group_id)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

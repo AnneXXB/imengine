@@ -26,8 +26,6 @@
 #include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>
 #include <google/protobuf/extension_set.h>
-#include <google/protobuf/map.h>
-#include <google/protobuf/map_field_inl.h>
 #include <google/protobuf/unknown_field_set.h>
 #include "types.pb.h"
 #include "files.pb.h"
@@ -85,7 +83,6 @@ class User : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
 
   // nested types ----------------------------------------------------
 
-
   // accessors -------------------------------------------------------
 
   // optional string uid = 1;
@@ -105,45 +102,25 @@ class User : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
   ::google::protobuf::int64 access_hash() const;
   void set_access_hash(::google::protobuf::int64 value);
 
-  // optional string name = 3;
-  void clear_name();
-  static const int kNameFieldNumber = 3;
-  const ::std::string& name() const;
-  void set_name(const ::std::string& value);
-  void set_name(const char* value);
-  void set_name(const char* value, size_t size);
-  ::std::string* mutable_name();
-  ::std::string* release_name();
-  void set_allocated_name(::std::string* name);
+  // optional string push_name = 3;
+  void clear_push_name();
+  static const int kPushNameFieldNumber = 3;
+  const ::std::string& push_name() const;
+  void set_push_name(const ::std::string& value);
+  void set_push_name(const char* value);
+  void set_push_name(const char* value, size_t size);
+  ::std::string* mutable_push_name();
+  ::std::string* release_push_name();
+  void set_allocated_push_name(::std::string* push_name);
 
-  // optional string nick = 4;
-  void clear_nick();
-  static const int kNickFieldNumber = 4;
-  const ::std::string& nick() const;
-  void set_nick(const ::std::string& value);
-  void set_nick(const char* value);
-  void set_nick(const char* value, size_t size);
-  ::std::string* mutable_nick();
-  ::std::string* release_nick();
-  void set_allocated_nick(::std::string* nick);
-
-  // optional .zproto.Avatar avatar = 5;
-  bool has_avatar() const;
-  void clear_avatar();
-  static const int kAvatarFieldNumber = 5;
-  const ::zproto::Avatar& avatar() const;
-  ::zproto::Avatar* mutable_avatar();
-  ::zproto::Avatar* release_avatar();
-  void set_allocated_avatar(::zproto::Avatar* avatar);
-
-  // map<string, .zproto.RawArrayValue> ext = 6;
-  int ext_size() const;
-  void clear_ext();
-  static const int kExtFieldNumber = 6;
-  const ::google::protobuf::Map< ::std::string, ::zproto::RawArrayValue >&
-      ext() const;
-  ::google::protobuf::Map< ::std::string, ::zproto::RawArrayValue >*
-      mutable_ext();
+  // optional .zproto.Avatar push_avatar = 5;
+  bool has_push_avatar() const;
+  void clear_push_avatar();
+  static const int kPushAvatarFieldNumber = 5;
+  const ::zproto::Avatar& push_avatar() const;
+  ::zproto::Avatar* mutable_push_avatar();
+  ::zproto::Avatar* release_push_avatar();
+  void set_allocated_push_avatar(::zproto::Avatar* push_avatar);
 
   // @@protoc_insertion_point(class_scope:zproto.User)
  private:
@@ -152,20 +129,8 @@ class User : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
   bool _is_default_instance_;
   ::google::protobuf::internal::ArenaStringPtr uid_;
   ::google::protobuf::int64 access_hash_;
-  ::google::protobuf::internal::ArenaStringPtr name_;
-  ::google::protobuf::internal::ArenaStringPtr nick_;
-  ::zproto::Avatar* avatar_;
-  typedef ::google::protobuf::internal::MapEntryLite<
-      ::std::string, ::zproto::RawArrayValue,
-      ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
-      ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
-      0 >
-      User_ExtEntry;
-  ::google::protobuf::internal::MapField<
-      ::std::string, ::zproto::RawArrayValue,
-      ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
-      ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
-      0 > ext_;
+  ::google::protobuf::internal::ArenaStringPtr push_name_;
+  ::zproto::Avatar* push_avatar_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_users_2eproto();
   friend void protobuf_AssignDesc_users_2eproto();
@@ -240,148 +205,86 @@ inline void User::set_access_hash(::google::protobuf::int64 value) {
   // @@protoc_insertion_point(field_set:zproto.User.access_hash)
 }
 
-// optional string name = 3;
-inline void User::clear_name() {
-  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// optional string push_name = 3;
+inline void User::clear_push_name() {
+  push_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& User::name() const {
-  // @@protoc_insertion_point(field_get:zproto.User.name)
-  return name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline const ::std::string& User::push_name() const {
+  // @@protoc_insertion_point(field_get:zproto.User.push_name)
+  return push_name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void User::set_name(const ::std::string& value) {
+inline void User::set_push_name(const ::std::string& value) {
   
-  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.User.name)
+  push_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.User.push_name)
 }
-inline void User::set_name(const char* value) {
+inline void User::set_push_name(const char* value) {
   
-  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.User.name)
+  push_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.User.push_name)
 }
-inline void User::set_name(const char* value, size_t size) {
+inline void User::set_push_name(const char* value, size_t size) {
   
-  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  push_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.User.name)
+  // @@protoc_insertion_point(field_set_pointer:zproto.User.push_name)
 }
-inline ::std::string* User::mutable_name() {
+inline ::std::string* User::mutable_push_name() {
   
-  // @@protoc_insertion_point(field_mutable:zproto.User.name)
-  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:zproto.User.push_name)
+  return push_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* User::release_name() {
-  // @@protoc_insertion_point(field_release:zproto.User.name)
+inline ::std::string* User::release_push_name() {
+  // @@protoc_insertion_point(field_release:zproto.User.push_name)
   
-  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return push_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void User::set_allocated_name(::std::string* name) {
-  if (name != NULL) {
+inline void User::set_allocated_push_name(::std::string* push_name) {
+  if (push_name != NULL) {
     
   } else {
     
   }
-  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
-  // @@protoc_insertion_point(field_set_allocated:zproto.User.name)
+  push_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), push_name);
+  // @@protoc_insertion_point(field_set_allocated:zproto.User.push_name)
 }
 
-// optional string nick = 4;
-inline void User::clear_nick() {
-  nick_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// optional .zproto.Avatar push_avatar = 5;
+inline bool User::has_push_avatar() const {
+  return !_is_default_instance_ && push_avatar_ != NULL;
 }
-inline const ::std::string& User::nick() const {
-  // @@protoc_insertion_point(field_get:zproto.User.nick)
-  return nick_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void User::clear_push_avatar() {
+  if (GetArenaNoVirtual() == NULL && push_avatar_ != NULL) delete push_avatar_;
+  push_avatar_ = NULL;
 }
-inline void User::set_nick(const ::std::string& value) {
+inline const ::zproto::Avatar& User::push_avatar() const {
+  // @@protoc_insertion_point(field_get:zproto.User.push_avatar)
+  return push_avatar_ != NULL ? *push_avatar_ : *default_instance_->push_avatar_;
+}
+inline ::zproto::Avatar* User::mutable_push_avatar() {
   
-  nick_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:zproto.User.nick)
-}
-inline void User::set_nick(const char* value) {
-  
-  nick_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:zproto.User.nick)
-}
-inline void User::set_nick(const char* value, size_t size) {
-  
-  nick_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:zproto.User.nick)
-}
-inline ::std::string* User::mutable_nick() {
-  
-  // @@protoc_insertion_point(field_mutable:zproto.User.nick)
-  return nick_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* User::release_nick() {
-  // @@protoc_insertion_point(field_release:zproto.User.nick)
-  
-  return nick_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void User::set_allocated_nick(::std::string* nick) {
-  if (nick != NULL) {
-    
-  } else {
-    
+  if (push_avatar_ == NULL) {
+    push_avatar_ = new ::zproto::Avatar;
   }
-  nick_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), nick);
-  // @@protoc_insertion_point(field_set_allocated:zproto.User.nick)
+  // @@protoc_insertion_point(field_mutable:zproto.User.push_avatar)
+  return push_avatar_;
 }
-
-// optional .zproto.Avatar avatar = 5;
-inline bool User::has_avatar() const {
-  return !_is_default_instance_ && avatar_ != NULL;
-}
-inline void User::clear_avatar() {
-  if (GetArenaNoVirtual() == NULL && avatar_ != NULL) delete avatar_;
-  avatar_ = NULL;
-}
-inline const ::zproto::Avatar& User::avatar() const {
-  // @@protoc_insertion_point(field_get:zproto.User.avatar)
-  return avatar_ != NULL ? *avatar_ : *default_instance_->avatar_;
-}
-inline ::zproto::Avatar* User::mutable_avatar() {
+inline ::zproto::Avatar* User::release_push_avatar() {
+  // @@protoc_insertion_point(field_release:zproto.User.push_avatar)
   
-  if (avatar_ == NULL) {
-    avatar_ = new ::zproto::Avatar;
-  }
-  // @@protoc_insertion_point(field_mutable:zproto.User.avatar)
-  return avatar_;
-}
-inline ::zproto::Avatar* User::release_avatar() {
-  // @@protoc_insertion_point(field_release:zproto.User.avatar)
-  
-  ::zproto::Avatar* temp = avatar_;
-  avatar_ = NULL;
+  ::zproto::Avatar* temp = push_avatar_;
+  push_avatar_ = NULL;
   return temp;
 }
-inline void User::set_allocated_avatar(::zproto::Avatar* avatar) {
-  delete avatar_;
-  avatar_ = avatar;
-  if (avatar) {
+inline void User::set_allocated_push_avatar(::zproto::Avatar* push_avatar) {
+  delete push_avatar_;
+  push_avatar_ = push_avatar;
+  if (push_avatar) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zproto.User.avatar)
-}
-
-// map<string, .zproto.RawArrayValue> ext = 6;
-inline int User::ext_size() const {
-  return ext_.size();
-}
-inline void User::clear_ext() {
-  ext_.Clear();
-}
-inline const ::google::protobuf::Map< ::std::string, ::zproto::RawArrayValue >&
-User::ext() const {
-  // @@protoc_insertion_point(field_map:zproto.User.ext)
-  return ext_.GetMap();
-}
-inline ::google::protobuf::Map< ::std::string, ::zproto::RawArrayValue >*
-User::mutable_ext() {
-  // @@protoc_insertion_point(field_mutable_map:zproto.User.ext)
-  return ext_.MutableMap();
+  // @@protoc_insertion_point(field_set_allocated:zproto.User.push_avatar)
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS

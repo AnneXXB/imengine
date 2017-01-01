@@ -34,6 +34,25 @@ struct UserDialogDAOImpl : public UserDialogDAO {
                          int load_mode,
                          uint32_t load_limit,
                          UserDialogDOList& user_dialogs) override;
+  
+  // 阻止和取消
+  int UpdateBlock(const std::string& user_id,
+                  const std::string& peer_id,
+                  uint32_t peer_type,
+                  bool is_block) override;
+  
+  // 置顶和取消
+  int UpdateTop(const std::string& user_id,
+                const std::string& peer_id,
+                uint32_t peer_type,
+                bool is_top) override;
+  
+  // 屏蔽和取消
+  int UpdateDnd(const std::string& user_id,
+                const std::string& peer_id,
+                uint32_t peer_type,
+                bool is_dnd) override;
+  
 };
 
 #endif

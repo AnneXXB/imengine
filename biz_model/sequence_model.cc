@@ -91,3 +91,56 @@ int SequenceModel::DeliveryUpdateDataNotMe(uint64_t my_conn_id, const std::list<
   message.SerializeToString(&update_data);
   return DeliveryUpdateDataNotMe(my_conn_id, uid_list, update_header, update_data);
 }
+
+uint64_t SequenceModel::DeliveryUpdateDataNotMe(uint64_t my_conn_id, const std::string& uid, const google::protobuf::Message& message) {
+  auto update_header = CRC32(message.GetTypeName());
+  std::string update_data;
+  message.SerializeToString(&update_data);
+
+  // 同步队列
+  auto& sequence_dao = SequenceDAO::GetInstance();
+  auto& user_sequence_dao = UserSequenceDAO::GetInstance();
+  auto now = NowInMsecTime();
+  
+  // UserSequenceDO
+  UserSequenceDO user_sequence_do;
+  user_sequence_do.header = update_header;
+  user_sequence_do.data = update_data;
+  user_sequence_do.created_at = now;
+  
+  // 转发消息
+  zproto::DeliveryDataToUsersReq delivery;
+  delivery.set_my_conn_id(my_conn_id);
+  delivery.set_raw_data_header(update_header);
+  delivery.set_raw_data(update_data);
+  
+  // user_sequence_do
+  user_sequence_do.seq = sequence_dao.GetNextID2(uid);
+  user_sequence_do.user_id = uid;
+  
+  int r = user_sequence_dao.Create(user_sequence_do);
+  if (r<0) {
+    // TODO(@beneqi)
+    return 0;
+  }
+  
+  // delivery
+  delivery.add_uid_list(uid);
+  
+  // TODO(@benqi): 还是用协程简单
+  // 转发给push_server成功后才能返回
+  // 如果push_server有问题，则可能会导致丢消息，解决:
+  // 1. 告诉客户端发送消息失败，让客户端重试
+  // 2. 服务端重试
+  ZRpcUtil::DoClientCall("push_client", MakeRpcRequest(delivery))
+  .within(std::chrono::milliseconds(5000))
+  .then([](ProtoRpcResponsePtr rsp2) {
+    CHECK(rsp2);
+    LOG(INFO) << "push_client rsp: " << rsp2->ToString();
+    // auto online_rep = ToApiRpcOk<zproto::ClientOnlineRsp>(rsp2);
+    // LOG(INFO) << (*online_rep)->Utf8DebugString();
+    //
+  });
+  
+  return user_sequence_do.seq;
+}

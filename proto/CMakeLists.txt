@@ -28,6 +28,8 @@ zproto/proto/peers.proto
 # 客户端交互协议
 api/cc/auth.pb.cc
 api/cc/auth.pb.h
+api/cc/dialogs.pb.cc
+api/cc/dialogs.pb.h
 api/cc/configs.pb.cc
 api/cc/configs.pb.h
 api/cc/counters.pb.cc
@@ -65,6 +67,7 @@ api/cc/weak.pb.h
 
 api/proto/auth.proto
 api/proto/configs.proto
+api/proto/dialogs.proto
 api/proto/counters.proto
 api/proto/device.proto
 api/proto/files.proto

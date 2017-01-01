@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-include_directories(. .. ../../nebula)
+include_directories(. .. ../../server ../../nebula)
 
 set (SRC_LIST
   client.cc
@@ -25,6 +25,7 @@ set (SRC_LIST
   client_handler.h
   ../../nebula/nebula/base/readline_gets.cc
   ../../nebula/nebula/base/readline_gets.h
+  ../../server/base/message_handler_util.h
   )
 
 add_executable (client ${SRC_LIST})

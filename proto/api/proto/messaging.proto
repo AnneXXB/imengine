@@ -165,6 +165,20 @@ message ChatDeleteNotify {
   Peer peer = 1; //   Destination peer
 }
 
+// Short Dialog from grouped conversation list
+message DialogShort {
+  Peer peer = 1; //   Peer of conversation
+  int32 counter = 2; //   Conversation unread count
+  int64 date = 4; //   Conversation top message date
+}
+
+// Grouped dialog list
+message DialogGroup {
+  string title = 1; //   Title of group
+  string key = 2; //   Key of group
+  repeated DialogShort dialogs = 3; //   Conversations in group
+}
+
 // Update about chat groups changed. Called only when adding, removing and reordering of grouped dialog.
 message ChatGroupsChangedNotify {
   // int32 COMMAND_ID = 1;
@@ -191,43 +205,4 @@ message LoadHistoryRsp {
   repeated Group groups = 5;
   repeated GroupOutPeer group_peers = 6;
 }
-
-// Loading conversation history
-// LoadDialogsReq --> LoadDialogsRsp
-message LoadDialogsReq {
-  // int32 COMMAND_ID = 104;
-  int64 min_date = 1; // start date of conversation loading. Use 0 to load latest messages
-  int32 limit = 2; // limit maximum amount of messages (max is 100)
-  repeated UpdateOptimization optimizations = 3; // Enabled optimizations
-}
-
-// Loaded dialogs
-message LoadDialogsRsp {
-  // int32 COMMAND_ID = 105;
-  repeated Group groups = 1; //   Loaded groups
-  repeated User users = 2; //   Loaded users
-  repeated Dialog dialogs = 3; //   Loaded dialogs
-  repeated UserOutPeer user_peers = 4;
-  repeated GroupOutPeer group_peers = 5;
-}
-
-// Load all dialogs from grouped list
-// LoadGroupedDialogsReq --> LoadGroupedDialogsRsp
-message LoadGroupedDialogsReq {
-  // int32 COMMAND_ID = 225;
-  repeated UpdateOptimization optimizations = 1;
-}
-
-// Loaded grouped dialogs
-message LoadGroupedDialogsRsp {
-  // int32 COMMAND_ID = 226;
-  repeated DialogGroup dialogs = 1; //   Loaded groups of dialogs
-  repeated User users = 2; //   Loaded users
-  repeated Group groups = 3; //   Loaded groups
-  bool show_archived = 4; //   Show archived section
-  bool show_invite = 5; //   Show invite message
-  repeated UserOutPeer user_peers = 6;
-  repeated GroupOutPeer group_peers = 7;
-}
-
 

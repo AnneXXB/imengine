@@ -28,6 +28,8 @@
 #include "proto/s2s/cc/servers.pb.h"
 #include "nebula/net/zproto/api_message_box.h"
 
+#define RPC_TIMEOUT 5000  // 5000毫秒
+
 inline folly::Future<folly::Unit> WritePackage(const std::string& service_name, std::shared_ptr<PackageMessage> message_data) {
   std::unique_ptr<folly::IOBuf> data;
   message_data->SerializeToIOBuf(data);
@@ -64,8 +66,8 @@ template <typename MESSAGE>
 inline void ZRpcClientCall(const std::string& service_name,
                            RpcRequestPtr request,
                            std::function<int(std::shared_ptr<ApiRpcOk<MESSAGE>>, ProtoRpcResponsePtr)> cb,
-                           int timeout) {
-  ZRpcUtil::DoClientCall("auth_client", request)
+                           int timeout = RPC_TIMEOUT) {
+  ZRpcUtil::DoClientCall(service_name, request)
     .within(std::chrono::milliseconds(timeout))
       // TODO(@benqi): conn_data可能会失效
     .then([cb](ProtoRpcResponsePtr rsp) {

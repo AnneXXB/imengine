@@ -23,6 +23,10 @@ set (SRC_LIST
   messenger_server.h
   zrpc_messenger_dispatcher.cc
   zrpc_messenger_dispatcher.h
+  zrpc_dialog_service.cc
+  zrpc_dialog_service.h
+  dialog_service_impl.cc
+  dialog_service_impl.h
   zrpc_messaging_service.cc
   zrpc_messaging_service.h
   messaging_service_impl.cc

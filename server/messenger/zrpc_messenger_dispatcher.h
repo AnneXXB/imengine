@@ -27,6 +27,17 @@ public:
   ZRpcMessengerDispatcher();
   ~ZRpcMessengerDispatcher() = default;
 
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+  // dialog
+  static ProtoRpcResponsePtr CreateChatDialog(RpcRequestPtr request);
+  static ProtoRpcResponsePtr LoadDialogs(RpcRequestPtr request);
+  static ProtoRpcResponsePtr BlockPeer(RpcRequestPtr request);
+  static ProtoRpcResponsePtr UnBlockPeer(RpcRequestPtr request);
+  static ProtoRpcResponsePtr TopPeer(RpcRequestPtr request);
+  static ProtoRpcResponsePtr UnTopPeer(RpcRequestPtr request);
+  static ProtoRpcResponsePtr DndPeer(RpcRequestPtr request);
+  static ProtoRpcResponsePtr UnDndPeer(RpcRequestPtr request);
+  
   // message
   static ProtoRpcResponsePtr SendMessage(RpcRequestPtr request);
   static ProtoRpcResponsePtr MessageReceived(RpcRequestPtr request);
@@ -34,11 +45,7 @@ public:
   static ProtoRpcResponsePtr DeleteMessage(RpcRequestPtr request);
   static ProtoRpcResponsePtr ClearChat(RpcRequestPtr request);
   static ProtoRpcResponsePtr DeleteChat(RpcRequestPtr request);
-
-  // dialog
   static ProtoRpcResponsePtr LoadHistory(RpcRequestPtr request);
-  static ProtoRpcResponsePtr LoadDialogs(RpcRequestPtr request);
-  static ProtoRpcResponsePtr LoadGroupedDialogs(RpcRequestPtr request);
 
   // group
   static ProtoRpcResponsePtr LoadFullGroups(RpcRequestPtr request);

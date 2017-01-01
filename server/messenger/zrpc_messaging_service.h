@@ -39,8 +39,6 @@ public:
   virtual int DeleteChat(const zproto::DeleteChatReq& request, zproto::SeqRsp* response);
 
   virtual int LoadHistory(const zproto::LoadHistoryReq& request, zproto::LoadHistoryRsp* response);
-  virtual int LoadDialogs(const zproto::LoadDialogsReq& request, zproto::LoadDialogsRsp* response);
-  virtual int LoadGroupedDialogs(const zproto::LoadGroupedDialogsReq& request, zproto::LoadGroupedDialogsRsp* response);
 };
 
 #endif

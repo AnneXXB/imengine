@@ -29,10 +29,8 @@ import "files.proto";
 
 // Main user object
 message User {
-  string uid = 1; //   uid
+  string uid = 1;         //   uid
   int64  access_hash = 2; //   user's access hash
-  string name = 3; //   user's name
-  string nick = 4; //   User's nickname
-  Avatar avatar = 5; //   avatar of user
-  map<string, RawArrayValue> ext = 6; //   Extension values
+  string push_name = 3;   //   推送显示名
+  Avatar push_avatar = 5; //   推送头像
 }

@@ -47,10 +47,8 @@ class ChatGroupsChangedNotify;
 class ClearChatReq;
 class DeleteChatReq;
 class DeleteMessageReq;
-class LoadDialogsReq;
-class LoadDialogsRsp;
-class LoadGroupedDialogsReq;
-class LoadGroupedDialogsRsp;
+class DialogGroup;
+class DialogShort;
 class LoadHistoryReq;
 class LoadHistoryRsp;
 class MessageContentChangedNotify;
@@ -1347,6 +1345,183 @@ class ChatDeleteNotify : public ::google::protobuf::Message /* @@protoc_insertio
 };
 // -------------------------------------------------------------------
 
+class DialogShort : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.DialogShort) */ {
+ public:
+  DialogShort();
+  virtual ~DialogShort();
+
+  DialogShort(const DialogShort& from);
+
+  inline DialogShort& operator=(const DialogShort& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const DialogShort& default_instance();
+
+  void Swap(DialogShort* other);
+
+  // implements Message ----------------------------------------------
+
+  inline DialogShort* New() const { return New(NULL); }
+
+  DialogShort* New(::google::protobuf::Arena* arena) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(DialogShort* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional .zproto.Peer peer = 1;
+  bool has_peer() const;
+  void clear_peer();
+  static const int kPeerFieldNumber = 1;
+  const ::zproto::Peer& peer() const;
+  ::zproto::Peer* mutable_peer();
+  ::zproto::Peer* release_peer();
+  void set_allocated_peer(::zproto::Peer* peer);
+
+  // optional int32 counter = 2;
+  void clear_counter();
+  static const int kCounterFieldNumber = 2;
+  ::google::protobuf::int32 counter() const;
+  void set_counter(::google::protobuf::int32 value);
+
+  // optional int64 date = 4;
+  void clear_date();
+  static const int kDateFieldNumber = 4;
+  ::google::protobuf::int64 date() const;
+  void set_date(::google::protobuf::int64 value);
+
+  // @@protoc_insertion_point(class_scope:zproto.DialogShort)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::zproto::Peer* peer_;
+  ::google::protobuf::int64 date_;
+  ::google::protobuf::int32 counter_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_messaging_2eproto();
+  friend void protobuf_AssignDesc_messaging_2eproto();
+  friend void protobuf_ShutdownFile_messaging_2eproto();
+
+  void InitAsDefaultInstance();
+  static DialogShort* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class DialogGroup : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.DialogGroup) */ {
+ public:
+  DialogGroup();
+  virtual ~DialogGroup();
+
+  DialogGroup(const DialogGroup& from);
+
+  inline DialogGroup& operator=(const DialogGroup& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const DialogGroup& default_instance();
+
+  void Swap(DialogGroup* other);
+
+  // implements Message ----------------------------------------------
+
+  inline DialogGroup* New() const { return New(NULL); }
+
+  DialogGroup* New(::google::protobuf::Arena* arena) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(DialogGroup* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional string title = 1;
+  void clear_title();
+  static const int kTitleFieldNumber = 1;
+  const ::std::string& title() const;
+  void set_title(const ::std::string& value);
+  void set_title(const char* value);
+  void set_title(const char* value, size_t size);
+  ::std::string* mutable_title();
+  ::std::string* release_title();
+  void set_allocated_title(::std::string* title);
+
+  // optional string key = 2;
+  void clear_key();
+  static const int kKeyFieldNumber = 2;
+  const ::std::string& key() const;
+  void set_key(const ::std::string& value);
+  void set_key(const char* value);
+  void set_key(const char* value, size_t size);
+  ::std::string* mutable_key();
+  ::std::string* release_key();
+  void set_allocated_key(::std::string* key);
+
+  // repeated .zproto.DialogShort dialogs = 3;
+  int dialogs_size() const;
+  void clear_dialogs();
+  static const int kDialogsFieldNumber = 3;
+  const ::zproto::DialogShort& dialogs(int index) const;
+  ::zproto::DialogShort* mutable_dialogs(int index);
+  ::zproto::DialogShort* add_dialogs();
+  ::google::protobuf::RepeatedPtrField< ::zproto::DialogShort >*
+      mutable_dialogs();
+  const ::google::protobuf::RepeatedPtrField< ::zproto::DialogShort >&
+      dialogs() const;
+
+  // @@protoc_insertion_point(class_scope:zproto.DialogGroup)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::internal::ArenaStringPtr title_;
+  ::google::protobuf::internal::ArenaStringPtr key_;
+  ::google::protobuf::RepeatedPtrField< ::zproto::DialogShort > dialogs_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_messaging_2eproto();
+  friend void protobuf_AssignDesc_messaging_2eproto();
+  friend void protobuf_ShutdownFile_messaging_2eproto();
+
+  void InitAsDefaultInstance();
+  static DialogGroup* default_instance_;
+};
+// -------------------------------------------------------------------
+
 class ChatGroupsChangedNotify : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.ChatGroupsChangedNotify) */ {
  public:
   ChatGroupsChangedNotify();
@@ -1638,418 +1813,6 @@ class LoadHistoryRsp : public ::google::protobuf::Message /* @@protoc_insertion_
 
   void InitAsDefaultInstance();
   static LoadHistoryRsp* default_instance_;
-};
-// -------------------------------------------------------------------
-
-class LoadDialogsReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.LoadDialogsReq) */ {
- public:
-  LoadDialogsReq();
-  virtual ~LoadDialogsReq();
-
-  LoadDialogsReq(const LoadDialogsReq& from);
-
-  inline LoadDialogsReq& operator=(const LoadDialogsReq& from) {
-    CopyFrom(from);
-    return *this;
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const LoadDialogsReq& default_instance();
-
-  void Swap(LoadDialogsReq* other);
-
-  // implements Message ----------------------------------------------
-
-  inline LoadDialogsReq* New() const { return New(NULL); }
-
-  LoadDialogsReq* New(::google::protobuf::Arena* arena) const;
-  int GetCachedSize() const { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(LoadDialogsReq* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return _internal_metadata_.arena();
-  }
-  inline void* MaybeArenaPtr() const {
-    return _internal_metadata_.raw_arena_ptr();
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // optional int64 min_date = 1;
-  void clear_min_date();
-  static const int kMinDateFieldNumber = 1;
-  ::google::protobuf::int64 min_date() const;
-  void set_min_date(::google::protobuf::int64 value);
-
-  // optional int32 limit = 2;
-  void clear_limit();
-  static const int kLimitFieldNumber = 2;
-  ::google::protobuf::int32 limit() const;
-  void set_limit(::google::protobuf::int32 value);
-
-  // repeated .zproto.UpdateOptimization optimizations = 3;
-  int optimizations_size() const;
-  void clear_optimizations();
-  static const int kOptimizationsFieldNumber = 3;
-  ::zproto::UpdateOptimization optimizations(int index) const;
-  void set_optimizations(int index, ::zproto::UpdateOptimization value);
-  void add_optimizations(::zproto::UpdateOptimization value);
-  const ::google::protobuf::RepeatedField<int>& optimizations() const;
-  ::google::protobuf::RepeatedField<int>* mutable_optimizations();
-
-  // @@protoc_insertion_point(class_scope:zproto.LoadDialogsReq)
- private:
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  bool _is_default_instance_;
-  ::google::protobuf::int64 min_date_;
-  ::google::protobuf::RepeatedField<int> optimizations_;
-  ::google::protobuf::int32 limit_;
-  mutable int _cached_size_;
-  friend void  protobuf_AddDesc_messaging_2eproto();
-  friend void protobuf_AssignDesc_messaging_2eproto();
-  friend void protobuf_ShutdownFile_messaging_2eproto();
-
-  void InitAsDefaultInstance();
-  static LoadDialogsReq* default_instance_;
-};
-// -------------------------------------------------------------------
-
-class LoadDialogsRsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.LoadDialogsRsp) */ {
- public:
-  LoadDialogsRsp();
-  virtual ~LoadDialogsRsp();
-
-  LoadDialogsRsp(const LoadDialogsRsp& from);
-
-  inline LoadDialogsRsp& operator=(const LoadDialogsRsp& from) {
-    CopyFrom(from);
-    return *this;
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const LoadDialogsRsp& default_instance();
-
-  void Swap(LoadDialogsRsp* other);
-
-  // implements Message ----------------------------------------------
-
-  inline LoadDialogsRsp* New() const { return New(NULL); }
-
-  LoadDialogsRsp* New(::google::protobuf::Arena* arena) const;
-  int GetCachedSize() const { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(LoadDialogsRsp* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return _internal_metadata_.arena();
-  }
-  inline void* MaybeArenaPtr() const {
-    return _internal_metadata_.raw_arena_ptr();
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // repeated .zproto.Group groups = 1;
-  int groups_size() const;
-  void clear_groups();
-  static const int kGroupsFieldNumber = 1;
-  const ::zproto::Group& groups(int index) const;
-  ::zproto::Group* mutable_groups(int index);
-  ::zproto::Group* add_groups();
-  ::google::protobuf::RepeatedPtrField< ::zproto::Group >*
-      mutable_groups();
-  const ::google::protobuf::RepeatedPtrField< ::zproto::Group >&
-      groups() const;
-
-  // repeated .zproto.User users = 2;
-  int users_size() const;
-  void clear_users();
-  static const int kUsersFieldNumber = 2;
-  const ::zproto::User& users(int index) const;
-  ::zproto::User* mutable_users(int index);
-  ::zproto::User* add_users();
-  ::google::protobuf::RepeatedPtrField< ::zproto::User >*
-      mutable_users();
-  const ::google::protobuf::RepeatedPtrField< ::zproto::User >&
-      users() const;
-
-  // repeated .zproto.Dialog dialogs = 3;
-  int dialogs_size() const;
-  void clear_dialogs();
-  static const int kDialogsFieldNumber = 3;
-  const ::zproto::Dialog& dialogs(int index) const;
-  ::zproto::Dialog* mutable_dialogs(int index);
-  ::zproto::Dialog* add_dialogs();
-  ::google::protobuf::RepeatedPtrField< ::zproto::Dialog >*
-      mutable_dialogs();
-  const ::google::protobuf::RepeatedPtrField< ::zproto::Dialog >&
-      dialogs() const;
-
-  // repeated .zproto.UserOutPeer user_peers = 4;
-  int user_peers_size() const;
-  void clear_user_peers();
-  static const int kUserPeersFieldNumber = 4;
-  const ::zproto::UserOutPeer& user_peers(int index) const;
-  ::zproto::UserOutPeer* mutable_user_peers(int index);
-  ::zproto::UserOutPeer* add_user_peers();
-  ::google::protobuf::RepeatedPtrField< ::zproto::UserOutPeer >*
-      mutable_user_peers();
-  const ::google::protobuf::RepeatedPtrField< ::zproto::UserOutPeer >&
-      user_peers() const;
-
-  // repeated .zproto.GroupOutPeer group_peers = 5;
-  int group_peers_size() const;
-  void clear_group_peers();
-  static const int kGroupPeersFieldNumber = 5;
-  const ::zproto::GroupOutPeer& group_peers(int index) const;
-  ::zproto::GroupOutPeer* mutable_group_peers(int index);
-  ::zproto::GroupOutPeer* add_group_peers();
-  ::google::protobuf::RepeatedPtrField< ::zproto::GroupOutPeer >*
-      mutable_group_peers();
-  const ::google::protobuf::RepeatedPtrField< ::zproto::GroupOutPeer >&
-      group_peers() const;
-
-  // @@protoc_insertion_point(class_scope:zproto.LoadDialogsRsp)
- private:
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  bool _is_default_instance_;
-  ::google::protobuf::RepeatedPtrField< ::zproto::Group > groups_;
-  ::google::protobuf::RepeatedPtrField< ::zproto::User > users_;
-  ::google::protobuf::RepeatedPtrField< ::zproto::Dialog > dialogs_;
-  ::google::protobuf::RepeatedPtrField< ::zproto::UserOutPeer > user_peers_;
-  ::google::protobuf::RepeatedPtrField< ::zproto::GroupOutPeer > group_peers_;
-  mutable int _cached_size_;
-  friend void  protobuf_AddDesc_messaging_2eproto();
-  friend void protobuf_AssignDesc_messaging_2eproto();
-  friend void protobuf_ShutdownFile_messaging_2eproto();
-
-  void InitAsDefaultInstance();
-  static LoadDialogsRsp* default_instance_;
-};
-// -------------------------------------------------------------------
-
-class LoadGroupedDialogsReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.LoadGroupedDialogsReq) */ {
- public:
-  LoadGroupedDialogsReq();
-  virtual ~LoadGroupedDialogsReq();
-
-  LoadGroupedDialogsReq(const LoadGroupedDialogsReq& from);
-
-  inline LoadGroupedDialogsReq& operator=(const LoadGroupedDialogsReq& from) {
-    CopyFrom(from);
-    return *this;
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const LoadGroupedDialogsReq& default_instance();
-
-  void Swap(LoadGroupedDialogsReq* other);
-
-  // implements Message ----------------------------------------------
-
-  inline LoadGroupedDialogsReq* New() const { return New(NULL); }
-
-  LoadGroupedDialogsReq* New(::google::protobuf::Arena* arena) const;
-  int GetCachedSize() const { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(LoadGroupedDialogsReq* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return _internal_metadata_.arena();
-  }
-  inline void* MaybeArenaPtr() const {
-    return _internal_metadata_.raw_arena_ptr();
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // repeated .zproto.UpdateOptimization optimizations = 1;
-  int optimizations_size() const;
-  void clear_optimizations();
-  static const int kOptimizationsFieldNumber = 1;
-  ::zproto::UpdateOptimization optimizations(int index) const;
-  void set_optimizations(int index, ::zproto::UpdateOptimization value);
-  void add_optimizations(::zproto::UpdateOptimization value);
-  const ::google::protobuf::RepeatedField<int>& optimizations() const;
-  ::google::protobuf::RepeatedField<int>* mutable_optimizations();
-
-  // @@protoc_insertion_point(class_scope:zproto.LoadGroupedDialogsReq)
- private:
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  bool _is_default_instance_;
-  ::google::protobuf::RepeatedField<int> optimizations_;
-  mutable int _cached_size_;
-  friend void  protobuf_AddDesc_messaging_2eproto();
-  friend void protobuf_AssignDesc_messaging_2eproto();
-  friend void protobuf_ShutdownFile_messaging_2eproto();
-
-  void InitAsDefaultInstance();
-  static LoadGroupedDialogsReq* default_instance_;
-};
-// -------------------------------------------------------------------
-
-class LoadGroupedDialogsRsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zproto.LoadGroupedDialogsRsp) */ {
- public:
-  LoadGroupedDialogsRsp();
-  virtual ~LoadGroupedDialogsRsp();
-
-  LoadGroupedDialogsRsp(const LoadGroupedDialogsRsp& from);
-
-  inline LoadGroupedDialogsRsp& operator=(const LoadGroupedDialogsRsp& from) {
-    CopyFrom(from);
-    return *this;
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const LoadGroupedDialogsRsp& default_instance();
-
-  void Swap(LoadGroupedDialogsRsp* other);
-
-  // implements Message ----------------------------------------------
-
-  inline LoadGroupedDialogsRsp* New() const { return New(NULL); }
-
-  LoadGroupedDialogsRsp* New(::google::protobuf::Arena* arena) const;
-  int GetCachedSize() const { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(LoadGroupedDialogsRsp* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return _internal_metadata_.arena();
-  }
-  inline void* MaybeArenaPtr() const {
-    return _internal_metadata_.raw_arena_ptr();
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // repeated .zproto.DialogGroup dialogs = 1;
-  int dialogs_size() const;
-  void clear_dialogs();
-  static const int kDialogsFieldNumber = 1;
-  const ::zproto::DialogGroup& dialogs(int index) const;
-  ::zproto::DialogGroup* mutable_dialogs(int index);
-  ::zproto::DialogGroup* add_dialogs();
-  ::google::protobuf::RepeatedPtrField< ::zproto::DialogGroup >*
-      mutable_dialogs();
-  const ::google::protobuf::RepeatedPtrField< ::zproto::DialogGroup >&
-      dialogs() const;
-
-  // repeated .zproto.User users = 2;
-  int users_size() const;
-  void clear_users();
-  static const int kUsersFieldNumber = 2;
-  const ::zproto::User& users(int index) const;
-  ::zproto::User* mutable_users(int index);
-  ::zproto::User* add_users();
-  ::google::protobuf::RepeatedPtrField< ::zproto::User >*
-      mutable_users();
-  const ::google::protobuf::RepeatedPtrField< ::zproto::User >&
-      users() const;
-
-  // repeated .zproto.Group groups = 3;
-  int groups_size() const;
-  void clear_groups();
-  static const int kGroupsFieldNumber = 3;
-  const ::zproto::Group& groups(int index) const;
-  ::zproto::Group* mutable_groups(int index);
-  ::zproto::Group* add_groups();
-  ::google::protobuf::RepeatedPtrField< ::zproto::Group >*
-      mutable_groups();
-  const ::google::protobuf::RepeatedPtrField< ::zproto::Group >&
-      groups() const;
-
-  // optional bool show_archived = 4;
-  void clear_show_archived();
-  static const int kShowArchivedFieldNumber = 4;
-  bool show_archived() const;
-  void set_show_archived(bool value);
-
-  // optional bool show_invite = 5;
-  void clear_show_invite();
-  static const int kShowInviteFieldNumber = 5;
-  bool show_invite() const;
-  void set_show_invite(bool value);
-
-  // repeated .zproto.UserOutPeer user_peers = 6;
-  int user_peers_size() const;
-  void clear_user_peers();
-  static const int kUserPeersFieldNumber = 6;
-  const ::zproto::UserOutPeer& user_peers(int index) const;
-  ::zproto::UserOutPeer* mutable_user_peers(int index);
-  ::zproto::UserOutPeer* add_user_peers();
-  ::google::protobuf::RepeatedPtrField< ::zproto::UserOutPeer >*
-      mutable_user_peers();
-  const ::google::protobuf::RepeatedPtrField< ::zproto::UserOutPeer >&
-      user_peers() const;
-
-  // repeated .zproto.GroupOutPeer group_peers = 7;
-  int group_peers_size() const;
-  void clear_group_peers();
-  static const int kGroupPeersFieldNumber = 7;
-  const ::zproto::GroupOutPeer& group_peers(int index) const;
-  ::zproto::GroupOutPeer* mutable_group_peers(int index);
-  ::zproto::GroupOutPeer* add_group_peers();
-  ::google::protobuf::RepeatedPtrField< ::zproto::GroupOutPeer >*
-      mutable_group_peers();
-  const ::google::protobuf::RepeatedPtrField< ::zproto::GroupOutPeer >&
-      group_peers() const;
-
-  // @@protoc_insertion_point(class_scope:zproto.LoadGroupedDialogsRsp)
- private:
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  bool _is_default_instance_;
-  ::google::protobuf::RepeatedPtrField< ::zproto::DialogGroup > dialogs_;
-  ::google::protobuf::RepeatedPtrField< ::zproto::User > users_;
-  ::google::protobuf::RepeatedPtrField< ::zproto::Group > groups_;
-  ::google::protobuf::RepeatedPtrField< ::zproto::UserOutPeer > user_peers_;
-  ::google::protobuf::RepeatedPtrField< ::zproto::GroupOutPeer > group_peers_;
-  bool show_archived_;
-  bool show_invite_;
-  mutable int _cached_size_;
-  friend void  protobuf_AddDesc_messaging_2eproto();
-  friend void protobuf_AssignDesc_messaging_2eproto();
-  friend void protobuf_ShutdownFile_messaging_2eproto();
-
-  void InitAsDefaultInstance();
-  static LoadGroupedDialogsRsp* default_instance_;
 };
 // ===================================================================
 
@@ -3215,6 +2978,198 @@ inline void ChatDeleteNotify::set_allocated_peer(::zproto::Peer* peer) {
 
 // -------------------------------------------------------------------
 
+// DialogShort
+
+// optional .zproto.Peer peer = 1;
+inline bool DialogShort::has_peer() const {
+  return !_is_default_instance_ && peer_ != NULL;
+}
+inline void DialogShort::clear_peer() {
+  if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
+  peer_ = NULL;
+}
+inline const ::zproto::Peer& DialogShort::peer() const {
+  // @@protoc_insertion_point(field_get:zproto.DialogShort.peer)
+  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
+}
+inline ::zproto::Peer* DialogShort::mutable_peer() {
+  
+  if (peer_ == NULL) {
+    peer_ = new ::zproto::Peer;
+  }
+  // @@protoc_insertion_point(field_mutable:zproto.DialogShort.peer)
+  return peer_;
+}
+inline ::zproto::Peer* DialogShort::release_peer() {
+  // @@protoc_insertion_point(field_release:zproto.DialogShort.peer)
+  
+  ::zproto::Peer* temp = peer_;
+  peer_ = NULL;
+  return temp;
+}
+inline void DialogShort::set_allocated_peer(::zproto::Peer* peer) {
+  delete peer_;
+  peer_ = peer;
+  if (peer) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zproto.DialogShort.peer)
+}
+
+// optional int32 counter = 2;
+inline void DialogShort::clear_counter() {
+  counter_ = 0;
+}
+inline ::google::protobuf::int32 DialogShort::counter() const {
+  // @@protoc_insertion_point(field_get:zproto.DialogShort.counter)
+  return counter_;
+}
+inline void DialogShort::set_counter(::google::protobuf::int32 value) {
+  
+  counter_ = value;
+  // @@protoc_insertion_point(field_set:zproto.DialogShort.counter)
+}
+
+// optional int64 date = 4;
+inline void DialogShort::clear_date() {
+  date_ = GOOGLE_LONGLONG(0);
+}
+inline ::google::protobuf::int64 DialogShort::date() const {
+  // @@protoc_insertion_point(field_get:zproto.DialogShort.date)
+  return date_;
+}
+inline void DialogShort::set_date(::google::protobuf::int64 value) {
+  
+  date_ = value;
+  // @@protoc_insertion_point(field_set:zproto.DialogShort.date)
+}
+
+// -------------------------------------------------------------------
+
+// DialogGroup
+
+// optional string title = 1;
+inline void DialogGroup::clear_title() {
+  title_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& DialogGroup::title() const {
+  // @@protoc_insertion_point(field_get:zproto.DialogGroup.title)
+  return title_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void DialogGroup::set_title(const ::std::string& value) {
+  
+  title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.DialogGroup.title)
+}
+inline void DialogGroup::set_title(const char* value) {
+  
+  title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.DialogGroup.title)
+}
+inline void DialogGroup::set_title(const char* value, size_t size) {
+  
+  title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.DialogGroup.title)
+}
+inline ::std::string* DialogGroup::mutable_title() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.DialogGroup.title)
+  return title_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* DialogGroup::release_title() {
+  // @@protoc_insertion_point(field_release:zproto.DialogGroup.title)
+  
+  return title_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void DialogGroup::set_allocated_title(::std::string* title) {
+  if (title != NULL) {
+    
+  } else {
+    
+  }
+  title_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), title);
+  // @@protoc_insertion_point(field_set_allocated:zproto.DialogGroup.title)
+}
+
+// optional string key = 2;
+inline void DialogGroup::clear_key() {
+  key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& DialogGroup::key() const {
+  // @@protoc_insertion_point(field_get:zproto.DialogGroup.key)
+  return key_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void DialogGroup::set_key(const ::std::string& value) {
+  
+  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zproto.DialogGroup.key)
+}
+inline void DialogGroup::set_key(const char* value) {
+  
+  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zproto.DialogGroup.key)
+}
+inline void DialogGroup::set_key(const char* value, size_t size) {
+  
+  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zproto.DialogGroup.key)
+}
+inline ::std::string* DialogGroup::mutable_key() {
+  
+  // @@protoc_insertion_point(field_mutable:zproto.DialogGroup.key)
+  return key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* DialogGroup::release_key() {
+  // @@protoc_insertion_point(field_release:zproto.DialogGroup.key)
+  
+  return key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void DialogGroup::set_allocated_key(::std::string* key) {
+  if (key != NULL) {
+    
+  } else {
+    
+  }
+  key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key);
+  // @@protoc_insertion_point(field_set_allocated:zproto.DialogGroup.key)
+}
+
+// repeated .zproto.DialogShort dialogs = 3;
+inline int DialogGroup::dialogs_size() const {
+  return dialogs_.size();
+}
+inline void DialogGroup::clear_dialogs() {
+  dialogs_.Clear();
+}
+inline const ::zproto::DialogShort& DialogGroup::dialogs(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.DialogGroup.dialogs)
+  return dialogs_.Get(index);
+}
+inline ::zproto::DialogShort* DialogGroup::mutable_dialogs(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.DialogGroup.dialogs)
+  return dialogs_.Mutable(index);
+}
+inline ::zproto::DialogShort* DialogGroup::add_dialogs() {
+  // @@protoc_insertion_point(field_add:zproto.DialogGroup.dialogs)
+  return dialogs_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::zproto::DialogShort >*
+DialogGroup::mutable_dialogs() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.DialogGroup.dialogs)
+  return &dialogs_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::zproto::DialogShort >&
+DialogGroup::dialogs() const {
+  // @@protoc_insertion_point(field_list:zproto.DialogGroup.dialogs)
+  return dialogs_;
+}
+
+// -------------------------------------------------------------------
+
 // ChatGroupsChangedNotify
 
 // repeated .zproto.DialogGroup dialogs = 1;
@@ -3515,443 +3470,7 @@ LoadHistoryRsp::group_peers() const {
   return group_peers_;
 }
 
-// -------------------------------------------------------------------
-
-// LoadDialogsReq
-
-// optional int64 min_date = 1;
-inline void LoadDialogsReq::clear_min_date() {
-  min_date_ = GOOGLE_LONGLONG(0);
-}
-inline ::google::protobuf::int64 LoadDialogsReq::min_date() const {
-  // @@protoc_insertion_point(field_get:zproto.LoadDialogsReq.min_date)
-  return min_date_;
-}
-inline void LoadDialogsReq::set_min_date(::google::protobuf::int64 value) {
-  
-  min_date_ = value;
-  // @@protoc_insertion_point(field_set:zproto.LoadDialogsReq.min_date)
-}
-
-// optional int32 limit = 2;
-inline void LoadDialogsReq::clear_limit() {
-  limit_ = 0;
-}
-inline ::google::protobuf::int32 LoadDialogsReq::limit() const {
-  // @@protoc_insertion_point(field_get:zproto.LoadDialogsReq.limit)
-  return limit_;
-}
-inline void LoadDialogsReq::set_limit(::google::protobuf::int32 value) {
-  
-  limit_ = value;
-  // @@protoc_insertion_point(field_set:zproto.LoadDialogsReq.limit)
-}
-
-// repeated .zproto.UpdateOptimization optimizations = 3;
-inline int LoadDialogsReq::optimizations_size() const {
-  return optimizations_.size();
-}
-inline void LoadDialogsReq::clear_optimizations() {
-  optimizations_.Clear();
-}
-inline ::zproto::UpdateOptimization LoadDialogsReq::optimizations(int index) const {
-  // @@protoc_insertion_point(field_get:zproto.LoadDialogsReq.optimizations)
-  return static_cast< ::zproto::UpdateOptimization >(optimizations_.Get(index));
-}
-inline void LoadDialogsReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
-  optimizations_.Set(index, value);
-  // @@protoc_insertion_point(field_set:zproto.LoadDialogsReq.optimizations)
-}
-inline void LoadDialogsReq::add_optimizations(::zproto::UpdateOptimization value) {
-  optimizations_.Add(value);
-  // @@protoc_insertion_point(field_add:zproto.LoadDialogsReq.optimizations)
-}
-inline const ::google::protobuf::RepeatedField<int>&
-LoadDialogsReq::optimizations() const {
-  // @@protoc_insertion_point(field_list:zproto.LoadDialogsReq.optimizations)
-  return optimizations_;
-}
-inline ::google::protobuf::RepeatedField<int>*
-LoadDialogsReq::mutable_optimizations() {
-  // @@protoc_insertion_point(field_mutable_list:zproto.LoadDialogsReq.optimizations)
-  return &optimizations_;
-}
-
-// -------------------------------------------------------------------
-
-// LoadDialogsRsp
-
-// repeated .zproto.Group groups = 1;
-inline int LoadDialogsRsp::groups_size() const {
-  return groups_.size();
-}
-inline void LoadDialogsRsp::clear_groups() {
-  groups_.Clear();
-}
-inline const ::zproto::Group& LoadDialogsRsp::groups(int index) const {
-  // @@protoc_insertion_point(field_get:zproto.LoadDialogsRsp.groups)
-  return groups_.Get(index);
-}
-inline ::zproto::Group* LoadDialogsRsp::mutable_groups(int index) {
-  // @@protoc_insertion_point(field_mutable:zproto.LoadDialogsRsp.groups)
-  return groups_.Mutable(index);
-}
-inline ::zproto::Group* LoadDialogsRsp::add_groups() {
-  // @@protoc_insertion_point(field_add:zproto.LoadDialogsRsp.groups)
-  return groups_.Add();
-}
-inline ::google::protobuf::RepeatedPtrField< ::zproto::Group >*
-LoadDialogsRsp::mutable_groups() {
-  // @@protoc_insertion_point(field_mutable_list:zproto.LoadDialogsRsp.groups)
-  return &groups_;
-}
-inline const ::google::protobuf::RepeatedPtrField< ::zproto::Group >&
-LoadDialogsRsp::groups() const {
-  // @@protoc_insertion_point(field_list:zproto.LoadDialogsRsp.groups)
-  return groups_;
-}
-
-// repeated .zproto.User users = 2;
-inline int LoadDialogsRsp::users_size() const {
-  return users_.size();
-}
-inline void LoadDialogsRsp::clear_users() {
-  users_.Clear();
-}
-inline const ::zproto::User& LoadDialogsRsp::users(int index) const {
-  // @@protoc_insertion_point(field_get:zproto.LoadDialogsRsp.users)
-  return users_.Get(index);
-}
-inline ::zproto::User* LoadDialogsRsp::mutable_users(int index) {
-  // @@protoc_insertion_point(field_mutable:zproto.LoadDialogsRsp.users)
-  return users_.Mutable(index);
-}
-inline ::zproto::User* LoadDialogsRsp::add_users() {
-  // @@protoc_insertion_point(field_add:zproto.LoadDialogsRsp.users)
-  return users_.Add();
-}
-inline ::google::protobuf::RepeatedPtrField< ::zproto::User >*
-LoadDialogsRsp::mutable_users() {
-  // @@protoc_insertion_point(field_mutable_list:zproto.LoadDialogsRsp.users)
-  return &users_;
-}
-inline const ::google::protobuf::RepeatedPtrField< ::zproto::User >&
-LoadDialogsRsp::users() const {
-  // @@protoc_insertion_point(field_list:zproto.LoadDialogsRsp.users)
-  return users_;
-}
-
-// repeated .zproto.Dialog dialogs = 3;
-inline int LoadDialogsRsp::dialogs_size() const {
-  return dialogs_.size();
-}
-inline void LoadDialogsRsp::clear_dialogs() {
-  dialogs_.Clear();
-}
-inline const ::zproto::Dialog& LoadDialogsRsp::dialogs(int index) const {
-  // @@protoc_insertion_point(field_get:zproto.LoadDialogsRsp.dialogs)
-  return dialogs_.Get(index);
-}
-inline ::zproto::Dialog* LoadDialogsRsp::mutable_dialogs(int index) {
-  // @@protoc_insertion_point(field_mutable:zproto.LoadDialogsRsp.dialogs)
-  return dialogs_.Mutable(index);
-}
-inline ::zproto::Dialog* LoadDialogsRsp::add_dialogs() {
-  // @@protoc_insertion_point(field_add:zproto.LoadDialogsRsp.dialogs)
-  return dialogs_.Add();
-}
-inline ::google::protobuf::RepeatedPtrField< ::zproto::Dialog >*
-LoadDialogsRsp::mutable_dialogs() {
-  // @@protoc_insertion_point(field_mutable_list:zproto.LoadDialogsRsp.dialogs)
-  return &dialogs_;
-}
-inline const ::google::protobuf::RepeatedPtrField< ::zproto::Dialog >&
-LoadDialogsRsp::dialogs() const {
-  // @@protoc_insertion_point(field_list:zproto.LoadDialogsRsp.dialogs)
-  return dialogs_;
-}
-
-// repeated .zproto.UserOutPeer user_peers = 4;
-inline int LoadDialogsRsp::user_peers_size() const {
-  return user_peers_.size();
-}
-inline void LoadDialogsRsp::clear_user_peers() {
-  user_peers_.Clear();
-}
-inline const ::zproto::UserOutPeer& LoadDialogsRsp::user_peers(int index) const {
-  // @@protoc_insertion_point(field_get:zproto.LoadDialogsRsp.user_peers)
-  return user_peers_.Get(index);
-}
-inline ::zproto::UserOutPeer* LoadDialogsRsp::mutable_user_peers(int index) {
-  // @@protoc_insertion_point(field_mutable:zproto.LoadDialogsRsp.user_peers)
-  return user_peers_.Mutable(index);
-}
-inline ::zproto::UserOutPeer* LoadDialogsRsp::add_user_peers() {
-  // @@protoc_insertion_point(field_add:zproto.LoadDialogsRsp.user_peers)
-  return user_peers_.Add();
-}
-inline ::google::protobuf::RepeatedPtrField< ::zproto::UserOutPeer >*
-LoadDialogsRsp::mutable_user_peers() {
-  // @@protoc_insertion_point(field_mutable_list:zproto.LoadDialogsRsp.user_peers)
-  return &user_peers_;
-}
-inline const ::google::protobuf::RepeatedPtrField< ::zproto::UserOutPeer >&
-LoadDialogsRsp::user_peers() const {
-  // @@protoc_insertion_point(field_list:zproto.LoadDialogsRsp.user_peers)
-  return user_peers_;
-}
-
-// repeated .zproto.GroupOutPeer group_peers = 5;
-inline int LoadDialogsRsp::group_peers_size() const {
-  return group_peers_.size();
-}
-inline void LoadDialogsRsp::clear_group_peers() {
-  group_peers_.Clear();
-}
-inline const ::zproto::GroupOutPeer& LoadDialogsRsp::group_peers(int index) const {
-  // @@protoc_insertion_point(field_get:zproto.LoadDialogsRsp.group_peers)
-  return group_peers_.Get(index);
-}
-inline ::zproto::GroupOutPeer* LoadDialogsRsp::mutable_group_peers(int index) {
-  // @@protoc_insertion_point(field_mutable:zproto.LoadDialogsRsp.group_peers)
-  return group_peers_.Mutable(index);
-}
-inline ::zproto::GroupOutPeer* LoadDialogsRsp::add_group_peers() {
-  // @@protoc_insertion_point(field_add:zproto.LoadDialogsRsp.group_peers)
-  return group_peers_.Add();
-}
-inline ::google::protobuf::RepeatedPtrField< ::zproto::GroupOutPeer >*
-LoadDialogsRsp::mutable_group_peers() {
-  // @@protoc_insertion_point(field_mutable_list:zproto.LoadDialogsRsp.group_peers)
-  return &group_peers_;
-}
-inline const ::google::protobuf::RepeatedPtrField< ::zproto::GroupOutPeer >&
-LoadDialogsRsp::group_peers() const {
-  // @@protoc_insertion_point(field_list:zproto.LoadDialogsRsp.group_peers)
-  return group_peers_;
-}
-
-// -------------------------------------------------------------------
-
-// LoadGroupedDialogsReq
-
-// repeated .zproto.UpdateOptimization optimizations = 1;
-inline int LoadGroupedDialogsReq::optimizations_size() const {
-  return optimizations_.size();
-}
-inline void LoadGroupedDialogsReq::clear_optimizations() {
-  optimizations_.Clear();
-}
-inline ::zproto::UpdateOptimization LoadGroupedDialogsReq::optimizations(int index) const {
-  // @@protoc_insertion_point(field_get:zproto.LoadGroupedDialogsReq.optimizations)
-  return static_cast< ::zproto::UpdateOptimization >(optimizations_.Get(index));
-}
-inline void LoadGroupedDialogsReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
-  optimizations_.Set(index, value);
-  // @@protoc_insertion_point(field_set:zproto.LoadGroupedDialogsReq.optimizations)
-}
-inline void LoadGroupedDialogsReq::add_optimizations(::zproto::UpdateOptimization value) {
-  optimizations_.Add(value);
-  // @@protoc_insertion_point(field_add:zproto.LoadGroupedDialogsReq.optimizations)
-}
-inline const ::google::protobuf::RepeatedField<int>&
-LoadGroupedDialogsReq::optimizations() const {
-  // @@protoc_insertion_point(field_list:zproto.LoadGroupedDialogsReq.optimizations)
-  return optimizations_;
-}
-inline ::google::protobuf::RepeatedField<int>*
-LoadGroupedDialogsReq::mutable_optimizations() {
-  // @@protoc_insertion_point(field_mutable_list:zproto.LoadGroupedDialogsReq.optimizations)
-  return &optimizations_;
-}
-
-// -------------------------------------------------------------------
-
-// LoadGroupedDialogsRsp
-
-// repeated .zproto.DialogGroup dialogs = 1;
-inline int LoadGroupedDialogsRsp::dialogs_size() const {
-  return dialogs_.size();
-}
-inline void LoadGroupedDialogsRsp::clear_dialogs() {
-  dialogs_.Clear();
-}
-inline const ::zproto::DialogGroup& LoadGroupedDialogsRsp::dialogs(int index) const {
-  // @@protoc_insertion_point(field_get:zproto.LoadGroupedDialogsRsp.dialogs)
-  return dialogs_.Get(index);
-}
-inline ::zproto::DialogGroup* LoadGroupedDialogsRsp::mutable_dialogs(int index) {
-  // @@protoc_insertion_point(field_mutable:zproto.LoadGroupedDialogsRsp.dialogs)
-  return dialogs_.Mutable(index);
-}
-inline ::zproto::DialogGroup* LoadGroupedDialogsRsp::add_dialogs() {
-  // @@protoc_insertion_point(field_add:zproto.LoadGroupedDialogsRsp.dialogs)
-  return dialogs_.Add();
-}
-inline ::google::protobuf::RepeatedPtrField< ::zproto::DialogGroup >*
-LoadGroupedDialogsRsp::mutable_dialogs() {
-  // @@protoc_insertion_point(field_mutable_list:zproto.LoadGroupedDialogsRsp.dialogs)
-  return &dialogs_;
-}
-inline const ::google::protobuf::RepeatedPtrField< ::zproto::DialogGroup >&
-LoadGroupedDialogsRsp::dialogs() const {
-  // @@protoc_insertion_point(field_list:zproto.LoadGroupedDialogsRsp.dialogs)
-  return dialogs_;
-}
-
-// repeated .zproto.User users = 2;
-inline int LoadGroupedDialogsRsp::users_size() const {
-  return users_.size();
-}
-inline void LoadGroupedDialogsRsp::clear_users() {
-  users_.Clear();
-}
-inline const ::zproto::User& LoadGroupedDialogsRsp::users(int index) const {
-  // @@protoc_insertion_point(field_get:zproto.LoadGroupedDialogsRsp.users)
-  return users_.Get(index);
-}
-inline ::zproto::User* LoadGroupedDialogsRsp::mutable_users(int index) {
-  // @@protoc_insertion_point(field_mutable:zproto.LoadGroupedDialogsRsp.users)
-  return users_.Mutable(index);
-}
-inline ::zproto::User* LoadGroupedDialogsRsp::add_users() {
-  // @@protoc_insertion_point(field_add:zproto.LoadGroupedDialogsRsp.users)
-  return users_.Add();
-}
-inline ::google::protobuf::RepeatedPtrField< ::zproto::User >*
-LoadGroupedDialogsRsp::mutable_users() {
-  // @@protoc_insertion_point(field_mutable_list:zproto.LoadGroupedDialogsRsp.users)
-  return &users_;
-}
-inline const ::google::protobuf::RepeatedPtrField< ::zproto::User >&
-LoadGroupedDialogsRsp::users() const {
-  // @@protoc_insertion_point(field_list:zproto.LoadGroupedDialogsRsp.users)
-  return users_;
-}
-
-// repeated .zproto.Group groups = 3;
-inline int LoadGroupedDialogsRsp::groups_size() const {
-  return groups_.size();
-}
-inline void LoadGroupedDialogsRsp::clear_groups() {
-  groups_.Clear();
-}
-inline const ::zproto::Group& LoadGroupedDialogsRsp::groups(int index) const {
-  // @@protoc_insertion_point(field_get:zproto.LoadGroupedDialogsRsp.groups)
-  return groups_.Get(index);
-}
-inline ::zproto::Group* LoadGroupedDialogsRsp::mutable_groups(int index) {
-  // @@protoc_insertion_point(field_mutable:zproto.LoadGroupedDialogsRsp.groups)
-  return groups_.Mutable(index);
-}
-inline ::zproto::Group* LoadGroupedDialogsRsp::add_groups() {
-  // @@protoc_insertion_point(field_add:zproto.LoadGroupedDialogsRsp.groups)
-  return groups_.Add();
-}
-inline ::google::protobuf::RepeatedPtrField< ::zproto::Group >*
-LoadGroupedDialogsRsp::mutable_groups() {
-  // @@protoc_insertion_point(field_mutable_list:zproto.LoadGroupedDialogsRsp.groups)
-  return &groups_;
-}
-inline const ::google::protobuf::RepeatedPtrField< ::zproto::Group >&
-LoadGroupedDialogsRsp::groups() const {
-  // @@protoc_insertion_point(field_list:zproto.LoadGroupedDialogsRsp.groups)
-  return groups_;
-}
-
-// optional bool show_archived = 4;
-inline void LoadGroupedDialogsRsp::clear_show_archived() {
-  show_archived_ = false;
-}
-inline bool LoadGroupedDialogsRsp::show_archived() const {
-  // @@protoc_insertion_point(field_get:zproto.LoadGroupedDialogsRsp.show_archived)
-  return show_archived_;
-}
-inline void LoadGroupedDialogsRsp::set_show_archived(bool value) {
-  
-  show_archived_ = value;
-  // @@protoc_insertion_point(field_set:zproto.LoadGroupedDialogsRsp.show_archived)
-}
-
-// optional bool show_invite = 5;
-inline void LoadGroupedDialogsRsp::clear_show_invite() {
-  show_invite_ = false;
-}
-inline bool LoadGroupedDialogsRsp::show_invite() const {
-  // @@protoc_insertion_point(field_get:zproto.LoadGroupedDialogsRsp.show_invite)
-  return show_invite_;
-}
-inline void LoadGroupedDialogsRsp::set_show_invite(bool value) {
-  
-  show_invite_ = value;
-  // @@protoc_insertion_point(field_set:zproto.LoadGroupedDialogsRsp.show_invite)
-}
-
-// repeated .zproto.UserOutPeer user_peers = 6;
-inline int LoadGroupedDialogsRsp::user_peers_size() const {
-  return user_peers_.size();
-}
-inline void LoadGroupedDialogsRsp::clear_user_peers() {
-  user_peers_.Clear();
-}
-inline const ::zproto::UserOutPeer& LoadGroupedDialogsRsp::user_peers(int index) const {
-  // @@protoc_insertion_point(field_get:zproto.LoadGroupedDialogsRsp.user_peers)
-  return user_peers_.Get(index);
-}
-inline ::zproto::UserOutPeer* LoadGroupedDialogsRsp::mutable_user_peers(int index) {
-  // @@protoc_insertion_point(field_mutable:zproto.LoadGroupedDialogsRsp.user_peers)
-  return user_peers_.Mutable(index);
-}
-inline ::zproto::UserOutPeer* LoadGroupedDialogsRsp::add_user_peers() {
-  // @@protoc_insertion_point(field_add:zproto.LoadGroupedDialogsRsp.user_peers)
-  return user_peers_.Add();
-}
-inline ::google::protobuf::RepeatedPtrField< ::zproto::UserOutPeer >*
-LoadGroupedDialogsRsp::mutable_user_peers() {
-  // @@protoc_insertion_point(field_mutable_list:zproto.LoadGroupedDialogsRsp.user_peers)
-  return &user_peers_;
-}
-inline const ::google::protobuf::RepeatedPtrField< ::zproto::UserOutPeer >&
-LoadGroupedDialogsRsp::user_peers() const {
-  // @@protoc_insertion_point(field_list:zproto.LoadGroupedDialogsRsp.user_peers)
-  return user_peers_;
-}
-
-// repeated .zproto.GroupOutPeer group_peers = 7;
-inline int LoadGroupedDialogsRsp::group_peers_size() const {
-  return group_peers_.size();
-}
-inline void LoadGroupedDialogsRsp::clear_group_peers() {
-  group_peers_.Clear();
-}
-inline const ::zproto::GroupOutPeer& LoadGroupedDialogsRsp::group_peers(int index) const {
-  // @@protoc_insertion_point(field_get:zproto.LoadGroupedDialogsRsp.group_peers)
-  return group_peers_.Get(index);
-}
-inline ::zproto::GroupOutPeer* LoadGroupedDialogsRsp::mutable_group_peers(int index) {
-  // @@protoc_insertion_point(field_mutable:zproto.LoadGroupedDialogsRsp.group_peers)
-  return group_peers_.Mutable(index);
-}
-inline ::zproto::GroupOutPeer* LoadGroupedDialogsRsp::add_group_peers() {
-  // @@protoc_insertion_point(field_add:zproto.LoadGroupedDialogsRsp.group_peers)
-  return group_peers_.Add();
-}
-inline ::google::protobuf::RepeatedPtrField< ::zproto::GroupOutPeer >*
-LoadGroupedDialogsRsp::mutable_group_peers() {
-  // @@protoc_insertion_point(field_mutable_list:zproto.LoadGroupedDialogsRsp.group_peers)
-  return &group_peers_;
-}
-inline const ::google::protobuf::RepeatedPtrField< ::zproto::GroupOutPeer >&
-LoadGroupedDialogsRsp::group_peers() const {
-  // @@protoc_insertion_point(field_list:zproto.LoadGroupedDialogsRsp.group_peers)
-  return group_peers_;
-}
-
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

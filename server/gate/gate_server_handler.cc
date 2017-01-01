@@ -35,6 +35,8 @@ int GateServerHandler::OnNewConnection() {
 int GateServerHandler::OnDataReceived(std::shared_ptr<PackageMessage> message_data) {
   // TODO(@benqi): 后续处理如果比较复杂，可以使用状态机模式
 
+  LOG(INFO) << "OnDataReceived - recv message_data: " << message_data->ToString();
+  
   if (message_data->GetPackageType() != Package::RPC_REQUEST) {
     // 收到的数据包必须是RPC_REQUEST
     LOG(ERROR) << "OnDataReceived - recv invalid message_data: " << message_data->ToString();
@@ -176,7 +178,7 @@ int GateServerHandler::OnAuthServerAuthRsp(ProtoRpcResponsePtr response) {
     
     app_id_ = 1;
     user_id_ = (*auth_rsp)->user().uid();
-    nick_ = (*auth_rsp)->user().nick();
+    // nick_ = (*auth_rsp)->user().nick();
 
     NotifyClientOnline();
   } else {

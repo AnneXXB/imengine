@@ -39,20 +39,6 @@ message InstantMessage {
   bytes message_data = 2;
 }
 
-// Short Dialog from grouped conversation list
-message DialogShort {
-  Peer peer = 1; //   Peer of conversation
-  uint32 counter = 2; //   Conversation unread count
-  int64 date = 4; //   Conversation top message date
-}
-
-// Grouped dialog list
-message DialogGroup {
-  string title = 1; //   Title of group
-  string key = 2; //   Key of group
-  repeated DialogShort dialogs = 3; //   Conversations in group
-}
-
 // MessageState
 enum MessageState {
   SENT = 0;
@@ -74,17 +60,4 @@ enum ListLoadMode {
   FORWARD = 0;
   BACKWARD = 1;
   BOTH = 2;
-}
-
-// Conversation from history
-message Dialog {
-  Peer peer = 1; //   Peer of conversation
-  int32 unread_count = 3; //   plain messages unread messages count
-  int64 sort_date = 4; //   date of conversation for sorting
-  string sender_uid = 5; //   Sender of top message (may be zero)
-  int64 rid = 6; //   Random ID of top message (may be zero)
-  int64 date = 7; //   Date of top message (can't be zero)
-  InstantMessage message = 8; //   Content of message
-  MessageState state = 9;
-  int64 first_unread_date = 10; //   Date of first unread message
 }
