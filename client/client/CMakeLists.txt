@@ -27,6 +27,10 @@ set (SRC_LIST
   ../../nebula/nebula/base/readline_gets.h
   )
 
+link_directories(
+    /usr/local/opt/openssl/lib
+    )
+
 add_executable (client ${SRC_LIST})
 target_link_libraries (client net base proto readline)
 

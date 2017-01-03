@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-include_directories(. .. ../../nebula)
+include_directories(. .. ../../nebula ${PROTO_HDRS})
 
 set (SRC_LIST
   auth_model.cc
