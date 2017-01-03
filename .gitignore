@@ -33,4 +33,3 @@ cmake-build-debug/*
 build/*
 
 
-proto/api/error_codes.h
