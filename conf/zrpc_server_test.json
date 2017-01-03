@@ -13,5 +13,5 @@
   },
 
   // 网络相关
-  "services":"@import(service.json)"
+  "services":"@import(test_service.json)"
 }

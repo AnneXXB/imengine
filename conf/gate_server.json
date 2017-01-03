@@ -1,29 +1,17 @@
 {
   // 全局配置文件
-  "system":{
-    "io_thread_pool_size":1   // 1: 为单线程
-                              // 0: 线程数为CPU核数
-                              // n: 指定线程数
-  },
-  
+  // "system": {
+  // },
+
   "thread_group" : {
     "conn" : 4,
   },
 
   // 日志配置
   "logger":{
-    "fatal_dest":"./log/",
-    "error_dest":"./log/",
-    "warning_dest":"./log/",
-    "info_dest":"./log/",
-    "logbufsecs":0,
-    "max_log_size":10,
-    "stop_logging_if_full_disk":true,
-    "enable_folly_debug":false
+    // 配置
   },
-  
+
   // 网络相关
   "services":"@import(service.json)"
 }
-
-

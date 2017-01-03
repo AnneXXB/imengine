@@ -15,27 +15,15 @@
  * limitations under the License.
  */
 
-// TODO(@benqi): 使用zrpc-code-gen代码生成工具自动生成
+#ifndef	PROTO_ERROR_CODES_H_
+#define	PROTO_ERROR_CODES_H_
 
-#ifndef	ONLINE_ONLINE_STATUS_SERVER_H_
-#define	ONLINE_ONLINE_STATUS_SERVER_H_
+const int kErrOK         = 0;
 
-#include <folly/io/async/EventBase.h>
+const int kErrDBError    = 1000; // DB无法连接
+const int kErrDBConn     = 1001; // DB无法连接
+const int kErrDBSql      = 1002; // SQL非法
+const int kErrDBData     = 1003; // QueryAnswer解析有问题
+const int kErrDBDup      = 1004; // QueryAnswer解析有问题
 
-#include "nebula/net/base_server.h"
-
-class OnlineStatusServer : public nebula::BaseServer {
-public:
-  OnlineStatusServer() = default;
-  ~OnlineStatusServer() override = default;
-  
-protected:
-  bool Initialize() override;
-  
-  bool Run() override {
-    BaseServer::Run();
-    return true;
-  }
-};
-
-#endif // ONLINE_ONLINE_STATUS_SERVER_H_
+#endif

@@ -36,6 +36,24 @@ struct UserDialogDAO : public BaseDAO {
                                  int load_mode,
                                  uint32_t load_limit,
                                  UserDialogDOList& user_dialogs) = 0;
+  
+  // 阻止和取消
+  virtual int UpdateBlock(const std::string& user_id,
+                          const std::string& peer_id,
+                          uint32_t peer_type,
+                          bool is_block) = 0;
+
+  // 置顶和取消
+  virtual int UpdateTop(const std::string& user_id,
+                          const std::string& peer_id,
+                          uint32_t peer_type,
+                          bool is_block) = 0;
+
+  // 屏蔽和取消
+  virtual int UpdateDnd(const std::string& user_id,
+                          const std::string& peer_id,
+                          uint32_t peer_type,
+                          bool is_block) = 0;
 };
 
 #endif

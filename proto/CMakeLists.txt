@@ -48,5 +48,3 @@ PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS ${PROTO_FILES})
 
 add_library(proto STATIC ${PROTO_SRCS} ${PROTO_HDRS})
 target_link_libraries(proto ${PROTOBUF_LIBRARIES} pthread)
-#add_subdirectory(base/test)
-

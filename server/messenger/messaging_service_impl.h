@@ -35,8 +35,6 @@ public:
   int DeleteChat(const zproto::DeleteChatReq& request, zproto::SeqRsp* response) override;
   
   int LoadHistory(const zproto::LoadHistoryReq& request, zproto::LoadHistoryRsp* response) override;
-  int LoadDialogs(const zproto::LoadDialogsReq& request, zproto::LoadDialogsRsp* response) override;
-  int LoadGroupedDialogs(const zproto::LoadGroupedDialogsReq& request, zproto::LoadGroupedDialogsRsp* response) override;
 
 /*
   int MessageSync(const zproto::MessageSyncReq& request, zproto::MessageSyncRsp* response) override;

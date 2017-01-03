@@ -21,13 +21,15 @@
 #include "nebula/base/id_util.h"
 
 #include "proto/api/cc/auth.pb.h"
+#include "proto/api/cc/dialogs.pb.h"
 #include "proto/api/cc/misc.pb.h"
 #include "proto/api/cc/messaging.pb.h"
 #include "proto/api/cc/groups.pb.h"
 
 #include "nebula/net/zproto/api_message_box.h"
-
 #include "nebula/net/rpc/zrpc_service_util.h"
+
+#include "base/message_handler_util.h"
 
 typedef int (*ClientCommandHandlerFunc)(const std::vector<folly::StringPiece>&);
 
@@ -43,11 +45,30 @@ struct CmdEntry {
 static std::string g_my_uid;
 
 int DoConnect(const std::vector<folly::StringPiece>& command_lines) {
+  zproto::StartTestingAuthReq start_testing_auth_req;
+  start_testing_auth_req.set_app_id(1);
+  g_my_uid = command_lines[3].toString();
+  start_testing_auth_req.set_user_id(command_lines[3].toString());
+  
+  ZRpcClientCall<zproto::AuthRsp>("gate_client",
+                                  MakeRpcRequest(start_testing_auth_req),
+                                  [] (std::shared_ptr<ApiRpcOk<zproto::AuthRsp>> auth_rsp,
+                                      ProtoRpcResponsePtr rpc_error) -> int {
+                                    if (rpc_error) {
+                                      LOG(ERROR) << "DoConnect - rpc_error: " << rpc_error->ToString();
+                                    } else {
+                                      LOG(INFO) << "DoConnect - auth_rsp: " << auth_rsp->ToString();
+                                    }
+                                    return 0;
+                                  });
+
+/*
   auto req = std::make_shared<ApiRpcRequest<zproto::StartTestingAuthReq>>();
   
   (*req)->set_app_id(1);
   g_my_uid = command_lines[3].toString();
   (*req)->set_user_id(command_lines[3].toString());
+  
   // (*req)->set_token("benqi@zhazha.nebula.im");
   //(*req)->set_online_status(teamtalk::USER_STATUS_ONLINE);
   //(*req)->set_client_type(teamtalk::CLIENT_TYPE_MAC);
@@ -73,8 +94,161 @@ int DoConnect(const std::vector<folly::StringPiece>& command_lines) {
       LOG(INFO) << "DoSendMessage - rsp is none!";
     }
   });
+ */
   return 0;
 }
+
+int DoCreateChatDialog(const std::vector<folly::StringPiece>& command_lines) {
+  zproto::CreateChatDialogReq create_chat_dialog_req;
+  create_chat_dialog_req.set_peer_id(folly::to<std::string>(command_lines[1]));
+  
+  ZRpcClientCall<zproto::CreateChatDialogRsp>("gate_client",
+                                 MakeRpcRequest(create_chat_dialog_req),
+                                 [] (std::shared_ptr<ApiRpcOk<zproto::CreateChatDialogRsp>> create_chat_dialog_rsp,
+                                     ProtoRpcResponsePtr rpc_error) -> int {
+                                   if (rpc_error) {
+                                     LOG(ERROR) << "DoCreateChatDialog - rpc_error: " << rpc_error->ToString();
+                                   } else {
+                                     LOG(INFO) << "DoCreateChatDialog - seq_rsp: " << create_chat_dialog_rsp->ToString();
+                                   }
+                                   return 0;
+                                 });
+  return 0;
+}
+
+int DoLoadDialogs(const std::vector<folly::StringPiece>& command_lines) {
+  zproto::LoadDialogsReq load_dialogs_req;
+  load_dialogs_req.set_min_date(0);
+  load_dialogs_req.set_limit(100);
+  load_dialogs_req.set_load_mode(zproto::FORWARD);
+  ZRpcClientCall<zproto::LoadDialogsRsp>("gate_client",
+                                         MakeRpcRequest(load_dialogs_req),
+                                         [] (std::shared_ptr<ApiRpcOk<zproto::LoadDialogsRsp>> load_dialogs_rsp,
+                                             ProtoRpcResponsePtr rpc_error) -> int {
+                                           if (rpc_error) {
+                                             LOG(ERROR) << "DoLoadDialogs - rpc_error: " << rpc_error->ToString();
+                                           } else {
+                                             LOG(INFO) << "DoLoadDialogs - load_dialogs_rsp: " << load_dialogs_rsp->ToString();
+                                           }
+                                           return 0;
+                                         });
+  return 0;
+}
+
+int DoBlockPeer(const std::vector<folly::StringPiece>& command_lines) {
+  zproto::BlockPeerReq block_peer_req;
+  block_peer_req.mutable_peer()->set_id(folly::to<std::string>(command_lines[1]));
+  block_peer_req.mutable_peer()->set_type(folly::to<zproto::PeerType>(command_lines[2]));
+  
+  ZRpcClientCall<zproto::SeqRsp>("gate_client",
+                                 MakeRpcRequest(block_peer_req),
+                                 [] (std::shared_ptr<ApiRpcOk<zproto::SeqRsp>> seq_rsp,
+                                     ProtoRpcResponsePtr rpc_error) -> int {
+                                   if (rpc_error) {
+                                     LOG(ERROR) << "DoBlockPeer - rpc_error: " << rpc_error->ToString();
+                                   } else {
+                                     LOG(INFO) << "DoBlockPeer - seq_rsp: " << seq_rsp->ToString();
+                                   }
+                                   return 0;
+                                 });
+  return 0;
+}
+
+int DoUnBlockPeer(const std::vector<folly::StringPiece>& command_lines) {
+  zproto::UnBlockPeerReq unblock_peer_req;
+  unblock_peer_req.mutable_peer()->set_id(folly::to<std::string>(command_lines[1]));
+  unblock_peer_req.mutable_peer()->set_type(folly::to<zproto::PeerType>(command_lines[2]));
+  
+  ZRpcClientCall<zproto::SeqRsp>("gate_client",
+                                 MakeRpcRequest(unblock_peer_req),
+                                 [] (std::shared_ptr<ApiRpcOk<zproto::SeqRsp>> seq_rsp,
+                                     ProtoRpcResponsePtr rpc_error) -> int {
+                                   if (rpc_error) {
+                                     LOG(ERROR) << "DoUnBlockPeer - rpc_error: " << rpc_error->ToString();
+                                   } else {
+                                     LOG(INFO) << "DoUnBlockPeer - seq_rsp: " << seq_rsp->ToString();
+                                   }
+                                   return 0;
+                                 });
+  return 0;
+}
+
+int DoTopPeer(const std::vector<folly::StringPiece>& command_lines) {
+  zproto::TopPeerReq top_peer_req;
+  top_peer_req.mutable_peer()->set_id(folly::to<std::string>(command_lines[1]));
+  top_peer_req.mutable_peer()->set_type(folly::to<zproto::PeerType>(command_lines[2]));
+  
+  ZRpcClientCall<zproto::SeqRsp>("gate_client",
+                                 MakeRpcRequest(top_peer_req),
+                                 [] (std::shared_ptr<ApiRpcOk<zproto::SeqRsp>> seq_rsp,
+                                     ProtoRpcResponsePtr rpc_error) -> int {
+                                   if (rpc_error) {
+                                     LOG(ERROR) << "DoTopPeer - rpc_error: " << rpc_error->ToString();
+                                   } else {
+                                     LOG(INFO) << "DoTopPeer - seq_rsp: " << seq_rsp->ToString();
+                                   }
+                                   return 0;
+                                 });
+  return 0;
+}
+
+int DoUnTopPeer(const std::vector<folly::StringPiece>& command_lines) {
+  zproto::UnTopPeerReq untop_peer_req;
+  untop_peer_req.mutable_peer()->set_id(folly::to<std::string>(command_lines[1]));
+  untop_peer_req.mutable_peer()->set_type(folly::to<zproto::PeerType>(command_lines[2]));
+  
+  ZRpcClientCall<zproto::SeqRsp>("gate_client",
+                                 MakeRpcRequest(untop_peer_req),
+                                 [] (std::shared_ptr<ApiRpcOk<zproto::SeqRsp>> seq_rsp,
+                                     ProtoRpcResponsePtr rpc_error) -> int {
+                                   if (rpc_error) {
+                                     LOG(ERROR) << "DoUnTopPeer - rpc_error: " << rpc_error->ToString();
+                                   } else {
+                                     LOG(INFO) << "DoUnTopPeer - seq_rsp: " << seq_rsp->ToString();
+                                   }
+                                   return 0;
+                                 });
+  return 0;
+}
+
+int DoDndPeer(const std::vector<folly::StringPiece>& command_lines) {
+  zproto::DndPeerReq dnd_peer_req;
+  dnd_peer_req.mutable_peer()->set_id(folly::to<std::string>(command_lines[1]));
+  dnd_peer_req.mutable_peer()->set_type(folly::to<zproto::PeerType>(command_lines[2]));
+  
+  ZRpcClientCall<zproto::SeqRsp>("gate_client",
+                                 MakeRpcRequest(dnd_peer_req),
+                                 [] (std::shared_ptr<ApiRpcOk<zproto::SeqRsp>> seq_rsp,
+                                     ProtoRpcResponsePtr rpc_error) -> int {
+                                   if (rpc_error) {
+                                     LOG(ERROR) << "DoDndPeer - rpc_error: " << rpc_error->ToString();
+                                   } else {
+                                     LOG(INFO) << "DoDndPeer - seq_rsp: " << seq_rsp->ToString();
+                                   }
+                                   return 0;
+                                 });
+  return 0;
+}
+
+int DoUnDndPeer(const std::vector<folly::StringPiece>& command_lines) {
+  zproto::UnDndPeerReq undnd_peer_req;
+  undnd_peer_req.mutable_peer()->set_id(folly::to<std::string>(command_lines[1]));
+  undnd_peer_req.mutable_peer()->set_type(folly::to<zproto::PeerType>(command_lines[2]));
+  
+  ZRpcClientCall<zproto::SeqRsp>("gate_client",
+                                 MakeRpcRequest(undnd_peer_req),
+                                 [] (std::shared_ptr<ApiRpcOk<zproto::SeqRsp>> seq_rsp,
+                                     ProtoRpcResponsePtr rpc_error) -> int {
+                                   if (rpc_error) {
+                                     LOG(ERROR) << "DoUnDndPeer - rpc_error: " << rpc_error->ToString();
+                                   } else {
+                                     LOG(INFO) << "DoUnDndPeer - seq_rsp: " << seq_rsp->ToString();
+                                   }
+                                   return 0;
+                                 });
+  return 0;
+}
+
 
 int DoSendMessage(const std::vector<folly::StringPiece>& command_lines) {
   auto req = std::make_shared<ApiRpcRequest<zproto::SendMessageReq>>();
@@ -124,8 +298,8 @@ int DoSendGroupMessage(const std::vector<folly::StringPiece>& command_lines) {
   return 0;
 }
 
-int DoMessageSync(const std::vector<folly::StringPiece>& command_lines) {
 /*
+int DoMessageSync(const std::vector<folly::StringPiece>& command_lines) {
   auto req = std::make_shared<ApiRpcRequest<zproto::MessageSyncReq>>();
   (*req)->set_received_max_seq(0);
   
@@ -141,9 +315,10 @@ int DoMessageSync(const std::vector<folly::StringPiece>& command_lines) {
     //  LOG(INFO) << (*login_rsp)->Utf8DebugString();
     //}
   });
- */
   return 0;
 }
+ */
+
 // Creating group chat
 // CreateGroupReq --> CreateGroupRsp
 int DoCreateGroup(const std::vector<folly::StringPiece>& command_lines) {
@@ -169,6 +344,11 @@ int DoCreateGroup(const std::vector<folly::StringPiece>& command_lines) {
 }
 
 
+int DoClose(const std::vector<folly::StringPiece>& command_lines) {
+  // exit(0);
+  return -2;
+}
+
 int DoQuit(const std::vector<folly::StringPiece>& command_lines) {
   // exit(0);
   return -2;
@@ -176,13 +356,21 @@ int DoQuit(const std::vector<folly::StringPiece>& command_lines) {
 
 CmdEntry g_cmds[] = {
   // login/logout
-  {"connect", "connect serv_ip serv_port user_id", 4, 0, DoConnect},
-  {"send_message", "send_message user_id content", 3, 0, DoSendMessage},
-  {"send_group_message", "send_group_message group_id content", 3, 0, DoSendGroupMessage},
-  {"messagesync", "messagesync", 1, 0, DoMessageSync},
-  {"create_group", "create_group group_title uid1...", 3, 10, DoCreateGroup},
+  {"connect", "connect serv_ip serv_port user_id", 4, 4, DoConnect},
+  {"create_chat_dialog", "create_chat_dialog user_id", 2, 2, DoCreateChatDialog},
+  {"load_dialogs", "load_dialogs", 1, 1, DoLoadDialogs},
+  {"block_peer", "block_peer peer_id peer_type", 3, 3, DoBlockPeer},
+  {"unblock_peer", "unblock_peer peer_id peer_type", 3, 3, DoUnBlockPeer},
+  {"top_peer", "top_peer peer_id peer_type", 3, 3, DoTopPeer},
+  {"untop_peer", "unblock_peer peer_id peer_type", 3, 3, DoUnTopPeer},
+  {"dnd_peer", "dnd_peer peer_id peer_type", 3, 3, DoDndPeer},
+  {"undnd_peer", "undnd_peer peer_id peer_type", 3, 3, DoUnDndPeer},
+  {"send_message", "send_message user_id content", 3, 3, DoSendMessage},
+  {"send_group_message", "send_group_message group_id content", 3, 3, DoSendGroupMessage},
+  {"create_group", "create_group group_title uid1...", 3, 0, DoCreateGroup},
+  {"close", "close", 1, 1, DoClose},
   // quit
-  {"quit", "quit", 1, 0, DoQuit}
+  {"quit", "quit", 1, 1, DoQuit}
 };
 
 void PrintHelp() {

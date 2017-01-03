@@ -17,6 +17,7 @@
 
 #include "dal/user_dialog_dao_impl.h"
 
+#include "nebula/base/time_util.h"
 #include "proto/api/cc/messaging_base.pb.h"
 
 UserDialogDAO& UserDialogDAO::GetInstance() {
@@ -62,15 +63,15 @@ int UserDialogDAOImpl::LoadUserDialogList(const std::string& user_id,
   return DoStorageQuery("nebula_engine",
                         [&](std::string& query_string) {
                           if (load_mode == zproto::FORWARD) {
-                            folly::format(&query_string, "SELECT id,peer_id,peer_type,updated_at FROM user_dialogs WHERE user_id='{}' AND updated_at<{} order by updated_at desc LIMIT {}",
-                                                          user_id,
-                                                          loaded_time,
-                                                          load_limit);
+                            folly::format(&query_string, "SELECT id,peer_id,peer_type,updated_at FROM user_dialogs WHERE user_id='{}' AND updated_at<={} order by updated_at desc LIMIT {}",
+                                          user_id,
+                                          loaded_time==0 ? std::numeric_limits<uint64_t>::max() : loaded_time,
+                                          load_limit);
                           } else {
-                            folly::format(&query_string, "SELECT id,peer_id,peer_type,updated_at FROM user_dialogs WHERE user_id='{}' AND updated_at>{} order by updated_at asc LIMIT {}",
-                                                          user_id,
-                                                          loaded_time,
-                                                          load_limit);
+                            folly::format(&query_string, "SELECT id,peer_id,peer_type,updated_at FROM user_dialogs WHERE user_id='{}' AND updated_at>={} order by updated_at asc LIMIT {}",
+                                          user_id,
+                                          loaded_time==0 ? std::numeric_limits<uint64_t>::max() : loaded_time,
+                                          load_limit);
                           }
                         },
                         [&](db::QueryAnswer& answ) -> int {
@@ -91,4 +92,55 @@ int UserDialogDAOImpl::LoadUserDialogList(const std::string& user_id,
                           
                           return result;
                         });
+}
+
+// 阻止和取消
+int UserDialogDAOImpl::UpdateBlock(const std::string& user_id,
+                const std::string& peer_id,
+                uint32_t peer_type,
+                bool is_block) {
+  return DoStorageExecute("nebula_engine",
+                          [&](std::string& query_string) {
+                            folly::format(&query_string,
+                                          "UPDATE user_dialogs SET is_block={},updated_at={} WHERE user_id={} AND peer_id={} AND peer_type={};",
+                                          is_block ? 1 : 0,
+                                          NowInMsecTime(),
+                                          user_id,
+                                          peer_id,
+                                          peer_type);
+                          });
+}
+
+// 置顶和取消
+int UserDialogDAOImpl::UpdateTop(const std::string& user_id,
+              const std::string& peer_id,
+              uint32_t peer_type,
+              bool is_top) {
+  return DoStorageExecute("nebula_engine",
+                          [&](std::string& query_string) {
+                            folly::format(&query_string,
+                                          "UPDATE user_dialogs SET is_top={},updated_at={} WHERE user_id={} AND peer_id={} AND peer_type={};",
+                                          is_top ? 1 : 0,
+                                          NowInMsecTime(),
+                                          user_id,
+                                          peer_id,
+                                          peer_type);
+                          });
+}
+
+// 屏蔽和取消
+int UserDialogDAOImpl::UpdateDnd(const std::string& user_id,
+              const std::string& peer_id,
+              uint32_t peer_type,
+              bool is_dnd) {
+  return DoStorageExecute("nebula_engine",
+                          [&](std::string& query_string) {
+                            folly::format(&query_string,
+                                          "UPDATE user_dialogs SET is_dnd={},updated_at={} WHERE user_id={} AND peer_id={} AND peer_type={};",
+                                          is_dnd ? 1 : 0,
+                                          NowInMsecTime(),
+                                          user_id,
+                                          peer_id,
+                                          peer_type);
+                          });
 }

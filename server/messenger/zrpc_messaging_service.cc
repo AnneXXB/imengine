@@ -77,14 +77,3 @@ int ZRpcMessagingService::LoadHistory(const zproto::LoadHistoryReq& request, zpr
   LOG(ERROR) << "ZRpcMessagingService - LoadHistory unimplemented";
   return -1;
 }
-
-int ZRpcMessagingService::LoadDialogs(const zproto::LoadDialogsReq& request, zproto::LoadDialogsRsp* response) {
-  LOG(ERROR) << "ZRpcMessagingService - LoadDialogs unimplemented";
-  return -1;
-}
-
-int ZRpcMessagingService::LoadGroupedDialogs(const zproto::LoadGroupedDialogsReq& request, zproto::LoadGroupedDialogsRsp* response) {
-  LOG(ERROR) << "ZRpcMessagingService - LoadGroupedDialogs unimplemented";
-  return -1;
-}
-
