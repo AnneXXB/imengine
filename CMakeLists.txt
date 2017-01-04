@@ -58,6 +58,7 @@ message("Folly lib: " ${FOLLY_LIBRARY})
 message("Wangle lib: " ${WANGLE_LIBRARY})
 message("Proxygen lib: " ${PROXYGEN_LIBRARY})
 message("MySQL lib: " ${MYSQL_LIB})
+message("OpenSSL: " ${OPENSSL_SSL_LIBRARY})
 
 link_directories(
 ${FOLLY_LIBRARYDIR}
@@ -65,7 +66,7 @@ ${WANGLE_LIBRARYDIR}
 ${PROXYGEN_LIBRARYDIR}
 ${BOOST_LIBRARYDIR}
 ${MYSQL_LIB_DIR}
-${OPENSSL_LIBRARIESDIR}
+${OPENSSL_LIBRARYDIR}
 ${PROJECT_BINARY_DIR}/lib
 )
 

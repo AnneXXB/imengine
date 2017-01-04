@@ -177,14 +177,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   LoadFullGroupsReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       LoadFullGroupsReq_descriptor_,
-      LoadFullGroupsReq::default_instance_,
+      LoadFullGroupsReq::internal_default_instance(),
       LoadFullGroupsReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(LoadFullGroupsReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadFullGroupsReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadFullGroupsReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadFullGroupsReq, _internal_metadata_));
   LoadFullGroupsRsp_descriptor_ = file->message_type(1);
   static const int LoadFullGroupsRsp_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadFullGroupsRsp, groups_),
@@ -192,14 +191,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   LoadFullGroupsRsp_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       LoadFullGroupsRsp_descriptor_,
-      LoadFullGroupsRsp::default_instance_,
+      LoadFullGroupsRsp::internal_default_instance(),
       LoadFullGroupsRsp_offsets_,
       -1,
       -1,
       -1,
       sizeof(LoadFullGroupsRsp),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadFullGroupsRsp, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadFullGroupsRsp, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadFullGroupsRsp, _internal_metadata_));
   LoadMembersReq_descriptor_ = file->message_type(2);
   static const int LoadMembersReq_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadMembersReq, group_),
@@ -209,14 +207,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   LoadMembersReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       LoadMembersReq_descriptor_,
-      LoadMembersReq::default_instance_,
+      LoadMembersReq::internal_default_instance(),
       LoadMembersReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(LoadMembersReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadMembersReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadMembersReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadMembersReq, _internal_metadata_));
   LoadMembersRsp_descriptor_ = file->message_type(3);
   static const int LoadMembersRsp_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadMembersRsp, members_),
@@ -226,14 +223,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   LoadMembersRsp_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       LoadMembersRsp_descriptor_,
-      LoadMembersRsp::default_instance_,
+      LoadMembersRsp::internal_default_instance(),
       LoadMembersRsp_offsets_,
       -1,
       -1,
       -1,
       sizeof(LoadMembersRsp),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadMembersRsp, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadMembersRsp, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadMembersRsp, _internal_metadata_));
   GroupTitleChangedNotify_descriptor_ = file->message_type(4);
   static const int GroupTitleChangedNotify_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupTitleChangedNotify, group_id_),
@@ -242,14 +238,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   GroupTitleChangedNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       GroupTitleChangedNotify_descriptor_,
-      GroupTitleChangedNotify::default_instance_,
+      GroupTitleChangedNotify::internal_default_instance(),
       GroupTitleChangedNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(GroupTitleChangedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupTitleChangedNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupTitleChangedNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupTitleChangedNotify, _internal_metadata_));
   GroupAvatarChangedNotify_descriptor_ = file->message_type(5);
   static const int GroupAvatarChangedNotify_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupAvatarChangedNotify, group_id_),
@@ -258,14 +253,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   GroupAvatarChangedNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       GroupAvatarChangedNotify_descriptor_,
-      GroupAvatarChangedNotify::default_instance_,
+      GroupAvatarChangedNotify::internal_default_instance(),
       GroupAvatarChangedNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(GroupAvatarChangedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupAvatarChangedNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupAvatarChangedNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupAvatarChangedNotify, _internal_metadata_));
   GroupTopicChangedNotify_descriptor_ = file->message_type(6);
   static const int GroupTopicChangedNotify_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupTopicChangedNotify, group_id_),
@@ -274,14 +268,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   GroupTopicChangedNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       GroupTopicChangedNotify_descriptor_,
-      GroupTopicChangedNotify::default_instance_,
+      GroupTopicChangedNotify::internal_default_instance(),
       GroupTopicChangedNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(GroupTopicChangedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupTopicChangedNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupTopicChangedNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupTopicChangedNotify, _internal_metadata_));
   GroupAboutChangedNotify_descriptor_ = file->message_type(7);
   static const int GroupAboutChangedNotify_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupAboutChangedNotify, group_id_),
@@ -290,14 +283,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   GroupAboutChangedNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       GroupAboutChangedNotify_descriptor_,
-      GroupAboutChangedNotify::default_instance_,
+      GroupAboutChangedNotify::internal_default_instance(),
       GroupAboutChangedNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(GroupAboutChangedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupAboutChangedNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupAboutChangedNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupAboutChangedNotify, _internal_metadata_));
   GroupOwnerChangedNotify_descriptor_ = file->message_type(8);
   static const int GroupOwnerChangedNotify_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupOwnerChangedNotify, group_id_),
@@ -306,14 +298,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   GroupOwnerChangedNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       GroupOwnerChangedNotify_descriptor_,
-      GroupOwnerChangedNotify::default_instance_,
+      GroupOwnerChangedNotify::internal_default_instance(),
       GroupOwnerChangedNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(GroupOwnerChangedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupOwnerChangedNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupOwnerChangedNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupOwnerChangedNotify, _internal_metadata_));
   GroupDeletedNotify_descriptor_ = file->message_type(9);
   static const int GroupDeletedNotify_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupDeletedNotify, group_id_),
@@ -321,14 +312,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   GroupDeletedNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       GroupDeletedNotify_descriptor_,
-      GroupDeletedNotify::default_instance_,
+      GroupDeletedNotify::internal_default_instance(),
       GroupDeletedNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(GroupDeletedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupDeletedNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupDeletedNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupDeletedNotify, _internal_metadata_));
   GroupPermissionsChangedNotify_descriptor_ = file->message_type(10);
   static const int GroupPermissionsChangedNotify_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupPermissionsChangedNotify, group_id_),
@@ -337,14 +327,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   GroupPermissionsChangedNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       GroupPermissionsChangedNotify_descriptor_,
-      GroupPermissionsChangedNotify::default_instance_,
+      GroupPermissionsChangedNotify::internal_default_instance(),
       GroupPermissionsChangedNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(GroupPermissionsChangedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupPermissionsChangedNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupPermissionsChangedNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupPermissionsChangedNotify, _internal_metadata_));
   GroupFullPermissionsChangedNotify_descriptor_ = file->message_type(11);
   static const int GroupFullPermissionsChangedNotify_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupFullPermissionsChangedNotify, group_id_),
@@ -353,14 +342,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   GroupFullPermissionsChangedNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       GroupFullPermissionsChangedNotify_descriptor_,
-      GroupFullPermissionsChangedNotify::default_instance_,
+      GroupFullPermissionsChangedNotify::internal_default_instance(),
       GroupFullPermissionsChangedNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(GroupFullPermissionsChangedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupFullPermissionsChangedNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupFullPermissionsChangedNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupFullPermissionsChangedNotify, _internal_metadata_));
   GroupMemberChangedNotify_descriptor_ = file->message_type(12);
   static const int GroupMemberChangedNotify_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberChangedNotify, group_id_),
@@ -369,14 +357,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   GroupMemberChangedNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       GroupMemberChangedNotify_descriptor_,
-      GroupMemberChangedNotify::default_instance_,
+      GroupMemberChangedNotify::internal_default_instance(),
       GroupMemberChangedNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(GroupMemberChangedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberChangedNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberChangedNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberChangedNotify, _internal_metadata_));
   GroupMembersBecameAsyncNotify_descriptor_ = file->message_type(13);
   static const int GroupMembersBecameAsyncNotify_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMembersBecameAsyncNotify, group_id_),
@@ -384,14 +371,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   GroupMembersBecameAsyncNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       GroupMembersBecameAsyncNotify_descriptor_,
-      GroupMembersBecameAsyncNotify::default_instance_,
+      GroupMembersBecameAsyncNotify::internal_default_instance(),
       GroupMembersBecameAsyncNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(GroupMembersBecameAsyncNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMembersBecameAsyncNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMembersBecameAsyncNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMembersBecameAsyncNotify, _internal_metadata_));
   GroupMembersUpdatedNotify_descriptor_ = file->message_type(14);
   static const int GroupMembersUpdatedNotify_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMembersUpdatedNotify, group_id_),
@@ -400,14 +386,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   GroupMembersUpdatedNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       GroupMembersUpdatedNotify_descriptor_,
-      GroupMembersUpdatedNotify::default_instance_,
+      GroupMembersUpdatedNotify::internal_default_instance(),
       GroupMembersUpdatedNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(GroupMembersUpdatedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMembersUpdatedNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMembersUpdatedNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMembersUpdatedNotify, _internal_metadata_));
   GroupMemberDiffNotify_descriptor_ = file->message_type(15);
   static const int GroupMemberDiffNotify_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberDiffNotify, group_id_),
@@ -418,14 +403,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   GroupMemberDiffNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       GroupMemberDiffNotify_descriptor_,
-      GroupMemberDiffNotify::default_instance_,
+      GroupMemberDiffNotify::internal_default_instance(),
       GroupMemberDiffNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(GroupMemberDiffNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberDiffNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberDiffNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberDiffNotify, _internal_metadata_));
   GroupMembersCountChangedNotify_descriptor_ = file->message_type(16);
   static const int GroupMembersCountChangedNotify_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMembersCountChangedNotify, group_id_),
@@ -434,14 +418,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   GroupMembersCountChangedNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       GroupMembersCountChangedNotify_descriptor_,
-      GroupMembersCountChangedNotify::default_instance_,
+      GroupMembersCountChangedNotify::internal_default_instance(),
       GroupMembersCountChangedNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(GroupMembersCountChangedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMembersCountChangedNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMembersCountChangedNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMembersCountChangedNotify, _internal_metadata_));
   GroupMemberAdminChangedNotify_descriptor_ = file->message_type(17);
   static const int GroupMemberAdminChangedNotify_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberAdminChangedNotify, group_id_),
@@ -451,14 +434,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   GroupMemberAdminChangedNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       GroupMemberAdminChangedNotify_descriptor_,
-      GroupMemberAdminChangedNotify::default_instance_,
+      GroupMemberAdminChangedNotify::internal_default_instance(),
       GroupMemberAdminChangedNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(GroupMemberAdminChangedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberAdminChangedNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberAdminChangedNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GroupMemberAdminChangedNotify, _internal_metadata_));
   CreateGroupReq_descriptor_ = file->message_type(18);
   static const int CreateGroupReq_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupReq, rid_),
@@ -469,14 +451,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   CreateGroupReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       CreateGroupReq_descriptor_,
-      CreateGroupReq::default_instance_,
+      CreateGroupReq::internal_default_instance(),
       CreateGroupReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(CreateGroupReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupReq, _internal_metadata_));
   CreateGroupRsp_descriptor_ = file->message_type(19);
   static const int CreateGroupRsp_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupRsp, seq_),
@@ -488,14 +469,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   CreateGroupRsp_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       CreateGroupRsp_descriptor_,
-      CreateGroupRsp::default_instance_,
+      CreateGroupRsp::internal_default_instance(),
       CreateGroupRsp_offsets_,
       -1,
       -1,
       -1,
       sizeof(CreateGroupRsp),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupRsp, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupRsp, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateGroupRsp, _internal_metadata_));
   EditGroupTitleReq_descriptor_ = file->message_type(20);
   static const int EditGroupTitleReq_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupTitleReq, group_peer_),
@@ -506,14 +486,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   EditGroupTitleReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       EditGroupTitleReq_descriptor_,
-      EditGroupTitleReq::default_instance_,
+      EditGroupTitleReq::internal_default_instance(),
       EditGroupTitleReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(EditGroupTitleReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupTitleReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupTitleReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupTitleReq, _internal_metadata_));
   EditGroupAvatarReq_descriptor_ = file->message_type(21);
   static const int EditGroupAvatarReq_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAvatarReq, group_peer_),
@@ -524,14 +503,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   EditGroupAvatarReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       EditGroupAvatarReq_descriptor_,
-      EditGroupAvatarReq::default_instance_,
+      EditGroupAvatarReq::internal_default_instance(),
       EditGroupAvatarReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(EditGroupAvatarReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAvatarReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAvatarReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAvatarReq, _internal_metadata_));
   EditGroupAvatarRsp_descriptor_ = file->message_type(22);
   static const int EditGroupAvatarRsp_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAvatarRsp, avatar_),
@@ -542,14 +520,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   EditGroupAvatarRsp_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       EditGroupAvatarRsp_descriptor_,
-      EditGroupAvatarRsp::default_instance_,
+      EditGroupAvatarRsp::internal_default_instance(),
       EditGroupAvatarRsp_offsets_,
       -1,
       -1,
       -1,
       sizeof(EditGroupAvatarRsp),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAvatarRsp, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAvatarRsp, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAvatarRsp, _internal_metadata_));
   RemoveGroupAvatarReq_descriptor_ = file->message_type(23);
   static const int RemoveGroupAvatarReq_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RemoveGroupAvatarReq, group_peer_),
@@ -559,14 +536,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   RemoveGroupAvatarReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       RemoveGroupAvatarReq_descriptor_,
-      RemoveGroupAvatarReq::default_instance_,
+      RemoveGroupAvatarReq::internal_default_instance(),
       RemoveGroupAvatarReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(RemoveGroupAvatarReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RemoveGroupAvatarReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RemoveGroupAvatarReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RemoveGroupAvatarReq, _internal_metadata_));
   EditGroupShortNameReq_descriptor_ = file->message_type(24);
   static const int EditGroupShortNameReq_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupShortNameReq, group_peer_),
@@ -575,14 +551,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   EditGroupShortNameReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       EditGroupShortNameReq_descriptor_,
-      EditGroupShortNameReq::default_instance_,
+      EditGroupShortNameReq::internal_default_instance(),
       EditGroupShortNameReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(EditGroupShortNameReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupShortNameReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupShortNameReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupShortNameReq, _internal_metadata_));
   EditGroupTopicReq_descriptor_ = file->message_type(25);
   static const int EditGroupTopicReq_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupTopicReq, group_peer_),
@@ -593,14 +568,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   EditGroupTopicReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       EditGroupTopicReq_descriptor_,
-      EditGroupTopicReq::default_instance_,
+      EditGroupTopicReq::internal_default_instance(),
       EditGroupTopicReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(EditGroupTopicReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupTopicReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupTopicReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupTopicReq, _internal_metadata_));
   EditGroupAboutReq_descriptor_ = file->message_type(26);
   static const int EditGroupAboutReq_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAboutReq, group_peer_),
@@ -611,14 +585,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   EditGroupAboutReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       EditGroupAboutReq_descriptor_,
-      EditGroupAboutReq::default_instance_,
+      EditGroupAboutReq::internal_default_instance(),
       EditGroupAboutReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(EditGroupAboutReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAboutReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAboutReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditGroupAboutReq, _internal_metadata_));
   InviteUserReq_descriptor_ = file->message_type(27);
   static const int InviteUserReq_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(InviteUserReq, group_peer_),
@@ -629,14 +602,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   InviteUserReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       InviteUserReq_descriptor_,
-      InviteUserReq::default_instance_,
+      InviteUserReq::internal_default_instance(),
       InviteUserReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(InviteUserReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(InviteUserReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(InviteUserReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(InviteUserReq, _internal_metadata_));
   LeaveGroupReq_descriptor_ = file->message_type(28);
   static const int LeaveGroupReq_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LeaveGroupReq, group_peer_),
@@ -646,14 +618,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   LeaveGroupReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       LeaveGroupReq_descriptor_,
-      LeaveGroupReq::default_instance_,
+      LeaveGroupReq::internal_default_instance(),
       LeaveGroupReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(LeaveGroupReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LeaveGroupReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LeaveGroupReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LeaveGroupReq, _internal_metadata_));
   LeaveAndDeleteReq_descriptor_ = file->message_type(29);
   static const int LeaveAndDeleteReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LeaveAndDeleteReq, group_peer_),
@@ -661,14 +632,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   LeaveAndDeleteReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       LeaveAndDeleteReq_descriptor_,
-      LeaveAndDeleteReq::default_instance_,
+      LeaveAndDeleteReq::internal_default_instance(),
       LeaveAndDeleteReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(LeaveAndDeleteReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LeaveAndDeleteReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LeaveAndDeleteReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LeaveAndDeleteReq, _internal_metadata_));
   KickUserReq_descriptor_ = file->message_type(30);
   static const int KickUserReq_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(KickUserReq, group_peer_),
@@ -679,14 +649,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   KickUserReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       KickUserReq_descriptor_,
-      KickUserReq::default_instance_,
+      KickUserReq::internal_default_instance(),
       KickUserReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(KickUserReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(KickUserReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(KickUserReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(KickUserReq, _internal_metadata_));
   JoinGroupByPeerReq_descriptor_ = file->message_type(31);
   static const int JoinGroupByPeerReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JoinGroupByPeerReq, group_peer_),
@@ -694,14 +663,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   JoinGroupByPeerReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       JoinGroupByPeerReq_descriptor_,
-      JoinGroupByPeerReq::default_instance_,
+      JoinGroupByPeerReq::internal_default_instance(),
       JoinGroupByPeerReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(JoinGroupByPeerReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JoinGroupByPeerReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JoinGroupByPeerReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JoinGroupByPeerReq, _internal_metadata_));
   MakeUserAdminReq_descriptor_ = file->message_type(32);
   static const int MakeUserAdminReq_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MakeUserAdminReq, group_peer_),
@@ -710,14 +678,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   MakeUserAdminReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       MakeUserAdminReq_descriptor_,
-      MakeUserAdminReq::default_instance_,
+      MakeUserAdminReq::internal_default_instance(),
       MakeUserAdminReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(MakeUserAdminReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MakeUserAdminReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MakeUserAdminReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MakeUserAdminReq, _internal_metadata_));
   DismissUserAdminReq_descriptor_ = file->message_type(33);
   static const int DismissUserAdminReq_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DismissUserAdminReq, group_peer_),
@@ -726,14 +693,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   DismissUserAdminReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       DismissUserAdminReq_descriptor_,
-      DismissUserAdminReq::default_instance_,
+      DismissUserAdminReq::internal_default_instance(),
       DismissUserAdminReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(DismissUserAdminReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DismissUserAdminReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DismissUserAdminReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DismissUserAdminReq, _internal_metadata_));
   TransferOwnershipReq_descriptor_ = file->message_type(34);
   static const int TransferOwnershipReq_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TransferOwnershipReq, group_peer_),
@@ -742,14 +708,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   TransferOwnershipReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       TransferOwnershipReq_descriptor_,
-      TransferOwnershipReq::default_instance_,
+      TransferOwnershipReq::internal_default_instance(),
       TransferOwnershipReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(TransferOwnershipReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TransferOwnershipReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TransferOwnershipReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TransferOwnershipReq, _internal_metadata_));
   AdminSettings_descriptor_ = file->message_type(35);
   static const int AdminSettings_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AdminSettings, show_admins_to_members_),
@@ -761,14 +726,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   AdminSettings_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       AdminSettings_descriptor_,
-      AdminSettings::default_instance_,
+      AdminSettings::internal_default_instance(),
       AdminSettings_offsets_,
       -1,
       -1,
       -1,
       sizeof(AdminSettings),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AdminSettings, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AdminSettings, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AdminSettings, _internal_metadata_));
   LoadAdminSettingsReq_descriptor_ = file->message_type(36);
   static const int LoadAdminSettingsReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadAdminSettingsReq, group_peer_),
@@ -776,14 +740,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   LoadAdminSettingsReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       LoadAdminSettingsReq_descriptor_,
-      LoadAdminSettingsReq::default_instance_,
+      LoadAdminSettingsReq::internal_default_instance(),
       LoadAdminSettingsReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(LoadAdminSettingsReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadAdminSettingsReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadAdminSettingsReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadAdminSettingsReq, _internal_metadata_));
   LoadAdminSettingsRsp_descriptor_ = file->message_type(37);
   static const int LoadAdminSettingsRsp_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadAdminSettingsRsp, settings_),
@@ -791,14 +754,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   LoadAdminSettingsRsp_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       LoadAdminSettingsRsp_descriptor_,
-      LoadAdminSettingsRsp::default_instance_,
+      LoadAdminSettingsRsp::internal_default_instance(),
       LoadAdminSettingsRsp_offsets_,
       -1,
       -1,
       -1,
       sizeof(LoadAdminSettingsRsp),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadAdminSettingsRsp, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadAdminSettingsRsp, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadAdminSettingsRsp, _internal_metadata_));
   SaveAdminSettingsReq_descriptor_ = file->message_type(38);
   static const int SaveAdminSettingsReq_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SaveAdminSettingsReq, group_peer_),
@@ -807,14 +769,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   SaveAdminSettingsReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       SaveAdminSettingsReq_descriptor_,
-      SaveAdminSettingsReq::default_instance_,
+      SaveAdminSettingsReq::internal_default_instance(),
       SaveAdminSettingsReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(SaveAdminSettingsReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SaveAdminSettingsReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SaveAdminSettingsReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SaveAdminSettingsReq, _internal_metadata_));
   DeleteGroupReq_descriptor_ = file->message_type(39);
   static const int DeleteGroupReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeleteGroupReq, group_peer_),
@@ -822,14 +783,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   DeleteGroupReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       DeleteGroupReq_descriptor_,
-      DeleteGroupReq::default_instance_,
+      DeleteGroupReq::internal_default_instance(),
       DeleteGroupReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(DeleteGroupReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeleteGroupReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeleteGroupReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeleteGroupReq, _internal_metadata_));
   ShareHistoryReq_descriptor_ = file->message_type(40);
   static const int ShareHistoryReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShareHistoryReq, group_peer_),
@@ -837,14 +797,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   ShareHistoryReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       ShareHistoryReq_descriptor_,
-      ShareHistoryReq::default_instance_,
+      ShareHistoryReq::internal_default_instance(),
       ShareHistoryReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(ShareHistoryReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShareHistoryReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShareHistoryReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShareHistoryReq, _internal_metadata_));
   InviteUrlRsp_descriptor_ = file->message_type(41);
   static const int InviteUrlRsp_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(InviteUrlRsp, url_),
@@ -852,14 +811,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   InviteUrlRsp_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       InviteUrlRsp_descriptor_,
-      InviteUrlRsp::default_instance_,
+      InviteUrlRsp::internal_default_instance(),
       InviteUrlRsp_offsets_,
       -1,
       -1,
       -1,
       sizeof(InviteUrlRsp),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(InviteUrlRsp, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(InviteUrlRsp, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(InviteUrlRsp, _internal_metadata_));
   GetGroupInviteUrlReq_descriptor_ = file->message_type(42);
   static const int GetGroupInviteUrlReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetGroupInviteUrlReq, group_peer_),
@@ -867,14 +825,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   GetGroupInviteUrlReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       GetGroupInviteUrlReq_descriptor_,
-      GetGroupInviteUrlReq::default_instance_,
+      GetGroupInviteUrlReq::internal_default_instance(),
       GetGroupInviteUrlReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(GetGroupInviteUrlReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetGroupInviteUrlReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetGroupInviteUrlReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetGroupInviteUrlReq, _internal_metadata_));
   RevokeInviteUrlReq_descriptor_ = file->message_type(43);
   static const int RevokeInviteUrlReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RevokeInviteUrlReq, group_peer_),
@@ -882,14 +839,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   RevokeInviteUrlReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       RevokeInviteUrlReq_descriptor_,
-      RevokeInviteUrlReq::default_instance_,
+      RevokeInviteUrlReq::internal_default_instance(),
       RevokeInviteUrlReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(RevokeInviteUrlReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RevokeInviteUrlReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RevokeInviteUrlReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RevokeInviteUrlReq, _internal_metadata_));
   JoinGroupReq_descriptor_ = file->message_type(44);
   static const int JoinGroupReq_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JoinGroupReq, token_),
@@ -898,14 +854,13 @@ void protobuf_AssignDesc_groups_2eproto() {
   JoinGroupReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       JoinGroupReq_descriptor_,
-      JoinGroupReq::default_instance_,
+      JoinGroupReq::internal_default_instance(),
       JoinGroupReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(JoinGroupReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JoinGroupReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JoinGroupReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JoinGroupReq, _internal_metadata_));
   JoinGroupRsp_descriptor_ = file->message_type(45);
   static const int JoinGroupRsp_offsets_[7] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JoinGroupRsp, group_),
@@ -919,20 +874,19 @@ void protobuf_AssignDesc_groups_2eproto() {
   JoinGroupRsp_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       JoinGroupRsp_descriptor_,
-      JoinGroupRsp::default_instance_,
+      JoinGroupRsp::internal_default_instance(),
       JoinGroupRsp_offsets_,
       -1,
       -1,
       -1,
       sizeof(JoinGroupRsp),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JoinGroupRsp, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JoinGroupRsp, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JoinGroupRsp, _internal_metadata_));
 }
 
 namespace {
 
 GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AssignDescriptors_once_);
-inline void protobuf_AssignDescriptorsOnce() {
+void protobuf_AssignDescriptorsOnce() {
   ::google::protobuf::GoogleOnceInit(&protobuf_AssignDescriptors_once_,
                  &protobuf_AssignDesc_groups_2eproto);
 }
@@ -941,208 +895,333 @@ void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      LoadFullGroupsReq_descriptor_, &LoadFullGroupsReq::default_instance());
+      LoadFullGroupsReq_descriptor_, LoadFullGroupsReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      LoadFullGroupsRsp_descriptor_, &LoadFullGroupsRsp::default_instance());
+      LoadFullGroupsRsp_descriptor_, LoadFullGroupsRsp::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      LoadMembersReq_descriptor_, &LoadMembersReq::default_instance());
+      LoadMembersReq_descriptor_, LoadMembersReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      LoadMembersRsp_descriptor_, &LoadMembersRsp::default_instance());
+      LoadMembersRsp_descriptor_, LoadMembersRsp::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      GroupTitleChangedNotify_descriptor_, &GroupTitleChangedNotify::default_instance());
+      GroupTitleChangedNotify_descriptor_, GroupTitleChangedNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      GroupAvatarChangedNotify_descriptor_, &GroupAvatarChangedNotify::default_instance());
+      GroupAvatarChangedNotify_descriptor_, GroupAvatarChangedNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      GroupTopicChangedNotify_descriptor_, &GroupTopicChangedNotify::default_instance());
+      GroupTopicChangedNotify_descriptor_, GroupTopicChangedNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      GroupAboutChangedNotify_descriptor_, &GroupAboutChangedNotify::default_instance());
+      GroupAboutChangedNotify_descriptor_, GroupAboutChangedNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      GroupOwnerChangedNotify_descriptor_, &GroupOwnerChangedNotify::default_instance());
+      GroupOwnerChangedNotify_descriptor_, GroupOwnerChangedNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      GroupDeletedNotify_descriptor_, &GroupDeletedNotify::default_instance());
+      GroupDeletedNotify_descriptor_, GroupDeletedNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      GroupPermissionsChangedNotify_descriptor_, &GroupPermissionsChangedNotify::default_instance());
+      GroupPermissionsChangedNotify_descriptor_, GroupPermissionsChangedNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      GroupFullPermissionsChangedNotify_descriptor_, &GroupFullPermissionsChangedNotify::default_instance());
+      GroupFullPermissionsChangedNotify_descriptor_, GroupFullPermissionsChangedNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      GroupMemberChangedNotify_descriptor_, &GroupMemberChangedNotify::default_instance());
+      GroupMemberChangedNotify_descriptor_, GroupMemberChangedNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      GroupMembersBecameAsyncNotify_descriptor_, &GroupMembersBecameAsyncNotify::default_instance());
+      GroupMembersBecameAsyncNotify_descriptor_, GroupMembersBecameAsyncNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      GroupMembersUpdatedNotify_descriptor_, &GroupMembersUpdatedNotify::default_instance());
+      GroupMembersUpdatedNotify_descriptor_, GroupMembersUpdatedNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      GroupMemberDiffNotify_descriptor_, &GroupMemberDiffNotify::default_instance());
+      GroupMemberDiffNotify_descriptor_, GroupMemberDiffNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      GroupMembersCountChangedNotify_descriptor_, &GroupMembersCountChangedNotify::default_instance());
+      GroupMembersCountChangedNotify_descriptor_, GroupMembersCountChangedNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      GroupMemberAdminChangedNotify_descriptor_, &GroupMemberAdminChangedNotify::default_instance());
+      GroupMemberAdminChangedNotify_descriptor_, GroupMemberAdminChangedNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      CreateGroupReq_descriptor_, &CreateGroupReq::default_instance());
+      CreateGroupReq_descriptor_, CreateGroupReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      CreateGroupRsp_descriptor_, &CreateGroupRsp::default_instance());
+      CreateGroupRsp_descriptor_, CreateGroupRsp::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      EditGroupTitleReq_descriptor_, &EditGroupTitleReq::default_instance());
+      EditGroupTitleReq_descriptor_, EditGroupTitleReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      EditGroupAvatarReq_descriptor_, &EditGroupAvatarReq::default_instance());
+      EditGroupAvatarReq_descriptor_, EditGroupAvatarReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      EditGroupAvatarRsp_descriptor_, &EditGroupAvatarRsp::default_instance());
+      EditGroupAvatarRsp_descriptor_, EditGroupAvatarRsp::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      RemoveGroupAvatarReq_descriptor_, &RemoveGroupAvatarReq::default_instance());
+      RemoveGroupAvatarReq_descriptor_, RemoveGroupAvatarReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      EditGroupShortNameReq_descriptor_, &EditGroupShortNameReq::default_instance());
+      EditGroupShortNameReq_descriptor_, EditGroupShortNameReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      EditGroupTopicReq_descriptor_, &EditGroupTopicReq::default_instance());
+      EditGroupTopicReq_descriptor_, EditGroupTopicReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      EditGroupAboutReq_descriptor_, &EditGroupAboutReq::default_instance());
+      EditGroupAboutReq_descriptor_, EditGroupAboutReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      InviteUserReq_descriptor_, &InviteUserReq::default_instance());
+      InviteUserReq_descriptor_, InviteUserReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      LeaveGroupReq_descriptor_, &LeaveGroupReq::default_instance());
+      LeaveGroupReq_descriptor_, LeaveGroupReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      LeaveAndDeleteReq_descriptor_, &LeaveAndDeleteReq::default_instance());
+      LeaveAndDeleteReq_descriptor_, LeaveAndDeleteReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      KickUserReq_descriptor_, &KickUserReq::default_instance());
+      KickUserReq_descriptor_, KickUserReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      JoinGroupByPeerReq_descriptor_, &JoinGroupByPeerReq::default_instance());
+      JoinGroupByPeerReq_descriptor_, JoinGroupByPeerReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MakeUserAdminReq_descriptor_, &MakeUserAdminReq::default_instance());
+      MakeUserAdminReq_descriptor_, MakeUserAdminReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      DismissUserAdminReq_descriptor_, &DismissUserAdminReq::default_instance());
+      DismissUserAdminReq_descriptor_, DismissUserAdminReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      TransferOwnershipReq_descriptor_, &TransferOwnershipReq::default_instance());
+      TransferOwnershipReq_descriptor_, TransferOwnershipReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      AdminSettings_descriptor_, &AdminSettings::default_instance());
+      AdminSettings_descriptor_, AdminSettings::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      LoadAdminSettingsReq_descriptor_, &LoadAdminSettingsReq::default_instance());
+      LoadAdminSettingsReq_descriptor_, LoadAdminSettingsReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      LoadAdminSettingsRsp_descriptor_, &LoadAdminSettingsRsp::default_instance());
+      LoadAdminSettingsRsp_descriptor_, LoadAdminSettingsRsp::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      SaveAdminSettingsReq_descriptor_, &SaveAdminSettingsReq::default_instance());
+      SaveAdminSettingsReq_descriptor_, SaveAdminSettingsReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      DeleteGroupReq_descriptor_, &DeleteGroupReq::default_instance());
+      DeleteGroupReq_descriptor_, DeleteGroupReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      ShareHistoryReq_descriptor_, &ShareHistoryReq::default_instance());
+      ShareHistoryReq_descriptor_, ShareHistoryReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      InviteUrlRsp_descriptor_, &InviteUrlRsp::default_instance());
+      InviteUrlRsp_descriptor_, InviteUrlRsp::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      GetGroupInviteUrlReq_descriptor_, &GetGroupInviteUrlReq::default_instance());
+      GetGroupInviteUrlReq_descriptor_, GetGroupInviteUrlReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      RevokeInviteUrlReq_descriptor_, &RevokeInviteUrlReq::default_instance());
+      RevokeInviteUrlReq_descriptor_, RevokeInviteUrlReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      JoinGroupReq_descriptor_, &JoinGroupReq::default_instance());
+      JoinGroupReq_descriptor_, JoinGroupReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      JoinGroupRsp_descriptor_, &JoinGroupRsp::default_instance());
+      JoinGroupRsp_descriptor_, JoinGroupRsp::internal_default_instance());
 }
 
 }  // namespace
 
 void protobuf_ShutdownFile_groups_2eproto() {
-  delete LoadFullGroupsReq::default_instance_;
+  LoadFullGroupsReq_default_instance_.Shutdown();
   delete LoadFullGroupsReq_reflection_;
-  delete LoadFullGroupsRsp::default_instance_;
+  LoadFullGroupsRsp_default_instance_.Shutdown();
   delete LoadFullGroupsRsp_reflection_;
-  delete LoadMembersReq::default_instance_;
+  LoadMembersReq_default_instance_.Shutdown();
   delete LoadMembersReq_reflection_;
-  delete LoadMembersRsp::default_instance_;
+  LoadMembersRsp_default_instance_.Shutdown();
   delete LoadMembersRsp_reflection_;
-  delete GroupTitleChangedNotify::default_instance_;
+  GroupTitleChangedNotify_default_instance_.Shutdown();
   delete GroupTitleChangedNotify_reflection_;
-  delete GroupAvatarChangedNotify::default_instance_;
+  GroupAvatarChangedNotify_default_instance_.Shutdown();
   delete GroupAvatarChangedNotify_reflection_;
-  delete GroupTopicChangedNotify::default_instance_;
+  GroupTopicChangedNotify_default_instance_.Shutdown();
   delete GroupTopicChangedNotify_reflection_;
-  delete GroupAboutChangedNotify::default_instance_;
+  GroupAboutChangedNotify_default_instance_.Shutdown();
   delete GroupAboutChangedNotify_reflection_;
-  delete GroupOwnerChangedNotify::default_instance_;
+  GroupOwnerChangedNotify_default_instance_.Shutdown();
   delete GroupOwnerChangedNotify_reflection_;
-  delete GroupDeletedNotify::default_instance_;
+  GroupDeletedNotify_default_instance_.Shutdown();
   delete GroupDeletedNotify_reflection_;
-  delete GroupPermissionsChangedNotify::default_instance_;
+  GroupPermissionsChangedNotify_default_instance_.Shutdown();
   delete GroupPermissionsChangedNotify_reflection_;
-  delete GroupFullPermissionsChangedNotify::default_instance_;
+  GroupFullPermissionsChangedNotify_default_instance_.Shutdown();
   delete GroupFullPermissionsChangedNotify_reflection_;
-  delete GroupMemberChangedNotify::default_instance_;
+  GroupMemberChangedNotify_default_instance_.Shutdown();
   delete GroupMemberChangedNotify_reflection_;
-  delete GroupMembersBecameAsyncNotify::default_instance_;
+  GroupMembersBecameAsyncNotify_default_instance_.Shutdown();
   delete GroupMembersBecameAsyncNotify_reflection_;
-  delete GroupMembersUpdatedNotify::default_instance_;
+  GroupMembersUpdatedNotify_default_instance_.Shutdown();
   delete GroupMembersUpdatedNotify_reflection_;
-  delete GroupMemberDiffNotify::default_instance_;
+  GroupMemberDiffNotify_default_instance_.Shutdown();
   delete GroupMemberDiffNotify_reflection_;
-  delete GroupMembersCountChangedNotify::default_instance_;
+  GroupMembersCountChangedNotify_default_instance_.Shutdown();
   delete GroupMembersCountChangedNotify_reflection_;
-  delete GroupMemberAdminChangedNotify::default_instance_;
+  GroupMemberAdminChangedNotify_default_instance_.Shutdown();
   delete GroupMemberAdminChangedNotify_reflection_;
-  delete CreateGroupReq::default_instance_;
+  CreateGroupReq_default_instance_.Shutdown();
   delete CreateGroupReq_reflection_;
-  delete CreateGroupRsp::default_instance_;
+  CreateGroupRsp_default_instance_.Shutdown();
   delete CreateGroupRsp_reflection_;
-  delete EditGroupTitleReq::default_instance_;
+  EditGroupTitleReq_default_instance_.Shutdown();
   delete EditGroupTitleReq_reflection_;
-  delete EditGroupAvatarReq::default_instance_;
+  EditGroupAvatarReq_default_instance_.Shutdown();
   delete EditGroupAvatarReq_reflection_;
-  delete EditGroupAvatarRsp::default_instance_;
+  EditGroupAvatarRsp_default_instance_.Shutdown();
   delete EditGroupAvatarRsp_reflection_;
-  delete RemoveGroupAvatarReq::default_instance_;
+  RemoveGroupAvatarReq_default_instance_.Shutdown();
   delete RemoveGroupAvatarReq_reflection_;
-  delete EditGroupShortNameReq::default_instance_;
+  EditGroupShortNameReq_default_instance_.Shutdown();
   delete EditGroupShortNameReq_reflection_;
-  delete EditGroupTopicReq::default_instance_;
+  EditGroupTopicReq_default_instance_.Shutdown();
   delete EditGroupTopicReq_reflection_;
-  delete EditGroupAboutReq::default_instance_;
+  EditGroupAboutReq_default_instance_.Shutdown();
   delete EditGroupAboutReq_reflection_;
-  delete InviteUserReq::default_instance_;
+  InviteUserReq_default_instance_.Shutdown();
   delete InviteUserReq_reflection_;
-  delete LeaveGroupReq::default_instance_;
+  LeaveGroupReq_default_instance_.Shutdown();
   delete LeaveGroupReq_reflection_;
-  delete LeaveAndDeleteReq::default_instance_;
+  LeaveAndDeleteReq_default_instance_.Shutdown();
   delete LeaveAndDeleteReq_reflection_;
-  delete KickUserReq::default_instance_;
+  KickUserReq_default_instance_.Shutdown();
   delete KickUserReq_reflection_;
-  delete JoinGroupByPeerReq::default_instance_;
+  JoinGroupByPeerReq_default_instance_.Shutdown();
   delete JoinGroupByPeerReq_reflection_;
-  delete MakeUserAdminReq::default_instance_;
+  MakeUserAdminReq_default_instance_.Shutdown();
   delete MakeUserAdminReq_reflection_;
-  delete DismissUserAdminReq::default_instance_;
+  DismissUserAdminReq_default_instance_.Shutdown();
   delete DismissUserAdminReq_reflection_;
-  delete TransferOwnershipReq::default_instance_;
+  TransferOwnershipReq_default_instance_.Shutdown();
   delete TransferOwnershipReq_reflection_;
-  delete AdminSettings::default_instance_;
+  AdminSettings_default_instance_.Shutdown();
   delete AdminSettings_reflection_;
-  delete LoadAdminSettingsReq::default_instance_;
+  LoadAdminSettingsReq_default_instance_.Shutdown();
   delete LoadAdminSettingsReq_reflection_;
-  delete LoadAdminSettingsRsp::default_instance_;
+  LoadAdminSettingsRsp_default_instance_.Shutdown();
   delete LoadAdminSettingsRsp_reflection_;
-  delete SaveAdminSettingsReq::default_instance_;
+  SaveAdminSettingsReq_default_instance_.Shutdown();
   delete SaveAdminSettingsReq_reflection_;
-  delete DeleteGroupReq::default_instance_;
+  DeleteGroupReq_default_instance_.Shutdown();
   delete DeleteGroupReq_reflection_;
-  delete ShareHistoryReq::default_instance_;
+  ShareHistoryReq_default_instance_.Shutdown();
   delete ShareHistoryReq_reflection_;
-  delete InviteUrlRsp::default_instance_;
+  InviteUrlRsp_default_instance_.Shutdown();
   delete InviteUrlRsp_reflection_;
-  delete GetGroupInviteUrlReq::default_instance_;
+  GetGroupInviteUrlReq_default_instance_.Shutdown();
   delete GetGroupInviteUrlReq_reflection_;
-  delete RevokeInviteUrlReq::default_instance_;
+  RevokeInviteUrlReq_default_instance_.Shutdown();
   delete RevokeInviteUrlReq_reflection_;
-  delete JoinGroupReq::default_instance_;
+  JoinGroupReq_default_instance_.Shutdown();
   delete JoinGroupReq_reflection_;
-  delete JoinGroupRsp::default_instance_;
+  JoinGroupRsp_default_instance_.Shutdown();
   delete JoinGroupRsp_reflection_;
 }
 
-void protobuf_AddDesc_groups_2eproto() GOOGLE_ATTRIBUTE_COLD;
-void protobuf_AddDesc_groups_2eproto() {
-  static bool already_here = false;
-  if (already_here) return;
-  already_here = true;
+void protobuf_InitDefaults_groups_2eproto_impl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-  ::zproto::protobuf_AddDesc_misc_2eproto();
-  ::zproto::protobuf_AddDesc_peers_2eproto();
-  ::zproto::protobuf_AddDesc_files_2eproto();
-  ::zproto::protobuf_AddDesc_users_2eproto();
-  ::zproto::protobuf_AddDesc_group_5fbase_2eproto();
+  ::zproto::protobuf_InitDefaults_misc_2eproto();
+  ::zproto::protobuf_InitDefaults_peers_2eproto();
+  ::zproto::protobuf_InitDefaults_files_2eproto();
+  ::zproto::protobuf_InitDefaults_users_2eproto();
+  ::zproto::protobuf_InitDefaults_group_5fbase_2eproto();
+  LoadFullGroupsReq_default_instance_.DefaultConstruct();
+  LoadFullGroupsRsp_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  LoadMembersReq_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  LoadMembersRsp_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  GroupTitleChangedNotify_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  GroupAvatarChangedNotify_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  GroupTopicChangedNotify_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  GroupAboutChangedNotify_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  GroupOwnerChangedNotify_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  GroupDeletedNotify_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  GroupPermissionsChangedNotify_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  GroupFullPermissionsChangedNotify_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  GroupMemberChangedNotify_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  GroupMembersBecameAsyncNotify_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  GroupMembersUpdatedNotify_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  GroupMemberDiffNotify_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  GroupMembersCountChangedNotify_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  GroupMemberAdminChangedNotify_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  CreateGroupReq_default_instance_.DefaultConstruct();
+  CreateGroupRsp_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  EditGroupTitleReq_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  EditGroupAvatarReq_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  EditGroupAvatarRsp_default_instance_.DefaultConstruct();
+  RemoveGroupAvatarReq_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  EditGroupShortNameReq_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  EditGroupTopicReq_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  EditGroupAboutReq_default_instance_.DefaultConstruct();
+  InviteUserReq_default_instance_.DefaultConstruct();
+  LeaveGroupReq_default_instance_.DefaultConstruct();
+  LeaveAndDeleteReq_default_instance_.DefaultConstruct();
+  KickUserReq_default_instance_.DefaultConstruct();
+  JoinGroupByPeerReq_default_instance_.DefaultConstruct();
+  MakeUserAdminReq_default_instance_.DefaultConstruct();
+  DismissUserAdminReq_default_instance_.DefaultConstruct();
+  TransferOwnershipReq_default_instance_.DefaultConstruct();
+  AdminSettings_default_instance_.DefaultConstruct();
+  LoadAdminSettingsReq_default_instance_.DefaultConstruct();
+  LoadAdminSettingsRsp_default_instance_.DefaultConstruct();
+  SaveAdminSettingsReq_default_instance_.DefaultConstruct();
+  DeleteGroupReq_default_instance_.DefaultConstruct();
+  ShareHistoryReq_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  InviteUrlRsp_default_instance_.DefaultConstruct();
+  GetGroupInviteUrlReq_default_instance_.DefaultConstruct();
+  RevokeInviteUrlReq_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  JoinGroupReq_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  JoinGroupRsp_default_instance_.DefaultConstruct();
+  LoadFullGroupsReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  LoadFullGroupsRsp_default_instance_.get_mutable()->InitAsDefaultInstance();
+  LoadMembersReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  LoadMembersRsp_default_instance_.get_mutable()->InitAsDefaultInstance();
+  GroupTitleChangedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  GroupAvatarChangedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  GroupTopicChangedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  GroupAboutChangedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  GroupOwnerChangedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  GroupDeletedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  GroupPermissionsChangedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  GroupFullPermissionsChangedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  GroupMemberChangedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  GroupMembersBecameAsyncNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  GroupMembersUpdatedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  GroupMemberDiffNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  GroupMembersCountChangedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  GroupMemberAdminChangedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  CreateGroupReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  CreateGroupRsp_default_instance_.get_mutable()->InitAsDefaultInstance();
+  EditGroupTitleReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  EditGroupAvatarReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  EditGroupAvatarRsp_default_instance_.get_mutable()->InitAsDefaultInstance();
+  RemoveGroupAvatarReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  EditGroupShortNameReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  EditGroupTopicReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  EditGroupAboutReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  InviteUserReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  LeaveGroupReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  LeaveAndDeleteReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  KickUserReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  JoinGroupByPeerReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  MakeUserAdminReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  DismissUserAdminReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  TransferOwnershipReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  AdminSettings_default_instance_.get_mutable()->InitAsDefaultInstance();
+  LoadAdminSettingsReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  LoadAdminSettingsRsp_default_instance_.get_mutable()->InitAsDefaultInstance();
+  SaveAdminSettingsReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  DeleteGroupReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  ShareHistoryReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  InviteUrlRsp_default_instance_.get_mutable()->InitAsDefaultInstance();
+  GetGroupInviteUrlReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  RevokeInviteUrlReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  JoinGroupReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  JoinGroupRsp_default_instance_.get_mutable()->InitAsDefaultInstance();
+}
+
+GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_InitDefaults_groups_2eproto_once_);
+void protobuf_InitDefaults_groups_2eproto() {
+  ::google::protobuf::GoogleOnceInit(&protobuf_InitDefaults_groups_2eproto_once_,
+                 &protobuf_InitDefaults_groups_2eproto_impl);
+}
+void protobuf_AddDesc_groups_2eproto_impl() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  protobuf_InitDefaults_groups_2eproto();
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
     "\n\014groups.proto\022\006zproto\032\nmisc.proto\032\013peer"
     "s.proto\032\013files.proto\032\013users.proto\032\020group"
@@ -1258,101 +1337,19 @@ void protobuf_AddDesc_groups_2eproto() {
     "rotoB\014ZProtoGroupsH\002b\006proto3", 4468);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "groups.proto", &protobuf_RegisterTypes);
-  LoadFullGroupsReq::default_instance_ = new LoadFullGroupsReq();
-  LoadFullGroupsRsp::default_instance_ = new LoadFullGroupsRsp();
-  LoadMembersReq::default_instance_ = new LoadMembersReq();
-  LoadMembersRsp::default_instance_ = new LoadMembersRsp();
-  GroupTitleChangedNotify::default_instance_ = new GroupTitleChangedNotify();
-  GroupAvatarChangedNotify::default_instance_ = new GroupAvatarChangedNotify();
-  GroupTopicChangedNotify::default_instance_ = new GroupTopicChangedNotify();
-  GroupAboutChangedNotify::default_instance_ = new GroupAboutChangedNotify();
-  GroupOwnerChangedNotify::default_instance_ = new GroupOwnerChangedNotify();
-  GroupDeletedNotify::default_instance_ = new GroupDeletedNotify();
-  GroupPermissionsChangedNotify::default_instance_ = new GroupPermissionsChangedNotify();
-  GroupFullPermissionsChangedNotify::default_instance_ = new GroupFullPermissionsChangedNotify();
-  GroupMemberChangedNotify::default_instance_ = new GroupMemberChangedNotify();
-  GroupMembersBecameAsyncNotify::default_instance_ = new GroupMembersBecameAsyncNotify();
-  GroupMembersUpdatedNotify::default_instance_ = new GroupMembersUpdatedNotify();
-  GroupMemberDiffNotify::default_instance_ = new GroupMemberDiffNotify();
-  GroupMembersCountChangedNotify::default_instance_ = new GroupMembersCountChangedNotify();
-  GroupMemberAdminChangedNotify::default_instance_ = new GroupMemberAdminChangedNotify();
-  CreateGroupReq::default_instance_ = new CreateGroupReq();
-  CreateGroupRsp::default_instance_ = new CreateGroupRsp();
-  EditGroupTitleReq::default_instance_ = new EditGroupTitleReq();
-  EditGroupAvatarReq::default_instance_ = new EditGroupAvatarReq();
-  EditGroupAvatarRsp::default_instance_ = new EditGroupAvatarRsp();
-  RemoveGroupAvatarReq::default_instance_ = new RemoveGroupAvatarReq();
-  EditGroupShortNameReq::default_instance_ = new EditGroupShortNameReq();
-  EditGroupTopicReq::default_instance_ = new EditGroupTopicReq();
-  EditGroupAboutReq::default_instance_ = new EditGroupAboutReq();
-  InviteUserReq::default_instance_ = new InviteUserReq();
-  LeaveGroupReq::default_instance_ = new LeaveGroupReq();
-  LeaveAndDeleteReq::default_instance_ = new LeaveAndDeleteReq();
-  KickUserReq::default_instance_ = new KickUserReq();
-  JoinGroupByPeerReq::default_instance_ = new JoinGroupByPeerReq();
-  MakeUserAdminReq::default_instance_ = new MakeUserAdminReq();
-  DismissUserAdminReq::default_instance_ = new DismissUserAdminReq();
-  TransferOwnershipReq::default_instance_ = new TransferOwnershipReq();
-  AdminSettings::default_instance_ = new AdminSettings();
-  LoadAdminSettingsReq::default_instance_ = new LoadAdminSettingsReq();
-  LoadAdminSettingsRsp::default_instance_ = new LoadAdminSettingsRsp();
-  SaveAdminSettingsReq::default_instance_ = new SaveAdminSettingsReq();
-  DeleteGroupReq::default_instance_ = new DeleteGroupReq();
-  ShareHistoryReq::default_instance_ = new ShareHistoryReq();
-  InviteUrlRsp::default_instance_ = new InviteUrlRsp();
-  GetGroupInviteUrlReq::default_instance_ = new GetGroupInviteUrlReq();
-  RevokeInviteUrlReq::default_instance_ = new RevokeInviteUrlReq();
-  JoinGroupReq::default_instance_ = new JoinGroupReq();
-  JoinGroupRsp::default_instance_ = new JoinGroupRsp();
-  LoadFullGroupsReq::default_instance_->InitAsDefaultInstance();
-  LoadFullGroupsRsp::default_instance_->InitAsDefaultInstance();
-  LoadMembersReq::default_instance_->InitAsDefaultInstance();
-  LoadMembersRsp::default_instance_->InitAsDefaultInstance();
-  GroupTitleChangedNotify::default_instance_->InitAsDefaultInstance();
-  GroupAvatarChangedNotify::default_instance_->InitAsDefaultInstance();
-  GroupTopicChangedNotify::default_instance_->InitAsDefaultInstance();
-  GroupAboutChangedNotify::default_instance_->InitAsDefaultInstance();
-  GroupOwnerChangedNotify::default_instance_->InitAsDefaultInstance();
-  GroupDeletedNotify::default_instance_->InitAsDefaultInstance();
-  GroupPermissionsChangedNotify::default_instance_->InitAsDefaultInstance();
-  GroupFullPermissionsChangedNotify::default_instance_->InitAsDefaultInstance();
-  GroupMemberChangedNotify::default_instance_->InitAsDefaultInstance();
-  GroupMembersBecameAsyncNotify::default_instance_->InitAsDefaultInstance();
-  GroupMembersUpdatedNotify::default_instance_->InitAsDefaultInstance();
-  GroupMemberDiffNotify::default_instance_->InitAsDefaultInstance();
-  GroupMembersCountChangedNotify::default_instance_->InitAsDefaultInstance();
-  GroupMemberAdminChangedNotify::default_instance_->InitAsDefaultInstance();
-  CreateGroupReq::default_instance_->InitAsDefaultInstance();
-  CreateGroupRsp::default_instance_->InitAsDefaultInstance();
-  EditGroupTitleReq::default_instance_->InitAsDefaultInstance();
-  EditGroupAvatarReq::default_instance_->InitAsDefaultInstance();
-  EditGroupAvatarRsp::default_instance_->InitAsDefaultInstance();
-  RemoveGroupAvatarReq::default_instance_->InitAsDefaultInstance();
-  EditGroupShortNameReq::default_instance_->InitAsDefaultInstance();
-  EditGroupTopicReq::default_instance_->InitAsDefaultInstance();
-  EditGroupAboutReq::default_instance_->InitAsDefaultInstance();
-  InviteUserReq::default_instance_->InitAsDefaultInstance();
-  LeaveGroupReq::default_instance_->InitAsDefaultInstance();
-  LeaveAndDeleteReq::default_instance_->InitAsDefaultInstance();
-  KickUserReq::default_instance_->InitAsDefaultInstance();
-  JoinGroupByPeerReq::default_instance_->InitAsDefaultInstance();
-  MakeUserAdminReq::default_instance_->InitAsDefaultInstance();
-  DismissUserAdminReq::default_instance_->InitAsDefaultInstance();
-  TransferOwnershipReq::default_instance_->InitAsDefaultInstance();
-  AdminSettings::default_instance_->InitAsDefaultInstance();
-  LoadAdminSettingsReq::default_instance_->InitAsDefaultInstance();
-  LoadAdminSettingsRsp::default_instance_->InitAsDefaultInstance();
-  SaveAdminSettingsReq::default_instance_->InitAsDefaultInstance();
-  DeleteGroupReq::default_instance_->InitAsDefaultInstance();
-  ShareHistoryReq::default_instance_->InitAsDefaultInstance();
-  InviteUrlRsp::default_instance_->InitAsDefaultInstance();
-  GetGroupInviteUrlReq::default_instance_->InitAsDefaultInstance();
-  RevokeInviteUrlReq::default_instance_->InitAsDefaultInstance();
-  JoinGroupReq::default_instance_->InitAsDefaultInstance();
-  JoinGroupRsp::default_instance_->InitAsDefaultInstance();
+  ::zproto::protobuf_AddDesc_misc_2eproto();
+  ::zproto::protobuf_AddDesc_peers_2eproto();
+  ::zproto::protobuf_AddDesc_files_2eproto();
+  ::zproto::protobuf_AddDesc_users_2eproto();
+  ::zproto::protobuf_AddDesc_group_5fbase_2eproto();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_groups_2eproto);
 }
 
+GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AddDesc_groups_2eproto_once_);
+void protobuf_AddDesc_groups_2eproto() {
+  ::google::protobuf::GoogleOnceInit(&protobuf_AddDesc_groups_2eproto_once_,
+                 &protobuf_AddDesc_groups_2eproto_impl);
+}
 // Force AddDescriptors() to be called at static initialization time.
 struct StaticDescriptorInitializer_groups_2eproto {
   StaticDescriptorInitializer_groups_2eproto() {
@@ -1368,24 +1365,23 @@ const int LoadFullGroupsReq::kGroupsFieldNumber;
 
 LoadFullGroupsReq::LoadFullGroupsReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.LoadFullGroupsReq)
 }
 
 void LoadFullGroupsReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 LoadFullGroupsReq::LoadFullGroupsReq(const LoadFullGroupsReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.LoadFullGroupsReq)
 }
 
 void LoadFullGroupsReq::SharedCtor() {
-    _is_default_instance_ = false;
   _cached_size_ = 0;
 }
 
@@ -1395,8 +1391,6 @@ LoadFullGroupsReq::~LoadFullGroupsReq() {
 }
 
 void LoadFullGroupsReq::SharedDtor() {
-  if (this != default_instance_) {
-  }
 }
 
 void LoadFullGroupsReq::SetCachedSize(int size) const {
@@ -1410,11 +1404,11 @@ const ::google::protobuf::Descriptor* LoadFullGroupsReq::descriptor() {
 }
 
 const LoadFullGroupsReq& LoadFullGroupsReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-LoadFullGroupsReq* LoadFullGroupsReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<LoadFullGroupsReq> LoadFullGroupsReq_default_instance_;
 
 LoadFullGroupsReq* LoadFullGroupsReq::New(::google::protobuf::Arena* arena) const {
   LoadFullGroupsReq* n = new LoadFullGroupsReq;
@@ -1424,6 +1418,9 @@ LoadFullGroupsReq* LoadFullGroupsReq::New(::google::protobuf::Arena* arena) cons
   return n;
 }
 
+void LoadFullGroupsReq::UnsafeMergeFrom(const LoadFullGroupsReq& from) {
+  MergeFrom(from);
+}
 void LoadFullGroupsReq::Swap(LoadFullGroupsReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -1472,6 +1469,9 @@ LoadFullGroupsReq::groups() const {
   return groups_;
 }
 
+inline const LoadFullGroupsReq* LoadFullGroupsReq::internal_default_instance() {
+  return &LoadFullGroupsReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -1482,24 +1482,23 @@ const int LoadFullGroupsRsp::kGroupsFieldNumber;
 
 LoadFullGroupsRsp::LoadFullGroupsRsp()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.LoadFullGroupsRsp)
 }
 
 void LoadFullGroupsRsp::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 LoadFullGroupsRsp::LoadFullGroupsRsp(const LoadFullGroupsRsp& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.LoadFullGroupsRsp)
 }
 
 void LoadFullGroupsRsp::SharedCtor() {
-    _is_default_instance_ = false;
   _cached_size_ = 0;
 }
 
@@ -1509,8 +1508,6 @@ LoadFullGroupsRsp::~LoadFullGroupsRsp() {
 }
 
 void LoadFullGroupsRsp::SharedDtor() {
-  if (this != default_instance_) {
-  }
 }
 
 void LoadFullGroupsRsp::SetCachedSize(int size) const {
@@ -1524,11 +1521,11 @@ const ::google::protobuf::Descriptor* LoadFullGroupsRsp::descriptor() {
 }
 
 const LoadFullGroupsRsp& LoadFullGroupsRsp::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-LoadFullGroupsRsp* LoadFullGroupsRsp::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<LoadFullGroupsRsp> LoadFullGroupsRsp_default_instance_;
 
 LoadFullGroupsRsp* LoadFullGroupsRsp::New(::google::protobuf::Arena* arena) const {
   LoadFullGroupsRsp* n = new LoadFullGroupsRsp;
@@ -1538,6 +1535,9 @@ LoadFullGroupsRsp* LoadFullGroupsRsp::New(::google::protobuf::Arena* arena) cons
   return n;
 }
 
+void LoadFullGroupsRsp::UnsafeMergeFrom(const LoadFullGroupsRsp& from) {
+  MergeFrom(from);
+}
 void LoadFullGroupsRsp::Swap(LoadFullGroupsRsp* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -1586,6 +1586,9 @@ LoadFullGroupsRsp::groups() const {
   return groups_;
 }
 
+inline const LoadFullGroupsRsp* LoadFullGroupsRsp::internal_default_instance() {
+  return &LoadFullGroupsRsp_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -1598,30 +1601,29 @@ const int LoadMembersReq::kNextFieldNumber;
 
 LoadMembersReq::LoadMembersReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.LoadMembersReq)
 }
 
 void LoadMembersReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  group_ = const_cast< ::zproto::GroupOutPeer*>(&::zproto::GroupOutPeer::default_instance());
+  group_ = const_cast< ::zproto::GroupOutPeer*>(
+      ::zproto::GroupOutPeer::internal_default_instance());
 }
 
 LoadMembersReq::LoadMembersReq(const LoadMembersReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.LoadMembersReq)
 }
 
 void LoadMembersReq::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
+  next_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   group_ = NULL;
   limit_ = 0;
-  next_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _cached_size_ = 0;
 }
 
 LoadMembersReq::~LoadMembersReq() {
@@ -1631,7 +1633,7 @@ LoadMembersReq::~LoadMembersReq() {
 
 void LoadMembersReq::SharedDtor() {
   next_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
+  if (this != &LoadMembersReq_default_instance_.get()) {
     delete group_;
   }
 }
@@ -1647,11 +1649,11 @@ const ::google::protobuf::Descriptor* LoadMembersReq::descriptor() {
 }
 
 const LoadMembersReq& LoadMembersReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-LoadMembersReq* LoadMembersReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<LoadMembersReq> LoadMembersReq_default_instance_;
 
 LoadMembersReq* LoadMembersReq::New(::google::protobuf::Arena* arena) const {
   LoadMembersReq* n = new LoadMembersReq;
@@ -1661,6 +1663,9 @@ LoadMembersReq* LoadMembersReq::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void LoadMembersReq::UnsafeMergeFrom(const LoadMembersReq& from) {
+  MergeFrom(from);
+}
 void LoadMembersReq::Swap(LoadMembersReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -1681,7 +1686,7 @@ void LoadMembersReq::InternalSwap(LoadMembersReq* other) {
 
 // optional .zproto.GroupOutPeer group = 1;
 bool LoadMembersReq::has_group() const {
-  return !_is_default_instance_ && group_ != NULL;
+  return this != internal_default_instance() && group_ != NULL;
 }
 void LoadMembersReq::clear_group() {
   if (GetArenaNoVirtual() == NULL && group_ != NULL) delete group_;
@@ -1689,7 +1694,8 @@ void LoadMembersReq::clear_group() {
 }
 const ::zproto::GroupOutPeer& LoadMembersReq::group() const {
   // @@protoc_insertion_point(field_get:zproto.LoadMembersReq.group)
-  return group_ != NULL ? *group_ : *default_instance_->group_;
+  return group_ != NULL ? *group_
+                         : *::zproto::GroupOutPeer::internal_default_instance();
 }
 ::zproto::GroupOutPeer* LoadMembersReq::mutable_group() {
   
@@ -1721,11 +1727,11 @@ void LoadMembersReq::set_allocated_group(::zproto::GroupOutPeer* group) {
 void LoadMembersReq::clear_limit() {
   limit_ = 0;
 }
- ::google::protobuf::int32 LoadMembersReq::limit() const {
+::google::protobuf::int32 LoadMembersReq::limit() const {
   // @@protoc_insertion_point(field_get:zproto.LoadMembersReq.limit)
   return limit_;
 }
- void LoadMembersReq::set_limit(::google::protobuf::int32 value) {
+void LoadMembersReq::set_limit(::google::protobuf::int32 value) {
   
   limit_ = value;
   // @@protoc_insertion_point(field_set:zproto.LoadMembersReq.limit)
@@ -1735,37 +1741,37 @@ void LoadMembersReq::clear_limit() {
 void LoadMembersReq::clear_next() {
   next_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& LoadMembersReq::next() const {
+const ::std::string& LoadMembersReq::next() const {
   // @@protoc_insertion_point(field_get:zproto.LoadMembersReq.next)
   return next_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void LoadMembersReq::set_next(const ::std::string& value) {
+void LoadMembersReq::set_next(const ::std::string& value) {
   
   next_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.LoadMembersReq.next)
 }
- void LoadMembersReq::set_next(const char* value) {
+void LoadMembersReq::set_next(const char* value) {
   
   next_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.LoadMembersReq.next)
 }
- void LoadMembersReq::set_next(const void* value, size_t size) {
+void LoadMembersReq::set_next(const void* value, size_t size) {
   
   next_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.LoadMembersReq.next)
 }
- ::std::string* LoadMembersReq::mutable_next() {
+::std::string* LoadMembersReq::mutable_next() {
   
   // @@protoc_insertion_point(field_mutable:zproto.LoadMembersReq.next)
   return next_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* LoadMembersReq::release_next() {
+::std::string* LoadMembersReq::release_next() {
   // @@protoc_insertion_point(field_release:zproto.LoadMembersReq.next)
   
   return next_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void LoadMembersReq::set_allocated_next(::std::string* next) {
+void LoadMembersReq::set_allocated_next(::std::string* next) {
   if (next != NULL) {
     
   } else {
@@ -1775,6 +1781,9 @@ void LoadMembersReq::clear_next() {
   // @@protoc_insertion_point(field_set_allocated:zproto.LoadMembersReq.next)
 }
 
+inline const LoadMembersReq* LoadMembersReq::internal_default_instance() {
+  return &LoadMembersReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -1787,27 +1796,25 @@ const int LoadMembersRsp::kNextFieldNumber;
 
 LoadMembersRsp::LoadMembersRsp()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.LoadMembersRsp)
 }
 
 void LoadMembersRsp::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 LoadMembersRsp::LoadMembersRsp(const LoadMembersRsp& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.LoadMembersRsp)
 }
 
 void LoadMembersRsp::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
   next_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _cached_size_ = 0;
 }
 
 LoadMembersRsp::~LoadMembersRsp() {
@@ -1817,8 +1824,6 @@ LoadMembersRsp::~LoadMembersRsp() {
 
 void LoadMembersRsp::SharedDtor() {
   next_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
 }
 
 void LoadMembersRsp::SetCachedSize(int size) const {
@@ -1832,11 +1837,11 @@ const ::google::protobuf::Descriptor* LoadMembersRsp::descriptor() {
 }
 
 const LoadMembersRsp& LoadMembersRsp::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-LoadMembersRsp* LoadMembersRsp::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<LoadMembersRsp> LoadMembersRsp_default_instance_;
 
 LoadMembersRsp* LoadMembersRsp::New(::google::protobuf::Arena* arena) const {
   LoadMembersRsp* n = new LoadMembersRsp;
@@ -1846,6 +1851,9 @@ LoadMembersRsp* LoadMembersRsp::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void LoadMembersRsp::UnsafeMergeFrom(const LoadMembersRsp& from) {
+  MergeFrom(from);
+}
 void LoadMembersRsp::Swap(LoadMembersRsp* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -1928,37 +1936,37 @@ LoadMembersRsp::users() const {
 void LoadMembersRsp::clear_next() {
   next_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& LoadMembersRsp::next() const {
+const ::std::string& LoadMembersRsp::next() const {
   // @@protoc_insertion_point(field_get:zproto.LoadMembersRsp.next)
   return next_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void LoadMembersRsp::set_next(const ::std::string& value) {
+void LoadMembersRsp::set_next(const ::std::string& value) {
   
   next_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.LoadMembersRsp.next)
 }
- void LoadMembersRsp::set_next(const char* value) {
+void LoadMembersRsp::set_next(const char* value) {
   
   next_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.LoadMembersRsp.next)
 }
- void LoadMembersRsp::set_next(const void* value, size_t size) {
+void LoadMembersRsp::set_next(const void* value, size_t size) {
   
   next_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.LoadMembersRsp.next)
 }
- ::std::string* LoadMembersRsp::mutable_next() {
+::std::string* LoadMembersRsp::mutable_next() {
   
   // @@protoc_insertion_point(field_mutable:zproto.LoadMembersRsp.next)
   return next_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* LoadMembersRsp::release_next() {
+::std::string* LoadMembersRsp::release_next() {
   // @@protoc_insertion_point(field_release:zproto.LoadMembersRsp.next)
   
   return next_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void LoadMembersRsp::set_allocated_next(::std::string* next) {
+void LoadMembersRsp::set_allocated_next(::std::string* next) {
   if (next != NULL) {
     
   } else {
@@ -1968,6 +1976,9 @@ void LoadMembersRsp::clear_next() {
   // @@protoc_insertion_point(field_set_allocated:zproto.LoadMembersRsp.next)
 }
 
+inline const LoadMembersRsp* LoadMembersRsp::internal_default_instance() {
+  return &LoadMembersRsp_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -1979,28 +1990,26 @@ const int GroupTitleChangedNotify::kTitleFieldNumber;
 
 GroupTitleChangedNotify::GroupTitleChangedNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.GroupTitleChangedNotify)
 }
 
 void GroupTitleChangedNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 GroupTitleChangedNotify::GroupTitleChangedNotify(const GroupTitleChangedNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.GroupTitleChangedNotify)
 }
 
 void GroupTitleChangedNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
   group_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   title_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _cached_size_ = 0;
 }
 
 GroupTitleChangedNotify::~GroupTitleChangedNotify() {
@@ -2011,8 +2020,6 @@ GroupTitleChangedNotify::~GroupTitleChangedNotify() {
 void GroupTitleChangedNotify::SharedDtor() {
   group_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   title_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
 }
 
 void GroupTitleChangedNotify::SetCachedSize(int size) const {
@@ -2026,11 +2033,11 @@ const ::google::protobuf::Descriptor* GroupTitleChangedNotify::descriptor() {
 }
 
 const GroupTitleChangedNotify& GroupTitleChangedNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-GroupTitleChangedNotify* GroupTitleChangedNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<GroupTitleChangedNotify> GroupTitleChangedNotify_default_instance_;
 
 GroupTitleChangedNotify* GroupTitleChangedNotify::New(::google::protobuf::Arena* arena) const {
   GroupTitleChangedNotify* n = new GroupTitleChangedNotify;
@@ -2040,6 +2047,9 @@ GroupTitleChangedNotify* GroupTitleChangedNotify::New(::google::protobuf::Arena*
   return n;
 }
 
+void GroupTitleChangedNotify::UnsafeMergeFrom(const GroupTitleChangedNotify& from) {
+  MergeFrom(from);
+}
 void GroupTitleChangedNotify::Swap(GroupTitleChangedNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -2062,37 +2072,37 @@ void GroupTitleChangedNotify::InternalSwap(GroupTitleChangedNotify* other) {
 void GroupTitleChangedNotify::clear_group_id() {
   group_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& GroupTitleChangedNotify::group_id() const {
+const ::std::string& GroupTitleChangedNotify::group_id() const {
   // @@protoc_insertion_point(field_get:zproto.GroupTitleChangedNotify.group_id)
   return group_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupTitleChangedNotify::set_group_id(const ::std::string& value) {
+void GroupTitleChangedNotify::set_group_id(const ::std::string& value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.GroupTitleChangedNotify.group_id)
 }
- void GroupTitleChangedNotify::set_group_id(const char* value) {
+void GroupTitleChangedNotify::set_group_id(const char* value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.GroupTitleChangedNotify.group_id)
 }
- void GroupTitleChangedNotify::set_group_id(const char* value, size_t size) {
+void GroupTitleChangedNotify::set_group_id(const char* value, size_t size) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.GroupTitleChangedNotify.group_id)
 }
- ::std::string* GroupTitleChangedNotify::mutable_group_id() {
+::std::string* GroupTitleChangedNotify::mutable_group_id() {
   
   // @@protoc_insertion_point(field_mutable:zproto.GroupTitleChangedNotify.group_id)
   return group_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* GroupTitleChangedNotify::release_group_id() {
+::std::string* GroupTitleChangedNotify::release_group_id() {
   // @@protoc_insertion_point(field_release:zproto.GroupTitleChangedNotify.group_id)
   
   return group_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupTitleChangedNotify::set_allocated_group_id(::std::string* group_id) {
+void GroupTitleChangedNotify::set_allocated_group_id(::std::string* group_id) {
   if (group_id != NULL) {
     
   } else {
@@ -2106,37 +2116,37 @@ void GroupTitleChangedNotify::clear_group_id() {
 void GroupTitleChangedNotify::clear_title() {
   title_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& GroupTitleChangedNotify::title() const {
+const ::std::string& GroupTitleChangedNotify::title() const {
   // @@protoc_insertion_point(field_get:zproto.GroupTitleChangedNotify.title)
   return title_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupTitleChangedNotify::set_title(const ::std::string& value) {
+void GroupTitleChangedNotify::set_title(const ::std::string& value) {
   
   title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.GroupTitleChangedNotify.title)
 }
- void GroupTitleChangedNotify::set_title(const char* value) {
+void GroupTitleChangedNotify::set_title(const char* value) {
   
   title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.GroupTitleChangedNotify.title)
 }
- void GroupTitleChangedNotify::set_title(const char* value, size_t size) {
+void GroupTitleChangedNotify::set_title(const char* value, size_t size) {
   
   title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.GroupTitleChangedNotify.title)
 }
- ::std::string* GroupTitleChangedNotify::mutable_title() {
+::std::string* GroupTitleChangedNotify::mutable_title() {
   
   // @@protoc_insertion_point(field_mutable:zproto.GroupTitleChangedNotify.title)
   return title_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* GroupTitleChangedNotify::release_title() {
+::std::string* GroupTitleChangedNotify::release_title() {
   // @@protoc_insertion_point(field_release:zproto.GroupTitleChangedNotify.title)
   
   return title_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupTitleChangedNotify::set_allocated_title(::std::string* title) {
+void GroupTitleChangedNotify::set_allocated_title(::std::string* title) {
   if (title != NULL) {
     
   } else {
@@ -2146,6 +2156,9 @@ void GroupTitleChangedNotify::clear_title() {
   // @@protoc_insertion_point(field_set_allocated:zproto.GroupTitleChangedNotify.title)
 }
 
+inline const GroupTitleChangedNotify* GroupTitleChangedNotify::internal_default_instance() {
+  return &GroupTitleChangedNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -2157,29 +2170,28 @@ const int GroupAvatarChangedNotify::kAvatarFieldNumber;
 
 GroupAvatarChangedNotify::GroupAvatarChangedNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.GroupAvatarChangedNotify)
 }
 
 void GroupAvatarChangedNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  avatar_ = const_cast< ::zproto::Avatar*>(&::zproto::Avatar::default_instance());
+  avatar_ = const_cast< ::zproto::Avatar*>(
+      ::zproto::Avatar::internal_default_instance());
 }
 
 GroupAvatarChangedNotify::GroupAvatarChangedNotify(const GroupAvatarChangedNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.GroupAvatarChangedNotify)
 }
 
 void GroupAvatarChangedNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
   group_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   avatar_ = NULL;
+  _cached_size_ = 0;
 }
 
 GroupAvatarChangedNotify::~GroupAvatarChangedNotify() {
@@ -2189,7 +2201,7 @@ GroupAvatarChangedNotify::~GroupAvatarChangedNotify() {
 
 void GroupAvatarChangedNotify::SharedDtor() {
   group_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
+  if (this != &GroupAvatarChangedNotify_default_instance_.get()) {
     delete avatar_;
   }
 }
@@ -2205,11 +2217,11 @@ const ::google::protobuf::Descriptor* GroupAvatarChangedNotify::descriptor() {
 }
 
 const GroupAvatarChangedNotify& GroupAvatarChangedNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-GroupAvatarChangedNotify* GroupAvatarChangedNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<GroupAvatarChangedNotify> GroupAvatarChangedNotify_default_instance_;
 
 GroupAvatarChangedNotify* GroupAvatarChangedNotify::New(::google::protobuf::Arena* arena) const {
   GroupAvatarChangedNotify* n = new GroupAvatarChangedNotify;
@@ -2219,6 +2231,9 @@ GroupAvatarChangedNotify* GroupAvatarChangedNotify::New(::google::protobuf::Aren
   return n;
 }
 
+void GroupAvatarChangedNotify::UnsafeMergeFrom(const GroupAvatarChangedNotify& from) {
+  MergeFrom(from);
+}
 void GroupAvatarChangedNotify::Swap(GroupAvatarChangedNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -2241,37 +2256,37 @@ void GroupAvatarChangedNotify::InternalSwap(GroupAvatarChangedNotify* other) {
 void GroupAvatarChangedNotify::clear_group_id() {
   group_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& GroupAvatarChangedNotify::group_id() const {
+const ::std::string& GroupAvatarChangedNotify::group_id() const {
   // @@protoc_insertion_point(field_get:zproto.GroupAvatarChangedNotify.group_id)
   return group_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupAvatarChangedNotify::set_group_id(const ::std::string& value) {
+void GroupAvatarChangedNotify::set_group_id(const ::std::string& value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.GroupAvatarChangedNotify.group_id)
 }
- void GroupAvatarChangedNotify::set_group_id(const char* value) {
+void GroupAvatarChangedNotify::set_group_id(const char* value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.GroupAvatarChangedNotify.group_id)
 }
- void GroupAvatarChangedNotify::set_group_id(const char* value, size_t size) {
+void GroupAvatarChangedNotify::set_group_id(const char* value, size_t size) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.GroupAvatarChangedNotify.group_id)
 }
- ::std::string* GroupAvatarChangedNotify::mutable_group_id() {
+::std::string* GroupAvatarChangedNotify::mutable_group_id() {
   
   // @@protoc_insertion_point(field_mutable:zproto.GroupAvatarChangedNotify.group_id)
   return group_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* GroupAvatarChangedNotify::release_group_id() {
+::std::string* GroupAvatarChangedNotify::release_group_id() {
   // @@protoc_insertion_point(field_release:zproto.GroupAvatarChangedNotify.group_id)
   
   return group_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupAvatarChangedNotify::set_allocated_group_id(::std::string* group_id) {
+void GroupAvatarChangedNotify::set_allocated_group_id(::std::string* group_id) {
   if (group_id != NULL) {
     
   } else {
@@ -2283,7 +2298,7 @@ void GroupAvatarChangedNotify::clear_group_id() {
 
 // optional .zproto.Avatar avatar = 2;
 bool GroupAvatarChangedNotify::has_avatar() const {
-  return !_is_default_instance_ && avatar_ != NULL;
+  return this != internal_default_instance() && avatar_ != NULL;
 }
 void GroupAvatarChangedNotify::clear_avatar() {
   if (GetArenaNoVirtual() == NULL && avatar_ != NULL) delete avatar_;
@@ -2291,7 +2306,8 @@ void GroupAvatarChangedNotify::clear_avatar() {
 }
 const ::zproto::Avatar& GroupAvatarChangedNotify::avatar() const {
   // @@protoc_insertion_point(field_get:zproto.GroupAvatarChangedNotify.avatar)
-  return avatar_ != NULL ? *avatar_ : *default_instance_->avatar_;
+  return avatar_ != NULL ? *avatar_
+                         : *::zproto::Avatar::internal_default_instance();
 }
 ::zproto::Avatar* GroupAvatarChangedNotify::mutable_avatar() {
   
@@ -2319,6 +2335,9 @@ void GroupAvatarChangedNotify::set_allocated_avatar(::zproto::Avatar* avatar) {
   // @@protoc_insertion_point(field_set_allocated:zproto.GroupAvatarChangedNotify.avatar)
 }
 
+inline const GroupAvatarChangedNotify* GroupAvatarChangedNotify::internal_default_instance() {
+  return &GroupAvatarChangedNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -2330,28 +2349,26 @@ const int GroupTopicChangedNotify::kTopicFieldNumber;
 
 GroupTopicChangedNotify::GroupTopicChangedNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.GroupTopicChangedNotify)
 }
 
 void GroupTopicChangedNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 GroupTopicChangedNotify::GroupTopicChangedNotify(const GroupTopicChangedNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.GroupTopicChangedNotify)
 }
 
 void GroupTopicChangedNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
   group_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   topic_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _cached_size_ = 0;
 }
 
 GroupTopicChangedNotify::~GroupTopicChangedNotify() {
@@ -2362,8 +2379,6 @@ GroupTopicChangedNotify::~GroupTopicChangedNotify() {
 void GroupTopicChangedNotify::SharedDtor() {
   group_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   topic_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
 }
 
 void GroupTopicChangedNotify::SetCachedSize(int size) const {
@@ -2377,11 +2392,11 @@ const ::google::protobuf::Descriptor* GroupTopicChangedNotify::descriptor() {
 }
 
 const GroupTopicChangedNotify& GroupTopicChangedNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-GroupTopicChangedNotify* GroupTopicChangedNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<GroupTopicChangedNotify> GroupTopicChangedNotify_default_instance_;
 
 GroupTopicChangedNotify* GroupTopicChangedNotify::New(::google::protobuf::Arena* arena) const {
   GroupTopicChangedNotify* n = new GroupTopicChangedNotify;
@@ -2391,6 +2406,9 @@ GroupTopicChangedNotify* GroupTopicChangedNotify::New(::google::protobuf::Arena*
   return n;
 }
 
+void GroupTopicChangedNotify::UnsafeMergeFrom(const GroupTopicChangedNotify& from) {
+  MergeFrom(from);
+}
 void GroupTopicChangedNotify::Swap(GroupTopicChangedNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -2413,37 +2431,37 @@ void GroupTopicChangedNotify::InternalSwap(GroupTopicChangedNotify* other) {
 void GroupTopicChangedNotify::clear_group_id() {
   group_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& GroupTopicChangedNotify::group_id() const {
+const ::std::string& GroupTopicChangedNotify::group_id() const {
   // @@protoc_insertion_point(field_get:zproto.GroupTopicChangedNotify.group_id)
   return group_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupTopicChangedNotify::set_group_id(const ::std::string& value) {
+void GroupTopicChangedNotify::set_group_id(const ::std::string& value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.GroupTopicChangedNotify.group_id)
 }
- void GroupTopicChangedNotify::set_group_id(const char* value) {
+void GroupTopicChangedNotify::set_group_id(const char* value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.GroupTopicChangedNotify.group_id)
 }
- void GroupTopicChangedNotify::set_group_id(const char* value, size_t size) {
+void GroupTopicChangedNotify::set_group_id(const char* value, size_t size) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.GroupTopicChangedNotify.group_id)
 }
- ::std::string* GroupTopicChangedNotify::mutable_group_id() {
+::std::string* GroupTopicChangedNotify::mutable_group_id() {
   
   // @@protoc_insertion_point(field_mutable:zproto.GroupTopicChangedNotify.group_id)
   return group_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* GroupTopicChangedNotify::release_group_id() {
+::std::string* GroupTopicChangedNotify::release_group_id() {
   // @@protoc_insertion_point(field_release:zproto.GroupTopicChangedNotify.group_id)
   
   return group_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupTopicChangedNotify::set_allocated_group_id(::std::string* group_id) {
+void GroupTopicChangedNotify::set_allocated_group_id(::std::string* group_id) {
   if (group_id != NULL) {
     
   } else {
@@ -2457,37 +2475,37 @@ void GroupTopicChangedNotify::clear_group_id() {
 void GroupTopicChangedNotify::clear_topic() {
   topic_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& GroupTopicChangedNotify::topic() const {
+const ::std::string& GroupTopicChangedNotify::topic() const {
   // @@protoc_insertion_point(field_get:zproto.GroupTopicChangedNotify.topic)
   return topic_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupTopicChangedNotify::set_topic(const ::std::string& value) {
+void GroupTopicChangedNotify::set_topic(const ::std::string& value) {
   
   topic_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.GroupTopicChangedNotify.topic)
 }
- void GroupTopicChangedNotify::set_topic(const char* value) {
+void GroupTopicChangedNotify::set_topic(const char* value) {
   
   topic_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.GroupTopicChangedNotify.topic)
 }
- void GroupTopicChangedNotify::set_topic(const char* value, size_t size) {
+void GroupTopicChangedNotify::set_topic(const char* value, size_t size) {
   
   topic_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.GroupTopicChangedNotify.topic)
 }
- ::std::string* GroupTopicChangedNotify::mutable_topic() {
+::std::string* GroupTopicChangedNotify::mutable_topic() {
   
   // @@protoc_insertion_point(field_mutable:zproto.GroupTopicChangedNotify.topic)
   return topic_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* GroupTopicChangedNotify::release_topic() {
+::std::string* GroupTopicChangedNotify::release_topic() {
   // @@protoc_insertion_point(field_release:zproto.GroupTopicChangedNotify.topic)
   
   return topic_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupTopicChangedNotify::set_allocated_topic(::std::string* topic) {
+void GroupTopicChangedNotify::set_allocated_topic(::std::string* topic) {
   if (topic != NULL) {
     
   } else {
@@ -2497,6 +2515,9 @@ void GroupTopicChangedNotify::clear_topic() {
   // @@protoc_insertion_point(field_set_allocated:zproto.GroupTopicChangedNotify.topic)
 }
 
+inline const GroupTopicChangedNotify* GroupTopicChangedNotify::internal_default_instance() {
+  return &GroupTopicChangedNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -2508,28 +2529,26 @@ const int GroupAboutChangedNotify::kAboutFieldNumber;
 
 GroupAboutChangedNotify::GroupAboutChangedNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.GroupAboutChangedNotify)
 }
 
 void GroupAboutChangedNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 GroupAboutChangedNotify::GroupAboutChangedNotify(const GroupAboutChangedNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.GroupAboutChangedNotify)
 }
 
 void GroupAboutChangedNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
   group_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   about_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _cached_size_ = 0;
 }
 
 GroupAboutChangedNotify::~GroupAboutChangedNotify() {
@@ -2540,8 +2559,6 @@ GroupAboutChangedNotify::~GroupAboutChangedNotify() {
 void GroupAboutChangedNotify::SharedDtor() {
   group_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   about_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
 }
 
 void GroupAboutChangedNotify::SetCachedSize(int size) const {
@@ -2555,11 +2572,11 @@ const ::google::protobuf::Descriptor* GroupAboutChangedNotify::descriptor() {
 }
 
 const GroupAboutChangedNotify& GroupAboutChangedNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-GroupAboutChangedNotify* GroupAboutChangedNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<GroupAboutChangedNotify> GroupAboutChangedNotify_default_instance_;
 
 GroupAboutChangedNotify* GroupAboutChangedNotify::New(::google::protobuf::Arena* arena) const {
   GroupAboutChangedNotify* n = new GroupAboutChangedNotify;
@@ -2569,6 +2586,9 @@ GroupAboutChangedNotify* GroupAboutChangedNotify::New(::google::protobuf::Arena*
   return n;
 }
 
+void GroupAboutChangedNotify::UnsafeMergeFrom(const GroupAboutChangedNotify& from) {
+  MergeFrom(from);
+}
 void GroupAboutChangedNotify::Swap(GroupAboutChangedNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -2591,37 +2611,37 @@ void GroupAboutChangedNotify::InternalSwap(GroupAboutChangedNotify* other) {
 void GroupAboutChangedNotify::clear_group_id() {
   group_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& GroupAboutChangedNotify::group_id() const {
+const ::std::string& GroupAboutChangedNotify::group_id() const {
   // @@protoc_insertion_point(field_get:zproto.GroupAboutChangedNotify.group_id)
   return group_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupAboutChangedNotify::set_group_id(const ::std::string& value) {
+void GroupAboutChangedNotify::set_group_id(const ::std::string& value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.GroupAboutChangedNotify.group_id)
 }
- void GroupAboutChangedNotify::set_group_id(const char* value) {
+void GroupAboutChangedNotify::set_group_id(const char* value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.GroupAboutChangedNotify.group_id)
 }
- void GroupAboutChangedNotify::set_group_id(const char* value, size_t size) {
+void GroupAboutChangedNotify::set_group_id(const char* value, size_t size) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.GroupAboutChangedNotify.group_id)
 }
- ::std::string* GroupAboutChangedNotify::mutable_group_id() {
+::std::string* GroupAboutChangedNotify::mutable_group_id() {
   
   // @@protoc_insertion_point(field_mutable:zproto.GroupAboutChangedNotify.group_id)
   return group_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* GroupAboutChangedNotify::release_group_id() {
+::std::string* GroupAboutChangedNotify::release_group_id() {
   // @@protoc_insertion_point(field_release:zproto.GroupAboutChangedNotify.group_id)
   
   return group_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupAboutChangedNotify::set_allocated_group_id(::std::string* group_id) {
+void GroupAboutChangedNotify::set_allocated_group_id(::std::string* group_id) {
   if (group_id != NULL) {
     
   } else {
@@ -2635,37 +2655,37 @@ void GroupAboutChangedNotify::clear_group_id() {
 void GroupAboutChangedNotify::clear_about() {
   about_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& GroupAboutChangedNotify::about() const {
+const ::std::string& GroupAboutChangedNotify::about() const {
   // @@protoc_insertion_point(field_get:zproto.GroupAboutChangedNotify.about)
   return about_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupAboutChangedNotify::set_about(const ::std::string& value) {
+void GroupAboutChangedNotify::set_about(const ::std::string& value) {
   
   about_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.GroupAboutChangedNotify.about)
 }
- void GroupAboutChangedNotify::set_about(const char* value) {
+void GroupAboutChangedNotify::set_about(const char* value) {
   
   about_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.GroupAboutChangedNotify.about)
 }
- void GroupAboutChangedNotify::set_about(const char* value, size_t size) {
+void GroupAboutChangedNotify::set_about(const char* value, size_t size) {
   
   about_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.GroupAboutChangedNotify.about)
 }
- ::std::string* GroupAboutChangedNotify::mutable_about() {
+::std::string* GroupAboutChangedNotify::mutable_about() {
   
   // @@protoc_insertion_point(field_mutable:zproto.GroupAboutChangedNotify.about)
   return about_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* GroupAboutChangedNotify::release_about() {
+::std::string* GroupAboutChangedNotify::release_about() {
   // @@protoc_insertion_point(field_release:zproto.GroupAboutChangedNotify.about)
   
   return about_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupAboutChangedNotify::set_allocated_about(::std::string* about) {
+void GroupAboutChangedNotify::set_allocated_about(::std::string* about) {
   if (about != NULL) {
     
   } else {
@@ -2675,6 +2695,9 @@ void GroupAboutChangedNotify::clear_about() {
   // @@protoc_insertion_point(field_set_allocated:zproto.GroupAboutChangedNotify.about)
 }
 
+inline const GroupAboutChangedNotify* GroupAboutChangedNotify::internal_default_instance() {
+  return &GroupAboutChangedNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -2686,28 +2709,26 @@ const int GroupOwnerChangedNotify::kUserIdFieldNumber;
 
 GroupOwnerChangedNotify::GroupOwnerChangedNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.GroupOwnerChangedNotify)
 }
 
 void GroupOwnerChangedNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 GroupOwnerChangedNotify::GroupOwnerChangedNotify(const GroupOwnerChangedNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.GroupOwnerChangedNotify)
 }
 
 void GroupOwnerChangedNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
   group_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   user_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _cached_size_ = 0;
 }
 
 GroupOwnerChangedNotify::~GroupOwnerChangedNotify() {
@@ -2718,8 +2739,6 @@ GroupOwnerChangedNotify::~GroupOwnerChangedNotify() {
 void GroupOwnerChangedNotify::SharedDtor() {
   group_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   user_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
 }
 
 void GroupOwnerChangedNotify::SetCachedSize(int size) const {
@@ -2733,11 +2752,11 @@ const ::google::protobuf::Descriptor* GroupOwnerChangedNotify::descriptor() {
 }
 
 const GroupOwnerChangedNotify& GroupOwnerChangedNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-GroupOwnerChangedNotify* GroupOwnerChangedNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<GroupOwnerChangedNotify> GroupOwnerChangedNotify_default_instance_;
 
 GroupOwnerChangedNotify* GroupOwnerChangedNotify::New(::google::protobuf::Arena* arena) const {
   GroupOwnerChangedNotify* n = new GroupOwnerChangedNotify;
@@ -2747,6 +2766,9 @@ GroupOwnerChangedNotify* GroupOwnerChangedNotify::New(::google::protobuf::Arena*
   return n;
 }
 
+void GroupOwnerChangedNotify::UnsafeMergeFrom(const GroupOwnerChangedNotify& from) {
+  MergeFrom(from);
+}
 void GroupOwnerChangedNotify::Swap(GroupOwnerChangedNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -2769,37 +2791,37 @@ void GroupOwnerChangedNotify::InternalSwap(GroupOwnerChangedNotify* other) {
 void GroupOwnerChangedNotify::clear_group_id() {
   group_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& GroupOwnerChangedNotify::group_id() const {
+const ::std::string& GroupOwnerChangedNotify::group_id() const {
   // @@protoc_insertion_point(field_get:zproto.GroupOwnerChangedNotify.group_id)
   return group_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupOwnerChangedNotify::set_group_id(const ::std::string& value) {
+void GroupOwnerChangedNotify::set_group_id(const ::std::string& value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.GroupOwnerChangedNotify.group_id)
 }
- void GroupOwnerChangedNotify::set_group_id(const char* value) {
+void GroupOwnerChangedNotify::set_group_id(const char* value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.GroupOwnerChangedNotify.group_id)
 }
- void GroupOwnerChangedNotify::set_group_id(const char* value, size_t size) {
+void GroupOwnerChangedNotify::set_group_id(const char* value, size_t size) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.GroupOwnerChangedNotify.group_id)
 }
- ::std::string* GroupOwnerChangedNotify::mutable_group_id() {
+::std::string* GroupOwnerChangedNotify::mutable_group_id() {
   
   // @@protoc_insertion_point(field_mutable:zproto.GroupOwnerChangedNotify.group_id)
   return group_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* GroupOwnerChangedNotify::release_group_id() {
+::std::string* GroupOwnerChangedNotify::release_group_id() {
   // @@protoc_insertion_point(field_release:zproto.GroupOwnerChangedNotify.group_id)
   
   return group_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupOwnerChangedNotify::set_allocated_group_id(::std::string* group_id) {
+void GroupOwnerChangedNotify::set_allocated_group_id(::std::string* group_id) {
   if (group_id != NULL) {
     
   } else {
@@ -2813,37 +2835,37 @@ void GroupOwnerChangedNotify::clear_group_id() {
 void GroupOwnerChangedNotify::clear_user_id() {
   user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& GroupOwnerChangedNotify::user_id() const {
+const ::std::string& GroupOwnerChangedNotify::user_id() const {
   // @@protoc_insertion_point(field_get:zproto.GroupOwnerChangedNotify.user_id)
   return user_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupOwnerChangedNotify::set_user_id(const ::std::string& value) {
+void GroupOwnerChangedNotify::set_user_id(const ::std::string& value) {
   
   user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.GroupOwnerChangedNotify.user_id)
 }
- void GroupOwnerChangedNotify::set_user_id(const char* value) {
+void GroupOwnerChangedNotify::set_user_id(const char* value) {
   
   user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.GroupOwnerChangedNotify.user_id)
 }
- void GroupOwnerChangedNotify::set_user_id(const char* value, size_t size) {
+void GroupOwnerChangedNotify::set_user_id(const char* value, size_t size) {
   
   user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.GroupOwnerChangedNotify.user_id)
 }
- ::std::string* GroupOwnerChangedNotify::mutable_user_id() {
+::std::string* GroupOwnerChangedNotify::mutable_user_id() {
   
   // @@protoc_insertion_point(field_mutable:zproto.GroupOwnerChangedNotify.user_id)
   return user_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* GroupOwnerChangedNotify::release_user_id() {
+::std::string* GroupOwnerChangedNotify::release_user_id() {
   // @@protoc_insertion_point(field_release:zproto.GroupOwnerChangedNotify.user_id)
   
   return user_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupOwnerChangedNotify::set_allocated_user_id(::std::string* user_id) {
+void GroupOwnerChangedNotify::set_allocated_user_id(::std::string* user_id) {
   if (user_id != NULL) {
     
   } else {
@@ -2853,6 +2875,9 @@ void GroupOwnerChangedNotify::clear_user_id() {
   // @@protoc_insertion_point(field_set_allocated:zproto.GroupOwnerChangedNotify.user_id)
 }
 
+inline const GroupOwnerChangedNotify* GroupOwnerChangedNotify::internal_default_instance() {
+  return &GroupOwnerChangedNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -2863,27 +2888,25 @@ const int GroupDeletedNotify::kGroupIdFieldNumber;
 
 GroupDeletedNotify::GroupDeletedNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.GroupDeletedNotify)
 }
 
 void GroupDeletedNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 GroupDeletedNotify::GroupDeletedNotify(const GroupDeletedNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.GroupDeletedNotify)
 }
 
 void GroupDeletedNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
   group_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _cached_size_ = 0;
 }
 
 GroupDeletedNotify::~GroupDeletedNotify() {
@@ -2893,8 +2916,6 @@ GroupDeletedNotify::~GroupDeletedNotify() {
 
 void GroupDeletedNotify::SharedDtor() {
   group_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
 }
 
 void GroupDeletedNotify::SetCachedSize(int size) const {
@@ -2908,11 +2929,11 @@ const ::google::protobuf::Descriptor* GroupDeletedNotify::descriptor() {
 }
 
 const GroupDeletedNotify& GroupDeletedNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-GroupDeletedNotify* GroupDeletedNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<GroupDeletedNotify> GroupDeletedNotify_default_instance_;
 
 GroupDeletedNotify* GroupDeletedNotify::New(::google::protobuf::Arena* arena) const {
   GroupDeletedNotify* n = new GroupDeletedNotify;
@@ -2922,6 +2943,9 @@ GroupDeletedNotify* GroupDeletedNotify::New(::google::protobuf::Arena* arena) co
   return n;
 }
 
+void GroupDeletedNotify::UnsafeMergeFrom(const GroupDeletedNotify& from) {
+  MergeFrom(from);
+}
 void GroupDeletedNotify::Swap(GroupDeletedNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -2944,37 +2968,37 @@ void GroupDeletedNotify::InternalSwap(GroupDeletedNotify* other) {
 void GroupDeletedNotify::clear_group_id() {
   group_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& GroupDeletedNotify::group_id() const {
+const ::std::string& GroupDeletedNotify::group_id() const {
   // @@protoc_insertion_point(field_get:zproto.GroupDeletedNotify.group_id)
   return group_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupDeletedNotify::set_group_id(const ::std::string& value) {
+void GroupDeletedNotify::set_group_id(const ::std::string& value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.GroupDeletedNotify.group_id)
 }
- void GroupDeletedNotify::set_group_id(const char* value) {
+void GroupDeletedNotify::set_group_id(const char* value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.GroupDeletedNotify.group_id)
 }
- void GroupDeletedNotify::set_group_id(const char* value, size_t size) {
+void GroupDeletedNotify::set_group_id(const char* value, size_t size) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.GroupDeletedNotify.group_id)
 }
- ::std::string* GroupDeletedNotify::mutable_group_id() {
+::std::string* GroupDeletedNotify::mutable_group_id() {
   
   // @@protoc_insertion_point(field_mutable:zproto.GroupDeletedNotify.group_id)
   return group_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* GroupDeletedNotify::release_group_id() {
+::std::string* GroupDeletedNotify::release_group_id() {
   // @@protoc_insertion_point(field_release:zproto.GroupDeletedNotify.group_id)
   
   return group_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupDeletedNotify::set_allocated_group_id(::std::string* group_id) {
+void GroupDeletedNotify::set_allocated_group_id(::std::string* group_id) {
   if (group_id != NULL) {
     
   } else {
@@ -2984,6 +3008,9 @@ void GroupDeletedNotify::clear_group_id() {
   // @@protoc_insertion_point(field_set_allocated:zproto.GroupDeletedNotify.group_id)
 }
 
+inline const GroupDeletedNotify* GroupDeletedNotify::internal_default_instance() {
+  return &GroupDeletedNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -2995,28 +3022,26 @@ const int GroupPermissionsChangedNotify::kPermissionsFieldNumber;
 
 GroupPermissionsChangedNotify::GroupPermissionsChangedNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.GroupPermissionsChangedNotify)
 }
 
 void GroupPermissionsChangedNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 GroupPermissionsChangedNotify::GroupPermissionsChangedNotify(const GroupPermissionsChangedNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.GroupPermissionsChangedNotify)
 }
 
 void GroupPermissionsChangedNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
   group_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   permissions_ = GOOGLE_LONGLONG(0);
+  _cached_size_ = 0;
 }
 
 GroupPermissionsChangedNotify::~GroupPermissionsChangedNotify() {
@@ -3026,8 +3051,6 @@ GroupPermissionsChangedNotify::~GroupPermissionsChangedNotify() {
 
 void GroupPermissionsChangedNotify::SharedDtor() {
   group_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
 }
 
 void GroupPermissionsChangedNotify::SetCachedSize(int size) const {
@@ -3041,11 +3064,11 @@ const ::google::protobuf::Descriptor* GroupPermissionsChangedNotify::descriptor(
 }
 
 const GroupPermissionsChangedNotify& GroupPermissionsChangedNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-GroupPermissionsChangedNotify* GroupPermissionsChangedNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<GroupPermissionsChangedNotify> GroupPermissionsChangedNotify_default_instance_;
 
 GroupPermissionsChangedNotify* GroupPermissionsChangedNotify::New(::google::protobuf::Arena* arena) const {
   GroupPermissionsChangedNotify* n = new GroupPermissionsChangedNotify;
@@ -3055,6 +3078,9 @@ GroupPermissionsChangedNotify* GroupPermissionsChangedNotify::New(::google::prot
   return n;
 }
 
+void GroupPermissionsChangedNotify::UnsafeMergeFrom(const GroupPermissionsChangedNotify& from) {
+  MergeFrom(from);
+}
 void GroupPermissionsChangedNotify::Swap(GroupPermissionsChangedNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -3077,37 +3103,37 @@ void GroupPermissionsChangedNotify::InternalSwap(GroupPermissionsChangedNotify* 
 void GroupPermissionsChangedNotify::clear_group_id() {
   group_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& GroupPermissionsChangedNotify::group_id() const {
+const ::std::string& GroupPermissionsChangedNotify::group_id() const {
   // @@protoc_insertion_point(field_get:zproto.GroupPermissionsChangedNotify.group_id)
   return group_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupPermissionsChangedNotify::set_group_id(const ::std::string& value) {
+void GroupPermissionsChangedNotify::set_group_id(const ::std::string& value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.GroupPermissionsChangedNotify.group_id)
 }
- void GroupPermissionsChangedNotify::set_group_id(const char* value) {
+void GroupPermissionsChangedNotify::set_group_id(const char* value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.GroupPermissionsChangedNotify.group_id)
 }
- void GroupPermissionsChangedNotify::set_group_id(const char* value, size_t size) {
+void GroupPermissionsChangedNotify::set_group_id(const char* value, size_t size) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.GroupPermissionsChangedNotify.group_id)
 }
- ::std::string* GroupPermissionsChangedNotify::mutable_group_id() {
+::std::string* GroupPermissionsChangedNotify::mutable_group_id() {
   
   // @@protoc_insertion_point(field_mutable:zproto.GroupPermissionsChangedNotify.group_id)
   return group_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* GroupPermissionsChangedNotify::release_group_id() {
+::std::string* GroupPermissionsChangedNotify::release_group_id() {
   // @@protoc_insertion_point(field_release:zproto.GroupPermissionsChangedNotify.group_id)
   
   return group_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupPermissionsChangedNotify::set_allocated_group_id(::std::string* group_id) {
+void GroupPermissionsChangedNotify::set_allocated_group_id(::std::string* group_id) {
   if (group_id != NULL) {
     
   } else {
@@ -3121,16 +3147,19 @@ void GroupPermissionsChangedNotify::clear_group_id() {
 void GroupPermissionsChangedNotify::clear_permissions() {
   permissions_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 GroupPermissionsChangedNotify::permissions() const {
+::google::protobuf::int64 GroupPermissionsChangedNotify::permissions() const {
   // @@protoc_insertion_point(field_get:zproto.GroupPermissionsChangedNotify.permissions)
   return permissions_;
 }
- void GroupPermissionsChangedNotify::set_permissions(::google::protobuf::int64 value) {
+void GroupPermissionsChangedNotify::set_permissions(::google::protobuf::int64 value) {
   
   permissions_ = value;
   // @@protoc_insertion_point(field_set:zproto.GroupPermissionsChangedNotify.permissions)
 }
 
+inline const GroupPermissionsChangedNotify* GroupPermissionsChangedNotify::internal_default_instance() {
+  return &GroupPermissionsChangedNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -3142,28 +3171,26 @@ const int GroupFullPermissionsChangedNotify::kPermissionsFieldNumber;
 
 GroupFullPermissionsChangedNotify::GroupFullPermissionsChangedNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.GroupFullPermissionsChangedNotify)
 }
 
 void GroupFullPermissionsChangedNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 GroupFullPermissionsChangedNotify::GroupFullPermissionsChangedNotify(const GroupFullPermissionsChangedNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.GroupFullPermissionsChangedNotify)
 }
 
 void GroupFullPermissionsChangedNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
   group_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   permissions_ = GOOGLE_LONGLONG(0);
+  _cached_size_ = 0;
 }
 
 GroupFullPermissionsChangedNotify::~GroupFullPermissionsChangedNotify() {
@@ -3173,8 +3200,6 @@ GroupFullPermissionsChangedNotify::~GroupFullPermissionsChangedNotify() {
 
 void GroupFullPermissionsChangedNotify::SharedDtor() {
   group_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
 }
 
 void GroupFullPermissionsChangedNotify::SetCachedSize(int size) const {
@@ -3188,11 +3213,11 @@ const ::google::protobuf::Descriptor* GroupFullPermissionsChangedNotify::descrip
 }
 
 const GroupFullPermissionsChangedNotify& GroupFullPermissionsChangedNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-GroupFullPermissionsChangedNotify* GroupFullPermissionsChangedNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<GroupFullPermissionsChangedNotify> GroupFullPermissionsChangedNotify_default_instance_;
 
 GroupFullPermissionsChangedNotify* GroupFullPermissionsChangedNotify::New(::google::protobuf::Arena* arena) const {
   GroupFullPermissionsChangedNotify* n = new GroupFullPermissionsChangedNotify;
@@ -3202,6 +3227,9 @@ GroupFullPermissionsChangedNotify* GroupFullPermissionsChangedNotify::New(::goog
   return n;
 }
 
+void GroupFullPermissionsChangedNotify::UnsafeMergeFrom(const GroupFullPermissionsChangedNotify& from) {
+  MergeFrom(from);
+}
 void GroupFullPermissionsChangedNotify::Swap(GroupFullPermissionsChangedNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -3224,37 +3252,37 @@ void GroupFullPermissionsChangedNotify::InternalSwap(GroupFullPermissionsChanged
 void GroupFullPermissionsChangedNotify::clear_group_id() {
   group_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& GroupFullPermissionsChangedNotify::group_id() const {
+const ::std::string& GroupFullPermissionsChangedNotify::group_id() const {
   // @@protoc_insertion_point(field_get:zproto.GroupFullPermissionsChangedNotify.group_id)
   return group_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupFullPermissionsChangedNotify::set_group_id(const ::std::string& value) {
+void GroupFullPermissionsChangedNotify::set_group_id(const ::std::string& value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.GroupFullPermissionsChangedNotify.group_id)
 }
- void GroupFullPermissionsChangedNotify::set_group_id(const char* value) {
+void GroupFullPermissionsChangedNotify::set_group_id(const char* value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.GroupFullPermissionsChangedNotify.group_id)
 }
- void GroupFullPermissionsChangedNotify::set_group_id(const char* value, size_t size) {
+void GroupFullPermissionsChangedNotify::set_group_id(const char* value, size_t size) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.GroupFullPermissionsChangedNotify.group_id)
 }
- ::std::string* GroupFullPermissionsChangedNotify::mutable_group_id() {
+::std::string* GroupFullPermissionsChangedNotify::mutable_group_id() {
   
   // @@protoc_insertion_point(field_mutable:zproto.GroupFullPermissionsChangedNotify.group_id)
   return group_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* GroupFullPermissionsChangedNotify::release_group_id() {
+::std::string* GroupFullPermissionsChangedNotify::release_group_id() {
   // @@protoc_insertion_point(field_release:zproto.GroupFullPermissionsChangedNotify.group_id)
   
   return group_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupFullPermissionsChangedNotify::set_allocated_group_id(::std::string* group_id) {
+void GroupFullPermissionsChangedNotify::set_allocated_group_id(::std::string* group_id) {
   if (group_id != NULL) {
     
   } else {
@@ -3268,16 +3296,19 @@ void GroupFullPermissionsChangedNotify::clear_group_id() {
 void GroupFullPermissionsChangedNotify::clear_permissions() {
   permissions_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 GroupFullPermissionsChangedNotify::permissions() const {
+::google::protobuf::int64 GroupFullPermissionsChangedNotify::permissions() const {
   // @@protoc_insertion_point(field_get:zproto.GroupFullPermissionsChangedNotify.permissions)
   return permissions_;
 }
- void GroupFullPermissionsChangedNotify::set_permissions(::google::protobuf::int64 value) {
+void GroupFullPermissionsChangedNotify::set_permissions(::google::protobuf::int64 value) {
   
   permissions_ = value;
   // @@protoc_insertion_point(field_set:zproto.GroupFullPermissionsChangedNotify.permissions)
 }
 
+inline const GroupFullPermissionsChangedNotify* GroupFullPermissionsChangedNotify::internal_default_instance() {
+  return &GroupFullPermissionsChangedNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -3289,28 +3320,26 @@ const int GroupMemberChangedNotify::kIsMemberFieldNumber;
 
 GroupMemberChangedNotify::GroupMemberChangedNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.GroupMemberChangedNotify)
 }
 
 void GroupMemberChangedNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 GroupMemberChangedNotify::GroupMemberChangedNotify(const GroupMemberChangedNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.GroupMemberChangedNotify)
 }
 
 void GroupMemberChangedNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
   group_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   is_member_ = false;
+  _cached_size_ = 0;
 }
 
 GroupMemberChangedNotify::~GroupMemberChangedNotify() {
@@ -3320,8 +3349,6 @@ GroupMemberChangedNotify::~GroupMemberChangedNotify() {
 
 void GroupMemberChangedNotify::SharedDtor() {
   group_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
 }
 
 void GroupMemberChangedNotify::SetCachedSize(int size) const {
@@ -3335,11 +3362,11 @@ const ::google::protobuf::Descriptor* GroupMemberChangedNotify::descriptor() {
 }
 
 const GroupMemberChangedNotify& GroupMemberChangedNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-GroupMemberChangedNotify* GroupMemberChangedNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<GroupMemberChangedNotify> GroupMemberChangedNotify_default_instance_;
 
 GroupMemberChangedNotify* GroupMemberChangedNotify::New(::google::protobuf::Arena* arena) const {
   GroupMemberChangedNotify* n = new GroupMemberChangedNotify;
@@ -3349,6 +3376,9 @@ GroupMemberChangedNotify* GroupMemberChangedNotify::New(::google::protobuf::Aren
   return n;
 }
 
+void GroupMemberChangedNotify::UnsafeMergeFrom(const GroupMemberChangedNotify& from) {
+  MergeFrom(from);
+}
 void GroupMemberChangedNotify::Swap(GroupMemberChangedNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -3371,37 +3401,37 @@ void GroupMemberChangedNotify::InternalSwap(GroupMemberChangedNotify* other) {
 void GroupMemberChangedNotify::clear_group_id() {
   group_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& GroupMemberChangedNotify::group_id() const {
+const ::std::string& GroupMemberChangedNotify::group_id() const {
   // @@protoc_insertion_point(field_get:zproto.GroupMemberChangedNotify.group_id)
   return group_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupMemberChangedNotify::set_group_id(const ::std::string& value) {
+void GroupMemberChangedNotify::set_group_id(const ::std::string& value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.GroupMemberChangedNotify.group_id)
 }
- void GroupMemberChangedNotify::set_group_id(const char* value) {
+void GroupMemberChangedNotify::set_group_id(const char* value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.GroupMemberChangedNotify.group_id)
 }
- void GroupMemberChangedNotify::set_group_id(const char* value, size_t size) {
+void GroupMemberChangedNotify::set_group_id(const char* value, size_t size) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.GroupMemberChangedNotify.group_id)
 }
- ::std::string* GroupMemberChangedNotify::mutable_group_id() {
+::std::string* GroupMemberChangedNotify::mutable_group_id() {
   
   // @@protoc_insertion_point(field_mutable:zproto.GroupMemberChangedNotify.group_id)
   return group_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* GroupMemberChangedNotify::release_group_id() {
+::std::string* GroupMemberChangedNotify::release_group_id() {
   // @@protoc_insertion_point(field_release:zproto.GroupMemberChangedNotify.group_id)
   
   return group_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupMemberChangedNotify::set_allocated_group_id(::std::string* group_id) {
+void GroupMemberChangedNotify::set_allocated_group_id(::std::string* group_id) {
   if (group_id != NULL) {
     
   } else {
@@ -3415,16 +3445,19 @@ void GroupMemberChangedNotify::clear_group_id() {
 void GroupMemberChangedNotify::clear_is_member() {
   is_member_ = false;
 }
- bool GroupMemberChangedNotify::is_member() const {
+bool GroupMemberChangedNotify::is_member() const {
   // @@protoc_insertion_point(field_get:zproto.GroupMemberChangedNotify.is_member)
   return is_member_;
 }
- void GroupMemberChangedNotify::set_is_member(bool value) {
+void GroupMemberChangedNotify::set_is_member(bool value) {
   
   is_member_ = value;
   // @@protoc_insertion_point(field_set:zproto.GroupMemberChangedNotify.is_member)
 }
 
+inline const GroupMemberChangedNotify* GroupMemberChangedNotify::internal_default_instance() {
+  return &GroupMemberChangedNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -3435,27 +3468,25 @@ const int GroupMembersBecameAsyncNotify::kGroupIdFieldNumber;
 
 GroupMembersBecameAsyncNotify::GroupMembersBecameAsyncNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.GroupMembersBecameAsyncNotify)
 }
 
 void GroupMembersBecameAsyncNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 GroupMembersBecameAsyncNotify::GroupMembersBecameAsyncNotify(const GroupMembersBecameAsyncNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.GroupMembersBecameAsyncNotify)
 }
 
 void GroupMembersBecameAsyncNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
   group_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _cached_size_ = 0;
 }
 
 GroupMembersBecameAsyncNotify::~GroupMembersBecameAsyncNotify() {
@@ -3465,8 +3496,6 @@ GroupMembersBecameAsyncNotify::~GroupMembersBecameAsyncNotify() {
 
 void GroupMembersBecameAsyncNotify::SharedDtor() {
   group_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
 }
 
 void GroupMembersBecameAsyncNotify::SetCachedSize(int size) const {
@@ -3480,11 +3509,11 @@ const ::google::protobuf::Descriptor* GroupMembersBecameAsyncNotify::descriptor(
 }
 
 const GroupMembersBecameAsyncNotify& GroupMembersBecameAsyncNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-GroupMembersBecameAsyncNotify* GroupMembersBecameAsyncNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<GroupMembersBecameAsyncNotify> GroupMembersBecameAsyncNotify_default_instance_;
 
 GroupMembersBecameAsyncNotify* GroupMembersBecameAsyncNotify::New(::google::protobuf::Arena* arena) const {
   GroupMembersBecameAsyncNotify* n = new GroupMembersBecameAsyncNotify;
@@ -3494,6 +3523,9 @@ GroupMembersBecameAsyncNotify* GroupMembersBecameAsyncNotify::New(::google::prot
   return n;
 }
 
+void GroupMembersBecameAsyncNotify::UnsafeMergeFrom(const GroupMembersBecameAsyncNotify& from) {
+  MergeFrom(from);
+}
 void GroupMembersBecameAsyncNotify::Swap(GroupMembersBecameAsyncNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -3516,37 +3548,37 @@ void GroupMembersBecameAsyncNotify::InternalSwap(GroupMembersBecameAsyncNotify* 
 void GroupMembersBecameAsyncNotify::clear_group_id() {
   group_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& GroupMembersBecameAsyncNotify::group_id() const {
+const ::std::string& GroupMembersBecameAsyncNotify::group_id() const {
   // @@protoc_insertion_point(field_get:zproto.GroupMembersBecameAsyncNotify.group_id)
   return group_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupMembersBecameAsyncNotify::set_group_id(const ::std::string& value) {
+void GroupMembersBecameAsyncNotify::set_group_id(const ::std::string& value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.GroupMembersBecameAsyncNotify.group_id)
 }
- void GroupMembersBecameAsyncNotify::set_group_id(const char* value) {
+void GroupMembersBecameAsyncNotify::set_group_id(const char* value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.GroupMembersBecameAsyncNotify.group_id)
 }
- void GroupMembersBecameAsyncNotify::set_group_id(const char* value, size_t size) {
+void GroupMembersBecameAsyncNotify::set_group_id(const char* value, size_t size) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.GroupMembersBecameAsyncNotify.group_id)
 }
- ::std::string* GroupMembersBecameAsyncNotify::mutable_group_id() {
+::std::string* GroupMembersBecameAsyncNotify::mutable_group_id() {
   
   // @@protoc_insertion_point(field_mutable:zproto.GroupMembersBecameAsyncNotify.group_id)
   return group_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* GroupMembersBecameAsyncNotify::release_group_id() {
+::std::string* GroupMembersBecameAsyncNotify::release_group_id() {
   // @@protoc_insertion_point(field_release:zproto.GroupMembersBecameAsyncNotify.group_id)
   
   return group_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupMembersBecameAsyncNotify::set_allocated_group_id(::std::string* group_id) {
+void GroupMembersBecameAsyncNotify::set_allocated_group_id(::std::string* group_id) {
   if (group_id != NULL) {
     
   } else {
@@ -3556,6 +3588,9 @@ void GroupMembersBecameAsyncNotify::clear_group_id() {
   // @@protoc_insertion_point(field_set_allocated:zproto.GroupMembersBecameAsyncNotify.group_id)
 }
 
+inline const GroupMembersBecameAsyncNotify* GroupMembersBecameAsyncNotify::internal_default_instance() {
+  return &GroupMembersBecameAsyncNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -3567,27 +3602,25 @@ const int GroupMembersUpdatedNotify::kMembersFieldNumber;
 
 GroupMembersUpdatedNotify::GroupMembersUpdatedNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.GroupMembersUpdatedNotify)
 }
 
 void GroupMembersUpdatedNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 GroupMembersUpdatedNotify::GroupMembersUpdatedNotify(const GroupMembersUpdatedNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.GroupMembersUpdatedNotify)
 }
 
 void GroupMembersUpdatedNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
   group_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _cached_size_ = 0;
 }
 
 GroupMembersUpdatedNotify::~GroupMembersUpdatedNotify() {
@@ -3597,8 +3630,6 @@ GroupMembersUpdatedNotify::~GroupMembersUpdatedNotify() {
 
 void GroupMembersUpdatedNotify::SharedDtor() {
   group_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
 }
 
 void GroupMembersUpdatedNotify::SetCachedSize(int size) const {
@@ -3612,11 +3643,11 @@ const ::google::protobuf::Descriptor* GroupMembersUpdatedNotify::descriptor() {
 }
 
 const GroupMembersUpdatedNotify& GroupMembersUpdatedNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-GroupMembersUpdatedNotify* GroupMembersUpdatedNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<GroupMembersUpdatedNotify> GroupMembersUpdatedNotify_default_instance_;
 
 GroupMembersUpdatedNotify* GroupMembersUpdatedNotify::New(::google::protobuf::Arena* arena) const {
   GroupMembersUpdatedNotify* n = new GroupMembersUpdatedNotify;
@@ -3626,6 +3657,9 @@ GroupMembersUpdatedNotify* GroupMembersUpdatedNotify::New(::google::protobuf::Ar
   return n;
 }
 
+void GroupMembersUpdatedNotify::UnsafeMergeFrom(const GroupMembersUpdatedNotify& from) {
+  MergeFrom(from);
+}
 void GroupMembersUpdatedNotify::Swap(GroupMembersUpdatedNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -3648,37 +3682,37 @@ void GroupMembersUpdatedNotify::InternalSwap(GroupMembersUpdatedNotify* other) {
 void GroupMembersUpdatedNotify::clear_group_id() {
   group_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& GroupMembersUpdatedNotify::group_id() const {
+const ::std::string& GroupMembersUpdatedNotify::group_id() const {
   // @@protoc_insertion_point(field_get:zproto.GroupMembersUpdatedNotify.group_id)
   return group_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupMembersUpdatedNotify::set_group_id(const ::std::string& value) {
+void GroupMembersUpdatedNotify::set_group_id(const ::std::string& value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.GroupMembersUpdatedNotify.group_id)
 }
- void GroupMembersUpdatedNotify::set_group_id(const char* value) {
+void GroupMembersUpdatedNotify::set_group_id(const char* value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.GroupMembersUpdatedNotify.group_id)
 }
- void GroupMembersUpdatedNotify::set_group_id(const char* value, size_t size) {
+void GroupMembersUpdatedNotify::set_group_id(const char* value, size_t size) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.GroupMembersUpdatedNotify.group_id)
 }
- ::std::string* GroupMembersUpdatedNotify::mutable_group_id() {
+::std::string* GroupMembersUpdatedNotify::mutable_group_id() {
   
   // @@protoc_insertion_point(field_mutable:zproto.GroupMembersUpdatedNotify.group_id)
   return group_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* GroupMembersUpdatedNotify::release_group_id() {
+::std::string* GroupMembersUpdatedNotify::release_group_id() {
   // @@protoc_insertion_point(field_release:zproto.GroupMembersUpdatedNotify.group_id)
   
   return group_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupMembersUpdatedNotify::set_allocated_group_id(::std::string* group_id) {
+void GroupMembersUpdatedNotify::set_allocated_group_id(::std::string* group_id) {
   if (group_id != NULL) {
     
   } else {
@@ -3718,6 +3752,9 @@ GroupMembersUpdatedNotify::members() const {
   return members_;
 }
 
+inline const GroupMembersUpdatedNotify* GroupMembersUpdatedNotify::internal_default_instance() {
+  return &GroupMembersUpdatedNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -3731,28 +3768,26 @@ const int GroupMemberDiffNotify::kMembersCountFieldNumber;
 
 GroupMemberDiffNotify::GroupMemberDiffNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.GroupMemberDiffNotify)
 }
 
 void GroupMemberDiffNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 GroupMemberDiffNotify::GroupMemberDiffNotify(const GroupMemberDiffNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.GroupMemberDiffNotify)
 }
 
 void GroupMemberDiffNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
   group_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   members_count_ = 0;
+  _cached_size_ = 0;
 }
 
 GroupMemberDiffNotify::~GroupMemberDiffNotify() {
@@ -3762,8 +3797,6 @@ GroupMemberDiffNotify::~GroupMemberDiffNotify() {
 
 void GroupMemberDiffNotify::SharedDtor() {
   group_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
 }
 
 void GroupMemberDiffNotify::SetCachedSize(int size) const {
@@ -3777,11 +3810,11 @@ const ::google::protobuf::Descriptor* GroupMemberDiffNotify::descriptor() {
 }
 
 const GroupMemberDiffNotify& GroupMemberDiffNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-GroupMemberDiffNotify* GroupMemberDiffNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<GroupMemberDiffNotify> GroupMemberDiffNotify_default_instance_;
 
 GroupMemberDiffNotify* GroupMemberDiffNotify::New(::google::protobuf::Arena* arena) const {
   GroupMemberDiffNotify* n = new GroupMemberDiffNotify;
@@ -3791,6 +3824,9 @@ GroupMemberDiffNotify* GroupMemberDiffNotify::New(::google::protobuf::Arena* are
   return n;
 }
 
+void GroupMemberDiffNotify::UnsafeMergeFrom(const GroupMemberDiffNotify& from) {
+  MergeFrom(from);
+}
 void GroupMemberDiffNotify::Swap(GroupMemberDiffNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -3813,37 +3849,37 @@ void GroupMemberDiffNotify::InternalSwap(GroupMemberDiffNotify* other) {
 void GroupMemberDiffNotify::clear_group_id() {
   group_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& GroupMemberDiffNotify::group_id() const {
+const ::std::string& GroupMemberDiffNotify::group_id() const {
   // @@protoc_insertion_point(field_get:zproto.GroupMemberDiffNotify.group_id)
   return group_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupMemberDiffNotify::set_group_id(const ::std::string& value) {
+void GroupMemberDiffNotify::set_group_id(const ::std::string& value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.GroupMemberDiffNotify.group_id)
 }
- void GroupMemberDiffNotify::set_group_id(const char* value) {
+void GroupMemberDiffNotify::set_group_id(const char* value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.GroupMemberDiffNotify.group_id)
 }
- void GroupMemberDiffNotify::set_group_id(const char* value, size_t size) {
+void GroupMemberDiffNotify::set_group_id(const char* value, size_t size) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.GroupMemberDiffNotify.group_id)
 }
- ::std::string* GroupMemberDiffNotify::mutable_group_id() {
+::std::string* GroupMemberDiffNotify::mutable_group_id() {
   
   // @@protoc_insertion_point(field_mutable:zproto.GroupMemberDiffNotify.group_id)
   return group_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* GroupMemberDiffNotify::release_group_id() {
+::std::string* GroupMemberDiffNotify::release_group_id() {
   // @@protoc_insertion_point(field_release:zproto.GroupMemberDiffNotify.group_id)
   
   return group_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupMemberDiffNotify::set_allocated_group_id(::std::string* group_id) {
+void GroupMemberDiffNotify::set_allocated_group_id(::std::string* group_id) {
   if (group_id != NULL) {
     
   } else {
@@ -3860,24 +3896,24 @@ int GroupMemberDiffNotify::removed_users_size() const {
 void GroupMemberDiffNotify::clear_removed_users() {
   removed_users_.Clear();
 }
- ::google::protobuf::int32 GroupMemberDiffNotify::removed_users(int index) const {
+::google::protobuf::int32 GroupMemberDiffNotify::removed_users(int index) const {
   // @@protoc_insertion_point(field_get:zproto.GroupMemberDiffNotify.removed_users)
   return removed_users_.Get(index);
 }
- void GroupMemberDiffNotify::set_removed_users(int index, ::google::protobuf::int32 value) {
+void GroupMemberDiffNotify::set_removed_users(int index, ::google::protobuf::int32 value) {
   removed_users_.Set(index, value);
   // @@protoc_insertion_point(field_set:zproto.GroupMemberDiffNotify.removed_users)
 }
- void GroupMemberDiffNotify::add_removed_users(::google::protobuf::int32 value) {
+void GroupMemberDiffNotify::add_removed_users(::google::protobuf::int32 value) {
   removed_users_.Add(value);
   // @@protoc_insertion_point(field_add:zproto.GroupMemberDiffNotify.removed_users)
 }
- const ::google::protobuf::RepeatedField< ::google::protobuf::int32 >&
+const ::google::protobuf::RepeatedField< ::google::protobuf::int32 >&
 GroupMemberDiffNotify::removed_users() const {
   // @@protoc_insertion_point(field_list:zproto.GroupMemberDiffNotify.removed_users)
   return removed_users_;
 }
- ::google::protobuf::RepeatedField< ::google::protobuf::int32 >*
+::google::protobuf::RepeatedField< ::google::protobuf::int32 >*
 GroupMemberDiffNotify::mutable_removed_users() {
   // @@protoc_insertion_point(field_mutable_list:zproto.GroupMemberDiffNotify.removed_users)
   return &removed_users_;
@@ -3917,16 +3953,19 @@ GroupMemberDiffNotify::added_members() const {
 void GroupMemberDiffNotify::clear_members_count() {
   members_count_ = 0;
 }
- ::google::protobuf::int32 GroupMemberDiffNotify::members_count() const {
+::google::protobuf::int32 GroupMemberDiffNotify::members_count() const {
   // @@protoc_insertion_point(field_get:zproto.GroupMemberDiffNotify.members_count)
   return members_count_;
 }
- void GroupMemberDiffNotify::set_members_count(::google::protobuf::int32 value) {
+void GroupMemberDiffNotify::set_members_count(::google::protobuf::int32 value) {
   
   members_count_ = value;
   // @@protoc_insertion_point(field_set:zproto.GroupMemberDiffNotify.members_count)
 }
 
+inline const GroupMemberDiffNotify* GroupMemberDiffNotify::internal_default_instance() {
+  return &GroupMemberDiffNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -3938,28 +3977,26 @@ const int GroupMembersCountChangedNotify::kMembersCountFieldNumber;
 
 GroupMembersCountChangedNotify::GroupMembersCountChangedNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.GroupMembersCountChangedNotify)
 }
 
 void GroupMembersCountChangedNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 GroupMembersCountChangedNotify::GroupMembersCountChangedNotify(const GroupMembersCountChangedNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.GroupMembersCountChangedNotify)
 }
 
 void GroupMembersCountChangedNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
   group_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   members_count_ = 0;
+  _cached_size_ = 0;
 }
 
 GroupMembersCountChangedNotify::~GroupMembersCountChangedNotify() {
@@ -3969,8 +4006,6 @@ GroupMembersCountChangedNotify::~GroupMembersCountChangedNotify() {
 
 void GroupMembersCountChangedNotify::SharedDtor() {
   group_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
 }
 
 void GroupMembersCountChangedNotify::SetCachedSize(int size) const {
@@ -3984,11 +4019,11 @@ const ::google::protobuf::Descriptor* GroupMembersCountChangedNotify::descriptor
 }
 
 const GroupMembersCountChangedNotify& GroupMembersCountChangedNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-GroupMembersCountChangedNotify* GroupMembersCountChangedNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<GroupMembersCountChangedNotify> GroupMembersCountChangedNotify_default_instance_;
 
 GroupMembersCountChangedNotify* GroupMembersCountChangedNotify::New(::google::protobuf::Arena* arena) const {
   GroupMembersCountChangedNotify* n = new GroupMembersCountChangedNotify;
@@ -3998,6 +4033,9 @@ GroupMembersCountChangedNotify* GroupMembersCountChangedNotify::New(::google::pr
   return n;
 }
 
+void GroupMembersCountChangedNotify::UnsafeMergeFrom(const GroupMembersCountChangedNotify& from) {
+  MergeFrom(from);
+}
 void GroupMembersCountChangedNotify::Swap(GroupMembersCountChangedNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -4020,37 +4058,37 @@ void GroupMembersCountChangedNotify::InternalSwap(GroupMembersCountChangedNotify
 void GroupMembersCountChangedNotify::clear_group_id() {
   group_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& GroupMembersCountChangedNotify::group_id() const {
+const ::std::string& GroupMembersCountChangedNotify::group_id() const {
   // @@protoc_insertion_point(field_get:zproto.GroupMembersCountChangedNotify.group_id)
   return group_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupMembersCountChangedNotify::set_group_id(const ::std::string& value) {
+void GroupMembersCountChangedNotify::set_group_id(const ::std::string& value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.GroupMembersCountChangedNotify.group_id)
 }
- void GroupMembersCountChangedNotify::set_group_id(const char* value) {
+void GroupMembersCountChangedNotify::set_group_id(const char* value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.GroupMembersCountChangedNotify.group_id)
 }
- void GroupMembersCountChangedNotify::set_group_id(const char* value, size_t size) {
+void GroupMembersCountChangedNotify::set_group_id(const char* value, size_t size) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.GroupMembersCountChangedNotify.group_id)
 }
- ::std::string* GroupMembersCountChangedNotify::mutable_group_id() {
+::std::string* GroupMembersCountChangedNotify::mutable_group_id() {
   
   // @@protoc_insertion_point(field_mutable:zproto.GroupMembersCountChangedNotify.group_id)
   return group_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* GroupMembersCountChangedNotify::release_group_id() {
+::std::string* GroupMembersCountChangedNotify::release_group_id() {
   // @@protoc_insertion_point(field_release:zproto.GroupMembersCountChangedNotify.group_id)
   
   return group_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupMembersCountChangedNotify::set_allocated_group_id(::std::string* group_id) {
+void GroupMembersCountChangedNotify::set_allocated_group_id(::std::string* group_id) {
   if (group_id != NULL) {
     
   } else {
@@ -4064,16 +4102,19 @@ void GroupMembersCountChangedNotify::clear_group_id() {
 void GroupMembersCountChangedNotify::clear_members_count() {
   members_count_ = 0;
 }
- ::google::protobuf::int32 GroupMembersCountChangedNotify::members_count() const {
+::google::protobuf::int32 GroupMembersCountChangedNotify::members_count() const {
   // @@protoc_insertion_point(field_get:zproto.GroupMembersCountChangedNotify.members_count)
   return members_count_;
 }
- void GroupMembersCountChangedNotify::set_members_count(::google::protobuf::int32 value) {
+void GroupMembersCountChangedNotify::set_members_count(::google::protobuf::int32 value) {
   
   members_count_ = value;
   // @@protoc_insertion_point(field_set:zproto.GroupMembersCountChangedNotify.members_count)
 }
 
+inline const GroupMembersCountChangedNotify* GroupMembersCountChangedNotify::internal_default_instance() {
+  return &GroupMembersCountChangedNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -4086,29 +4127,27 @@ const int GroupMemberAdminChangedNotify::kIsAdminFieldNumber;
 
 GroupMemberAdminChangedNotify::GroupMemberAdminChangedNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.GroupMemberAdminChangedNotify)
 }
 
 void GroupMemberAdminChangedNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 GroupMemberAdminChangedNotify::GroupMemberAdminChangedNotify(const GroupMemberAdminChangedNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.GroupMemberAdminChangedNotify)
 }
 
 void GroupMemberAdminChangedNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
   group_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   user_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   is_admin_ = false;
+  _cached_size_ = 0;
 }
 
 GroupMemberAdminChangedNotify::~GroupMemberAdminChangedNotify() {
@@ -4119,8 +4158,6 @@ GroupMemberAdminChangedNotify::~GroupMemberAdminChangedNotify() {
 void GroupMemberAdminChangedNotify::SharedDtor() {
   group_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   user_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
 }
 
 void GroupMemberAdminChangedNotify::SetCachedSize(int size) const {
@@ -4134,11 +4171,11 @@ const ::google::protobuf::Descriptor* GroupMemberAdminChangedNotify::descriptor(
 }
 
 const GroupMemberAdminChangedNotify& GroupMemberAdminChangedNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-GroupMemberAdminChangedNotify* GroupMemberAdminChangedNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<GroupMemberAdminChangedNotify> GroupMemberAdminChangedNotify_default_instance_;
 
 GroupMemberAdminChangedNotify* GroupMemberAdminChangedNotify::New(::google::protobuf::Arena* arena) const {
   GroupMemberAdminChangedNotify* n = new GroupMemberAdminChangedNotify;
@@ -4148,6 +4185,9 @@ GroupMemberAdminChangedNotify* GroupMemberAdminChangedNotify::New(::google::prot
   return n;
 }
 
+void GroupMemberAdminChangedNotify::UnsafeMergeFrom(const GroupMemberAdminChangedNotify& from) {
+  MergeFrom(from);
+}
 void GroupMemberAdminChangedNotify::Swap(GroupMemberAdminChangedNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -4170,37 +4210,37 @@ void GroupMemberAdminChangedNotify::InternalSwap(GroupMemberAdminChangedNotify* 
 void GroupMemberAdminChangedNotify::clear_group_id() {
   group_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& GroupMemberAdminChangedNotify::group_id() const {
+const ::std::string& GroupMemberAdminChangedNotify::group_id() const {
   // @@protoc_insertion_point(field_get:zproto.GroupMemberAdminChangedNotify.group_id)
   return group_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupMemberAdminChangedNotify::set_group_id(const ::std::string& value) {
+void GroupMemberAdminChangedNotify::set_group_id(const ::std::string& value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.GroupMemberAdminChangedNotify.group_id)
 }
- void GroupMemberAdminChangedNotify::set_group_id(const char* value) {
+void GroupMemberAdminChangedNotify::set_group_id(const char* value) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.GroupMemberAdminChangedNotify.group_id)
 }
- void GroupMemberAdminChangedNotify::set_group_id(const char* value, size_t size) {
+void GroupMemberAdminChangedNotify::set_group_id(const char* value, size_t size) {
   
   group_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.GroupMemberAdminChangedNotify.group_id)
 }
- ::std::string* GroupMemberAdminChangedNotify::mutable_group_id() {
+::std::string* GroupMemberAdminChangedNotify::mutable_group_id() {
   
   // @@protoc_insertion_point(field_mutable:zproto.GroupMemberAdminChangedNotify.group_id)
   return group_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* GroupMemberAdminChangedNotify::release_group_id() {
+::std::string* GroupMemberAdminChangedNotify::release_group_id() {
   // @@protoc_insertion_point(field_release:zproto.GroupMemberAdminChangedNotify.group_id)
   
   return group_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupMemberAdminChangedNotify::set_allocated_group_id(::std::string* group_id) {
+void GroupMemberAdminChangedNotify::set_allocated_group_id(::std::string* group_id) {
   if (group_id != NULL) {
     
   } else {
@@ -4214,37 +4254,37 @@ void GroupMemberAdminChangedNotify::clear_group_id() {
 void GroupMemberAdminChangedNotify::clear_user_id() {
   user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& GroupMemberAdminChangedNotify::user_id() const {
+const ::std::string& GroupMemberAdminChangedNotify::user_id() const {
   // @@protoc_insertion_point(field_get:zproto.GroupMemberAdminChangedNotify.user_id)
   return user_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupMemberAdminChangedNotify::set_user_id(const ::std::string& value) {
+void GroupMemberAdminChangedNotify::set_user_id(const ::std::string& value) {
   
   user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.GroupMemberAdminChangedNotify.user_id)
 }
- void GroupMemberAdminChangedNotify::set_user_id(const char* value) {
+void GroupMemberAdminChangedNotify::set_user_id(const char* value) {
   
   user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.GroupMemberAdminChangedNotify.user_id)
 }
- void GroupMemberAdminChangedNotify::set_user_id(const char* value, size_t size) {
+void GroupMemberAdminChangedNotify::set_user_id(const char* value, size_t size) {
   
   user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.GroupMemberAdminChangedNotify.user_id)
 }
- ::std::string* GroupMemberAdminChangedNotify::mutable_user_id() {
+::std::string* GroupMemberAdminChangedNotify::mutable_user_id() {
   
   // @@protoc_insertion_point(field_mutable:zproto.GroupMemberAdminChangedNotify.user_id)
   return user_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* GroupMemberAdminChangedNotify::release_user_id() {
+::std::string* GroupMemberAdminChangedNotify::release_user_id() {
   // @@protoc_insertion_point(field_release:zproto.GroupMemberAdminChangedNotify.user_id)
   
   return user_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void GroupMemberAdminChangedNotify::set_allocated_user_id(::std::string* user_id) {
+void GroupMemberAdminChangedNotify::set_allocated_user_id(::std::string* user_id) {
   if (user_id != NULL) {
     
   } else {
@@ -4258,16 +4298,19 @@ void GroupMemberAdminChangedNotify::clear_user_id() {
 void GroupMemberAdminChangedNotify::clear_is_admin() {
   is_admin_ = false;
 }
- bool GroupMemberAdminChangedNotify::is_admin() const {
+bool GroupMemberAdminChangedNotify::is_admin() const {
   // @@protoc_insertion_point(field_get:zproto.GroupMemberAdminChangedNotify.is_admin)
   return is_admin_;
 }
- void GroupMemberAdminChangedNotify::set_is_admin(bool value) {
+void GroupMemberAdminChangedNotify::set_is_admin(bool value) {
   
   is_admin_ = value;
   // @@protoc_insertion_point(field_set:zproto.GroupMemberAdminChangedNotify.is_admin)
 }
 
+inline const GroupMemberAdminChangedNotify* GroupMemberAdminChangedNotify::internal_default_instance() {
+  return &GroupMemberAdminChangedNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -4281,28 +4324,26 @@ const int CreateGroupReq::kOptimizationsFieldNumber;
 
 CreateGroupReq::CreateGroupReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.CreateGroupReq)
 }
 
 void CreateGroupReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 CreateGroupReq::CreateGroupReq(const CreateGroupReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.CreateGroupReq)
 }
 
 void CreateGroupReq::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  rid_ = GOOGLE_LONGLONG(0);
   title_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  rid_ = GOOGLE_LONGLONG(0);
+  _cached_size_ = 0;
 }
 
 CreateGroupReq::~CreateGroupReq() {
@@ -4312,8 +4353,6 @@ CreateGroupReq::~CreateGroupReq() {
 
 void CreateGroupReq::SharedDtor() {
   title_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
 }
 
 void CreateGroupReq::SetCachedSize(int size) const {
@@ -4327,11 +4366,11 @@ const ::google::protobuf::Descriptor* CreateGroupReq::descriptor() {
 }
 
 const CreateGroupReq& CreateGroupReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-CreateGroupReq* CreateGroupReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<CreateGroupReq> CreateGroupReq_default_instance_;
 
 CreateGroupReq* CreateGroupReq::New(::google::protobuf::Arena* arena) const {
   CreateGroupReq* n = new CreateGroupReq;
@@ -4341,6 +4380,9 @@ CreateGroupReq* CreateGroupReq::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void CreateGroupReq::UnsafeMergeFrom(const CreateGroupReq& from) {
+  MergeFrom(from);
+}
 void CreateGroupReq::Swap(CreateGroupReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -4363,11 +4405,11 @@ void CreateGroupReq::InternalSwap(CreateGroupReq* other) {
 void CreateGroupReq::clear_rid() {
   rid_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 CreateGroupReq::rid() const {
+::google::protobuf::int64 CreateGroupReq::rid() const {
   // @@protoc_insertion_point(field_get:zproto.CreateGroupReq.rid)
   return rid_;
 }
- void CreateGroupReq::set_rid(::google::protobuf::int64 value) {
+void CreateGroupReq::set_rid(::google::protobuf::int64 value) {
   
   rid_ = value;
   // @@protoc_insertion_point(field_set:zproto.CreateGroupReq.rid)
@@ -4377,37 +4419,37 @@ void CreateGroupReq::clear_rid() {
 void CreateGroupReq::clear_title() {
   title_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& CreateGroupReq::title() const {
+const ::std::string& CreateGroupReq::title() const {
   // @@protoc_insertion_point(field_get:zproto.CreateGroupReq.title)
   return title_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void CreateGroupReq::set_title(const ::std::string& value) {
+void CreateGroupReq::set_title(const ::std::string& value) {
   
   title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.CreateGroupReq.title)
 }
- void CreateGroupReq::set_title(const char* value) {
+void CreateGroupReq::set_title(const char* value) {
   
   title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.CreateGroupReq.title)
 }
- void CreateGroupReq::set_title(const char* value, size_t size) {
+void CreateGroupReq::set_title(const char* value, size_t size) {
   
   title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.CreateGroupReq.title)
 }
- ::std::string* CreateGroupReq::mutable_title() {
+::std::string* CreateGroupReq::mutable_title() {
   
   // @@protoc_insertion_point(field_mutable:zproto.CreateGroupReq.title)
   return title_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* CreateGroupReq::release_title() {
+::std::string* CreateGroupReq::release_title() {
   // @@protoc_insertion_point(field_release:zproto.CreateGroupReq.title)
   
   return title_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void CreateGroupReq::set_allocated_title(::std::string* title) {
+void CreateGroupReq::set_allocated_title(::std::string* title) {
   if (title != NULL) {
     
   } else {
@@ -4454,29 +4496,32 @@ int CreateGroupReq::optimizations_size() const {
 void CreateGroupReq::clear_optimizations() {
   optimizations_.Clear();
 }
- ::zproto::UpdateOptimization CreateGroupReq::optimizations(int index) const {
+::zproto::UpdateOptimization CreateGroupReq::optimizations(int index) const {
   // @@protoc_insertion_point(field_get:zproto.CreateGroupReq.optimizations)
   return static_cast< ::zproto::UpdateOptimization >(optimizations_.Get(index));
 }
- void CreateGroupReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
+void CreateGroupReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
   optimizations_.Set(index, value);
   // @@protoc_insertion_point(field_set:zproto.CreateGroupReq.optimizations)
 }
- void CreateGroupReq::add_optimizations(::zproto::UpdateOptimization value) {
+void CreateGroupReq::add_optimizations(::zproto::UpdateOptimization value) {
   optimizations_.Add(value);
   // @@protoc_insertion_point(field_add:zproto.CreateGroupReq.optimizations)
 }
- const ::google::protobuf::RepeatedField<int>&
+const ::google::protobuf::RepeatedField<int>&
 CreateGroupReq::optimizations() const {
   // @@protoc_insertion_point(field_list:zproto.CreateGroupReq.optimizations)
   return optimizations_;
 }
- ::google::protobuf::RepeatedField<int>*
+::google::protobuf::RepeatedField<int>*
 CreateGroupReq::mutable_optimizations() {
   // @@protoc_insertion_point(field_mutable_list:zproto.CreateGroupReq.optimizations)
   return &optimizations_;
 }
 
+inline const CreateGroupReq* CreateGroupReq::internal_default_instance() {
+  return &CreateGroupReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -4491,29 +4536,29 @@ const int CreateGroupRsp::kUserPeersFieldNumber;
 
 CreateGroupRsp::CreateGroupRsp()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.CreateGroupRsp)
 }
 
 void CreateGroupRsp::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  group_ = const_cast< ::zproto::Group*>(&::zproto::Group::default_instance());
+  group_ = const_cast< ::zproto::Group*>(
+      ::zproto::Group::internal_default_instance());
 }
 
 CreateGroupRsp::CreateGroupRsp(const CreateGroupRsp& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.CreateGroupRsp)
 }
 
 void CreateGroupRsp::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
-  seq_ = 0;
-  date_ = GOOGLE_LONGLONG(0);
   group_ = NULL;
+  ::memset(&date_, 0, reinterpret_cast<char*>(&seq_) -
+    reinterpret_cast<char*>(&date_) + sizeof(seq_));
+  _cached_size_ = 0;
 }
 
 CreateGroupRsp::~CreateGroupRsp() {
@@ -4522,7 +4567,7 @@ CreateGroupRsp::~CreateGroupRsp() {
 }
 
 void CreateGroupRsp::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &CreateGroupRsp_default_instance_.get()) {
     delete group_;
   }
 }
@@ -4538,11 +4583,11 @@ const ::google::protobuf::Descriptor* CreateGroupRsp::descriptor() {
 }
 
 const CreateGroupRsp& CreateGroupRsp::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-CreateGroupRsp* CreateGroupRsp::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<CreateGroupRsp> CreateGroupRsp_default_instance_;
 
 CreateGroupRsp* CreateGroupRsp::New(::google::protobuf::Arena* arena) const {
   CreateGroupRsp* n = new CreateGroupRsp;
@@ -4552,6 +4597,9 @@ CreateGroupRsp* CreateGroupRsp::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void CreateGroupRsp::UnsafeMergeFrom(const CreateGroupRsp& from) {
+  MergeFrom(from);
+}
 void CreateGroupRsp::Swap(CreateGroupRsp* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -4574,11 +4622,11 @@ void CreateGroupRsp::InternalSwap(CreateGroupRsp* other) {
 void CreateGroupRsp::clear_seq() {
   seq_ = 0;
 }
- ::google::protobuf::int32 CreateGroupRsp::seq() const {
+::google::protobuf::int32 CreateGroupRsp::seq() const {
   // @@protoc_insertion_point(field_get:zproto.CreateGroupRsp.seq)
   return seq_;
 }
- void CreateGroupRsp::set_seq(::google::protobuf::int32 value) {
+void CreateGroupRsp::set_seq(::google::protobuf::int32 value) {
   
   seq_ = value;
   // @@protoc_insertion_point(field_set:zproto.CreateGroupRsp.seq)
@@ -4588,11 +4636,11 @@ void CreateGroupRsp::clear_seq() {
 void CreateGroupRsp::clear_date() {
   date_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 CreateGroupRsp::date() const {
+::google::protobuf::int64 CreateGroupRsp::date() const {
   // @@protoc_insertion_point(field_get:zproto.CreateGroupRsp.date)
   return date_;
 }
- void CreateGroupRsp::set_date(::google::protobuf::int64 value) {
+void CreateGroupRsp::set_date(::google::protobuf::int64 value) {
   
   date_ = value;
   // @@protoc_insertion_point(field_set:zproto.CreateGroupRsp.date)
@@ -4600,7 +4648,7 @@ void CreateGroupRsp::clear_date() {
 
 // optional .zproto.Group group = 3;
 bool CreateGroupRsp::has_group() const {
-  return !_is_default_instance_ && group_ != NULL;
+  return this != internal_default_instance() && group_ != NULL;
 }
 void CreateGroupRsp::clear_group() {
   if (GetArenaNoVirtual() == NULL && group_ != NULL) delete group_;
@@ -4608,7 +4656,8 @@ void CreateGroupRsp::clear_group() {
 }
 const ::zproto::Group& CreateGroupRsp::group() const {
   // @@protoc_insertion_point(field_get:zproto.CreateGroupRsp.group)
-  return group_ != NULL ? *group_ : *default_instance_->group_;
+  return group_ != NULL ? *group_
+                         : *::zproto::Group::internal_default_instance();
 }
 ::zproto::Group* CreateGroupRsp::mutable_group() {
   
@@ -4696,6 +4745,9 @@ CreateGroupRsp::user_peers() const {
   return user_peers_;
 }
 
+inline const CreateGroupRsp* CreateGroupRsp::internal_default_instance() {
+  return &CreateGroupRsp_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -4709,30 +4761,29 @@ const int EditGroupTitleReq::kOptimizationsFieldNumber;
 
 EditGroupTitleReq::EditGroupTitleReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.EditGroupTitleReq)
 }
 
 void EditGroupTitleReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(&::zproto::GroupOutPeer::default_instance());
+  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(
+      ::zproto::GroupOutPeer::internal_default_instance());
 }
 
 EditGroupTitleReq::EditGroupTitleReq(const EditGroupTitleReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.EditGroupTitleReq)
 }
 
 void EditGroupTitleReq::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
+  title_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   group_peer_ = NULL;
   rid_ = GOOGLE_LONGLONG(0);
-  title_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _cached_size_ = 0;
 }
 
 EditGroupTitleReq::~EditGroupTitleReq() {
@@ -4742,7 +4793,7 @@ EditGroupTitleReq::~EditGroupTitleReq() {
 
 void EditGroupTitleReq::SharedDtor() {
   title_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
+  if (this != &EditGroupTitleReq_default_instance_.get()) {
     delete group_peer_;
   }
 }
@@ -4758,11 +4809,11 @@ const ::google::protobuf::Descriptor* EditGroupTitleReq::descriptor() {
 }
 
 const EditGroupTitleReq& EditGroupTitleReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-EditGroupTitleReq* EditGroupTitleReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<EditGroupTitleReq> EditGroupTitleReq_default_instance_;
 
 EditGroupTitleReq* EditGroupTitleReq::New(::google::protobuf::Arena* arena) const {
   EditGroupTitleReq* n = new EditGroupTitleReq;
@@ -4772,6 +4823,9 @@ EditGroupTitleReq* EditGroupTitleReq::New(::google::protobuf::Arena* arena) cons
   return n;
 }
 
+void EditGroupTitleReq::UnsafeMergeFrom(const EditGroupTitleReq& from) {
+  MergeFrom(from);
+}
 void EditGroupTitleReq::Swap(EditGroupTitleReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -4792,7 +4846,7 @@ void EditGroupTitleReq::InternalSwap(EditGroupTitleReq* other) {
 
 // optional .zproto.GroupOutPeer group_peer = 1;
 bool EditGroupTitleReq::has_group_peer() const {
-  return !_is_default_instance_ && group_peer_ != NULL;
+  return this != internal_default_instance() && group_peer_ != NULL;
 }
 void EditGroupTitleReq::clear_group_peer() {
   if (GetArenaNoVirtual() == NULL && group_peer_ != NULL) delete group_peer_;
@@ -4800,7 +4854,8 @@ void EditGroupTitleReq::clear_group_peer() {
 }
 const ::zproto::GroupOutPeer& EditGroupTitleReq::group_peer() const {
   // @@protoc_insertion_point(field_get:zproto.EditGroupTitleReq.group_peer)
-  return group_peer_ != NULL ? *group_peer_ : *default_instance_->group_peer_;
+  return group_peer_ != NULL ? *group_peer_
+                         : *::zproto::GroupOutPeer::internal_default_instance();
 }
 ::zproto::GroupOutPeer* EditGroupTitleReq::mutable_group_peer() {
   
@@ -4832,11 +4887,11 @@ void EditGroupTitleReq::set_allocated_group_peer(::zproto::GroupOutPeer* group_p
 void EditGroupTitleReq::clear_rid() {
   rid_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 EditGroupTitleReq::rid() const {
+::google::protobuf::int64 EditGroupTitleReq::rid() const {
   // @@protoc_insertion_point(field_get:zproto.EditGroupTitleReq.rid)
   return rid_;
 }
- void EditGroupTitleReq::set_rid(::google::protobuf::int64 value) {
+void EditGroupTitleReq::set_rid(::google::protobuf::int64 value) {
   
   rid_ = value;
   // @@protoc_insertion_point(field_set:zproto.EditGroupTitleReq.rid)
@@ -4846,37 +4901,37 @@ void EditGroupTitleReq::clear_rid() {
 void EditGroupTitleReq::clear_title() {
   title_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& EditGroupTitleReq::title() const {
+const ::std::string& EditGroupTitleReq::title() const {
   // @@protoc_insertion_point(field_get:zproto.EditGroupTitleReq.title)
   return title_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void EditGroupTitleReq::set_title(const ::std::string& value) {
+void EditGroupTitleReq::set_title(const ::std::string& value) {
   
   title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.EditGroupTitleReq.title)
 }
- void EditGroupTitleReq::set_title(const char* value) {
+void EditGroupTitleReq::set_title(const char* value) {
   
   title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.EditGroupTitleReq.title)
 }
- void EditGroupTitleReq::set_title(const char* value, size_t size) {
+void EditGroupTitleReq::set_title(const char* value, size_t size) {
   
   title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.EditGroupTitleReq.title)
 }
- ::std::string* EditGroupTitleReq::mutable_title() {
+::std::string* EditGroupTitleReq::mutable_title() {
   
   // @@protoc_insertion_point(field_mutable:zproto.EditGroupTitleReq.title)
   return title_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* EditGroupTitleReq::release_title() {
+::std::string* EditGroupTitleReq::release_title() {
   // @@protoc_insertion_point(field_release:zproto.EditGroupTitleReq.title)
   
   return title_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void EditGroupTitleReq::set_allocated_title(::std::string* title) {
+void EditGroupTitleReq::set_allocated_title(::std::string* title) {
   if (title != NULL) {
     
   } else {
@@ -4893,29 +4948,32 @@ int EditGroupTitleReq::optimizations_size() const {
 void EditGroupTitleReq::clear_optimizations() {
   optimizations_.Clear();
 }
- ::zproto::UpdateOptimization EditGroupTitleReq::optimizations(int index) const {
+::zproto::UpdateOptimization EditGroupTitleReq::optimizations(int index) const {
   // @@protoc_insertion_point(field_get:zproto.EditGroupTitleReq.optimizations)
   return static_cast< ::zproto::UpdateOptimization >(optimizations_.Get(index));
 }
- void EditGroupTitleReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
+void EditGroupTitleReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
   optimizations_.Set(index, value);
   // @@protoc_insertion_point(field_set:zproto.EditGroupTitleReq.optimizations)
 }
- void EditGroupTitleReq::add_optimizations(::zproto::UpdateOptimization value) {
+void EditGroupTitleReq::add_optimizations(::zproto::UpdateOptimization value) {
   optimizations_.Add(value);
   // @@protoc_insertion_point(field_add:zproto.EditGroupTitleReq.optimizations)
 }
- const ::google::protobuf::RepeatedField<int>&
+const ::google::protobuf::RepeatedField<int>&
 EditGroupTitleReq::optimizations() const {
   // @@protoc_insertion_point(field_list:zproto.EditGroupTitleReq.optimizations)
   return optimizations_;
 }
- ::google::protobuf::RepeatedField<int>*
+::google::protobuf::RepeatedField<int>*
 EditGroupTitleReq::mutable_optimizations() {
   // @@protoc_insertion_point(field_mutable_list:zproto.EditGroupTitleReq.optimizations)
   return &optimizations_;
 }
 
+inline const EditGroupTitleReq* EditGroupTitleReq::internal_default_instance() {
+  return &EditGroupTitleReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -4929,31 +4987,31 @@ const int EditGroupAvatarReq::kOptimizationsFieldNumber;
 
 EditGroupAvatarReq::EditGroupAvatarReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.EditGroupAvatarReq)
 }
 
 void EditGroupAvatarReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(&::zproto::GroupOutPeer::default_instance());
-  file_location_ = const_cast< ::zproto::FileLocation*>(&::zproto::FileLocation::default_instance());
+  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(
+      ::zproto::GroupOutPeer::internal_default_instance());
+  file_location_ = const_cast< ::zproto::FileLocation*>(
+      ::zproto::FileLocation::internal_default_instance());
 }
 
 EditGroupAvatarReq::EditGroupAvatarReq(const EditGroupAvatarReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.EditGroupAvatarReq)
 }
 
 void EditGroupAvatarReq::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  group_peer_ = NULL;
   rid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  group_peer_ = NULL;
   file_location_ = NULL;
+  _cached_size_ = 0;
 }
 
 EditGroupAvatarReq::~EditGroupAvatarReq() {
@@ -4963,7 +5021,7 @@ EditGroupAvatarReq::~EditGroupAvatarReq() {
 
 void EditGroupAvatarReq::SharedDtor() {
   rid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
+  if (this != &EditGroupAvatarReq_default_instance_.get()) {
     delete group_peer_;
     delete file_location_;
   }
@@ -4980,11 +5038,11 @@ const ::google::protobuf::Descriptor* EditGroupAvatarReq::descriptor() {
 }
 
 const EditGroupAvatarReq& EditGroupAvatarReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-EditGroupAvatarReq* EditGroupAvatarReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<EditGroupAvatarReq> EditGroupAvatarReq_default_instance_;
 
 EditGroupAvatarReq* EditGroupAvatarReq::New(::google::protobuf::Arena* arena) const {
   EditGroupAvatarReq* n = new EditGroupAvatarReq;
@@ -4994,6 +5052,9 @@ EditGroupAvatarReq* EditGroupAvatarReq::New(::google::protobuf::Arena* arena) co
   return n;
 }
 
+void EditGroupAvatarReq::UnsafeMergeFrom(const EditGroupAvatarReq& from) {
+  MergeFrom(from);
+}
 void EditGroupAvatarReq::Swap(EditGroupAvatarReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -5014,7 +5075,7 @@ void EditGroupAvatarReq::InternalSwap(EditGroupAvatarReq* other) {
 
 // optional .zproto.GroupOutPeer group_peer = 1;
 bool EditGroupAvatarReq::has_group_peer() const {
-  return !_is_default_instance_ && group_peer_ != NULL;
+  return this != internal_default_instance() && group_peer_ != NULL;
 }
 void EditGroupAvatarReq::clear_group_peer() {
   if (GetArenaNoVirtual() == NULL && group_peer_ != NULL) delete group_peer_;
@@ -5022,7 +5083,8 @@ void EditGroupAvatarReq::clear_group_peer() {
 }
 const ::zproto::GroupOutPeer& EditGroupAvatarReq::group_peer() const {
   // @@protoc_insertion_point(field_get:zproto.EditGroupAvatarReq.group_peer)
-  return group_peer_ != NULL ? *group_peer_ : *default_instance_->group_peer_;
+  return group_peer_ != NULL ? *group_peer_
+                         : *::zproto::GroupOutPeer::internal_default_instance();
 }
 ::zproto::GroupOutPeer* EditGroupAvatarReq::mutable_group_peer() {
   
@@ -5054,37 +5116,37 @@ void EditGroupAvatarReq::set_allocated_group_peer(::zproto::GroupOutPeer* group_
 void EditGroupAvatarReq::clear_rid() {
   rid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& EditGroupAvatarReq::rid() const {
+const ::std::string& EditGroupAvatarReq::rid() const {
   // @@protoc_insertion_point(field_get:zproto.EditGroupAvatarReq.rid)
   return rid_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void EditGroupAvatarReq::set_rid(const ::std::string& value) {
+void EditGroupAvatarReq::set_rid(const ::std::string& value) {
   
   rid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.EditGroupAvatarReq.rid)
 }
- void EditGroupAvatarReq::set_rid(const char* value) {
+void EditGroupAvatarReq::set_rid(const char* value) {
   
   rid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.EditGroupAvatarReq.rid)
 }
- void EditGroupAvatarReq::set_rid(const char* value, size_t size) {
+void EditGroupAvatarReq::set_rid(const char* value, size_t size) {
   
   rid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.EditGroupAvatarReq.rid)
 }
- ::std::string* EditGroupAvatarReq::mutable_rid() {
+::std::string* EditGroupAvatarReq::mutable_rid() {
   
   // @@protoc_insertion_point(field_mutable:zproto.EditGroupAvatarReq.rid)
   return rid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* EditGroupAvatarReq::release_rid() {
+::std::string* EditGroupAvatarReq::release_rid() {
   // @@protoc_insertion_point(field_release:zproto.EditGroupAvatarReq.rid)
   
   return rid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void EditGroupAvatarReq::set_allocated_rid(::std::string* rid) {
+void EditGroupAvatarReq::set_allocated_rid(::std::string* rid) {
   if (rid != NULL) {
     
   } else {
@@ -5096,7 +5158,7 @@ void EditGroupAvatarReq::clear_rid() {
 
 // optional .zproto.FileLocation file_location = 3;
 bool EditGroupAvatarReq::has_file_location() const {
-  return !_is_default_instance_ && file_location_ != NULL;
+  return this != internal_default_instance() && file_location_ != NULL;
 }
 void EditGroupAvatarReq::clear_file_location() {
   if (GetArenaNoVirtual() == NULL && file_location_ != NULL) delete file_location_;
@@ -5104,7 +5166,8 @@ void EditGroupAvatarReq::clear_file_location() {
 }
 const ::zproto::FileLocation& EditGroupAvatarReq::file_location() const {
   // @@protoc_insertion_point(field_get:zproto.EditGroupAvatarReq.file_location)
-  return file_location_ != NULL ? *file_location_ : *default_instance_->file_location_;
+  return file_location_ != NULL ? *file_location_
+                         : *::zproto::FileLocation::internal_default_instance();
 }
 ::zproto::FileLocation* EditGroupAvatarReq::mutable_file_location() {
   
@@ -5139,29 +5202,32 @@ int EditGroupAvatarReq::optimizations_size() const {
 void EditGroupAvatarReq::clear_optimizations() {
   optimizations_.Clear();
 }
- ::zproto::UpdateOptimization EditGroupAvatarReq::optimizations(int index) const {
+::zproto::UpdateOptimization EditGroupAvatarReq::optimizations(int index) const {
   // @@protoc_insertion_point(field_get:zproto.EditGroupAvatarReq.optimizations)
   return static_cast< ::zproto::UpdateOptimization >(optimizations_.Get(index));
 }
- void EditGroupAvatarReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
+void EditGroupAvatarReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
   optimizations_.Set(index, value);
   // @@protoc_insertion_point(field_set:zproto.EditGroupAvatarReq.optimizations)
 }
- void EditGroupAvatarReq::add_optimizations(::zproto::UpdateOptimization value) {
+void EditGroupAvatarReq::add_optimizations(::zproto::UpdateOptimization value) {
   optimizations_.Add(value);
   // @@protoc_insertion_point(field_add:zproto.EditGroupAvatarReq.optimizations)
 }
- const ::google::protobuf::RepeatedField<int>&
+const ::google::protobuf::RepeatedField<int>&
 EditGroupAvatarReq::optimizations() const {
   // @@protoc_insertion_point(field_list:zproto.EditGroupAvatarReq.optimizations)
   return optimizations_;
 }
- ::google::protobuf::RepeatedField<int>*
+::google::protobuf::RepeatedField<int>*
 EditGroupAvatarReq::mutable_optimizations() {
   // @@protoc_insertion_point(field_mutable_list:zproto.EditGroupAvatarReq.optimizations)
   return &optimizations_;
 }
 
+inline const EditGroupAvatarReq* EditGroupAvatarReq::internal_default_instance() {
+  return &EditGroupAvatarReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -5175,31 +5241,30 @@ const int EditGroupAvatarRsp::kDateFieldNumber;
 
 EditGroupAvatarRsp::EditGroupAvatarRsp()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.EditGroupAvatarRsp)
 }
 
 void EditGroupAvatarRsp::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  avatar_ = const_cast< ::zproto::Avatar*>(&::zproto::Avatar::default_instance());
+  avatar_ = const_cast< ::zproto::Avatar*>(
+      ::zproto::Avatar::internal_default_instance());
 }
 
 EditGroupAvatarRsp::EditGroupAvatarRsp(const EditGroupAvatarRsp& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.EditGroupAvatarRsp)
 }
 
 void EditGroupAvatarRsp::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  avatar_ = NULL;
-  seq_ = 0;
   state_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  date_ = GOOGLE_LONGLONG(0);
+  avatar_ = NULL;
+  ::memset(&date_, 0, reinterpret_cast<char*>(&seq_) -
+    reinterpret_cast<char*>(&date_) + sizeof(seq_));
+  _cached_size_ = 0;
 }
 
 EditGroupAvatarRsp::~EditGroupAvatarRsp() {
@@ -5209,7 +5274,7 @@ EditGroupAvatarRsp::~EditGroupAvatarRsp() {
 
 void EditGroupAvatarRsp::SharedDtor() {
   state_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
+  if (this != &EditGroupAvatarRsp_default_instance_.get()) {
     delete avatar_;
   }
 }
@@ -5225,11 +5290,11 @@ const ::google::protobuf::Descriptor* EditGroupAvatarRsp::descriptor() {
 }
 
 const EditGroupAvatarRsp& EditGroupAvatarRsp::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-EditGroupAvatarRsp* EditGroupAvatarRsp::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<EditGroupAvatarRsp> EditGroupAvatarRsp_default_instance_;
 
 EditGroupAvatarRsp* EditGroupAvatarRsp::New(::google::protobuf::Arena* arena) const {
   EditGroupAvatarRsp* n = new EditGroupAvatarRsp;
@@ -5239,6 +5304,9 @@ EditGroupAvatarRsp* EditGroupAvatarRsp::New(::google::protobuf::Arena* arena) co
   return n;
 }
 
+void EditGroupAvatarRsp::UnsafeMergeFrom(const EditGroupAvatarRsp& from) {
+  MergeFrom(from);
+}
 void EditGroupAvatarRsp::Swap(EditGroupAvatarRsp* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -5259,7 +5327,7 @@ void EditGroupAvatarRsp::InternalSwap(EditGroupAvatarRsp* other) {
 
 // optional .zproto.Avatar avatar = 1;
 bool EditGroupAvatarRsp::has_avatar() const {
-  return !_is_default_instance_ && avatar_ != NULL;
+  return this != internal_default_instance() && avatar_ != NULL;
 }
 void EditGroupAvatarRsp::clear_avatar() {
   if (GetArenaNoVirtual() == NULL && avatar_ != NULL) delete avatar_;
@@ -5267,7 +5335,8 @@ void EditGroupAvatarRsp::clear_avatar() {
 }
 const ::zproto::Avatar& EditGroupAvatarRsp::avatar() const {
   // @@protoc_insertion_point(field_get:zproto.EditGroupAvatarRsp.avatar)
-  return avatar_ != NULL ? *avatar_ : *default_instance_->avatar_;
+  return avatar_ != NULL ? *avatar_
+                         : *::zproto::Avatar::internal_default_instance();
 }
 ::zproto::Avatar* EditGroupAvatarRsp::mutable_avatar() {
   
@@ -5299,11 +5368,11 @@ void EditGroupAvatarRsp::set_allocated_avatar(::zproto::Avatar* avatar) {
 void EditGroupAvatarRsp::clear_seq() {
   seq_ = 0;
 }
- ::google::protobuf::int32 EditGroupAvatarRsp::seq() const {
+::google::protobuf::int32 EditGroupAvatarRsp::seq() const {
   // @@protoc_insertion_point(field_get:zproto.EditGroupAvatarRsp.seq)
   return seq_;
 }
- void EditGroupAvatarRsp::set_seq(::google::protobuf::int32 value) {
+void EditGroupAvatarRsp::set_seq(::google::protobuf::int32 value) {
   
   seq_ = value;
   // @@protoc_insertion_point(field_set:zproto.EditGroupAvatarRsp.seq)
@@ -5313,37 +5382,37 @@ void EditGroupAvatarRsp::clear_seq() {
 void EditGroupAvatarRsp::clear_state() {
   state_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& EditGroupAvatarRsp::state() const {
+const ::std::string& EditGroupAvatarRsp::state() const {
   // @@protoc_insertion_point(field_get:zproto.EditGroupAvatarRsp.state)
   return state_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void EditGroupAvatarRsp::set_state(const ::std::string& value) {
+void EditGroupAvatarRsp::set_state(const ::std::string& value) {
   
   state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.EditGroupAvatarRsp.state)
 }
- void EditGroupAvatarRsp::set_state(const char* value) {
+void EditGroupAvatarRsp::set_state(const char* value) {
   
   state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.EditGroupAvatarRsp.state)
 }
- void EditGroupAvatarRsp::set_state(const void* value, size_t size) {
+void EditGroupAvatarRsp::set_state(const void* value, size_t size) {
   
   state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.EditGroupAvatarRsp.state)
 }
- ::std::string* EditGroupAvatarRsp::mutable_state() {
+::std::string* EditGroupAvatarRsp::mutable_state() {
   
   // @@protoc_insertion_point(field_mutable:zproto.EditGroupAvatarRsp.state)
   return state_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* EditGroupAvatarRsp::release_state() {
+::std::string* EditGroupAvatarRsp::release_state() {
   // @@protoc_insertion_point(field_release:zproto.EditGroupAvatarRsp.state)
   
   return state_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void EditGroupAvatarRsp::set_allocated_state(::std::string* state) {
+void EditGroupAvatarRsp::set_allocated_state(::std::string* state) {
   if (state != NULL) {
     
   } else {
@@ -5357,16 +5426,19 @@ void EditGroupAvatarRsp::clear_state() {
 void EditGroupAvatarRsp::clear_date() {
   date_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 EditGroupAvatarRsp::date() const {
+::google::protobuf::int64 EditGroupAvatarRsp::date() const {
   // @@protoc_insertion_point(field_get:zproto.EditGroupAvatarRsp.date)
   return date_;
 }
- void EditGroupAvatarRsp::set_date(::google::protobuf::int64 value) {
+void EditGroupAvatarRsp::set_date(::google::protobuf::int64 value) {
   
   date_ = value;
   // @@protoc_insertion_point(field_set:zproto.EditGroupAvatarRsp.date)
 }
 
+inline const EditGroupAvatarRsp* EditGroupAvatarRsp::internal_default_instance() {
+  return &EditGroupAvatarRsp_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -5379,28 +5451,28 @@ const int RemoveGroupAvatarReq::kOptimizationsFieldNumber;
 
 RemoveGroupAvatarReq::RemoveGroupAvatarReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.RemoveGroupAvatarReq)
 }
 
 void RemoveGroupAvatarReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(&::zproto::GroupOutPeer::default_instance());
+  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(
+      ::zproto::GroupOutPeer::internal_default_instance());
 }
 
 RemoveGroupAvatarReq::RemoveGroupAvatarReq(const RemoveGroupAvatarReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.RemoveGroupAvatarReq)
 }
 
 void RemoveGroupAvatarReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   group_peer_ = NULL;
   rid_ = GOOGLE_LONGLONG(0);
+  _cached_size_ = 0;
 }
 
 RemoveGroupAvatarReq::~RemoveGroupAvatarReq() {
@@ -5409,7 +5481,7 @@ RemoveGroupAvatarReq::~RemoveGroupAvatarReq() {
 }
 
 void RemoveGroupAvatarReq::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &RemoveGroupAvatarReq_default_instance_.get()) {
     delete group_peer_;
   }
 }
@@ -5425,11 +5497,11 @@ const ::google::protobuf::Descriptor* RemoveGroupAvatarReq::descriptor() {
 }
 
 const RemoveGroupAvatarReq& RemoveGroupAvatarReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-RemoveGroupAvatarReq* RemoveGroupAvatarReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<RemoveGroupAvatarReq> RemoveGroupAvatarReq_default_instance_;
 
 RemoveGroupAvatarReq* RemoveGroupAvatarReq::New(::google::protobuf::Arena* arena) const {
   RemoveGroupAvatarReq* n = new RemoveGroupAvatarReq;
@@ -5439,6 +5511,9 @@ RemoveGroupAvatarReq* RemoveGroupAvatarReq::New(::google::protobuf::Arena* arena
   return n;
 }
 
+void RemoveGroupAvatarReq::UnsafeMergeFrom(const RemoveGroupAvatarReq& from) {
+  MergeFrom(from);
+}
 void RemoveGroupAvatarReq::Swap(RemoveGroupAvatarReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -5459,7 +5534,7 @@ void RemoveGroupAvatarReq::InternalSwap(RemoveGroupAvatarReq* other) {
 
 // optional .zproto.GroupOutPeer group_peer = 1;
 bool RemoveGroupAvatarReq::has_group_peer() const {
-  return !_is_default_instance_ && group_peer_ != NULL;
+  return this != internal_default_instance() && group_peer_ != NULL;
 }
 void RemoveGroupAvatarReq::clear_group_peer() {
   if (GetArenaNoVirtual() == NULL && group_peer_ != NULL) delete group_peer_;
@@ -5467,7 +5542,8 @@ void RemoveGroupAvatarReq::clear_group_peer() {
 }
 const ::zproto::GroupOutPeer& RemoveGroupAvatarReq::group_peer() const {
   // @@protoc_insertion_point(field_get:zproto.RemoveGroupAvatarReq.group_peer)
-  return group_peer_ != NULL ? *group_peer_ : *default_instance_->group_peer_;
+  return group_peer_ != NULL ? *group_peer_
+                         : *::zproto::GroupOutPeer::internal_default_instance();
 }
 ::zproto::GroupOutPeer* RemoveGroupAvatarReq::mutable_group_peer() {
   
@@ -5499,11 +5575,11 @@ void RemoveGroupAvatarReq::set_allocated_group_peer(::zproto::GroupOutPeer* grou
 void RemoveGroupAvatarReq::clear_rid() {
   rid_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 RemoveGroupAvatarReq::rid() const {
+::google::protobuf::int64 RemoveGroupAvatarReq::rid() const {
   // @@protoc_insertion_point(field_get:zproto.RemoveGroupAvatarReq.rid)
   return rid_;
 }
- void RemoveGroupAvatarReq::set_rid(::google::protobuf::int64 value) {
+void RemoveGroupAvatarReq::set_rid(::google::protobuf::int64 value) {
   
   rid_ = value;
   // @@protoc_insertion_point(field_set:zproto.RemoveGroupAvatarReq.rid)
@@ -5516,29 +5592,32 @@ int RemoveGroupAvatarReq::optimizations_size() const {
 void RemoveGroupAvatarReq::clear_optimizations() {
   optimizations_.Clear();
 }
- ::zproto::UpdateOptimization RemoveGroupAvatarReq::optimizations(int index) const {
+::zproto::UpdateOptimization RemoveGroupAvatarReq::optimizations(int index) const {
   // @@protoc_insertion_point(field_get:zproto.RemoveGroupAvatarReq.optimizations)
   return static_cast< ::zproto::UpdateOptimization >(optimizations_.Get(index));
 }
- void RemoveGroupAvatarReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
+void RemoveGroupAvatarReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
   optimizations_.Set(index, value);
   // @@protoc_insertion_point(field_set:zproto.RemoveGroupAvatarReq.optimizations)
 }
- void RemoveGroupAvatarReq::add_optimizations(::zproto::UpdateOptimization value) {
+void RemoveGroupAvatarReq::add_optimizations(::zproto::UpdateOptimization value) {
   optimizations_.Add(value);
   // @@protoc_insertion_point(field_add:zproto.RemoveGroupAvatarReq.optimizations)
 }
- const ::google::protobuf::RepeatedField<int>&
+const ::google::protobuf::RepeatedField<int>&
 RemoveGroupAvatarReq::optimizations() const {
   // @@protoc_insertion_point(field_list:zproto.RemoveGroupAvatarReq.optimizations)
   return optimizations_;
 }
- ::google::protobuf::RepeatedField<int>*
+::google::protobuf::RepeatedField<int>*
 RemoveGroupAvatarReq::mutable_optimizations() {
   // @@protoc_insertion_point(field_mutable_list:zproto.RemoveGroupAvatarReq.optimizations)
   return &optimizations_;
 }
 
+inline const RemoveGroupAvatarReq* RemoveGroupAvatarReq::internal_default_instance() {
+  return &RemoveGroupAvatarReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -5550,29 +5629,28 @@ const int EditGroupShortNameReq::kShortNameFieldNumber;
 
 EditGroupShortNameReq::EditGroupShortNameReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.EditGroupShortNameReq)
 }
 
 void EditGroupShortNameReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(&::zproto::GroupOutPeer::default_instance());
+  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(
+      ::zproto::GroupOutPeer::internal_default_instance());
 }
 
 EditGroupShortNameReq::EditGroupShortNameReq(const EditGroupShortNameReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.EditGroupShortNameReq)
 }
 
 void EditGroupShortNameReq::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  group_peer_ = NULL;
   short_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  group_peer_ = NULL;
+  _cached_size_ = 0;
 }
 
 EditGroupShortNameReq::~EditGroupShortNameReq() {
@@ -5582,7 +5660,7 @@ EditGroupShortNameReq::~EditGroupShortNameReq() {
 
 void EditGroupShortNameReq::SharedDtor() {
   short_name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
+  if (this != &EditGroupShortNameReq_default_instance_.get()) {
     delete group_peer_;
   }
 }
@@ -5598,11 +5676,11 @@ const ::google::protobuf::Descriptor* EditGroupShortNameReq::descriptor() {
 }
 
 const EditGroupShortNameReq& EditGroupShortNameReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-EditGroupShortNameReq* EditGroupShortNameReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<EditGroupShortNameReq> EditGroupShortNameReq_default_instance_;
 
 EditGroupShortNameReq* EditGroupShortNameReq::New(::google::protobuf::Arena* arena) const {
   EditGroupShortNameReq* n = new EditGroupShortNameReq;
@@ -5612,6 +5690,9 @@ EditGroupShortNameReq* EditGroupShortNameReq::New(::google::protobuf::Arena* are
   return n;
 }
 
+void EditGroupShortNameReq::UnsafeMergeFrom(const EditGroupShortNameReq& from) {
+  MergeFrom(from);
+}
 void EditGroupShortNameReq::Swap(EditGroupShortNameReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -5632,7 +5713,7 @@ void EditGroupShortNameReq::InternalSwap(EditGroupShortNameReq* other) {
 
 // optional .zproto.GroupOutPeer group_peer = 1;
 bool EditGroupShortNameReq::has_group_peer() const {
-  return !_is_default_instance_ && group_peer_ != NULL;
+  return this != internal_default_instance() && group_peer_ != NULL;
 }
 void EditGroupShortNameReq::clear_group_peer() {
   if (GetArenaNoVirtual() == NULL && group_peer_ != NULL) delete group_peer_;
@@ -5640,7 +5721,8 @@ void EditGroupShortNameReq::clear_group_peer() {
 }
 const ::zproto::GroupOutPeer& EditGroupShortNameReq::group_peer() const {
   // @@protoc_insertion_point(field_get:zproto.EditGroupShortNameReq.group_peer)
-  return group_peer_ != NULL ? *group_peer_ : *default_instance_->group_peer_;
+  return group_peer_ != NULL ? *group_peer_
+                         : *::zproto::GroupOutPeer::internal_default_instance();
 }
 ::zproto::GroupOutPeer* EditGroupShortNameReq::mutable_group_peer() {
   
@@ -5672,37 +5754,37 @@ void EditGroupShortNameReq::set_allocated_group_peer(::zproto::GroupOutPeer* gro
 void EditGroupShortNameReq::clear_short_name() {
   short_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& EditGroupShortNameReq::short_name() const {
+const ::std::string& EditGroupShortNameReq::short_name() const {
   // @@protoc_insertion_point(field_get:zproto.EditGroupShortNameReq.short_name)
   return short_name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void EditGroupShortNameReq::set_short_name(const ::std::string& value) {
+void EditGroupShortNameReq::set_short_name(const ::std::string& value) {
   
   short_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.EditGroupShortNameReq.short_name)
 }
- void EditGroupShortNameReq::set_short_name(const char* value) {
+void EditGroupShortNameReq::set_short_name(const char* value) {
   
   short_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.EditGroupShortNameReq.short_name)
 }
- void EditGroupShortNameReq::set_short_name(const char* value, size_t size) {
+void EditGroupShortNameReq::set_short_name(const char* value, size_t size) {
   
   short_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.EditGroupShortNameReq.short_name)
 }
- ::std::string* EditGroupShortNameReq::mutable_short_name() {
+::std::string* EditGroupShortNameReq::mutable_short_name() {
   
   // @@protoc_insertion_point(field_mutable:zproto.EditGroupShortNameReq.short_name)
   return short_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* EditGroupShortNameReq::release_short_name() {
+::std::string* EditGroupShortNameReq::release_short_name() {
   // @@protoc_insertion_point(field_release:zproto.EditGroupShortNameReq.short_name)
   
   return short_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void EditGroupShortNameReq::set_allocated_short_name(::std::string* short_name) {
+void EditGroupShortNameReq::set_allocated_short_name(::std::string* short_name) {
   if (short_name != NULL) {
     
   } else {
@@ -5712,6 +5794,9 @@ void EditGroupShortNameReq::clear_short_name() {
   // @@protoc_insertion_point(field_set_allocated:zproto.EditGroupShortNameReq.short_name)
 }
 
+inline const EditGroupShortNameReq* EditGroupShortNameReq::internal_default_instance() {
+  return &EditGroupShortNameReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -5725,30 +5810,29 @@ const int EditGroupTopicReq::kOptimizationsFieldNumber;
 
 EditGroupTopicReq::EditGroupTopicReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.EditGroupTopicReq)
 }
 
 void EditGroupTopicReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(&::zproto::GroupOutPeer::default_instance());
+  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(
+      ::zproto::GroupOutPeer::internal_default_instance());
 }
 
 EditGroupTopicReq::EditGroupTopicReq(const EditGroupTopicReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.EditGroupTopicReq)
 }
 
 void EditGroupTopicReq::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
+  topic_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   group_peer_ = NULL;
   rid_ = GOOGLE_LONGLONG(0);
-  topic_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _cached_size_ = 0;
 }
 
 EditGroupTopicReq::~EditGroupTopicReq() {
@@ -5758,7 +5842,7 @@ EditGroupTopicReq::~EditGroupTopicReq() {
 
 void EditGroupTopicReq::SharedDtor() {
   topic_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
+  if (this != &EditGroupTopicReq_default_instance_.get()) {
     delete group_peer_;
   }
 }
@@ -5774,11 +5858,11 @@ const ::google::protobuf::Descriptor* EditGroupTopicReq::descriptor() {
 }
 
 const EditGroupTopicReq& EditGroupTopicReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-EditGroupTopicReq* EditGroupTopicReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<EditGroupTopicReq> EditGroupTopicReq_default_instance_;
 
 EditGroupTopicReq* EditGroupTopicReq::New(::google::protobuf::Arena* arena) const {
   EditGroupTopicReq* n = new EditGroupTopicReq;
@@ -5788,6 +5872,9 @@ EditGroupTopicReq* EditGroupTopicReq::New(::google::protobuf::Arena* arena) cons
   return n;
 }
 
+void EditGroupTopicReq::UnsafeMergeFrom(const EditGroupTopicReq& from) {
+  MergeFrom(from);
+}
 void EditGroupTopicReq::Swap(EditGroupTopicReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -5808,7 +5895,7 @@ void EditGroupTopicReq::InternalSwap(EditGroupTopicReq* other) {
 
 // optional .zproto.GroupOutPeer group_peer = 1;
 bool EditGroupTopicReq::has_group_peer() const {
-  return !_is_default_instance_ && group_peer_ != NULL;
+  return this != internal_default_instance() && group_peer_ != NULL;
 }
 void EditGroupTopicReq::clear_group_peer() {
   if (GetArenaNoVirtual() == NULL && group_peer_ != NULL) delete group_peer_;
@@ -5816,7 +5903,8 @@ void EditGroupTopicReq::clear_group_peer() {
 }
 const ::zproto::GroupOutPeer& EditGroupTopicReq::group_peer() const {
   // @@protoc_insertion_point(field_get:zproto.EditGroupTopicReq.group_peer)
-  return group_peer_ != NULL ? *group_peer_ : *default_instance_->group_peer_;
+  return group_peer_ != NULL ? *group_peer_
+                         : *::zproto::GroupOutPeer::internal_default_instance();
 }
 ::zproto::GroupOutPeer* EditGroupTopicReq::mutable_group_peer() {
   
@@ -5848,11 +5936,11 @@ void EditGroupTopicReq::set_allocated_group_peer(::zproto::GroupOutPeer* group_p
 void EditGroupTopicReq::clear_rid() {
   rid_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 EditGroupTopicReq::rid() const {
+::google::protobuf::int64 EditGroupTopicReq::rid() const {
   // @@protoc_insertion_point(field_get:zproto.EditGroupTopicReq.rid)
   return rid_;
 }
- void EditGroupTopicReq::set_rid(::google::protobuf::int64 value) {
+void EditGroupTopicReq::set_rid(::google::protobuf::int64 value) {
   
   rid_ = value;
   // @@protoc_insertion_point(field_set:zproto.EditGroupTopicReq.rid)
@@ -5862,37 +5950,37 @@ void EditGroupTopicReq::clear_rid() {
 void EditGroupTopicReq::clear_topic() {
   topic_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& EditGroupTopicReq::topic() const {
+const ::std::string& EditGroupTopicReq::topic() const {
   // @@protoc_insertion_point(field_get:zproto.EditGroupTopicReq.topic)
   return topic_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void EditGroupTopicReq::set_topic(const ::std::string& value) {
+void EditGroupTopicReq::set_topic(const ::std::string& value) {
   
   topic_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.EditGroupTopicReq.topic)
 }
- void EditGroupTopicReq::set_topic(const char* value) {
+void EditGroupTopicReq::set_topic(const char* value) {
   
   topic_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.EditGroupTopicReq.topic)
 }
- void EditGroupTopicReq::set_topic(const char* value, size_t size) {
+void EditGroupTopicReq::set_topic(const char* value, size_t size) {
   
   topic_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.EditGroupTopicReq.topic)
 }
- ::std::string* EditGroupTopicReq::mutable_topic() {
+::std::string* EditGroupTopicReq::mutable_topic() {
   
   // @@protoc_insertion_point(field_mutable:zproto.EditGroupTopicReq.topic)
   return topic_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* EditGroupTopicReq::release_topic() {
+::std::string* EditGroupTopicReq::release_topic() {
   // @@protoc_insertion_point(field_release:zproto.EditGroupTopicReq.topic)
   
   return topic_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void EditGroupTopicReq::set_allocated_topic(::std::string* topic) {
+void EditGroupTopicReq::set_allocated_topic(::std::string* topic) {
   if (topic != NULL) {
     
   } else {
@@ -5909,29 +5997,32 @@ int EditGroupTopicReq::optimizations_size() const {
 void EditGroupTopicReq::clear_optimizations() {
   optimizations_.Clear();
 }
- ::zproto::UpdateOptimization EditGroupTopicReq::optimizations(int index) const {
+::zproto::UpdateOptimization EditGroupTopicReq::optimizations(int index) const {
   // @@protoc_insertion_point(field_get:zproto.EditGroupTopicReq.optimizations)
   return static_cast< ::zproto::UpdateOptimization >(optimizations_.Get(index));
 }
- void EditGroupTopicReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
+void EditGroupTopicReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
   optimizations_.Set(index, value);
   // @@protoc_insertion_point(field_set:zproto.EditGroupTopicReq.optimizations)
 }
- void EditGroupTopicReq::add_optimizations(::zproto::UpdateOptimization value) {
+void EditGroupTopicReq::add_optimizations(::zproto::UpdateOptimization value) {
   optimizations_.Add(value);
   // @@protoc_insertion_point(field_add:zproto.EditGroupTopicReq.optimizations)
 }
- const ::google::protobuf::RepeatedField<int>&
+const ::google::protobuf::RepeatedField<int>&
 EditGroupTopicReq::optimizations() const {
   // @@protoc_insertion_point(field_list:zproto.EditGroupTopicReq.optimizations)
   return optimizations_;
 }
- ::google::protobuf::RepeatedField<int>*
+::google::protobuf::RepeatedField<int>*
 EditGroupTopicReq::mutable_optimizations() {
   // @@protoc_insertion_point(field_mutable_list:zproto.EditGroupTopicReq.optimizations)
   return &optimizations_;
 }
 
+inline const EditGroupTopicReq* EditGroupTopicReq::internal_default_instance() {
+  return &EditGroupTopicReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -5945,30 +6036,29 @@ const int EditGroupAboutReq::kOptimizationsFieldNumber;
 
 EditGroupAboutReq::EditGroupAboutReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.EditGroupAboutReq)
 }
 
 void EditGroupAboutReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(&::zproto::GroupOutPeer::default_instance());
+  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(
+      ::zproto::GroupOutPeer::internal_default_instance());
 }
 
 EditGroupAboutReq::EditGroupAboutReq(const EditGroupAboutReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.EditGroupAboutReq)
 }
 
 void EditGroupAboutReq::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
+  about_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   group_peer_ = NULL;
   rid_ = GOOGLE_LONGLONG(0);
-  about_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _cached_size_ = 0;
 }
 
 EditGroupAboutReq::~EditGroupAboutReq() {
@@ -5978,7 +6068,7 @@ EditGroupAboutReq::~EditGroupAboutReq() {
 
 void EditGroupAboutReq::SharedDtor() {
   about_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
+  if (this != &EditGroupAboutReq_default_instance_.get()) {
     delete group_peer_;
   }
 }
@@ -5994,11 +6084,11 @@ const ::google::protobuf::Descriptor* EditGroupAboutReq::descriptor() {
 }
 
 const EditGroupAboutReq& EditGroupAboutReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-EditGroupAboutReq* EditGroupAboutReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<EditGroupAboutReq> EditGroupAboutReq_default_instance_;
 
 EditGroupAboutReq* EditGroupAboutReq::New(::google::protobuf::Arena* arena) const {
   EditGroupAboutReq* n = new EditGroupAboutReq;
@@ -6008,6 +6098,9 @@ EditGroupAboutReq* EditGroupAboutReq::New(::google::protobuf::Arena* arena) cons
   return n;
 }
 
+void EditGroupAboutReq::UnsafeMergeFrom(const EditGroupAboutReq& from) {
+  MergeFrom(from);
+}
 void EditGroupAboutReq::Swap(EditGroupAboutReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -6028,7 +6121,7 @@ void EditGroupAboutReq::InternalSwap(EditGroupAboutReq* other) {
 
 // optional .zproto.GroupOutPeer group_peer = 1;
 bool EditGroupAboutReq::has_group_peer() const {
-  return !_is_default_instance_ && group_peer_ != NULL;
+  return this != internal_default_instance() && group_peer_ != NULL;
 }
 void EditGroupAboutReq::clear_group_peer() {
   if (GetArenaNoVirtual() == NULL && group_peer_ != NULL) delete group_peer_;
@@ -6036,7 +6129,8 @@ void EditGroupAboutReq::clear_group_peer() {
 }
 const ::zproto::GroupOutPeer& EditGroupAboutReq::group_peer() const {
   // @@protoc_insertion_point(field_get:zproto.EditGroupAboutReq.group_peer)
-  return group_peer_ != NULL ? *group_peer_ : *default_instance_->group_peer_;
+  return group_peer_ != NULL ? *group_peer_
+                         : *::zproto::GroupOutPeer::internal_default_instance();
 }
 ::zproto::GroupOutPeer* EditGroupAboutReq::mutable_group_peer() {
   
@@ -6068,11 +6162,11 @@ void EditGroupAboutReq::set_allocated_group_peer(::zproto::GroupOutPeer* group_p
 void EditGroupAboutReq::clear_rid() {
   rid_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 EditGroupAboutReq::rid() const {
+::google::protobuf::int64 EditGroupAboutReq::rid() const {
   // @@protoc_insertion_point(field_get:zproto.EditGroupAboutReq.rid)
   return rid_;
 }
- void EditGroupAboutReq::set_rid(::google::protobuf::int64 value) {
+void EditGroupAboutReq::set_rid(::google::protobuf::int64 value) {
   
   rid_ = value;
   // @@protoc_insertion_point(field_set:zproto.EditGroupAboutReq.rid)
@@ -6082,37 +6176,37 @@ void EditGroupAboutReq::clear_rid() {
 void EditGroupAboutReq::clear_about() {
   about_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& EditGroupAboutReq::about() const {
+const ::std::string& EditGroupAboutReq::about() const {
   // @@protoc_insertion_point(field_get:zproto.EditGroupAboutReq.about)
   return about_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void EditGroupAboutReq::set_about(const ::std::string& value) {
+void EditGroupAboutReq::set_about(const ::std::string& value) {
   
   about_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.EditGroupAboutReq.about)
 }
- void EditGroupAboutReq::set_about(const char* value) {
+void EditGroupAboutReq::set_about(const char* value) {
   
   about_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.EditGroupAboutReq.about)
 }
- void EditGroupAboutReq::set_about(const char* value, size_t size) {
+void EditGroupAboutReq::set_about(const char* value, size_t size) {
   
   about_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.EditGroupAboutReq.about)
 }
- ::std::string* EditGroupAboutReq::mutable_about() {
+::std::string* EditGroupAboutReq::mutable_about() {
   
   // @@protoc_insertion_point(field_mutable:zproto.EditGroupAboutReq.about)
   return about_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* EditGroupAboutReq::release_about() {
+::std::string* EditGroupAboutReq::release_about() {
   // @@protoc_insertion_point(field_release:zproto.EditGroupAboutReq.about)
   
   return about_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void EditGroupAboutReq::set_allocated_about(::std::string* about) {
+void EditGroupAboutReq::set_allocated_about(::std::string* about) {
   if (about != NULL) {
     
   } else {
@@ -6129,29 +6223,32 @@ int EditGroupAboutReq::optimizations_size() const {
 void EditGroupAboutReq::clear_optimizations() {
   optimizations_.Clear();
 }
- ::zproto::UpdateOptimization EditGroupAboutReq::optimizations(int index) const {
+::zproto::UpdateOptimization EditGroupAboutReq::optimizations(int index) const {
   // @@protoc_insertion_point(field_get:zproto.EditGroupAboutReq.optimizations)
   return static_cast< ::zproto::UpdateOptimization >(optimizations_.Get(index));
 }
- void EditGroupAboutReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
+void EditGroupAboutReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
   optimizations_.Set(index, value);
   // @@protoc_insertion_point(field_set:zproto.EditGroupAboutReq.optimizations)
 }
- void EditGroupAboutReq::add_optimizations(::zproto::UpdateOptimization value) {
+void EditGroupAboutReq::add_optimizations(::zproto::UpdateOptimization value) {
   optimizations_.Add(value);
   // @@protoc_insertion_point(field_add:zproto.EditGroupAboutReq.optimizations)
 }
- const ::google::protobuf::RepeatedField<int>&
+const ::google::protobuf::RepeatedField<int>&
 EditGroupAboutReq::optimizations() const {
   // @@protoc_insertion_point(field_list:zproto.EditGroupAboutReq.optimizations)
   return optimizations_;
 }
- ::google::protobuf::RepeatedField<int>*
+::google::protobuf::RepeatedField<int>*
 EditGroupAboutReq::mutable_optimizations() {
   // @@protoc_insertion_point(field_mutable_list:zproto.EditGroupAboutReq.optimizations)
   return &optimizations_;
 }
 
+inline const EditGroupAboutReq* EditGroupAboutReq::internal_default_instance() {
+  return &EditGroupAboutReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -6165,30 +6262,31 @@ const int InviteUserReq::kOptimizationsFieldNumber;
 
 InviteUserReq::InviteUserReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.InviteUserReq)
 }
 
 void InviteUserReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(&::zproto::GroupOutPeer::default_instance());
-  user_ = const_cast< ::zproto::UserOutPeer*>(&::zproto::UserOutPeer::default_instance());
+  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(
+      ::zproto::GroupOutPeer::internal_default_instance());
+  user_ = const_cast< ::zproto::UserOutPeer*>(
+      ::zproto::UserOutPeer::internal_default_instance());
 }
 
 InviteUserReq::InviteUserReq(const InviteUserReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.InviteUserReq)
 }
 
 void InviteUserReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   group_peer_ = NULL;
-  rid_ = GOOGLE_LONGLONG(0);
   user_ = NULL;
+  rid_ = GOOGLE_LONGLONG(0);
+  _cached_size_ = 0;
 }
 
 InviteUserReq::~InviteUserReq() {
@@ -6197,7 +6295,7 @@ InviteUserReq::~InviteUserReq() {
 }
 
 void InviteUserReq::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &InviteUserReq_default_instance_.get()) {
     delete group_peer_;
     delete user_;
   }
@@ -6214,11 +6312,11 @@ const ::google::protobuf::Descriptor* InviteUserReq::descriptor() {
 }
 
 const InviteUserReq& InviteUserReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-InviteUserReq* InviteUserReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<InviteUserReq> InviteUserReq_default_instance_;
 
 InviteUserReq* InviteUserReq::New(::google::protobuf::Arena* arena) const {
   InviteUserReq* n = new InviteUserReq;
@@ -6228,6 +6326,9 @@ InviteUserReq* InviteUserReq::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void InviteUserReq::UnsafeMergeFrom(const InviteUserReq& from) {
+  MergeFrom(from);
+}
 void InviteUserReq::Swap(InviteUserReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -6248,7 +6349,7 @@ void InviteUserReq::InternalSwap(InviteUserReq* other) {
 
 // optional .zproto.GroupOutPeer group_peer = 1;
 bool InviteUserReq::has_group_peer() const {
-  return !_is_default_instance_ && group_peer_ != NULL;
+  return this != internal_default_instance() && group_peer_ != NULL;
 }
 void InviteUserReq::clear_group_peer() {
   if (GetArenaNoVirtual() == NULL && group_peer_ != NULL) delete group_peer_;
@@ -6256,7 +6357,8 @@ void InviteUserReq::clear_group_peer() {
 }
 const ::zproto::GroupOutPeer& InviteUserReq::group_peer() const {
   // @@protoc_insertion_point(field_get:zproto.InviteUserReq.group_peer)
-  return group_peer_ != NULL ? *group_peer_ : *default_instance_->group_peer_;
+  return group_peer_ != NULL ? *group_peer_
+                         : *::zproto::GroupOutPeer::internal_default_instance();
 }
 ::zproto::GroupOutPeer* InviteUserReq::mutable_group_peer() {
   
@@ -6288,11 +6390,11 @@ void InviteUserReq::set_allocated_group_peer(::zproto::GroupOutPeer* group_peer)
 void InviteUserReq::clear_rid() {
   rid_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 InviteUserReq::rid() const {
+::google::protobuf::int64 InviteUserReq::rid() const {
   // @@protoc_insertion_point(field_get:zproto.InviteUserReq.rid)
   return rid_;
 }
- void InviteUserReq::set_rid(::google::protobuf::int64 value) {
+void InviteUserReq::set_rid(::google::protobuf::int64 value) {
   
   rid_ = value;
   // @@protoc_insertion_point(field_set:zproto.InviteUserReq.rid)
@@ -6300,7 +6402,7 @@ void InviteUserReq::clear_rid() {
 
 // optional .zproto.UserOutPeer user = 3;
 bool InviteUserReq::has_user() const {
-  return !_is_default_instance_ && user_ != NULL;
+  return this != internal_default_instance() && user_ != NULL;
 }
 void InviteUserReq::clear_user() {
   if (GetArenaNoVirtual() == NULL && user_ != NULL) delete user_;
@@ -6308,7 +6410,8 @@ void InviteUserReq::clear_user() {
 }
 const ::zproto::UserOutPeer& InviteUserReq::user() const {
   // @@protoc_insertion_point(field_get:zproto.InviteUserReq.user)
-  return user_ != NULL ? *user_ : *default_instance_->user_;
+  return user_ != NULL ? *user_
+                         : *::zproto::UserOutPeer::internal_default_instance();
 }
 ::zproto::UserOutPeer* InviteUserReq::mutable_user() {
   
@@ -6343,29 +6446,32 @@ int InviteUserReq::optimizations_size() const {
 void InviteUserReq::clear_optimizations() {
   optimizations_.Clear();
 }
- ::zproto::UpdateOptimization InviteUserReq::optimizations(int index) const {
+::zproto::UpdateOptimization InviteUserReq::optimizations(int index) const {
   // @@protoc_insertion_point(field_get:zproto.InviteUserReq.optimizations)
   return static_cast< ::zproto::UpdateOptimization >(optimizations_.Get(index));
 }
- void InviteUserReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
+void InviteUserReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
   optimizations_.Set(index, value);
   // @@protoc_insertion_point(field_set:zproto.InviteUserReq.optimizations)
 }
- void InviteUserReq::add_optimizations(::zproto::UpdateOptimization value) {
+void InviteUserReq::add_optimizations(::zproto::UpdateOptimization value) {
   optimizations_.Add(value);
   // @@protoc_insertion_point(field_add:zproto.InviteUserReq.optimizations)
 }
- const ::google::protobuf::RepeatedField<int>&
+const ::google::protobuf::RepeatedField<int>&
 InviteUserReq::optimizations() const {
   // @@protoc_insertion_point(field_list:zproto.InviteUserReq.optimizations)
   return optimizations_;
 }
- ::google::protobuf::RepeatedField<int>*
+::google::protobuf::RepeatedField<int>*
 InviteUserReq::mutable_optimizations() {
   // @@protoc_insertion_point(field_mutable_list:zproto.InviteUserReq.optimizations)
   return &optimizations_;
 }
 
+inline const InviteUserReq* InviteUserReq::internal_default_instance() {
+  return &InviteUserReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -6378,28 +6484,28 @@ const int LeaveGroupReq::kOptimizationsFieldNumber;
 
 LeaveGroupReq::LeaveGroupReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.LeaveGroupReq)
 }
 
 void LeaveGroupReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(&::zproto::GroupOutPeer::default_instance());
+  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(
+      ::zproto::GroupOutPeer::internal_default_instance());
 }
 
 LeaveGroupReq::LeaveGroupReq(const LeaveGroupReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.LeaveGroupReq)
 }
 
 void LeaveGroupReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   group_peer_ = NULL;
   rid_ = GOOGLE_LONGLONG(0);
+  _cached_size_ = 0;
 }
 
 LeaveGroupReq::~LeaveGroupReq() {
@@ -6408,7 +6514,7 @@ LeaveGroupReq::~LeaveGroupReq() {
 }
 
 void LeaveGroupReq::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &LeaveGroupReq_default_instance_.get()) {
     delete group_peer_;
   }
 }
@@ -6424,11 +6530,11 @@ const ::google::protobuf::Descriptor* LeaveGroupReq::descriptor() {
 }
 
 const LeaveGroupReq& LeaveGroupReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-LeaveGroupReq* LeaveGroupReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<LeaveGroupReq> LeaveGroupReq_default_instance_;
 
 LeaveGroupReq* LeaveGroupReq::New(::google::protobuf::Arena* arena) const {
   LeaveGroupReq* n = new LeaveGroupReq;
@@ -6438,6 +6544,9 @@ LeaveGroupReq* LeaveGroupReq::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void LeaveGroupReq::UnsafeMergeFrom(const LeaveGroupReq& from) {
+  MergeFrom(from);
+}
 void LeaveGroupReq::Swap(LeaveGroupReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -6458,7 +6567,7 @@ void LeaveGroupReq::InternalSwap(LeaveGroupReq* other) {
 
 // optional .zproto.GroupOutPeer group_peer = 1;
 bool LeaveGroupReq::has_group_peer() const {
-  return !_is_default_instance_ && group_peer_ != NULL;
+  return this != internal_default_instance() && group_peer_ != NULL;
 }
 void LeaveGroupReq::clear_group_peer() {
   if (GetArenaNoVirtual() == NULL && group_peer_ != NULL) delete group_peer_;
@@ -6466,7 +6575,8 @@ void LeaveGroupReq::clear_group_peer() {
 }
 const ::zproto::GroupOutPeer& LeaveGroupReq::group_peer() const {
   // @@protoc_insertion_point(field_get:zproto.LeaveGroupReq.group_peer)
-  return group_peer_ != NULL ? *group_peer_ : *default_instance_->group_peer_;
+  return group_peer_ != NULL ? *group_peer_
+                         : *::zproto::GroupOutPeer::internal_default_instance();
 }
 ::zproto::GroupOutPeer* LeaveGroupReq::mutable_group_peer() {
   
@@ -6498,11 +6608,11 @@ void LeaveGroupReq::set_allocated_group_peer(::zproto::GroupOutPeer* group_peer)
 void LeaveGroupReq::clear_rid() {
   rid_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 LeaveGroupReq::rid() const {
+::google::protobuf::int64 LeaveGroupReq::rid() const {
   // @@protoc_insertion_point(field_get:zproto.LeaveGroupReq.rid)
   return rid_;
 }
- void LeaveGroupReq::set_rid(::google::protobuf::int64 value) {
+void LeaveGroupReq::set_rid(::google::protobuf::int64 value) {
   
   rid_ = value;
   // @@protoc_insertion_point(field_set:zproto.LeaveGroupReq.rid)
@@ -6515,29 +6625,32 @@ int LeaveGroupReq::optimizations_size() const {
 void LeaveGroupReq::clear_optimizations() {
   optimizations_.Clear();
 }
- ::zproto::UpdateOptimization LeaveGroupReq::optimizations(int index) const {
+::zproto::UpdateOptimization LeaveGroupReq::optimizations(int index) const {
   // @@protoc_insertion_point(field_get:zproto.LeaveGroupReq.optimizations)
   return static_cast< ::zproto::UpdateOptimization >(optimizations_.Get(index));
 }
- void LeaveGroupReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
+void LeaveGroupReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
   optimizations_.Set(index, value);
   // @@protoc_insertion_point(field_set:zproto.LeaveGroupReq.optimizations)
 }
- void LeaveGroupReq::add_optimizations(::zproto::UpdateOptimization value) {
+void LeaveGroupReq::add_optimizations(::zproto::UpdateOptimization value) {
   optimizations_.Add(value);
   // @@protoc_insertion_point(field_add:zproto.LeaveGroupReq.optimizations)
 }
- const ::google::protobuf::RepeatedField<int>&
+const ::google::protobuf::RepeatedField<int>&
 LeaveGroupReq::optimizations() const {
   // @@protoc_insertion_point(field_list:zproto.LeaveGroupReq.optimizations)
   return optimizations_;
 }
- ::google::protobuf::RepeatedField<int>*
+::google::protobuf::RepeatedField<int>*
 LeaveGroupReq::mutable_optimizations() {
   // @@protoc_insertion_point(field_mutable_list:zproto.LeaveGroupReq.optimizations)
   return &optimizations_;
 }
 
+inline const LeaveGroupReq* LeaveGroupReq::internal_default_instance() {
+  return &LeaveGroupReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -6548,27 +6661,27 @@ const int LeaveAndDeleteReq::kGroupPeerFieldNumber;
 
 LeaveAndDeleteReq::LeaveAndDeleteReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.LeaveAndDeleteReq)
 }
 
 void LeaveAndDeleteReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(&::zproto::GroupOutPeer::default_instance());
+  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(
+      ::zproto::GroupOutPeer::internal_default_instance());
 }
 
 LeaveAndDeleteReq::LeaveAndDeleteReq(const LeaveAndDeleteReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.LeaveAndDeleteReq)
 }
 
 void LeaveAndDeleteReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   group_peer_ = NULL;
+  _cached_size_ = 0;
 }
 
 LeaveAndDeleteReq::~LeaveAndDeleteReq() {
@@ -6577,7 +6690,7 @@ LeaveAndDeleteReq::~LeaveAndDeleteReq() {
 }
 
 void LeaveAndDeleteReq::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &LeaveAndDeleteReq_default_instance_.get()) {
     delete group_peer_;
   }
 }
@@ -6593,11 +6706,11 @@ const ::google::protobuf::Descriptor* LeaveAndDeleteReq::descriptor() {
 }
 
 const LeaveAndDeleteReq& LeaveAndDeleteReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-LeaveAndDeleteReq* LeaveAndDeleteReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<LeaveAndDeleteReq> LeaveAndDeleteReq_default_instance_;
 
 LeaveAndDeleteReq* LeaveAndDeleteReq::New(::google::protobuf::Arena* arena) const {
   LeaveAndDeleteReq* n = new LeaveAndDeleteReq;
@@ -6607,6 +6720,9 @@ LeaveAndDeleteReq* LeaveAndDeleteReq::New(::google::protobuf::Arena* arena) cons
   return n;
 }
 
+void LeaveAndDeleteReq::UnsafeMergeFrom(const LeaveAndDeleteReq& from) {
+  MergeFrom(from);
+}
 void LeaveAndDeleteReq::Swap(LeaveAndDeleteReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -6627,7 +6743,7 @@ void LeaveAndDeleteReq::InternalSwap(LeaveAndDeleteReq* other) {
 
 // optional .zproto.GroupOutPeer group_peer = 1;
 bool LeaveAndDeleteReq::has_group_peer() const {
-  return !_is_default_instance_ && group_peer_ != NULL;
+  return this != internal_default_instance() && group_peer_ != NULL;
 }
 void LeaveAndDeleteReq::clear_group_peer() {
   if (GetArenaNoVirtual() == NULL && group_peer_ != NULL) delete group_peer_;
@@ -6635,7 +6751,8 @@ void LeaveAndDeleteReq::clear_group_peer() {
 }
 const ::zproto::GroupOutPeer& LeaveAndDeleteReq::group_peer() const {
   // @@protoc_insertion_point(field_get:zproto.LeaveAndDeleteReq.group_peer)
-  return group_peer_ != NULL ? *group_peer_ : *default_instance_->group_peer_;
+  return group_peer_ != NULL ? *group_peer_
+                         : *::zproto::GroupOutPeer::internal_default_instance();
 }
 ::zproto::GroupOutPeer* LeaveAndDeleteReq::mutable_group_peer() {
   
@@ -6663,6 +6780,9 @@ void LeaveAndDeleteReq::set_allocated_group_peer(::zproto::GroupOutPeer* group_p
   // @@protoc_insertion_point(field_set_allocated:zproto.LeaveAndDeleteReq.group_peer)
 }
 
+inline const LeaveAndDeleteReq* LeaveAndDeleteReq::internal_default_instance() {
+  return &LeaveAndDeleteReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -6676,30 +6796,31 @@ const int KickUserReq::kOptimizationsFieldNumber;
 
 KickUserReq::KickUserReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.KickUserReq)
 }
 
 void KickUserReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(&::zproto::GroupOutPeer::default_instance());
-  user_ = const_cast< ::zproto::UserOutPeer*>(&::zproto::UserOutPeer::default_instance());
+  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(
+      ::zproto::GroupOutPeer::internal_default_instance());
+  user_ = const_cast< ::zproto::UserOutPeer*>(
+      ::zproto::UserOutPeer::internal_default_instance());
 }
 
 KickUserReq::KickUserReq(const KickUserReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.KickUserReq)
 }
 
 void KickUserReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   group_peer_ = NULL;
-  rid_ = GOOGLE_LONGLONG(0);
   user_ = NULL;
+  rid_ = GOOGLE_LONGLONG(0);
+  _cached_size_ = 0;
 }
 
 KickUserReq::~KickUserReq() {
@@ -6708,7 +6829,7 @@ KickUserReq::~KickUserReq() {
 }
 
 void KickUserReq::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &KickUserReq_default_instance_.get()) {
     delete group_peer_;
     delete user_;
   }
@@ -6725,11 +6846,11 @@ const ::google::protobuf::Descriptor* KickUserReq::descriptor() {
 }
 
 const KickUserReq& KickUserReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-KickUserReq* KickUserReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<KickUserReq> KickUserReq_default_instance_;
 
 KickUserReq* KickUserReq::New(::google::protobuf::Arena* arena) const {
   KickUserReq* n = new KickUserReq;
@@ -6739,6 +6860,9 @@ KickUserReq* KickUserReq::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void KickUserReq::UnsafeMergeFrom(const KickUserReq& from) {
+  MergeFrom(from);
+}
 void KickUserReq::Swap(KickUserReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -6759,7 +6883,7 @@ void KickUserReq::InternalSwap(KickUserReq* other) {
 
 // optional .zproto.GroupOutPeer group_peer = 1;
 bool KickUserReq::has_group_peer() const {
-  return !_is_default_instance_ && group_peer_ != NULL;
+  return this != internal_default_instance() && group_peer_ != NULL;
 }
 void KickUserReq::clear_group_peer() {
   if (GetArenaNoVirtual() == NULL && group_peer_ != NULL) delete group_peer_;
@@ -6767,7 +6891,8 @@ void KickUserReq::clear_group_peer() {
 }
 const ::zproto::GroupOutPeer& KickUserReq::group_peer() const {
   // @@protoc_insertion_point(field_get:zproto.KickUserReq.group_peer)
-  return group_peer_ != NULL ? *group_peer_ : *default_instance_->group_peer_;
+  return group_peer_ != NULL ? *group_peer_
+                         : *::zproto::GroupOutPeer::internal_default_instance();
 }
 ::zproto::GroupOutPeer* KickUserReq::mutable_group_peer() {
   
@@ -6799,11 +6924,11 @@ void KickUserReq::set_allocated_group_peer(::zproto::GroupOutPeer* group_peer) {
 void KickUserReq::clear_rid() {
   rid_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 KickUserReq::rid() const {
+::google::protobuf::int64 KickUserReq::rid() const {
   // @@protoc_insertion_point(field_get:zproto.KickUserReq.rid)
   return rid_;
 }
- void KickUserReq::set_rid(::google::protobuf::int64 value) {
+void KickUserReq::set_rid(::google::protobuf::int64 value) {
   
   rid_ = value;
   // @@protoc_insertion_point(field_set:zproto.KickUserReq.rid)
@@ -6811,7 +6936,7 @@ void KickUserReq::clear_rid() {
 
 // optional .zproto.UserOutPeer user = 3;
 bool KickUserReq::has_user() const {
-  return !_is_default_instance_ && user_ != NULL;
+  return this != internal_default_instance() && user_ != NULL;
 }
 void KickUserReq::clear_user() {
   if (GetArenaNoVirtual() == NULL && user_ != NULL) delete user_;
@@ -6819,7 +6944,8 @@ void KickUserReq::clear_user() {
 }
 const ::zproto::UserOutPeer& KickUserReq::user() const {
   // @@protoc_insertion_point(field_get:zproto.KickUserReq.user)
-  return user_ != NULL ? *user_ : *default_instance_->user_;
+  return user_ != NULL ? *user_
+                         : *::zproto::UserOutPeer::internal_default_instance();
 }
 ::zproto::UserOutPeer* KickUserReq::mutable_user() {
   
@@ -6854,29 +6980,32 @@ int KickUserReq::optimizations_size() const {
 void KickUserReq::clear_optimizations() {
   optimizations_.Clear();
 }
- ::zproto::UpdateOptimization KickUserReq::optimizations(int index) const {
+::zproto::UpdateOptimization KickUserReq::optimizations(int index) const {
   // @@protoc_insertion_point(field_get:zproto.KickUserReq.optimizations)
   return static_cast< ::zproto::UpdateOptimization >(optimizations_.Get(index));
 }
- void KickUserReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
+void KickUserReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
   optimizations_.Set(index, value);
   // @@protoc_insertion_point(field_set:zproto.KickUserReq.optimizations)
 }
- void KickUserReq::add_optimizations(::zproto::UpdateOptimization value) {
+void KickUserReq::add_optimizations(::zproto::UpdateOptimization value) {
   optimizations_.Add(value);
   // @@protoc_insertion_point(field_add:zproto.KickUserReq.optimizations)
 }
- const ::google::protobuf::RepeatedField<int>&
+const ::google::protobuf::RepeatedField<int>&
 KickUserReq::optimizations() const {
   // @@protoc_insertion_point(field_list:zproto.KickUserReq.optimizations)
   return optimizations_;
 }
- ::google::protobuf::RepeatedField<int>*
+::google::protobuf::RepeatedField<int>*
 KickUserReq::mutable_optimizations() {
   // @@protoc_insertion_point(field_mutable_list:zproto.KickUserReq.optimizations)
   return &optimizations_;
 }
 
+inline const KickUserReq* KickUserReq::internal_default_instance() {
+  return &KickUserReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -6887,27 +7016,27 @@ const int JoinGroupByPeerReq::kGroupPeerFieldNumber;
 
 JoinGroupByPeerReq::JoinGroupByPeerReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.JoinGroupByPeerReq)
 }
 
 void JoinGroupByPeerReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(&::zproto::GroupOutPeer::default_instance());
+  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(
+      ::zproto::GroupOutPeer::internal_default_instance());
 }
 
 JoinGroupByPeerReq::JoinGroupByPeerReq(const JoinGroupByPeerReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.JoinGroupByPeerReq)
 }
 
 void JoinGroupByPeerReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   group_peer_ = NULL;
+  _cached_size_ = 0;
 }
 
 JoinGroupByPeerReq::~JoinGroupByPeerReq() {
@@ -6916,7 +7045,7 @@ JoinGroupByPeerReq::~JoinGroupByPeerReq() {
 }
 
 void JoinGroupByPeerReq::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &JoinGroupByPeerReq_default_instance_.get()) {
     delete group_peer_;
   }
 }
@@ -6932,11 +7061,11 @@ const ::google::protobuf::Descriptor* JoinGroupByPeerReq::descriptor() {
 }
 
 const JoinGroupByPeerReq& JoinGroupByPeerReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-JoinGroupByPeerReq* JoinGroupByPeerReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<JoinGroupByPeerReq> JoinGroupByPeerReq_default_instance_;
 
 JoinGroupByPeerReq* JoinGroupByPeerReq::New(::google::protobuf::Arena* arena) const {
   JoinGroupByPeerReq* n = new JoinGroupByPeerReq;
@@ -6946,6 +7075,9 @@ JoinGroupByPeerReq* JoinGroupByPeerReq::New(::google::protobuf::Arena* arena) co
   return n;
 }
 
+void JoinGroupByPeerReq::UnsafeMergeFrom(const JoinGroupByPeerReq& from) {
+  MergeFrom(from);
+}
 void JoinGroupByPeerReq::Swap(JoinGroupByPeerReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -6966,7 +7098,7 @@ void JoinGroupByPeerReq::InternalSwap(JoinGroupByPeerReq* other) {
 
 // optional .zproto.GroupOutPeer group_peer = 1;
 bool JoinGroupByPeerReq::has_group_peer() const {
-  return !_is_default_instance_ && group_peer_ != NULL;
+  return this != internal_default_instance() && group_peer_ != NULL;
 }
 void JoinGroupByPeerReq::clear_group_peer() {
   if (GetArenaNoVirtual() == NULL && group_peer_ != NULL) delete group_peer_;
@@ -6974,7 +7106,8 @@ void JoinGroupByPeerReq::clear_group_peer() {
 }
 const ::zproto::GroupOutPeer& JoinGroupByPeerReq::group_peer() const {
   // @@protoc_insertion_point(field_get:zproto.JoinGroupByPeerReq.group_peer)
-  return group_peer_ != NULL ? *group_peer_ : *default_instance_->group_peer_;
+  return group_peer_ != NULL ? *group_peer_
+                         : *::zproto::GroupOutPeer::internal_default_instance();
 }
 ::zproto::GroupOutPeer* JoinGroupByPeerReq::mutable_group_peer() {
   
@@ -7002,6 +7135,9 @@ void JoinGroupByPeerReq::set_allocated_group_peer(::zproto::GroupOutPeer* group_
   // @@protoc_insertion_point(field_set_allocated:zproto.JoinGroupByPeerReq.group_peer)
 }
 
+inline const JoinGroupByPeerReq* JoinGroupByPeerReq::internal_default_instance() {
+  return &JoinGroupByPeerReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -7013,29 +7149,30 @@ const int MakeUserAdminReq::kUserPeerFieldNumber;
 
 MakeUserAdminReq::MakeUserAdminReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.MakeUserAdminReq)
 }
 
 void MakeUserAdminReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(&::zproto::GroupOutPeer::default_instance());
-  user_peer_ = const_cast< ::zproto::UserOutPeer*>(&::zproto::UserOutPeer::default_instance());
+  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(
+      ::zproto::GroupOutPeer::internal_default_instance());
+  user_peer_ = const_cast< ::zproto::UserOutPeer*>(
+      ::zproto::UserOutPeer::internal_default_instance());
 }
 
 MakeUserAdminReq::MakeUserAdminReq(const MakeUserAdminReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.MakeUserAdminReq)
 }
 
 void MakeUserAdminReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   group_peer_ = NULL;
   user_peer_ = NULL;
+  _cached_size_ = 0;
 }
 
 MakeUserAdminReq::~MakeUserAdminReq() {
@@ -7044,7 +7181,7 @@ MakeUserAdminReq::~MakeUserAdminReq() {
 }
 
 void MakeUserAdminReq::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &MakeUserAdminReq_default_instance_.get()) {
     delete group_peer_;
     delete user_peer_;
   }
@@ -7061,11 +7198,11 @@ const ::google::protobuf::Descriptor* MakeUserAdminReq::descriptor() {
 }
 
 const MakeUserAdminReq& MakeUserAdminReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-MakeUserAdminReq* MakeUserAdminReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<MakeUserAdminReq> MakeUserAdminReq_default_instance_;
 
 MakeUserAdminReq* MakeUserAdminReq::New(::google::protobuf::Arena* arena) const {
   MakeUserAdminReq* n = new MakeUserAdminReq;
@@ -7075,6 +7212,9 @@ MakeUserAdminReq* MakeUserAdminReq::New(::google::protobuf::Arena* arena) const 
   return n;
 }
 
+void MakeUserAdminReq::UnsafeMergeFrom(const MakeUserAdminReq& from) {
+  MergeFrom(from);
+}
 void MakeUserAdminReq::Swap(MakeUserAdminReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -7095,7 +7235,7 @@ void MakeUserAdminReq::InternalSwap(MakeUserAdminReq* other) {
 
 // optional .zproto.GroupOutPeer group_peer = 1;
 bool MakeUserAdminReq::has_group_peer() const {
-  return !_is_default_instance_ && group_peer_ != NULL;
+  return this != internal_default_instance() && group_peer_ != NULL;
 }
 void MakeUserAdminReq::clear_group_peer() {
   if (GetArenaNoVirtual() == NULL && group_peer_ != NULL) delete group_peer_;
@@ -7103,7 +7243,8 @@ void MakeUserAdminReq::clear_group_peer() {
 }
 const ::zproto::GroupOutPeer& MakeUserAdminReq::group_peer() const {
   // @@protoc_insertion_point(field_get:zproto.MakeUserAdminReq.group_peer)
-  return group_peer_ != NULL ? *group_peer_ : *default_instance_->group_peer_;
+  return group_peer_ != NULL ? *group_peer_
+                         : *::zproto::GroupOutPeer::internal_default_instance();
 }
 ::zproto::GroupOutPeer* MakeUserAdminReq::mutable_group_peer() {
   
@@ -7133,7 +7274,7 @@ void MakeUserAdminReq::set_allocated_group_peer(::zproto::GroupOutPeer* group_pe
 
 // optional .zproto.UserOutPeer user_peer = 2;
 bool MakeUserAdminReq::has_user_peer() const {
-  return !_is_default_instance_ && user_peer_ != NULL;
+  return this != internal_default_instance() && user_peer_ != NULL;
 }
 void MakeUserAdminReq::clear_user_peer() {
   if (GetArenaNoVirtual() == NULL && user_peer_ != NULL) delete user_peer_;
@@ -7141,7 +7282,8 @@ void MakeUserAdminReq::clear_user_peer() {
 }
 const ::zproto::UserOutPeer& MakeUserAdminReq::user_peer() const {
   // @@protoc_insertion_point(field_get:zproto.MakeUserAdminReq.user_peer)
-  return user_peer_ != NULL ? *user_peer_ : *default_instance_->user_peer_;
+  return user_peer_ != NULL ? *user_peer_
+                         : *::zproto::UserOutPeer::internal_default_instance();
 }
 ::zproto::UserOutPeer* MakeUserAdminReq::mutable_user_peer() {
   
@@ -7169,6 +7311,9 @@ void MakeUserAdminReq::set_allocated_user_peer(::zproto::UserOutPeer* user_peer)
   // @@protoc_insertion_point(field_set_allocated:zproto.MakeUserAdminReq.user_peer)
 }
 
+inline const MakeUserAdminReq* MakeUserAdminReq::internal_default_instance() {
+  return &MakeUserAdminReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -7180,29 +7325,30 @@ const int DismissUserAdminReq::kUserPeerFieldNumber;
 
 DismissUserAdminReq::DismissUserAdminReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.DismissUserAdminReq)
 }
 
 void DismissUserAdminReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(&::zproto::GroupOutPeer::default_instance());
-  user_peer_ = const_cast< ::zproto::UserOutPeer*>(&::zproto::UserOutPeer::default_instance());
+  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(
+      ::zproto::GroupOutPeer::internal_default_instance());
+  user_peer_ = const_cast< ::zproto::UserOutPeer*>(
+      ::zproto::UserOutPeer::internal_default_instance());
 }
 
 DismissUserAdminReq::DismissUserAdminReq(const DismissUserAdminReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.DismissUserAdminReq)
 }
 
 void DismissUserAdminReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   group_peer_ = NULL;
   user_peer_ = NULL;
+  _cached_size_ = 0;
 }
 
 DismissUserAdminReq::~DismissUserAdminReq() {
@@ -7211,7 +7357,7 @@ DismissUserAdminReq::~DismissUserAdminReq() {
 }
 
 void DismissUserAdminReq::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &DismissUserAdminReq_default_instance_.get()) {
     delete group_peer_;
     delete user_peer_;
   }
@@ -7228,11 +7374,11 @@ const ::google::protobuf::Descriptor* DismissUserAdminReq::descriptor() {
 }
 
 const DismissUserAdminReq& DismissUserAdminReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-DismissUserAdminReq* DismissUserAdminReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<DismissUserAdminReq> DismissUserAdminReq_default_instance_;
 
 DismissUserAdminReq* DismissUserAdminReq::New(::google::protobuf::Arena* arena) const {
   DismissUserAdminReq* n = new DismissUserAdminReq;
@@ -7242,6 +7388,9 @@ DismissUserAdminReq* DismissUserAdminReq::New(::google::protobuf::Arena* arena) 
   return n;
 }
 
+void DismissUserAdminReq::UnsafeMergeFrom(const DismissUserAdminReq& from) {
+  MergeFrom(from);
+}
 void DismissUserAdminReq::Swap(DismissUserAdminReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -7262,7 +7411,7 @@ void DismissUserAdminReq::InternalSwap(DismissUserAdminReq* other) {
 
 // optional .zproto.GroupOutPeer group_peer = 1;
 bool DismissUserAdminReq::has_group_peer() const {
-  return !_is_default_instance_ && group_peer_ != NULL;
+  return this != internal_default_instance() && group_peer_ != NULL;
 }
 void DismissUserAdminReq::clear_group_peer() {
   if (GetArenaNoVirtual() == NULL && group_peer_ != NULL) delete group_peer_;
@@ -7270,7 +7419,8 @@ void DismissUserAdminReq::clear_group_peer() {
 }
 const ::zproto::GroupOutPeer& DismissUserAdminReq::group_peer() const {
   // @@protoc_insertion_point(field_get:zproto.DismissUserAdminReq.group_peer)
-  return group_peer_ != NULL ? *group_peer_ : *default_instance_->group_peer_;
+  return group_peer_ != NULL ? *group_peer_
+                         : *::zproto::GroupOutPeer::internal_default_instance();
 }
 ::zproto::GroupOutPeer* DismissUserAdminReq::mutable_group_peer() {
   
@@ -7300,7 +7450,7 @@ void DismissUserAdminReq::set_allocated_group_peer(::zproto::GroupOutPeer* group
 
 // optional .zproto.UserOutPeer user_peer = 2;
 bool DismissUserAdminReq::has_user_peer() const {
-  return !_is_default_instance_ && user_peer_ != NULL;
+  return this != internal_default_instance() && user_peer_ != NULL;
 }
 void DismissUserAdminReq::clear_user_peer() {
   if (GetArenaNoVirtual() == NULL && user_peer_ != NULL) delete user_peer_;
@@ -7308,7 +7458,8 @@ void DismissUserAdminReq::clear_user_peer() {
 }
 const ::zproto::UserOutPeer& DismissUserAdminReq::user_peer() const {
   // @@protoc_insertion_point(field_get:zproto.DismissUserAdminReq.user_peer)
-  return user_peer_ != NULL ? *user_peer_ : *default_instance_->user_peer_;
+  return user_peer_ != NULL ? *user_peer_
+                         : *::zproto::UserOutPeer::internal_default_instance();
 }
 ::zproto::UserOutPeer* DismissUserAdminReq::mutable_user_peer() {
   
@@ -7336,6 +7487,9 @@ void DismissUserAdminReq::set_allocated_user_peer(::zproto::UserOutPeer* user_pe
   // @@protoc_insertion_point(field_set_allocated:zproto.DismissUserAdminReq.user_peer)
 }
 
+inline const DismissUserAdminReq* DismissUserAdminReq::internal_default_instance() {
+  return &DismissUserAdminReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -7347,29 +7501,30 @@ const int TransferOwnershipReq::kNewOwnerFieldNumber;
 
 TransferOwnershipReq::TransferOwnershipReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.TransferOwnershipReq)
 }
 
 void TransferOwnershipReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(&::zproto::GroupOutPeer::default_instance());
-  new_owner_ = const_cast< ::zproto::UserOutPeer*>(&::zproto::UserOutPeer::default_instance());
+  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(
+      ::zproto::GroupOutPeer::internal_default_instance());
+  new_owner_ = const_cast< ::zproto::UserOutPeer*>(
+      ::zproto::UserOutPeer::internal_default_instance());
 }
 
 TransferOwnershipReq::TransferOwnershipReq(const TransferOwnershipReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.TransferOwnershipReq)
 }
 
 void TransferOwnershipReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   group_peer_ = NULL;
   new_owner_ = NULL;
+  _cached_size_ = 0;
 }
 
 TransferOwnershipReq::~TransferOwnershipReq() {
@@ -7378,7 +7533,7 @@ TransferOwnershipReq::~TransferOwnershipReq() {
 }
 
 void TransferOwnershipReq::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &TransferOwnershipReq_default_instance_.get()) {
     delete group_peer_;
     delete new_owner_;
   }
@@ -7395,11 +7550,11 @@ const ::google::protobuf::Descriptor* TransferOwnershipReq::descriptor() {
 }
 
 const TransferOwnershipReq& TransferOwnershipReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-TransferOwnershipReq* TransferOwnershipReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<TransferOwnershipReq> TransferOwnershipReq_default_instance_;
 
 TransferOwnershipReq* TransferOwnershipReq::New(::google::protobuf::Arena* arena) const {
   TransferOwnershipReq* n = new TransferOwnershipReq;
@@ -7409,6 +7564,9 @@ TransferOwnershipReq* TransferOwnershipReq::New(::google::protobuf::Arena* arena
   return n;
 }
 
+void TransferOwnershipReq::UnsafeMergeFrom(const TransferOwnershipReq& from) {
+  MergeFrom(from);
+}
 void TransferOwnershipReq::Swap(TransferOwnershipReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -7429,7 +7587,7 @@ void TransferOwnershipReq::InternalSwap(TransferOwnershipReq* other) {
 
 // optional .zproto.GroupOutPeer group_peer = 1;
 bool TransferOwnershipReq::has_group_peer() const {
-  return !_is_default_instance_ && group_peer_ != NULL;
+  return this != internal_default_instance() && group_peer_ != NULL;
 }
 void TransferOwnershipReq::clear_group_peer() {
   if (GetArenaNoVirtual() == NULL && group_peer_ != NULL) delete group_peer_;
@@ -7437,7 +7595,8 @@ void TransferOwnershipReq::clear_group_peer() {
 }
 const ::zproto::GroupOutPeer& TransferOwnershipReq::group_peer() const {
   // @@protoc_insertion_point(field_get:zproto.TransferOwnershipReq.group_peer)
-  return group_peer_ != NULL ? *group_peer_ : *default_instance_->group_peer_;
+  return group_peer_ != NULL ? *group_peer_
+                         : *::zproto::GroupOutPeer::internal_default_instance();
 }
 ::zproto::GroupOutPeer* TransferOwnershipReq::mutable_group_peer() {
   
@@ -7467,7 +7626,7 @@ void TransferOwnershipReq::set_allocated_group_peer(::zproto::GroupOutPeer* grou
 
 // optional .zproto.UserOutPeer new_owner = 2;
 bool TransferOwnershipReq::has_new_owner() const {
-  return !_is_default_instance_ && new_owner_ != NULL;
+  return this != internal_default_instance() && new_owner_ != NULL;
 }
 void TransferOwnershipReq::clear_new_owner() {
   if (GetArenaNoVirtual() == NULL && new_owner_ != NULL) delete new_owner_;
@@ -7475,7 +7634,8 @@ void TransferOwnershipReq::clear_new_owner() {
 }
 const ::zproto::UserOutPeer& TransferOwnershipReq::new_owner() const {
   // @@protoc_insertion_point(field_get:zproto.TransferOwnershipReq.new_owner)
-  return new_owner_ != NULL ? *new_owner_ : *default_instance_->new_owner_;
+  return new_owner_ != NULL ? *new_owner_
+                         : *::zproto::UserOutPeer::internal_default_instance();
 }
 ::zproto::UserOutPeer* TransferOwnershipReq::mutable_new_owner() {
   
@@ -7503,6 +7663,9 @@ void TransferOwnershipReq::set_allocated_new_owner(::zproto::UserOutPeer* new_ow
   // @@protoc_insertion_point(field_set_allocated:zproto.TransferOwnershipReq.new_owner)
 }
 
+inline const TransferOwnershipReq* TransferOwnershipReq::internal_default_instance() {
+  return &TransferOwnershipReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -7517,30 +7680,26 @@ const int AdminSettings::kShowJoinLeaveMessagesFieldNumber;
 
 AdminSettings::AdminSettings()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.AdminSettings)
 }
 
 void AdminSettings::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 AdminSettings::AdminSettings(const AdminSettings& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.AdminSettings)
 }
 
 void AdminSettings::SharedCtor() {
-    _is_default_instance_ = false;
+  ::memset(&show_admins_to_members_, 0, reinterpret_cast<char*>(&show_join_leave_messages_) -
+    reinterpret_cast<char*>(&show_admins_to_members_) + sizeof(show_join_leave_messages_));
   _cached_size_ = 0;
-  show_admins_to_members_ = false;
-  can_members_invite_ = false;
-  can_members_edit_group_info_ = false;
-  can_admins_edit_group_info_ = false;
-  show_join_leave_messages_ = false;
 }
 
 AdminSettings::~AdminSettings() {
@@ -7549,8 +7708,6 @@ AdminSettings::~AdminSettings() {
 }
 
 void AdminSettings::SharedDtor() {
-  if (this != default_instance_) {
-  }
 }
 
 void AdminSettings::SetCachedSize(int size) const {
@@ -7564,11 +7721,11 @@ const ::google::protobuf::Descriptor* AdminSettings::descriptor() {
 }
 
 const AdminSettings& AdminSettings::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-AdminSettings* AdminSettings::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<AdminSettings> AdminSettings_default_instance_;
 
 AdminSettings* AdminSettings::New(::google::protobuf::Arena* arena) const {
   AdminSettings* n = new AdminSettings;
@@ -7578,6 +7735,9 @@ AdminSettings* AdminSettings::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void AdminSettings::UnsafeMergeFrom(const AdminSettings& from) {
+  MergeFrom(from);
+}
 void AdminSettings::Swap(AdminSettings* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -7600,11 +7760,11 @@ void AdminSettings::InternalSwap(AdminSettings* other) {
 void AdminSettings::clear_show_admins_to_members() {
   show_admins_to_members_ = false;
 }
- bool AdminSettings::show_admins_to_members() const {
+bool AdminSettings::show_admins_to_members() const {
   // @@protoc_insertion_point(field_get:zproto.AdminSettings.show_admins_to_members)
   return show_admins_to_members_;
 }
- void AdminSettings::set_show_admins_to_members(bool value) {
+void AdminSettings::set_show_admins_to_members(bool value) {
   
   show_admins_to_members_ = value;
   // @@protoc_insertion_point(field_set:zproto.AdminSettings.show_admins_to_members)
@@ -7614,11 +7774,11 @@ void AdminSettings::clear_show_admins_to_members() {
 void AdminSettings::clear_can_members_invite() {
   can_members_invite_ = false;
 }
- bool AdminSettings::can_members_invite() const {
+bool AdminSettings::can_members_invite() const {
   // @@protoc_insertion_point(field_get:zproto.AdminSettings.can_members_invite)
   return can_members_invite_;
 }
- void AdminSettings::set_can_members_invite(bool value) {
+void AdminSettings::set_can_members_invite(bool value) {
   
   can_members_invite_ = value;
   // @@protoc_insertion_point(field_set:zproto.AdminSettings.can_members_invite)
@@ -7628,11 +7788,11 @@ void AdminSettings::clear_can_members_invite() {
 void AdminSettings::clear_can_members_edit_group_info() {
   can_members_edit_group_info_ = false;
 }
- bool AdminSettings::can_members_edit_group_info() const {
+bool AdminSettings::can_members_edit_group_info() const {
   // @@protoc_insertion_point(field_get:zproto.AdminSettings.can_members_edit_group_info)
   return can_members_edit_group_info_;
 }
- void AdminSettings::set_can_members_edit_group_info(bool value) {
+void AdminSettings::set_can_members_edit_group_info(bool value) {
   
   can_members_edit_group_info_ = value;
   // @@protoc_insertion_point(field_set:zproto.AdminSettings.can_members_edit_group_info)
@@ -7642,11 +7802,11 @@ void AdminSettings::clear_can_members_edit_group_info() {
 void AdminSettings::clear_can_admins_edit_group_info() {
   can_admins_edit_group_info_ = false;
 }
- bool AdminSettings::can_admins_edit_group_info() const {
+bool AdminSettings::can_admins_edit_group_info() const {
   // @@protoc_insertion_point(field_get:zproto.AdminSettings.can_admins_edit_group_info)
   return can_admins_edit_group_info_;
 }
- void AdminSettings::set_can_admins_edit_group_info(bool value) {
+void AdminSettings::set_can_admins_edit_group_info(bool value) {
   
   can_admins_edit_group_info_ = value;
   // @@protoc_insertion_point(field_set:zproto.AdminSettings.can_admins_edit_group_info)
@@ -7656,16 +7816,19 @@ void AdminSettings::clear_can_admins_edit_group_info() {
 void AdminSettings::clear_show_join_leave_messages() {
   show_join_leave_messages_ = false;
 }
- bool AdminSettings::show_join_leave_messages() const {
+bool AdminSettings::show_join_leave_messages() const {
   // @@protoc_insertion_point(field_get:zproto.AdminSettings.show_join_leave_messages)
   return show_join_leave_messages_;
 }
- void AdminSettings::set_show_join_leave_messages(bool value) {
+void AdminSettings::set_show_join_leave_messages(bool value) {
   
   show_join_leave_messages_ = value;
   // @@protoc_insertion_point(field_set:zproto.AdminSettings.show_join_leave_messages)
 }
 
+inline const AdminSettings* AdminSettings::internal_default_instance() {
+  return &AdminSettings_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -7676,27 +7839,27 @@ const int LoadAdminSettingsReq::kGroupPeerFieldNumber;
 
 LoadAdminSettingsReq::LoadAdminSettingsReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.LoadAdminSettingsReq)
 }
 
 void LoadAdminSettingsReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(&::zproto::GroupOutPeer::default_instance());
+  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(
+      ::zproto::GroupOutPeer::internal_default_instance());
 }
 
 LoadAdminSettingsReq::LoadAdminSettingsReq(const LoadAdminSettingsReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.LoadAdminSettingsReq)
 }
 
 void LoadAdminSettingsReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   group_peer_ = NULL;
+  _cached_size_ = 0;
 }
 
 LoadAdminSettingsReq::~LoadAdminSettingsReq() {
@@ -7705,7 +7868,7 @@ LoadAdminSettingsReq::~LoadAdminSettingsReq() {
 }
 
 void LoadAdminSettingsReq::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &LoadAdminSettingsReq_default_instance_.get()) {
     delete group_peer_;
   }
 }
@@ -7721,11 +7884,11 @@ const ::google::protobuf::Descriptor* LoadAdminSettingsReq::descriptor() {
 }
 
 const LoadAdminSettingsReq& LoadAdminSettingsReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-LoadAdminSettingsReq* LoadAdminSettingsReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<LoadAdminSettingsReq> LoadAdminSettingsReq_default_instance_;
 
 LoadAdminSettingsReq* LoadAdminSettingsReq::New(::google::protobuf::Arena* arena) const {
   LoadAdminSettingsReq* n = new LoadAdminSettingsReq;
@@ -7735,6 +7898,9 @@ LoadAdminSettingsReq* LoadAdminSettingsReq::New(::google::protobuf::Arena* arena
   return n;
 }
 
+void LoadAdminSettingsReq::UnsafeMergeFrom(const LoadAdminSettingsReq& from) {
+  MergeFrom(from);
+}
 void LoadAdminSettingsReq::Swap(LoadAdminSettingsReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -7755,7 +7921,7 @@ void LoadAdminSettingsReq::InternalSwap(LoadAdminSettingsReq* other) {
 
 // optional .zproto.GroupOutPeer group_peer = 1;
 bool LoadAdminSettingsReq::has_group_peer() const {
-  return !_is_default_instance_ && group_peer_ != NULL;
+  return this != internal_default_instance() && group_peer_ != NULL;
 }
 void LoadAdminSettingsReq::clear_group_peer() {
   if (GetArenaNoVirtual() == NULL && group_peer_ != NULL) delete group_peer_;
@@ -7763,7 +7929,8 @@ void LoadAdminSettingsReq::clear_group_peer() {
 }
 const ::zproto::GroupOutPeer& LoadAdminSettingsReq::group_peer() const {
   // @@protoc_insertion_point(field_get:zproto.LoadAdminSettingsReq.group_peer)
-  return group_peer_ != NULL ? *group_peer_ : *default_instance_->group_peer_;
+  return group_peer_ != NULL ? *group_peer_
+                         : *::zproto::GroupOutPeer::internal_default_instance();
 }
 ::zproto::GroupOutPeer* LoadAdminSettingsReq::mutable_group_peer() {
   
@@ -7791,6 +7958,9 @@ void LoadAdminSettingsReq::set_allocated_group_peer(::zproto::GroupOutPeer* grou
   // @@protoc_insertion_point(field_set_allocated:zproto.LoadAdminSettingsReq.group_peer)
 }
 
+inline const LoadAdminSettingsReq* LoadAdminSettingsReq::internal_default_instance() {
+  return &LoadAdminSettingsReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -7801,27 +7971,27 @@ const int LoadAdminSettingsRsp::kSettingsFieldNumber;
 
 LoadAdminSettingsRsp::LoadAdminSettingsRsp()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.LoadAdminSettingsRsp)
 }
 
 void LoadAdminSettingsRsp::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  settings_ = const_cast< ::zproto::AdminSettings*>(&::zproto::AdminSettings::default_instance());
+  settings_ = const_cast< ::zproto::AdminSettings*>(
+      ::zproto::AdminSettings::internal_default_instance());
 }
 
 LoadAdminSettingsRsp::LoadAdminSettingsRsp(const LoadAdminSettingsRsp& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.LoadAdminSettingsRsp)
 }
 
 void LoadAdminSettingsRsp::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   settings_ = NULL;
+  _cached_size_ = 0;
 }
 
 LoadAdminSettingsRsp::~LoadAdminSettingsRsp() {
@@ -7830,7 +8000,7 @@ LoadAdminSettingsRsp::~LoadAdminSettingsRsp() {
 }
 
 void LoadAdminSettingsRsp::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &LoadAdminSettingsRsp_default_instance_.get()) {
     delete settings_;
   }
 }
@@ -7846,11 +8016,11 @@ const ::google::protobuf::Descriptor* LoadAdminSettingsRsp::descriptor() {
 }
 
 const LoadAdminSettingsRsp& LoadAdminSettingsRsp::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-LoadAdminSettingsRsp* LoadAdminSettingsRsp::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<LoadAdminSettingsRsp> LoadAdminSettingsRsp_default_instance_;
 
 LoadAdminSettingsRsp* LoadAdminSettingsRsp::New(::google::protobuf::Arena* arena) const {
   LoadAdminSettingsRsp* n = new LoadAdminSettingsRsp;
@@ -7860,6 +8030,9 @@ LoadAdminSettingsRsp* LoadAdminSettingsRsp::New(::google::protobuf::Arena* arena
   return n;
 }
 
+void LoadAdminSettingsRsp::UnsafeMergeFrom(const LoadAdminSettingsRsp& from) {
+  MergeFrom(from);
+}
 void LoadAdminSettingsRsp::Swap(LoadAdminSettingsRsp* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -7880,7 +8053,7 @@ void LoadAdminSettingsRsp::InternalSwap(LoadAdminSettingsRsp* other) {
 
 // optional .zproto.AdminSettings settings = 1;
 bool LoadAdminSettingsRsp::has_settings() const {
-  return !_is_default_instance_ && settings_ != NULL;
+  return this != internal_default_instance() && settings_ != NULL;
 }
 void LoadAdminSettingsRsp::clear_settings() {
   if (GetArenaNoVirtual() == NULL && settings_ != NULL) delete settings_;
@@ -7888,7 +8061,8 @@ void LoadAdminSettingsRsp::clear_settings() {
 }
 const ::zproto::AdminSettings& LoadAdminSettingsRsp::settings() const {
   // @@protoc_insertion_point(field_get:zproto.LoadAdminSettingsRsp.settings)
-  return settings_ != NULL ? *settings_ : *default_instance_->settings_;
+  return settings_ != NULL ? *settings_
+                         : *::zproto::AdminSettings::internal_default_instance();
 }
 ::zproto::AdminSettings* LoadAdminSettingsRsp::mutable_settings() {
   
@@ -7916,6 +8090,9 @@ void LoadAdminSettingsRsp::set_allocated_settings(::zproto::AdminSettings* setti
   // @@protoc_insertion_point(field_set_allocated:zproto.LoadAdminSettingsRsp.settings)
 }
 
+inline const LoadAdminSettingsRsp* LoadAdminSettingsRsp::internal_default_instance() {
+  return &LoadAdminSettingsRsp_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -7927,29 +8104,30 @@ const int SaveAdminSettingsReq::kSettingsFieldNumber;
 
 SaveAdminSettingsReq::SaveAdminSettingsReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.SaveAdminSettingsReq)
 }
 
 void SaveAdminSettingsReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(&::zproto::GroupOutPeer::default_instance());
-  settings_ = const_cast< ::zproto::AdminSettings*>(&::zproto::AdminSettings::default_instance());
+  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(
+      ::zproto::GroupOutPeer::internal_default_instance());
+  settings_ = const_cast< ::zproto::AdminSettings*>(
+      ::zproto::AdminSettings::internal_default_instance());
 }
 
 SaveAdminSettingsReq::SaveAdminSettingsReq(const SaveAdminSettingsReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.SaveAdminSettingsReq)
 }
 
 void SaveAdminSettingsReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   group_peer_ = NULL;
   settings_ = NULL;
+  _cached_size_ = 0;
 }
 
 SaveAdminSettingsReq::~SaveAdminSettingsReq() {
@@ -7958,7 +8136,7 @@ SaveAdminSettingsReq::~SaveAdminSettingsReq() {
 }
 
 void SaveAdminSettingsReq::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &SaveAdminSettingsReq_default_instance_.get()) {
     delete group_peer_;
     delete settings_;
   }
@@ -7975,11 +8153,11 @@ const ::google::protobuf::Descriptor* SaveAdminSettingsReq::descriptor() {
 }
 
 const SaveAdminSettingsReq& SaveAdminSettingsReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-SaveAdminSettingsReq* SaveAdminSettingsReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<SaveAdminSettingsReq> SaveAdminSettingsReq_default_instance_;
 
 SaveAdminSettingsReq* SaveAdminSettingsReq::New(::google::protobuf::Arena* arena) const {
   SaveAdminSettingsReq* n = new SaveAdminSettingsReq;
@@ -7989,6 +8167,9 @@ SaveAdminSettingsReq* SaveAdminSettingsReq::New(::google::protobuf::Arena* arena
   return n;
 }
 
+void SaveAdminSettingsReq::UnsafeMergeFrom(const SaveAdminSettingsReq& from) {
+  MergeFrom(from);
+}
 void SaveAdminSettingsReq::Swap(SaveAdminSettingsReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -8009,7 +8190,7 @@ void SaveAdminSettingsReq::InternalSwap(SaveAdminSettingsReq* other) {
 
 // optional .zproto.GroupOutPeer group_peer = 1;
 bool SaveAdminSettingsReq::has_group_peer() const {
-  return !_is_default_instance_ && group_peer_ != NULL;
+  return this != internal_default_instance() && group_peer_ != NULL;
 }
 void SaveAdminSettingsReq::clear_group_peer() {
   if (GetArenaNoVirtual() == NULL && group_peer_ != NULL) delete group_peer_;
@@ -8017,7 +8198,8 @@ void SaveAdminSettingsReq::clear_group_peer() {
 }
 const ::zproto::GroupOutPeer& SaveAdminSettingsReq::group_peer() const {
   // @@protoc_insertion_point(field_get:zproto.SaveAdminSettingsReq.group_peer)
-  return group_peer_ != NULL ? *group_peer_ : *default_instance_->group_peer_;
+  return group_peer_ != NULL ? *group_peer_
+                         : *::zproto::GroupOutPeer::internal_default_instance();
 }
 ::zproto::GroupOutPeer* SaveAdminSettingsReq::mutable_group_peer() {
   
@@ -8047,7 +8229,7 @@ void SaveAdminSettingsReq::set_allocated_group_peer(::zproto::GroupOutPeer* grou
 
 // optional .zproto.AdminSettings settings = 2;
 bool SaveAdminSettingsReq::has_settings() const {
-  return !_is_default_instance_ && settings_ != NULL;
+  return this != internal_default_instance() && settings_ != NULL;
 }
 void SaveAdminSettingsReq::clear_settings() {
   if (GetArenaNoVirtual() == NULL && settings_ != NULL) delete settings_;
@@ -8055,7 +8237,8 @@ void SaveAdminSettingsReq::clear_settings() {
 }
 const ::zproto::AdminSettings& SaveAdminSettingsReq::settings() const {
   // @@protoc_insertion_point(field_get:zproto.SaveAdminSettingsReq.settings)
-  return settings_ != NULL ? *settings_ : *default_instance_->settings_;
+  return settings_ != NULL ? *settings_
+                         : *::zproto::AdminSettings::internal_default_instance();
 }
 ::zproto::AdminSettings* SaveAdminSettingsReq::mutable_settings() {
   
@@ -8083,6 +8266,9 @@ void SaveAdminSettingsReq::set_allocated_settings(::zproto::AdminSettings* setti
   // @@protoc_insertion_point(field_set_allocated:zproto.SaveAdminSettingsReq.settings)
 }
 
+inline const SaveAdminSettingsReq* SaveAdminSettingsReq::internal_default_instance() {
+  return &SaveAdminSettingsReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -8093,27 +8279,27 @@ const int DeleteGroupReq::kGroupPeerFieldNumber;
 
 DeleteGroupReq::DeleteGroupReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.DeleteGroupReq)
 }
 
 void DeleteGroupReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(&::zproto::GroupOutPeer::default_instance());
+  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(
+      ::zproto::GroupOutPeer::internal_default_instance());
 }
 
 DeleteGroupReq::DeleteGroupReq(const DeleteGroupReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.DeleteGroupReq)
 }
 
 void DeleteGroupReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   group_peer_ = NULL;
+  _cached_size_ = 0;
 }
 
 DeleteGroupReq::~DeleteGroupReq() {
@@ -8122,7 +8308,7 @@ DeleteGroupReq::~DeleteGroupReq() {
 }
 
 void DeleteGroupReq::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &DeleteGroupReq_default_instance_.get()) {
     delete group_peer_;
   }
 }
@@ -8138,11 +8324,11 @@ const ::google::protobuf::Descriptor* DeleteGroupReq::descriptor() {
 }
 
 const DeleteGroupReq& DeleteGroupReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-DeleteGroupReq* DeleteGroupReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<DeleteGroupReq> DeleteGroupReq_default_instance_;
 
 DeleteGroupReq* DeleteGroupReq::New(::google::protobuf::Arena* arena) const {
   DeleteGroupReq* n = new DeleteGroupReq;
@@ -8152,6 +8338,9 @@ DeleteGroupReq* DeleteGroupReq::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void DeleteGroupReq::UnsafeMergeFrom(const DeleteGroupReq& from) {
+  MergeFrom(from);
+}
 void DeleteGroupReq::Swap(DeleteGroupReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -8172,7 +8361,7 @@ void DeleteGroupReq::InternalSwap(DeleteGroupReq* other) {
 
 // optional .zproto.GroupOutPeer group_peer = 1;
 bool DeleteGroupReq::has_group_peer() const {
-  return !_is_default_instance_ && group_peer_ != NULL;
+  return this != internal_default_instance() && group_peer_ != NULL;
 }
 void DeleteGroupReq::clear_group_peer() {
   if (GetArenaNoVirtual() == NULL && group_peer_ != NULL) delete group_peer_;
@@ -8180,7 +8369,8 @@ void DeleteGroupReq::clear_group_peer() {
 }
 const ::zproto::GroupOutPeer& DeleteGroupReq::group_peer() const {
   // @@protoc_insertion_point(field_get:zproto.DeleteGroupReq.group_peer)
-  return group_peer_ != NULL ? *group_peer_ : *default_instance_->group_peer_;
+  return group_peer_ != NULL ? *group_peer_
+                         : *::zproto::GroupOutPeer::internal_default_instance();
 }
 ::zproto::GroupOutPeer* DeleteGroupReq::mutable_group_peer() {
   
@@ -8208,6 +8398,9 @@ void DeleteGroupReq::set_allocated_group_peer(::zproto::GroupOutPeer* group_peer
   // @@protoc_insertion_point(field_set_allocated:zproto.DeleteGroupReq.group_peer)
 }
 
+inline const DeleteGroupReq* DeleteGroupReq::internal_default_instance() {
+  return &DeleteGroupReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -8218,27 +8411,27 @@ const int ShareHistoryReq::kGroupPeerFieldNumber;
 
 ShareHistoryReq::ShareHistoryReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.ShareHistoryReq)
 }
 
 void ShareHistoryReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(&::zproto::GroupOutPeer::default_instance());
+  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(
+      ::zproto::GroupOutPeer::internal_default_instance());
 }
 
 ShareHistoryReq::ShareHistoryReq(const ShareHistoryReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.ShareHistoryReq)
 }
 
 void ShareHistoryReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   group_peer_ = NULL;
+  _cached_size_ = 0;
 }
 
 ShareHistoryReq::~ShareHistoryReq() {
@@ -8247,7 +8440,7 @@ ShareHistoryReq::~ShareHistoryReq() {
 }
 
 void ShareHistoryReq::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &ShareHistoryReq_default_instance_.get()) {
     delete group_peer_;
   }
 }
@@ -8263,11 +8456,11 @@ const ::google::protobuf::Descriptor* ShareHistoryReq::descriptor() {
 }
 
 const ShareHistoryReq& ShareHistoryReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-ShareHistoryReq* ShareHistoryReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<ShareHistoryReq> ShareHistoryReq_default_instance_;
 
 ShareHistoryReq* ShareHistoryReq::New(::google::protobuf::Arena* arena) const {
   ShareHistoryReq* n = new ShareHistoryReq;
@@ -8277,6 +8470,9 @@ ShareHistoryReq* ShareHistoryReq::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void ShareHistoryReq::UnsafeMergeFrom(const ShareHistoryReq& from) {
+  MergeFrom(from);
+}
 void ShareHistoryReq::Swap(ShareHistoryReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -8297,7 +8493,7 @@ void ShareHistoryReq::InternalSwap(ShareHistoryReq* other) {
 
 // optional .zproto.GroupOutPeer group_peer = 1;
 bool ShareHistoryReq::has_group_peer() const {
-  return !_is_default_instance_ && group_peer_ != NULL;
+  return this != internal_default_instance() && group_peer_ != NULL;
 }
 void ShareHistoryReq::clear_group_peer() {
   if (GetArenaNoVirtual() == NULL && group_peer_ != NULL) delete group_peer_;
@@ -8305,7 +8501,8 @@ void ShareHistoryReq::clear_group_peer() {
 }
 const ::zproto::GroupOutPeer& ShareHistoryReq::group_peer() const {
   // @@protoc_insertion_point(field_get:zproto.ShareHistoryReq.group_peer)
-  return group_peer_ != NULL ? *group_peer_ : *default_instance_->group_peer_;
+  return group_peer_ != NULL ? *group_peer_
+                         : *::zproto::GroupOutPeer::internal_default_instance();
 }
 ::zproto::GroupOutPeer* ShareHistoryReq::mutable_group_peer() {
   
@@ -8333,6 +8530,9 @@ void ShareHistoryReq::set_allocated_group_peer(::zproto::GroupOutPeer* group_pee
   // @@protoc_insertion_point(field_set_allocated:zproto.ShareHistoryReq.group_peer)
 }
 
+inline const ShareHistoryReq* ShareHistoryReq::internal_default_instance() {
+  return &ShareHistoryReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -8343,27 +8543,25 @@ const int InviteUrlRsp::kUrlFieldNumber;
 
 InviteUrlRsp::InviteUrlRsp()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.InviteUrlRsp)
 }
 
 void InviteUrlRsp::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 InviteUrlRsp::InviteUrlRsp(const InviteUrlRsp& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.InviteUrlRsp)
 }
 
 void InviteUrlRsp::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
   url_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _cached_size_ = 0;
 }
 
 InviteUrlRsp::~InviteUrlRsp() {
@@ -8373,8 +8571,6 @@ InviteUrlRsp::~InviteUrlRsp() {
 
 void InviteUrlRsp::SharedDtor() {
   url_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
 }
 
 void InviteUrlRsp::SetCachedSize(int size) const {
@@ -8388,11 +8584,11 @@ const ::google::protobuf::Descriptor* InviteUrlRsp::descriptor() {
 }
 
 const InviteUrlRsp& InviteUrlRsp::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-InviteUrlRsp* InviteUrlRsp::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<InviteUrlRsp> InviteUrlRsp_default_instance_;
 
 InviteUrlRsp* InviteUrlRsp::New(::google::protobuf::Arena* arena) const {
   InviteUrlRsp* n = new InviteUrlRsp;
@@ -8402,6 +8598,9 @@ InviteUrlRsp* InviteUrlRsp::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void InviteUrlRsp::UnsafeMergeFrom(const InviteUrlRsp& from) {
+  MergeFrom(from);
+}
 void InviteUrlRsp::Swap(InviteUrlRsp* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -8424,37 +8623,37 @@ void InviteUrlRsp::InternalSwap(InviteUrlRsp* other) {
 void InviteUrlRsp::clear_url() {
   url_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& InviteUrlRsp::url() const {
+const ::std::string& InviteUrlRsp::url() const {
   // @@protoc_insertion_point(field_get:zproto.InviteUrlRsp.url)
   return url_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void InviteUrlRsp::set_url(const ::std::string& value) {
+void InviteUrlRsp::set_url(const ::std::string& value) {
   
   url_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.InviteUrlRsp.url)
 }
- void InviteUrlRsp::set_url(const char* value) {
+void InviteUrlRsp::set_url(const char* value) {
   
   url_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.InviteUrlRsp.url)
 }
- void InviteUrlRsp::set_url(const char* value, size_t size) {
+void InviteUrlRsp::set_url(const char* value, size_t size) {
   
   url_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.InviteUrlRsp.url)
 }
- ::std::string* InviteUrlRsp::mutable_url() {
+::std::string* InviteUrlRsp::mutable_url() {
   
   // @@protoc_insertion_point(field_mutable:zproto.InviteUrlRsp.url)
   return url_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* InviteUrlRsp::release_url() {
+::std::string* InviteUrlRsp::release_url() {
   // @@protoc_insertion_point(field_release:zproto.InviteUrlRsp.url)
   
   return url_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void InviteUrlRsp::set_allocated_url(::std::string* url) {
+void InviteUrlRsp::set_allocated_url(::std::string* url) {
   if (url != NULL) {
     
   } else {
@@ -8464,6 +8663,9 @@ void InviteUrlRsp::clear_url() {
   // @@protoc_insertion_point(field_set_allocated:zproto.InviteUrlRsp.url)
 }
 
+inline const InviteUrlRsp* InviteUrlRsp::internal_default_instance() {
+  return &InviteUrlRsp_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -8474,27 +8676,27 @@ const int GetGroupInviteUrlReq::kGroupPeerFieldNumber;
 
 GetGroupInviteUrlReq::GetGroupInviteUrlReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.GetGroupInviteUrlReq)
 }
 
 void GetGroupInviteUrlReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(&::zproto::GroupOutPeer::default_instance());
+  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(
+      ::zproto::GroupOutPeer::internal_default_instance());
 }
 
 GetGroupInviteUrlReq::GetGroupInviteUrlReq(const GetGroupInviteUrlReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.GetGroupInviteUrlReq)
 }
 
 void GetGroupInviteUrlReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   group_peer_ = NULL;
+  _cached_size_ = 0;
 }
 
 GetGroupInviteUrlReq::~GetGroupInviteUrlReq() {
@@ -8503,7 +8705,7 @@ GetGroupInviteUrlReq::~GetGroupInviteUrlReq() {
 }
 
 void GetGroupInviteUrlReq::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &GetGroupInviteUrlReq_default_instance_.get()) {
     delete group_peer_;
   }
 }
@@ -8519,11 +8721,11 @@ const ::google::protobuf::Descriptor* GetGroupInviteUrlReq::descriptor() {
 }
 
 const GetGroupInviteUrlReq& GetGroupInviteUrlReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-GetGroupInviteUrlReq* GetGroupInviteUrlReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<GetGroupInviteUrlReq> GetGroupInviteUrlReq_default_instance_;
 
 GetGroupInviteUrlReq* GetGroupInviteUrlReq::New(::google::protobuf::Arena* arena) const {
   GetGroupInviteUrlReq* n = new GetGroupInviteUrlReq;
@@ -8533,6 +8735,9 @@ GetGroupInviteUrlReq* GetGroupInviteUrlReq::New(::google::protobuf::Arena* arena
   return n;
 }
 
+void GetGroupInviteUrlReq::UnsafeMergeFrom(const GetGroupInviteUrlReq& from) {
+  MergeFrom(from);
+}
 void GetGroupInviteUrlReq::Swap(GetGroupInviteUrlReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -8553,7 +8758,7 @@ void GetGroupInviteUrlReq::InternalSwap(GetGroupInviteUrlReq* other) {
 
 // optional .zproto.GroupOutPeer group_peer = 1;
 bool GetGroupInviteUrlReq::has_group_peer() const {
-  return !_is_default_instance_ && group_peer_ != NULL;
+  return this != internal_default_instance() && group_peer_ != NULL;
 }
 void GetGroupInviteUrlReq::clear_group_peer() {
   if (GetArenaNoVirtual() == NULL && group_peer_ != NULL) delete group_peer_;
@@ -8561,7 +8766,8 @@ void GetGroupInviteUrlReq::clear_group_peer() {
 }
 const ::zproto::GroupOutPeer& GetGroupInviteUrlReq::group_peer() const {
   // @@protoc_insertion_point(field_get:zproto.GetGroupInviteUrlReq.group_peer)
-  return group_peer_ != NULL ? *group_peer_ : *default_instance_->group_peer_;
+  return group_peer_ != NULL ? *group_peer_
+                         : *::zproto::GroupOutPeer::internal_default_instance();
 }
 ::zproto::GroupOutPeer* GetGroupInviteUrlReq::mutable_group_peer() {
   
@@ -8589,6 +8795,9 @@ void GetGroupInviteUrlReq::set_allocated_group_peer(::zproto::GroupOutPeer* grou
   // @@protoc_insertion_point(field_set_allocated:zproto.GetGroupInviteUrlReq.group_peer)
 }
 
+inline const GetGroupInviteUrlReq* GetGroupInviteUrlReq::internal_default_instance() {
+  return &GetGroupInviteUrlReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -8599,27 +8808,27 @@ const int RevokeInviteUrlReq::kGroupPeerFieldNumber;
 
 RevokeInviteUrlReq::RevokeInviteUrlReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.RevokeInviteUrlReq)
 }
 
 void RevokeInviteUrlReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(&::zproto::GroupOutPeer::default_instance());
+  group_peer_ = const_cast< ::zproto::GroupOutPeer*>(
+      ::zproto::GroupOutPeer::internal_default_instance());
 }
 
 RevokeInviteUrlReq::RevokeInviteUrlReq(const RevokeInviteUrlReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.RevokeInviteUrlReq)
 }
 
 void RevokeInviteUrlReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   group_peer_ = NULL;
+  _cached_size_ = 0;
 }
 
 RevokeInviteUrlReq::~RevokeInviteUrlReq() {
@@ -8628,7 +8837,7 @@ RevokeInviteUrlReq::~RevokeInviteUrlReq() {
 }
 
 void RevokeInviteUrlReq::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &RevokeInviteUrlReq_default_instance_.get()) {
     delete group_peer_;
   }
 }
@@ -8644,11 +8853,11 @@ const ::google::protobuf::Descriptor* RevokeInviteUrlReq::descriptor() {
 }
 
 const RevokeInviteUrlReq& RevokeInviteUrlReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-RevokeInviteUrlReq* RevokeInviteUrlReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<RevokeInviteUrlReq> RevokeInviteUrlReq_default_instance_;
 
 RevokeInviteUrlReq* RevokeInviteUrlReq::New(::google::protobuf::Arena* arena) const {
   RevokeInviteUrlReq* n = new RevokeInviteUrlReq;
@@ -8658,6 +8867,9 @@ RevokeInviteUrlReq* RevokeInviteUrlReq::New(::google::protobuf::Arena* arena) co
   return n;
 }
 
+void RevokeInviteUrlReq::UnsafeMergeFrom(const RevokeInviteUrlReq& from) {
+  MergeFrom(from);
+}
 void RevokeInviteUrlReq::Swap(RevokeInviteUrlReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -8678,7 +8890,7 @@ void RevokeInviteUrlReq::InternalSwap(RevokeInviteUrlReq* other) {
 
 // optional .zproto.GroupOutPeer group_peer = 1;
 bool RevokeInviteUrlReq::has_group_peer() const {
-  return !_is_default_instance_ && group_peer_ != NULL;
+  return this != internal_default_instance() && group_peer_ != NULL;
 }
 void RevokeInviteUrlReq::clear_group_peer() {
   if (GetArenaNoVirtual() == NULL && group_peer_ != NULL) delete group_peer_;
@@ -8686,7 +8898,8 @@ void RevokeInviteUrlReq::clear_group_peer() {
 }
 const ::zproto::GroupOutPeer& RevokeInviteUrlReq::group_peer() const {
   // @@protoc_insertion_point(field_get:zproto.RevokeInviteUrlReq.group_peer)
-  return group_peer_ != NULL ? *group_peer_ : *default_instance_->group_peer_;
+  return group_peer_ != NULL ? *group_peer_
+                         : *::zproto::GroupOutPeer::internal_default_instance();
 }
 ::zproto::GroupOutPeer* RevokeInviteUrlReq::mutable_group_peer() {
   
@@ -8714,6 +8927,9 @@ void RevokeInviteUrlReq::set_allocated_group_peer(::zproto::GroupOutPeer* group_
   // @@protoc_insertion_point(field_set_allocated:zproto.RevokeInviteUrlReq.group_peer)
 }
 
+inline const RevokeInviteUrlReq* RevokeInviteUrlReq::internal_default_instance() {
+  return &RevokeInviteUrlReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -8725,27 +8941,25 @@ const int JoinGroupReq::kOptimizationsFieldNumber;
 
 JoinGroupReq::JoinGroupReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.JoinGroupReq)
 }
 
 void JoinGroupReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 JoinGroupReq::JoinGroupReq(const JoinGroupReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.JoinGroupReq)
 }
 
 void JoinGroupReq::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
   token_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _cached_size_ = 0;
 }
 
 JoinGroupReq::~JoinGroupReq() {
@@ -8755,8 +8969,6 @@ JoinGroupReq::~JoinGroupReq() {
 
 void JoinGroupReq::SharedDtor() {
   token_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
 }
 
 void JoinGroupReq::SetCachedSize(int size) const {
@@ -8770,11 +8982,11 @@ const ::google::protobuf::Descriptor* JoinGroupReq::descriptor() {
 }
 
 const JoinGroupReq& JoinGroupReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-JoinGroupReq* JoinGroupReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<JoinGroupReq> JoinGroupReq_default_instance_;
 
 JoinGroupReq* JoinGroupReq::New(::google::protobuf::Arena* arena) const {
   JoinGroupReq* n = new JoinGroupReq;
@@ -8784,6 +8996,9 @@ JoinGroupReq* JoinGroupReq::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void JoinGroupReq::UnsafeMergeFrom(const JoinGroupReq& from) {
+  MergeFrom(from);
+}
 void JoinGroupReq::Swap(JoinGroupReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -8806,37 +9021,37 @@ void JoinGroupReq::InternalSwap(JoinGroupReq* other) {
 void JoinGroupReq::clear_token() {
   token_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& JoinGroupReq::token() const {
+const ::std::string& JoinGroupReq::token() const {
   // @@protoc_insertion_point(field_get:zproto.JoinGroupReq.token)
   return token_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void JoinGroupReq::set_token(const ::std::string& value) {
+void JoinGroupReq::set_token(const ::std::string& value) {
   
   token_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.JoinGroupReq.token)
 }
- void JoinGroupReq::set_token(const char* value) {
+void JoinGroupReq::set_token(const char* value) {
   
   token_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.JoinGroupReq.token)
 }
- void JoinGroupReq::set_token(const char* value, size_t size) {
+void JoinGroupReq::set_token(const char* value, size_t size) {
   
   token_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.JoinGroupReq.token)
 }
- ::std::string* JoinGroupReq::mutable_token() {
+::std::string* JoinGroupReq::mutable_token() {
   
   // @@protoc_insertion_point(field_mutable:zproto.JoinGroupReq.token)
   return token_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* JoinGroupReq::release_token() {
+::std::string* JoinGroupReq::release_token() {
   // @@protoc_insertion_point(field_release:zproto.JoinGroupReq.token)
   
   return token_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void JoinGroupReq::set_allocated_token(::std::string* token) {
+void JoinGroupReq::set_allocated_token(::std::string* token) {
   if (token != NULL) {
     
   } else {
@@ -8853,29 +9068,32 @@ int JoinGroupReq::optimizations_size() const {
 void JoinGroupReq::clear_optimizations() {
   optimizations_.Clear();
 }
- ::zproto::UpdateOptimization JoinGroupReq::optimizations(int index) const {
+::zproto::UpdateOptimization JoinGroupReq::optimizations(int index) const {
   // @@protoc_insertion_point(field_get:zproto.JoinGroupReq.optimizations)
   return static_cast< ::zproto::UpdateOptimization >(optimizations_.Get(index));
 }
- void JoinGroupReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
+void JoinGroupReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
   optimizations_.Set(index, value);
   // @@protoc_insertion_point(field_set:zproto.JoinGroupReq.optimizations)
 }
- void JoinGroupReq::add_optimizations(::zproto::UpdateOptimization value) {
+void JoinGroupReq::add_optimizations(::zproto::UpdateOptimization value) {
   optimizations_.Add(value);
   // @@protoc_insertion_point(field_add:zproto.JoinGroupReq.optimizations)
 }
- const ::google::protobuf::RepeatedField<int>&
+const ::google::protobuf::RepeatedField<int>&
 JoinGroupReq::optimizations() const {
   // @@protoc_insertion_point(field_list:zproto.JoinGroupReq.optimizations)
   return optimizations_;
 }
- ::google::protobuf::RepeatedField<int>*
+::google::protobuf::RepeatedField<int>*
 JoinGroupReq::mutable_optimizations() {
   // @@protoc_insertion_point(field_mutable_list:zproto.JoinGroupReq.optimizations)
   return &optimizations_;
 }
 
+inline const JoinGroupReq* JoinGroupReq::internal_default_instance() {
+  return &JoinGroupReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -8892,32 +9110,30 @@ const int JoinGroupRsp::kDateFieldNumber;
 
 JoinGroupRsp::JoinGroupRsp()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_groups_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.JoinGroupRsp)
 }
 
 void JoinGroupRsp::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  group_ = const_cast< ::zproto::Group*>(&::zproto::Group::default_instance());
+  group_ = const_cast< ::zproto::Group*>(
+      ::zproto::Group::internal_default_instance());
 }
 
 JoinGroupRsp::JoinGroupRsp(const JoinGroupRsp& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.JoinGroupRsp)
 }
 
 void JoinGroupRsp::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  group_ = NULL;
-  rid_ = GOOGLE_LONGLONG(0);
-  seq_ = 0;
   state_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  date_ = GOOGLE_LONGLONG(0);
+  group_ = NULL;
+  ::memset(&rid_, 0, reinterpret_cast<char*>(&seq_) -
+    reinterpret_cast<char*>(&rid_) + sizeof(seq_));
+  _cached_size_ = 0;
 }
 
 JoinGroupRsp::~JoinGroupRsp() {
@@ -8927,7 +9143,7 @@ JoinGroupRsp::~JoinGroupRsp() {
 
 void JoinGroupRsp::SharedDtor() {
   state_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
+  if (this != &JoinGroupRsp_default_instance_.get()) {
     delete group_;
   }
 }
@@ -8943,11 +9159,11 @@ const ::google::protobuf::Descriptor* JoinGroupRsp::descriptor() {
 }
 
 const JoinGroupRsp& JoinGroupRsp::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_groups_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_groups_2eproto();
+  return *internal_default_instance();
 }
 
-JoinGroupRsp* JoinGroupRsp::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<JoinGroupRsp> JoinGroupRsp_default_instance_;
 
 JoinGroupRsp* JoinGroupRsp::New(::google::protobuf::Arena* arena) const {
   JoinGroupRsp* n = new JoinGroupRsp;
@@ -8957,6 +9173,9 @@ JoinGroupRsp* JoinGroupRsp::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void JoinGroupRsp::UnsafeMergeFrom(const JoinGroupRsp& from) {
+  MergeFrom(from);
+}
 void JoinGroupRsp::Swap(JoinGroupRsp* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -8977,7 +9196,7 @@ void JoinGroupRsp::InternalSwap(JoinGroupRsp* other) {
 
 // optional .zproto.Group group = 1;
 bool JoinGroupRsp::has_group() const {
-  return !_is_default_instance_ && group_ != NULL;
+  return this != internal_default_instance() && group_ != NULL;
 }
 void JoinGroupRsp::clear_group() {
   if (GetArenaNoVirtual() == NULL && group_ != NULL) delete group_;
@@ -8985,7 +9204,8 @@ void JoinGroupRsp::clear_group() {
 }
 const ::zproto::Group& JoinGroupRsp::group() const {
   // @@protoc_insertion_point(field_get:zproto.JoinGroupRsp.group)
-  return group_ != NULL ? *group_ : *default_instance_->group_;
+  return group_ != NULL ? *group_
+                         : *::zproto::Group::internal_default_instance();
 }
 ::zproto::Group* JoinGroupRsp::mutable_group() {
   
@@ -9077,11 +9297,11 @@ JoinGroupRsp::user_peers() const {
 void JoinGroupRsp::clear_rid() {
   rid_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 JoinGroupRsp::rid() const {
+::google::protobuf::int64 JoinGroupRsp::rid() const {
   // @@protoc_insertion_point(field_get:zproto.JoinGroupRsp.rid)
   return rid_;
 }
- void JoinGroupRsp::set_rid(::google::protobuf::int64 value) {
+void JoinGroupRsp::set_rid(::google::protobuf::int64 value) {
   
   rid_ = value;
   // @@protoc_insertion_point(field_set:zproto.JoinGroupRsp.rid)
@@ -9091,11 +9311,11 @@ void JoinGroupRsp::clear_rid() {
 void JoinGroupRsp::clear_seq() {
   seq_ = 0;
 }
- ::google::protobuf::int32 JoinGroupRsp::seq() const {
+::google::protobuf::int32 JoinGroupRsp::seq() const {
   // @@protoc_insertion_point(field_get:zproto.JoinGroupRsp.seq)
   return seq_;
 }
- void JoinGroupRsp::set_seq(::google::protobuf::int32 value) {
+void JoinGroupRsp::set_seq(::google::protobuf::int32 value) {
   
   seq_ = value;
   // @@protoc_insertion_point(field_set:zproto.JoinGroupRsp.seq)
@@ -9105,37 +9325,37 @@ void JoinGroupRsp::clear_seq() {
 void JoinGroupRsp::clear_state() {
   state_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& JoinGroupRsp::state() const {
+const ::std::string& JoinGroupRsp::state() const {
   // @@protoc_insertion_point(field_get:zproto.JoinGroupRsp.state)
   return state_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void JoinGroupRsp::set_state(const ::std::string& value) {
+void JoinGroupRsp::set_state(const ::std::string& value) {
   
   state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.JoinGroupRsp.state)
 }
- void JoinGroupRsp::set_state(const char* value) {
+void JoinGroupRsp::set_state(const char* value) {
   
   state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.JoinGroupRsp.state)
 }
- void JoinGroupRsp::set_state(const void* value, size_t size) {
+void JoinGroupRsp::set_state(const void* value, size_t size) {
   
   state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.JoinGroupRsp.state)
 }
- ::std::string* JoinGroupRsp::mutable_state() {
+::std::string* JoinGroupRsp::mutable_state() {
   
   // @@protoc_insertion_point(field_mutable:zproto.JoinGroupRsp.state)
   return state_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* JoinGroupRsp::release_state() {
+::std::string* JoinGroupRsp::release_state() {
   // @@protoc_insertion_point(field_release:zproto.JoinGroupRsp.state)
   
   return state_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void JoinGroupRsp::set_allocated_state(::std::string* state) {
+void JoinGroupRsp::set_allocated_state(::std::string* state) {
   if (state != NULL) {
     
   } else {
@@ -9149,16 +9369,19 @@ void JoinGroupRsp::clear_state() {
 void JoinGroupRsp::clear_date() {
   date_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 JoinGroupRsp::date() const {
+::google::protobuf::int64 JoinGroupRsp::date() const {
   // @@protoc_insertion_point(field_get:zproto.JoinGroupRsp.date)
   return date_;
 }
- void JoinGroupRsp::set_date(::google::protobuf::int64 value) {
+void JoinGroupRsp::set_date(::google::protobuf::int64 value) {
   
   date_ = value;
   // @@protoc_insertion_point(field_set:zproto.JoinGroupRsp.date)
 }
 
+inline const JoinGroupRsp* JoinGroupRsp::internal_default_instance() {
+  return &JoinGroupRsp_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // @@protoc_insertion_point(namespace_scope)

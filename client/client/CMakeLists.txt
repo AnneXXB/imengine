@@ -28,10 +28,6 @@ set (SRC_LIST
   ../../server/base/message_handler_util.h
   )
 
-link_directories(
-    /usr/local/opt/openssl/lib
-    )
-
 add_executable (client ${SRC_LIST})
 target_link_libraries (client net base proto readline)
 

@@ -105,14 +105,13 @@ void protobuf_AssignDesc_messaging_2eproto() {
   SendMessageReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       SendMessageReq_descriptor_,
-      SendMessageReq::default_instance_,
+      SendMessageReq::internal_default_instance(),
       SendMessageReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(SendMessageReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SendMessageReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SendMessageReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SendMessageReq, _internal_metadata_));
   MessageReceivedReq_descriptor_ = file->message_type(1);
   static const int MessageReceivedReq_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReceivedReq, peer_),
@@ -121,14 +120,13 @@ void protobuf_AssignDesc_messaging_2eproto() {
   MessageReceivedReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       MessageReceivedReq_descriptor_,
-      MessageReceivedReq::default_instance_,
+      MessageReceivedReq::internal_default_instance(),
       MessageReceivedReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(MessageReceivedReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReceivedReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReceivedReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReceivedReq, _internal_metadata_));
   MessageReadReq_descriptor_ = file->message_type(2);
   static const int MessageReadReq_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadReq, peer_),
@@ -137,14 +135,13 @@ void protobuf_AssignDesc_messaging_2eproto() {
   MessageReadReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       MessageReadReq_descriptor_,
-      MessageReadReq::default_instance_,
+      MessageReadReq::internal_default_instance(),
       MessageReadReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(MessageReadReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadReq, _internal_metadata_));
   DeleteMessageReq_descriptor_ = file->message_type(3);
   static const int DeleteMessageReq_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeleteMessageReq, peer_),
@@ -153,14 +150,13 @@ void protobuf_AssignDesc_messaging_2eproto() {
   DeleteMessageReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       DeleteMessageReq_descriptor_,
-      DeleteMessageReq::default_instance_,
+      DeleteMessageReq::internal_default_instance(),
       DeleteMessageReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(DeleteMessageReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeleteMessageReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeleteMessageReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeleteMessageReq, _internal_metadata_));
   ClearChatReq_descriptor_ = file->message_type(4);
   static const int ClearChatReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClearChatReq, peer_),
@@ -168,14 +164,13 @@ void protobuf_AssignDesc_messaging_2eproto() {
   ClearChatReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       ClearChatReq_descriptor_,
-      ClearChatReq::default_instance_,
+      ClearChatReq::internal_default_instance(),
       ClearChatReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(ClearChatReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClearChatReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClearChatReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClearChatReq, _internal_metadata_));
   DeleteChatReq_descriptor_ = file->message_type(5);
   static const int DeleteChatReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeleteChatReq, peer_),
@@ -183,14 +178,13 @@ void protobuf_AssignDesc_messaging_2eproto() {
   DeleteChatReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       DeleteChatReq_descriptor_,
-      DeleteChatReq::default_instance_,
+      DeleteChatReq::internal_default_instance(),
       DeleteChatReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(DeleteChatReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeleteChatReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeleteChatReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DeleteChatReq, _internal_metadata_));
   MessageNotify_descriptor_ = file->message_type(6);
   static const int MessageNotify_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageNotify, peer_),
@@ -202,14 +196,13 @@ void protobuf_AssignDesc_messaging_2eproto() {
   MessageNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       MessageNotify_descriptor_,
-      MessageNotify::default_instance_,
+      MessageNotify::internal_default_instance(),
       MessageNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(MessageNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageNotify, _internal_metadata_));
   MessageContentChangedNotify_descriptor_ = file->message_type(7);
   static const int MessageContentChangedNotify_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageContentChangedNotify, peer_),
@@ -219,14 +212,13 @@ void protobuf_AssignDesc_messaging_2eproto() {
   MessageContentChangedNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       MessageContentChangedNotify_descriptor_,
-      MessageContentChangedNotify::default_instance_,
+      MessageContentChangedNotify::internal_default_instance(),
       MessageContentChangedNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(MessageContentChangedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageContentChangedNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageContentChangedNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageContentChangedNotify, _internal_metadata_));
   MessageDateChangedNotify_descriptor_ = file->message_type(8);
   static const int MessageDateChangedNotify_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageDateChangedNotify, peer_),
@@ -236,14 +228,13 @@ void protobuf_AssignDesc_messaging_2eproto() {
   MessageDateChangedNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       MessageDateChangedNotify_descriptor_,
-      MessageDateChangedNotify::default_instance_,
+      MessageDateChangedNotify::internal_default_instance(),
       MessageDateChangedNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(MessageDateChangedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageDateChangedNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageDateChangedNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageDateChangedNotify, _internal_metadata_));
   MessageSentNotify_descriptor_ = file->message_type(9);
   static const int MessageSentNotify_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageSentNotify, peer_),
@@ -253,14 +244,13 @@ void protobuf_AssignDesc_messaging_2eproto() {
   MessageSentNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       MessageSentNotify_descriptor_,
-      MessageSentNotify::default_instance_,
+      MessageSentNotify::internal_default_instance(),
       MessageSentNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(MessageSentNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageSentNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageSentNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageSentNotify, _internal_metadata_));
   MessageReceivedNotify_descriptor_ = file->message_type(10);
   static const int MessageReceivedNotify_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReceivedNotify, peer_),
@@ -270,14 +260,13 @@ void protobuf_AssignDesc_messaging_2eproto() {
   MessageReceivedNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       MessageReceivedNotify_descriptor_,
-      MessageReceivedNotify::default_instance_,
+      MessageReceivedNotify::internal_default_instance(),
       MessageReceivedNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(MessageReceivedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReceivedNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReceivedNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReceivedNotify, _internal_metadata_));
   MessageReadNotify_descriptor_ = file->message_type(11);
   static const int MessageReadNotify_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadNotify, peer_),
@@ -287,14 +276,13 @@ void protobuf_AssignDesc_messaging_2eproto() {
   MessageReadNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       MessageReadNotify_descriptor_,
-      MessageReadNotify::default_instance_,
+      MessageReadNotify::internal_default_instance(),
       MessageReadNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(MessageReadNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadNotify, _internal_metadata_));
   MessageReadByMeNotify_descriptor_ = file->message_type(12);
   static const int MessageReadByMeNotify_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadByMeNotify, peer_),
@@ -304,14 +292,13 @@ void protobuf_AssignDesc_messaging_2eproto() {
   MessageReadByMeNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       MessageReadByMeNotify_descriptor_,
-      MessageReadByMeNotify::default_instance_,
+      MessageReadByMeNotify::internal_default_instance(),
       MessageReadByMeNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(MessageReadByMeNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadByMeNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadByMeNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageReadByMeNotify, _internal_metadata_));
   MessageDeleteNotify_descriptor_ = file->message_type(13);
   static const int MessageDeleteNotify_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageDeleteNotify, peer_),
@@ -320,14 +307,13 @@ void protobuf_AssignDesc_messaging_2eproto() {
   MessageDeleteNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       MessageDeleteNotify_descriptor_,
-      MessageDeleteNotify::default_instance_,
+      MessageDeleteNotify::internal_default_instance(),
       MessageDeleteNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(MessageDeleteNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageDeleteNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageDeleteNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageDeleteNotify, _internal_metadata_));
   ChatClearNotify_descriptor_ = file->message_type(14);
   static const int ChatClearNotify_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatClearNotify, peer_),
@@ -335,14 +321,13 @@ void protobuf_AssignDesc_messaging_2eproto() {
   ChatClearNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       ChatClearNotify_descriptor_,
-      ChatClearNotify::default_instance_,
+      ChatClearNotify::internal_default_instance(),
       ChatClearNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(ChatClearNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatClearNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatClearNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatClearNotify, _internal_metadata_));
   ChatDeleteNotify_descriptor_ = file->message_type(15);
   static const int ChatDeleteNotify_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatDeleteNotify, peer_),
@@ -350,14 +335,13 @@ void protobuf_AssignDesc_messaging_2eproto() {
   ChatDeleteNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       ChatDeleteNotify_descriptor_,
-      ChatDeleteNotify::default_instance_,
+      ChatDeleteNotify::internal_default_instance(),
       ChatDeleteNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(ChatDeleteNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatDeleteNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatDeleteNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatDeleteNotify, _internal_metadata_));
   DialogShort_descriptor_ = file->message_type(16);
   static const int DialogShort_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DialogShort, peer_),
@@ -367,14 +351,13 @@ void protobuf_AssignDesc_messaging_2eproto() {
   DialogShort_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       DialogShort_descriptor_,
-      DialogShort::default_instance_,
+      DialogShort::internal_default_instance(),
       DialogShort_offsets_,
       -1,
       -1,
       -1,
       sizeof(DialogShort),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DialogShort, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DialogShort, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DialogShort, _internal_metadata_));
   DialogGroup_descriptor_ = file->message_type(17);
   static const int DialogGroup_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DialogGroup, title_),
@@ -384,14 +367,13 @@ void protobuf_AssignDesc_messaging_2eproto() {
   DialogGroup_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       DialogGroup_descriptor_,
-      DialogGroup::default_instance_,
+      DialogGroup::internal_default_instance(),
       DialogGroup_offsets_,
       -1,
       -1,
       -1,
       sizeof(DialogGroup),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DialogGroup, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DialogGroup, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DialogGroup, _internal_metadata_));
   ChatGroupsChangedNotify_descriptor_ = file->message_type(18);
   static const int ChatGroupsChangedNotify_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatGroupsChangedNotify, dialogs_),
@@ -399,14 +381,13 @@ void protobuf_AssignDesc_messaging_2eproto() {
   ChatGroupsChangedNotify_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       ChatGroupsChangedNotify_descriptor_,
-      ChatGroupsChangedNotify::default_instance_,
+      ChatGroupsChangedNotify::internal_default_instance(),
       ChatGroupsChangedNotify_offsets_,
       -1,
       -1,
       -1,
       sizeof(ChatGroupsChangedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatGroupsChangedNotify, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatGroupsChangedNotify, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChatGroupsChangedNotify, _internal_metadata_));
   LoadHistoryReq_descriptor_ = file->message_type(19);
   static const int LoadHistoryReq_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryReq, peer_),
@@ -418,14 +399,13 @@ void protobuf_AssignDesc_messaging_2eproto() {
   LoadHistoryReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       LoadHistoryReq_descriptor_,
-      LoadHistoryReq::default_instance_,
+      LoadHistoryReq::internal_default_instance(),
       LoadHistoryReq_offsets_,
       -1,
       -1,
       -1,
       sizeof(LoadHistoryReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryReq, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryReq, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryReq, _internal_metadata_));
   LoadHistoryRsp_descriptor_ = file->message_type(20);
   static const int LoadHistoryRsp_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryRsp, history_),
@@ -437,20 +417,19 @@ void protobuf_AssignDesc_messaging_2eproto() {
   LoadHistoryRsp_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       LoadHistoryRsp_descriptor_,
-      LoadHistoryRsp::default_instance_,
+      LoadHistoryRsp::internal_default_instance(),
       LoadHistoryRsp_offsets_,
       -1,
       -1,
       -1,
       sizeof(LoadHistoryRsp),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryRsp, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryRsp, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadHistoryRsp, _internal_metadata_));
 }
 
 namespace {
 
 GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AssignDescriptors_once_);
-inline void protobuf_AssignDescriptorsOnce() {
+void protobuf_AssignDescriptorsOnce() {
   ::google::protobuf::GoogleOnceInit(&protobuf_AssignDescriptors_once_,
                  &protobuf_AssignDesc_messaging_2eproto);
 }
@@ -459,108 +438,160 @@ void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      SendMessageReq_descriptor_, &SendMessageReq::default_instance());
+      SendMessageReq_descriptor_, SendMessageReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MessageReceivedReq_descriptor_, &MessageReceivedReq::default_instance());
+      MessageReceivedReq_descriptor_, MessageReceivedReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MessageReadReq_descriptor_, &MessageReadReq::default_instance());
+      MessageReadReq_descriptor_, MessageReadReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      DeleteMessageReq_descriptor_, &DeleteMessageReq::default_instance());
+      DeleteMessageReq_descriptor_, DeleteMessageReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      ClearChatReq_descriptor_, &ClearChatReq::default_instance());
+      ClearChatReq_descriptor_, ClearChatReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      DeleteChatReq_descriptor_, &DeleteChatReq::default_instance());
+      DeleteChatReq_descriptor_, DeleteChatReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MessageNotify_descriptor_, &MessageNotify::default_instance());
+      MessageNotify_descriptor_, MessageNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MessageContentChangedNotify_descriptor_, &MessageContentChangedNotify::default_instance());
+      MessageContentChangedNotify_descriptor_, MessageContentChangedNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MessageDateChangedNotify_descriptor_, &MessageDateChangedNotify::default_instance());
+      MessageDateChangedNotify_descriptor_, MessageDateChangedNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MessageSentNotify_descriptor_, &MessageSentNotify::default_instance());
+      MessageSentNotify_descriptor_, MessageSentNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MessageReceivedNotify_descriptor_, &MessageReceivedNotify::default_instance());
+      MessageReceivedNotify_descriptor_, MessageReceivedNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MessageReadNotify_descriptor_, &MessageReadNotify::default_instance());
+      MessageReadNotify_descriptor_, MessageReadNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MessageReadByMeNotify_descriptor_, &MessageReadByMeNotify::default_instance());
+      MessageReadByMeNotify_descriptor_, MessageReadByMeNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MessageDeleteNotify_descriptor_, &MessageDeleteNotify::default_instance());
+      MessageDeleteNotify_descriptor_, MessageDeleteNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      ChatClearNotify_descriptor_, &ChatClearNotify::default_instance());
+      ChatClearNotify_descriptor_, ChatClearNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      ChatDeleteNotify_descriptor_, &ChatDeleteNotify::default_instance());
+      ChatDeleteNotify_descriptor_, ChatDeleteNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      DialogShort_descriptor_, &DialogShort::default_instance());
+      DialogShort_descriptor_, DialogShort::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      DialogGroup_descriptor_, &DialogGroup::default_instance());
+      DialogGroup_descriptor_, DialogGroup::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      ChatGroupsChangedNotify_descriptor_, &ChatGroupsChangedNotify::default_instance());
+      ChatGroupsChangedNotify_descriptor_, ChatGroupsChangedNotify::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      LoadHistoryReq_descriptor_, &LoadHistoryReq::default_instance());
+      LoadHistoryReq_descriptor_, LoadHistoryReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      LoadHistoryRsp_descriptor_, &LoadHistoryRsp::default_instance());
+      LoadHistoryRsp_descriptor_, LoadHistoryRsp::internal_default_instance());
 }
 
 }  // namespace
 
 void protobuf_ShutdownFile_messaging_2eproto() {
-  delete SendMessageReq::default_instance_;
+  SendMessageReq_default_instance_.Shutdown();
   delete SendMessageReq_reflection_;
-  delete MessageReceivedReq::default_instance_;
+  MessageReceivedReq_default_instance_.Shutdown();
   delete MessageReceivedReq_reflection_;
-  delete MessageReadReq::default_instance_;
+  MessageReadReq_default_instance_.Shutdown();
   delete MessageReadReq_reflection_;
-  delete DeleteMessageReq::default_instance_;
+  DeleteMessageReq_default_instance_.Shutdown();
   delete DeleteMessageReq_reflection_;
-  delete ClearChatReq::default_instance_;
+  ClearChatReq_default_instance_.Shutdown();
   delete ClearChatReq_reflection_;
-  delete DeleteChatReq::default_instance_;
+  DeleteChatReq_default_instance_.Shutdown();
   delete DeleteChatReq_reflection_;
-  delete MessageNotify::default_instance_;
+  MessageNotify_default_instance_.Shutdown();
   delete MessageNotify_reflection_;
-  delete MessageContentChangedNotify::default_instance_;
+  MessageContentChangedNotify_default_instance_.Shutdown();
   delete MessageContentChangedNotify_reflection_;
-  delete MessageDateChangedNotify::default_instance_;
+  MessageDateChangedNotify_default_instance_.Shutdown();
   delete MessageDateChangedNotify_reflection_;
-  delete MessageSentNotify::default_instance_;
+  MessageSentNotify_default_instance_.Shutdown();
   delete MessageSentNotify_reflection_;
-  delete MessageReceivedNotify::default_instance_;
+  MessageReceivedNotify_default_instance_.Shutdown();
   delete MessageReceivedNotify_reflection_;
-  delete MessageReadNotify::default_instance_;
+  MessageReadNotify_default_instance_.Shutdown();
   delete MessageReadNotify_reflection_;
-  delete MessageReadByMeNotify::default_instance_;
+  MessageReadByMeNotify_default_instance_.Shutdown();
   delete MessageReadByMeNotify_reflection_;
-  delete MessageDeleteNotify::default_instance_;
+  MessageDeleteNotify_default_instance_.Shutdown();
   delete MessageDeleteNotify_reflection_;
-  delete ChatClearNotify::default_instance_;
+  ChatClearNotify_default_instance_.Shutdown();
   delete ChatClearNotify_reflection_;
-  delete ChatDeleteNotify::default_instance_;
+  ChatDeleteNotify_default_instance_.Shutdown();
   delete ChatDeleteNotify_reflection_;
-  delete DialogShort::default_instance_;
+  DialogShort_default_instance_.Shutdown();
   delete DialogShort_reflection_;
-  delete DialogGroup::default_instance_;
+  DialogGroup_default_instance_.Shutdown();
   delete DialogGroup_reflection_;
-  delete ChatGroupsChangedNotify::default_instance_;
+  ChatGroupsChangedNotify_default_instance_.Shutdown();
   delete ChatGroupsChangedNotify_reflection_;
-  delete LoadHistoryReq::default_instance_;
+  LoadHistoryReq_default_instance_.Shutdown();
   delete LoadHistoryReq_reflection_;
-  delete LoadHistoryRsp::default_instance_;
+  LoadHistoryRsp_default_instance_.Shutdown();
   delete LoadHistoryRsp_reflection_;
 }
 
-void protobuf_AddDesc_messaging_2eproto() GOOGLE_ATTRIBUTE_COLD;
-void protobuf_AddDesc_messaging_2eproto() {
-  static bool already_here = false;
-  if (already_here) return;
-  already_here = true;
+void protobuf_InitDefaults_messaging_2eproto_impl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-  ::zproto::protobuf_AddDesc_misc_2eproto();
-  ::zproto::protobuf_AddDesc_peers_2eproto();
-  ::zproto::protobuf_AddDesc_users_2eproto();
-  ::zproto::protobuf_AddDesc_group_5fbase_2eproto();
-  ::zproto::protobuf_AddDesc_messaging_5fbase_2eproto();
+  ::zproto::protobuf_InitDefaults_misc_2eproto();
+  ::zproto::protobuf_InitDefaults_peers_2eproto();
+  ::zproto::protobuf_InitDefaults_users_2eproto();
+  ::zproto::protobuf_InitDefaults_group_5fbase_2eproto();
+  ::zproto::protobuf_InitDefaults_messaging_5fbase_2eproto();
+  ::google::protobuf::internal::GetEmptyString();
+  SendMessageReq_default_instance_.DefaultConstruct();
+  MessageReceivedReq_default_instance_.DefaultConstruct();
+  MessageReadReq_default_instance_.DefaultConstruct();
+  DeleteMessageReq_default_instance_.DefaultConstruct();
+  ClearChatReq_default_instance_.DefaultConstruct();
+  DeleteChatReq_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  MessageNotify_default_instance_.DefaultConstruct();
+  MessageContentChangedNotify_default_instance_.DefaultConstruct();
+  MessageDateChangedNotify_default_instance_.DefaultConstruct();
+  MessageSentNotify_default_instance_.DefaultConstruct();
+  MessageReceivedNotify_default_instance_.DefaultConstruct();
+  MessageReadNotify_default_instance_.DefaultConstruct();
+  MessageReadByMeNotify_default_instance_.DefaultConstruct();
+  MessageDeleteNotify_default_instance_.DefaultConstruct();
+  ChatClearNotify_default_instance_.DefaultConstruct();
+  ChatDeleteNotify_default_instance_.DefaultConstruct();
+  DialogShort_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  DialogGroup_default_instance_.DefaultConstruct();
+  ChatGroupsChangedNotify_default_instance_.DefaultConstruct();
+  LoadHistoryReq_default_instance_.DefaultConstruct();
+  LoadHistoryRsp_default_instance_.DefaultConstruct();
+  SendMessageReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  MessageReceivedReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  MessageReadReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  DeleteMessageReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  ClearChatReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  DeleteChatReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  MessageNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  MessageContentChangedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  MessageDateChangedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  MessageSentNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  MessageReceivedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  MessageReadNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  MessageReadByMeNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  MessageDeleteNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  ChatClearNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  ChatDeleteNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  DialogShort_default_instance_.get_mutable()->InitAsDefaultInstance();
+  DialogGroup_default_instance_.get_mutable()->InitAsDefaultInstance();
+  ChatGroupsChangedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  LoadHistoryReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  LoadHistoryRsp_default_instance_.get_mutable()->InitAsDefaultInstance();
+}
+
+GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_InitDefaults_messaging_2eproto_once_);
+void protobuf_InitDefaults_messaging_2eproto() {
+  ::google::protobuf::GoogleOnceInit(&protobuf_InitDefaults_messaging_2eproto_once_,
+                 &protobuf_InitDefaults_messaging_2eproto_impl);
+}
+void protobuf_AddDesc_messaging_2eproto_impl() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  protobuf_InitDefaults_messaging_2eproto();
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
     "\n\017messaging.proto\022\006zproto\032\nmisc.proto\032\013p"
     "eers.proto\032\013users.proto\032\020group_base.prot"
@@ -615,51 +646,19 @@ void protobuf_AddDesc_messaging_2eproto() {
     "oMessagingH\002b\006proto3", 2020);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "messaging.proto", &protobuf_RegisterTypes);
-  SendMessageReq::default_instance_ = new SendMessageReq();
-  MessageReceivedReq::default_instance_ = new MessageReceivedReq();
-  MessageReadReq::default_instance_ = new MessageReadReq();
-  DeleteMessageReq::default_instance_ = new DeleteMessageReq();
-  ClearChatReq::default_instance_ = new ClearChatReq();
-  DeleteChatReq::default_instance_ = new DeleteChatReq();
-  MessageNotify::default_instance_ = new MessageNotify();
-  MessageContentChangedNotify::default_instance_ = new MessageContentChangedNotify();
-  MessageDateChangedNotify::default_instance_ = new MessageDateChangedNotify();
-  MessageSentNotify::default_instance_ = new MessageSentNotify();
-  MessageReceivedNotify::default_instance_ = new MessageReceivedNotify();
-  MessageReadNotify::default_instance_ = new MessageReadNotify();
-  MessageReadByMeNotify::default_instance_ = new MessageReadByMeNotify();
-  MessageDeleteNotify::default_instance_ = new MessageDeleteNotify();
-  ChatClearNotify::default_instance_ = new ChatClearNotify();
-  ChatDeleteNotify::default_instance_ = new ChatDeleteNotify();
-  DialogShort::default_instance_ = new DialogShort();
-  DialogGroup::default_instance_ = new DialogGroup();
-  ChatGroupsChangedNotify::default_instance_ = new ChatGroupsChangedNotify();
-  LoadHistoryReq::default_instance_ = new LoadHistoryReq();
-  LoadHistoryRsp::default_instance_ = new LoadHistoryRsp();
-  SendMessageReq::default_instance_->InitAsDefaultInstance();
-  MessageReceivedReq::default_instance_->InitAsDefaultInstance();
-  MessageReadReq::default_instance_->InitAsDefaultInstance();
-  DeleteMessageReq::default_instance_->InitAsDefaultInstance();
-  ClearChatReq::default_instance_->InitAsDefaultInstance();
-  DeleteChatReq::default_instance_->InitAsDefaultInstance();
-  MessageNotify::default_instance_->InitAsDefaultInstance();
-  MessageContentChangedNotify::default_instance_->InitAsDefaultInstance();
-  MessageDateChangedNotify::default_instance_->InitAsDefaultInstance();
-  MessageSentNotify::default_instance_->InitAsDefaultInstance();
-  MessageReceivedNotify::default_instance_->InitAsDefaultInstance();
-  MessageReadNotify::default_instance_->InitAsDefaultInstance();
-  MessageReadByMeNotify::default_instance_->InitAsDefaultInstance();
-  MessageDeleteNotify::default_instance_->InitAsDefaultInstance();
-  ChatClearNotify::default_instance_->InitAsDefaultInstance();
-  ChatDeleteNotify::default_instance_->InitAsDefaultInstance();
-  DialogShort::default_instance_->InitAsDefaultInstance();
-  DialogGroup::default_instance_->InitAsDefaultInstance();
-  ChatGroupsChangedNotify::default_instance_->InitAsDefaultInstance();
-  LoadHistoryReq::default_instance_->InitAsDefaultInstance();
-  LoadHistoryRsp::default_instance_->InitAsDefaultInstance();
+  ::zproto::protobuf_AddDesc_misc_2eproto();
+  ::zproto::protobuf_AddDesc_peers_2eproto();
+  ::zproto::protobuf_AddDesc_users_2eproto();
+  ::zproto::protobuf_AddDesc_group_5fbase_2eproto();
+  ::zproto::protobuf_AddDesc_messaging_5fbase_2eproto();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_messaging_2eproto);
 }
 
+GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AddDesc_messaging_2eproto_once_);
+void protobuf_AddDesc_messaging_2eproto() {
+  ::google::protobuf::GoogleOnceInit(&protobuf_AddDesc_messaging_2eproto_once_,
+                 &protobuf_AddDesc_messaging_2eproto_impl);
+}
 // Force AddDescriptors() to be called at static initialization time.
 struct StaticDescriptorInitializer_messaging_2eproto {
   StaticDescriptorInitializer_messaging_2eproto() {
@@ -678,32 +677,32 @@ const int SendMessageReq::kPassthroughDataFieldNumber;
 
 SendMessageReq::SendMessageReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_messaging_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.SendMessageReq)
 }
 
 void SendMessageReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::OutPeer*>(&::zproto::OutPeer::default_instance());
-  message_ = const_cast< ::zproto::InstantMessage*>(&::zproto::InstantMessage::default_instance());
+  peer_ = const_cast< ::zproto::OutPeer*>(
+      ::zproto::OutPeer::internal_default_instance());
+  message_ = const_cast< ::zproto::InstantMessage*>(
+      ::zproto::InstantMessage::internal_default_instance());
 }
 
 SendMessageReq::SendMessageReq(const SendMessageReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.SendMessageReq)
 }
 
 void SendMessageReq::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  peer_ = NULL;
-  rid_ = GOOGLE_LONGLONG(0);
-  message_ = NULL;
   passthrough_data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  peer_ = NULL;
+  message_ = NULL;
+  rid_ = GOOGLE_LONGLONG(0);
+  _cached_size_ = 0;
 }
 
 SendMessageReq::~SendMessageReq() {
@@ -713,7 +712,7 @@ SendMessageReq::~SendMessageReq() {
 
 void SendMessageReq::SharedDtor() {
   passthrough_data_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
+  if (this != &SendMessageReq_default_instance_.get()) {
     delete peer_;
     delete message_;
   }
@@ -730,11 +729,11 @@ const ::google::protobuf::Descriptor* SendMessageReq::descriptor() {
 }
 
 const SendMessageReq& SendMessageReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_messaging_2eproto();
+  return *internal_default_instance();
 }
 
-SendMessageReq* SendMessageReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<SendMessageReq> SendMessageReq_default_instance_;
 
 SendMessageReq* SendMessageReq::New(::google::protobuf::Arena* arena) const {
   SendMessageReq* n = new SendMessageReq;
@@ -744,6 +743,9 @@ SendMessageReq* SendMessageReq::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void SendMessageReq::UnsafeMergeFrom(const SendMessageReq& from) {
+  MergeFrom(from);
+}
 void SendMessageReq::Swap(SendMessageReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -764,7 +766,7 @@ void SendMessageReq::InternalSwap(SendMessageReq* other) {
 
 // optional .zproto.OutPeer peer = 1;
 bool SendMessageReq::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
+  return this != internal_default_instance() && peer_ != NULL;
 }
 void SendMessageReq::clear_peer() {
   if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
@@ -772,7 +774,8 @@ void SendMessageReq::clear_peer() {
 }
 const ::zproto::OutPeer& SendMessageReq::peer() const {
   // @@protoc_insertion_point(field_get:zproto.SendMessageReq.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
+  return peer_ != NULL ? *peer_
+                         : *::zproto::OutPeer::internal_default_instance();
 }
 ::zproto::OutPeer* SendMessageReq::mutable_peer() {
   
@@ -804,11 +807,11 @@ void SendMessageReq::set_allocated_peer(::zproto::OutPeer* peer) {
 void SendMessageReq::clear_rid() {
   rid_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 SendMessageReq::rid() const {
+::google::protobuf::int64 SendMessageReq::rid() const {
   // @@protoc_insertion_point(field_get:zproto.SendMessageReq.rid)
   return rid_;
 }
- void SendMessageReq::set_rid(::google::protobuf::int64 value) {
+void SendMessageReq::set_rid(::google::protobuf::int64 value) {
   
   rid_ = value;
   // @@protoc_insertion_point(field_set:zproto.SendMessageReq.rid)
@@ -816,7 +819,7 @@ void SendMessageReq::clear_rid() {
 
 // optional .zproto.InstantMessage message = 3;
 bool SendMessageReq::has_message() const {
-  return !_is_default_instance_ && message_ != NULL;
+  return this != internal_default_instance() && message_ != NULL;
 }
 void SendMessageReq::clear_message() {
   if (GetArenaNoVirtual() == NULL && message_ != NULL) delete message_;
@@ -824,7 +827,8 @@ void SendMessageReq::clear_message() {
 }
 const ::zproto::InstantMessage& SendMessageReq::message() const {
   // @@protoc_insertion_point(field_get:zproto.SendMessageReq.message)
-  return message_ != NULL ? *message_ : *default_instance_->message_;
+  return message_ != NULL ? *message_
+                         : *::zproto::InstantMessage::internal_default_instance();
 }
 ::zproto::InstantMessage* SendMessageReq::mutable_message() {
   
@@ -856,37 +860,37 @@ void SendMessageReq::set_allocated_message(::zproto::InstantMessage* message) {
 void SendMessageReq::clear_passthrough_data() {
   passthrough_data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& SendMessageReq::passthrough_data() const {
+const ::std::string& SendMessageReq::passthrough_data() const {
   // @@protoc_insertion_point(field_get:zproto.SendMessageReq.passthrough_data)
   return passthrough_data_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void SendMessageReq::set_passthrough_data(const ::std::string& value) {
+void SendMessageReq::set_passthrough_data(const ::std::string& value) {
   
   passthrough_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.SendMessageReq.passthrough_data)
 }
- void SendMessageReq::set_passthrough_data(const char* value) {
+void SendMessageReq::set_passthrough_data(const char* value) {
   
   passthrough_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.SendMessageReq.passthrough_data)
 }
- void SendMessageReq::set_passthrough_data(const void* value, size_t size) {
+void SendMessageReq::set_passthrough_data(const void* value, size_t size) {
   
   passthrough_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.SendMessageReq.passthrough_data)
 }
- ::std::string* SendMessageReq::mutable_passthrough_data() {
+::std::string* SendMessageReq::mutable_passthrough_data() {
   
   // @@protoc_insertion_point(field_mutable:zproto.SendMessageReq.passthrough_data)
   return passthrough_data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* SendMessageReq::release_passthrough_data() {
+::std::string* SendMessageReq::release_passthrough_data() {
   // @@protoc_insertion_point(field_release:zproto.SendMessageReq.passthrough_data)
   
   return passthrough_data_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void SendMessageReq::set_allocated_passthrough_data(::std::string* passthrough_data) {
+void SendMessageReq::set_allocated_passthrough_data(::std::string* passthrough_data) {
   if (passthrough_data != NULL) {
     
   } else {
@@ -896,6 +900,9 @@ void SendMessageReq::clear_passthrough_data() {
   // @@protoc_insertion_point(field_set_allocated:zproto.SendMessageReq.passthrough_data)
 }
 
+inline const SendMessageReq* SendMessageReq::internal_default_instance() {
+  return &SendMessageReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -907,28 +914,28 @@ const int MessageReceivedReq::kDateFieldNumber;
 
 MessageReceivedReq::MessageReceivedReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_messaging_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.MessageReceivedReq)
 }
 
 void MessageReceivedReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::OutPeer*>(&::zproto::OutPeer::default_instance());
+  peer_ = const_cast< ::zproto::OutPeer*>(
+      ::zproto::OutPeer::internal_default_instance());
 }
 
 MessageReceivedReq::MessageReceivedReq(const MessageReceivedReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.MessageReceivedReq)
 }
 
 void MessageReceivedReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   peer_ = NULL;
   date_ = GOOGLE_LONGLONG(0);
+  _cached_size_ = 0;
 }
 
 MessageReceivedReq::~MessageReceivedReq() {
@@ -937,7 +944,7 @@ MessageReceivedReq::~MessageReceivedReq() {
 }
 
 void MessageReceivedReq::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &MessageReceivedReq_default_instance_.get()) {
     delete peer_;
   }
 }
@@ -953,11 +960,11 @@ const ::google::protobuf::Descriptor* MessageReceivedReq::descriptor() {
 }
 
 const MessageReceivedReq& MessageReceivedReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_messaging_2eproto();
+  return *internal_default_instance();
 }
 
-MessageReceivedReq* MessageReceivedReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<MessageReceivedReq> MessageReceivedReq_default_instance_;
 
 MessageReceivedReq* MessageReceivedReq::New(::google::protobuf::Arena* arena) const {
   MessageReceivedReq* n = new MessageReceivedReq;
@@ -967,6 +974,9 @@ MessageReceivedReq* MessageReceivedReq::New(::google::protobuf::Arena* arena) co
   return n;
 }
 
+void MessageReceivedReq::UnsafeMergeFrom(const MessageReceivedReq& from) {
+  MergeFrom(from);
+}
 void MessageReceivedReq::Swap(MessageReceivedReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -987,7 +997,7 @@ void MessageReceivedReq::InternalSwap(MessageReceivedReq* other) {
 
 // optional .zproto.OutPeer peer = 1;
 bool MessageReceivedReq::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
+  return this != internal_default_instance() && peer_ != NULL;
 }
 void MessageReceivedReq::clear_peer() {
   if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
@@ -995,7 +1005,8 @@ void MessageReceivedReq::clear_peer() {
 }
 const ::zproto::OutPeer& MessageReceivedReq::peer() const {
   // @@protoc_insertion_point(field_get:zproto.MessageReceivedReq.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
+  return peer_ != NULL ? *peer_
+                         : *::zproto::OutPeer::internal_default_instance();
 }
 ::zproto::OutPeer* MessageReceivedReq::mutable_peer() {
   
@@ -1027,16 +1038,19 @@ void MessageReceivedReq::set_allocated_peer(::zproto::OutPeer* peer) {
 void MessageReceivedReq::clear_date() {
   date_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MessageReceivedReq::date() const {
+::google::protobuf::int64 MessageReceivedReq::date() const {
   // @@protoc_insertion_point(field_get:zproto.MessageReceivedReq.date)
   return date_;
 }
- void MessageReceivedReq::set_date(::google::protobuf::int64 value) {
+void MessageReceivedReq::set_date(::google::protobuf::int64 value) {
   
   date_ = value;
   // @@protoc_insertion_point(field_set:zproto.MessageReceivedReq.date)
 }
 
+inline const MessageReceivedReq* MessageReceivedReq::internal_default_instance() {
+  return &MessageReceivedReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -1048,28 +1062,28 @@ const int MessageReadReq::kDateFieldNumber;
 
 MessageReadReq::MessageReadReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_messaging_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.MessageReadReq)
 }
 
 void MessageReadReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::OutPeer*>(&::zproto::OutPeer::default_instance());
+  peer_ = const_cast< ::zproto::OutPeer*>(
+      ::zproto::OutPeer::internal_default_instance());
 }
 
 MessageReadReq::MessageReadReq(const MessageReadReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.MessageReadReq)
 }
 
 void MessageReadReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   peer_ = NULL;
   date_ = GOOGLE_LONGLONG(0);
+  _cached_size_ = 0;
 }
 
 MessageReadReq::~MessageReadReq() {
@@ -1078,7 +1092,7 @@ MessageReadReq::~MessageReadReq() {
 }
 
 void MessageReadReq::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &MessageReadReq_default_instance_.get()) {
     delete peer_;
   }
 }
@@ -1094,11 +1108,11 @@ const ::google::protobuf::Descriptor* MessageReadReq::descriptor() {
 }
 
 const MessageReadReq& MessageReadReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_messaging_2eproto();
+  return *internal_default_instance();
 }
 
-MessageReadReq* MessageReadReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<MessageReadReq> MessageReadReq_default_instance_;
 
 MessageReadReq* MessageReadReq::New(::google::protobuf::Arena* arena) const {
   MessageReadReq* n = new MessageReadReq;
@@ -1108,6 +1122,9 @@ MessageReadReq* MessageReadReq::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void MessageReadReq::UnsafeMergeFrom(const MessageReadReq& from) {
+  MergeFrom(from);
+}
 void MessageReadReq::Swap(MessageReadReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -1128,7 +1145,7 @@ void MessageReadReq::InternalSwap(MessageReadReq* other) {
 
 // optional .zproto.OutPeer peer = 1;
 bool MessageReadReq::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
+  return this != internal_default_instance() && peer_ != NULL;
 }
 void MessageReadReq::clear_peer() {
   if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
@@ -1136,7 +1153,8 @@ void MessageReadReq::clear_peer() {
 }
 const ::zproto::OutPeer& MessageReadReq::peer() const {
   // @@protoc_insertion_point(field_get:zproto.MessageReadReq.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
+  return peer_ != NULL ? *peer_
+                         : *::zproto::OutPeer::internal_default_instance();
 }
 ::zproto::OutPeer* MessageReadReq::mutable_peer() {
   
@@ -1168,16 +1186,19 @@ void MessageReadReq::set_allocated_peer(::zproto::OutPeer* peer) {
 void MessageReadReq::clear_date() {
   date_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MessageReadReq::date() const {
+::google::protobuf::int64 MessageReadReq::date() const {
   // @@protoc_insertion_point(field_get:zproto.MessageReadReq.date)
   return date_;
 }
- void MessageReadReq::set_date(::google::protobuf::int64 value) {
+void MessageReadReq::set_date(::google::protobuf::int64 value) {
   
   date_ = value;
   // @@protoc_insertion_point(field_set:zproto.MessageReadReq.date)
 }
 
+inline const MessageReadReq* MessageReadReq::internal_default_instance() {
+  return &MessageReadReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -1189,27 +1210,27 @@ const int DeleteMessageReq::kRidsFieldNumber;
 
 DeleteMessageReq::DeleteMessageReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_messaging_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.DeleteMessageReq)
 }
 
 void DeleteMessageReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::OutPeer*>(&::zproto::OutPeer::default_instance());
+  peer_ = const_cast< ::zproto::OutPeer*>(
+      ::zproto::OutPeer::internal_default_instance());
 }
 
 DeleteMessageReq::DeleteMessageReq(const DeleteMessageReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.DeleteMessageReq)
 }
 
 void DeleteMessageReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   peer_ = NULL;
+  _cached_size_ = 0;
 }
 
 DeleteMessageReq::~DeleteMessageReq() {
@@ -1218,7 +1239,7 @@ DeleteMessageReq::~DeleteMessageReq() {
 }
 
 void DeleteMessageReq::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &DeleteMessageReq_default_instance_.get()) {
     delete peer_;
   }
 }
@@ -1234,11 +1255,11 @@ const ::google::protobuf::Descriptor* DeleteMessageReq::descriptor() {
 }
 
 const DeleteMessageReq& DeleteMessageReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_messaging_2eproto();
+  return *internal_default_instance();
 }
 
-DeleteMessageReq* DeleteMessageReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<DeleteMessageReq> DeleteMessageReq_default_instance_;
 
 DeleteMessageReq* DeleteMessageReq::New(::google::protobuf::Arena* arena) const {
   DeleteMessageReq* n = new DeleteMessageReq;
@@ -1248,6 +1269,9 @@ DeleteMessageReq* DeleteMessageReq::New(::google::protobuf::Arena* arena) const 
   return n;
 }
 
+void DeleteMessageReq::UnsafeMergeFrom(const DeleteMessageReq& from) {
+  MergeFrom(from);
+}
 void DeleteMessageReq::Swap(DeleteMessageReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -1268,7 +1292,7 @@ void DeleteMessageReq::InternalSwap(DeleteMessageReq* other) {
 
 // optional .zproto.OutPeer peer = 1;
 bool DeleteMessageReq::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
+  return this != internal_default_instance() && peer_ != NULL;
 }
 void DeleteMessageReq::clear_peer() {
   if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
@@ -1276,7 +1300,8 @@ void DeleteMessageReq::clear_peer() {
 }
 const ::zproto::OutPeer& DeleteMessageReq::peer() const {
   // @@protoc_insertion_point(field_get:zproto.DeleteMessageReq.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
+  return peer_ != NULL ? *peer_
+                         : *::zproto::OutPeer::internal_default_instance();
 }
 ::zproto::OutPeer* DeleteMessageReq::mutable_peer() {
   
@@ -1311,29 +1336,32 @@ int DeleteMessageReq::rids_size() const {
 void DeleteMessageReq::clear_rids() {
   rids_.Clear();
 }
- ::google::protobuf::int64 DeleteMessageReq::rids(int index) const {
+::google::protobuf::int64 DeleteMessageReq::rids(int index) const {
   // @@protoc_insertion_point(field_get:zproto.DeleteMessageReq.rids)
   return rids_.Get(index);
 }
- void DeleteMessageReq::set_rids(int index, ::google::protobuf::int64 value) {
+void DeleteMessageReq::set_rids(int index, ::google::protobuf::int64 value) {
   rids_.Set(index, value);
   // @@protoc_insertion_point(field_set:zproto.DeleteMessageReq.rids)
 }
- void DeleteMessageReq::add_rids(::google::protobuf::int64 value) {
+void DeleteMessageReq::add_rids(::google::protobuf::int64 value) {
   rids_.Add(value);
   // @@protoc_insertion_point(field_add:zproto.DeleteMessageReq.rids)
 }
- const ::google::protobuf::RepeatedField< ::google::protobuf::int64 >&
+const ::google::protobuf::RepeatedField< ::google::protobuf::int64 >&
 DeleteMessageReq::rids() const {
   // @@protoc_insertion_point(field_list:zproto.DeleteMessageReq.rids)
   return rids_;
 }
- ::google::protobuf::RepeatedField< ::google::protobuf::int64 >*
+::google::protobuf::RepeatedField< ::google::protobuf::int64 >*
 DeleteMessageReq::mutable_rids() {
   // @@protoc_insertion_point(field_mutable_list:zproto.DeleteMessageReq.rids)
   return &rids_;
 }
 
+inline const DeleteMessageReq* DeleteMessageReq::internal_default_instance() {
+  return &DeleteMessageReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -1344,27 +1372,27 @@ const int ClearChatReq::kPeerFieldNumber;
 
 ClearChatReq::ClearChatReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_messaging_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.ClearChatReq)
 }
 
 void ClearChatReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::OutPeer*>(&::zproto::OutPeer::default_instance());
+  peer_ = const_cast< ::zproto::OutPeer*>(
+      ::zproto::OutPeer::internal_default_instance());
 }
 
 ClearChatReq::ClearChatReq(const ClearChatReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.ClearChatReq)
 }
 
 void ClearChatReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   peer_ = NULL;
+  _cached_size_ = 0;
 }
 
 ClearChatReq::~ClearChatReq() {
@@ -1373,7 +1401,7 @@ ClearChatReq::~ClearChatReq() {
 }
 
 void ClearChatReq::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &ClearChatReq_default_instance_.get()) {
     delete peer_;
   }
 }
@@ -1389,11 +1417,11 @@ const ::google::protobuf::Descriptor* ClearChatReq::descriptor() {
 }
 
 const ClearChatReq& ClearChatReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_messaging_2eproto();
+  return *internal_default_instance();
 }
 
-ClearChatReq* ClearChatReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<ClearChatReq> ClearChatReq_default_instance_;
 
 ClearChatReq* ClearChatReq::New(::google::protobuf::Arena* arena) const {
   ClearChatReq* n = new ClearChatReq;
@@ -1403,6 +1431,9 @@ ClearChatReq* ClearChatReq::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void ClearChatReq::UnsafeMergeFrom(const ClearChatReq& from) {
+  MergeFrom(from);
+}
 void ClearChatReq::Swap(ClearChatReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -1423,7 +1454,7 @@ void ClearChatReq::InternalSwap(ClearChatReq* other) {
 
 // optional .zproto.OutPeer peer = 1;
 bool ClearChatReq::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
+  return this != internal_default_instance() && peer_ != NULL;
 }
 void ClearChatReq::clear_peer() {
   if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
@@ -1431,7 +1462,8 @@ void ClearChatReq::clear_peer() {
 }
 const ::zproto::OutPeer& ClearChatReq::peer() const {
   // @@protoc_insertion_point(field_get:zproto.ClearChatReq.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
+  return peer_ != NULL ? *peer_
+                         : *::zproto::OutPeer::internal_default_instance();
 }
 ::zproto::OutPeer* ClearChatReq::mutable_peer() {
   
@@ -1459,6 +1491,9 @@ void ClearChatReq::set_allocated_peer(::zproto::OutPeer* peer) {
   // @@protoc_insertion_point(field_set_allocated:zproto.ClearChatReq.peer)
 }
 
+inline const ClearChatReq* ClearChatReq::internal_default_instance() {
+  return &ClearChatReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -1469,27 +1504,27 @@ const int DeleteChatReq::kPeerFieldNumber;
 
 DeleteChatReq::DeleteChatReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_messaging_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.DeleteChatReq)
 }
 
 void DeleteChatReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::OutPeer*>(&::zproto::OutPeer::default_instance());
+  peer_ = const_cast< ::zproto::OutPeer*>(
+      ::zproto::OutPeer::internal_default_instance());
 }
 
 DeleteChatReq::DeleteChatReq(const DeleteChatReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.DeleteChatReq)
 }
 
 void DeleteChatReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   peer_ = NULL;
+  _cached_size_ = 0;
 }
 
 DeleteChatReq::~DeleteChatReq() {
@@ -1498,7 +1533,7 @@ DeleteChatReq::~DeleteChatReq() {
 }
 
 void DeleteChatReq::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &DeleteChatReq_default_instance_.get()) {
     delete peer_;
   }
 }
@@ -1514,11 +1549,11 @@ const ::google::protobuf::Descriptor* DeleteChatReq::descriptor() {
 }
 
 const DeleteChatReq& DeleteChatReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_messaging_2eproto();
+  return *internal_default_instance();
 }
 
-DeleteChatReq* DeleteChatReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<DeleteChatReq> DeleteChatReq_default_instance_;
 
 DeleteChatReq* DeleteChatReq::New(::google::protobuf::Arena* arena) const {
   DeleteChatReq* n = new DeleteChatReq;
@@ -1528,6 +1563,9 @@ DeleteChatReq* DeleteChatReq::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void DeleteChatReq::UnsafeMergeFrom(const DeleteChatReq& from) {
+  MergeFrom(from);
+}
 void DeleteChatReq::Swap(DeleteChatReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -1548,7 +1586,7 @@ void DeleteChatReq::InternalSwap(DeleteChatReq* other) {
 
 // optional .zproto.OutPeer peer = 1;
 bool DeleteChatReq::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
+  return this != internal_default_instance() && peer_ != NULL;
 }
 void DeleteChatReq::clear_peer() {
   if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
@@ -1556,7 +1594,8 @@ void DeleteChatReq::clear_peer() {
 }
 const ::zproto::OutPeer& DeleteChatReq::peer() const {
   // @@protoc_insertion_point(field_get:zproto.DeleteChatReq.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
+  return peer_ != NULL ? *peer_
+                         : *::zproto::OutPeer::internal_default_instance();
 }
 ::zproto::OutPeer* DeleteChatReq::mutable_peer() {
   
@@ -1584,6 +1623,9 @@ void DeleteChatReq::set_allocated_peer(::zproto::OutPeer* peer) {
   // @@protoc_insertion_point(field_set_allocated:zproto.DeleteChatReq.peer)
 }
 
+inline const DeleteChatReq* DeleteChatReq::internal_default_instance() {
+  return &DeleteChatReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -1598,33 +1640,33 @@ const int MessageNotify::kMessageFieldNumber;
 
 MessageNotify::MessageNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_messaging_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.MessageNotify)
 }
 
 void MessageNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::Peer*>(&::zproto::Peer::default_instance());
-  message_ = const_cast< ::zproto::InstantMessage*>(&::zproto::InstantMessage::default_instance());
+  peer_ = const_cast< ::zproto::Peer*>(
+      ::zproto::Peer::internal_default_instance());
+  message_ = const_cast< ::zproto::InstantMessage*>(
+      ::zproto::InstantMessage::internal_default_instance());
 }
 
 MessageNotify::MessageNotify(const MessageNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.MessageNotify)
 }
 
 void MessageNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  peer_ = NULL;
   sender_uid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  date_ = GOOGLE_LONGLONG(0);
-  rid_ = GOOGLE_LONGLONG(0);
+  peer_ = NULL;
   message_ = NULL;
+  ::memset(&date_, 0, reinterpret_cast<char*>(&rid_) -
+    reinterpret_cast<char*>(&date_) + sizeof(rid_));
+  _cached_size_ = 0;
 }
 
 MessageNotify::~MessageNotify() {
@@ -1634,7 +1676,7 @@ MessageNotify::~MessageNotify() {
 
 void MessageNotify::SharedDtor() {
   sender_uid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
+  if (this != &MessageNotify_default_instance_.get()) {
     delete peer_;
     delete message_;
   }
@@ -1651,11 +1693,11 @@ const ::google::protobuf::Descriptor* MessageNotify::descriptor() {
 }
 
 const MessageNotify& MessageNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_messaging_2eproto();
+  return *internal_default_instance();
 }
 
-MessageNotify* MessageNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<MessageNotify> MessageNotify_default_instance_;
 
 MessageNotify* MessageNotify::New(::google::protobuf::Arena* arena) const {
   MessageNotify* n = new MessageNotify;
@@ -1665,6 +1707,9 @@ MessageNotify* MessageNotify::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void MessageNotify::UnsafeMergeFrom(const MessageNotify& from) {
+  MergeFrom(from);
+}
 void MessageNotify::Swap(MessageNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -1685,7 +1730,7 @@ void MessageNotify::InternalSwap(MessageNotify* other) {
 
 // optional .zproto.Peer peer = 1;
 bool MessageNotify::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
+  return this != internal_default_instance() && peer_ != NULL;
 }
 void MessageNotify::clear_peer() {
   if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
@@ -1693,7 +1738,8 @@ void MessageNotify::clear_peer() {
 }
 const ::zproto::Peer& MessageNotify::peer() const {
   // @@protoc_insertion_point(field_get:zproto.MessageNotify.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
+  return peer_ != NULL ? *peer_
+                         : *::zproto::Peer::internal_default_instance();
 }
 ::zproto::Peer* MessageNotify::mutable_peer() {
   
@@ -1725,37 +1771,37 @@ void MessageNotify::set_allocated_peer(::zproto::Peer* peer) {
 void MessageNotify::clear_sender_uid() {
   sender_uid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& MessageNotify::sender_uid() const {
+const ::std::string& MessageNotify::sender_uid() const {
   // @@protoc_insertion_point(field_get:zproto.MessageNotify.sender_uid)
   return sender_uid_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void MessageNotify::set_sender_uid(const ::std::string& value) {
+void MessageNotify::set_sender_uid(const ::std::string& value) {
   
   sender_uid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.MessageNotify.sender_uid)
 }
- void MessageNotify::set_sender_uid(const char* value) {
+void MessageNotify::set_sender_uid(const char* value) {
   
   sender_uid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.MessageNotify.sender_uid)
 }
- void MessageNotify::set_sender_uid(const char* value, size_t size) {
+void MessageNotify::set_sender_uid(const char* value, size_t size) {
   
   sender_uid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.MessageNotify.sender_uid)
 }
- ::std::string* MessageNotify::mutable_sender_uid() {
+::std::string* MessageNotify::mutable_sender_uid() {
   
   // @@protoc_insertion_point(field_mutable:zproto.MessageNotify.sender_uid)
   return sender_uid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* MessageNotify::release_sender_uid() {
+::std::string* MessageNotify::release_sender_uid() {
   // @@protoc_insertion_point(field_release:zproto.MessageNotify.sender_uid)
   
   return sender_uid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void MessageNotify::set_allocated_sender_uid(::std::string* sender_uid) {
+void MessageNotify::set_allocated_sender_uid(::std::string* sender_uid) {
   if (sender_uid != NULL) {
     
   } else {
@@ -1769,11 +1815,11 @@ void MessageNotify::clear_sender_uid() {
 void MessageNotify::clear_date() {
   date_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MessageNotify::date() const {
+::google::protobuf::int64 MessageNotify::date() const {
   // @@protoc_insertion_point(field_get:zproto.MessageNotify.date)
   return date_;
 }
- void MessageNotify::set_date(::google::protobuf::int64 value) {
+void MessageNotify::set_date(::google::protobuf::int64 value) {
   
   date_ = value;
   // @@protoc_insertion_point(field_set:zproto.MessageNotify.date)
@@ -1783,11 +1829,11 @@ void MessageNotify::clear_date() {
 void MessageNotify::clear_rid() {
   rid_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MessageNotify::rid() const {
+::google::protobuf::int64 MessageNotify::rid() const {
   // @@protoc_insertion_point(field_get:zproto.MessageNotify.rid)
   return rid_;
 }
- void MessageNotify::set_rid(::google::protobuf::int64 value) {
+void MessageNotify::set_rid(::google::protobuf::int64 value) {
   
   rid_ = value;
   // @@protoc_insertion_point(field_set:zproto.MessageNotify.rid)
@@ -1795,7 +1841,7 @@ void MessageNotify::clear_rid() {
 
 // optional .zproto.InstantMessage message = 5;
 bool MessageNotify::has_message() const {
-  return !_is_default_instance_ && message_ != NULL;
+  return this != internal_default_instance() && message_ != NULL;
 }
 void MessageNotify::clear_message() {
   if (GetArenaNoVirtual() == NULL && message_ != NULL) delete message_;
@@ -1803,7 +1849,8 @@ void MessageNotify::clear_message() {
 }
 const ::zproto::InstantMessage& MessageNotify::message() const {
   // @@protoc_insertion_point(field_get:zproto.MessageNotify.message)
-  return message_ != NULL ? *message_ : *default_instance_->message_;
+  return message_ != NULL ? *message_
+                         : *::zproto::InstantMessage::internal_default_instance();
 }
 ::zproto::InstantMessage* MessageNotify::mutable_message() {
   
@@ -1831,6 +1878,9 @@ void MessageNotify::set_allocated_message(::zproto::InstantMessage* message) {
   // @@protoc_insertion_point(field_set_allocated:zproto.MessageNotify.message)
 }
 
+inline const MessageNotify* MessageNotify::internal_default_instance() {
+  return &MessageNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -1843,30 +1893,31 @@ const int MessageContentChangedNotify::kMessageFieldNumber;
 
 MessageContentChangedNotify::MessageContentChangedNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_messaging_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.MessageContentChangedNotify)
 }
 
 void MessageContentChangedNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::Peer*>(&::zproto::Peer::default_instance());
-  message_ = const_cast< ::zproto::InstantMessage*>(&::zproto::InstantMessage::default_instance());
+  peer_ = const_cast< ::zproto::Peer*>(
+      ::zproto::Peer::internal_default_instance());
+  message_ = const_cast< ::zproto::InstantMessage*>(
+      ::zproto::InstantMessage::internal_default_instance());
 }
 
 MessageContentChangedNotify::MessageContentChangedNotify(const MessageContentChangedNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.MessageContentChangedNotify)
 }
 
 void MessageContentChangedNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   peer_ = NULL;
-  rid_ = GOOGLE_LONGLONG(0);
   message_ = NULL;
+  rid_ = GOOGLE_LONGLONG(0);
+  _cached_size_ = 0;
 }
 
 MessageContentChangedNotify::~MessageContentChangedNotify() {
@@ -1875,7 +1926,7 @@ MessageContentChangedNotify::~MessageContentChangedNotify() {
 }
 
 void MessageContentChangedNotify::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &MessageContentChangedNotify_default_instance_.get()) {
     delete peer_;
     delete message_;
   }
@@ -1892,11 +1943,11 @@ const ::google::protobuf::Descriptor* MessageContentChangedNotify::descriptor() 
 }
 
 const MessageContentChangedNotify& MessageContentChangedNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_messaging_2eproto();
+  return *internal_default_instance();
 }
 
-MessageContentChangedNotify* MessageContentChangedNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<MessageContentChangedNotify> MessageContentChangedNotify_default_instance_;
 
 MessageContentChangedNotify* MessageContentChangedNotify::New(::google::protobuf::Arena* arena) const {
   MessageContentChangedNotify* n = new MessageContentChangedNotify;
@@ -1906,6 +1957,9 @@ MessageContentChangedNotify* MessageContentChangedNotify::New(::google::protobuf
   return n;
 }
 
+void MessageContentChangedNotify::UnsafeMergeFrom(const MessageContentChangedNotify& from) {
+  MergeFrom(from);
+}
 void MessageContentChangedNotify::Swap(MessageContentChangedNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -1926,7 +1980,7 @@ void MessageContentChangedNotify::InternalSwap(MessageContentChangedNotify* othe
 
 // optional .zproto.Peer peer = 1;
 bool MessageContentChangedNotify::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
+  return this != internal_default_instance() && peer_ != NULL;
 }
 void MessageContentChangedNotify::clear_peer() {
   if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
@@ -1934,7 +1988,8 @@ void MessageContentChangedNotify::clear_peer() {
 }
 const ::zproto::Peer& MessageContentChangedNotify::peer() const {
   // @@protoc_insertion_point(field_get:zproto.MessageContentChangedNotify.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
+  return peer_ != NULL ? *peer_
+                         : *::zproto::Peer::internal_default_instance();
 }
 ::zproto::Peer* MessageContentChangedNotify::mutable_peer() {
   
@@ -1966,11 +2021,11 @@ void MessageContentChangedNotify::set_allocated_peer(::zproto::Peer* peer) {
 void MessageContentChangedNotify::clear_rid() {
   rid_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MessageContentChangedNotify::rid() const {
+::google::protobuf::int64 MessageContentChangedNotify::rid() const {
   // @@protoc_insertion_point(field_get:zproto.MessageContentChangedNotify.rid)
   return rid_;
 }
- void MessageContentChangedNotify::set_rid(::google::protobuf::int64 value) {
+void MessageContentChangedNotify::set_rid(::google::protobuf::int64 value) {
   
   rid_ = value;
   // @@protoc_insertion_point(field_set:zproto.MessageContentChangedNotify.rid)
@@ -1978,7 +2033,7 @@ void MessageContentChangedNotify::clear_rid() {
 
 // optional .zproto.InstantMessage message = 3;
 bool MessageContentChangedNotify::has_message() const {
-  return !_is_default_instance_ && message_ != NULL;
+  return this != internal_default_instance() && message_ != NULL;
 }
 void MessageContentChangedNotify::clear_message() {
   if (GetArenaNoVirtual() == NULL && message_ != NULL) delete message_;
@@ -1986,7 +2041,8 @@ void MessageContentChangedNotify::clear_message() {
 }
 const ::zproto::InstantMessage& MessageContentChangedNotify::message() const {
   // @@protoc_insertion_point(field_get:zproto.MessageContentChangedNotify.message)
-  return message_ != NULL ? *message_ : *default_instance_->message_;
+  return message_ != NULL ? *message_
+                         : *::zproto::InstantMessage::internal_default_instance();
 }
 ::zproto::InstantMessage* MessageContentChangedNotify::mutable_message() {
   
@@ -2014,6 +2070,9 @@ void MessageContentChangedNotify::set_allocated_message(::zproto::InstantMessage
   // @@protoc_insertion_point(field_set_allocated:zproto.MessageContentChangedNotify.message)
 }
 
+inline const MessageContentChangedNotify* MessageContentChangedNotify::internal_default_instance() {
+  return &MessageContentChangedNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -2026,29 +2085,29 @@ const int MessageDateChangedNotify::kDateFieldNumber;
 
 MessageDateChangedNotify::MessageDateChangedNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_messaging_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.MessageDateChangedNotify)
 }
 
 void MessageDateChangedNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::Peer*>(&::zproto::Peer::default_instance());
+  peer_ = const_cast< ::zproto::Peer*>(
+      ::zproto::Peer::internal_default_instance());
 }
 
 MessageDateChangedNotify::MessageDateChangedNotify(const MessageDateChangedNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.MessageDateChangedNotify)
 }
 
 void MessageDateChangedNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   peer_ = NULL;
-  rid_ = GOOGLE_LONGLONG(0);
-  date_ = GOOGLE_LONGLONG(0);
+  ::memset(&rid_, 0, reinterpret_cast<char*>(&date_) -
+    reinterpret_cast<char*>(&rid_) + sizeof(date_));
+  _cached_size_ = 0;
 }
 
 MessageDateChangedNotify::~MessageDateChangedNotify() {
@@ -2057,7 +2116,7 @@ MessageDateChangedNotify::~MessageDateChangedNotify() {
 }
 
 void MessageDateChangedNotify::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &MessageDateChangedNotify_default_instance_.get()) {
     delete peer_;
   }
 }
@@ -2073,11 +2132,11 @@ const ::google::protobuf::Descriptor* MessageDateChangedNotify::descriptor() {
 }
 
 const MessageDateChangedNotify& MessageDateChangedNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_messaging_2eproto();
+  return *internal_default_instance();
 }
 
-MessageDateChangedNotify* MessageDateChangedNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<MessageDateChangedNotify> MessageDateChangedNotify_default_instance_;
 
 MessageDateChangedNotify* MessageDateChangedNotify::New(::google::protobuf::Arena* arena) const {
   MessageDateChangedNotify* n = new MessageDateChangedNotify;
@@ -2087,6 +2146,9 @@ MessageDateChangedNotify* MessageDateChangedNotify::New(::google::protobuf::Aren
   return n;
 }
 
+void MessageDateChangedNotify::UnsafeMergeFrom(const MessageDateChangedNotify& from) {
+  MergeFrom(from);
+}
 void MessageDateChangedNotify::Swap(MessageDateChangedNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -2107,7 +2169,7 @@ void MessageDateChangedNotify::InternalSwap(MessageDateChangedNotify* other) {
 
 // optional .zproto.Peer peer = 1;
 bool MessageDateChangedNotify::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
+  return this != internal_default_instance() && peer_ != NULL;
 }
 void MessageDateChangedNotify::clear_peer() {
   if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
@@ -2115,7 +2177,8 @@ void MessageDateChangedNotify::clear_peer() {
 }
 const ::zproto::Peer& MessageDateChangedNotify::peer() const {
   // @@protoc_insertion_point(field_get:zproto.MessageDateChangedNotify.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
+  return peer_ != NULL ? *peer_
+                         : *::zproto::Peer::internal_default_instance();
 }
 ::zproto::Peer* MessageDateChangedNotify::mutable_peer() {
   
@@ -2147,11 +2210,11 @@ void MessageDateChangedNotify::set_allocated_peer(::zproto::Peer* peer) {
 void MessageDateChangedNotify::clear_rid() {
   rid_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MessageDateChangedNotify::rid() const {
+::google::protobuf::int64 MessageDateChangedNotify::rid() const {
   // @@protoc_insertion_point(field_get:zproto.MessageDateChangedNotify.rid)
   return rid_;
 }
- void MessageDateChangedNotify::set_rid(::google::protobuf::int64 value) {
+void MessageDateChangedNotify::set_rid(::google::protobuf::int64 value) {
   
   rid_ = value;
   // @@protoc_insertion_point(field_set:zproto.MessageDateChangedNotify.rid)
@@ -2161,16 +2224,19 @@ void MessageDateChangedNotify::clear_rid() {
 void MessageDateChangedNotify::clear_date() {
   date_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MessageDateChangedNotify::date() const {
+::google::protobuf::int64 MessageDateChangedNotify::date() const {
   // @@protoc_insertion_point(field_get:zproto.MessageDateChangedNotify.date)
   return date_;
 }
- void MessageDateChangedNotify::set_date(::google::protobuf::int64 value) {
+void MessageDateChangedNotify::set_date(::google::protobuf::int64 value) {
   
   date_ = value;
   // @@protoc_insertion_point(field_set:zproto.MessageDateChangedNotify.date)
 }
 
+inline const MessageDateChangedNotify* MessageDateChangedNotify::internal_default_instance() {
+  return &MessageDateChangedNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -2183,29 +2249,29 @@ const int MessageSentNotify::kDateFieldNumber;
 
 MessageSentNotify::MessageSentNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_messaging_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.MessageSentNotify)
 }
 
 void MessageSentNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::Peer*>(&::zproto::Peer::default_instance());
+  peer_ = const_cast< ::zproto::Peer*>(
+      ::zproto::Peer::internal_default_instance());
 }
 
 MessageSentNotify::MessageSentNotify(const MessageSentNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.MessageSentNotify)
 }
 
 void MessageSentNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   peer_ = NULL;
-  rid_ = GOOGLE_LONGLONG(0);
-  date_ = GOOGLE_LONGLONG(0);
+  ::memset(&rid_, 0, reinterpret_cast<char*>(&date_) -
+    reinterpret_cast<char*>(&rid_) + sizeof(date_));
+  _cached_size_ = 0;
 }
 
 MessageSentNotify::~MessageSentNotify() {
@@ -2214,7 +2280,7 @@ MessageSentNotify::~MessageSentNotify() {
 }
 
 void MessageSentNotify::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &MessageSentNotify_default_instance_.get()) {
     delete peer_;
   }
 }
@@ -2230,11 +2296,11 @@ const ::google::protobuf::Descriptor* MessageSentNotify::descriptor() {
 }
 
 const MessageSentNotify& MessageSentNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_messaging_2eproto();
+  return *internal_default_instance();
 }
 
-MessageSentNotify* MessageSentNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<MessageSentNotify> MessageSentNotify_default_instance_;
 
 MessageSentNotify* MessageSentNotify::New(::google::protobuf::Arena* arena) const {
   MessageSentNotify* n = new MessageSentNotify;
@@ -2244,6 +2310,9 @@ MessageSentNotify* MessageSentNotify::New(::google::protobuf::Arena* arena) cons
   return n;
 }
 
+void MessageSentNotify::UnsafeMergeFrom(const MessageSentNotify& from) {
+  MergeFrom(from);
+}
 void MessageSentNotify::Swap(MessageSentNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -2264,7 +2333,7 @@ void MessageSentNotify::InternalSwap(MessageSentNotify* other) {
 
 // optional .zproto.Peer peer = 1;
 bool MessageSentNotify::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
+  return this != internal_default_instance() && peer_ != NULL;
 }
 void MessageSentNotify::clear_peer() {
   if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
@@ -2272,7 +2341,8 @@ void MessageSentNotify::clear_peer() {
 }
 const ::zproto::Peer& MessageSentNotify::peer() const {
   // @@protoc_insertion_point(field_get:zproto.MessageSentNotify.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
+  return peer_ != NULL ? *peer_
+                         : *::zproto::Peer::internal_default_instance();
 }
 ::zproto::Peer* MessageSentNotify::mutable_peer() {
   
@@ -2304,11 +2374,11 @@ void MessageSentNotify::set_allocated_peer(::zproto::Peer* peer) {
 void MessageSentNotify::clear_rid() {
   rid_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MessageSentNotify::rid() const {
+::google::protobuf::int64 MessageSentNotify::rid() const {
   // @@protoc_insertion_point(field_get:zproto.MessageSentNotify.rid)
   return rid_;
 }
- void MessageSentNotify::set_rid(::google::protobuf::int64 value) {
+void MessageSentNotify::set_rid(::google::protobuf::int64 value) {
   
   rid_ = value;
   // @@protoc_insertion_point(field_set:zproto.MessageSentNotify.rid)
@@ -2318,16 +2388,19 @@ void MessageSentNotify::clear_rid() {
 void MessageSentNotify::clear_date() {
   date_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MessageSentNotify::date() const {
+::google::protobuf::int64 MessageSentNotify::date() const {
   // @@protoc_insertion_point(field_get:zproto.MessageSentNotify.date)
   return date_;
 }
- void MessageSentNotify::set_date(::google::protobuf::int64 value) {
+void MessageSentNotify::set_date(::google::protobuf::int64 value) {
   
   date_ = value;
   // @@protoc_insertion_point(field_set:zproto.MessageSentNotify.date)
 }
 
+inline const MessageSentNotify* MessageSentNotify::internal_default_instance() {
+  return &MessageSentNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -2340,29 +2413,29 @@ const int MessageReceivedNotify::kReceivedDateFieldNumber;
 
 MessageReceivedNotify::MessageReceivedNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_messaging_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.MessageReceivedNotify)
 }
 
 void MessageReceivedNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::Peer*>(&::zproto::Peer::default_instance());
+  peer_ = const_cast< ::zproto::Peer*>(
+      ::zproto::Peer::internal_default_instance());
 }
 
 MessageReceivedNotify::MessageReceivedNotify(const MessageReceivedNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.MessageReceivedNotify)
 }
 
 void MessageReceivedNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   peer_ = NULL;
-  start_date_ = GOOGLE_LONGLONG(0);
-  received_date_ = GOOGLE_LONGLONG(0);
+  ::memset(&start_date_, 0, reinterpret_cast<char*>(&received_date_) -
+    reinterpret_cast<char*>(&start_date_) + sizeof(received_date_));
+  _cached_size_ = 0;
 }
 
 MessageReceivedNotify::~MessageReceivedNotify() {
@@ -2371,7 +2444,7 @@ MessageReceivedNotify::~MessageReceivedNotify() {
 }
 
 void MessageReceivedNotify::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &MessageReceivedNotify_default_instance_.get()) {
     delete peer_;
   }
 }
@@ -2387,11 +2460,11 @@ const ::google::protobuf::Descriptor* MessageReceivedNotify::descriptor() {
 }
 
 const MessageReceivedNotify& MessageReceivedNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_messaging_2eproto();
+  return *internal_default_instance();
 }
 
-MessageReceivedNotify* MessageReceivedNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<MessageReceivedNotify> MessageReceivedNotify_default_instance_;
 
 MessageReceivedNotify* MessageReceivedNotify::New(::google::protobuf::Arena* arena) const {
   MessageReceivedNotify* n = new MessageReceivedNotify;
@@ -2401,6 +2474,9 @@ MessageReceivedNotify* MessageReceivedNotify::New(::google::protobuf::Arena* are
   return n;
 }
 
+void MessageReceivedNotify::UnsafeMergeFrom(const MessageReceivedNotify& from) {
+  MergeFrom(from);
+}
 void MessageReceivedNotify::Swap(MessageReceivedNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -2421,7 +2497,7 @@ void MessageReceivedNotify::InternalSwap(MessageReceivedNotify* other) {
 
 // optional .zproto.Peer peer = 1;
 bool MessageReceivedNotify::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
+  return this != internal_default_instance() && peer_ != NULL;
 }
 void MessageReceivedNotify::clear_peer() {
   if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
@@ -2429,7 +2505,8 @@ void MessageReceivedNotify::clear_peer() {
 }
 const ::zproto::Peer& MessageReceivedNotify::peer() const {
   // @@protoc_insertion_point(field_get:zproto.MessageReceivedNotify.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
+  return peer_ != NULL ? *peer_
+                         : *::zproto::Peer::internal_default_instance();
 }
 ::zproto::Peer* MessageReceivedNotify::mutable_peer() {
   
@@ -2461,11 +2538,11 @@ void MessageReceivedNotify::set_allocated_peer(::zproto::Peer* peer) {
 void MessageReceivedNotify::clear_start_date() {
   start_date_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MessageReceivedNotify::start_date() const {
+::google::protobuf::int64 MessageReceivedNotify::start_date() const {
   // @@protoc_insertion_point(field_get:zproto.MessageReceivedNotify.start_date)
   return start_date_;
 }
- void MessageReceivedNotify::set_start_date(::google::protobuf::int64 value) {
+void MessageReceivedNotify::set_start_date(::google::protobuf::int64 value) {
   
   start_date_ = value;
   // @@protoc_insertion_point(field_set:zproto.MessageReceivedNotify.start_date)
@@ -2475,16 +2552,19 @@ void MessageReceivedNotify::clear_start_date() {
 void MessageReceivedNotify::clear_received_date() {
   received_date_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MessageReceivedNotify::received_date() const {
+::google::protobuf::int64 MessageReceivedNotify::received_date() const {
   // @@protoc_insertion_point(field_get:zproto.MessageReceivedNotify.received_date)
   return received_date_;
 }
- void MessageReceivedNotify::set_received_date(::google::protobuf::int64 value) {
+void MessageReceivedNotify::set_received_date(::google::protobuf::int64 value) {
   
   received_date_ = value;
   // @@protoc_insertion_point(field_set:zproto.MessageReceivedNotify.received_date)
 }
 
+inline const MessageReceivedNotify* MessageReceivedNotify::internal_default_instance() {
+  return &MessageReceivedNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -2497,29 +2577,29 @@ const int MessageReadNotify::kReadDateFieldNumber;
 
 MessageReadNotify::MessageReadNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_messaging_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.MessageReadNotify)
 }
 
 void MessageReadNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::Peer*>(&::zproto::Peer::default_instance());
+  peer_ = const_cast< ::zproto::Peer*>(
+      ::zproto::Peer::internal_default_instance());
 }
 
 MessageReadNotify::MessageReadNotify(const MessageReadNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.MessageReadNotify)
 }
 
 void MessageReadNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   peer_ = NULL;
-  start_date_ = GOOGLE_LONGLONG(0);
-  read_date_ = GOOGLE_LONGLONG(0);
+  ::memset(&start_date_, 0, reinterpret_cast<char*>(&read_date_) -
+    reinterpret_cast<char*>(&start_date_) + sizeof(read_date_));
+  _cached_size_ = 0;
 }
 
 MessageReadNotify::~MessageReadNotify() {
@@ -2528,7 +2608,7 @@ MessageReadNotify::~MessageReadNotify() {
 }
 
 void MessageReadNotify::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &MessageReadNotify_default_instance_.get()) {
     delete peer_;
   }
 }
@@ -2544,11 +2624,11 @@ const ::google::protobuf::Descriptor* MessageReadNotify::descriptor() {
 }
 
 const MessageReadNotify& MessageReadNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_messaging_2eproto();
+  return *internal_default_instance();
 }
 
-MessageReadNotify* MessageReadNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<MessageReadNotify> MessageReadNotify_default_instance_;
 
 MessageReadNotify* MessageReadNotify::New(::google::protobuf::Arena* arena) const {
   MessageReadNotify* n = new MessageReadNotify;
@@ -2558,6 +2638,9 @@ MessageReadNotify* MessageReadNotify::New(::google::protobuf::Arena* arena) cons
   return n;
 }
 
+void MessageReadNotify::UnsafeMergeFrom(const MessageReadNotify& from) {
+  MergeFrom(from);
+}
 void MessageReadNotify::Swap(MessageReadNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -2578,7 +2661,7 @@ void MessageReadNotify::InternalSwap(MessageReadNotify* other) {
 
 // optional .zproto.Peer peer = 1;
 bool MessageReadNotify::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
+  return this != internal_default_instance() && peer_ != NULL;
 }
 void MessageReadNotify::clear_peer() {
   if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
@@ -2586,7 +2669,8 @@ void MessageReadNotify::clear_peer() {
 }
 const ::zproto::Peer& MessageReadNotify::peer() const {
   // @@protoc_insertion_point(field_get:zproto.MessageReadNotify.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
+  return peer_ != NULL ? *peer_
+                         : *::zproto::Peer::internal_default_instance();
 }
 ::zproto::Peer* MessageReadNotify::mutable_peer() {
   
@@ -2618,11 +2702,11 @@ void MessageReadNotify::set_allocated_peer(::zproto::Peer* peer) {
 void MessageReadNotify::clear_start_date() {
   start_date_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MessageReadNotify::start_date() const {
+::google::protobuf::int64 MessageReadNotify::start_date() const {
   // @@protoc_insertion_point(field_get:zproto.MessageReadNotify.start_date)
   return start_date_;
 }
- void MessageReadNotify::set_start_date(::google::protobuf::int64 value) {
+void MessageReadNotify::set_start_date(::google::protobuf::int64 value) {
   
   start_date_ = value;
   // @@protoc_insertion_point(field_set:zproto.MessageReadNotify.start_date)
@@ -2632,16 +2716,19 @@ void MessageReadNotify::clear_start_date() {
 void MessageReadNotify::clear_read_date() {
   read_date_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MessageReadNotify::read_date() const {
+::google::protobuf::int64 MessageReadNotify::read_date() const {
   // @@protoc_insertion_point(field_get:zproto.MessageReadNotify.read_date)
   return read_date_;
 }
- void MessageReadNotify::set_read_date(::google::protobuf::int64 value) {
+void MessageReadNotify::set_read_date(::google::protobuf::int64 value) {
   
   read_date_ = value;
   // @@protoc_insertion_point(field_set:zproto.MessageReadNotify.read_date)
 }
 
+inline const MessageReadNotify* MessageReadNotify::internal_default_instance() {
+  return &MessageReadNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -2654,29 +2741,29 @@ const int MessageReadByMeNotify::kUnreadCounterFieldNumber;
 
 MessageReadByMeNotify::MessageReadByMeNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_messaging_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.MessageReadByMeNotify)
 }
 
 void MessageReadByMeNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::Peer*>(&::zproto::Peer::default_instance());
+  peer_ = const_cast< ::zproto::Peer*>(
+      ::zproto::Peer::internal_default_instance());
 }
 
 MessageReadByMeNotify::MessageReadByMeNotify(const MessageReadByMeNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.MessageReadByMeNotify)
 }
 
 void MessageReadByMeNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   peer_ = NULL;
-  start_date_ = GOOGLE_LONGLONG(0);
-  unread_counter_ = 0;
+  ::memset(&start_date_, 0, reinterpret_cast<char*>(&unread_counter_) -
+    reinterpret_cast<char*>(&start_date_) + sizeof(unread_counter_));
+  _cached_size_ = 0;
 }
 
 MessageReadByMeNotify::~MessageReadByMeNotify() {
@@ -2685,7 +2772,7 @@ MessageReadByMeNotify::~MessageReadByMeNotify() {
 }
 
 void MessageReadByMeNotify::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &MessageReadByMeNotify_default_instance_.get()) {
     delete peer_;
   }
 }
@@ -2701,11 +2788,11 @@ const ::google::protobuf::Descriptor* MessageReadByMeNotify::descriptor() {
 }
 
 const MessageReadByMeNotify& MessageReadByMeNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_messaging_2eproto();
+  return *internal_default_instance();
 }
 
-MessageReadByMeNotify* MessageReadByMeNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<MessageReadByMeNotify> MessageReadByMeNotify_default_instance_;
 
 MessageReadByMeNotify* MessageReadByMeNotify::New(::google::protobuf::Arena* arena) const {
   MessageReadByMeNotify* n = new MessageReadByMeNotify;
@@ -2715,6 +2802,9 @@ MessageReadByMeNotify* MessageReadByMeNotify::New(::google::protobuf::Arena* are
   return n;
 }
 
+void MessageReadByMeNotify::UnsafeMergeFrom(const MessageReadByMeNotify& from) {
+  MergeFrom(from);
+}
 void MessageReadByMeNotify::Swap(MessageReadByMeNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -2735,7 +2825,7 @@ void MessageReadByMeNotify::InternalSwap(MessageReadByMeNotify* other) {
 
 // optional .zproto.Peer peer = 1;
 bool MessageReadByMeNotify::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
+  return this != internal_default_instance() && peer_ != NULL;
 }
 void MessageReadByMeNotify::clear_peer() {
   if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
@@ -2743,7 +2833,8 @@ void MessageReadByMeNotify::clear_peer() {
 }
 const ::zproto::Peer& MessageReadByMeNotify::peer() const {
   // @@protoc_insertion_point(field_get:zproto.MessageReadByMeNotify.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
+  return peer_ != NULL ? *peer_
+                         : *::zproto::Peer::internal_default_instance();
 }
 ::zproto::Peer* MessageReadByMeNotify::mutable_peer() {
   
@@ -2775,11 +2866,11 @@ void MessageReadByMeNotify::set_allocated_peer(::zproto::Peer* peer) {
 void MessageReadByMeNotify::clear_start_date() {
   start_date_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MessageReadByMeNotify::start_date() const {
+::google::protobuf::int64 MessageReadByMeNotify::start_date() const {
   // @@protoc_insertion_point(field_get:zproto.MessageReadByMeNotify.start_date)
   return start_date_;
 }
- void MessageReadByMeNotify::set_start_date(::google::protobuf::int64 value) {
+void MessageReadByMeNotify::set_start_date(::google::protobuf::int64 value) {
   
   start_date_ = value;
   // @@protoc_insertion_point(field_set:zproto.MessageReadByMeNotify.start_date)
@@ -2789,16 +2880,19 @@ void MessageReadByMeNotify::clear_start_date() {
 void MessageReadByMeNotify::clear_unread_counter() {
   unread_counter_ = 0;
 }
- ::google::protobuf::int32 MessageReadByMeNotify::unread_counter() const {
+::google::protobuf::int32 MessageReadByMeNotify::unread_counter() const {
   // @@protoc_insertion_point(field_get:zproto.MessageReadByMeNotify.unread_counter)
   return unread_counter_;
 }
- void MessageReadByMeNotify::set_unread_counter(::google::protobuf::int32 value) {
+void MessageReadByMeNotify::set_unread_counter(::google::protobuf::int32 value) {
   
   unread_counter_ = value;
   // @@protoc_insertion_point(field_set:zproto.MessageReadByMeNotify.unread_counter)
 }
 
+inline const MessageReadByMeNotify* MessageReadByMeNotify::internal_default_instance() {
+  return &MessageReadByMeNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -2810,27 +2904,27 @@ const int MessageDeleteNotify::kRidsFieldNumber;
 
 MessageDeleteNotify::MessageDeleteNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_messaging_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.MessageDeleteNotify)
 }
 
 void MessageDeleteNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::Peer*>(&::zproto::Peer::default_instance());
+  peer_ = const_cast< ::zproto::Peer*>(
+      ::zproto::Peer::internal_default_instance());
 }
 
 MessageDeleteNotify::MessageDeleteNotify(const MessageDeleteNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.MessageDeleteNotify)
 }
 
 void MessageDeleteNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   peer_ = NULL;
+  _cached_size_ = 0;
 }
 
 MessageDeleteNotify::~MessageDeleteNotify() {
@@ -2839,7 +2933,7 @@ MessageDeleteNotify::~MessageDeleteNotify() {
 }
 
 void MessageDeleteNotify::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &MessageDeleteNotify_default_instance_.get()) {
     delete peer_;
   }
 }
@@ -2855,11 +2949,11 @@ const ::google::protobuf::Descriptor* MessageDeleteNotify::descriptor() {
 }
 
 const MessageDeleteNotify& MessageDeleteNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_messaging_2eproto();
+  return *internal_default_instance();
 }
 
-MessageDeleteNotify* MessageDeleteNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<MessageDeleteNotify> MessageDeleteNotify_default_instance_;
 
 MessageDeleteNotify* MessageDeleteNotify::New(::google::protobuf::Arena* arena) const {
   MessageDeleteNotify* n = new MessageDeleteNotify;
@@ -2869,6 +2963,9 @@ MessageDeleteNotify* MessageDeleteNotify::New(::google::protobuf::Arena* arena) 
   return n;
 }
 
+void MessageDeleteNotify::UnsafeMergeFrom(const MessageDeleteNotify& from) {
+  MergeFrom(from);
+}
 void MessageDeleteNotify::Swap(MessageDeleteNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -2889,7 +2986,7 @@ void MessageDeleteNotify::InternalSwap(MessageDeleteNotify* other) {
 
 // optional .zproto.Peer peer = 1;
 bool MessageDeleteNotify::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
+  return this != internal_default_instance() && peer_ != NULL;
 }
 void MessageDeleteNotify::clear_peer() {
   if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
@@ -2897,7 +2994,8 @@ void MessageDeleteNotify::clear_peer() {
 }
 const ::zproto::Peer& MessageDeleteNotify::peer() const {
   // @@protoc_insertion_point(field_get:zproto.MessageDeleteNotify.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
+  return peer_ != NULL ? *peer_
+                         : *::zproto::Peer::internal_default_instance();
 }
 ::zproto::Peer* MessageDeleteNotify::mutable_peer() {
   
@@ -2932,29 +3030,32 @@ int MessageDeleteNotify::rids_size() const {
 void MessageDeleteNotify::clear_rids() {
   rids_.Clear();
 }
- ::google::protobuf::int64 MessageDeleteNotify::rids(int index) const {
+::google::protobuf::int64 MessageDeleteNotify::rids(int index) const {
   // @@protoc_insertion_point(field_get:zproto.MessageDeleteNotify.rids)
   return rids_.Get(index);
 }
- void MessageDeleteNotify::set_rids(int index, ::google::protobuf::int64 value) {
+void MessageDeleteNotify::set_rids(int index, ::google::protobuf::int64 value) {
   rids_.Set(index, value);
   // @@protoc_insertion_point(field_set:zproto.MessageDeleteNotify.rids)
 }
- void MessageDeleteNotify::add_rids(::google::protobuf::int64 value) {
+void MessageDeleteNotify::add_rids(::google::protobuf::int64 value) {
   rids_.Add(value);
   // @@protoc_insertion_point(field_add:zproto.MessageDeleteNotify.rids)
 }
- const ::google::protobuf::RepeatedField< ::google::protobuf::int64 >&
+const ::google::protobuf::RepeatedField< ::google::protobuf::int64 >&
 MessageDeleteNotify::rids() const {
   // @@protoc_insertion_point(field_list:zproto.MessageDeleteNotify.rids)
   return rids_;
 }
- ::google::protobuf::RepeatedField< ::google::protobuf::int64 >*
+::google::protobuf::RepeatedField< ::google::protobuf::int64 >*
 MessageDeleteNotify::mutable_rids() {
   // @@protoc_insertion_point(field_mutable_list:zproto.MessageDeleteNotify.rids)
   return &rids_;
 }
 
+inline const MessageDeleteNotify* MessageDeleteNotify::internal_default_instance() {
+  return &MessageDeleteNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -2965,27 +3066,27 @@ const int ChatClearNotify::kPeerFieldNumber;
 
 ChatClearNotify::ChatClearNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_messaging_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.ChatClearNotify)
 }
 
 void ChatClearNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::Peer*>(&::zproto::Peer::default_instance());
+  peer_ = const_cast< ::zproto::Peer*>(
+      ::zproto::Peer::internal_default_instance());
 }
 
 ChatClearNotify::ChatClearNotify(const ChatClearNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.ChatClearNotify)
 }
 
 void ChatClearNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   peer_ = NULL;
+  _cached_size_ = 0;
 }
 
 ChatClearNotify::~ChatClearNotify() {
@@ -2994,7 +3095,7 @@ ChatClearNotify::~ChatClearNotify() {
 }
 
 void ChatClearNotify::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &ChatClearNotify_default_instance_.get()) {
     delete peer_;
   }
 }
@@ -3010,11 +3111,11 @@ const ::google::protobuf::Descriptor* ChatClearNotify::descriptor() {
 }
 
 const ChatClearNotify& ChatClearNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_messaging_2eproto();
+  return *internal_default_instance();
 }
 
-ChatClearNotify* ChatClearNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<ChatClearNotify> ChatClearNotify_default_instance_;
 
 ChatClearNotify* ChatClearNotify::New(::google::protobuf::Arena* arena) const {
   ChatClearNotify* n = new ChatClearNotify;
@@ -3024,6 +3125,9 @@ ChatClearNotify* ChatClearNotify::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void ChatClearNotify::UnsafeMergeFrom(const ChatClearNotify& from) {
+  MergeFrom(from);
+}
 void ChatClearNotify::Swap(ChatClearNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -3044,7 +3148,7 @@ void ChatClearNotify::InternalSwap(ChatClearNotify* other) {
 
 // optional .zproto.Peer peer = 1;
 bool ChatClearNotify::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
+  return this != internal_default_instance() && peer_ != NULL;
 }
 void ChatClearNotify::clear_peer() {
   if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
@@ -3052,7 +3156,8 @@ void ChatClearNotify::clear_peer() {
 }
 const ::zproto::Peer& ChatClearNotify::peer() const {
   // @@protoc_insertion_point(field_get:zproto.ChatClearNotify.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
+  return peer_ != NULL ? *peer_
+                         : *::zproto::Peer::internal_default_instance();
 }
 ::zproto::Peer* ChatClearNotify::mutable_peer() {
   
@@ -3080,6 +3185,9 @@ void ChatClearNotify::set_allocated_peer(::zproto::Peer* peer) {
   // @@protoc_insertion_point(field_set_allocated:zproto.ChatClearNotify.peer)
 }
 
+inline const ChatClearNotify* ChatClearNotify::internal_default_instance() {
+  return &ChatClearNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -3090,27 +3198,27 @@ const int ChatDeleteNotify::kPeerFieldNumber;
 
 ChatDeleteNotify::ChatDeleteNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_messaging_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.ChatDeleteNotify)
 }
 
 void ChatDeleteNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::Peer*>(&::zproto::Peer::default_instance());
+  peer_ = const_cast< ::zproto::Peer*>(
+      ::zproto::Peer::internal_default_instance());
 }
 
 ChatDeleteNotify::ChatDeleteNotify(const ChatDeleteNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.ChatDeleteNotify)
 }
 
 void ChatDeleteNotify::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   peer_ = NULL;
+  _cached_size_ = 0;
 }
 
 ChatDeleteNotify::~ChatDeleteNotify() {
@@ -3119,7 +3227,7 @@ ChatDeleteNotify::~ChatDeleteNotify() {
 }
 
 void ChatDeleteNotify::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &ChatDeleteNotify_default_instance_.get()) {
     delete peer_;
   }
 }
@@ -3135,11 +3243,11 @@ const ::google::protobuf::Descriptor* ChatDeleteNotify::descriptor() {
 }
 
 const ChatDeleteNotify& ChatDeleteNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_messaging_2eproto();
+  return *internal_default_instance();
 }
 
-ChatDeleteNotify* ChatDeleteNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<ChatDeleteNotify> ChatDeleteNotify_default_instance_;
 
 ChatDeleteNotify* ChatDeleteNotify::New(::google::protobuf::Arena* arena) const {
   ChatDeleteNotify* n = new ChatDeleteNotify;
@@ -3149,6 +3257,9 @@ ChatDeleteNotify* ChatDeleteNotify::New(::google::protobuf::Arena* arena) const 
   return n;
 }
 
+void ChatDeleteNotify::UnsafeMergeFrom(const ChatDeleteNotify& from) {
+  MergeFrom(from);
+}
 void ChatDeleteNotify::Swap(ChatDeleteNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -3169,7 +3280,7 @@ void ChatDeleteNotify::InternalSwap(ChatDeleteNotify* other) {
 
 // optional .zproto.Peer peer = 1;
 bool ChatDeleteNotify::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
+  return this != internal_default_instance() && peer_ != NULL;
 }
 void ChatDeleteNotify::clear_peer() {
   if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
@@ -3177,7 +3288,8 @@ void ChatDeleteNotify::clear_peer() {
 }
 const ::zproto::Peer& ChatDeleteNotify::peer() const {
   // @@protoc_insertion_point(field_get:zproto.ChatDeleteNotify.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
+  return peer_ != NULL ? *peer_
+                         : *::zproto::Peer::internal_default_instance();
 }
 ::zproto::Peer* ChatDeleteNotify::mutable_peer() {
   
@@ -3205,6 +3317,9 @@ void ChatDeleteNotify::set_allocated_peer(::zproto::Peer* peer) {
   // @@protoc_insertion_point(field_set_allocated:zproto.ChatDeleteNotify.peer)
 }
 
+inline const ChatDeleteNotify* ChatDeleteNotify::internal_default_instance() {
+  return &ChatDeleteNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -3217,29 +3332,29 @@ const int DialogShort::kDateFieldNumber;
 
 DialogShort::DialogShort()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_messaging_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.DialogShort)
 }
 
 void DialogShort::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::Peer*>(&::zproto::Peer::default_instance());
+  peer_ = const_cast< ::zproto::Peer*>(
+      ::zproto::Peer::internal_default_instance());
 }
 
 DialogShort::DialogShort(const DialogShort& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.DialogShort)
 }
 
 void DialogShort::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   peer_ = NULL;
-  counter_ = 0;
-  date_ = GOOGLE_LONGLONG(0);
+  ::memset(&date_, 0, reinterpret_cast<char*>(&counter_) -
+    reinterpret_cast<char*>(&date_) + sizeof(counter_));
+  _cached_size_ = 0;
 }
 
 DialogShort::~DialogShort() {
@@ -3248,7 +3363,7 @@ DialogShort::~DialogShort() {
 }
 
 void DialogShort::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &DialogShort_default_instance_.get()) {
     delete peer_;
   }
 }
@@ -3264,11 +3379,11 @@ const ::google::protobuf::Descriptor* DialogShort::descriptor() {
 }
 
 const DialogShort& DialogShort::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_messaging_2eproto();
+  return *internal_default_instance();
 }
 
-DialogShort* DialogShort::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<DialogShort> DialogShort_default_instance_;
 
 DialogShort* DialogShort::New(::google::protobuf::Arena* arena) const {
   DialogShort* n = new DialogShort;
@@ -3278,6 +3393,9 @@ DialogShort* DialogShort::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void DialogShort::UnsafeMergeFrom(const DialogShort& from) {
+  MergeFrom(from);
+}
 void DialogShort::Swap(DialogShort* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -3298,7 +3416,7 @@ void DialogShort::InternalSwap(DialogShort* other) {
 
 // optional .zproto.Peer peer = 1;
 bool DialogShort::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
+  return this != internal_default_instance() && peer_ != NULL;
 }
 void DialogShort::clear_peer() {
   if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
@@ -3306,7 +3424,8 @@ void DialogShort::clear_peer() {
 }
 const ::zproto::Peer& DialogShort::peer() const {
   // @@protoc_insertion_point(field_get:zproto.DialogShort.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
+  return peer_ != NULL ? *peer_
+                         : *::zproto::Peer::internal_default_instance();
 }
 ::zproto::Peer* DialogShort::mutable_peer() {
   
@@ -3338,11 +3457,11 @@ void DialogShort::set_allocated_peer(::zproto::Peer* peer) {
 void DialogShort::clear_counter() {
   counter_ = 0;
 }
- ::google::protobuf::int32 DialogShort::counter() const {
+::google::protobuf::int32 DialogShort::counter() const {
   // @@protoc_insertion_point(field_get:zproto.DialogShort.counter)
   return counter_;
 }
- void DialogShort::set_counter(::google::protobuf::int32 value) {
+void DialogShort::set_counter(::google::protobuf::int32 value) {
   
   counter_ = value;
   // @@protoc_insertion_point(field_set:zproto.DialogShort.counter)
@@ -3352,16 +3471,19 @@ void DialogShort::clear_counter() {
 void DialogShort::clear_date() {
   date_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 DialogShort::date() const {
+::google::protobuf::int64 DialogShort::date() const {
   // @@protoc_insertion_point(field_get:zproto.DialogShort.date)
   return date_;
 }
- void DialogShort::set_date(::google::protobuf::int64 value) {
+void DialogShort::set_date(::google::protobuf::int64 value) {
   
   date_ = value;
   // @@protoc_insertion_point(field_set:zproto.DialogShort.date)
 }
 
+inline const DialogShort* DialogShort::internal_default_instance() {
+  return &DialogShort_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -3374,28 +3496,26 @@ const int DialogGroup::kDialogsFieldNumber;
 
 DialogGroup::DialogGroup()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_messaging_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.DialogGroup)
 }
 
 void DialogGroup::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 DialogGroup::DialogGroup(const DialogGroup& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.DialogGroup)
 }
 
 void DialogGroup::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
   title_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _cached_size_ = 0;
 }
 
 DialogGroup::~DialogGroup() {
@@ -3406,8 +3526,6 @@ DialogGroup::~DialogGroup() {
 void DialogGroup::SharedDtor() {
   title_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   key_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
 }
 
 void DialogGroup::SetCachedSize(int size) const {
@@ -3421,11 +3539,11 @@ const ::google::protobuf::Descriptor* DialogGroup::descriptor() {
 }
 
 const DialogGroup& DialogGroup::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_messaging_2eproto();
+  return *internal_default_instance();
 }
 
-DialogGroup* DialogGroup::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<DialogGroup> DialogGroup_default_instance_;
 
 DialogGroup* DialogGroup::New(::google::protobuf::Arena* arena) const {
   DialogGroup* n = new DialogGroup;
@@ -3435,6 +3553,9 @@ DialogGroup* DialogGroup::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void DialogGroup::UnsafeMergeFrom(const DialogGroup& from) {
+  MergeFrom(from);
+}
 void DialogGroup::Swap(DialogGroup* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -3457,37 +3578,37 @@ void DialogGroup::InternalSwap(DialogGroup* other) {
 void DialogGroup::clear_title() {
   title_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& DialogGroup::title() const {
+const ::std::string& DialogGroup::title() const {
   // @@protoc_insertion_point(field_get:zproto.DialogGroup.title)
   return title_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void DialogGroup::set_title(const ::std::string& value) {
+void DialogGroup::set_title(const ::std::string& value) {
   
   title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.DialogGroup.title)
 }
- void DialogGroup::set_title(const char* value) {
+void DialogGroup::set_title(const char* value) {
   
   title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.DialogGroup.title)
 }
- void DialogGroup::set_title(const char* value, size_t size) {
+void DialogGroup::set_title(const char* value, size_t size) {
   
   title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.DialogGroup.title)
 }
- ::std::string* DialogGroup::mutable_title() {
+::std::string* DialogGroup::mutable_title() {
   
   // @@protoc_insertion_point(field_mutable:zproto.DialogGroup.title)
   return title_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* DialogGroup::release_title() {
+::std::string* DialogGroup::release_title() {
   // @@protoc_insertion_point(field_release:zproto.DialogGroup.title)
   
   return title_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void DialogGroup::set_allocated_title(::std::string* title) {
+void DialogGroup::set_allocated_title(::std::string* title) {
   if (title != NULL) {
     
   } else {
@@ -3501,37 +3622,37 @@ void DialogGroup::clear_title() {
 void DialogGroup::clear_key() {
   key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& DialogGroup::key() const {
+const ::std::string& DialogGroup::key() const {
   // @@protoc_insertion_point(field_get:zproto.DialogGroup.key)
   return key_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void DialogGroup::set_key(const ::std::string& value) {
+void DialogGroup::set_key(const ::std::string& value) {
   
   key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.DialogGroup.key)
 }
- void DialogGroup::set_key(const char* value) {
+void DialogGroup::set_key(const char* value) {
   
   key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.DialogGroup.key)
 }
- void DialogGroup::set_key(const char* value, size_t size) {
+void DialogGroup::set_key(const char* value, size_t size) {
   
   key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.DialogGroup.key)
 }
- ::std::string* DialogGroup::mutable_key() {
+::std::string* DialogGroup::mutable_key() {
   
   // @@protoc_insertion_point(field_mutable:zproto.DialogGroup.key)
   return key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* DialogGroup::release_key() {
+::std::string* DialogGroup::release_key() {
   // @@protoc_insertion_point(field_release:zproto.DialogGroup.key)
   
   return key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void DialogGroup::set_allocated_key(::std::string* key) {
+void DialogGroup::set_allocated_key(::std::string* key) {
   if (key != NULL) {
     
   } else {
@@ -3571,6 +3692,9 @@ DialogGroup::dialogs() const {
   return dialogs_;
 }
 
+inline const DialogGroup* DialogGroup::internal_default_instance() {
+  return &DialogGroup_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -3581,24 +3705,23 @@ const int ChatGroupsChangedNotify::kDialogsFieldNumber;
 
 ChatGroupsChangedNotify::ChatGroupsChangedNotify()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_messaging_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.ChatGroupsChangedNotify)
 }
 
 void ChatGroupsChangedNotify::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 ChatGroupsChangedNotify::ChatGroupsChangedNotify(const ChatGroupsChangedNotify& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.ChatGroupsChangedNotify)
 }
 
 void ChatGroupsChangedNotify::SharedCtor() {
-    _is_default_instance_ = false;
   _cached_size_ = 0;
 }
 
@@ -3608,8 +3731,6 @@ ChatGroupsChangedNotify::~ChatGroupsChangedNotify() {
 }
 
 void ChatGroupsChangedNotify::SharedDtor() {
-  if (this != default_instance_) {
-  }
 }
 
 void ChatGroupsChangedNotify::SetCachedSize(int size) const {
@@ -3623,11 +3744,11 @@ const ::google::protobuf::Descriptor* ChatGroupsChangedNotify::descriptor() {
 }
 
 const ChatGroupsChangedNotify& ChatGroupsChangedNotify::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_messaging_2eproto();
+  return *internal_default_instance();
 }
 
-ChatGroupsChangedNotify* ChatGroupsChangedNotify::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<ChatGroupsChangedNotify> ChatGroupsChangedNotify_default_instance_;
 
 ChatGroupsChangedNotify* ChatGroupsChangedNotify::New(::google::protobuf::Arena* arena) const {
   ChatGroupsChangedNotify* n = new ChatGroupsChangedNotify;
@@ -3637,6 +3758,9 @@ ChatGroupsChangedNotify* ChatGroupsChangedNotify::New(::google::protobuf::Arena*
   return n;
 }
 
+void ChatGroupsChangedNotify::UnsafeMergeFrom(const ChatGroupsChangedNotify& from) {
+  MergeFrom(from);
+}
 void ChatGroupsChangedNotify::Swap(ChatGroupsChangedNotify* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -3685,6 +3809,9 @@ ChatGroupsChangedNotify::dialogs() const {
   return dialogs_;
 }
 
+inline const ChatGroupsChangedNotify* ChatGroupsChangedNotify::internal_default_instance() {
+  return &ChatGroupsChangedNotify_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -3699,30 +3826,29 @@ const int LoadHistoryReq::kOptimizationsFieldNumber;
 
 LoadHistoryReq::LoadHistoryReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_messaging_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.LoadHistoryReq)
 }
 
 void LoadHistoryReq::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  peer_ = const_cast< ::zproto::OutPeer*>(&::zproto::OutPeer::default_instance());
+  peer_ = const_cast< ::zproto::OutPeer*>(
+      ::zproto::OutPeer::internal_default_instance());
 }
 
 LoadHistoryReq::LoadHistoryReq(const LoadHistoryReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.LoadHistoryReq)
 }
 
 void LoadHistoryReq::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
   peer_ = NULL;
-  date_ = GOOGLE_LONGLONG(0);
-  load_mode_ = 0;
-  limit_ = 0;
+  ::memset(&date_, 0, reinterpret_cast<char*>(&limit_) -
+    reinterpret_cast<char*>(&date_) + sizeof(limit_));
+  _cached_size_ = 0;
 }
 
 LoadHistoryReq::~LoadHistoryReq() {
@@ -3731,7 +3857,7 @@ LoadHistoryReq::~LoadHistoryReq() {
 }
 
 void LoadHistoryReq::SharedDtor() {
-  if (this != default_instance_) {
+  if (this != &LoadHistoryReq_default_instance_.get()) {
     delete peer_;
   }
 }
@@ -3747,11 +3873,11 @@ const ::google::protobuf::Descriptor* LoadHistoryReq::descriptor() {
 }
 
 const LoadHistoryReq& LoadHistoryReq::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_messaging_2eproto();
+  return *internal_default_instance();
 }
 
-LoadHistoryReq* LoadHistoryReq::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<LoadHistoryReq> LoadHistoryReq_default_instance_;
 
 LoadHistoryReq* LoadHistoryReq::New(::google::protobuf::Arena* arena) const {
   LoadHistoryReq* n = new LoadHistoryReq;
@@ -3761,6 +3887,9 @@ LoadHistoryReq* LoadHistoryReq::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void LoadHistoryReq::UnsafeMergeFrom(const LoadHistoryReq& from) {
+  MergeFrom(from);
+}
 void LoadHistoryReq::Swap(LoadHistoryReq* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -3781,7 +3910,7 @@ void LoadHistoryReq::InternalSwap(LoadHistoryReq* other) {
 
 // optional .zproto.OutPeer peer = 1;
 bool LoadHistoryReq::has_peer() const {
-  return !_is_default_instance_ && peer_ != NULL;
+  return this != internal_default_instance() && peer_ != NULL;
 }
 void LoadHistoryReq::clear_peer() {
   if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
@@ -3789,7 +3918,8 @@ void LoadHistoryReq::clear_peer() {
 }
 const ::zproto::OutPeer& LoadHistoryReq::peer() const {
   // @@protoc_insertion_point(field_get:zproto.LoadHistoryReq.peer)
-  return peer_ != NULL ? *peer_ : *default_instance_->peer_;
+  return peer_ != NULL ? *peer_
+                         : *::zproto::OutPeer::internal_default_instance();
 }
 ::zproto::OutPeer* LoadHistoryReq::mutable_peer() {
   
@@ -3821,11 +3951,11 @@ void LoadHistoryReq::set_allocated_peer(::zproto::OutPeer* peer) {
 void LoadHistoryReq::clear_date() {
   date_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 LoadHistoryReq::date() const {
+::google::protobuf::int64 LoadHistoryReq::date() const {
   // @@protoc_insertion_point(field_get:zproto.LoadHistoryReq.date)
   return date_;
 }
- void LoadHistoryReq::set_date(::google::protobuf::int64 value) {
+void LoadHistoryReq::set_date(::google::protobuf::int64 value) {
   
   date_ = value;
   // @@protoc_insertion_point(field_set:zproto.LoadHistoryReq.date)
@@ -3835,11 +3965,11 @@ void LoadHistoryReq::clear_date() {
 void LoadHistoryReq::clear_load_mode() {
   load_mode_ = 0;
 }
- ::zproto::ListLoadMode LoadHistoryReq::load_mode() const {
+::zproto::ListLoadMode LoadHistoryReq::load_mode() const {
   // @@protoc_insertion_point(field_get:zproto.LoadHistoryReq.load_mode)
   return static_cast< ::zproto::ListLoadMode >(load_mode_);
 }
- void LoadHistoryReq::set_load_mode(::zproto::ListLoadMode value) {
+void LoadHistoryReq::set_load_mode(::zproto::ListLoadMode value) {
   
   load_mode_ = value;
   // @@protoc_insertion_point(field_set:zproto.LoadHistoryReq.load_mode)
@@ -3849,11 +3979,11 @@ void LoadHistoryReq::clear_load_mode() {
 void LoadHistoryReq::clear_limit() {
   limit_ = 0;
 }
- ::google::protobuf::int32 LoadHistoryReq::limit() const {
+::google::protobuf::int32 LoadHistoryReq::limit() const {
   // @@protoc_insertion_point(field_get:zproto.LoadHistoryReq.limit)
   return limit_;
 }
- void LoadHistoryReq::set_limit(::google::protobuf::int32 value) {
+void LoadHistoryReq::set_limit(::google::protobuf::int32 value) {
   
   limit_ = value;
   // @@protoc_insertion_point(field_set:zproto.LoadHistoryReq.limit)
@@ -3866,29 +3996,32 @@ int LoadHistoryReq::optimizations_size() const {
 void LoadHistoryReq::clear_optimizations() {
   optimizations_.Clear();
 }
- ::zproto::UpdateOptimization LoadHistoryReq::optimizations(int index) const {
+::zproto::UpdateOptimization LoadHistoryReq::optimizations(int index) const {
   // @@protoc_insertion_point(field_get:zproto.LoadHistoryReq.optimizations)
   return static_cast< ::zproto::UpdateOptimization >(optimizations_.Get(index));
 }
- void LoadHistoryReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
+void LoadHistoryReq::set_optimizations(int index, ::zproto::UpdateOptimization value) {
   optimizations_.Set(index, value);
   // @@protoc_insertion_point(field_set:zproto.LoadHistoryReq.optimizations)
 }
- void LoadHistoryReq::add_optimizations(::zproto::UpdateOptimization value) {
+void LoadHistoryReq::add_optimizations(::zproto::UpdateOptimization value) {
   optimizations_.Add(value);
   // @@protoc_insertion_point(field_add:zproto.LoadHistoryReq.optimizations)
 }
- const ::google::protobuf::RepeatedField<int>&
+const ::google::protobuf::RepeatedField<int>&
 LoadHistoryReq::optimizations() const {
   // @@protoc_insertion_point(field_list:zproto.LoadHistoryReq.optimizations)
   return optimizations_;
 }
- ::google::protobuf::RepeatedField<int>*
+::google::protobuf::RepeatedField<int>*
 LoadHistoryReq::mutable_optimizations() {
   // @@protoc_insertion_point(field_mutable_list:zproto.LoadHistoryReq.optimizations)
   return &optimizations_;
 }
 
+inline const LoadHistoryReq* LoadHistoryReq::internal_default_instance() {
+  return &LoadHistoryReq_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -3903,24 +4036,23 @@ const int LoadHistoryRsp::kGroupPeersFieldNumber;
 
 LoadHistoryRsp::LoadHistoryRsp()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_messaging_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.LoadHistoryRsp)
 }
 
 void LoadHistoryRsp::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 LoadHistoryRsp::LoadHistoryRsp(const LoadHistoryRsp& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.LoadHistoryRsp)
 }
 
 void LoadHistoryRsp::SharedCtor() {
-    _is_default_instance_ = false;
   _cached_size_ = 0;
 }
 
@@ -3930,8 +4062,6 @@ LoadHistoryRsp::~LoadHistoryRsp() {
 }
 
 void LoadHistoryRsp::SharedDtor() {
-  if (this != default_instance_) {
-  }
 }
 
 void LoadHistoryRsp::SetCachedSize(int size) const {
@@ -3945,11 +4075,11 @@ const ::google::protobuf::Descriptor* LoadHistoryRsp::descriptor() {
 }
 
 const LoadHistoryRsp& LoadHistoryRsp::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_messaging_2eproto();
+  return *internal_default_instance();
 }
 
-LoadHistoryRsp* LoadHistoryRsp::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<LoadHistoryRsp> LoadHistoryRsp_default_instance_;
 
 LoadHistoryRsp* LoadHistoryRsp::New(::google::protobuf::Arena* arena) const {
   LoadHistoryRsp* n = new LoadHistoryRsp;
@@ -3959,6 +4089,9 @@ LoadHistoryRsp* LoadHistoryRsp::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void LoadHistoryRsp::UnsafeMergeFrom(const LoadHistoryRsp& from) {
+  MergeFrom(from);
+}
 void LoadHistoryRsp::Swap(LoadHistoryRsp* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -4127,6 +4260,9 @@ LoadHistoryRsp::group_peers() const {
   return group_peers_;
 }
 
+inline const LoadHistoryRsp* LoadHistoryRsp::internal_default_instance() {
+  return &LoadHistoryRsp_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // @@protoc_insertion_point(namespace_scope)

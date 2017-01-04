@@ -49,14 +49,13 @@ void protobuf_AssignDesc_messaging_5fbase_2eproto() {
   InstantMessage_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       InstantMessage_descriptor_,
-      InstantMessage::default_instance_,
+      InstantMessage::internal_default_instance(),
       InstantMessage_offsets_,
       -1,
       -1,
       -1,
       sizeof(InstantMessage),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(InstantMessage, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(InstantMessage, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(InstantMessage, _internal_metadata_));
   MessageContainer_descriptor_ = file->message_type(1);
   static const int MessageContainer_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageContainer, sender_uid_),
@@ -68,14 +67,13 @@ void protobuf_AssignDesc_messaging_5fbase_2eproto() {
   MessageContainer_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       MessageContainer_descriptor_,
-      MessageContainer::default_instance_,
+      MessageContainer::internal_default_instance(),
       MessageContainer_offsets_,
       -1,
       -1,
       -1,
       sizeof(MessageContainer),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageContainer, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageContainer, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageContainer, _internal_metadata_));
   MessageType_descriptor_ = file->enum_type(0);
   MessageState_descriptor_ = file->enum_type(1);
   ListLoadMode_descriptor_ = file->enum_type(2);
@@ -84,7 +82,7 @@ void protobuf_AssignDesc_messaging_5fbase_2eproto() {
 namespace {
 
 GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AssignDescriptors_once_);
-inline void protobuf_AssignDescriptorsOnce() {
+void protobuf_AssignDescriptorsOnce() {
   ::google::protobuf::GoogleOnceInit(&protobuf_AssignDescriptors_once_,
                  &protobuf_AssignDesc_messaging_5fbase_2eproto);
 }
@@ -93,29 +91,42 @@ void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      InstantMessage_descriptor_, &InstantMessage::default_instance());
+      InstantMessage_descriptor_, InstantMessage::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MessageContainer_descriptor_, &MessageContainer::default_instance());
+      MessageContainer_descriptor_, MessageContainer::internal_default_instance());
 }
 
 }  // namespace
 
 void protobuf_ShutdownFile_messaging_5fbase_2eproto() {
-  delete InstantMessage::default_instance_;
+  InstantMessage_default_instance_.Shutdown();
   delete InstantMessage_reflection_;
-  delete MessageContainer::default_instance_;
+  MessageContainer_default_instance_.Shutdown();
   delete MessageContainer_reflection_;
 }
 
-void protobuf_AddDesc_messaging_5fbase_2eproto() GOOGLE_ATTRIBUTE_COLD;
-void protobuf_AddDesc_messaging_5fbase_2eproto() {
-  static bool already_here = false;
-  if (already_here) return;
-  already_here = true;
+void protobuf_InitDefaults_messaging_5fbase_2eproto_impl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-  ::zproto::protobuf_AddDesc_peers_2eproto();
-  ::zproto::protobuf_AddDesc_group_5fbase_2eproto();
+  ::zproto::protobuf_InitDefaults_peers_2eproto();
+  ::zproto::protobuf_InitDefaults_group_5fbase_2eproto();
+  ::google::protobuf::internal::GetEmptyString();
+  InstantMessage_default_instance_.DefaultConstruct();
+  ::google::protobuf::internal::GetEmptyString();
+  MessageContainer_default_instance_.DefaultConstruct();
+  InstantMessage_default_instance_.get_mutable()->InitAsDefaultInstance();
+  MessageContainer_default_instance_.get_mutable()->InitAsDefaultInstance();
+}
+
+GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_InitDefaults_messaging_5fbase_2eproto_once_);
+void protobuf_InitDefaults_messaging_5fbase_2eproto() {
+  ::google::protobuf::GoogleOnceInit(&protobuf_InitDefaults_messaging_5fbase_2eproto_once_,
+                 &protobuf_InitDefaults_messaging_5fbase_2eproto_impl);
+}
+void protobuf_AddDesc_messaging_5fbase_2eproto_impl() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  protobuf_InitDefaults_messaging_5fbase_2eproto();
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
     "\n\024messaging_base.proto\022\006zproto\032\013peers.pr"
     "oto\032\020group_base.proto\"Q\n\016InstantMessage\022"
@@ -132,13 +143,16 @@ void protobuf_AddDesc_messaging_5fbase_2eproto() {
     "gingH\002b\006proto3", 494);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "messaging_base.proto", &protobuf_RegisterTypes);
-  InstantMessage::default_instance_ = new InstantMessage();
-  MessageContainer::default_instance_ = new MessageContainer();
-  InstantMessage::default_instance_->InitAsDefaultInstance();
-  MessageContainer::default_instance_->InitAsDefaultInstance();
+  ::zproto::protobuf_AddDesc_peers_2eproto();
+  ::zproto::protobuf_AddDesc_group_5fbase_2eproto();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_messaging_5fbase_2eproto);
 }
 
+GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AddDesc_messaging_5fbase_2eproto_once_);
+void protobuf_AddDesc_messaging_5fbase_2eproto() {
+  ::google::protobuf::GoogleOnceInit(&protobuf_AddDesc_messaging_5fbase_2eproto_once_,
+                 &protobuf_AddDesc_messaging_5fbase_2eproto_impl);
+}
 // Force AddDescriptors() to be called at static initialization time.
 struct StaticDescriptorInitializer_messaging_5fbase_2eproto {
   StaticDescriptorInitializer_messaging_5fbase_2eproto() {
@@ -150,7 +164,7 @@ const ::google::protobuf::EnumDescriptor* MessageType_descriptor() {
   return MessageType_descriptor_;
 }
 bool MessageType_IsValid(int value) {
-  switch(value) {
+  switch (value) {
     case 0:
     case 1:
     case 2:
@@ -165,7 +179,7 @@ const ::google::protobuf::EnumDescriptor* MessageState_descriptor() {
   return MessageState_descriptor_;
 }
 bool MessageState_IsValid(int value) {
-  switch(value) {
+  switch (value) {
     case 0:
     case 1:
     case 2:
@@ -180,7 +194,7 @@ const ::google::protobuf::EnumDescriptor* ListLoadMode_descriptor() {
   return ListLoadMode_descriptor_;
 }
 bool ListLoadMode_IsValid(int value) {
-  switch(value) {
+  switch (value) {
     case 0:
     case 1:
     case 2:
@@ -200,28 +214,26 @@ const int InstantMessage::kMessageDataFieldNumber;
 
 InstantMessage::InstantMessage()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_messaging_5fbase_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.InstantMessage)
 }
 
 void InstantMessage::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
 }
 
 InstantMessage::InstantMessage(const InstantMessage& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.InstantMessage)
 }
 
 void InstantMessage::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  message_type_ = 0;
   message_data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  message_type_ = 0;
+  _cached_size_ = 0;
 }
 
 InstantMessage::~InstantMessage() {
@@ -231,8 +243,6 @@ InstantMessage::~InstantMessage() {
 
 void InstantMessage::SharedDtor() {
   message_data_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
-  }
 }
 
 void InstantMessage::SetCachedSize(int size) const {
@@ -246,11 +256,11 @@ const ::google::protobuf::Descriptor* InstantMessage::descriptor() {
 }
 
 const InstantMessage& InstantMessage::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_5fbase_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_messaging_5fbase_2eproto();
+  return *internal_default_instance();
 }
 
-InstantMessage* InstantMessage::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<InstantMessage> InstantMessage_default_instance_;
 
 InstantMessage* InstantMessage::New(::google::protobuf::Arena* arena) const {
   InstantMessage* n = new InstantMessage;
@@ -260,6 +270,9 @@ InstantMessage* InstantMessage::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void InstantMessage::UnsafeMergeFrom(const InstantMessage& from) {
+  MergeFrom(from);
+}
 void InstantMessage::Swap(InstantMessage* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -282,11 +295,11 @@ void InstantMessage::InternalSwap(InstantMessage* other) {
 void InstantMessage::clear_message_type() {
   message_type_ = 0;
 }
- ::zproto::MessageType InstantMessage::message_type() const {
+::zproto::MessageType InstantMessage::message_type() const {
   // @@protoc_insertion_point(field_get:zproto.InstantMessage.message_type)
   return static_cast< ::zproto::MessageType >(message_type_);
 }
- void InstantMessage::set_message_type(::zproto::MessageType value) {
+void InstantMessage::set_message_type(::zproto::MessageType value) {
   
   message_type_ = value;
   // @@protoc_insertion_point(field_set:zproto.InstantMessage.message_type)
@@ -296,37 +309,37 @@ void InstantMessage::clear_message_type() {
 void InstantMessage::clear_message_data() {
   message_data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& InstantMessage::message_data() const {
+const ::std::string& InstantMessage::message_data() const {
   // @@protoc_insertion_point(field_get:zproto.InstantMessage.message_data)
   return message_data_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void InstantMessage::set_message_data(const ::std::string& value) {
+void InstantMessage::set_message_data(const ::std::string& value) {
   
   message_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.InstantMessage.message_data)
 }
- void InstantMessage::set_message_data(const char* value) {
+void InstantMessage::set_message_data(const char* value) {
   
   message_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.InstantMessage.message_data)
 }
- void InstantMessage::set_message_data(const void* value, size_t size) {
+void InstantMessage::set_message_data(const void* value, size_t size) {
   
   message_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.InstantMessage.message_data)
 }
- ::std::string* InstantMessage::mutable_message_data() {
+::std::string* InstantMessage::mutable_message_data() {
   
   // @@protoc_insertion_point(field_mutable:zproto.InstantMessage.message_data)
   return message_data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* InstantMessage::release_message_data() {
+::std::string* InstantMessage::release_message_data() {
   // @@protoc_insertion_point(field_release:zproto.InstantMessage.message_data)
   
   return message_data_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void InstantMessage::set_allocated_message_data(::std::string* message_data) {
+void InstantMessage::set_allocated_message_data(::std::string* message_data) {
   if (message_data != NULL) {
     
   } else {
@@ -336,6 +349,9 @@ void InstantMessage::clear_message_data() {
   // @@protoc_insertion_point(field_set_allocated:zproto.InstantMessage.message_data)
 }
 
+inline const InstantMessage* InstantMessage::internal_default_instance() {
+  return &InstantMessage_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -350,32 +366,30 @@ const int MessageContainer::kStateFieldNumber;
 
 MessageContainer::MessageContainer()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_messaging_5fbase_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.MessageContainer)
 }
 
 void MessageContainer::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  message_ = const_cast< ::zproto::InstantMessage*>(&::zproto::InstantMessage::default_instance());
+  message_ = const_cast< ::zproto::InstantMessage*>(
+      ::zproto::InstantMessage::internal_default_instance());
 }
 
 MessageContainer::MessageContainer(const MessageContainer& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.MessageContainer)
 }
 
 void MessageContainer::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
   sender_uid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  rid_ = GOOGLE_LONGLONG(0);
-  date_ = GOOGLE_LONGLONG(0);
   message_ = NULL;
-  state_ = 0;
+  ::memset(&rid_, 0, reinterpret_cast<char*>(&state_) -
+    reinterpret_cast<char*>(&rid_) + sizeof(state_));
+  _cached_size_ = 0;
 }
 
 MessageContainer::~MessageContainer() {
@@ -385,7 +399,7 @@ MessageContainer::~MessageContainer() {
 
 void MessageContainer::SharedDtor() {
   sender_uid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
+  if (this != &MessageContainer_default_instance_.get()) {
     delete message_;
   }
 }
@@ -401,11 +415,11 @@ const ::google::protobuf::Descriptor* MessageContainer::descriptor() {
 }
 
 const MessageContainer& MessageContainer::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_messaging_5fbase_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_messaging_5fbase_2eproto();
+  return *internal_default_instance();
 }
 
-MessageContainer* MessageContainer::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<MessageContainer> MessageContainer_default_instance_;
 
 MessageContainer* MessageContainer::New(::google::protobuf::Arena* arena) const {
   MessageContainer* n = new MessageContainer;
@@ -415,6 +429,9 @@ MessageContainer* MessageContainer::New(::google::protobuf::Arena* arena) const 
   return n;
 }
 
+void MessageContainer::UnsafeMergeFrom(const MessageContainer& from) {
+  MergeFrom(from);
+}
 void MessageContainer::Swap(MessageContainer* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -437,37 +454,37 @@ void MessageContainer::InternalSwap(MessageContainer* other) {
 void MessageContainer::clear_sender_uid() {
   sender_uid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& MessageContainer::sender_uid() const {
+const ::std::string& MessageContainer::sender_uid() const {
   // @@protoc_insertion_point(field_get:zproto.MessageContainer.sender_uid)
   return sender_uid_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void MessageContainer::set_sender_uid(const ::std::string& value) {
+void MessageContainer::set_sender_uid(const ::std::string& value) {
   
   sender_uid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.MessageContainer.sender_uid)
 }
- void MessageContainer::set_sender_uid(const char* value) {
+void MessageContainer::set_sender_uid(const char* value) {
   
   sender_uid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.MessageContainer.sender_uid)
 }
- void MessageContainer::set_sender_uid(const char* value, size_t size) {
+void MessageContainer::set_sender_uid(const char* value, size_t size) {
   
   sender_uid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.MessageContainer.sender_uid)
 }
- ::std::string* MessageContainer::mutable_sender_uid() {
+::std::string* MessageContainer::mutable_sender_uid() {
   
   // @@protoc_insertion_point(field_mutable:zproto.MessageContainer.sender_uid)
   return sender_uid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* MessageContainer::release_sender_uid() {
+::std::string* MessageContainer::release_sender_uid() {
   // @@protoc_insertion_point(field_release:zproto.MessageContainer.sender_uid)
   
   return sender_uid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void MessageContainer::set_allocated_sender_uid(::std::string* sender_uid) {
+void MessageContainer::set_allocated_sender_uid(::std::string* sender_uid) {
   if (sender_uid != NULL) {
     
   } else {
@@ -481,11 +498,11 @@ void MessageContainer::clear_sender_uid() {
 void MessageContainer::clear_rid() {
   rid_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MessageContainer::rid() const {
+::google::protobuf::int64 MessageContainer::rid() const {
   // @@protoc_insertion_point(field_get:zproto.MessageContainer.rid)
   return rid_;
 }
- void MessageContainer::set_rid(::google::protobuf::int64 value) {
+void MessageContainer::set_rid(::google::protobuf::int64 value) {
   
   rid_ = value;
   // @@protoc_insertion_point(field_set:zproto.MessageContainer.rid)
@@ -495,11 +512,11 @@ void MessageContainer::clear_rid() {
 void MessageContainer::clear_date() {
   date_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MessageContainer::date() const {
+::google::protobuf::int64 MessageContainer::date() const {
   // @@protoc_insertion_point(field_get:zproto.MessageContainer.date)
   return date_;
 }
- void MessageContainer::set_date(::google::protobuf::int64 value) {
+void MessageContainer::set_date(::google::protobuf::int64 value) {
   
   date_ = value;
   // @@protoc_insertion_point(field_set:zproto.MessageContainer.date)
@@ -507,7 +524,7 @@ void MessageContainer::clear_date() {
 
 // optional .zproto.InstantMessage message = 5;
 bool MessageContainer::has_message() const {
-  return !_is_default_instance_ && message_ != NULL;
+  return this != internal_default_instance() && message_ != NULL;
 }
 void MessageContainer::clear_message() {
   if (GetArenaNoVirtual() == NULL && message_ != NULL) delete message_;
@@ -515,7 +532,8 @@ void MessageContainer::clear_message() {
 }
 const ::zproto::InstantMessage& MessageContainer::message() const {
   // @@protoc_insertion_point(field_get:zproto.MessageContainer.message)
-  return message_ != NULL ? *message_ : *default_instance_->message_;
+  return message_ != NULL ? *message_
+                         : *::zproto::InstantMessage::internal_default_instance();
 }
 ::zproto::InstantMessage* MessageContainer::mutable_message() {
   
@@ -547,16 +565,19 @@ void MessageContainer::set_allocated_message(::zproto::InstantMessage* message) 
 void MessageContainer::clear_state() {
   state_ = 0;
 }
- ::zproto::MessageState MessageContainer::state() const {
+::zproto::MessageState MessageContainer::state() const {
   // @@protoc_insertion_point(field_get:zproto.MessageContainer.state)
   return static_cast< ::zproto::MessageState >(state_);
 }
- void MessageContainer::set_state(::zproto::MessageState value) {
+void MessageContainer::set_state(::zproto::MessageState value) {
   
   state_ = value;
   // @@protoc_insertion_point(field_set:zproto.MessageContainer.state)
 }
 
+inline const MessageContainer* MessageContainer::internal_default_instance() {
+  return &MessageContainer_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // @@protoc_insertion_point(namespace_scope)

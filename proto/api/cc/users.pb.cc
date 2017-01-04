@@ -45,20 +45,19 @@ void protobuf_AssignDesc_users_2eproto() {
   User_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
       User_descriptor_,
-      User::default_instance_,
+      User::internal_default_instance(),
       User_offsets_,
       -1,
       -1,
       -1,
       sizeof(User),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(User, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(User, _is_default_instance_));
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(User, _internal_metadata_));
 }
 
 namespace {
 
 GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AssignDescriptors_once_);
-inline void protobuf_AssignDescriptorsOnce() {
+void protobuf_AssignDescriptorsOnce() {
   ::google::protobuf::GoogleOnceInit(&protobuf_AssignDescriptors_once_,
                  &protobuf_AssignDesc_users_2eproto);
 }
@@ -67,25 +66,35 @@ void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      User_descriptor_, &User::default_instance());
+      User_descriptor_, User::internal_default_instance());
 }
 
 }  // namespace
 
 void protobuf_ShutdownFile_users_2eproto() {
-  delete User::default_instance_;
+  User_default_instance_.Shutdown();
   delete User_reflection_;
 }
 
-void protobuf_AddDesc_users_2eproto() GOOGLE_ATTRIBUTE_COLD;
-void protobuf_AddDesc_users_2eproto() {
-  static bool already_here = false;
-  if (already_here) return;
-  already_here = true;
+void protobuf_InitDefaults_users_2eproto_impl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-  ::zproto::protobuf_AddDesc_types_2eproto();
-  ::zproto::protobuf_AddDesc_files_2eproto();
+  ::zproto::protobuf_InitDefaults_types_2eproto();
+  ::zproto::protobuf_InitDefaults_files_2eproto();
+  ::google::protobuf::internal::GetEmptyString();
+  User_default_instance_.DefaultConstruct();
+  User_default_instance_.get_mutable()->InitAsDefaultInstance();
+}
+
+GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_InitDefaults_users_2eproto_once_);
+void protobuf_InitDefaults_users_2eproto() {
+  ::google::protobuf::GoogleOnceInit(&protobuf_InitDefaults_users_2eproto_once_,
+                 &protobuf_InitDefaults_users_2eproto_impl);
+}
+void protobuf_AddDesc_users_2eproto_impl() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  protobuf_InitDefaults_users_2eproto();
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
     "\n\013users.proto\022\006zproto\032\013types.proto\032\013file"
     "s.proto\"`\n\004User\022\013\n\003uid\030\001 \001(\t\022\023\n\013access_h"
@@ -94,11 +103,16 @@ void protobuf_AddDesc_users_2eproto() {
     "ngine.zprotoB\013ZProtoUsersH\002b\006proto3", 195);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "users.proto", &protobuf_RegisterTypes);
-  User::default_instance_ = new User();
-  User::default_instance_->InitAsDefaultInstance();
+  ::zproto::protobuf_AddDesc_types_2eproto();
+  ::zproto::protobuf_AddDesc_files_2eproto();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_users_2eproto);
 }
 
+GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AddDesc_users_2eproto_once_);
+void protobuf_AddDesc_users_2eproto() {
+  ::google::protobuf::GoogleOnceInit(&protobuf_AddDesc_users_2eproto_once_,
+                 &protobuf_AddDesc_users_2eproto_impl);
+}
 // Force AddDescriptors() to be called at static initialization time.
 struct StaticDescriptorInitializer_users_2eproto {
   StaticDescriptorInitializer_users_2eproto() {
@@ -117,31 +131,30 @@ const int User::kPushAvatarFieldNumber;
 
 User::User()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_users_2eproto();
   SharedCtor();
   // @@protoc_insertion_point(constructor:zproto.User)
 }
 
 void User::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  push_avatar_ = const_cast< ::zproto::Avatar*>(&::zproto::Avatar::default_instance());
+  push_avatar_ = const_cast< ::zproto::Avatar*>(
+      ::zproto::Avatar::internal_default_instance());
 }
 
 User::User(const User& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
-  MergeFrom(from);
+  UnsafeMergeFrom(from);
   // @@protoc_insertion_point(copy_constructor:zproto.User)
 }
 
 void User::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
   uid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  access_hash_ = GOOGLE_LONGLONG(0);
   push_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   push_avatar_ = NULL;
+  access_hash_ = GOOGLE_LONGLONG(0);
+  _cached_size_ = 0;
 }
 
 User::~User() {
@@ -152,7 +165,7 @@ User::~User() {
 void User::SharedDtor() {
   uid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   push_name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != default_instance_) {
+  if (this != &User_default_instance_.get()) {
     delete push_avatar_;
   }
 }
@@ -168,11 +181,11 @@ const ::google::protobuf::Descriptor* User::descriptor() {
 }
 
 const User& User::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_users_2eproto();
-  return *default_instance_;
+  protobuf_InitDefaults_users_2eproto();
+  return *internal_default_instance();
 }
 
-User* User::default_instance_ = NULL;
+::google::protobuf::internal::ExplicitlyConstructed<User> User_default_instance_;
 
 User* User::New(::google::protobuf::Arena* arena) const {
   User* n = new User;
@@ -182,6 +195,9 @@ User* User::New(::google::protobuf::Arena* arena) const {
   return n;
 }
 
+void User::UnsafeMergeFrom(const User& from) {
+  MergeFrom(from);
+}
 void User::Swap(User* other) {
   if (other == this) return;
   InternalSwap(other);
@@ -204,37 +220,37 @@ void User::InternalSwap(User* other) {
 void User::clear_uid() {
   uid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& User::uid() const {
+const ::std::string& User::uid() const {
   // @@protoc_insertion_point(field_get:zproto.User.uid)
   return uid_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void User::set_uid(const ::std::string& value) {
+void User::set_uid(const ::std::string& value) {
   
   uid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.User.uid)
 }
- void User::set_uid(const char* value) {
+void User::set_uid(const char* value) {
   
   uid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.User.uid)
 }
- void User::set_uid(const char* value, size_t size) {
+void User::set_uid(const char* value, size_t size) {
   
   uid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.User.uid)
 }
- ::std::string* User::mutable_uid() {
+::std::string* User::mutable_uid() {
   
   // @@protoc_insertion_point(field_mutable:zproto.User.uid)
   return uid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* User::release_uid() {
+::std::string* User::release_uid() {
   // @@protoc_insertion_point(field_release:zproto.User.uid)
   
   return uid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void User::set_allocated_uid(::std::string* uid) {
+void User::set_allocated_uid(::std::string* uid) {
   if (uid != NULL) {
     
   } else {
@@ -248,11 +264,11 @@ void User::clear_uid() {
 void User::clear_access_hash() {
   access_hash_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 User::access_hash() const {
+::google::protobuf::int64 User::access_hash() const {
   // @@protoc_insertion_point(field_get:zproto.User.access_hash)
   return access_hash_;
 }
- void User::set_access_hash(::google::protobuf::int64 value) {
+void User::set_access_hash(::google::protobuf::int64 value) {
   
   access_hash_ = value;
   // @@protoc_insertion_point(field_set:zproto.User.access_hash)
@@ -262,37 +278,37 @@ void User::clear_access_hash() {
 void User::clear_push_name() {
   push_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& User::push_name() const {
+const ::std::string& User::push_name() const {
   // @@protoc_insertion_point(field_get:zproto.User.push_name)
   return push_name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void User::set_push_name(const ::std::string& value) {
+void User::set_push_name(const ::std::string& value) {
   
   push_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:zproto.User.push_name)
 }
- void User::set_push_name(const char* value) {
+void User::set_push_name(const char* value) {
   
   push_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zproto.User.push_name)
 }
- void User::set_push_name(const char* value, size_t size) {
+void User::set_push_name(const char* value, size_t size) {
   
   push_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:zproto.User.push_name)
 }
- ::std::string* User::mutable_push_name() {
+::std::string* User::mutable_push_name() {
   
   // @@protoc_insertion_point(field_mutable:zproto.User.push_name)
   return push_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* User::release_push_name() {
+::std::string* User::release_push_name() {
   // @@protoc_insertion_point(field_release:zproto.User.push_name)
   
   return push_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void User::set_allocated_push_name(::std::string* push_name) {
+void User::set_allocated_push_name(::std::string* push_name) {
   if (push_name != NULL) {
     
   } else {
@@ -304,7 +320,7 @@ void User::clear_push_name() {
 
 // optional .zproto.Avatar push_avatar = 5;
 bool User::has_push_avatar() const {
-  return !_is_default_instance_ && push_avatar_ != NULL;
+  return this != internal_default_instance() && push_avatar_ != NULL;
 }
 void User::clear_push_avatar() {
   if (GetArenaNoVirtual() == NULL && push_avatar_ != NULL) delete push_avatar_;
@@ -312,7 +328,8 @@ void User::clear_push_avatar() {
 }
 const ::zproto::Avatar& User::push_avatar() const {
   // @@protoc_insertion_point(field_get:zproto.User.push_avatar)
-  return push_avatar_ != NULL ? *push_avatar_ : *default_instance_->push_avatar_;
+  return push_avatar_ != NULL ? *push_avatar_
+                         : *::zproto::Avatar::internal_default_instance();
 }
 ::zproto::Avatar* User::mutable_push_avatar() {
   
@@ -340,6 +357,9 @@ void User::set_allocated_push_avatar(::zproto::Avatar* push_avatar) {
   // @@protoc_insertion_point(field_set_allocated:zproto.User.push_avatar)
 }
 
+inline const User* User::internal_default_instance() {
+  return &User_default_instance_.get();
+}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // @@protoc_insertion_point(namespace_scope)

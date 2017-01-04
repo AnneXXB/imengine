@@ -19,8 +19,19 @@ set(CMAKE_VERBOSE_MAKEFILE ON)
 
 #file(GLOB_RECURSE PROTO_FILES "./*.proto")
 set(PROTO_FILES
+
+    #zproto/proto/auths.proto
+    #zproto/proto/bases.proto
+    #zproto/proto/files.proto
+    #zproto/proto/groups.proto
+    #zproto/proto/messages.proto
+    #zproto/proto/servers.proto
+    #zproto/proto/peers.proto
+    #zproto/proto/presences.proto
+
     api/proto/auth.proto
     api/proto/configs.proto
+    api/proto/dialogs.proto
     api/proto/counters.proto
     api/proto/device.proto
     api/proto/files.proto

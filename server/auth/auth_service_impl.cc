@@ -32,8 +32,8 @@ int AuthServiceImpl::StartTestingAuth(const zproto::StartTestingAuthReq& request
   
   auto user = response->mutable_user();
   user->set_uid(user_do.user_id);
-  user->set_nick(user_do.nick);
-  user->set_name(user_do.nick);
+//  user->set_nick(user_do.nick);
+//  user->set_name(user_do.nick);
   // user->mutable_avatar()->set set_avatar(user_do.avatar);
   
   return 0;
@@ -49,8 +49,8 @@ int AuthServiceImpl::StartTokenAuth(const zproto::StartTokenAuthReq& request, zp
   
   auto user = response->mutable_user();
   user->set_uid(user_do.user_id);
-  user->set_nick(user_do.nick);
-  user->set_name(user_do.nick);
+//  user->set_nick(user_do.nick);
+//  user->set_name(user_do.nick);
   // user->mutable_avatar()->set set_avatar(user_do.avatar);
 
   return 0;
