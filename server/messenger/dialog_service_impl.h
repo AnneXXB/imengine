@@ -31,11 +31,11 @@ public:
   int LoadDialogs(const zproto::LoadDialogsReq& request, zproto::LoadDialogsRsp* response) override;
   
   int BlockPeer(const zproto::BlockPeerReq& request, zproto::SeqRsp* response) override;
-  int UnBlockPeer(const zproto::UnBlockPeerReq& request, zproto::SeqRsp* response) override;
+  int UnblockPeer(const zproto::UnblockPeerReq& request, zproto::SeqRsp* response) override;
   int TopPeer(const zproto::TopPeerReq& request, zproto::SeqRsp* response) override;
-  int UnTopPeer(const zproto::UnTopPeerReq& request, zproto::SeqRsp* response) override;
+  int UntopPeer(const zproto::UntopPeerReq& request, zproto::SeqRsp* response) override;
   int DndPeer(const zproto::DndPeerReq& request, zproto::SeqRsp* response) override;
-  int UnDndPeer(const zproto::UnDndPeerReq& request, zproto::SeqRsp* response) override;
+  int UndndPeer(const zproto::UndndPeerReq& request, zproto::SeqRsp* response) override;
 
 private:
   // 发送消息

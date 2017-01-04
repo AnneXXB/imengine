@@ -84,13 +84,13 @@ int DialogServiceImpl::BlockPeer(const zproto::BlockPeerReq& request, zproto::Se
   return 0;
 }
 
-int DialogServiceImpl::UnBlockPeer(const zproto::UnBlockPeerReq& request, zproto::SeqRsp* response) {
+int DialogServiceImpl::UnblockPeer(const zproto::UnblockPeerReq& request, zproto::SeqRsp* response) {
   UserDialogDAO::GetInstance().UpdateBlock(uid(),
                                            request.peer().id(),
                                            request.peer().type(),
                                            false);
   
-  zproto::PeerUnBlockedNotify notify;
+  zproto::PeerUnblockedNotify notify;
   notify.mutable_peer()->set_id(request.peer().id());
   notify.mutable_peer()->set_type(request.peer().type());
   auto seq = SequenceModel::GetInstance().DeliveryUpdateDataNotMe(conn_id(), uid(), notify);
@@ -118,13 +118,13 @@ int DialogServiceImpl::TopPeer(const zproto::TopPeerReq& request, zproto::SeqRsp
   return 0;
 }
 
-int DialogServiceImpl::UnTopPeer(const zproto::UnTopPeerReq& request, zproto::SeqRsp* response) {
+int DialogServiceImpl::UntopPeer(const zproto::UntopPeerReq& request, zproto::SeqRsp* response) {
   UserDialogDAO::GetInstance().UpdateTop(uid(),
                                            request.peer().id(),
                                            request.peer().type(),
                                            false);
   
-  zproto::PeerUnTopedNotify notify;
+  zproto::PeerUntopedNotify notify;
   notify.mutable_peer()->set_id(request.peer().id());
   notify.mutable_peer()->set_type(request.peer().type());
   auto seq = SequenceModel::GetInstance().DeliveryUpdateDataNotMe(conn_id(), uid(), notify);
@@ -152,13 +152,13 @@ int DialogServiceImpl::DndPeer(const zproto::DndPeerReq& request, zproto::SeqRsp
   return 0;
 }
 
-int DialogServiceImpl::UnDndPeer(const zproto::UnDndPeerReq& request, zproto::SeqRsp* response) {
+int DialogServiceImpl::UndndPeer(const zproto::UndndPeerReq& request, zproto::SeqRsp* response) {
   UserDialogDAO::GetInstance().UpdateDnd(uid(),
                                            request.peer().id(),
                                            request.peer().type(),
                                            false);
   
-  zproto::PeerUnDndedNotify notify;
+  zproto::PeerUndndedNotify notify;
   notify.mutable_peer()->set_id(request.peer().id());
   notify.mutable_peer()->set_type(request.peer().type());
   auto seq = SequenceModel::GetInstance().DeliveryUpdateDataNotMe(conn_id(), uid(), notify);

@@ -33,6 +33,13 @@
 #include "biz_model/message_model.h"
 
 int GroupsServiceImpl::LoadFullGroups(const zproto::LoadFullGroupsReq& request, zproto::LoadFullGroupsRsp* response) {
+  for (int i=0; i<request.groups_size(); ++i) {
+  }
+  
+  // repeated GroupOutPeer groups = 1; // Groups to load
+  // virtual int LoadHistoryMessageList(std::list<uint64_t>& message_id_list,
+  //                                    HistoryMessageDOList& message_list) = 0;
+
   return -1;
 }
 

@@ -35,11 +35,11 @@ ZRpcMessengerDispatcher::ZRpcMessengerDispatcher() {
   ZRpcUtil::Register("zproto.CreateChatDialogReq", CreateChatDialog);
   ZRpcUtil::Register("zproto.LoadDialogsReq", LoadDialogs);
   ZRpcUtil::Register("zproto.BlockPeerReq", BlockPeer);
-  ZRpcUtil::Register("zproto.UnBlockPeerReq", UnBlockPeer);
+  ZRpcUtil::Register("zproto.UnblockPeerReq", UnblockPeer);
   ZRpcUtil::Register("zproto.TopPeerReq", TopPeer);
-  ZRpcUtil::Register("zproto.UnTopPeerReq", UnTopPeer);
+  ZRpcUtil::Register("zproto.UntopPeerReq", UntopPeer);
   ZRpcUtil::Register("zproto.DndPeerReq", DndPeer);
-  ZRpcUtil::Register("zproto.UnDndPeerReq", UnDndPeer);
+  ZRpcUtil::Register("zproto.UndndPeerReq", UndndPeer);
   
   // message
   ZRpcUtil::Register("zproto.SendMessageReq", SendMessage);
@@ -119,8 +119,8 @@ ProtoRpcResponsePtr ZRpcMessengerDispatcher::BlockPeer(RpcRequestPtr request) {
   return MakeRpcOK(seq_rsp);
 }
 
-ProtoRpcResponsePtr ZRpcMessengerDispatcher::UnBlockPeer(RpcRequestPtr request) {
-  CAST_RPC_REQUEST(UnBlockPeerReq, unblock_peer_req);
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::UnblockPeer(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(UnblockPeerReq, unblock_peer_req);
   LOG(INFO) << "UnBlockPeer - unblock_peer_req: " << unblock_peer_req.Utf8DebugString();
   
   // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
@@ -128,7 +128,7 @@ ProtoRpcResponsePtr ZRpcMessengerDispatcher::UnBlockPeer(RpcRequestPtr request) 
   
   DialogServiceImpl service_impl;
   service_impl.Initialize(request);
-  service_impl.UnBlockPeer(unblock_peer_req, &seq_rsp);
+  service_impl.UnblockPeer(unblock_peer_req, &seq_rsp);
   
   return MakeRpcOK(seq_rsp);
 }
@@ -147,8 +147,8 @@ ProtoRpcResponsePtr ZRpcMessengerDispatcher::TopPeer(RpcRequestPtr request) {
   return MakeRpcOK(seq_rsp);
 }
 
-ProtoRpcResponsePtr ZRpcMessengerDispatcher::UnTopPeer(RpcRequestPtr request) {
-  CAST_RPC_REQUEST(UnTopPeerReq, untop_peer_req);
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::UntopPeer(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(UntopPeerReq, untop_peer_req);
   LOG(INFO) << "UnTopPeer - untop_peer_req: " << untop_peer_req.Utf8DebugString();
   
   // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
@@ -156,7 +156,7 @@ ProtoRpcResponsePtr ZRpcMessengerDispatcher::UnTopPeer(RpcRequestPtr request) {
   
   DialogServiceImpl service_impl;
   service_impl.Initialize(request);
-  service_impl.UnTopPeer(untop_peer_req, &seq_rsp);
+  service_impl.UntopPeer(untop_peer_req, &seq_rsp);
   
   return MakeRpcOK(seq_rsp);
 }
@@ -175,8 +175,8 @@ ProtoRpcResponsePtr ZRpcMessengerDispatcher::DndPeer(RpcRequestPtr request) {
   return MakeRpcOK(seq_rsp);
 }
 
-ProtoRpcResponsePtr ZRpcMessengerDispatcher::UnDndPeer(RpcRequestPtr request) {
-  CAST_RPC_REQUEST(UnDndPeerReq, undnd_peer_req);
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::UndndPeer(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(UndndPeerReq, undnd_peer_req);
   LOG(INFO) << "UnDndPeer - load_dialogs_req: " << undnd_peer_req.Utf8DebugString();
   
   // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
@@ -184,7 +184,7 @@ ProtoRpcResponsePtr ZRpcMessengerDispatcher::UnDndPeer(RpcRequestPtr request) {
   
   DialogServiceImpl service_impl;
   service_impl.Initialize(request);
-  service_impl.UnDndPeer(undnd_peer_req, &seq_rsp);
+  service_impl.UndndPeer(undnd_peer_req, &seq_rsp);
   
   return MakeRpcOK(seq_rsp);
 }

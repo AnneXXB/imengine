@@ -154,8 +154,8 @@ int DoBlockPeer(const std::vector<folly::StringPiece>& command_lines) {
   return 0;
 }
 
-int DoUnBlockPeer(const std::vector<folly::StringPiece>& command_lines) {
-  zproto::UnBlockPeerReq unblock_peer_req;
+int DoUnblockPeer(const std::vector<folly::StringPiece>& command_lines) {
+  zproto::UnblockPeerReq unblock_peer_req;
   unblock_peer_req.mutable_peer()->set_id(folly::to<std::string>(command_lines[1]));
   unblock_peer_req.mutable_peer()->set_type(folly::to<zproto::PeerType>(command_lines[2]));
   
@@ -192,8 +192,8 @@ int DoTopPeer(const std::vector<folly::StringPiece>& command_lines) {
   return 0;
 }
 
-int DoUnTopPeer(const std::vector<folly::StringPiece>& command_lines) {
-  zproto::UnTopPeerReq untop_peer_req;
+int DoUntopPeer(const std::vector<folly::StringPiece>& command_lines) {
+  zproto::UntopPeerReq untop_peer_req;
   untop_peer_req.mutable_peer()->set_id(folly::to<std::string>(command_lines[1]));
   untop_peer_req.mutable_peer()->set_type(folly::to<zproto::PeerType>(command_lines[2]));
   
@@ -230,8 +230,8 @@ int DoDndPeer(const std::vector<folly::StringPiece>& command_lines) {
   return 0;
 }
 
-int DoUnDndPeer(const std::vector<folly::StringPiece>& command_lines) {
-  zproto::UnDndPeerReq undnd_peer_req;
+int DoUndndPeer(const std::vector<folly::StringPiece>& command_lines) {
+  zproto::UndndPeerReq undnd_peer_req;
   undnd_peer_req.mutable_peer()->set_id(folly::to<std::string>(command_lines[1]));
   undnd_peer_req.mutable_peer()->set_type(folly::to<zproto::PeerType>(command_lines[2]));
   
@@ -360,11 +360,11 @@ CmdEntry g_cmds[] = {
   {"create_chat_dialog", "create_chat_dialog user_id", 2, 2, DoCreateChatDialog},
   {"load_dialogs", "load_dialogs", 1, 1, DoLoadDialogs},
   {"block_peer", "block_peer peer_id peer_type", 3, 3, DoBlockPeer},
-  {"unblock_peer", "unblock_peer peer_id peer_type", 3, 3, DoUnBlockPeer},
+  {"unblock_peer", "unblock_peer peer_id peer_type", 3, 3, DoUnblockPeer},
   {"top_peer", "top_peer peer_id peer_type", 3, 3, DoTopPeer},
-  {"untop_peer", "unblock_peer peer_id peer_type", 3, 3, DoUnTopPeer},
+  {"untop_peer", "unblock_peer peer_id peer_type", 3, 3, DoUntopPeer},
   {"dnd_peer", "dnd_peer peer_id peer_type", 3, 3, DoDndPeer},
-  {"undnd_peer", "undnd_peer peer_id peer_type", 3, 3, DoUnDndPeer},
+  {"undnd_peer", "undnd_peer peer_id peer_type", 3, 3, DoUndndPeer},
   {"send_message", "send_message user_id content", 3, 3, DoSendMessage},
   {"send_group_message", "send_group_message group_id content", 3, 3, DoSendGroupMessage},
   {"create_group", "create_group group_title uid1...", 3, 0, DoCreateGroup},

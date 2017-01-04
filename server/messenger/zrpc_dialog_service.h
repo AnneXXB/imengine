@@ -34,11 +34,11 @@ public:
   virtual int LoadDialogs(const zproto::LoadDialogsReq& request, zproto::LoadDialogsRsp* response);
 
   virtual int BlockPeer(const zproto::BlockPeerReq& request, zproto::SeqRsp* response);
-  virtual int UnBlockPeer(const zproto::UnBlockPeerReq& request, zproto::SeqRsp* response);
+  virtual int UnblockPeer(const zproto::UnblockPeerReq& request, zproto::SeqRsp* response);
   virtual int TopPeer(const zproto::TopPeerReq& request, zproto::SeqRsp* response);
-  virtual int UnTopPeer(const zproto::UnTopPeerReq& request, zproto::SeqRsp* response);
+  virtual int UntopPeer(const zproto::UntopPeerReq& request, zproto::SeqRsp* response);
   virtual int DndPeer(const zproto::DndPeerReq& request, zproto::SeqRsp* response);
-  virtual int UnDndPeer(const zproto::UnDndPeerReq& request, zproto::SeqRsp* response);
+  virtual int UndndPeer(const zproto::UndndPeerReq& request, zproto::SeqRsp* response);
 };
 
 #endif
