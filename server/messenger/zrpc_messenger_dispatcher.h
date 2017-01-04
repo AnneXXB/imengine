@@ -32,11 +32,11 @@ public:
   static ProtoRpcResponsePtr CreateChatDialog(RpcRequestPtr request);
   static ProtoRpcResponsePtr LoadDialogs(RpcRequestPtr request);
   static ProtoRpcResponsePtr BlockPeer(RpcRequestPtr request);
-  static ProtoRpcResponsePtr UnBlockPeer(RpcRequestPtr request);
+  static ProtoRpcResponsePtr UnblockPeer(RpcRequestPtr request);
   static ProtoRpcResponsePtr TopPeer(RpcRequestPtr request);
-  static ProtoRpcResponsePtr UnTopPeer(RpcRequestPtr request);
+  static ProtoRpcResponsePtr UntopPeer(RpcRequestPtr request);
   static ProtoRpcResponsePtr DndPeer(RpcRequestPtr request);
-  static ProtoRpcResponsePtr UnDndPeer(RpcRequestPtr request);
+  static ProtoRpcResponsePtr UndndPeer(RpcRequestPtr request);
   
   // message
   static ProtoRpcResponsePtr SendMessage(RpcRequestPtr request);

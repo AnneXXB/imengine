@@ -36,7 +36,7 @@ int ZRpcDialogService::BlockPeer(const zproto::BlockPeerReq& request, zproto::Se
   return -1;
 }
 
-int ZRpcDialogService::UnBlockPeer(const zproto::UnBlockPeerReq& request, zproto::SeqRsp* response) {
+int ZRpcDialogService::UnblockPeer(const zproto::UnblockPeerReq& request, zproto::SeqRsp* response) {
   LOG(ERROR) << "ZRpcDialogService - UnBlockPeer unimplemented";
   return -1;
 }
@@ -46,7 +46,7 @@ int ZRpcDialogService::TopPeer(const zproto::TopPeerReq& request, zproto::SeqRsp
   return -1;
 }
 
-int ZRpcDialogService::UnTopPeer(const zproto::UnTopPeerReq& request, zproto::SeqRsp* response) {
+int ZRpcDialogService::UntopPeer(const zproto::UntopPeerReq& request, zproto::SeqRsp* response) {
   LOG(ERROR) << "ZRpcDialogService - UnTopPeer unimplemented";
   return -1;
 }
@@ -56,7 +56,7 @@ int ZRpcDialogService::DndPeer(const zproto::DndPeerReq& request, zproto::SeqRsp
   return -1;
 }
 
-int ZRpcDialogService::UnDndPeer(const zproto::UnDndPeerReq& request, zproto::SeqRsp* response) {
+int ZRpcDialogService::UndndPeer(const zproto::UndndPeerReq& request, zproto::SeqRsp* response) {
   LOG(ERROR) << "ZRpcDialogService - UnDndPeer unimplemented";
   return -1;
 }

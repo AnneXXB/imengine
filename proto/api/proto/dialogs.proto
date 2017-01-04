@@ -68,31 +68,6 @@ message CreateChatDialogRsp {
 
 // SeqRsp
 
-// Update about Peer Blocked
-message PeerBlockedNotify {
-  Peer peer = 1;  //
-}
-
-message PeerUnBlockedNotify {
-  Peer peer = 1;
-}
-
-message PeerTopedNotify {
-  Peer peer = 1;  //
-}
-
-message PeerUnTopedNotify {
-  Peer peer = 1;
-}
-
-message PeerDndedNotify {
-  Peer peer = 1;  //
-}
-
-message PeerUnDndedNotify {
-  Peer peer = 1;
-}
-
 // 阻止会话
 // BlockPeerReq --> SeqRsp
 message BlockPeerReq {
@@ -103,7 +78,7 @@ message BlockPeerReq {
 
 // 取消阻止
 // UnBlockPeerReq --> SeqRsp
-message UnBlockPeerReq {
+message UnblockPeerReq {
   OutPeer peer = 1;
 }
 
@@ -119,7 +94,7 @@ message TopPeerReq {
 
 // 取消置顶
 // UnTopPeerReq --> SeqRsp
-message UnTopPeerReq {
+message UntopPeerReq {
   OutPeer peer = 1;
 }
 
@@ -135,8 +110,67 @@ message DndPeerReq {
 
 // 取消免打扰
 // UnDndPeerReq --> SeqRsp
-message UnDndPeerReq {
+message UndndPeerReq {
   OutPeer peer = 1;
 }
 
 // SeqRsp
+
+// Load Blocked Peers
+// LoadBlockedPeersReq --> LoadBlockedPeersRsp
+message LoadBlockedPeersReq {
+  // int32 COMMAND_ID = 2638;
+}
+
+message LoadBlockedPeersRsp {
+  // int32 COMMAND_ID = 2639;
+  repeated OutPeer peers = 1; //   Blocked peers
+}
+
+// Load Toped Peers
+// LoadTopedPeersReq --> LoadTopedPeersRsp
+message LoadTopedPeersReq {
+  // int32 COMMAND_ID = 2640;
+}
+
+message LoadTopedPeersRsp {
+  // int32 COMMAND_ID = 2641;
+  repeated OutPeer peers = 1; //   Toped peers
+}
+
+// Load Dnded Peers
+// LoadDndedPeersReq --> LoadDndedPeersRsp
+message LoadDndedPeersReq {
+  // int32 COMMAND_ID = 2640;
+}
+
+message LoadDndedPeersRsp {
+  // int32 COMMAND_ID = 2641;
+  repeated OutPeer peers = 1; //   Dnded peers
+}
+
+// Update about Peer Blocked
+message PeerBlockedNotify {
+  Peer peer = 1;  //
+}
+
+message PeerUnblockedNotify {
+  Peer peer = 1;
+}
+
+message PeerTopedNotify {
+  Peer peer = 1;  //
+}
+
+message PeerUntopedNotify {
+  Peer peer = 1;
+}
+
+message PeerDndedNotify {
+  Peer peer = 1;  //
+}
+
+message PeerUndndedNotify {
+  Peer peer = 1;
+}
+

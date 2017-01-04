@@ -36,42 +36,60 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* CreateChatDialogRsp_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   CreateChatDialogRsp_reflection_ = NULL;
-const ::google::protobuf::Descriptor* PeerBlockedNotify_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  PeerBlockedNotify_reflection_ = NULL;
-const ::google::protobuf::Descriptor* PeerUnBlockedNotify_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  PeerUnBlockedNotify_reflection_ = NULL;
-const ::google::protobuf::Descriptor* PeerTopedNotify_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  PeerTopedNotify_reflection_ = NULL;
-const ::google::protobuf::Descriptor* PeerUnTopedNotify_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  PeerUnTopedNotify_reflection_ = NULL;
-const ::google::protobuf::Descriptor* PeerDndedNotify_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  PeerDndedNotify_reflection_ = NULL;
-const ::google::protobuf::Descriptor* PeerUnDndedNotify_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  PeerUnDndedNotify_reflection_ = NULL;
 const ::google::protobuf::Descriptor* BlockPeerReq_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   BlockPeerReq_reflection_ = NULL;
-const ::google::protobuf::Descriptor* UnBlockPeerReq_descriptor_ = NULL;
+const ::google::protobuf::Descriptor* UnblockPeerReq_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
-  UnBlockPeerReq_reflection_ = NULL;
+  UnblockPeerReq_reflection_ = NULL;
 const ::google::protobuf::Descriptor* TopPeerReq_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   TopPeerReq_reflection_ = NULL;
-const ::google::protobuf::Descriptor* UnTopPeerReq_descriptor_ = NULL;
+const ::google::protobuf::Descriptor* UntopPeerReq_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
-  UnTopPeerReq_reflection_ = NULL;
+  UntopPeerReq_reflection_ = NULL;
 const ::google::protobuf::Descriptor* DndPeerReq_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   DndPeerReq_reflection_ = NULL;
-const ::google::protobuf::Descriptor* UnDndPeerReq_descriptor_ = NULL;
+const ::google::protobuf::Descriptor* UndndPeerReq_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
-  UnDndPeerReq_reflection_ = NULL;
+  UndndPeerReq_reflection_ = NULL;
+const ::google::protobuf::Descriptor* LoadBlockedPeersReq_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  LoadBlockedPeersReq_reflection_ = NULL;
+const ::google::protobuf::Descriptor* LoadBlockedPeersRsp_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  LoadBlockedPeersRsp_reflection_ = NULL;
+const ::google::protobuf::Descriptor* LoadTopedPeersReq_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  LoadTopedPeersReq_reflection_ = NULL;
+const ::google::protobuf::Descriptor* LoadTopedPeersRsp_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  LoadTopedPeersRsp_reflection_ = NULL;
+const ::google::protobuf::Descriptor* LoadDndedPeersReq_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  LoadDndedPeersReq_reflection_ = NULL;
+const ::google::protobuf::Descriptor* LoadDndedPeersRsp_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  LoadDndedPeersRsp_reflection_ = NULL;
+const ::google::protobuf::Descriptor* PeerBlockedNotify_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  PeerBlockedNotify_reflection_ = NULL;
+const ::google::protobuf::Descriptor* PeerUnblockedNotify_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  PeerUnblockedNotify_reflection_ = NULL;
+const ::google::protobuf::Descriptor* PeerTopedNotify_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  PeerTopedNotify_reflection_ = NULL;
+const ::google::protobuf::Descriptor* PeerUntopedNotify_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  PeerUntopedNotify_reflection_ = NULL;
+const ::google::protobuf::Descriptor* PeerDndedNotify_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  PeerDndedNotify_reflection_ = NULL;
+const ::google::protobuf::Descriptor* PeerUndndedNotify_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  PeerUndndedNotify_reflection_ = NULL;
 
 }  // namespace
 
@@ -163,91 +181,7 @@ void protobuf_AssignDesc_dialogs_2eproto() {
       -1,
       sizeof(CreateChatDialogRsp),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CreateChatDialogRsp, _internal_metadata_));
-  PeerBlockedNotify_descriptor_ = file->message_type(5);
-  static const int PeerBlockedNotify_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerBlockedNotify, peer_),
-  };
-  PeerBlockedNotify_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      PeerBlockedNotify_descriptor_,
-      PeerBlockedNotify::internal_default_instance(),
-      PeerBlockedNotify_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(PeerBlockedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerBlockedNotify, _internal_metadata_));
-  PeerUnBlockedNotify_descriptor_ = file->message_type(6);
-  static const int PeerUnBlockedNotify_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerUnBlockedNotify, peer_),
-  };
-  PeerUnBlockedNotify_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      PeerUnBlockedNotify_descriptor_,
-      PeerUnBlockedNotify::internal_default_instance(),
-      PeerUnBlockedNotify_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(PeerUnBlockedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerUnBlockedNotify, _internal_metadata_));
-  PeerTopedNotify_descriptor_ = file->message_type(7);
-  static const int PeerTopedNotify_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerTopedNotify, peer_),
-  };
-  PeerTopedNotify_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      PeerTopedNotify_descriptor_,
-      PeerTopedNotify::internal_default_instance(),
-      PeerTopedNotify_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(PeerTopedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerTopedNotify, _internal_metadata_));
-  PeerUnTopedNotify_descriptor_ = file->message_type(8);
-  static const int PeerUnTopedNotify_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerUnTopedNotify, peer_),
-  };
-  PeerUnTopedNotify_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      PeerUnTopedNotify_descriptor_,
-      PeerUnTopedNotify::internal_default_instance(),
-      PeerUnTopedNotify_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(PeerUnTopedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerUnTopedNotify, _internal_metadata_));
-  PeerDndedNotify_descriptor_ = file->message_type(9);
-  static const int PeerDndedNotify_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerDndedNotify, peer_),
-  };
-  PeerDndedNotify_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      PeerDndedNotify_descriptor_,
-      PeerDndedNotify::internal_default_instance(),
-      PeerDndedNotify_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(PeerDndedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerDndedNotify, _internal_metadata_));
-  PeerUnDndedNotify_descriptor_ = file->message_type(10);
-  static const int PeerUnDndedNotify_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerUnDndedNotify, peer_),
-  };
-  PeerUnDndedNotify_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      PeerUnDndedNotify_descriptor_,
-      PeerUnDndedNotify::internal_default_instance(),
-      PeerUnDndedNotify_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(PeerUnDndedNotify),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerUnDndedNotify, _internal_metadata_));
-  BlockPeerReq_descriptor_ = file->message_type(11);
+  BlockPeerReq_descriptor_ = file->message_type(5);
   static const int BlockPeerReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BlockPeerReq, peer_),
   };
@@ -261,21 +195,21 @@ void protobuf_AssignDesc_dialogs_2eproto() {
       -1,
       sizeof(BlockPeerReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BlockPeerReq, _internal_metadata_));
-  UnBlockPeerReq_descriptor_ = file->message_type(12);
-  static const int UnBlockPeerReq_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UnBlockPeerReq, peer_),
+  UnblockPeerReq_descriptor_ = file->message_type(6);
+  static const int UnblockPeerReq_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UnblockPeerReq, peer_),
   };
-  UnBlockPeerReq_reflection_ =
+  UnblockPeerReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      UnBlockPeerReq_descriptor_,
-      UnBlockPeerReq::internal_default_instance(),
-      UnBlockPeerReq_offsets_,
+      UnblockPeerReq_descriptor_,
+      UnblockPeerReq::internal_default_instance(),
+      UnblockPeerReq_offsets_,
       -1,
       -1,
       -1,
-      sizeof(UnBlockPeerReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UnBlockPeerReq, _internal_metadata_));
-  TopPeerReq_descriptor_ = file->message_type(13);
+      sizeof(UnblockPeerReq),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UnblockPeerReq, _internal_metadata_));
+  TopPeerReq_descriptor_ = file->message_type(7);
   static const int TopPeerReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TopPeerReq, peer_),
   };
@@ -289,21 +223,21 @@ void protobuf_AssignDesc_dialogs_2eproto() {
       -1,
       sizeof(TopPeerReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TopPeerReq, _internal_metadata_));
-  UnTopPeerReq_descriptor_ = file->message_type(14);
-  static const int UnTopPeerReq_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UnTopPeerReq, peer_),
+  UntopPeerReq_descriptor_ = file->message_type(8);
+  static const int UntopPeerReq_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UntopPeerReq, peer_),
   };
-  UnTopPeerReq_reflection_ =
+  UntopPeerReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      UnTopPeerReq_descriptor_,
-      UnTopPeerReq::internal_default_instance(),
-      UnTopPeerReq_offsets_,
+      UntopPeerReq_descriptor_,
+      UntopPeerReq::internal_default_instance(),
+      UntopPeerReq_offsets_,
       -1,
       -1,
       -1,
-      sizeof(UnTopPeerReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UnTopPeerReq, _internal_metadata_));
-  DndPeerReq_descriptor_ = file->message_type(15);
+      sizeof(UntopPeerReq),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UntopPeerReq, _internal_metadata_));
+  DndPeerReq_descriptor_ = file->message_type(9);
   static const int DndPeerReq_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DndPeerReq, peer_),
   };
@@ -317,20 +251,185 @@ void protobuf_AssignDesc_dialogs_2eproto() {
       -1,
       sizeof(DndPeerReq),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DndPeerReq, _internal_metadata_));
-  UnDndPeerReq_descriptor_ = file->message_type(16);
-  static const int UnDndPeerReq_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UnDndPeerReq, peer_),
+  UndndPeerReq_descriptor_ = file->message_type(10);
+  static const int UndndPeerReq_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UndndPeerReq, peer_),
   };
-  UnDndPeerReq_reflection_ =
+  UndndPeerReq_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      UnDndPeerReq_descriptor_,
-      UnDndPeerReq::internal_default_instance(),
-      UnDndPeerReq_offsets_,
+      UndndPeerReq_descriptor_,
+      UndndPeerReq::internal_default_instance(),
+      UndndPeerReq_offsets_,
       -1,
       -1,
       -1,
-      sizeof(UnDndPeerReq),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UnDndPeerReq, _internal_metadata_));
+      sizeof(UndndPeerReq),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UndndPeerReq, _internal_metadata_));
+  LoadBlockedPeersReq_descriptor_ = file->message_type(11);
+  static const int LoadBlockedPeersReq_offsets_[1] = {
+  };
+  LoadBlockedPeersReq_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      LoadBlockedPeersReq_descriptor_,
+      LoadBlockedPeersReq::internal_default_instance(),
+      LoadBlockedPeersReq_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(LoadBlockedPeersReq),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadBlockedPeersReq, _internal_metadata_));
+  LoadBlockedPeersRsp_descriptor_ = file->message_type(12);
+  static const int LoadBlockedPeersRsp_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadBlockedPeersRsp, peers_),
+  };
+  LoadBlockedPeersRsp_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      LoadBlockedPeersRsp_descriptor_,
+      LoadBlockedPeersRsp::internal_default_instance(),
+      LoadBlockedPeersRsp_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(LoadBlockedPeersRsp),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadBlockedPeersRsp, _internal_metadata_));
+  LoadTopedPeersReq_descriptor_ = file->message_type(13);
+  static const int LoadTopedPeersReq_offsets_[1] = {
+  };
+  LoadTopedPeersReq_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      LoadTopedPeersReq_descriptor_,
+      LoadTopedPeersReq::internal_default_instance(),
+      LoadTopedPeersReq_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(LoadTopedPeersReq),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadTopedPeersReq, _internal_metadata_));
+  LoadTopedPeersRsp_descriptor_ = file->message_type(14);
+  static const int LoadTopedPeersRsp_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadTopedPeersRsp, peers_),
+  };
+  LoadTopedPeersRsp_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      LoadTopedPeersRsp_descriptor_,
+      LoadTopedPeersRsp::internal_default_instance(),
+      LoadTopedPeersRsp_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(LoadTopedPeersRsp),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadTopedPeersRsp, _internal_metadata_));
+  LoadDndedPeersReq_descriptor_ = file->message_type(15);
+  static const int LoadDndedPeersReq_offsets_[1] = {
+  };
+  LoadDndedPeersReq_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      LoadDndedPeersReq_descriptor_,
+      LoadDndedPeersReq::internal_default_instance(),
+      LoadDndedPeersReq_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(LoadDndedPeersReq),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadDndedPeersReq, _internal_metadata_));
+  LoadDndedPeersRsp_descriptor_ = file->message_type(16);
+  static const int LoadDndedPeersRsp_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadDndedPeersRsp, peers_),
+  };
+  LoadDndedPeersRsp_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      LoadDndedPeersRsp_descriptor_,
+      LoadDndedPeersRsp::internal_default_instance(),
+      LoadDndedPeersRsp_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(LoadDndedPeersRsp),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LoadDndedPeersRsp, _internal_metadata_));
+  PeerBlockedNotify_descriptor_ = file->message_type(17);
+  static const int PeerBlockedNotify_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerBlockedNotify, peer_),
+  };
+  PeerBlockedNotify_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      PeerBlockedNotify_descriptor_,
+      PeerBlockedNotify::internal_default_instance(),
+      PeerBlockedNotify_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(PeerBlockedNotify),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerBlockedNotify, _internal_metadata_));
+  PeerUnblockedNotify_descriptor_ = file->message_type(18);
+  static const int PeerUnblockedNotify_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerUnblockedNotify, peer_),
+  };
+  PeerUnblockedNotify_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      PeerUnblockedNotify_descriptor_,
+      PeerUnblockedNotify::internal_default_instance(),
+      PeerUnblockedNotify_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(PeerUnblockedNotify),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerUnblockedNotify, _internal_metadata_));
+  PeerTopedNotify_descriptor_ = file->message_type(19);
+  static const int PeerTopedNotify_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerTopedNotify, peer_),
+  };
+  PeerTopedNotify_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      PeerTopedNotify_descriptor_,
+      PeerTopedNotify::internal_default_instance(),
+      PeerTopedNotify_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(PeerTopedNotify),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerTopedNotify, _internal_metadata_));
+  PeerUntopedNotify_descriptor_ = file->message_type(20);
+  static const int PeerUntopedNotify_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerUntopedNotify, peer_),
+  };
+  PeerUntopedNotify_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      PeerUntopedNotify_descriptor_,
+      PeerUntopedNotify::internal_default_instance(),
+      PeerUntopedNotify_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(PeerUntopedNotify),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerUntopedNotify, _internal_metadata_));
+  PeerDndedNotify_descriptor_ = file->message_type(21);
+  static const int PeerDndedNotify_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerDndedNotify, peer_),
+  };
+  PeerDndedNotify_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      PeerDndedNotify_descriptor_,
+      PeerDndedNotify::internal_default_instance(),
+      PeerDndedNotify_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(PeerDndedNotify),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerDndedNotify, _internal_metadata_));
+  PeerUndndedNotify_descriptor_ = file->message_type(22);
+  static const int PeerUndndedNotify_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerUndndedNotify, peer_),
+  };
+  PeerUndndedNotify_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      PeerUndndedNotify_descriptor_,
+      PeerUndndedNotify::internal_default_instance(),
+      PeerUndndedNotify_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(PeerUndndedNotify),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PeerUndndedNotify, _internal_metadata_));
 }
 
 namespace {
@@ -355,29 +454,41 @@ void protobuf_RegisterTypes(const ::std::string&) {
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       CreateChatDialogRsp_descriptor_, CreateChatDialogRsp::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      PeerBlockedNotify_descriptor_, PeerBlockedNotify::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      PeerUnBlockedNotify_descriptor_, PeerUnBlockedNotify::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      PeerTopedNotify_descriptor_, PeerTopedNotify::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      PeerUnTopedNotify_descriptor_, PeerUnTopedNotify::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      PeerDndedNotify_descriptor_, PeerDndedNotify::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      PeerUnDndedNotify_descriptor_, PeerUnDndedNotify::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       BlockPeerReq_descriptor_, BlockPeerReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      UnBlockPeerReq_descriptor_, UnBlockPeerReq::internal_default_instance());
+      UnblockPeerReq_descriptor_, UnblockPeerReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       TopPeerReq_descriptor_, TopPeerReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      UnTopPeerReq_descriptor_, UnTopPeerReq::internal_default_instance());
+      UntopPeerReq_descriptor_, UntopPeerReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       DndPeerReq_descriptor_, DndPeerReq::internal_default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      UnDndPeerReq_descriptor_, UnDndPeerReq::internal_default_instance());
+      UndndPeerReq_descriptor_, UndndPeerReq::internal_default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      LoadBlockedPeersReq_descriptor_, LoadBlockedPeersReq::internal_default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      LoadBlockedPeersRsp_descriptor_, LoadBlockedPeersRsp::internal_default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      LoadTopedPeersReq_descriptor_, LoadTopedPeersReq::internal_default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      LoadTopedPeersRsp_descriptor_, LoadTopedPeersRsp::internal_default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      LoadDndedPeersReq_descriptor_, LoadDndedPeersReq::internal_default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      LoadDndedPeersRsp_descriptor_, LoadDndedPeersRsp::internal_default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      PeerBlockedNotify_descriptor_, PeerBlockedNotify::internal_default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      PeerUnblockedNotify_descriptor_, PeerUnblockedNotify::internal_default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      PeerTopedNotify_descriptor_, PeerTopedNotify::internal_default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      PeerUntopedNotify_descriptor_, PeerUntopedNotify::internal_default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      PeerDndedNotify_descriptor_, PeerDndedNotify::internal_default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      PeerUndndedNotify_descriptor_, PeerUndndedNotify::internal_default_instance());
 }
 
 }  // namespace
@@ -393,30 +504,42 @@ void protobuf_ShutdownFile_dialogs_2eproto() {
   delete CreateChatDialogReq_reflection_;
   CreateChatDialogRsp_default_instance_.Shutdown();
   delete CreateChatDialogRsp_reflection_;
-  PeerBlockedNotify_default_instance_.Shutdown();
-  delete PeerBlockedNotify_reflection_;
-  PeerUnBlockedNotify_default_instance_.Shutdown();
-  delete PeerUnBlockedNotify_reflection_;
-  PeerTopedNotify_default_instance_.Shutdown();
-  delete PeerTopedNotify_reflection_;
-  PeerUnTopedNotify_default_instance_.Shutdown();
-  delete PeerUnTopedNotify_reflection_;
-  PeerDndedNotify_default_instance_.Shutdown();
-  delete PeerDndedNotify_reflection_;
-  PeerUnDndedNotify_default_instance_.Shutdown();
-  delete PeerUnDndedNotify_reflection_;
   BlockPeerReq_default_instance_.Shutdown();
   delete BlockPeerReq_reflection_;
-  UnBlockPeerReq_default_instance_.Shutdown();
-  delete UnBlockPeerReq_reflection_;
+  UnblockPeerReq_default_instance_.Shutdown();
+  delete UnblockPeerReq_reflection_;
   TopPeerReq_default_instance_.Shutdown();
   delete TopPeerReq_reflection_;
-  UnTopPeerReq_default_instance_.Shutdown();
-  delete UnTopPeerReq_reflection_;
+  UntopPeerReq_default_instance_.Shutdown();
+  delete UntopPeerReq_reflection_;
   DndPeerReq_default_instance_.Shutdown();
   delete DndPeerReq_reflection_;
-  UnDndPeerReq_default_instance_.Shutdown();
-  delete UnDndPeerReq_reflection_;
+  UndndPeerReq_default_instance_.Shutdown();
+  delete UndndPeerReq_reflection_;
+  LoadBlockedPeersReq_default_instance_.Shutdown();
+  delete LoadBlockedPeersReq_reflection_;
+  LoadBlockedPeersRsp_default_instance_.Shutdown();
+  delete LoadBlockedPeersRsp_reflection_;
+  LoadTopedPeersReq_default_instance_.Shutdown();
+  delete LoadTopedPeersReq_reflection_;
+  LoadTopedPeersRsp_default_instance_.Shutdown();
+  delete LoadTopedPeersRsp_reflection_;
+  LoadDndedPeersReq_default_instance_.Shutdown();
+  delete LoadDndedPeersReq_reflection_;
+  LoadDndedPeersRsp_default_instance_.Shutdown();
+  delete LoadDndedPeersRsp_reflection_;
+  PeerBlockedNotify_default_instance_.Shutdown();
+  delete PeerBlockedNotify_reflection_;
+  PeerUnblockedNotify_default_instance_.Shutdown();
+  delete PeerUnblockedNotify_reflection_;
+  PeerTopedNotify_default_instance_.Shutdown();
+  delete PeerTopedNotify_reflection_;
+  PeerUntopedNotify_default_instance_.Shutdown();
+  delete PeerUntopedNotify_reflection_;
+  PeerDndedNotify_default_instance_.Shutdown();
+  delete PeerDndedNotify_reflection_;
+  PeerUndndedNotify_default_instance_.Shutdown();
+  delete PeerUndndedNotify_reflection_;
 }
 
 void protobuf_InitDefaults_dialogs_2eproto_impl() {
@@ -432,35 +555,47 @@ void protobuf_InitDefaults_dialogs_2eproto_impl() {
   ::google::protobuf::internal::GetEmptyString();
   CreateChatDialogReq_default_instance_.DefaultConstruct();
   CreateChatDialogRsp_default_instance_.DefaultConstruct();
-  PeerBlockedNotify_default_instance_.DefaultConstruct();
-  PeerUnBlockedNotify_default_instance_.DefaultConstruct();
-  PeerTopedNotify_default_instance_.DefaultConstruct();
-  PeerUnTopedNotify_default_instance_.DefaultConstruct();
-  PeerDndedNotify_default_instance_.DefaultConstruct();
-  PeerUnDndedNotify_default_instance_.DefaultConstruct();
   BlockPeerReq_default_instance_.DefaultConstruct();
-  UnBlockPeerReq_default_instance_.DefaultConstruct();
+  UnblockPeerReq_default_instance_.DefaultConstruct();
   TopPeerReq_default_instance_.DefaultConstruct();
-  UnTopPeerReq_default_instance_.DefaultConstruct();
+  UntopPeerReq_default_instance_.DefaultConstruct();
   DndPeerReq_default_instance_.DefaultConstruct();
-  UnDndPeerReq_default_instance_.DefaultConstruct();
+  UndndPeerReq_default_instance_.DefaultConstruct();
+  LoadBlockedPeersReq_default_instance_.DefaultConstruct();
+  LoadBlockedPeersRsp_default_instance_.DefaultConstruct();
+  LoadTopedPeersReq_default_instance_.DefaultConstruct();
+  LoadTopedPeersRsp_default_instance_.DefaultConstruct();
+  LoadDndedPeersReq_default_instance_.DefaultConstruct();
+  LoadDndedPeersRsp_default_instance_.DefaultConstruct();
+  PeerBlockedNotify_default_instance_.DefaultConstruct();
+  PeerUnblockedNotify_default_instance_.DefaultConstruct();
+  PeerTopedNotify_default_instance_.DefaultConstruct();
+  PeerUntopedNotify_default_instance_.DefaultConstruct();
+  PeerDndedNotify_default_instance_.DefaultConstruct();
+  PeerUndndedNotify_default_instance_.DefaultConstruct();
   Dialog_default_instance_.get_mutable()->InitAsDefaultInstance();
   LoadDialogsReq_default_instance_.get_mutable()->InitAsDefaultInstance();
   LoadDialogsRsp_default_instance_.get_mutable()->InitAsDefaultInstance();
   CreateChatDialogReq_default_instance_.get_mutable()->InitAsDefaultInstance();
   CreateChatDialogRsp_default_instance_.get_mutable()->InitAsDefaultInstance();
-  PeerBlockedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
-  PeerUnBlockedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
-  PeerTopedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
-  PeerUnTopedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
-  PeerDndedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
-  PeerUnDndedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
   BlockPeerReq_default_instance_.get_mutable()->InitAsDefaultInstance();
-  UnBlockPeerReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  UnblockPeerReq_default_instance_.get_mutable()->InitAsDefaultInstance();
   TopPeerReq_default_instance_.get_mutable()->InitAsDefaultInstance();
-  UnTopPeerReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  UntopPeerReq_default_instance_.get_mutable()->InitAsDefaultInstance();
   DndPeerReq_default_instance_.get_mutable()->InitAsDefaultInstance();
-  UnDndPeerReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  UndndPeerReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  LoadBlockedPeersReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  LoadBlockedPeersRsp_default_instance_.get_mutable()->InitAsDefaultInstance();
+  LoadTopedPeersReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  LoadTopedPeersRsp_default_instance_.get_mutable()->InitAsDefaultInstance();
+  LoadDndedPeersReq_default_instance_.get_mutable()->InitAsDefaultInstance();
+  LoadDndedPeersRsp_default_instance_.get_mutable()->InitAsDefaultInstance();
+  PeerBlockedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  PeerUnblockedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  PeerTopedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  PeerUntopedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  PeerDndedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
+  PeerUndndedNotify_default_instance_.get_mutable()->InitAsDefaultInstance();
 }
 
 GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_InitDefaults_dialogs_2eproto_once_);
@@ -488,23 +623,28 @@ void protobuf_AddDesc_dialogs_2eproto_impl() {
     "erOutPeer\022)\n\013group_peers\030\005 \003(\0132\024.zproto."
     "GroupOutPeer\"&\n\023CreateChatDialogReq\022\017\n\007p"
     "eer_id\030\001 \001(\t\"4\n\023CreateChatDialogRsp\022\035\n\004p"
-    "eer\030\001 \001(\0132\017.zproto.OutPeer\"/\n\021PeerBlocke"
-    "dNotify\022\032\n\004peer\030\001 \001(\0132\014.zproto.Peer\"1\n\023P"
-    "eerUnBlockedNotify\022\032\n\004peer\030\001 \001(\0132\014.zprot"
-    "o.Peer\"-\n\017PeerTopedNotify\022\032\n\004peer\030\001 \001(\0132"
-    "\014.zproto.Peer\"/\n\021PeerUnTopedNotify\022\032\n\004pe"
-    "er\030\001 \001(\0132\014.zproto.Peer\"-\n\017PeerDndedNotif"
-    "y\022\032\n\004peer\030\001 \001(\0132\014.zproto.Peer\"/\n\021PeerUnD"
-    "ndedNotify\022\032\n\004peer\030\001 \001(\0132\014.zproto.Peer\"-"
-    "\n\014BlockPeerReq\022\035\n\004peer\030\001 \001(\0132\017.zproto.Ou"
-    "tPeer\"/\n\016UnBlockPeerReq\022\035\n\004peer\030\001 \001(\0132\017."
-    "zproto.OutPeer\"+\n\nTopPeerReq\022\035\n\004peer\030\001 \001"
-    "(\0132\017.zproto.OutPeer\"-\n\014UnTopPeerReq\022\035\n\004p"
-    "eer\030\001 \001(\0132\017.zproto.OutPeer\"+\n\nDndPeerReq"
-    "\022\035\n\004peer\030\001 \001(\0132\017.zproto.OutPeer\"-\n\014UnDnd"
-    "PeerReq\022\035\n\004peer\030\001 \001(\0132\017.zproto.OutPeerB,"
-    "\n\027com.zchat.engine.zprotoB\017ZProtoMessagi"
-    "ngH\002b\006proto3", 1252);
+    "eer\030\001 \001(\0132\017.zproto.OutPeer\"-\n\014BlockPeerR"
+    "eq\022\035\n\004peer\030\001 \001(\0132\017.zproto.OutPeer\"/\n\016Unb"
+    "lockPeerReq\022\035\n\004peer\030\001 \001(\0132\017.zproto.OutPe"
+    "er\"+\n\nTopPeerReq\022\035\n\004peer\030\001 \001(\0132\017.zproto."
+    "OutPeer\"-\n\014UntopPeerReq\022\035\n\004peer\030\001 \001(\0132\017."
+    "zproto.OutPeer\"+\n\nDndPeerReq\022\035\n\004peer\030\001 \001"
+    "(\0132\017.zproto.OutPeer\"-\n\014UndndPeerReq\022\035\n\004p"
+    "eer\030\001 \001(\0132\017.zproto.OutPeer\"\025\n\023LoadBlocke"
+    "dPeersReq\"5\n\023LoadBlockedPeersRsp\022\036\n\005peer"
+    "s\030\001 \003(\0132\017.zproto.OutPeer\"\023\n\021LoadTopedPee"
+    "rsReq\"3\n\021LoadTopedPeersRsp\022\036\n\005peers\030\001 \003("
+    "\0132\017.zproto.OutPeer\"\023\n\021LoadDndedPeersReq\""
+    "3\n\021LoadDndedPeersRsp\022\036\n\005peers\030\001 \003(\0132\017.zp"
+    "roto.OutPeer\"/\n\021PeerBlockedNotify\022\032\n\004pee"
+    "r\030\001 \001(\0132\014.zproto.Peer\"1\n\023PeerUnblockedNo"
+    "tify\022\032\n\004peer\030\001 \001(\0132\014.zproto.Peer\"-\n\017Peer"
+    "TopedNotify\022\032\n\004peer\030\001 \001(\0132\014.zproto.Peer\""
+    "/\n\021PeerUntopedNotify\022\032\n\004peer\030\001 \001(\0132\014.zpr"
+    "oto.Peer\"-\n\017PeerDndedNotify\022\032\n\004peer\030\001 \001("
+    "\0132\014.zproto.Peer\"/\n\021PeerUndndedNotify\022\032\n\004"
+    "peer\030\001 \001(\0132\014.zproto.PeerB,\n\027com.zchat.en"
+    "gine.zprotoB\017ZProtoMessagingH\002b\006proto3", 1478);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "dialogs.proto", &protobuf_RegisterTypes);
   ::zproto::protobuf_AddDesc_messaging_5fbase_2eproto();
@@ -1391,798 +1531,6 @@ inline const CreateChatDialogRsp* CreateChatDialogRsp::internal_default_instance
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int PeerBlockedNotify::kPeerFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-PeerBlockedNotify::PeerBlockedNotify()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_dialogs_2eproto();
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.PeerBlockedNotify)
-}
-
-void PeerBlockedNotify::InitAsDefaultInstance() {
-  peer_ = const_cast< ::zproto::Peer*>(
-      ::zproto::Peer::internal_default_instance());
-}
-
-PeerBlockedNotify::PeerBlockedNotify(const PeerBlockedNotify& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.PeerBlockedNotify)
-}
-
-void PeerBlockedNotify::SharedCtor() {
-  peer_ = NULL;
-  _cached_size_ = 0;
-}
-
-PeerBlockedNotify::~PeerBlockedNotify() {
-  // @@protoc_insertion_point(destructor:zproto.PeerBlockedNotify)
-  SharedDtor();
-}
-
-void PeerBlockedNotify::SharedDtor() {
-  if (this != &PeerBlockedNotify_default_instance_.get()) {
-    delete peer_;
-  }
-}
-
-void PeerBlockedNotify::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* PeerBlockedNotify::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return PeerBlockedNotify_descriptor_;
-}
-
-const PeerBlockedNotify& PeerBlockedNotify::default_instance() {
-  protobuf_InitDefaults_dialogs_2eproto();
-  return *internal_default_instance();
-}
-
-::google::protobuf::internal::ExplicitlyConstructed<PeerBlockedNotify> PeerBlockedNotify_default_instance_;
-
-PeerBlockedNotify* PeerBlockedNotify::New(::google::protobuf::Arena* arena) const {
-  PeerBlockedNotify* n = new PeerBlockedNotify;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void PeerBlockedNotify::UnsafeMergeFrom(const PeerBlockedNotify& from) {
-  MergeFrom(from);
-}
-void PeerBlockedNotify::Swap(PeerBlockedNotify* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void PeerBlockedNotify::InternalSwap(PeerBlockedNotify* other) {
-  GetReflection()->Swap(this, other);}
-
-::google::protobuf::Metadata PeerBlockedNotify::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = PeerBlockedNotify_descriptor_;
-  metadata.reflection = PeerBlockedNotify_reflection_;
-  return metadata;
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// PeerBlockedNotify
-
-// optional .zproto.Peer peer = 1;
-bool PeerBlockedNotify::has_peer() const {
-  return this != internal_default_instance() && peer_ != NULL;
-}
-void PeerBlockedNotify::clear_peer() {
-  if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
-  peer_ = NULL;
-}
-const ::zproto::Peer& PeerBlockedNotify::peer() const {
-  // @@protoc_insertion_point(field_get:zproto.PeerBlockedNotify.peer)
-  return peer_ != NULL ? *peer_
-                         : *::zproto::Peer::internal_default_instance();
-}
-::zproto::Peer* PeerBlockedNotify::mutable_peer() {
-  
-  if (peer_ == NULL) {
-    peer_ = new ::zproto::Peer;
-  }
-  // @@protoc_insertion_point(field_mutable:zproto.PeerBlockedNotify.peer)
-  return peer_;
-}
-::zproto::Peer* PeerBlockedNotify::release_peer() {
-  // @@protoc_insertion_point(field_release:zproto.PeerBlockedNotify.peer)
-  
-  ::zproto::Peer* temp = peer_;
-  peer_ = NULL;
-  return temp;
-}
-void PeerBlockedNotify::set_allocated_peer(::zproto::Peer* peer) {
-  delete peer_;
-  peer_ = peer;
-  if (peer) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zproto.PeerBlockedNotify.peer)
-}
-
-inline const PeerBlockedNotify* PeerBlockedNotify::internal_default_instance() {
-  return &PeerBlockedNotify_default_instance_.get();
-}
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int PeerUnBlockedNotify::kPeerFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-PeerUnBlockedNotify::PeerUnBlockedNotify()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_dialogs_2eproto();
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.PeerUnBlockedNotify)
-}
-
-void PeerUnBlockedNotify::InitAsDefaultInstance() {
-  peer_ = const_cast< ::zproto::Peer*>(
-      ::zproto::Peer::internal_default_instance());
-}
-
-PeerUnBlockedNotify::PeerUnBlockedNotify(const PeerUnBlockedNotify& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.PeerUnBlockedNotify)
-}
-
-void PeerUnBlockedNotify::SharedCtor() {
-  peer_ = NULL;
-  _cached_size_ = 0;
-}
-
-PeerUnBlockedNotify::~PeerUnBlockedNotify() {
-  // @@protoc_insertion_point(destructor:zproto.PeerUnBlockedNotify)
-  SharedDtor();
-}
-
-void PeerUnBlockedNotify::SharedDtor() {
-  if (this != &PeerUnBlockedNotify_default_instance_.get()) {
-    delete peer_;
-  }
-}
-
-void PeerUnBlockedNotify::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* PeerUnBlockedNotify::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return PeerUnBlockedNotify_descriptor_;
-}
-
-const PeerUnBlockedNotify& PeerUnBlockedNotify::default_instance() {
-  protobuf_InitDefaults_dialogs_2eproto();
-  return *internal_default_instance();
-}
-
-::google::protobuf::internal::ExplicitlyConstructed<PeerUnBlockedNotify> PeerUnBlockedNotify_default_instance_;
-
-PeerUnBlockedNotify* PeerUnBlockedNotify::New(::google::protobuf::Arena* arena) const {
-  PeerUnBlockedNotify* n = new PeerUnBlockedNotify;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void PeerUnBlockedNotify::UnsafeMergeFrom(const PeerUnBlockedNotify& from) {
-  MergeFrom(from);
-}
-void PeerUnBlockedNotify::Swap(PeerUnBlockedNotify* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void PeerUnBlockedNotify::InternalSwap(PeerUnBlockedNotify* other) {
-  GetReflection()->Swap(this, other);}
-
-::google::protobuf::Metadata PeerUnBlockedNotify::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = PeerUnBlockedNotify_descriptor_;
-  metadata.reflection = PeerUnBlockedNotify_reflection_;
-  return metadata;
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// PeerUnBlockedNotify
-
-// optional .zproto.Peer peer = 1;
-bool PeerUnBlockedNotify::has_peer() const {
-  return this != internal_default_instance() && peer_ != NULL;
-}
-void PeerUnBlockedNotify::clear_peer() {
-  if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
-  peer_ = NULL;
-}
-const ::zproto::Peer& PeerUnBlockedNotify::peer() const {
-  // @@protoc_insertion_point(field_get:zproto.PeerUnBlockedNotify.peer)
-  return peer_ != NULL ? *peer_
-                         : *::zproto::Peer::internal_default_instance();
-}
-::zproto::Peer* PeerUnBlockedNotify::mutable_peer() {
-  
-  if (peer_ == NULL) {
-    peer_ = new ::zproto::Peer;
-  }
-  // @@protoc_insertion_point(field_mutable:zproto.PeerUnBlockedNotify.peer)
-  return peer_;
-}
-::zproto::Peer* PeerUnBlockedNotify::release_peer() {
-  // @@protoc_insertion_point(field_release:zproto.PeerUnBlockedNotify.peer)
-  
-  ::zproto::Peer* temp = peer_;
-  peer_ = NULL;
-  return temp;
-}
-void PeerUnBlockedNotify::set_allocated_peer(::zproto::Peer* peer) {
-  delete peer_;
-  peer_ = peer;
-  if (peer) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zproto.PeerUnBlockedNotify.peer)
-}
-
-inline const PeerUnBlockedNotify* PeerUnBlockedNotify::internal_default_instance() {
-  return &PeerUnBlockedNotify_default_instance_.get();
-}
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int PeerTopedNotify::kPeerFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-PeerTopedNotify::PeerTopedNotify()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_dialogs_2eproto();
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.PeerTopedNotify)
-}
-
-void PeerTopedNotify::InitAsDefaultInstance() {
-  peer_ = const_cast< ::zproto::Peer*>(
-      ::zproto::Peer::internal_default_instance());
-}
-
-PeerTopedNotify::PeerTopedNotify(const PeerTopedNotify& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.PeerTopedNotify)
-}
-
-void PeerTopedNotify::SharedCtor() {
-  peer_ = NULL;
-  _cached_size_ = 0;
-}
-
-PeerTopedNotify::~PeerTopedNotify() {
-  // @@protoc_insertion_point(destructor:zproto.PeerTopedNotify)
-  SharedDtor();
-}
-
-void PeerTopedNotify::SharedDtor() {
-  if (this != &PeerTopedNotify_default_instance_.get()) {
-    delete peer_;
-  }
-}
-
-void PeerTopedNotify::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* PeerTopedNotify::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return PeerTopedNotify_descriptor_;
-}
-
-const PeerTopedNotify& PeerTopedNotify::default_instance() {
-  protobuf_InitDefaults_dialogs_2eproto();
-  return *internal_default_instance();
-}
-
-::google::protobuf::internal::ExplicitlyConstructed<PeerTopedNotify> PeerTopedNotify_default_instance_;
-
-PeerTopedNotify* PeerTopedNotify::New(::google::protobuf::Arena* arena) const {
-  PeerTopedNotify* n = new PeerTopedNotify;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void PeerTopedNotify::UnsafeMergeFrom(const PeerTopedNotify& from) {
-  MergeFrom(from);
-}
-void PeerTopedNotify::Swap(PeerTopedNotify* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void PeerTopedNotify::InternalSwap(PeerTopedNotify* other) {
-  GetReflection()->Swap(this, other);}
-
-::google::protobuf::Metadata PeerTopedNotify::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = PeerTopedNotify_descriptor_;
-  metadata.reflection = PeerTopedNotify_reflection_;
-  return metadata;
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// PeerTopedNotify
-
-// optional .zproto.Peer peer = 1;
-bool PeerTopedNotify::has_peer() const {
-  return this != internal_default_instance() && peer_ != NULL;
-}
-void PeerTopedNotify::clear_peer() {
-  if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
-  peer_ = NULL;
-}
-const ::zproto::Peer& PeerTopedNotify::peer() const {
-  // @@protoc_insertion_point(field_get:zproto.PeerTopedNotify.peer)
-  return peer_ != NULL ? *peer_
-                         : *::zproto::Peer::internal_default_instance();
-}
-::zproto::Peer* PeerTopedNotify::mutable_peer() {
-  
-  if (peer_ == NULL) {
-    peer_ = new ::zproto::Peer;
-  }
-  // @@protoc_insertion_point(field_mutable:zproto.PeerTopedNotify.peer)
-  return peer_;
-}
-::zproto::Peer* PeerTopedNotify::release_peer() {
-  // @@protoc_insertion_point(field_release:zproto.PeerTopedNotify.peer)
-  
-  ::zproto::Peer* temp = peer_;
-  peer_ = NULL;
-  return temp;
-}
-void PeerTopedNotify::set_allocated_peer(::zproto::Peer* peer) {
-  delete peer_;
-  peer_ = peer;
-  if (peer) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zproto.PeerTopedNotify.peer)
-}
-
-inline const PeerTopedNotify* PeerTopedNotify::internal_default_instance() {
-  return &PeerTopedNotify_default_instance_.get();
-}
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int PeerUnTopedNotify::kPeerFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-PeerUnTopedNotify::PeerUnTopedNotify()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_dialogs_2eproto();
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.PeerUnTopedNotify)
-}
-
-void PeerUnTopedNotify::InitAsDefaultInstance() {
-  peer_ = const_cast< ::zproto::Peer*>(
-      ::zproto::Peer::internal_default_instance());
-}
-
-PeerUnTopedNotify::PeerUnTopedNotify(const PeerUnTopedNotify& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.PeerUnTopedNotify)
-}
-
-void PeerUnTopedNotify::SharedCtor() {
-  peer_ = NULL;
-  _cached_size_ = 0;
-}
-
-PeerUnTopedNotify::~PeerUnTopedNotify() {
-  // @@protoc_insertion_point(destructor:zproto.PeerUnTopedNotify)
-  SharedDtor();
-}
-
-void PeerUnTopedNotify::SharedDtor() {
-  if (this != &PeerUnTopedNotify_default_instance_.get()) {
-    delete peer_;
-  }
-}
-
-void PeerUnTopedNotify::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* PeerUnTopedNotify::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return PeerUnTopedNotify_descriptor_;
-}
-
-const PeerUnTopedNotify& PeerUnTopedNotify::default_instance() {
-  protobuf_InitDefaults_dialogs_2eproto();
-  return *internal_default_instance();
-}
-
-::google::protobuf::internal::ExplicitlyConstructed<PeerUnTopedNotify> PeerUnTopedNotify_default_instance_;
-
-PeerUnTopedNotify* PeerUnTopedNotify::New(::google::protobuf::Arena* arena) const {
-  PeerUnTopedNotify* n = new PeerUnTopedNotify;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void PeerUnTopedNotify::UnsafeMergeFrom(const PeerUnTopedNotify& from) {
-  MergeFrom(from);
-}
-void PeerUnTopedNotify::Swap(PeerUnTopedNotify* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void PeerUnTopedNotify::InternalSwap(PeerUnTopedNotify* other) {
-  GetReflection()->Swap(this, other);}
-
-::google::protobuf::Metadata PeerUnTopedNotify::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = PeerUnTopedNotify_descriptor_;
-  metadata.reflection = PeerUnTopedNotify_reflection_;
-  return metadata;
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// PeerUnTopedNotify
-
-// optional .zproto.Peer peer = 1;
-bool PeerUnTopedNotify::has_peer() const {
-  return this != internal_default_instance() && peer_ != NULL;
-}
-void PeerUnTopedNotify::clear_peer() {
-  if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
-  peer_ = NULL;
-}
-const ::zproto::Peer& PeerUnTopedNotify::peer() const {
-  // @@protoc_insertion_point(field_get:zproto.PeerUnTopedNotify.peer)
-  return peer_ != NULL ? *peer_
-                         : *::zproto::Peer::internal_default_instance();
-}
-::zproto::Peer* PeerUnTopedNotify::mutable_peer() {
-  
-  if (peer_ == NULL) {
-    peer_ = new ::zproto::Peer;
-  }
-  // @@protoc_insertion_point(field_mutable:zproto.PeerUnTopedNotify.peer)
-  return peer_;
-}
-::zproto::Peer* PeerUnTopedNotify::release_peer() {
-  // @@protoc_insertion_point(field_release:zproto.PeerUnTopedNotify.peer)
-  
-  ::zproto::Peer* temp = peer_;
-  peer_ = NULL;
-  return temp;
-}
-void PeerUnTopedNotify::set_allocated_peer(::zproto::Peer* peer) {
-  delete peer_;
-  peer_ = peer;
-  if (peer) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zproto.PeerUnTopedNotify.peer)
-}
-
-inline const PeerUnTopedNotify* PeerUnTopedNotify::internal_default_instance() {
-  return &PeerUnTopedNotify_default_instance_.get();
-}
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int PeerDndedNotify::kPeerFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-PeerDndedNotify::PeerDndedNotify()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_dialogs_2eproto();
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.PeerDndedNotify)
-}
-
-void PeerDndedNotify::InitAsDefaultInstance() {
-  peer_ = const_cast< ::zproto::Peer*>(
-      ::zproto::Peer::internal_default_instance());
-}
-
-PeerDndedNotify::PeerDndedNotify(const PeerDndedNotify& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.PeerDndedNotify)
-}
-
-void PeerDndedNotify::SharedCtor() {
-  peer_ = NULL;
-  _cached_size_ = 0;
-}
-
-PeerDndedNotify::~PeerDndedNotify() {
-  // @@protoc_insertion_point(destructor:zproto.PeerDndedNotify)
-  SharedDtor();
-}
-
-void PeerDndedNotify::SharedDtor() {
-  if (this != &PeerDndedNotify_default_instance_.get()) {
-    delete peer_;
-  }
-}
-
-void PeerDndedNotify::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* PeerDndedNotify::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return PeerDndedNotify_descriptor_;
-}
-
-const PeerDndedNotify& PeerDndedNotify::default_instance() {
-  protobuf_InitDefaults_dialogs_2eproto();
-  return *internal_default_instance();
-}
-
-::google::protobuf::internal::ExplicitlyConstructed<PeerDndedNotify> PeerDndedNotify_default_instance_;
-
-PeerDndedNotify* PeerDndedNotify::New(::google::protobuf::Arena* arena) const {
-  PeerDndedNotify* n = new PeerDndedNotify;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void PeerDndedNotify::UnsafeMergeFrom(const PeerDndedNotify& from) {
-  MergeFrom(from);
-}
-void PeerDndedNotify::Swap(PeerDndedNotify* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void PeerDndedNotify::InternalSwap(PeerDndedNotify* other) {
-  GetReflection()->Swap(this, other);}
-
-::google::protobuf::Metadata PeerDndedNotify::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = PeerDndedNotify_descriptor_;
-  metadata.reflection = PeerDndedNotify_reflection_;
-  return metadata;
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// PeerDndedNotify
-
-// optional .zproto.Peer peer = 1;
-bool PeerDndedNotify::has_peer() const {
-  return this != internal_default_instance() && peer_ != NULL;
-}
-void PeerDndedNotify::clear_peer() {
-  if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
-  peer_ = NULL;
-}
-const ::zproto::Peer& PeerDndedNotify::peer() const {
-  // @@protoc_insertion_point(field_get:zproto.PeerDndedNotify.peer)
-  return peer_ != NULL ? *peer_
-                         : *::zproto::Peer::internal_default_instance();
-}
-::zproto::Peer* PeerDndedNotify::mutable_peer() {
-  
-  if (peer_ == NULL) {
-    peer_ = new ::zproto::Peer;
-  }
-  // @@protoc_insertion_point(field_mutable:zproto.PeerDndedNotify.peer)
-  return peer_;
-}
-::zproto::Peer* PeerDndedNotify::release_peer() {
-  // @@protoc_insertion_point(field_release:zproto.PeerDndedNotify.peer)
-  
-  ::zproto::Peer* temp = peer_;
-  peer_ = NULL;
-  return temp;
-}
-void PeerDndedNotify::set_allocated_peer(::zproto::Peer* peer) {
-  delete peer_;
-  peer_ = peer;
-  if (peer) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zproto.PeerDndedNotify.peer)
-}
-
-inline const PeerDndedNotify* PeerDndedNotify::internal_default_instance() {
-  return &PeerDndedNotify_default_instance_.get();
-}
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int PeerUnDndedNotify::kPeerFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-PeerUnDndedNotify::PeerUnDndedNotify()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_dialogs_2eproto();
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.PeerUnDndedNotify)
-}
-
-void PeerUnDndedNotify::InitAsDefaultInstance() {
-  peer_ = const_cast< ::zproto::Peer*>(
-      ::zproto::Peer::internal_default_instance());
-}
-
-PeerUnDndedNotify::PeerUnDndedNotify(const PeerUnDndedNotify& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.PeerUnDndedNotify)
-}
-
-void PeerUnDndedNotify::SharedCtor() {
-  peer_ = NULL;
-  _cached_size_ = 0;
-}
-
-PeerUnDndedNotify::~PeerUnDndedNotify() {
-  // @@protoc_insertion_point(destructor:zproto.PeerUnDndedNotify)
-  SharedDtor();
-}
-
-void PeerUnDndedNotify::SharedDtor() {
-  if (this != &PeerUnDndedNotify_default_instance_.get()) {
-    delete peer_;
-  }
-}
-
-void PeerUnDndedNotify::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* PeerUnDndedNotify::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return PeerUnDndedNotify_descriptor_;
-}
-
-const PeerUnDndedNotify& PeerUnDndedNotify::default_instance() {
-  protobuf_InitDefaults_dialogs_2eproto();
-  return *internal_default_instance();
-}
-
-::google::protobuf::internal::ExplicitlyConstructed<PeerUnDndedNotify> PeerUnDndedNotify_default_instance_;
-
-PeerUnDndedNotify* PeerUnDndedNotify::New(::google::protobuf::Arena* arena) const {
-  PeerUnDndedNotify* n = new PeerUnDndedNotify;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void PeerUnDndedNotify::UnsafeMergeFrom(const PeerUnDndedNotify& from) {
-  MergeFrom(from);
-}
-void PeerUnDndedNotify::Swap(PeerUnDndedNotify* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void PeerUnDndedNotify::InternalSwap(PeerUnDndedNotify* other) {
-  GetReflection()->Swap(this, other);}
-
-::google::protobuf::Metadata PeerUnDndedNotify::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = PeerUnDndedNotify_descriptor_;
-  metadata.reflection = PeerUnDndedNotify_reflection_;
-  return metadata;
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// PeerUnDndedNotify
-
-// optional .zproto.Peer peer = 1;
-bool PeerUnDndedNotify::has_peer() const {
-  return this != internal_default_instance() && peer_ != NULL;
-}
-void PeerUnDndedNotify::clear_peer() {
-  if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
-  peer_ = NULL;
-}
-const ::zproto::Peer& PeerUnDndedNotify::peer() const {
-  // @@protoc_insertion_point(field_get:zproto.PeerUnDndedNotify.peer)
-  return peer_ != NULL ? *peer_
-                         : *::zproto::Peer::internal_default_instance();
-}
-::zproto::Peer* PeerUnDndedNotify::mutable_peer() {
-  
-  if (peer_ == NULL) {
-    peer_ = new ::zproto::Peer;
-  }
-  // @@protoc_insertion_point(field_mutable:zproto.PeerUnDndedNotify.peer)
-  return peer_;
-}
-::zproto::Peer* PeerUnDndedNotify::release_peer() {
-  // @@protoc_insertion_point(field_release:zproto.PeerUnDndedNotify.peer)
-  
-  ::zproto::Peer* temp = peer_;
-  peer_ = NULL;
-  return temp;
-}
-void PeerUnDndedNotify::set_allocated_peer(::zproto::Peer* peer) {
-  delete peer_;
-  peer_ = peer;
-  if (peer) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zproto.PeerUnDndedNotify.peer)
-}
-
-inline const PeerUnDndedNotify* PeerUnDndedNotify::internal_default_instance() {
-  return &PeerUnDndedNotify_default_instance_.get();
-}
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int BlockPeerReq::kPeerFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
@@ -2315,120 +1663,120 @@ inline const BlockPeerReq* BlockPeerReq::internal_default_instance() {
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int UnBlockPeerReq::kPeerFieldNumber;
+const int UnblockPeerReq::kPeerFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-UnBlockPeerReq::UnBlockPeerReq()
+UnblockPeerReq::UnblockPeerReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   if (this != internal_default_instance()) protobuf_InitDefaults_dialogs_2eproto();
   SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.UnBlockPeerReq)
+  // @@protoc_insertion_point(constructor:zproto.UnblockPeerReq)
 }
 
-void UnBlockPeerReq::InitAsDefaultInstance() {
+void UnblockPeerReq::InitAsDefaultInstance() {
   peer_ = const_cast< ::zproto::OutPeer*>(
       ::zproto::OutPeer::internal_default_instance());
 }
 
-UnBlockPeerReq::UnBlockPeerReq(const UnBlockPeerReq& from)
+UnblockPeerReq::UnblockPeerReq(const UnblockPeerReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
   UnsafeMergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.UnBlockPeerReq)
+  // @@protoc_insertion_point(copy_constructor:zproto.UnblockPeerReq)
 }
 
-void UnBlockPeerReq::SharedCtor() {
+void UnblockPeerReq::SharedCtor() {
   peer_ = NULL;
   _cached_size_ = 0;
 }
 
-UnBlockPeerReq::~UnBlockPeerReq() {
-  // @@protoc_insertion_point(destructor:zproto.UnBlockPeerReq)
+UnblockPeerReq::~UnblockPeerReq() {
+  // @@protoc_insertion_point(destructor:zproto.UnblockPeerReq)
   SharedDtor();
 }
 
-void UnBlockPeerReq::SharedDtor() {
-  if (this != &UnBlockPeerReq_default_instance_.get()) {
+void UnblockPeerReq::SharedDtor() {
+  if (this != &UnblockPeerReq_default_instance_.get()) {
     delete peer_;
   }
 }
 
-void UnBlockPeerReq::SetCachedSize(int size) const {
+void UnblockPeerReq::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* UnBlockPeerReq::descriptor() {
+const ::google::protobuf::Descriptor* UnblockPeerReq::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return UnBlockPeerReq_descriptor_;
+  return UnblockPeerReq_descriptor_;
 }
 
-const UnBlockPeerReq& UnBlockPeerReq::default_instance() {
+const UnblockPeerReq& UnblockPeerReq::default_instance() {
   protobuf_InitDefaults_dialogs_2eproto();
   return *internal_default_instance();
 }
 
-::google::protobuf::internal::ExplicitlyConstructed<UnBlockPeerReq> UnBlockPeerReq_default_instance_;
+::google::protobuf::internal::ExplicitlyConstructed<UnblockPeerReq> UnblockPeerReq_default_instance_;
 
-UnBlockPeerReq* UnBlockPeerReq::New(::google::protobuf::Arena* arena) const {
-  UnBlockPeerReq* n = new UnBlockPeerReq;
+UnblockPeerReq* UnblockPeerReq::New(::google::protobuf::Arena* arena) const {
+  UnblockPeerReq* n = new UnblockPeerReq;
   if (arena != NULL) {
     arena->Own(n);
   }
   return n;
 }
 
-void UnBlockPeerReq::UnsafeMergeFrom(const UnBlockPeerReq& from) {
+void UnblockPeerReq::UnsafeMergeFrom(const UnblockPeerReq& from) {
   MergeFrom(from);
 }
-void UnBlockPeerReq::Swap(UnBlockPeerReq* other) {
+void UnblockPeerReq::Swap(UnblockPeerReq* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void UnBlockPeerReq::InternalSwap(UnBlockPeerReq* other) {
+void UnblockPeerReq::InternalSwap(UnblockPeerReq* other) {
   GetReflection()->Swap(this, other);}
 
-::google::protobuf::Metadata UnBlockPeerReq::GetMetadata() const {
+::google::protobuf::Metadata UnblockPeerReq::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::Metadata metadata;
-  metadata.descriptor = UnBlockPeerReq_descriptor_;
-  metadata.reflection = UnBlockPeerReq_reflection_;
+  metadata.descriptor = UnblockPeerReq_descriptor_;
+  metadata.reflection = UnblockPeerReq_reflection_;
   return metadata;
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
-// UnBlockPeerReq
+// UnblockPeerReq
 
 // optional .zproto.OutPeer peer = 1;
-bool UnBlockPeerReq::has_peer() const {
+bool UnblockPeerReq::has_peer() const {
   return this != internal_default_instance() && peer_ != NULL;
 }
-void UnBlockPeerReq::clear_peer() {
+void UnblockPeerReq::clear_peer() {
   if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
   peer_ = NULL;
 }
-const ::zproto::OutPeer& UnBlockPeerReq::peer() const {
-  // @@protoc_insertion_point(field_get:zproto.UnBlockPeerReq.peer)
+const ::zproto::OutPeer& UnblockPeerReq::peer() const {
+  // @@protoc_insertion_point(field_get:zproto.UnblockPeerReq.peer)
   return peer_ != NULL ? *peer_
                          : *::zproto::OutPeer::internal_default_instance();
 }
-::zproto::OutPeer* UnBlockPeerReq::mutable_peer() {
+::zproto::OutPeer* UnblockPeerReq::mutable_peer() {
   
   if (peer_ == NULL) {
     peer_ = new ::zproto::OutPeer;
   }
-  // @@protoc_insertion_point(field_mutable:zproto.UnBlockPeerReq.peer)
+  // @@protoc_insertion_point(field_mutable:zproto.UnblockPeerReq.peer)
   return peer_;
 }
-::zproto::OutPeer* UnBlockPeerReq::release_peer() {
-  // @@protoc_insertion_point(field_release:zproto.UnBlockPeerReq.peer)
+::zproto::OutPeer* UnblockPeerReq::release_peer() {
+  // @@protoc_insertion_point(field_release:zproto.UnblockPeerReq.peer)
   
   ::zproto::OutPeer* temp = peer_;
   peer_ = NULL;
   return temp;
 }
-void UnBlockPeerReq::set_allocated_peer(::zproto::OutPeer* peer) {
+void UnblockPeerReq::set_allocated_peer(::zproto::OutPeer* peer) {
   delete peer_;
   peer_ = peer;
   if (peer) {
@@ -2436,11 +1784,11 @@ void UnBlockPeerReq::set_allocated_peer(::zproto::OutPeer* peer) {
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zproto.UnBlockPeerReq.peer)
+  // @@protoc_insertion_point(field_set_allocated:zproto.UnblockPeerReq.peer)
 }
 
-inline const UnBlockPeerReq* UnBlockPeerReq::internal_default_instance() {
-  return &UnBlockPeerReq_default_instance_.get();
+inline const UnblockPeerReq* UnblockPeerReq::internal_default_instance() {
+  return &UnblockPeerReq_default_instance_.get();
 }
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
@@ -2579,120 +1927,120 @@ inline const TopPeerReq* TopPeerReq::internal_default_instance() {
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int UnTopPeerReq::kPeerFieldNumber;
+const int UntopPeerReq::kPeerFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-UnTopPeerReq::UnTopPeerReq()
+UntopPeerReq::UntopPeerReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   if (this != internal_default_instance()) protobuf_InitDefaults_dialogs_2eproto();
   SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.UnTopPeerReq)
+  // @@protoc_insertion_point(constructor:zproto.UntopPeerReq)
 }
 
-void UnTopPeerReq::InitAsDefaultInstance() {
+void UntopPeerReq::InitAsDefaultInstance() {
   peer_ = const_cast< ::zproto::OutPeer*>(
       ::zproto::OutPeer::internal_default_instance());
 }
 
-UnTopPeerReq::UnTopPeerReq(const UnTopPeerReq& from)
+UntopPeerReq::UntopPeerReq(const UntopPeerReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
   UnsafeMergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.UnTopPeerReq)
+  // @@protoc_insertion_point(copy_constructor:zproto.UntopPeerReq)
 }
 
-void UnTopPeerReq::SharedCtor() {
+void UntopPeerReq::SharedCtor() {
   peer_ = NULL;
   _cached_size_ = 0;
 }
 
-UnTopPeerReq::~UnTopPeerReq() {
-  // @@protoc_insertion_point(destructor:zproto.UnTopPeerReq)
+UntopPeerReq::~UntopPeerReq() {
+  // @@protoc_insertion_point(destructor:zproto.UntopPeerReq)
   SharedDtor();
 }
 
-void UnTopPeerReq::SharedDtor() {
-  if (this != &UnTopPeerReq_default_instance_.get()) {
+void UntopPeerReq::SharedDtor() {
+  if (this != &UntopPeerReq_default_instance_.get()) {
     delete peer_;
   }
 }
 
-void UnTopPeerReq::SetCachedSize(int size) const {
+void UntopPeerReq::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* UnTopPeerReq::descriptor() {
+const ::google::protobuf::Descriptor* UntopPeerReq::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return UnTopPeerReq_descriptor_;
+  return UntopPeerReq_descriptor_;
 }
 
-const UnTopPeerReq& UnTopPeerReq::default_instance() {
+const UntopPeerReq& UntopPeerReq::default_instance() {
   protobuf_InitDefaults_dialogs_2eproto();
   return *internal_default_instance();
 }
 
-::google::protobuf::internal::ExplicitlyConstructed<UnTopPeerReq> UnTopPeerReq_default_instance_;
+::google::protobuf::internal::ExplicitlyConstructed<UntopPeerReq> UntopPeerReq_default_instance_;
 
-UnTopPeerReq* UnTopPeerReq::New(::google::protobuf::Arena* arena) const {
-  UnTopPeerReq* n = new UnTopPeerReq;
+UntopPeerReq* UntopPeerReq::New(::google::protobuf::Arena* arena) const {
+  UntopPeerReq* n = new UntopPeerReq;
   if (arena != NULL) {
     arena->Own(n);
   }
   return n;
 }
 
-void UnTopPeerReq::UnsafeMergeFrom(const UnTopPeerReq& from) {
+void UntopPeerReq::UnsafeMergeFrom(const UntopPeerReq& from) {
   MergeFrom(from);
 }
-void UnTopPeerReq::Swap(UnTopPeerReq* other) {
+void UntopPeerReq::Swap(UntopPeerReq* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void UnTopPeerReq::InternalSwap(UnTopPeerReq* other) {
+void UntopPeerReq::InternalSwap(UntopPeerReq* other) {
   GetReflection()->Swap(this, other);}
 
-::google::protobuf::Metadata UnTopPeerReq::GetMetadata() const {
+::google::protobuf::Metadata UntopPeerReq::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::Metadata metadata;
-  metadata.descriptor = UnTopPeerReq_descriptor_;
-  metadata.reflection = UnTopPeerReq_reflection_;
+  metadata.descriptor = UntopPeerReq_descriptor_;
+  metadata.reflection = UntopPeerReq_reflection_;
   return metadata;
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
-// UnTopPeerReq
+// UntopPeerReq
 
 // optional .zproto.OutPeer peer = 1;
-bool UnTopPeerReq::has_peer() const {
+bool UntopPeerReq::has_peer() const {
   return this != internal_default_instance() && peer_ != NULL;
 }
-void UnTopPeerReq::clear_peer() {
+void UntopPeerReq::clear_peer() {
   if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
   peer_ = NULL;
 }
-const ::zproto::OutPeer& UnTopPeerReq::peer() const {
-  // @@protoc_insertion_point(field_get:zproto.UnTopPeerReq.peer)
+const ::zproto::OutPeer& UntopPeerReq::peer() const {
+  // @@protoc_insertion_point(field_get:zproto.UntopPeerReq.peer)
   return peer_ != NULL ? *peer_
                          : *::zproto::OutPeer::internal_default_instance();
 }
-::zproto::OutPeer* UnTopPeerReq::mutable_peer() {
+::zproto::OutPeer* UntopPeerReq::mutable_peer() {
   
   if (peer_ == NULL) {
     peer_ = new ::zproto::OutPeer;
   }
-  // @@protoc_insertion_point(field_mutable:zproto.UnTopPeerReq.peer)
+  // @@protoc_insertion_point(field_mutable:zproto.UntopPeerReq.peer)
   return peer_;
 }
-::zproto::OutPeer* UnTopPeerReq::release_peer() {
-  // @@protoc_insertion_point(field_release:zproto.UnTopPeerReq.peer)
+::zproto::OutPeer* UntopPeerReq::release_peer() {
+  // @@protoc_insertion_point(field_release:zproto.UntopPeerReq.peer)
   
   ::zproto::OutPeer* temp = peer_;
   peer_ = NULL;
   return temp;
 }
-void UnTopPeerReq::set_allocated_peer(::zproto::OutPeer* peer) {
+void UntopPeerReq::set_allocated_peer(::zproto::OutPeer* peer) {
   delete peer_;
   peer_ = peer;
   if (peer) {
@@ -2700,11 +2048,11 @@ void UnTopPeerReq::set_allocated_peer(::zproto::OutPeer* peer) {
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zproto.UnTopPeerReq.peer)
+  // @@protoc_insertion_point(field_set_allocated:zproto.UntopPeerReq.peer)
 }
 
-inline const UnTopPeerReq* UnTopPeerReq::internal_default_instance() {
-  return &UnTopPeerReq_default_instance_.get();
+inline const UntopPeerReq* UntopPeerReq::internal_default_instance() {
+  return &UntopPeerReq_default_instance_.get();
 }
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
@@ -2843,120 +2191,120 @@ inline const DndPeerReq* DndPeerReq::internal_default_instance() {
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int UnDndPeerReq::kPeerFieldNumber;
+const int UndndPeerReq::kPeerFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-UnDndPeerReq::UnDndPeerReq()
+UndndPeerReq::UndndPeerReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   if (this != internal_default_instance()) protobuf_InitDefaults_dialogs_2eproto();
   SharedCtor();
-  // @@protoc_insertion_point(constructor:zproto.UnDndPeerReq)
+  // @@protoc_insertion_point(constructor:zproto.UndndPeerReq)
 }
 
-void UnDndPeerReq::InitAsDefaultInstance() {
+void UndndPeerReq::InitAsDefaultInstance() {
   peer_ = const_cast< ::zproto::OutPeer*>(
       ::zproto::OutPeer::internal_default_instance());
 }
 
-UnDndPeerReq::UnDndPeerReq(const UnDndPeerReq& from)
+UndndPeerReq::UndndPeerReq(const UndndPeerReq& from)
   : ::google::protobuf::Message(),
     _internal_metadata_(NULL) {
   SharedCtor();
   UnsafeMergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:zproto.UnDndPeerReq)
+  // @@protoc_insertion_point(copy_constructor:zproto.UndndPeerReq)
 }
 
-void UnDndPeerReq::SharedCtor() {
+void UndndPeerReq::SharedCtor() {
   peer_ = NULL;
   _cached_size_ = 0;
 }
 
-UnDndPeerReq::~UnDndPeerReq() {
-  // @@protoc_insertion_point(destructor:zproto.UnDndPeerReq)
+UndndPeerReq::~UndndPeerReq() {
+  // @@protoc_insertion_point(destructor:zproto.UndndPeerReq)
   SharedDtor();
 }
 
-void UnDndPeerReq::SharedDtor() {
-  if (this != &UnDndPeerReq_default_instance_.get()) {
+void UndndPeerReq::SharedDtor() {
+  if (this != &UndndPeerReq_default_instance_.get()) {
     delete peer_;
   }
 }
 
-void UnDndPeerReq::SetCachedSize(int size) const {
+void UndndPeerReq::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* UnDndPeerReq::descriptor() {
+const ::google::protobuf::Descriptor* UndndPeerReq::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return UnDndPeerReq_descriptor_;
+  return UndndPeerReq_descriptor_;
 }
 
-const UnDndPeerReq& UnDndPeerReq::default_instance() {
+const UndndPeerReq& UndndPeerReq::default_instance() {
   protobuf_InitDefaults_dialogs_2eproto();
   return *internal_default_instance();
 }
 
-::google::protobuf::internal::ExplicitlyConstructed<UnDndPeerReq> UnDndPeerReq_default_instance_;
+::google::protobuf::internal::ExplicitlyConstructed<UndndPeerReq> UndndPeerReq_default_instance_;
 
-UnDndPeerReq* UnDndPeerReq::New(::google::protobuf::Arena* arena) const {
-  UnDndPeerReq* n = new UnDndPeerReq;
+UndndPeerReq* UndndPeerReq::New(::google::protobuf::Arena* arena) const {
+  UndndPeerReq* n = new UndndPeerReq;
   if (arena != NULL) {
     arena->Own(n);
   }
   return n;
 }
 
-void UnDndPeerReq::UnsafeMergeFrom(const UnDndPeerReq& from) {
+void UndndPeerReq::UnsafeMergeFrom(const UndndPeerReq& from) {
   MergeFrom(from);
 }
-void UnDndPeerReq::Swap(UnDndPeerReq* other) {
+void UndndPeerReq::Swap(UndndPeerReq* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void UnDndPeerReq::InternalSwap(UnDndPeerReq* other) {
+void UndndPeerReq::InternalSwap(UndndPeerReq* other) {
   GetReflection()->Swap(this, other);}
 
-::google::protobuf::Metadata UnDndPeerReq::GetMetadata() const {
+::google::protobuf::Metadata UndndPeerReq::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::Metadata metadata;
-  metadata.descriptor = UnDndPeerReq_descriptor_;
-  metadata.reflection = UnDndPeerReq_reflection_;
+  metadata.descriptor = UndndPeerReq_descriptor_;
+  metadata.reflection = UndndPeerReq_reflection_;
   return metadata;
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
-// UnDndPeerReq
+// UndndPeerReq
 
 // optional .zproto.OutPeer peer = 1;
-bool UnDndPeerReq::has_peer() const {
+bool UndndPeerReq::has_peer() const {
   return this != internal_default_instance() && peer_ != NULL;
 }
-void UnDndPeerReq::clear_peer() {
+void UndndPeerReq::clear_peer() {
   if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
   peer_ = NULL;
 }
-const ::zproto::OutPeer& UnDndPeerReq::peer() const {
-  // @@protoc_insertion_point(field_get:zproto.UnDndPeerReq.peer)
+const ::zproto::OutPeer& UndndPeerReq::peer() const {
+  // @@protoc_insertion_point(field_get:zproto.UndndPeerReq.peer)
   return peer_ != NULL ? *peer_
                          : *::zproto::OutPeer::internal_default_instance();
 }
-::zproto::OutPeer* UnDndPeerReq::mutable_peer() {
+::zproto::OutPeer* UndndPeerReq::mutable_peer() {
   
   if (peer_ == NULL) {
     peer_ = new ::zproto::OutPeer;
   }
-  // @@protoc_insertion_point(field_mutable:zproto.UnDndPeerReq.peer)
+  // @@protoc_insertion_point(field_mutable:zproto.UndndPeerReq.peer)
   return peer_;
 }
-::zproto::OutPeer* UnDndPeerReq::release_peer() {
-  // @@protoc_insertion_point(field_release:zproto.UnDndPeerReq.peer)
+::zproto::OutPeer* UndndPeerReq::release_peer() {
+  // @@protoc_insertion_point(field_release:zproto.UndndPeerReq.peer)
   
   ::zproto::OutPeer* temp = peer_;
   peer_ = NULL;
   return temp;
 }
-void UnDndPeerReq::set_allocated_peer(::zproto::OutPeer* peer) {
+void UndndPeerReq::set_allocated_peer(::zproto::OutPeer* peer) {
   delete peer_;
   peer_ = peer;
   if (peer) {
@@ -2964,11 +2312,1412 @@ void UnDndPeerReq::set_allocated_peer(::zproto::OutPeer* peer) {
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zproto.UnDndPeerReq.peer)
+  // @@protoc_insertion_point(field_set_allocated:zproto.UndndPeerReq.peer)
 }
 
-inline const UnDndPeerReq* UnDndPeerReq::internal_default_instance() {
-  return &UnDndPeerReq_default_instance_.get();
+inline const UndndPeerReq* UndndPeerReq::internal_default_instance() {
+  return &UndndPeerReq_default_instance_.get();
+}
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+LoadBlockedPeersReq::LoadBlockedPeersReq()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_dialogs_2eproto();
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.LoadBlockedPeersReq)
+}
+
+void LoadBlockedPeersReq::InitAsDefaultInstance() {
+}
+
+LoadBlockedPeersReq::LoadBlockedPeersReq(const LoadBlockedPeersReq& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  UnsafeMergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.LoadBlockedPeersReq)
+}
+
+void LoadBlockedPeersReq::SharedCtor() {
+  _cached_size_ = 0;
+}
+
+LoadBlockedPeersReq::~LoadBlockedPeersReq() {
+  // @@protoc_insertion_point(destructor:zproto.LoadBlockedPeersReq)
+  SharedDtor();
+}
+
+void LoadBlockedPeersReq::SharedDtor() {
+}
+
+void LoadBlockedPeersReq::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* LoadBlockedPeersReq::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return LoadBlockedPeersReq_descriptor_;
+}
+
+const LoadBlockedPeersReq& LoadBlockedPeersReq::default_instance() {
+  protobuf_InitDefaults_dialogs_2eproto();
+  return *internal_default_instance();
+}
+
+::google::protobuf::internal::ExplicitlyConstructed<LoadBlockedPeersReq> LoadBlockedPeersReq_default_instance_;
+
+LoadBlockedPeersReq* LoadBlockedPeersReq::New(::google::protobuf::Arena* arena) const {
+  LoadBlockedPeersReq* n = new LoadBlockedPeersReq;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void LoadBlockedPeersReq::UnsafeMergeFrom(const LoadBlockedPeersReq& from) {
+  MergeFrom(from);
+}
+void LoadBlockedPeersReq::Swap(LoadBlockedPeersReq* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void LoadBlockedPeersReq::InternalSwap(LoadBlockedPeersReq* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata LoadBlockedPeersReq::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = LoadBlockedPeersReq_descriptor_;
+  metadata.reflection = LoadBlockedPeersReq_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// LoadBlockedPeersReq
+
+inline const LoadBlockedPeersReq* LoadBlockedPeersReq::internal_default_instance() {
+  return &LoadBlockedPeersReq_default_instance_.get();
+}
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int LoadBlockedPeersRsp::kPeersFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+LoadBlockedPeersRsp::LoadBlockedPeersRsp()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_dialogs_2eproto();
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.LoadBlockedPeersRsp)
+}
+
+void LoadBlockedPeersRsp::InitAsDefaultInstance() {
+}
+
+LoadBlockedPeersRsp::LoadBlockedPeersRsp(const LoadBlockedPeersRsp& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  UnsafeMergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.LoadBlockedPeersRsp)
+}
+
+void LoadBlockedPeersRsp::SharedCtor() {
+  _cached_size_ = 0;
+}
+
+LoadBlockedPeersRsp::~LoadBlockedPeersRsp() {
+  // @@protoc_insertion_point(destructor:zproto.LoadBlockedPeersRsp)
+  SharedDtor();
+}
+
+void LoadBlockedPeersRsp::SharedDtor() {
+}
+
+void LoadBlockedPeersRsp::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* LoadBlockedPeersRsp::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return LoadBlockedPeersRsp_descriptor_;
+}
+
+const LoadBlockedPeersRsp& LoadBlockedPeersRsp::default_instance() {
+  protobuf_InitDefaults_dialogs_2eproto();
+  return *internal_default_instance();
+}
+
+::google::protobuf::internal::ExplicitlyConstructed<LoadBlockedPeersRsp> LoadBlockedPeersRsp_default_instance_;
+
+LoadBlockedPeersRsp* LoadBlockedPeersRsp::New(::google::protobuf::Arena* arena) const {
+  LoadBlockedPeersRsp* n = new LoadBlockedPeersRsp;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void LoadBlockedPeersRsp::UnsafeMergeFrom(const LoadBlockedPeersRsp& from) {
+  MergeFrom(from);
+}
+void LoadBlockedPeersRsp::Swap(LoadBlockedPeersRsp* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void LoadBlockedPeersRsp::InternalSwap(LoadBlockedPeersRsp* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata LoadBlockedPeersRsp::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = LoadBlockedPeersRsp_descriptor_;
+  metadata.reflection = LoadBlockedPeersRsp_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// LoadBlockedPeersRsp
+
+// repeated .zproto.OutPeer peers = 1;
+int LoadBlockedPeersRsp::peers_size() const {
+  return peers_.size();
+}
+void LoadBlockedPeersRsp::clear_peers() {
+  peers_.Clear();
+}
+const ::zproto::OutPeer& LoadBlockedPeersRsp::peers(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.LoadBlockedPeersRsp.peers)
+  return peers_.Get(index);
+}
+::zproto::OutPeer* LoadBlockedPeersRsp::mutable_peers(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.LoadBlockedPeersRsp.peers)
+  return peers_.Mutable(index);
+}
+::zproto::OutPeer* LoadBlockedPeersRsp::add_peers() {
+  // @@protoc_insertion_point(field_add:zproto.LoadBlockedPeersRsp.peers)
+  return peers_.Add();
+}
+::google::protobuf::RepeatedPtrField< ::zproto::OutPeer >*
+LoadBlockedPeersRsp::mutable_peers() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.LoadBlockedPeersRsp.peers)
+  return &peers_;
+}
+const ::google::protobuf::RepeatedPtrField< ::zproto::OutPeer >&
+LoadBlockedPeersRsp::peers() const {
+  // @@protoc_insertion_point(field_list:zproto.LoadBlockedPeersRsp.peers)
+  return peers_;
+}
+
+inline const LoadBlockedPeersRsp* LoadBlockedPeersRsp::internal_default_instance() {
+  return &LoadBlockedPeersRsp_default_instance_.get();
+}
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+LoadTopedPeersReq::LoadTopedPeersReq()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_dialogs_2eproto();
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.LoadTopedPeersReq)
+}
+
+void LoadTopedPeersReq::InitAsDefaultInstance() {
+}
+
+LoadTopedPeersReq::LoadTopedPeersReq(const LoadTopedPeersReq& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  UnsafeMergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.LoadTopedPeersReq)
+}
+
+void LoadTopedPeersReq::SharedCtor() {
+  _cached_size_ = 0;
+}
+
+LoadTopedPeersReq::~LoadTopedPeersReq() {
+  // @@protoc_insertion_point(destructor:zproto.LoadTopedPeersReq)
+  SharedDtor();
+}
+
+void LoadTopedPeersReq::SharedDtor() {
+}
+
+void LoadTopedPeersReq::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* LoadTopedPeersReq::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return LoadTopedPeersReq_descriptor_;
+}
+
+const LoadTopedPeersReq& LoadTopedPeersReq::default_instance() {
+  protobuf_InitDefaults_dialogs_2eproto();
+  return *internal_default_instance();
+}
+
+::google::protobuf::internal::ExplicitlyConstructed<LoadTopedPeersReq> LoadTopedPeersReq_default_instance_;
+
+LoadTopedPeersReq* LoadTopedPeersReq::New(::google::protobuf::Arena* arena) const {
+  LoadTopedPeersReq* n = new LoadTopedPeersReq;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void LoadTopedPeersReq::UnsafeMergeFrom(const LoadTopedPeersReq& from) {
+  MergeFrom(from);
+}
+void LoadTopedPeersReq::Swap(LoadTopedPeersReq* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void LoadTopedPeersReq::InternalSwap(LoadTopedPeersReq* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata LoadTopedPeersReq::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = LoadTopedPeersReq_descriptor_;
+  metadata.reflection = LoadTopedPeersReq_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// LoadTopedPeersReq
+
+inline const LoadTopedPeersReq* LoadTopedPeersReq::internal_default_instance() {
+  return &LoadTopedPeersReq_default_instance_.get();
+}
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int LoadTopedPeersRsp::kPeersFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+LoadTopedPeersRsp::LoadTopedPeersRsp()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_dialogs_2eproto();
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.LoadTopedPeersRsp)
+}
+
+void LoadTopedPeersRsp::InitAsDefaultInstance() {
+}
+
+LoadTopedPeersRsp::LoadTopedPeersRsp(const LoadTopedPeersRsp& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  UnsafeMergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.LoadTopedPeersRsp)
+}
+
+void LoadTopedPeersRsp::SharedCtor() {
+  _cached_size_ = 0;
+}
+
+LoadTopedPeersRsp::~LoadTopedPeersRsp() {
+  // @@protoc_insertion_point(destructor:zproto.LoadTopedPeersRsp)
+  SharedDtor();
+}
+
+void LoadTopedPeersRsp::SharedDtor() {
+}
+
+void LoadTopedPeersRsp::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* LoadTopedPeersRsp::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return LoadTopedPeersRsp_descriptor_;
+}
+
+const LoadTopedPeersRsp& LoadTopedPeersRsp::default_instance() {
+  protobuf_InitDefaults_dialogs_2eproto();
+  return *internal_default_instance();
+}
+
+::google::protobuf::internal::ExplicitlyConstructed<LoadTopedPeersRsp> LoadTopedPeersRsp_default_instance_;
+
+LoadTopedPeersRsp* LoadTopedPeersRsp::New(::google::protobuf::Arena* arena) const {
+  LoadTopedPeersRsp* n = new LoadTopedPeersRsp;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void LoadTopedPeersRsp::UnsafeMergeFrom(const LoadTopedPeersRsp& from) {
+  MergeFrom(from);
+}
+void LoadTopedPeersRsp::Swap(LoadTopedPeersRsp* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void LoadTopedPeersRsp::InternalSwap(LoadTopedPeersRsp* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata LoadTopedPeersRsp::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = LoadTopedPeersRsp_descriptor_;
+  metadata.reflection = LoadTopedPeersRsp_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// LoadTopedPeersRsp
+
+// repeated .zproto.OutPeer peers = 1;
+int LoadTopedPeersRsp::peers_size() const {
+  return peers_.size();
+}
+void LoadTopedPeersRsp::clear_peers() {
+  peers_.Clear();
+}
+const ::zproto::OutPeer& LoadTopedPeersRsp::peers(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.LoadTopedPeersRsp.peers)
+  return peers_.Get(index);
+}
+::zproto::OutPeer* LoadTopedPeersRsp::mutable_peers(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.LoadTopedPeersRsp.peers)
+  return peers_.Mutable(index);
+}
+::zproto::OutPeer* LoadTopedPeersRsp::add_peers() {
+  // @@protoc_insertion_point(field_add:zproto.LoadTopedPeersRsp.peers)
+  return peers_.Add();
+}
+::google::protobuf::RepeatedPtrField< ::zproto::OutPeer >*
+LoadTopedPeersRsp::mutable_peers() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.LoadTopedPeersRsp.peers)
+  return &peers_;
+}
+const ::google::protobuf::RepeatedPtrField< ::zproto::OutPeer >&
+LoadTopedPeersRsp::peers() const {
+  // @@protoc_insertion_point(field_list:zproto.LoadTopedPeersRsp.peers)
+  return peers_;
+}
+
+inline const LoadTopedPeersRsp* LoadTopedPeersRsp::internal_default_instance() {
+  return &LoadTopedPeersRsp_default_instance_.get();
+}
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+LoadDndedPeersReq::LoadDndedPeersReq()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_dialogs_2eproto();
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.LoadDndedPeersReq)
+}
+
+void LoadDndedPeersReq::InitAsDefaultInstance() {
+}
+
+LoadDndedPeersReq::LoadDndedPeersReq(const LoadDndedPeersReq& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  UnsafeMergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.LoadDndedPeersReq)
+}
+
+void LoadDndedPeersReq::SharedCtor() {
+  _cached_size_ = 0;
+}
+
+LoadDndedPeersReq::~LoadDndedPeersReq() {
+  // @@protoc_insertion_point(destructor:zproto.LoadDndedPeersReq)
+  SharedDtor();
+}
+
+void LoadDndedPeersReq::SharedDtor() {
+}
+
+void LoadDndedPeersReq::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* LoadDndedPeersReq::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return LoadDndedPeersReq_descriptor_;
+}
+
+const LoadDndedPeersReq& LoadDndedPeersReq::default_instance() {
+  protobuf_InitDefaults_dialogs_2eproto();
+  return *internal_default_instance();
+}
+
+::google::protobuf::internal::ExplicitlyConstructed<LoadDndedPeersReq> LoadDndedPeersReq_default_instance_;
+
+LoadDndedPeersReq* LoadDndedPeersReq::New(::google::protobuf::Arena* arena) const {
+  LoadDndedPeersReq* n = new LoadDndedPeersReq;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void LoadDndedPeersReq::UnsafeMergeFrom(const LoadDndedPeersReq& from) {
+  MergeFrom(from);
+}
+void LoadDndedPeersReq::Swap(LoadDndedPeersReq* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void LoadDndedPeersReq::InternalSwap(LoadDndedPeersReq* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata LoadDndedPeersReq::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = LoadDndedPeersReq_descriptor_;
+  metadata.reflection = LoadDndedPeersReq_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// LoadDndedPeersReq
+
+inline const LoadDndedPeersReq* LoadDndedPeersReq::internal_default_instance() {
+  return &LoadDndedPeersReq_default_instance_.get();
+}
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int LoadDndedPeersRsp::kPeersFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+LoadDndedPeersRsp::LoadDndedPeersRsp()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_dialogs_2eproto();
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.LoadDndedPeersRsp)
+}
+
+void LoadDndedPeersRsp::InitAsDefaultInstance() {
+}
+
+LoadDndedPeersRsp::LoadDndedPeersRsp(const LoadDndedPeersRsp& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  UnsafeMergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.LoadDndedPeersRsp)
+}
+
+void LoadDndedPeersRsp::SharedCtor() {
+  _cached_size_ = 0;
+}
+
+LoadDndedPeersRsp::~LoadDndedPeersRsp() {
+  // @@protoc_insertion_point(destructor:zproto.LoadDndedPeersRsp)
+  SharedDtor();
+}
+
+void LoadDndedPeersRsp::SharedDtor() {
+}
+
+void LoadDndedPeersRsp::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* LoadDndedPeersRsp::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return LoadDndedPeersRsp_descriptor_;
+}
+
+const LoadDndedPeersRsp& LoadDndedPeersRsp::default_instance() {
+  protobuf_InitDefaults_dialogs_2eproto();
+  return *internal_default_instance();
+}
+
+::google::protobuf::internal::ExplicitlyConstructed<LoadDndedPeersRsp> LoadDndedPeersRsp_default_instance_;
+
+LoadDndedPeersRsp* LoadDndedPeersRsp::New(::google::protobuf::Arena* arena) const {
+  LoadDndedPeersRsp* n = new LoadDndedPeersRsp;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void LoadDndedPeersRsp::UnsafeMergeFrom(const LoadDndedPeersRsp& from) {
+  MergeFrom(from);
+}
+void LoadDndedPeersRsp::Swap(LoadDndedPeersRsp* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void LoadDndedPeersRsp::InternalSwap(LoadDndedPeersRsp* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata LoadDndedPeersRsp::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = LoadDndedPeersRsp_descriptor_;
+  metadata.reflection = LoadDndedPeersRsp_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// LoadDndedPeersRsp
+
+// repeated .zproto.OutPeer peers = 1;
+int LoadDndedPeersRsp::peers_size() const {
+  return peers_.size();
+}
+void LoadDndedPeersRsp::clear_peers() {
+  peers_.Clear();
+}
+const ::zproto::OutPeer& LoadDndedPeersRsp::peers(int index) const {
+  // @@protoc_insertion_point(field_get:zproto.LoadDndedPeersRsp.peers)
+  return peers_.Get(index);
+}
+::zproto::OutPeer* LoadDndedPeersRsp::mutable_peers(int index) {
+  // @@protoc_insertion_point(field_mutable:zproto.LoadDndedPeersRsp.peers)
+  return peers_.Mutable(index);
+}
+::zproto::OutPeer* LoadDndedPeersRsp::add_peers() {
+  // @@protoc_insertion_point(field_add:zproto.LoadDndedPeersRsp.peers)
+  return peers_.Add();
+}
+::google::protobuf::RepeatedPtrField< ::zproto::OutPeer >*
+LoadDndedPeersRsp::mutable_peers() {
+  // @@protoc_insertion_point(field_mutable_list:zproto.LoadDndedPeersRsp.peers)
+  return &peers_;
+}
+const ::google::protobuf::RepeatedPtrField< ::zproto::OutPeer >&
+LoadDndedPeersRsp::peers() const {
+  // @@protoc_insertion_point(field_list:zproto.LoadDndedPeersRsp.peers)
+  return peers_;
+}
+
+inline const LoadDndedPeersRsp* LoadDndedPeersRsp::internal_default_instance() {
+  return &LoadDndedPeersRsp_default_instance_.get();
+}
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int PeerBlockedNotify::kPeerFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+PeerBlockedNotify::PeerBlockedNotify()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_dialogs_2eproto();
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.PeerBlockedNotify)
+}
+
+void PeerBlockedNotify::InitAsDefaultInstance() {
+  peer_ = const_cast< ::zproto::Peer*>(
+      ::zproto::Peer::internal_default_instance());
+}
+
+PeerBlockedNotify::PeerBlockedNotify(const PeerBlockedNotify& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  UnsafeMergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.PeerBlockedNotify)
+}
+
+void PeerBlockedNotify::SharedCtor() {
+  peer_ = NULL;
+  _cached_size_ = 0;
+}
+
+PeerBlockedNotify::~PeerBlockedNotify() {
+  // @@protoc_insertion_point(destructor:zproto.PeerBlockedNotify)
+  SharedDtor();
+}
+
+void PeerBlockedNotify::SharedDtor() {
+  if (this != &PeerBlockedNotify_default_instance_.get()) {
+    delete peer_;
+  }
+}
+
+void PeerBlockedNotify::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* PeerBlockedNotify::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return PeerBlockedNotify_descriptor_;
+}
+
+const PeerBlockedNotify& PeerBlockedNotify::default_instance() {
+  protobuf_InitDefaults_dialogs_2eproto();
+  return *internal_default_instance();
+}
+
+::google::protobuf::internal::ExplicitlyConstructed<PeerBlockedNotify> PeerBlockedNotify_default_instance_;
+
+PeerBlockedNotify* PeerBlockedNotify::New(::google::protobuf::Arena* arena) const {
+  PeerBlockedNotify* n = new PeerBlockedNotify;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void PeerBlockedNotify::UnsafeMergeFrom(const PeerBlockedNotify& from) {
+  MergeFrom(from);
+}
+void PeerBlockedNotify::Swap(PeerBlockedNotify* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void PeerBlockedNotify::InternalSwap(PeerBlockedNotify* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata PeerBlockedNotify::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = PeerBlockedNotify_descriptor_;
+  metadata.reflection = PeerBlockedNotify_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// PeerBlockedNotify
+
+// optional .zproto.Peer peer = 1;
+bool PeerBlockedNotify::has_peer() const {
+  return this != internal_default_instance() && peer_ != NULL;
+}
+void PeerBlockedNotify::clear_peer() {
+  if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
+  peer_ = NULL;
+}
+const ::zproto::Peer& PeerBlockedNotify::peer() const {
+  // @@protoc_insertion_point(field_get:zproto.PeerBlockedNotify.peer)
+  return peer_ != NULL ? *peer_
+                         : *::zproto::Peer::internal_default_instance();
+}
+::zproto::Peer* PeerBlockedNotify::mutable_peer() {
+  
+  if (peer_ == NULL) {
+    peer_ = new ::zproto::Peer;
+  }
+  // @@protoc_insertion_point(field_mutable:zproto.PeerBlockedNotify.peer)
+  return peer_;
+}
+::zproto::Peer* PeerBlockedNotify::release_peer() {
+  // @@protoc_insertion_point(field_release:zproto.PeerBlockedNotify.peer)
+  
+  ::zproto::Peer* temp = peer_;
+  peer_ = NULL;
+  return temp;
+}
+void PeerBlockedNotify::set_allocated_peer(::zproto::Peer* peer) {
+  delete peer_;
+  peer_ = peer;
+  if (peer) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zproto.PeerBlockedNotify.peer)
+}
+
+inline const PeerBlockedNotify* PeerBlockedNotify::internal_default_instance() {
+  return &PeerBlockedNotify_default_instance_.get();
+}
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int PeerUnblockedNotify::kPeerFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+PeerUnblockedNotify::PeerUnblockedNotify()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_dialogs_2eproto();
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.PeerUnblockedNotify)
+}
+
+void PeerUnblockedNotify::InitAsDefaultInstance() {
+  peer_ = const_cast< ::zproto::Peer*>(
+      ::zproto::Peer::internal_default_instance());
+}
+
+PeerUnblockedNotify::PeerUnblockedNotify(const PeerUnblockedNotify& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  UnsafeMergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.PeerUnblockedNotify)
+}
+
+void PeerUnblockedNotify::SharedCtor() {
+  peer_ = NULL;
+  _cached_size_ = 0;
+}
+
+PeerUnblockedNotify::~PeerUnblockedNotify() {
+  // @@protoc_insertion_point(destructor:zproto.PeerUnblockedNotify)
+  SharedDtor();
+}
+
+void PeerUnblockedNotify::SharedDtor() {
+  if (this != &PeerUnblockedNotify_default_instance_.get()) {
+    delete peer_;
+  }
+}
+
+void PeerUnblockedNotify::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* PeerUnblockedNotify::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return PeerUnblockedNotify_descriptor_;
+}
+
+const PeerUnblockedNotify& PeerUnblockedNotify::default_instance() {
+  protobuf_InitDefaults_dialogs_2eproto();
+  return *internal_default_instance();
+}
+
+::google::protobuf::internal::ExplicitlyConstructed<PeerUnblockedNotify> PeerUnblockedNotify_default_instance_;
+
+PeerUnblockedNotify* PeerUnblockedNotify::New(::google::protobuf::Arena* arena) const {
+  PeerUnblockedNotify* n = new PeerUnblockedNotify;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void PeerUnblockedNotify::UnsafeMergeFrom(const PeerUnblockedNotify& from) {
+  MergeFrom(from);
+}
+void PeerUnblockedNotify::Swap(PeerUnblockedNotify* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void PeerUnblockedNotify::InternalSwap(PeerUnblockedNotify* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata PeerUnblockedNotify::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = PeerUnblockedNotify_descriptor_;
+  metadata.reflection = PeerUnblockedNotify_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// PeerUnblockedNotify
+
+// optional .zproto.Peer peer = 1;
+bool PeerUnblockedNotify::has_peer() const {
+  return this != internal_default_instance() && peer_ != NULL;
+}
+void PeerUnblockedNotify::clear_peer() {
+  if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
+  peer_ = NULL;
+}
+const ::zproto::Peer& PeerUnblockedNotify::peer() const {
+  // @@protoc_insertion_point(field_get:zproto.PeerUnblockedNotify.peer)
+  return peer_ != NULL ? *peer_
+                         : *::zproto::Peer::internal_default_instance();
+}
+::zproto::Peer* PeerUnblockedNotify::mutable_peer() {
+  
+  if (peer_ == NULL) {
+    peer_ = new ::zproto::Peer;
+  }
+  // @@protoc_insertion_point(field_mutable:zproto.PeerUnblockedNotify.peer)
+  return peer_;
+}
+::zproto::Peer* PeerUnblockedNotify::release_peer() {
+  // @@protoc_insertion_point(field_release:zproto.PeerUnblockedNotify.peer)
+  
+  ::zproto::Peer* temp = peer_;
+  peer_ = NULL;
+  return temp;
+}
+void PeerUnblockedNotify::set_allocated_peer(::zproto::Peer* peer) {
+  delete peer_;
+  peer_ = peer;
+  if (peer) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zproto.PeerUnblockedNotify.peer)
+}
+
+inline const PeerUnblockedNotify* PeerUnblockedNotify::internal_default_instance() {
+  return &PeerUnblockedNotify_default_instance_.get();
+}
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int PeerTopedNotify::kPeerFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+PeerTopedNotify::PeerTopedNotify()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_dialogs_2eproto();
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.PeerTopedNotify)
+}
+
+void PeerTopedNotify::InitAsDefaultInstance() {
+  peer_ = const_cast< ::zproto::Peer*>(
+      ::zproto::Peer::internal_default_instance());
+}
+
+PeerTopedNotify::PeerTopedNotify(const PeerTopedNotify& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  UnsafeMergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.PeerTopedNotify)
+}
+
+void PeerTopedNotify::SharedCtor() {
+  peer_ = NULL;
+  _cached_size_ = 0;
+}
+
+PeerTopedNotify::~PeerTopedNotify() {
+  // @@protoc_insertion_point(destructor:zproto.PeerTopedNotify)
+  SharedDtor();
+}
+
+void PeerTopedNotify::SharedDtor() {
+  if (this != &PeerTopedNotify_default_instance_.get()) {
+    delete peer_;
+  }
+}
+
+void PeerTopedNotify::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* PeerTopedNotify::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return PeerTopedNotify_descriptor_;
+}
+
+const PeerTopedNotify& PeerTopedNotify::default_instance() {
+  protobuf_InitDefaults_dialogs_2eproto();
+  return *internal_default_instance();
+}
+
+::google::protobuf::internal::ExplicitlyConstructed<PeerTopedNotify> PeerTopedNotify_default_instance_;
+
+PeerTopedNotify* PeerTopedNotify::New(::google::protobuf::Arena* arena) const {
+  PeerTopedNotify* n = new PeerTopedNotify;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void PeerTopedNotify::UnsafeMergeFrom(const PeerTopedNotify& from) {
+  MergeFrom(from);
+}
+void PeerTopedNotify::Swap(PeerTopedNotify* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void PeerTopedNotify::InternalSwap(PeerTopedNotify* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata PeerTopedNotify::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = PeerTopedNotify_descriptor_;
+  metadata.reflection = PeerTopedNotify_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// PeerTopedNotify
+
+// optional .zproto.Peer peer = 1;
+bool PeerTopedNotify::has_peer() const {
+  return this != internal_default_instance() && peer_ != NULL;
+}
+void PeerTopedNotify::clear_peer() {
+  if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
+  peer_ = NULL;
+}
+const ::zproto::Peer& PeerTopedNotify::peer() const {
+  // @@protoc_insertion_point(field_get:zproto.PeerTopedNotify.peer)
+  return peer_ != NULL ? *peer_
+                         : *::zproto::Peer::internal_default_instance();
+}
+::zproto::Peer* PeerTopedNotify::mutable_peer() {
+  
+  if (peer_ == NULL) {
+    peer_ = new ::zproto::Peer;
+  }
+  // @@protoc_insertion_point(field_mutable:zproto.PeerTopedNotify.peer)
+  return peer_;
+}
+::zproto::Peer* PeerTopedNotify::release_peer() {
+  // @@protoc_insertion_point(field_release:zproto.PeerTopedNotify.peer)
+  
+  ::zproto::Peer* temp = peer_;
+  peer_ = NULL;
+  return temp;
+}
+void PeerTopedNotify::set_allocated_peer(::zproto::Peer* peer) {
+  delete peer_;
+  peer_ = peer;
+  if (peer) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zproto.PeerTopedNotify.peer)
+}
+
+inline const PeerTopedNotify* PeerTopedNotify::internal_default_instance() {
+  return &PeerTopedNotify_default_instance_.get();
+}
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int PeerUntopedNotify::kPeerFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+PeerUntopedNotify::PeerUntopedNotify()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_dialogs_2eproto();
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.PeerUntopedNotify)
+}
+
+void PeerUntopedNotify::InitAsDefaultInstance() {
+  peer_ = const_cast< ::zproto::Peer*>(
+      ::zproto::Peer::internal_default_instance());
+}
+
+PeerUntopedNotify::PeerUntopedNotify(const PeerUntopedNotify& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  UnsafeMergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.PeerUntopedNotify)
+}
+
+void PeerUntopedNotify::SharedCtor() {
+  peer_ = NULL;
+  _cached_size_ = 0;
+}
+
+PeerUntopedNotify::~PeerUntopedNotify() {
+  // @@protoc_insertion_point(destructor:zproto.PeerUntopedNotify)
+  SharedDtor();
+}
+
+void PeerUntopedNotify::SharedDtor() {
+  if (this != &PeerUntopedNotify_default_instance_.get()) {
+    delete peer_;
+  }
+}
+
+void PeerUntopedNotify::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* PeerUntopedNotify::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return PeerUntopedNotify_descriptor_;
+}
+
+const PeerUntopedNotify& PeerUntopedNotify::default_instance() {
+  protobuf_InitDefaults_dialogs_2eproto();
+  return *internal_default_instance();
+}
+
+::google::protobuf::internal::ExplicitlyConstructed<PeerUntopedNotify> PeerUntopedNotify_default_instance_;
+
+PeerUntopedNotify* PeerUntopedNotify::New(::google::protobuf::Arena* arena) const {
+  PeerUntopedNotify* n = new PeerUntopedNotify;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void PeerUntopedNotify::UnsafeMergeFrom(const PeerUntopedNotify& from) {
+  MergeFrom(from);
+}
+void PeerUntopedNotify::Swap(PeerUntopedNotify* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void PeerUntopedNotify::InternalSwap(PeerUntopedNotify* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata PeerUntopedNotify::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = PeerUntopedNotify_descriptor_;
+  metadata.reflection = PeerUntopedNotify_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// PeerUntopedNotify
+
+// optional .zproto.Peer peer = 1;
+bool PeerUntopedNotify::has_peer() const {
+  return this != internal_default_instance() && peer_ != NULL;
+}
+void PeerUntopedNotify::clear_peer() {
+  if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
+  peer_ = NULL;
+}
+const ::zproto::Peer& PeerUntopedNotify::peer() const {
+  // @@protoc_insertion_point(field_get:zproto.PeerUntopedNotify.peer)
+  return peer_ != NULL ? *peer_
+                         : *::zproto::Peer::internal_default_instance();
+}
+::zproto::Peer* PeerUntopedNotify::mutable_peer() {
+  
+  if (peer_ == NULL) {
+    peer_ = new ::zproto::Peer;
+  }
+  // @@protoc_insertion_point(field_mutable:zproto.PeerUntopedNotify.peer)
+  return peer_;
+}
+::zproto::Peer* PeerUntopedNotify::release_peer() {
+  // @@protoc_insertion_point(field_release:zproto.PeerUntopedNotify.peer)
+  
+  ::zproto::Peer* temp = peer_;
+  peer_ = NULL;
+  return temp;
+}
+void PeerUntopedNotify::set_allocated_peer(::zproto::Peer* peer) {
+  delete peer_;
+  peer_ = peer;
+  if (peer) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zproto.PeerUntopedNotify.peer)
+}
+
+inline const PeerUntopedNotify* PeerUntopedNotify::internal_default_instance() {
+  return &PeerUntopedNotify_default_instance_.get();
+}
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int PeerDndedNotify::kPeerFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+PeerDndedNotify::PeerDndedNotify()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_dialogs_2eproto();
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.PeerDndedNotify)
+}
+
+void PeerDndedNotify::InitAsDefaultInstance() {
+  peer_ = const_cast< ::zproto::Peer*>(
+      ::zproto::Peer::internal_default_instance());
+}
+
+PeerDndedNotify::PeerDndedNotify(const PeerDndedNotify& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  UnsafeMergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.PeerDndedNotify)
+}
+
+void PeerDndedNotify::SharedCtor() {
+  peer_ = NULL;
+  _cached_size_ = 0;
+}
+
+PeerDndedNotify::~PeerDndedNotify() {
+  // @@protoc_insertion_point(destructor:zproto.PeerDndedNotify)
+  SharedDtor();
+}
+
+void PeerDndedNotify::SharedDtor() {
+  if (this != &PeerDndedNotify_default_instance_.get()) {
+    delete peer_;
+  }
+}
+
+void PeerDndedNotify::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* PeerDndedNotify::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return PeerDndedNotify_descriptor_;
+}
+
+const PeerDndedNotify& PeerDndedNotify::default_instance() {
+  protobuf_InitDefaults_dialogs_2eproto();
+  return *internal_default_instance();
+}
+
+::google::protobuf::internal::ExplicitlyConstructed<PeerDndedNotify> PeerDndedNotify_default_instance_;
+
+PeerDndedNotify* PeerDndedNotify::New(::google::protobuf::Arena* arena) const {
+  PeerDndedNotify* n = new PeerDndedNotify;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void PeerDndedNotify::UnsafeMergeFrom(const PeerDndedNotify& from) {
+  MergeFrom(from);
+}
+void PeerDndedNotify::Swap(PeerDndedNotify* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void PeerDndedNotify::InternalSwap(PeerDndedNotify* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata PeerDndedNotify::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = PeerDndedNotify_descriptor_;
+  metadata.reflection = PeerDndedNotify_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// PeerDndedNotify
+
+// optional .zproto.Peer peer = 1;
+bool PeerDndedNotify::has_peer() const {
+  return this != internal_default_instance() && peer_ != NULL;
+}
+void PeerDndedNotify::clear_peer() {
+  if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
+  peer_ = NULL;
+}
+const ::zproto::Peer& PeerDndedNotify::peer() const {
+  // @@protoc_insertion_point(field_get:zproto.PeerDndedNotify.peer)
+  return peer_ != NULL ? *peer_
+                         : *::zproto::Peer::internal_default_instance();
+}
+::zproto::Peer* PeerDndedNotify::mutable_peer() {
+  
+  if (peer_ == NULL) {
+    peer_ = new ::zproto::Peer;
+  }
+  // @@protoc_insertion_point(field_mutable:zproto.PeerDndedNotify.peer)
+  return peer_;
+}
+::zproto::Peer* PeerDndedNotify::release_peer() {
+  // @@protoc_insertion_point(field_release:zproto.PeerDndedNotify.peer)
+  
+  ::zproto::Peer* temp = peer_;
+  peer_ = NULL;
+  return temp;
+}
+void PeerDndedNotify::set_allocated_peer(::zproto::Peer* peer) {
+  delete peer_;
+  peer_ = peer;
+  if (peer) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zproto.PeerDndedNotify.peer)
+}
+
+inline const PeerDndedNotify* PeerDndedNotify::internal_default_instance() {
+  return &PeerDndedNotify_default_instance_.get();
+}
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int PeerUndndedNotify::kPeerFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+PeerUndndedNotify::PeerUndndedNotify()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (this != internal_default_instance()) protobuf_InitDefaults_dialogs_2eproto();
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zproto.PeerUndndedNotify)
+}
+
+void PeerUndndedNotify::InitAsDefaultInstance() {
+  peer_ = const_cast< ::zproto::Peer*>(
+      ::zproto::Peer::internal_default_instance());
+}
+
+PeerUndndedNotify::PeerUndndedNotify(const PeerUndndedNotify& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  UnsafeMergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:zproto.PeerUndndedNotify)
+}
+
+void PeerUndndedNotify::SharedCtor() {
+  peer_ = NULL;
+  _cached_size_ = 0;
+}
+
+PeerUndndedNotify::~PeerUndndedNotify() {
+  // @@protoc_insertion_point(destructor:zproto.PeerUndndedNotify)
+  SharedDtor();
+}
+
+void PeerUndndedNotify::SharedDtor() {
+  if (this != &PeerUndndedNotify_default_instance_.get()) {
+    delete peer_;
+  }
+}
+
+void PeerUndndedNotify::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* PeerUndndedNotify::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return PeerUndndedNotify_descriptor_;
+}
+
+const PeerUndndedNotify& PeerUndndedNotify::default_instance() {
+  protobuf_InitDefaults_dialogs_2eproto();
+  return *internal_default_instance();
+}
+
+::google::protobuf::internal::ExplicitlyConstructed<PeerUndndedNotify> PeerUndndedNotify_default_instance_;
+
+PeerUndndedNotify* PeerUndndedNotify::New(::google::protobuf::Arena* arena) const {
+  PeerUndndedNotify* n = new PeerUndndedNotify;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void PeerUndndedNotify::UnsafeMergeFrom(const PeerUndndedNotify& from) {
+  MergeFrom(from);
+}
+void PeerUndndedNotify::Swap(PeerUndndedNotify* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void PeerUndndedNotify::InternalSwap(PeerUndndedNotify* other) {
+  GetReflection()->Swap(this, other);}
+
+::google::protobuf::Metadata PeerUndndedNotify::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = PeerUndndedNotify_descriptor_;
+  metadata.reflection = PeerUndndedNotify_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// PeerUndndedNotify
+
+// optional .zproto.Peer peer = 1;
+bool PeerUndndedNotify::has_peer() const {
+  return this != internal_default_instance() && peer_ != NULL;
+}
+void PeerUndndedNotify::clear_peer() {
+  if (GetArenaNoVirtual() == NULL && peer_ != NULL) delete peer_;
+  peer_ = NULL;
+}
+const ::zproto::Peer& PeerUndndedNotify::peer() const {
+  // @@protoc_insertion_point(field_get:zproto.PeerUndndedNotify.peer)
+  return peer_ != NULL ? *peer_
+                         : *::zproto::Peer::internal_default_instance();
+}
+::zproto::Peer* PeerUndndedNotify::mutable_peer() {
+  
+  if (peer_ == NULL) {
+    peer_ = new ::zproto::Peer;
+  }
+  // @@protoc_insertion_point(field_mutable:zproto.PeerUndndedNotify.peer)
+  return peer_;
+}
+::zproto::Peer* PeerUndndedNotify::release_peer() {
+  // @@protoc_insertion_point(field_release:zproto.PeerUndndedNotify.peer)
+  
+  ::zproto::Peer* temp = peer_;
+  peer_ = NULL;
+  return temp;
+}
+void PeerUndndedNotify::set_allocated_peer(::zproto::Peer* peer) {
+  delete peer_;
+  peer_ = peer;
+  if (peer) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zproto.PeerUndndedNotify.peer)
+}
+
+inline const PeerUndndedNotify* PeerUndndedNotify::internal_default_instance() {
+  return &PeerUndndedNotify_default_instance_.get();
 }
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
