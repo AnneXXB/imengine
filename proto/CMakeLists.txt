@@ -36,6 +36,8 @@ api/cc/device.pb.cc
 api/cc/device.pb.h
 api/cc/files.pb.cc
 api/cc/files.pb.h
+api/cc/dialogs.pb.cc
+api/cc/dialogs.pb.h
 api/cc/group_base.pb.cc
 api/cc/group_base.pb.h
 api/cc/groups.pb.cc
@@ -68,6 +70,7 @@ api/proto/configs.proto
 api/proto/counters.proto
 api/proto/device.proto
 api/proto/files.proto
+api/proto/dialogs.proto
 api/proto/group_base.proto
 api/proto/groups.proto
 api/proto/invites.proto

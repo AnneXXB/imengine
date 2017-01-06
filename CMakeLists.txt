@@ -68,6 +68,7 @@ ${BOOST_LIBRARYDIR}
 ${MYSQL_LIB_DIR}
 ${OPENSSL_LIBRARYDIR}
 ${PROJECT_BINARY_DIR}/lib
+/usr/local/lib
 )
 
 #set(CMAKE_EXE_LINKER_FLAGS "-lpthread -lrt -ldl")
