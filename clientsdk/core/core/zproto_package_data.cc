@@ -15,25 +15,5 @@
  * limitations under the License.
  */
 
-syntax = "proto3";
-package zproto;
-
-option java_package = "com.zchat.engine.zproto";
-option java_outer_classname = "ZProtoDevice";
-option optimize_for = CODE_SIZE;
-
-// Device Info
-
-// Submiting various information about device for providing better experience.
-// For example, getting timezone or preffered languages
-
-// Notifying about device information
-// NotifyAboutDeviceInfoReq --> VoidRsp
-message NotifyAboutDeviceInfoReq {
-  // int32 COMMAND_ID = 229;
-  repeated string preferred_languages = 1; // Preferred languages
-  string time_zone = 2; // Device Time Zone
-}
-
-// VoidRsp
+#include "core/zproto_package_data.h"
 

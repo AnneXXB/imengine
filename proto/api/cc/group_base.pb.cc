@@ -173,6 +173,7 @@ void protobuf_InitDefaults_group_5fbase_2eproto_impl() {
   ::google::protobuf::internal::GetEmptyString();
   Group_default_instance_.DefaultConstruct();
   ::google::protobuf::internal::GetEmptyString();
+  ::google::protobuf::internal::GetEmptyString();
   GroupFull_default_instance_.DefaultConstruct();
   Member_default_instance_.get_mutable()->InitAsDefaultInstance();
   Group_default_instance_.get_mutable()->InitAsDefaultInstance();

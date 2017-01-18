@@ -25,6 +25,7 @@
 // #include "proto/zproto/zproto_api_message_types.h"
 
 int AuthServiceImpl::StartTestingAuth(const zproto::StartTestingAuthReq& request, zproto::AuthRsp* response) {
+  LOG(INFO) << "StartTestingAuth - " << request.Utf8DebugString();
   UserDO user_do;
   UserDAO::GetInstance().GetUserByUserID(1,
                                          request.user_id(),
@@ -41,6 +42,8 @@ int AuthServiceImpl::StartTestingAuth(const zproto::StartTestingAuthReq& request
 
 ///////////////////////////////////////////////////////////////////////////////
 int AuthServiceImpl::StartTokenAuth(const zproto::StartTokenAuthReq& request, zproto::AuthRsp* response) {
+  LOG(INFO) << "StartTokenAuth - " << request.Utf8DebugString();
+
   UserDO user_do;
   UserDAO::GetInstance().GetUserByNamePasswd(1,
                                              request.api_key(),

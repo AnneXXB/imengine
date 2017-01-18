@@ -44,7 +44,7 @@ REGISTER_HTTP_HANDLER(StatusHttpHandler, "/query", Query);
  }
  */
 
-void Query(const proxygen::HTTPMessage& headers, const folly::IOBuf* body, proxygen::ResponseBuilder* r) {
+void Query(const proxygen::HTTPMessage& headers, folly::IOBufQueue* body, proxygen::ResponseBuilder* r) {
   std::string uids = headers.getDecodedQueryParam("uids");
   std::string app_id = headers.getDecodedQueryParam("app_id");
   

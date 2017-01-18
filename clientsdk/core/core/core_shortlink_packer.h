@@ -15,25 +15,12 @@
  * limitations under the License.
  */
 
-syntax = "proto3";
-package zproto;
+#ifndef CORE_CORE_SHORTLINK_PACKER_H_
+#define CORE_CORE_SHORTLINK_PACKER_H_
 
-option java_package = "com.zchat.engine.zproto";
-option java_outer_classname = "ZProtoDevice";
-option optimize_for = CODE_SIZE;
+#include "mars/comm/http.h"
 
-// Device Info
+class AutoBuffer;
+void shortlink_pack(const std::string& _url, const std::map<std::string, std::string>& _headers, const AutoBuffer& _body, AutoBuffer& _out_buff);
 
-// Submiting various information about device for providing better experience.
-// For example, getting timezone or preffered languages
-
-// Notifying about device information
-// NotifyAboutDeviceInfoReq --> VoidRsp
-message NotifyAboutDeviceInfoReq {
-  // int32 COMMAND_ID = 229;
-  repeated string preferred_languages = 1; // Preferred languages
-  string time_zone = 2; // Device Time Zone
-}
-
-// VoidRsp
-
+#endif //CORE_CORE_SHORTLINK_PACKER_H_

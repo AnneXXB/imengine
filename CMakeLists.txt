@@ -75,7 +75,8 @@ ${PROJECT_BINARY_DIR}/lib
 
 add_subdirectory(nebula/nebula)
 add_subdirectory(proto)
+#add_subdirectory(clientsdk)
 add_subdirectory(server)
-add_subdirectory(biz_model)
-add_subdirectory(dal)
-add_subdirectory(client/client)
+#add_subdirectory(biz_model)
+#add_subdirectory(dal)
+#add_subdirectory(client/client)

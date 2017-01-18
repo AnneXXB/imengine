@@ -76,7 +76,9 @@ int GateServerHandler::OnDataReceived(std::shared_ptr<PackageMessage> message_da
 }
 
 int GateServerHandler::OnConnectionClosed() {
-  NotifyClientOffline();
+  if (state_ >= State::AUTH) {
+    NotifyClientOffline();
+  }
   
   state_ = State::CLOSING;
   return 0;

@@ -26,6 +26,8 @@ zproto/proto/peers.proto
 #zproto/proto/presences.proto
 
 # 客户端交互协议
+api/cc/api_method_ids.pb.cc
+api/cc/api_method_ids.pb.h
 api/cc/auth.pb.cc
 api/cc/auth.pb.h
 api/cc/configs.pb.cc
@@ -65,6 +67,7 @@ api/cc/users.pb.h
 api/cc/weak.pb.cc
 api/cc/weak.pb.h
 
+api/proto/api_method_ids.proto
 api/proto/auth.proto
 api/proto/configs.proto
 api/proto/counters.proto
@@ -85,6 +88,8 @@ api/proto/users.proto
 api/proto/weak.proto
 api/proto/types.proto
 
+s2s/cc/s2s_method_ids.pb.cc
+s2s/cc/s2s_method_ids.pb.h
 s2s/cc/servers.pb.cc
 s2s/cc/servers.pb.h
 s2s/cc/presences.pb.cc
@@ -92,7 +97,6 @@ s2s/cc/presences.pb.h
 
 s2s/proto/servers.proto
 s2s/proto/presences.proto
-
 )
 
 add_library(proto STATIC ${PROTO_SRC_LIST})

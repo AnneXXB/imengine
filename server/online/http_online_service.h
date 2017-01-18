@@ -20,7 +20,7 @@
 
 #include "nebula/net/handler/http/http_request_handler.h"
 
-void Query(const proxygen::HTTPMessage& headers, const folly::IOBuf* body, proxygen::ResponseBuilder* r);
+void Query(const proxygen::HTTPMessage& headers, folly::IOBufQueue*, proxygen::ResponseBuilder* r);
 
 
 #endif // ONLINE_HTTP_ONLINE_SERVICE_H_
