@@ -25,6 +25,7 @@
 #include "proto/api/cc/misc.pb.h"
 #include "proto/api/cc/messaging.pb.h"
 #include "proto/api/cc/groups.pb.h"
+#include "proto/api/cc/sequence.pb.h"
 
 #include "nebula/net/zproto/api_message_box.h"
 #include "nebula/net/rpc/zrpc_service_util.h"
@@ -95,6 +96,43 @@ int DoConnect(const std::vector<folly::StringPiece>& command_lines) {
     }
   });
  */
+  return 0;
+}
+
+int DoGetState(const std::vector<folly::StringPiece>& command_lines) {
+  zproto::GetStateReq get_state_req;
+  get_state_req.add_optimizations(zproto::NONE);
+  ZRpcClientCall<zproto::SeqRsp>("gate_client",
+                                              MakeRpcRequest(get_state_req),
+                                              [] (std::shared_ptr<ApiRpcOk<zproto::SeqRsp>> seq_rsp,
+                                                  ProtoRpcResponsePtr rpc_error) -> int {
+                                                if (rpc_error) {
+                                                  LOG(ERROR) << "DoGetState - rpc_error: " << rpc_error->ToString();
+                                                } else {
+                                                  LOG(INFO) << "DoGetState - seq_rsp: " << seq_rsp->ToString();
+                                                }
+                                                return 0;
+                                              });
+
+  return 0;
+}
+
+int DoGetDifference(const std::vector<folly::StringPiece>& command_lines) {
+  zproto::GetDifferenceReq get_difference_req;
+  get_difference_req.set_seq(folly::to<int64_t>(command_lines[1]));
+
+  ZRpcClientCall<zproto::GetDifferenceRsp>("gate_client",
+                                      MakeRpcRequest(get_difference_req),
+                                      [] (std::shared_ptr<ApiRpcOk<zproto::GetDifferenceRsp>> get_difference_rsp,
+                                          ProtoRpcResponsePtr rpc_error) -> int {
+                                        if (rpc_error) {
+                                          LOG(ERROR) << "DoGetState - rpc_error: " << rpc_error->ToString();
+                                        } else {
+                                          LOG(INFO) << "DoGetState - seq_rsp: " << get_difference_rsp->ToString();
+                                        }
+                                        return 0;
+                                      });
+
   return 0;
 }
 
@@ -357,6 +395,8 @@ int DoQuit(const std::vector<folly::StringPiece>& command_lines) {
 CmdEntry g_cmds[] = {
   // login/logout
   {"connect", "connect serv_ip serv_port user_id", 4, 4, DoConnect},
+  {"get_state", "get_state", 1, 1, DoGetState},
+  {"get_difference", "get_difference", 2, 2, DoGetDifference},
   {"create_chat_dialog", "create_chat_dialog user_id", 2, 2, DoCreateChatDialog},
   {"load_dialogs", "load_dialogs", 1, 1, DoLoadDialogs},
   {"block_peer", "block_peer peer_id peer_type", 3, 3, DoBlockPeer},
@@ -420,6 +460,3 @@ int DoClientCommand(const std::vector<folly::StringPiece>& command_lines) {
   
   return cmd->handler(command_lines);
 }
-
-
-

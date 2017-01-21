@@ -346,10 +346,11 @@ bool ZProtoTaskManager::OnLonglinkIdentifyResponse(const AutoBuffer& response_bu
   (*start_testing_auth_req)->set_user_id("10000");
 
   DoCallRpcRequest<zproto::AuthRsp>(start_testing_auth_req,
-                                    [&] (boost::shared_ptr<ApiRpcOk<zproto::AuthRsp>>,
-                                        boost::shared_ptr<ProtoRpcResponse>) -> int {
+                                    [&] (boost::shared_ptr<ApiRpcOk<zproto::AuthRsp>> rpc_ok,
+                                        boost::shared_ptr<ProtoRpcResponse> rpc_error) -> int {
                                       ScopedLock g(lock_);
                                       logoned_ = true;
+                                      
                                       return 0;
                                     });
   return true;
@@ -365,4 +366,18 @@ bool ZProtoTaskManager::IsLogoned() {
   return logoned_;
 }
 
+void ZProtoTaskManager::GetDifferenceSequence(int64_t seq) {
+  auto get_difference_req = boost::shared_ptr<ApiRpcRequest<zproto::GetDifferenceReq>>(new ApiRpcRequest<zproto::GetDifferenceReq>());
+  (*get_difference_req)->set_seq(seq);
+  DoCallRpcRequest<zproto::GetDifferenceRsp>(get_difference_req,
+                                             [&] (boost::shared_ptr<ApiRpcOk<zproto::GetDifferenceRsp>> rpc_ok,
+                                                  boost::shared_ptr<ProtoRpcResponse> rpc_error) -> int {
+                                               if (rpc_error) {
+                                                 
+                                               } else {
+                                                 
+                                               }
+                                               return 0;
+                                             });
+}
 

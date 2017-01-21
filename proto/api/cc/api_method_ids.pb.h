@@ -25,7 +25,10 @@
 #include <google/protobuf/metadata.h>
 #include <google/protobuf/repeated_field.h>
 #include <google/protobuf/extension_set.h>
+#include <google/protobuf/generated_enum_reflection.h>
 // @@protoc_insertion_point(includes)
+
+namespace zproto {
 
 // Internal implementation detail -- do not call these.
 void protobuf_AddDesc_api_5fmethod_5fids_2eproto();
@@ -34,6 +37,26 @@ void protobuf_AssignDesc_api_5fmethod_5fids_2eproto();
 void protobuf_ShutdownFile_api_5fmethod_5fids_2eproto();
 
 
+enum ApiMethodIDs {
+  API_UNKNOWN = 0,
+  ApiMethodIDs_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
+  ApiMethodIDs_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
+};
+bool ApiMethodIDs_IsValid(int value);
+const ApiMethodIDs ApiMethodIDs_MIN = API_UNKNOWN;
+const ApiMethodIDs ApiMethodIDs_MAX = API_UNKNOWN;
+const int ApiMethodIDs_ARRAYSIZE = ApiMethodIDs_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* ApiMethodIDs_descriptor();
+inline const ::std::string& ApiMethodIDs_Name(ApiMethodIDs value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    ApiMethodIDs_descriptor(), value);
+}
+inline bool ApiMethodIDs_Parse(
+    const ::std::string& name, ApiMethodIDs* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<ApiMethodIDs>(
+    ApiMethodIDs_descriptor(), name, value);
+}
 // ===================================================================
 
 
@@ -46,6 +69,22 @@ void protobuf_ShutdownFile_api_5fmethod_5fids_2eproto();
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // @@protoc_insertion_point(namespace_scope)
+
+}  // namespace zproto
+
+#ifndef SWIG
+namespace google {
+namespace protobuf {
+
+template <> struct is_proto_enum< ::zproto::ApiMethodIDs> : ::google::protobuf::internal::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::zproto::ApiMethodIDs>() {
+  return ::zproto::ApiMethodIDs_descriptor();
+}
+
+}  // namespace protobuf
+}  // namespace google
+#endif  // SWIG
 
 // @@protoc_insertion_point(global_scope)
 

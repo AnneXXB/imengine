@@ -24,6 +24,8 @@ struct UserSequenceDAOImpl : public UserSequenceDAO {
   virtual ~UserSequenceDAOImpl() = default;
   
   int64_t Create(UserSequenceDO& user_sequence) override;
+  int64_t GetCurrentSequence(const std::string& user_id) override;
+  int LoadSequenceData(const std::string& user_id, int64_t min_seq, UserSequenceDOList& user_sequence_list) override;
 };
 
 

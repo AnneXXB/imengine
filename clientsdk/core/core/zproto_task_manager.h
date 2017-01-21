@@ -33,6 +33,7 @@
 #include "proto/api/cc/misc.pb.h"
 #include "proto/api/cc/messaging.pb.h"
 #include "proto/api/cc/groups.pb.h"
+#include "proto/api/cc/sequence.pb.h"
 
 #include "core/api_message_box.h"
 
@@ -147,6 +148,9 @@ public:
   virtual bool IsLogoned();
 
 private:
+  void GetDifferenceSequence(int64_t seq);
+  
+  
   Mutex lock_;
   TaskIDMessageMap tasks_;
   bool logoned_{false};

@@ -70,6 +70,9 @@ public:
   static ProtoRpcResponsePtr DeleteGroup(RpcRequestPtr request);
   static ProtoRpcResponsePtr JoinGroup(RpcRequestPtr request);
   
+  // sequence
+  static ProtoRpcResponsePtr GetState(RpcRequestPtr request);
+  static ProtoRpcResponsePtr GetDifference(RpcRequestPtr request);
 };
 
 #endif // MESSENGER_ZRPC_MESSENGER_DISPATCHER_H_

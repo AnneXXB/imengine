@@ -26,6 +26,8 @@ struct UserSequenceDAO : public BaseDAO {
   static UserSequenceDAO& GetInstance();
   
   virtual int64_t Create(UserSequenceDO& user_sequence) = 0;
+  virtual int64_t GetCurrentSequence(const std::string& user_id) = 0;
+  virtual int LoadSequenceData(const std::string& user_id, int64_t min_seq, UserSequenceDOList& user_sequence_list) = 0;
 };
 
 #endif

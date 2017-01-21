@@ -31,6 +31,18 @@ import "files.proto";
 message User {
   string uid = 1;         //   uid
   int64  access_hash = 2; //   user's access hash
+}
+
+message PushUser {
+  string uid = 1;         //   uid
+  int64  access_hash = 2; //   user's access hash
+  
   string push_name = 3;   //   推送显示名
   Avatar push_avatar = 5; //   推送头像
 }
+
+//message User {
+//  string open_id;         // openid
+//  uint32 access_hash = 2; // acess_hash
+//}
+

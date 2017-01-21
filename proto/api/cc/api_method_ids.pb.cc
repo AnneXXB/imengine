@@ -17,8 +17,11 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 
+namespace zproto {
+
 namespace {
 
+const ::google::protobuf::EnumDescriptor* ApiMethodIDs_descriptor_ = NULL;
 
 }  // namespace
 
@@ -30,6 +33,7 @@ void protobuf_AssignDesc_api_5fmethod_5fids_2eproto() {
     ::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
       "api_method_ids.proto");
   GOOGLE_CHECK(file != NULL);
+  ApiMethodIDs_descriptor_ = file->enum_type(0);
 }
 
 namespace {
@@ -65,7 +69,9 @@ void protobuf_AddDesc_api_5fmethod_5fids_2eproto_impl() {
 
   protobuf_InitDefaults_api_5fmethod_5fids_2eproto();
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\024api_method_ids.proto", 22);
+    "\n\024api_method_ids.proto\022\006zproto*\037\n\014ApiMet"
+    "hodIDs\022\017\n\013API_UNKNOWN\020\000B,\n\027com.zchat.eng"
+    "ine.zprotoB\017ZProtoMethodIDsH\002b\006proto3", 117);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "api_method_ids.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_api_5fmethod_5fids_2eproto);
@@ -82,7 +88,22 @@ struct StaticDescriptorInitializer_api_5fmethod_5fids_2eproto {
     protobuf_AddDesc_api_5fmethod_5fids_2eproto();
   }
 } static_descriptor_initializer_api_5fmethod_5fids_2eproto_;
+const ::google::protobuf::EnumDescriptor* ApiMethodIDs_descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ApiMethodIDs_descriptor_;
+}
+bool ApiMethodIDs_IsValid(int value) {
+  switch (value) {
+    case 0:
+      return true;
+    default:
+      return false;
+  }
+}
+
 
 // @@protoc_insertion_point(namespace_scope)
+
+}  // namespace zproto
 
 // @@protoc_insertion_point(global_scope)

@@ -40,3 +40,54 @@ int64_t UserSequenceDAOImpl::Create(UserSequenceDO& user_sequence) {
                                                  &query_string);
                            });
 }
+
+int64_t UserSequenceDAOImpl::GetCurrentSequence(const std::string& user_id) {
+  int64_t sequence = 0;
+  DoStorageQuery("nebula_engine",
+                 [&](std::string& query_string) {
+                   query_string = folly::sformat("SELECT seq FROM user_sequence WHERE user_id='{}' order by seq desc limit 1",
+                                                 user_id);
+                 },
+                 [&](db::QueryAnswer& answ) -> int {
+                   answ.GetColumn(0, &sequence);
+                   return BREAK;
+                 });
+  return sequence;
+}
+
+uint64_t id;
+std::string user_id;
+uint64_t seq;
+uint64_t header;
+std::string data; // 发送方
+uint64_t created_at;
+
+int UserSequenceDAOImpl::LoadSequenceData(const std::string& user_id, int64_t min_seq, UserSequenceDOList& user_sequence_list) {
+  return DoStorageQuery("nebula_engine",
+                        [&](std::string& query_string) {
+                          query_string = folly::sformat("SELECT seq,header,data,created_at "
+                                                        "FROM user_sequence WHERE user_id='{}' AND seq>{} "
+                                                        "order by seq desc limit 100",
+                                                        user_id,
+                                                        min_seq);
+                        },
+                        [&](db::QueryAnswer& answ) -> int {
+                          auto user_sequence = std::make_shared<UserSequenceDO>();
+                          
+                          int result = CONTINUE;
+                          do {
+                            DB_GET_RETURN_COLUMN(0, user_sequence->seq);
+                            DB_GET_RETURN_COLUMN(1, user_sequence->header);
+                            DB_GET_RETURN_COLUMN(2, user_sequence->data);
+                            DB_GET_RETURN_COLUMN(3, user_sequence->created_at);
+                            
+                            user_sequence->user_id = user_id;
+                            user_sequence_list.push_back(user_sequence);
+                          } while (0);
+                          
+                          LOG(INFO) << "LoadSequenceData - ParseFrom: " << user_sequence->seq;
+                          
+                          return result;
+                        });
+}
+

@@ -20,13 +20,27 @@
 #include "messenger/sequence_service_impl.h"
 
 #include "nebula/net/rpc/zrpc_service_util.h"
+#include "dal/user_sequence_dao.h"
 
 int SequenceServiceImpl::GetState(const zproto::GetStateReq& request, zproto::SeqRsp* response) {
-  return -1;
+  auto& user_sequence_dao = UserSequenceDAO::GetInstance();
+  response->set_seq(user_sequence_dao.GetCurrentSequence(uid()));
+  return 0;
 }
 
 int SequenceServiceImpl::GetDifference(const zproto::GetDifferenceReq& request, zproto::GetDifferenceRsp* response) {
-  return -1;
+  auto& user_sequence_dao = UserSequenceDAO::GetInstance();
+  UserSequenceDOList user_sequence_list;
+  user_sequence_dao.LoadSequenceData(uid(), request.seq(), user_sequence_list);
+  for (auto user_sequence : user_sequence_list) {
+    auto update = response->add_updates();
+    update->set_update_header(user_sequence->header);
+    update->set_update(user_sequence->data);
+  }
+  if (!user_sequence_list.empty()) {
+    response->set_seq((*user_sequence_list.rbegin())->seq);
+  }
+  return 0;
 }
 
 int SequenceServiceImpl::SubscribeToOnline(const zproto::SubscribeToOnlineReq& request, zproto::VoidRsp* response) {

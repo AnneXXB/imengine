@@ -73,6 +73,10 @@ ZRpcMessengerDispatcher::ZRpcMessengerDispatcher() {
   ZRpcUtil::Register("zproto.SaveAdminSettingsReq", SaveAdminSettings);
   ZRpcUtil::Register("zproto.DeleteGroupReq", DeleteGroup);
   ZRpcUtil::Register("zproto.JoinGroupReq", JoinGroup);
+  
+  // sequence
+  ZRpcUtil::Register("zproto.GetStateReq", GetState);
+  ZRpcUtil::Register("zproto.GetDifferenceReq", GetDifference);
 }
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -587,4 +591,33 @@ ProtoRpcResponsePtr ZRpcMessengerDispatcher::JoinGroup(RpcRequestPtr request) {
   
   return MakeRpcOK(join_group_rsp);
 }
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::GetState(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(GetStateReq, get_state_req);
+  LOG(INFO) << get_state_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::SeqRsp seq_rsp;
+  
+  SequenceServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.GetState(get_state_req, &seq_rsp);
+  
+  return MakeRpcOK(seq_rsp);
+}
+
+ProtoRpcResponsePtr ZRpcMessengerDispatcher::GetDifference(RpcRequestPtr request) {
+  CAST_RPC_REQUEST(GetDifferenceReq, get_difference_req);
+  LOG(INFO) << get_difference_req.Utf8DebugString();
+  
+  // TODO(@benqi): 检查是否存在S2SAttachData，保证service能获取attach_data
+  zproto::GetDifferenceRsp get_difference_rsp;
+  
+  SequenceServiceImpl service_impl;
+  service_impl.Initialize(request);
+  service_impl.GetDifference(get_difference_req, &get_difference_rsp);
+  
+  return MakeRpcOK(get_difference_rsp);
+}
+
 
