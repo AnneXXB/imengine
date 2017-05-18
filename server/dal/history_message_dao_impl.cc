@@ -33,7 +33,7 @@ int HistoryMessageDAOImpl::CheckExists(const std::string& user_id,
                                         user_id,
                                         message_client_id);
                         },
-                        [&](db::QueryAnswer& answ) -> int {
+                        [&](MysqlResultSet& answ) -> int {
                           return BREAK;
                         });
 }
@@ -42,7 +42,7 @@ int HistoryMessageDAOImpl::CheckExists(const std::string& user_id,
 int64_t HistoryMessageDAOImpl::Create(HistoryMessageDO& message) {
   return DoStorageInsertID("nebula_engine",
                            [&](std::string& query_string) {
-                             db::QueryParam p;
+                             QueryParam p;
                              p.AddParam(message.sender_user_id.c_str());
                              p.AddParam(message.peer_id.c_str());
                              p.AddParam(&message.peer_type);
@@ -56,7 +56,7 @@ int64_t HistoryMessageDAOImpl::Create(HistoryMessageDO& message) {
                              p.AddParam(&message.created_at);
                              p.AddParam(&message.updated_at);
                              
-                             db::MakeQueryString("INSERT INTO history_messages"
+                             MakeQueryString("INSERT INTO history_messages"
                                                  "(sender_user_id,peer_id,peer_type,client_message_id,message_peer_seq,message_content_type,"
                                                  "message_content_data,passthrough_data,status,created_at,updated_at)"
                                                  " VALUES "
@@ -77,7 +77,7 @@ int HistoryMessageDAOImpl::LoadHistoryMessageList(std::list<uint64_t>& message_i
                                                         "FROM history_messages WHERE id in('{}')",
                                                         message_ids);
                         },
-                        [&](db::QueryAnswer& answ) -> int {
+                        [&](MysqlResultSet& answ) -> int {
                           auto message = std::make_shared<HistoryMessageDO>();
                           int result = CONTINUE;
                           do {

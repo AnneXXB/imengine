@@ -29,7 +29,7 @@ int GroupDAOImpl::CheckExists(const std::string& creator_user_id, uint64_t clien
                                         creator_user_id,
                                         client_group_id);
                         },
-                        [&](db::QueryAnswer& answ) -> int {
+                        [&](MysqlResultSet& answ) -> int {
                           return BREAK;
                         });
 }
@@ -37,7 +37,7 @@ int GroupDAOImpl::CheckExists(const std::string& creator_user_id, uint64_t clien
 int64_t GroupDAOImpl::Create(GroupDO& group) {
   return DoStorageInsertID("nebula_engine",
                            [&](std::string& query_string) {
-                             db::QueryParam p;
+                             QueryParam p;
                              p.AddParam(group.group_id.c_str());
                              p.AddParam(group.creator_user_id.c_str());
                              p.AddParam(&group.client_group_id);
@@ -48,7 +48,7 @@ int64_t GroupDAOImpl::Create(GroupDO& group) {
                              p.AddParam(&group.created_at);
                              p.AddParam(&group.updated_at);
                              
-                             db::MakeQueryString("INSERT INTO groups "
+                             MakeQueryString("INSERT INTO groups "
                                                  "(group_id,creator_user_id,client_group_id,title,avatar,topic,about,status,created_at,updated_at) "
                                                  "VALUES "
                                                  "(:1,:2,:3,:4,:5,:6,:7,1,:8,:9)",
@@ -63,7 +63,7 @@ int GroupDAOImpl::GetGroup(const std::string& group_id, GroupDO& group) {
                           folly::format(&query_string, "SELECT id FROM groups WHERE group_id='{}' LIMIT 1",
                                         group_id);
                         },
-                        [&](db::QueryAnswer& answ) -> int {
+                        [&](MysqlResultSet& answ) -> int {
                           group.app_id = 1;
                           // ...
                           return BREAK;

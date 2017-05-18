@@ -27,7 +27,7 @@ GroupUserDAO& GroupUserDAO::GetInstance() {
 int64_t GroupUserDAOImpl::Create(GroupUserDOList& group_users) {
   return DoStorageInsertID("nebula_engine",
                            [&](std::string& query_string) {
-                             StringBuilder sb("INSERT INTO group_users "
+                             CStringBuilder sb("INSERT INTO group_users "
                                               "(group_id,user_id,is_admin,status,invited_at,inviter_user_id,joined_at,created_at,updated_at) "
                                               " VALUES ");
                              bool first = true;
@@ -61,7 +61,7 @@ int GroupUserDAOImpl::GetGroupUserIDList(const std::string& group_id, std::list<
                           query_string = folly::sformat("SELECT user_id FROM group_users WHERE group_id='{}'",
                                                         group_id);
                         },
-                        [&](db::QueryAnswer& answ) -> int {
+                        [&](MysqlResultSet& answ) -> int {
                           std::string id;
                           if (answ.GetColumn(0, &id) && !id.empty()) {
                             group_user_ids.push_back(id);

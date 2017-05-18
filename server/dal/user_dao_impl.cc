@@ -33,7 +33,7 @@ int UserDAOImpl::GetUserByUserID(uint32_t app_id,
                                         app_id,
                                         user_id);
                         },
-                        [&](db::QueryAnswer& answ) -> int {
+                        [&](MysqlResultSet& answ) -> int {
                           int result = CONTINUE;
                           
                           do {
@@ -60,7 +60,7 @@ int UserDAOImpl::GetUserByToken(const std::string& app_key,
                                         app_key,
                                         user_token);
                         },
-                        [&](db::QueryAnswer& answ) -> int {
+                        [&](MysqlResultSet& answ) -> int {
                           int result = CONTINUE;
                           
                           do {
@@ -88,7 +88,7 @@ int UserDAOImpl::GetUserByNamePasswd(uint32_t app_id,
                                         user_id);
                                         // passwd);
                         },
-                        [&](db::QueryAnswer& answ) -> int {
+                        [&](MysqlResultSet& answ) -> int {
                           int result = CONTINUE;
                           
                           do {

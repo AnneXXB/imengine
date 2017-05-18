@@ -19,9 +19,35 @@
 
 #include "auth/auth_server.h"
 
+#include "nebula/mysql_client/mysql_client_util.h"
+
+void Initialize_Database() {
+  // SelfRegisterFactoryManagerTest();
+  DBAddrInfo db_addr;
+  db_addr.host = "localhost";
+  db_addr.port = 3307;
+  db_addr.user = "root";
+  db_addr.passwd = "";
+  db_addr.db_name = "nebula_platform";
+  db_addr.db_type = "mysql";
+
+  DBAddrInfo db_addr2;
+  db_addr2.host = "localhost";
+  db_addr2.port = 3307;
+  db_addr2.user = "root";
+  db_addr2.passwd = "";
+  db_addr2.db_name = "nebula_engine";
+  db_addr2.db_type = "mysql";
+
+  std::vector<DBAddrInfo> db_addrs = {db_addr, db_addr2};
+  InitializeMysqlClient(db_addrs, 2);
+}
+
+
 bool AuthServer::Initialize() {
   RegisterService("auth_server", "rpc_server", "zrpc");
  
+  Initialize_Database();
   BaseServer::Initialize();
   
   /*

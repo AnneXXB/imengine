@@ -25,14 +25,14 @@ UserSequenceDAO& UserSequenceDAO::GetInstance() {
 int64_t UserSequenceDAOImpl::Create(UserSequenceDO& user_sequence) {
   return DoStorageInsertID("nebula_engine",
                            [&](std::string& query_string) {
-                             db::QueryParam p;
+                             QueryParam p;
                              p.AddParam(user_sequence.user_id.c_str());
                              p.AddParam(&user_sequence.seq);
                              p.AddParam(&user_sequence.header);
                              p.AddParamEsc(user_sequence.data.c_str());
                              p.AddParam(&user_sequence.created_at);
                              
-                             db::MakeQueryString("INSERT INTO user_sequence"
+                             MakeQueryString("INSERT INTO user_sequence"
                                                  "(user_id,seq,header,data,created_at)"
                                                  " VALUES "
                                                  "(:1,:2,:3,:4,:5)",
@@ -48,7 +48,7 @@ int64_t UserSequenceDAOImpl::GetCurrentSequence(const std::string& user_id) {
                    query_string = folly::sformat("SELECT seq FROM user_sequence WHERE user_id='{}' order by seq desc limit 1",
                                                  user_id);
                  },
-                 [&](db::QueryAnswer& answ) -> int {
+                 [&](MysqlResultSet& answ) -> int {
                    answ.GetColumn(0, &sequence);
                    return BREAK;
                  });
@@ -71,7 +71,7 @@ int UserSequenceDAOImpl::LoadSequenceData(const std::string& user_id, int64_t mi
                                                         user_id,
                                                         min_seq);
                         },
-                        [&](db::QueryAnswer& answ) -> int {
+                        [&](MysqlResultSet& answ) -> int {
                           auto user_sequence = std::make_shared<UserSequenceDO>();
                           
                           int result = CONTINUE;

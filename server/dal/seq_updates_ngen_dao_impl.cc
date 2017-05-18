@@ -30,7 +30,7 @@ int64_t SeqUpdatesNgenDAOImpl::GetSequence(const std::string& user_id) {
                                         "SELECT seq FROM seq_updates_ngen WHERE user_id='{}'",
                                         user_id);
                         },
-                        [&](db::QueryAnswer& answ) -> int {
+                        [&](MysqlResultSet& answ) -> int {
                           answ.GetColumn(0, &seq);
                           return BREAK;
                         });

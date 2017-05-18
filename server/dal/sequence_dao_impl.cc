@@ -20,7 +20,7 @@
 #include <folly/Conv.h>
 
 #include "nebula/base/time_util.h"
-#include "nebula/storage/redis/redis_pool.h"
+#include "nebula/redis_client/redis_conn_pool.h"
 #include "dal/seq_updates_ngen_dao.h"
 
 // #include "nebula/base/id_util.h"
@@ -38,7 +38,7 @@ uint64_t SequenceDAOImpl::GetNextID(const std::string& key) {
   std::string seq_key = "seq_updates_ngen_" + key;
   // 1. sequence
   auto pool = GetRedisConnPool("sequence");
-  ScopedPtr_RedisConnection conn(pool);
+  ScopedRedisConn conn(pool);
   auto seq = conn->incr(seq_key);
   if (seq == -1) {
     return seq;

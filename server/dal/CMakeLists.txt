@@ -73,5 +73,5 @@ set (SRC_LIST
  )
 
 add_library(dal STATIC ${SRC_LIST})
-target_link_libraries(dal storage)
+target_link_libraries(dal mysql_client redis_client)
 

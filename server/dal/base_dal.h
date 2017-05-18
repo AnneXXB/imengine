@@ -24,7 +24,7 @@
 #include <folly/Format.h>
 
 #include "nebula/base/reflection_util.h"
-#include "nebula/storage/storage_util.h"
+#include "nebula/mysql_client/mysql_client_util.h"
 
 ///////////////////////////////////////////////////////////////////////
 // 术语
@@ -77,13 +77,13 @@ struct BaseDAO {
 template<std::size_t I = 0, typename Tuple>
 typename std::enable_if<
     I == std::tuple_size<Tuple>::value
-  >::type FromQueryAnswer(const Tuple& t, db::QueryAnswer& answ) {
+  >::type FromQueryAnswer(const Tuple& t, MysqlResultSet& answ) {
 }
 
 template<std::size_t I = 0, typename Tuple>
 typename std::enable_if<
     I < std::tuple_size<Tuple>::value
-  >::type FromQueryAnswer(const Tuple& t, db::QueryAnswer& answ) {
+  >::type FromQueryAnswer(const Tuple& t, MysqlResultSet& answ) {
 
   auto fld = std::get<I>(t);
   answ.GetColumn(fld.first, &fld.second);

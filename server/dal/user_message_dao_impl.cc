@@ -25,7 +25,7 @@ UserMessageDAO& UserMessageDAO::GetInstance() {
 int64_t UserMessageDAOImpl::Create(UserMessageDO& user_message) {
   return DoStorageInsertID("nebula_engine",
                            [&](std::string& query_string) {
-                             db::QueryParam p;
+                             QueryParam p;
                              p.AddParam(user_message.user_id.c_str());
                              p.AddParam(&user_message.message_seq);
                              p.AddParam(&user_message.message_id);
@@ -36,7 +36,7 @@ int64_t UserMessageDAOImpl::Create(UserMessageDO& user_message) {
                              p.AddParam(&user_message.created_at);
                              p.AddParam(&user_message.updated_at);
                              
-                             db::MakeQueryString("INSERT INTO user_messages"
+                             MakeQueryString("INSERT INTO user_messages"
                                                  "(user_id,message_seq,message_id,sender_user_id,peer_id,peer_type,message_peer_seq,status,created_at,updated_at)"
                                                  " VALUES "
                                                  "(:1,:2,:3,:4,:5,:6,:7,1,:8,:9)",
@@ -54,7 +54,7 @@ int UserMessageDAOImpl::LoadUserMessageList(const std::string& user_id,
                                                         user_id,
                                                         received_max_message_seq);
                         },
-                        [&](db::QueryAnswer& answ) -> int {
+                        [&](MysqlResultSet& answ) -> int {
                           auto message = std::make_shared<UserMessageDO>();
                           message->user_id = user_id;
                           answ.GetColumn(0, &message->message_id);
@@ -76,7 +76,7 @@ int UserMessageDAOImpl::LoadUserDialogMessageList(const std::string& user_id,
                                                         peer_id,
                                                         peer_type);
                         },
-                        [&](db::QueryAnswer& answ) -> int {
+                        [&](MysqlResultSet& answ) -> int {
                           auto message = std::make_shared<UserMessageDO>();
                           message->user_id = user_id;
                           answ.GetColumn(0, &message->message_id);

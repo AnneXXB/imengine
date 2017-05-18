@@ -35,7 +35,7 @@ int UserDialogDAOImpl::CheckExists(const std::string& user_id,
                                                         peer_id,
                                                         peer_type);
                         },
-                        [&](db::QueryAnswer& answ) -> int {
+                        [&](MysqlResultSet& answ) -> int {
                           return BREAK;
                         });
 }
@@ -74,7 +74,7 @@ int UserDialogDAOImpl::LoadUserDialogList(const std::string& user_id,
                                           load_limit);
                           }
                         },
-                        [&](db::QueryAnswer& answ) -> int {
+                        [&](MysqlResultSet& answ) -> int {
                           auto dialog = std::make_shared<UserDialogDO>();
                           
                           int result = CONTINUE;
