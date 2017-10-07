@@ -18,7 +18,7 @@
 #ifndef	BASE_BASE_ZRPC_ZRPC_SERVICE_H_
 #define	BASE_BASE_ZRPC_ZRPC_SERVICE_H_
 
-#include "nebula/net/zproto/api_message_box.h"
+#include "nebula/net/zproto/zproto_package_data.h"
 
 class BaseZRpcService {
 public:
@@ -32,7 +32,7 @@ public:
   
   virtual ~BaseZRpcService() = default;
 
-  virtual bool Initialize(RpcRequestPtr v);
+  virtual bool Initialize(zproto::RpcRequestPtr v);
   
   uint64_t session_id() const {
     return rpc_request_->session_id();
@@ -51,7 +51,7 @@ public:
   }
 
 protected:
-  RpcRequestPtr rpc_request_;
+  zproto::RpcRequestPtr rpc_request_;
 };
 
 #endif

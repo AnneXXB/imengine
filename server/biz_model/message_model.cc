@@ -23,7 +23,7 @@
 #include "proto/api/error_codes.h"
 #include "proto/api/cc/messaging.pb.h"
 #include "proto/api/cc/groups.pb.h"
-#include "nebula/net/zproto/api_message_box.h"
+#include "nebula/net/zproto/zproto_api_message_box.h"
 
 #include "dal/history_message_dao.h"
 #include "biz_model/sequence_model.h"
@@ -114,7 +114,7 @@ int MessageModel::SendServerMessage(const std::string& from_id,
   message_notify.mutable_message()->set_message_type(zproto::TEXT);
   message_notify.mutable_message()->set_message_data(message_content_data);
   
-  auto update_header = CRC32(message_notify.GetTypeName());
+  auto update_header = zproto::CRC32(message_notify.GetTypeName());
   std::string update_data;
   message_notify.SerializeToString(&update_data);
   
@@ -149,7 +149,7 @@ int MessageModel::SendServerGroupMessage(const std::string& from_id,
   message_notify.mutable_message()->set_message_type(zproto::TEXT);
   message_notify.mutable_message()->set_message_data(message_content_data);
   
-  auto update_header = CRC32("zproto::MessageNotify");
+  auto update_header = zproto::CRC32("zproto::MessageNotify");
   std::string update_data;
   message_notify.SerializeToString(&update_data);
   

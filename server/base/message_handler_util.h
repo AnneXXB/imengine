@@ -26,59 +26,60 @@
 #include "proto/api/cc/auth.pb.h"
 #include "proto/s2s/cc/presences.pb.h"
 #include "proto/s2s/cc/servers.pb.h"
-#include "nebula/net/zproto/api_message_box.h"
+#include "nebula/net/zproto/zproto_api_message_box.h"
 
 #define RPC_TIMEOUT 5000  // 5000毫秒
 
-inline folly::Future<folly::Unit> WritePackage(const std::string& service_name, std::shared_ptr<PackageMessage> message_data) {
+inline folly::Future<folly::Unit> WritePackage(const std::string& service_name, std::shared_ptr<zproto::PackageMessage> message_data) {
   std::unique_ptr<folly::IOBuf> data;
   message_data->SerializeToIOBuf(data);
   return WriterUtil::Write(service_name, std::move(data));
 }
 
-inline folly::Future<folly::Unit> WritePackage(uint64_t conn_id, std::shared_ptr<PackageMessage> message_data) {
+inline folly::Future<folly::Unit> WritePackage(uint64_t conn_id, std::shared_ptr<zproto::PackageMessage> message_data) {
   std::unique_ptr<folly::IOBuf> data;
   message_data->SerializeToIOBuf(data);
   return WriterUtil::Write(conn_id, std::move(data));
 }
 
-inline folly::Future<folly::Unit> WritePackage(nebula::ZProtoPipeline* pipeline, std::shared_ptr<PackageMessage> message_data) {
+inline folly::Future<folly::Unit> WritePackage(nebula::ZProtoPipeline* pipeline, std::shared_ptr<zproto::PackageMessage> message_data) {
   std::unique_ptr<folly::IOBuf> data;
   message_data->SerializeToIOBuf(data);
   return pipeline->write(std::move(data));
 }
 
-inline folly::Future<folly::Unit> WriteToClientPackage(uint64_t conn_id, std::shared_ptr<PackageMessage> message_data) {
+inline folly::Future<folly::Unit> WriteToClientPackage(uint64_t conn_id, std::shared_ptr<zproto::PackageMessage> message_data) {
   std::unique_ptr<folly::IOBuf> data;
   message_data->clear_has_attach_data();
   message_data->SerializeToIOBuf(data);
   return WriterUtil::Write(conn_id, std::move(data));
 }
 
-inline folly::Future<folly::Unit> WriteToClientPackage(nebula::ZProtoPipeline* pipeline, std::shared_ptr<PackageMessage> message_data) {
+inline folly::Future<folly::Unit> WriteToClientPackage(nebula::ZProtoPipeline* pipeline, std::shared_ptr<zproto::PackageMessage> message_data) {
   std::unique_ptr<folly::IOBuf> data;
   message_data->clear_has_attach_data();
   message_data->SerializeToIOBuf(data);
   return pipeline->write(std::move(data));
 }
 
+#if 0
 template <typename MESSAGE>
 inline void ZRpcClientCall(const std::string& service_name,
-                           RpcRequestPtr request,
-                           std::function<int(std::shared_ptr<ApiRpcOk<MESSAGE>>, ProtoRpcResponsePtr)> cb,
+                           zproto::RpcRequestPtr request,
+                           std::function<int(std::shared_ptr<zproto::ApiRpcOk<MESSAGE>>, zproto::ProtoRpcResponsePtr)> cb,
                            int timeout = RPC_TIMEOUT) {
   ZRpcUtil::DoClientCall(service_name, request)
     .within(std::chrono::milliseconds(timeout))
       // TODO(@benqi): conn_data可能会失效
-    .then([cb](ProtoRpcResponsePtr rsp) {
-      static ProtoRpcResponsePtr kEmptyRpcError;
-      static std::shared_ptr<ApiRpcOk<MESSAGE>> kEmptyRpcOk;
+    .then([cb](zproto::ProtoRpcResponsePtr rsp) {
+      static zproto::ProtoRpcResponsePtr kEmptyRpcError;
+      static std::shared_ptr<zproto::ApiRpcOk<MESSAGE>> kEmptyRpcOk;
 
       CHECK(rsp);
       LOG(INFO) << "ZRpcClientCall rsp: " << rsp->ToString();
 
-      if (rsp->GetPackageType() == Package::RPC_OK) {
-        auto rpc_ok = ToApiRpcOk<MESSAGE>(rsp);
+      if (rsp->GetPackageType() == zproto::Package::RPC_OK) {
+        auto rpc_ok = zproto::ToApiRpcOk<MESSAGE>(rsp);
         // LOG(INFO) << "auth_client login_rsp: " << (*login_rsp)->Utf8DebugString();
         cb(rpc_ok, kEmptyRpcError);
       } else {
@@ -86,6 +87,7 @@ inline void ZRpcClientCall(const std::string& service_name,
       }
     });
 }
+#endif
 
 //// s2s中，我们将conn_id存储在PackageMessage的options里
 //inline uint64_t GetConnIDByPackageMessage(const std::shared_ptr<PackageMessage>& message_data) {

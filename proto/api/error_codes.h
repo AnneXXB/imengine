@@ -26,4 +26,14 @@ const int kErrDBSql      = 1002; // SQL非法
 const int kErrDBData     = 1003; // QueryAnswer解析有问题
 const int kErrDBDup      = 1004; // QueryAnswer解析有问题
 
+const int kErrNotImpl    = 1100; // QueryAnswer解析有问题
+
+/*
+  303
+  500
+  420
+  400
+  401
+ */
+
 #endif

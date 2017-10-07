@@ -1,0 +1,53 @@
+flags = 2
+date = 1497279323
+expires = 1497283400
+test_mode = false
+this_dc = 5
+dc_options[0] = {
+	flags = 0,
+	id = 1
+	ip_address = “149.154.175.50”
+	port = 443
+}
+dc_options[1] = {
+	flags = 1,
+	id = 1
+	ip_address = "2001:0b28:f23d:f001:0000:0000:0000:000a”
+	port = 443
+}
+dc_options[2] = {
+	flags = 0,
+	id = 1
+	ip_address = “149.154.167.51”
+	port = 443
+}
+dc_options[3] = {
+	flags = 1,
+	id = 1
+	ip_address = "2001:067c:04e8:f002:0000:0000:0000:000a"
+	port = 443
+}
+chat_size_max = 200
+megagroup_size_max = 5000
+forwarded_count_max = 100
+online_update_preiod_ms = 120000
+offline_blue_timeout_ms = 5000
+offline_idle_timeout_ms = 30000
+online_cloud_timeout_ms = 300000
+notify_default_delay_ms = 1500
+chat_big_size = 10
+push_chat_period_ms = 60000
+push_chat_limit = 2
+saved_gifs_limit = 200
+edit_time_limit = 172800
+rating_e_deay = 2419200
+stickers_recent_limit = 30
+tmp_sessions = 0
+pinned_dialogs_count_max = 5
+call_receive_timeout_ms = 20000
+call_ring_timeout_ms = 90000
+call_connect_timeout_ms = 30000
+call_packet_timeout_ms = 10000
+me_url_prefix = “https://t.me/“
+disable_features = 0
+

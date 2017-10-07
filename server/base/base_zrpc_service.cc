@@ -19,7 +19,7 @@
 
 #include "nebula/base/logger/glog_util.h"
 
-bool BaseZRpcService::Initialize(RpcRequestPtr v) {
+bool BaseZRpcService::Initialize(zproto::RpcRequestPtr v) {
   if (!v->has_attach_data()) {
     LOG(FATAL) << "Initialize - attach_data empty!!! " << v->ToString();
     return false;

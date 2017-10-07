@@ -23,7 +23,7 @@
 
 #include "proto/api/error_codes.h"
 #include "proto/s2s/cc/servers.pb.h"
-#include "nebula/net/zproto/api_message_box.h"
+#include "nebula/net/zproto/zproto_api_message_box.h"
 
 #include "dal/sequence_dao.h"
 #include "dal/user_sequence_dao.h"
@@ -74,7 +74,7 @@ int SequenceModel::DeliveryUpdateDataNotMe(uint64_t my_conn_id, const std::list<
   // 2. 服务端重试
   ZRpcUtil::DoClientCall("push_client", MakeRpcRequest(delivery))
   .within(std::chrono::milliseconds(5000))
-  .then([](ProtoRpcResponsePtr rsp2) {
+  .then([](zproto::ProtoRpcResponsePtr rsp2) {
     CHECK(rsp2);
     LOG(INFO) << "push_client rsp: " << rsp2->ToString();
     // auto online_rep = ToApiRpcOk<zproto::ClientOnlineRsp>(rsp2);
@@ -86,14 +86,14 @@ int SequenceModel::DeliveryUpdateDataNotMe(uint64_t my_conn_id, const std::list<
 }
 
 int SequenceModel::DeliveryUpdateDataNotMe(uint64_t my_conn_id, const std::list<std::string>& uid_list, const google::protobuf::Message& message) {
-  auto update_header = CRC32(message.GetTypeName());
+  auto update_header = zproto::CRC32(message.GetTypeName());
   std::string update_data;
   message.SerializeToString(&update_data);
   return DeliveryUpdateDataNotMe(my_conn_id, uid_list, update_header, update_data);
 }
 
 uint64_t SequenceModel::DeliveryUpdateDataNotMe(uint64_t my_conn_id, const std::string& uid, const google::protobuf::Message& message) {
-  auto update_header = CRC32(message.GetTypeName());
+  auto update_header = zproto::CRC32(message.GetTypeName());
   std::string update_data;
   message.SerializeToString(&update_data);
 
@@ -134,7 +134,7 @@ uint64_t SequenceModel::DeliveryUpdateDataNotMe(uint64_t my_conn_id, const std::
   // 2. 服务端重试
   ZRpcUtil::DoClientCall("push_client", MakeRpcRequest(delivery))
   .within(std::chrono::milliseconds(5000))
-  .then([](ProtoRpcResponsePtr rsp2) {
+  .then([](zproto::ProtoRpcResponsePtr rsp2) {
     CHECK(rsp2);
     LOG(INFO) << "push_client rsp: " << rsp2->ToString();
     // auto online_rep = ToApiRpcOk<zproto::ClientOnlineRsp>(rsp2);

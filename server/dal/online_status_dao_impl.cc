@@ -20,7 +20,7 @@
 #include "nebula/net/rpc/zrpc_service_util.h"
 
 #include "proto/s2s/cc/presences.pb.h"
-#include "nebula/net/zproto/api_message_box.h"
+#include "nebula/net/zproto/zproto_api_message_box.h"
 
 OnlineStatusDAO& OnlineStatusDAO::GetInstance() {
   static OnlineStatusDAOImpl impl;
@@ -31,9 +31,10 @@ bool OnlineStatusDAOImpl::GetUsersOnlineStatus(uint32_t app_id,
                                                const std::list<std::string>& user_id_list,
                                                OnlineStatusDOList& onlines,
                                                uint64_t my_conn_id)  {
-  auto req = std::make_shared<ApiRpcRequest<zproto::QueryOnlineUserReq>>();
+  // auto req = std::make_shared<zproto::ApiRpcRequest<zproto::QueryOnlineUserReq>>();
+  zproto::QueryOnlineUserReq req;
   for (const auto& v : user_id_list) {
-    auto user_id = (*req)->add_user_id_list();
+    auto user_id = req.add_user_id_list();
     user_id->set_app_id(app_id);
     user_id->set_user_id(v);
   }
@@ -41,19 +42,19 @@ bool OnlineStatusDAOImpl::GetUsersOnlineStatus(uint32_t app_id,
   // TODO(@benqi): 还是用协程简单
   
   bool rv = false;
-  auto rsp = ZRpcUtil::DoClientCall("status_rpc_client", req)
+  auto rsp = ZRpcUtil::DoClientCall("status_rpc_client", zproto::MakeRpcRequest(req))
   .within(std::chrono::milliseconds(5000))
-  .then([&](ProtoRpcResponsePtr rsp) {
+  .then([&](zproto::ProtoRpcResponsePtr rsp) {
     CHECK(rsp);
     LOG(INFO) << "online_client rsp: " << rsp->ToString();
     
-    if (rsp->GetPackageType() == Package::RPC_OK) {
+    if (rsp->GetPackageType() == zproto::Package::RPC_OK) {
       rv = true;
-      auto online_users = ToApiRpcOk<zproto::QueryOnlineUserRsp>(rsp);
-      for (int i=0; i<(*online_users)->online_users_size(); ++i) {
-        auto online_user = (*online_users)->online_users(i);
-        onlines.emplace_back(online_user.server_id(), online_user.conn_id(), 1);
-      }
+//      auto online_users = zproto::ToApiRpcOk<zproto::QueryOnlineUserRsp>(rsp);
+//      for (int i=0; i<(*online_users)->online_users_size(); ++i) {
+//        auto online_user = (*online_users)->online_users(i);
+//        onlines.emplace_back(online_user.server_id(), online_user.conn_id(), 1);
+//      }
     }
   });
   

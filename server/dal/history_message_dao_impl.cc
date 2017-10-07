@@ -29,7 +29,7 @@ int HistoryMessageDAOImpl::CheckExists(const std::string& user_id,
   return DoStorageQuery("nebula_engine",
                         [&](std::string& query_string) {
                           folly::format(&query_string,
-                                        "SELECT id FROM history_messages WHERE sender_user_id='{}' AND client_message_id={} LIMIT 1",
+                                        "SELECT id FROM messages WHERE sender_user_id='{}' AND client_message_id={} LIMIT 1",
                                         user_id,
                                         message_client_id);
                         },
@@ -56,7 +56,7 @@ int64_t HistoryMessageDAOImpl::Create(HistoryMessageDO& message) {
                              p.AddParam(&message.created_at);
                              p.AddParam(&message.updated_at);
                              
-                             MakeQueryString("INSERT INTO history_messages"
+                             MakeQueryString("INSERT INTO messages"
                                                  "(sender_user_id,peer_id,peer_type,client_message_id,message_peer_seq,message_content_type,"
                                                  "message_content_data,passthrough_data,status,created_at,updated_at)"
                                                  " VALUES "
@@ -74,7 +74,7 @@ int HistoryMessageDAOImpl::LoadHistoryMessageList(std::list<uint64_t>& message_i
                           folly::join("','", message_id_list, message_ids);
                           query_string = folly::sformat("SELECT id,sender_user_id,peer_id,peer_type,client_message_id,message_peer_seq,"
                                                         "message_content_type,message_content_data,passthrough_data,status,created_at,updated_at "
-                                                        "FROM history_messages WHERE id in('{}')",
+                                                        "FROM messages WHERE id in('{}')",
                                                         message_ids);
                         },
                         [&](MysqlResultSet& answ) -> int {

@@ -48,7 +48,7 @@ void Initialize_Database() {
 bool MessengerServer::Initialize() {
   // RegisterService("tcpd", "tcp_server");
   RegisterService("messenger_server", "rpc_server", "zrpc");
-  RegisterService("push_client", "rpc_client", "zrpc");
+  // RegisterService("push_client", "rpc_client", "zrpc");
 
   Initialize_Database();
   
